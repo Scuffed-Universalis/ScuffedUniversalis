@@ -1,0 +1,11 @@
+﻿l_french:
+ # Decisions:
+ gme_show_provinces_with_monument_construction_decision_title: "Show Monument Constructions"
+ gme_show_provinces_with_monument_construction_decision_desc: "Show all provinces owned by us and our subjects that are currently busy constructing or upgrading a monument or canal."
+
+ # Tooltips:
+ gme_show_provinces_with_monument_construction_decision_own_tt: "Provinces, which are currently busy constructing or upgrading a monument or canal, owned by @[Root.GetTag] §Y[Root.GetName]§!:"
+ gme_show_provinces_with_monument_construction_decision_own_tt_none: "There are no provinces owned by @[Root.GetTag] §Y[Root.GetName]§! that are currently busy constructing or upgrading a monument or canal."
+ gme_show_provinces_with_monument_construction_decision_subject_tt: "Provinces, which are currently busy constructing or upgrading a monument or canal, owned by @[Root.GetTag] §Y[Root.GetAdjective] Subjects§!:"
+ gme_show_provinces_with_monument_construction_decision_province_tt: " - §Y[This.GetName]§!"
+ gme_show_provinces_with_monument_construction_decision_subject_province_tt: " - §Y[This.GetName]§! (Owner: @[This.Owner.GetTag] §Y[This.Owner.GetName]§!)"

@@ -1,0 +1,153 @@
+defined_text = {
+	name = diplomatic_reputation
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = MODIFIER_DIPLO_SKILL
+	}
+}
+
+defined_text = {
+	name = yearly_devotion
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = YEARLY_DEVOTION
+	}
+}
+
+defined_text = {
+	name = diplomats
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = YEARLY_DIPLOMATS
+	}
+}
+
+defined_text = {
+	name = improve_relation_modifier
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = IMPROVE_RELATION_MODIFIER
+	}
+}
+
+defined_text = {
+	name = yearly_prestige
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = YEARLY_PRESTIGE
+	}
+}
+
+defined_text = {
+	name = yearly_legitimacy
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = YEARLY_LEGITIMACY
+	}
+}
+
+defined_text = {
+	name = own_territory_dice_roll_bonus
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = MODIFIER_OWN_TERRITORY_DICE_ROLL_BONUS
+	}
+}
+
+defined_text = {
+	name = global_tax_modifier
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = GLOBAL_TAX_MODIFIER
+	}
+}
+
+defined_text = {
+	name = global_trade_goods_size_modifier
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = MODIFIER_GLOBAL_TRADE_GOODS_SIZE_MODIFIER
+	}
+}
+
+defined_text = {
+	name = land_morale
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = MODIFIER_LAND_MORALE
+	}
+}
+
+defined_text = {
+	name = reasons_to_elect
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = MODIFIER_REASONS_TO_ELECT
+	}
+}
+
+defined_text = {
+	name = imperial_authority_value
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = MODIFIER_IMPERIAL_AUTHORITY_VALUE
+	}
+}
+
+defined_text = {
+	name = global_tax_income
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = TAX_INCOME
+	}
+}
+
+defined_text = {
+	name = global_unrest
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = GLOBAL_UNREST
+	}
+}

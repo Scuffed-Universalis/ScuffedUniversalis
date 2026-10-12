@@ -1,0 +1,8 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_shogun_window_bg"
+		texturefile = "gfx//interface//shogunate_ui//shogun_window_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

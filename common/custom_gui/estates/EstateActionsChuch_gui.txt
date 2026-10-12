@@ -1,0 +1,239 @@
+custom_button = {
+		name = estate_church_make_generous_donation_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			
+			has_estate = estate_church
+		}
+		trigger = { 
+			has_enabled_estate_action = {
+				estate_action = MAKE_GENEROUS_DONATION_CHURCH
+			}
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = MAKE_GENEROUS_DONATION_CHURCH
+				days = 3650
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = MAKE_GENEROUS_DONATION_CHURCH
+			}
+			estate_action = {
+				estate_action = MAKE_GENEROUS_DONATION_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+		}
+		tooltip = estate_church_make_generous_donation_title
+}
+
+custom_button = {
+		name = estate_church_recruit_minister_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			
+			has_estate = estate_church
+		}
+		trigger = { 
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_MINISTER_CHURCH
+			}
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_shared_cooldown = {
+				estate_action = RECRUIT_ADVISOR_CHURCH
+				days = 10950
+			}
+			estate_influence = {
+				estate = estate_church
+				influence = 40
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_ADVISOR_CHURCH
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+		}
+		tooltip = estate_church_recruit_minister_title
+}
+
+custom_button = {
+		name = estate_church_recruit_inquisitor_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			
+			has_estate = estate_church
+		}
+		trigger = { 
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_INQUISITOR_CHURCH
+			}
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_shared_cooldown = {
+				estate_action = RECRUIT_ADVISOR_CHURCH
+				days = 10950
+			}
+			estate_influence = {
+				estate = estate_church
+				influence = 40
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_ADVISOR_CHURCH
+			}
+			estate_action = {
+				estate_action = RECRUIT_INQUISITOR_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+		}
+		tooltip = estate_church_recruit_inquisitor_title
+}
+
+custom_button = {
+		name = estate_church_religious_delegation_action_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			
+			has_estate = estate_church
+			NOT = { tag = PAP }
+		}
+		trigger = { 
+			has_enabled_estate_action = {
+				estate_action = RELIGIOUS_DELEGATION_CHURCH
+			}
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = RELIGIOUS_DELEGATION_CHURCH
+				days = 7300
+			}
+			estate_influence = {
+				estate = estate_church
+				influence = 40
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = RELIGIOUS_DELEGATION_CHURCH
+			}
+			estate_action = {
+				estate_action = RELIGIOUS_DELEGATION_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+		}
+		tooltip = estate_church_religious_delegation_action_title
+}
+custom_button = {
+		name = estate_church_demand_support_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			
+			has_estate = estate_church
+		}
+		trigger = { 
+			has_enabled_estate_action = {
+				estate_action = DEMAND_SUPPORT_CHURCH
+			}
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 30
+			}	
+			estate_influence = {
+				estate = estate_church
+				influence = 25
+			}
+			estate_action_off_cooldown = {
+				estate_action = DEMAND_SUPPORT_CHURCH
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = DEMAND_SUPPORT_CHURCH
+			}
+			estate_action = {
+				estate_action = DEMAND_SUPPORT_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+		}
+		tooltip = estate_church_demand_support_title
+}
+custom_button = {
+		name = estate_church_seek_support_of_clergy_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			
+			has_estate = estate_church
+		}
+		trigger = { 
+			has_enabled_estate_action = {
+				estate_action = SEEK_SUPPORT_OF_CLERGY_CHURCH
+			}
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = SEEK_SUPPORT_OF_CLERGY_CHURCH
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = SEEK_SUPPORT_OF_CLERGY_CHURCH
+			}
+			estate_action = {
+				estate_action = SEEK_SUPPORT_OF_CLERGY_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+		}
+		tooltip = estate_church_seek_support_of_clergy_title
+}
+custom_button = {
+		name = estate_church_new_world_mission_action_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			
+			has_estate = estate_church
+		}
+		trigger = { 
+			has_enabled_estate_action = {
+				estate_action = NEW_WORLD_MISSION_CHURCH
+			}
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = NEW_WORLD_MISSION_CHURCH
+				days = 7300
+			}
+			has_idea_group = exploration_ideas
+			estate_influence = {
+				estate = estate_church
+				influence = 40
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = NEW_WORLD_MISSION_CHURCH
+			}
+			estate_action = {
+				estate_action = NEW_WORLD_MISSION_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+		}
+		tooltip = estate_church_new_world_mission_action_title
+}

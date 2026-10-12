@@ -1,0 +1,795 @@
+custom_window = {
+	name = ee_gamerules_custom_window
+	potential = {
+		has_country_flag = gamerule_window_visible
+	}
+}
+
+custom_button = {
+	name = gamerule_frontend_open_button
+	tooltip = EE_game_rules
+	potential = {
+	}
+	trigger = {
+		hidden_trigger = {
+			NOT = { has_country_flag = gamerules_set_for_game }
+			is_year = 1444
+			is_month = 10
+			start_date = 1444.11.11
+		}
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = gamerule_window_visible
+				}
+				clr_country_flag = gamerule_window_visible
+			}
+			else = {
+				set_country_flag = gamerule_window_visible
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = gamerules_set_for_game
+					NOT = {
+						is_year = 1444
+						is_month = 10
+						start_date = 1444.11.11
+					}
+				}
+			}
+			custom_tooltip = "Game Rules have already been set."
+		}
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_close
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			clr_country_flag = gamerule_window_visible
+		}
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_confirm
+	tooltip = EE_confirm_gamerules_tt
+	potential = {
+	}
+	trigger = {
+		# custom_trigger_tooltip = {
+			# tooltip = "You have changed any Game Rules."
+			# OR = {
+				# check_variable = {
+					# which = game_rule_1_var
+					# value = 1
+				# }
+				# check_variable = {
+					# which = game_rule_2_var
+					# value = 1
+				# }
+				# check_variable = {
+					# which = game_rule_3_var
+					# value = 1
+				# }
+				# check_variable = {
+					# which = game_rule_4_var
+					# value = 1
+				# }
+				# check_variable = {
+					# which = game_rule_5_var
+					# value = 1
+				# }
+				# check_variable = {
+					# which = game_rule_6_var
+					# value = 1
+				# }
+			# }
+		# }
+	}
+	effect = {
+		hidden_effect = {
+			clr_country_flag = gamerule_window_visible
+			set_country_flag = gamerules_set_for_game
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					is_variable_equal = {
+						which = game_rule_1_var
+						value = 1
+					}
+				}
+				### in the mission selection event, add AI weight based on global flag
+				### then set the global flag here, and fire the event for all
+				set_global_flag = gamerule_missions_1
+				every_country = {
+					limit = {
+						ai = yes
+						country_has_both_paradox_and_me_missions = yes
+					}
+					clr_country_flag = has_selected_missions_@THIS
+					country_event = { id = paradox_or_mod_missions_events.2 }
+				}
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = {
+						which = game_rule_1_var
+						value = 2
+					}
+				}
+				### in the mission selection event, add AI weight based on global flag
+				### then set the global flag here, and fire the event for all
+				set_global_flag = gamerule_missions_2
+				every_country = {
+					limit = {
+						ai = yes
+						country_has_both_paradox_and_me_missions = yes
+					}
+					clr_country_flag = has_selected_missions_@THIS
+					country_event = { id = paradox_or_mod_missions_events.2 }
+				}
+			}
+			else = {
+				### Nothing, it's the default
+			}
+			if = {
+				limit = {
+					is_variable_equal = {
+						which = game_rule_2_var
+						value = 1
+					}
+				}
+				set_global_flag = gamerule_subject_releasing_1
+			}
+			if = {
+				limit = {
+					is_variable_equal = {
+						which = game_rule_3_var
+						value = 1
+					}
+				}
+				set_global_flag = gamerule_estate_disasters_1
+			}
+			if = {
+				limit = {
+					is_variable_equal = {
+						which = game_rule_4_var
+						value = 2
+					}
+				}
+				set_global_flag = gamerule_migratory_tribes_2
+				every_province = {
+					limit = {
+						owner = {
+							OR = {
+								has_government_attribute = allow_migration
+								government = native
+								tag = BNJ
+								tag = SMB
+								tag = LUW
+							}
+							ai = yes
+							OR = {
+								capital_scope = { continent = north_america }
+								capital_scope = { continent = south_america }
+							}
+							NOT = {
+								OR = {
+									capital_scope = { superregion = far_east_superregion }
+									capital_scope = { continent = africa }
+									capital_scope = { region = east_siberia_region }
+								}
+							}
+						}
+					}
+					owner = { remove_country = yes }
+				}
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = {
+						which = game_rule_4_var
+						value = 3
+					}
+				}
+				set_global_flag = gamerule_migratory_tribes_3
+				every_province = {
+					limit = {
+						owner = {
+							OR = {
+								has_government_attribute = allow_migration
+								government = native
+								tag = BNJ
+								tag = SMB
+								tag = LUW
+							}
+							ai = yes
+							#OR = {
+							#	capital_scope = { continent = north_america }
+							#	capital_scope = { continent = south_america }
+							#}
+							NOT = {
+								OR = {
+									capital_scope = { superregion = far_east_superregion }
+									capital_scope = { continent = africa }
+									capital_scope = { region = east_siberia_region }
+								}
+							}
+						}
+					}
+					owner = { remove_country = yes }
+				}
+			}
+			
+			if = {
+				limit = {
+					check_variable = {
+						which = game_rule_4_var
+						value = 1
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							OR = {
+								has_global_flag = gamerule_migratory_tribes_2
+								has_global_flag = gamerule_migratory_tribes_3
+							}
+						}
+					}
+					set_global_flag = gamerule_migratory_tribes_1
+				}
+				every_country = {
+					limit = {
+						OR = {
+							has_government_attribute = allow_migration
+							government = native
+						}
+						ai = yes
+					}
+					every_tribal_land_province = {
+						limit = { NOT = { owner = { exists = yes } } }
+						settle_province = PREV
+						cede_province = ---
+						change_native_size = 5
+					}
+					change_government = tribal
+					add_government_reform = tribal_despotism
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = game_rule_5_var
+						value = 1
+					}
+				}
+				set_global_flag = gamerule_iberian_wedding_1
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = game_rule_5_var
+						value = 2
+					}
+				}
+				set_global_flag = gamerule_iberian_wedding_2
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = game_rule_6_var
+						value = 1
+					}
+				}
+				set_global_flag = gamerule_dutch_revolt_1
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						which = game_rule_6_var
+						value = 2
+					}
+				}
+				set_global_flag = gamerule_dutch_revolt_2
+			}
+		}
+	}
+}
+
+custom_window = {
+	name = EE_gamerules_1
+	potential = {
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_1_left
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_1_var
+							value = 1
+						}
+					}
+				}
+				set_variable = {
+					which = game_rule_1_var
+					value = 2
+				}
+			}
+			else = {
+				change_variable = {
+					which = game_rule_1_var
+					value = -1
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_1_right
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_1_var
+							value = 2
+						}
+					}
+				}
+				change_variable = {
+					which = game_rule_1_var
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = game_rule_1_var
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_1_select_text
+    potential = {
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_1_select_desc
+    potential = {
+	}
+}
+
+custom_window = {
+	name = EE_gamerules_2
+	potential = {
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_2_left
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_2_var
+							value = 1
+						}
+					}
+				}
+				set_variable = {
+					which = game_rule_2_var
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = game_rule_2_var
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_2_right
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_2_var
+							value = 1
+						}
+					}
+				}
+				set_variable = {
+					which = game_rule_2_var
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = game_rule_2_var
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_2_select_text
+    potential = {
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_2_select_desc
+    potential = {
+	}
+}
+
+
+
+custom_window = {
+	name = EE_gamerules_3
+	potential = {
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_3_left
+	potential = {
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = "This game rule has not yet been implemented! It will be available in a future patch :)"
+			always = no
+		}
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_3_var
+							value = 1
+						}
+					}
+				}
+				set_variable = {
+					which = game_rule_3_var
+					value = 1
+				}
+			}
+			else = {
+				change_variable = {
+					which = game_rule_3_var
+					value = -1
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_3_right
+	potential = {
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = "This game rule has not yet been implemented! It will be available in a future patch :)"
+			always = no
+		}
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_3_var
+							value = 1
+						}
+					}
+				}
+				change_variable = {
+					which = game_rule_3_var
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = game_rule_3_var
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_3_select_text
+    potential = {
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_3_select_desc
+    potential = {
+	}
+}
+
+
+custom_window = {
+	name = EE_gamerules_4
+	potential = {
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_4_left
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_4_var
+							value = 1
+						}
+					}
+				}
+				set_variable = {
+					which = game_rule_4_var
+					value = 3
+				}
+			}
+			else = {
+				change_variable = {
+					which = game_rule_4_var
+					value = -1
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_4_right
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_4_var
+							value = 3
+						}
+					}
+				}
+				change_variable = {
+					which = game_rule_4_var
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = game_rule_4_var
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_4_select_text
+    potential = {
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_4_select_desc
+    potential = {
+	}
+}
+
+
+custom_window = {
+	name = EE_gamerules_5
+	potential = {
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_5_left
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_5_var
+							value = 1
+						}
+					}
+				}
+				set_variable = {
+					which = game_rule_5_var
+					value = 2
+				}
+			}
+			else = {
+				change_variable = {
+					which = game_rule_5_var
+					value = -1
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_5_right
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_5_var
+							value = 2
+						}
+					}
+				}
+				change_variable = {
+					which = game_rule_5_var
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = game_rule_5_var
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_5_select_text
+    potential = {
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_5_select_desc
+    potential = {
+	}
+}
+
+
+custom_window = {
+	name = EE_gamerules_6
+	potential = {
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_6_left
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_6_var
+							value = 1
+						}
+					}
+				}
+				set_variable = {
+					which = game_rule_6_var
+					value = 2
+				}
+			}
+			else = {
+				change_variable = {
+					which = game_rule_6_var
+					value = -1
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = EE_gamerules_6_right
+	potential = {
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							which = game_rule_6_var
+							value = 2
+						}
+					}
+				}
+				change_variable = {
+					which = game_rule_6_var
+					value = 1
+				}
+			}
+			else = {
+				set_variable = {
+					which = game_rule_6_var
+					value = 0
+				}
+			}
+		}
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_6_select_text
+    potential = {
+	}
+}
+
+custom_text_box = {
+    name = EE_gamerules_6_select_desc
+    potential = {
+	}
+}

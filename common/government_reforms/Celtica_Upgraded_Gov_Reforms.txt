@@ -1,0 +1,200 @@
+EE_regional_council_reform = {
+	icon = "peasants"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = EE_CLT_buff_regional_councils
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		state_maintenance_modifier = -0.33
+		state_governing_cost = -0.2
+	}
+	conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		custom_attributes = {
+			unlock_special_state_edicts = yes
+		}
+	}
+}
+
+EE_decentralize_reform = {
+	icon = "map"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = EE_CLT_buff_decentralized_bureaucracy
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	modifiers = {
+		min_autonomy_in_territories = -0.05
+		num_accepted_cultures = 2
+		all_estate_loyalty_equilibrium = 0.05
+		governing_capacity = 100
+		governing_capacity_modifier = 0.05
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+EE_curtail_the_burghers_reform = {
+	icon = "assembly_hall"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = EE_CLT_buff_curtail_the_burghers_reform
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { has_estate_privilege = estate_burghers_land_rights }
+				remove_estate_privilege = estate_burghers_land_rights
+				set_estate_privilege = EE_CLT_estate_burghers_land_rights
+			}
+			if = {
+				limit = { has_estate_privilege = estate_burghers_land_of_commerce }
+				remove_estate_privilege = estate_burghers_land_of_commerce
+				set_estate_privilege = EE_CLT_estate_burghers_land_of_commerce
+			}
+		}
+	}
+	modifiers = {
+		trade_company_governing_cost = -0.1
+		yearly_corruption = -0.1
+		burghers_influence_modifier = -0.1
+	}
+	custom_attributes = {
+		seizing_land_no_rebels_from_estate_burghers = yes
+		enable_no_absolutism_for_burghers_privileges = yes
+	}
+	ai = {
+		factor = 1
+	}
+}
+
+EE_frequent_elections_reform = {
+	icon = "ballot_box"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = EE_CLT_buff_frequent_elections
+		OR = {
+			is_revolutionary = no
+			NOT = { has_dlc = "Emperor" }
+		}
+	}
+	trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = "NEEDS_REGULAR_ELECTIONS"
+				has_government_attribute = has_term_election
+			}
+			has_reform = lottery_reform
+		}
+	}
+	modifiers = {
+		max_absolutism = -10
+		election_cycle = -1
+		candidate_random_bonus = 1
+	}
+	effect = {
+		hidden_effect = { set_country_flag = EE_CLT_overflowing_stats_mana }
+	}
+	custom_attributes = { EE_CLT_overflowing_stats_mana_tt = yes }
+	ai = {
+		factor = 1
+	}
+}
+
+EE_factional_politics_reform = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = yes
+	potential = { has_country_flag = EE_factional_politics }
+	trigger = { 
+		NOT = { has_reform = dutch_republic }
+	}
+	modifiers = {
+		republican_tradition = 0.1
+	}
+	custom_attributes = {
+		enable_factional_politics_mechanic = yes
+	}
+	ai = { factor = 1 }
+}
+
+EE_strengthen_executive_powers_reform = {
+	icon = "queen"
+	allow_normal_conversion = yes
+	potential = { 
+		has_country_flag = EE_CLT_buff_strengthen_executive_powers_reform
+		is_revolutionary = no 
+	}
+	modifiers = {
+		possible_mil_policy = 1
+		max_absolutism = 25
+	}
+}
+
+EE_federal_senate_reform = {
+	icon = "judge"
+	allow_normal_conversion = yes
+	potential = {
+		has_country_flag = EE_CLT_buff_strengthen_executive_powers_reform
+		NOT = { has_government_attribute = is_pirate_republic_reform }
+	}
+	modifiers = {
+		expand_administration_cost = -1
+		candidate_random_bonus = 1
+	}
+	custom_attributes = {
+		enable_debate_rewards = yes
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+		custom_attributes = {
+			halved_parliament_bribes = yes
+		}
+	}
+}
+
+EE_reinforce_republican_values_reform = {
+	icon = "parliament_hall"
+	allow_normal_conversion = yes
+	potential = { has_country_flag = EE_CLT_buff_strengthen_executive_powers_reform }
+	modifiers = {
+		free_adm_policy = 1
+		reelection_cost = -0.1
+		republican_tradition = 0.1
+	}
+}
+
+EE_civil_society_reform = {
+	allow_normal_conversion = yes
+	icon = "tribal_civil_society"
+	potential = { has_country_flag = EE_CLT_buff_civil_society }
+	modifiers = {
+		global_tax_modifier = 0.1
+		yearly_corruption = -0.05
+		development_cost = -0.05
+	}
+	ai = {
+		factor = 1
+		modifier = {
+			factor = 2
+			OR = {
+				is_in_deficit = yes
+				num_of_loans = 5
+				corruption = 5
+			}
+		}
+	}
+}

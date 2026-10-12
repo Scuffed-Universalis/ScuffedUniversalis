@@ -1,0 +1,29 @@
+country_decisions = {
+	ME_manage_disaster_progress = {
+		potential = {
+			num_of_powerful_estates = 1
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			country_event = { id = ME_Estate_Events.1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						AND = {
+							NOT = { has_country_modifier = ME_is_countering_estate_power_modifier }
+							ME_has_10_progress_on_estate_disaster_trigger = yes
+						}
+						ME_has_90_progress_on_estate_disaster_trigger = yes
+					}
+				}
+			}
+		}
+		ai_importance = 400
+	}
+}

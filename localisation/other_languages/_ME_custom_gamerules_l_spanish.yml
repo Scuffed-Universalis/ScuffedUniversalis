@@ -1,0 +1,17 @@
+﻿l_spanish:
+ EE_gamerules_1_select_text:     "[Root.GetGameRule1]"
+ EE_gamerules_1_select_desc: "[Root.GetGameRuleDesc1]"
+ EE_gamerules_2_select_text:     "[Root.GetGameRule2]"
+ EE_gamerules_2_select_desc: "[Root.GetGameRuleDesc2]"
+ EE_gamerules_3_select_text:     "[Root.GetGameRule3]"
+ EE_gamerules_3_select_desc: "[Root.GetGameRuleDesc3]"
+ EE_gamerules_4_select_text:     "[Root.GetGameRule4]"
+ EE_gamerules_4_select_desc: "[Root.GetGameRuleDesc4]"
+ EE_gamerules_5_select_text:     "[Root.GetGameRule5]"
+ EE_gamerules_5_select_desc: "[Root.GetGameRuleDesc5]"
+ EE_gamerules_6_select_text:     "[Root.GetGameRule6]"
+ EE_gamerules_6_select_desc: "[Root.GetGameRuleDesc6]"
+
+
+ EE_game_rules: "Game Rules\n--------------\nGame Rules can affect certain parameters of the game, such as which Mission Trees AI nations will choose, or how likely certain events are to happen.\n§RThey can only be set once.§!"
+ EE_confirm_gamerules_tt: "Confirm these Game Rules\n--------------\n§RWARNING!§!\nThese Game Rules can not be changed after setting them once, so make sure you are certain of your choices!"

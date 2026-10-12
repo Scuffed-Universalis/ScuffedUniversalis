@@ -1,0 +1,22 @@
+sound = {
+	name = ludi_stackwipe
+	file = "ludi_stackwipe.wav"
+}
+
+sound = {
+	name = what_how_sound
+	file = "what_how_sound_true.wav"
+    always_load = yes
+}
+
+sound = {
+	name = old_revolt
+	file = "old/revolt.wav"
+	volume = 0.7
+}
+
+sound = {
+	name = achievement_sound
+	file = "achievement_sound.wav"
+	volume = 5
+}

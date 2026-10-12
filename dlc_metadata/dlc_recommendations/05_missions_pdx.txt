@@ -1,0 +1,25 @@
+#EE- used for the missions button
+missions_yes_pdx = {
+	reason = {
+		tooltip_desc = "missions_yes_pdx_desc"
+		tooltip_reason = ""
+		weight = 100
+		trigger = {
+			OR = {
+				#tag = BYZ
+				country_has_good_paradox_missions = yes
+			}
+		}
+	}
+}
+
+missions_no_pdx = {
+	reason = {
+		tooltip_desc = "missions_no_desc"
+		tooltip_reason = ""
+		weight = 1
+		trigger = {
+			always = yes
+		}
+	}
+}

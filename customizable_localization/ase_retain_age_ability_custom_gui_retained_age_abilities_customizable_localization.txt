@@ -1,0 +1,474 @@
+defined_text = {
+	name = GetAseRetainedAgeAbilitiesTooltip
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = ase_chosen_age_of_reformation
+				has_country_flag = ase_chosen_age_of_absolutism
+				has_country_flag = ase_chosen_age_of_revolutions
+			}
+		}
+		localisation_key = string_ase_retained_age_abilities_tt
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+
+# Age of Reformation
+defined_text = {
+	name = GetAseRetainedAgeAbilityTooltipForAgeOfReformation
+	random = no
+
+	text = {
+		trigger = {
+			has_country_flag = ase_chosen_age_of_reformation
+		}
+		localisation_key = string_ase_retained_age_ability_for_age_of_reformation_tt
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+defined_text = {
+	name = GetAseRetainedAgeAbilityNameForAgeOfReformation
+	random = no
+
+	text = {
+		trigger = {
+			has_country_modifier = ase_justified_wars
+		}
+		localisation_key = ab_justified_wars
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_glorious_renaissance_modifier
+		}
+		localisation_key = ase_glorious_renaissance
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_improved_wartaxes
+		}
+		localisation_key = ab_free_war_taxes
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_ruling_dynasty_modifier
+		}
+		localisation_key = ase_ruling_dynasty
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_cavalry_armies
+		}
+		localisation_key = ab_cavalry_armies
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_adaptative_combat_terrain
+		}
+		localisation_key = ab_attack_bonus_in_capital_terrain
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_boost_colony
+		}
+		localisation_key = ab_colony_boost_development
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_exploration_corp_modifier
+		}
+		localisation_key = ase_exploration_corp
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+defined_text = {
+	name = GetAseRetainedAgeAbilityEffectsForAgeOfReformation
+	random = no
+
+	text = {
+		trigger = {
+			has_country_modifier = ase_justified_wars
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_justified_wars
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_glorious_renaissance_modifier
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_glorious_renaissance
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_improved_wartaxes
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_free_war_taxes
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_ruling_dynasty_modifier
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_ruling_dynasty
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_cavalry_armies
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_cavalry_armies
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_adaptative_combat_terrain
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_attack_bonus_in_capital_terrain
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_boost_colony
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_colony_boost_development
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_exploration_corp_modifier
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_exploration_corp
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+
+# Age of Absolutism
+defined_text = {
+	name = GetAseRetainedAgeAbilityTooltipForAgeOfAbsolutism
+	random = no
+
+	text = {
+		trigger = {
+			has_country_flag = ase_chosen_age_of_absolutism
+		}
+		localisation_key = string_ase_retained_age_ability_for_age_of_absolutism_tt
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+defined_text = {
+	name = GetAseRetainedAgeAbilityNameForAgeOfAbsolutism
+	random = no
+
+	text = {
+		trigger = {
+			has_country_modifier = ase_floating_batteries
+		}
+		localisation_key = ab_siege_blockades
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_institutional_spread
+		}
+		localisation_key = ab_institution_spread_from_true_faith
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_institutional_spread
+		}
+		localisation_key = ase_dharmic_syncretism
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_religious_wars
+		}
+		localisation_key = ab_warscore_vs_religion
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_prestigious_conversion
+		}
+		localisation_key = ab_prestige_per_development_from_conversion
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_mercenary_discipline
+		}
+		localisation_key = ab_mercenary_discipline
+	}
+	text = {
+		trigger = {
+			has_country_flag = muslim_jihad_flag_infinite
+		}
+		localisation_key = ase_muslim_jihad
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_powerful_tradeships
+		}
+		localisation_key = ab_ship_power_propagation
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_confessionalism_modifier
+		}
+		localisation_key = ase_confessionalism
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+defined_text = {
+	name = GetAseRetainedAgeAbilityEffectsForAgeOfAbsolutism
+	random = no
+
+	text = {
+		trigger = {
+			has_country_modifier = ase_floating_batteries
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_siege_blockades
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_institutional_spread
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_institution_spread_from_true_faith
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_institutional_spread
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_dharmic_syncretism
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_religious_wars
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_warscore_vs_religion
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_prestigious_conversion
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_prestige_per_development_from_conversion
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_mercenary_discipline
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_mercenary_discipline
+	}
+	text = {
+		trigger = {
+			has_country_flag = muslim_jihad_flag_infinite
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_muslim_jihad
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_powerful_tradeships
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_ship_power_propagation
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_confessionalism_modifier
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_confessionalism
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+
+# Age of Revolutions
+defined_text = {
+	name = GetAseRetainedAgeAbilityTooltipForAgeOfRevolutions
+	random = no
+
+	text = {
+		trigger = {
+			has_country_flag = ase_chosen_age_of_revolutions
+		}
+		localisation_key = string_ase_retained_age_ability_for_age_of_revolutions_tt
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+defined_text = {
+	name = GetAseRetainedAgeAbilityNameForAgeOfRevolutions
+	random = no
+
+	text = {
+		trigger = {
+			has_country_modifier = ase_flexible_rivalries
+		}
+		localisation_key = ab_rival_change
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_administrative_efficiency
+		}
+		localisation_key = ab_adm_efficiency
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_imperial_control_modifier
+		}
+		localisation_key = ase_imperial_control
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_protecting_forts
+		}
+		localisation_key = ab_rival_border_fort
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_absolute_government
+		}
+		localisation_key = ab_yearly_absolutism
+	}
+	text = {
+		trigger = {
+			has_country_flag = centralised_state_flag_retained
+		}
+		localisation_key = ase_centralised_state
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_efficient_autonomy
+		}
+		localisation_key = ab_autonomy
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_strategic_warfare_modifier
+		}
+		localisation_key = ase_strategic_warfare
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_harsher_treatment
+		}
+		localisation_key = ab_harsh_treatment
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_cultural_relativism_modifier
+		}
+		localisation_key = ase_cultural_relativism
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}
+defined_text = {
+	name = GetAseRetainedAgeAbilityEffectsForAgeOfRevolutions
+	random = no
+
+	text = {
+		trigger = {
+			has_country_modifier = ase_flexible_rivalries
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_rival_change
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_administrative_efficiency
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_adm_efficiency
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_imperial_control_modifier
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_imperial_control
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_protecting_forts
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_rival_border_fort
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_absolute_government
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_yearly_absolutism
+	}
+	text = {
+		trigger = {
+			has_country_flag = centralised_state_flag_retained
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_centralised_state
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_efficient_autonomy
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_autonomy
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_strategic_warfare_modifier
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_strategic_warfare
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_harsher_treatment
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_harsh_treatment
+	}
+	text = {
+		trigger = {
+			has_country_modifier = ase_cultural_relativism_modifier
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_cultural_relativism
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = ""
+	}
+}

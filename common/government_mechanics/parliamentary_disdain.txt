@@ -1,0 +1,262 @@
+ME_parliamentary_disdain_mechanic = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 3
+	available = {
+		OR = {
+			has_dlc = "Domination"
+			has_dlc = "Common Sense"
+		}
+	}
+	
+	powers = {
+		parliamentary_disdain = {
+			show_before_interactions = yes
+			max = 100
+			scaled_modifier = {
+				modifier = {
+					num_of_parliament_issues = -5
+					administrative_efficiency = 0.05
+					all_power_cost = -0.05
+					global_unrest = 5
+				}
+			}
+			range_modifier = {
+				trigger = {
+					current_age = age_of_discovery
+				}
+				modifier = {
+					monthly_parliamentary_disdain = -1
+				}
+				start_value = 25
+				end_value = 100	
+			}
+			range_modifier = {
+				trigger = {
+					current_age = age_of_reformation
+				}
+				modifier = {
+					monthly_parliamentary_disdain = -1
+				}
+				start_value = 50
+				end_value = 100	
+			}
+			base_monthly_growth = 0
+			is_good = yes
+		}
+	}
+	
+	interactions = {
+		ENG_force_issue_through = {
+			icon = GFX_RHN_involve_officials_button
+			trigger = {
+				has_active_debate = yes
+			}
+			effect = {
+				end_current_debate = yes
+				
+				custom_tooltip = " "
+				
+				custom_tooltip = ENG_gain_of_parliamentary_disdain
+				if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.05 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 20
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.1 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 18
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.15 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 16
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.2 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 14
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.25 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 12
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.3 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 10
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.35 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 8
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.4 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 6
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.45 }
+					}
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 4
+					}
+				}
+				else = {
+					add_government_power = {
+						mechanic_type = ME_parliamentary_disdain_mechanic
+						power_type = parliamentary_disdain 
+						value = 2
+					}
+				}
+				
+				custom_tooltip = " "
+				
+				custom_tooltip = ENG_rebels
+				if = {
+					limit = {
+						NOT = { percentage_backing_issue = 0.25 }
+					}
+					capital_scope = {
+						spawn_rebels = {
+							type = parliamentarians_rebels
+							size = 3
+						}
+					}
+				}
+			}
+			cooldown_years = 15
+			cooldown_token = ENG_force_issue_through
+			cooldown_desc = ENG_PARLIAMENTARY_DISDAIN_ACTIONS
+			ai_chance = {
+				factor = 1
+			}
+		}
+		ENG_institute_unlawful_tax = {
+			icon = GFX_RHN_procure_a_loan_button
+			trigger = { 
+				legitimacy = 80
+			}
+			effect = {
+				add_legitimacy = -20
+				
+				add_years_of_income = 0.25
+				
+				add_government_power = {
+					mechanic_type = ME_parliamentary_disdain_mechanic
+					power_type = parliamentary_disdain 
+					value = 10
+				}
+				
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					custom_tooltip = ENG_if_the_burghers_are_disloyal
+					
+					hidden_effect = {
+						if = {
+							limit = {
+								NOT = {
+									estate_loyalty = {
+										estate = estate_burghers
+										loyalty = 40
+									}
+								}
+							}
+							add_government_power = {
+								mechanic_type = ME_parliamentary_disdain_mechanic
+								power_type = parliamentary_disdain 
+								value = 10
+							}
+						}
+					}
+				}
+			}
+			cooldown_years = 15
+			cooldown_token = ENG_force_issue_through
+			cooldown_desc = ENG_PARLIAMENTARY_DISDAIN_ACTIONS
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 0
+					NOT = { is_absolutism_active = yes }
+				}
+			}
+		}
+		ENG_answer_for_transgressions = {
+			icon = GFX_RHN_create_investment_fund_button
+			trigger = {
+				government_reform_progress = 20
+			}
+			effect = {
+				change_government_reform_progress = -20
+				
+				if = {
+					limit = {
+						is_absolutism_active = yes
+					}
+					custom_tooltip = " "
+					add_absolutism = -5
+				}
+				
+				custom_tooltip = " "
+				
+				add_government_power = {
+					mechanic_type = ME_parliamentary_disdain_mechanic
+					power_type = parliamentary_disdain 
+					value = -10
+				}
+			}
+			cooldown_years = 0
+			ai_chance = {
+				factor = 0
+			}
+		}
+	}
+}

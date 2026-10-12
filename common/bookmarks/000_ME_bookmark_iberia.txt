@@ -1,0 +1,17 @@
+bookmark = {
+	name = "ME_BOOKMARK_IBERIA"
+	desc = "ME_BOOKMARK_IBERIA_DESC"
+	date = 1444.11.11
+	
+	center = 217
+	default = yes
+	
+	country = POR
+	country = CAS
+	country = ARA
+	country = NAV
+	
+	easy_country = POR
+	easy_country = CAS
+	easy_country = ARA
+}

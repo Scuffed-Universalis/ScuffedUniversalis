@@ -1,0 +1,28 @@
+union = {
+	first = CAS
+	second = GAL
+	start_date = 1444.1.1
+	end_date = 1776.12.31
+}
+
+union = {
+	first = ARA
+	second = SAR
+	start_date = 1444.1.1
+	end_date = 1776.12.31
+}
+
+union = {
+	first = ARA
+	second = SIC
+	start_date = 1444.1.1
+	end_date = 1776.12.31
+}
+
+dependency = {
+	subject_type = EE_granadan_tributary
+	first = CAS
+	second = GRA
+	start_date = 1444.1.1
+	end_date = 1776.12.31
+}

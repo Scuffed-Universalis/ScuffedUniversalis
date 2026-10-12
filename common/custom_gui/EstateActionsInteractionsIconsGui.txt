@@ -1,0 +1,1688 @@
+custom_icon = {
+	name = estate_action_button_one_icon
+	potential = { ai = no }
+	frame = {
+        number = 1 # privilege_army_professionalism
+        trigger = { 
+			OR = {
+				
+				show_rajput_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 2 # privilege_army_tradition
+        trigger = { 
+			OR = {
+				
+				show_maratha_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 3 # privilege_land_force_limit
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 4 # privilege_missionary
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 5 # privilege_seek_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 6 # privilege_government
+        trigger = { 
+			OR = {
+				
+				show_nobles_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 7 # privilege_make_generous_donation
+        trigger = { 
+			OR = {
+				
+				show_brahmins_interactions = yes
+				show_church_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 8 # privilege_military
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 9 # privilege_gold_mint
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 10 # privilege_empty_throne
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 11 # privilege_heavy_ship
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 12 # privilege_ducats
+        trigger = { 
+			OR = {
+				
+				show_vaisyas_interactions = yes
+				show_burghers_interactions = yes
+				show_jains_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 13 # privilege_new_world_mission
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 14 # privilege_tolerance_own
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 15 # privilege_diplomat
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 16 # privilege_conquistador
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 17 # privilege_grant_new_world_charter
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 18 # privilege_navy_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 19 # privilege_conscript_cossack_elite
+        trigger = { 
+			OR = {
+				
+				show_cossacks_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 20 # privilege_loot
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 21 # privilege_discipline
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 22 # privilege_legitimacy
+        trigger = { 
+			OR = {
+				
+				show_nomadic_tribes_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 23 # privilege_monopoly
+        trigger = { 
+			OR = {
+				
+				show_dhimmi_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 24 # privilege_investigate_corruption
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 25 # none
+        trigger = {
+			OR = {
+				always = yes
+			}
+		}
+    }
+}
+
+custom_icon = {
+	name = estate_action_button_two_icon
+	potential = { ai = no }
+	frame = {
+        number = 1 # privilege_army_professionalism
+        trigger = { 
+			OR = {
+				
+				show_maratha_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 2 # privilege_army_tradition
+        trigger = { 
+			OR = {
+				
+				show_rajput_interactions = yes
+				show_nobles_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 3 # privilege_land_force_limit
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 4 # privilege_missionary
+        trigger = { 
+			OR = {
+				
+				show_church_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 5 # privilege_seek_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 6 # privilege_government
+        trigger = { 
+			OR = {
+				
+				show_brahmins_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 7 # privilege_make_generous_donation
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 8 # privilege_military
+        trigger = { 
+			OR = {
+				
+				show_nomadic_tribes_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 9 # privilege_gold_mint
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 10 # privilege_empty_throne
+        trigger = { 
+			OR = {
+				
+				show_vaisyas_interactions = yes
+				show_burghers_interactions = yes
+				show_dhimmi_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 11 # privilege_heavy_ship
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 12 # privilege_ducats
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 13 # privilege_new_world_mission
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 14 # privilege_tolerance_own
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 15 # privilege_diplomat
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 16 # privilege_conquistador
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 17 # privilege_grant_new_world_charter
+        trigger = { 
+			OR = {
+				
+				show_cossacks_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 18 # privilege_navy_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 19 # privilege_conscript_cossack_elite
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 20 # privilege_loot
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 21 # privilege_discipline
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 22 # privilege_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 23 # privilege_monopoly
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 24 # privilege_investigate_corruption
+        trigger = { 
+			OR = {
+				
+				show_jains_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 25 # none
+        trigger = {
+			OR = {
+				always = yes
+			}
+		}
+    }
+}
+
+custom_icon = {
+	name = estate_action_button_three_icon
+	potential = { ai = no }
+	frame = {
+        number = 1 # privilege_army_professionalism
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 2 # privilege_army_tradition
+        trigger = { 
+			OR = {
+				
+				show_cossacks_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 3 # privilege_land_force_limit
+        trigger = { 
+			OR = {
+				
+				show_rajput_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 4 # privilege_missionary
+        trigger = { 
+			OR = {
+				
+				show_brahmins_interactions = yes
+				show_church_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 5 # privilege_seek_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 6 # privilege_government
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 7 # privilege_make_generous_donation
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 8 # privilege_military
+        trigger = { 
+			OR = {
+				
+				show_maratha_interactions = yes
+				show_nomadic_tribes_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 9 # privilege_gold_mint
+        trigger = { 
+			OR = {
+				
+				show_vaisyas_interactions = yes
+				show_burghers_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 10 # privilege_empty_throne
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 11 # privilege_heavy_ship
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 12 # privilege_ducats
+        trigger = { 
+			OR = {
+				
+				show_dhimmi_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 13 # privilege_new_world_mission
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 14 # privilege_tolerance_own
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 15 # privilege_diplomat
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 16 # privilege_conquistador
+        trigger = { 
+			OR = {
+				
+				show_nobles_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 17 # privilege_grant_new_world_charter
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 18 # privilege_navy_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 19 # privilege_conscript_cossack_elite
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 20 # privilege_loot
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 21 # privilege_discipline
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 22 # privilege_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 23 # privilege_monopoly
+        trigger = { 
+			OR = {
+				
+				show_jains_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 24 # privilege_investigate_corruption
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 25 # none
+        trigger = {
+			OR = {
+				always = yes
+			}
+		}
+    }
+}
+
+custom_icon = {
+	name = estate_action_button_four_icon
+	potential = { ai = no }
+	frame = {
+        number = 1 # privilege_army_professionalism
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 2 # privilege_army_tradition
+        trigger = { 
+			OR = {
+				
+				show_nomadic_tribes_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 3 # privilege_land_force_limit
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 4 # privilege_missionary
+        trigger = { 
+			OR = {
+				
+				show_brahmins_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 5 # privilege_seek_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 6 # privilege_government
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 7 # privilege_make_generous_donation
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 8 # privilege_military
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 9 # privilege_gold_mint
+        trigger = { 
+			OR = {
+				
+				show_jains_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 10 # privilege_empty_throne
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 11 # privilege_heavy_ship
+        trigger = { 
+			OR = {
+				
+				show_vaisyas_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 12 # privilege_ducats
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 13 # privilege_new_world_mission
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 14 # privilege_tolerance_own
+        trigger = { 
+			OR = {
+				
+				show_church_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 15 # privilege_diplomat
+        trigger = { 
+			OR = {
+				
+				show_nobles_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 16 # privilege_conquistador
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 17 # privilege_grant_new_world_charter
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 18 # privilege_navy_tradition
+        trigger = { 
+			OR = {
+				
+				show_burghers_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 19 # privilege_conscript_cossack_elite
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 20 # privilege_loot
+        trigger = { 
+			OR = {
+				
+				show_cossacks_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 21 # privilege_discipline
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 22 # privilege_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 23 # privilege_monopoly
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 24 # privilege_investigate_corruption
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 25 # none
+        trigger = {
+			OR = {
+				always = yes
+			}
+		}
+    }
+}
+
+custom_icon = {
+	name = estate_action_button_five_icon
+	potential = { ai = no }
+	frame = {
+        number = 1 # privilege_army_professionalism
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 2 # privilege_army_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 3 # privilege_land_force_limit
+        trigger = { 
+			OR = {
+				
+				show_nobles_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 4 # privilege_missionary
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 5 # privilege_seek_legitimacy
+        trigger = { 
+			OR = {
+				
+				show_brahmins_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 6 # privilege_government
+        trigger = { 
+			OR = {
+				
+				show_church_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 7 # privilege_make_generous_donation
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 8 # privilege_military
+        trigger = { 
+			OR = {
+				
+				show_cossacks_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 9 # privilege_gold_mint
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 10 # privilege_empty_throne
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 11 # privilege_heavy_ship
+        trigger = { 
+			OR = {
+				
+				show_burghers_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 12 # privilege_ducats
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 13 # privilege_new_world_mission
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 14 # privilege_tolerance_own
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 15 # privilege_diplomat
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 16 # privilege_conquistador
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 17 # privilege_grant_new_world_charter
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 18 # privilege_navy_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 19 # privilege_conscript_cossack_elite
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 20 # privilege_loot
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 21 # privilege_discipline
+        trigger = { 
+			OR = {
+				
+				show_nomadic_tribes_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 22 # privilege_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 23 # privilege_monopoly
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 24 # privilege_investigate_corruption
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 25 # none
+        trigger = {
+			OR = {
+				always = yes
+			}
+		}
+    }
+}
+
+custom_icon = {
+	name = estate_action_button_six_icon
+	potential = { ai = no }
+	frame = {
+        number = 1 # privilege_army_professionalism
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 2 # privilege_army_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 3 # privilege_land_force_limit
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 4 # privilege_missionary
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 5 # privilege_seek_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 6 # privilege_government
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 7 # privilege_make_generous_donation
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 8 # privilege_military
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 9 # privilege_gold_mint
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 10 # privilege_empty_throne
+        trigger = { 
+			OR = {
+				
+				show_cossacks_interactions = yes
+			}
+		}
+    }
+	frame = {
+        number = 11 # privilege_heavy_ship
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 12 # privilege_ducats
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 13 # privilege_new_world_mission
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 14 # privilege_tolerance_own
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 15 # privilege_diplomat
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 16 # privilege_conquistador
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 17 # privilege_grant_new_world_charter
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 18 # privilege_navy_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 19 # privilege_conscript_cossack_elite
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 20 # privilege_loot
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 21 # privilege_discipline
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 22 # privilege_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 23 # privilege_monopoly
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 24 # privilege_investigate_corruption
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 25 # none
+        trigger = {
+			OR = {
+				always = yes
+			}
+		}
+    }
+}
+
+custom_icon = {
+	name = estate_action_button_seven_icon
+	potential = { ai = no }
+	frame = {
+        number = 1 # privilege_army_professionalism
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 2 # privilege_army_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 3 # privilege_land_force_limit
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 4 # privilege_missionary
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 5 # privilege_seek_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 6 # privilege_government
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 7 # privilege_make_generous_donation
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 8 # privilege_military
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 9 # privilege_gold_mint
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 10 # privilege_empty_throne
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 11 # privilege_heavy_ship
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 12 # privilege_ducats
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 13 # privilege_new_world_mission
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 14 # privilege_tolerance_own
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 15 # privilege_diplomat
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 16 # privilege_conquistador
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 17 # privilege_grant_new_world_charter
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 18 # privilege_navy_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 19 # privilege_conscript_cossack_elite
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 20 # privilege_loot
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 21 # privilege_discipline
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 22 # privilege_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 23 # privilege_monopoly
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 24 # privilege_investigate_corruption
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 25 # none
+        trigger = {
+			OR = {
+				always = yes
+			}
+		}
+    }
+}
+
+custom_icon = {
+	name = estate_action_button_eight_icon
+	potential = { ai = no }
+	frame = {
+        number = 1 # privilege_army_professionalism
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 2 # privilege_army_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 3 # privilege_land_force_limit
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 4 # privilege_missionary
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 5 # privilege_seek_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 6 # privilege_government
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 7 # privilege_make_generous_donation
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 8 # privilege_military
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 9 # privilege_gold_mint
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 10 # privilege_empty_throne
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 11 # privilege_heavy_ship
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 12 # privilege_ducats
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 13 # privilege_new_world_mission
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 14 # privilege_tolerance_own
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 15 # privilege_diplomat
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 16 # privilege_conquistador
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 17 # privilege_grant_new_world_charter
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 18 # privilege_navy_tradition
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 19 # privilege_conscript_cossack_elite
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 20 # privilege_loot
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 21 # privilege_discipline
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 22 # privilege_legitimacy
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 23 # privilege_monopoly
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 24 # privilege_investigate_corruption
+        trigger = { 
+			OR = {
+				always = no
+			}
+		}
+    }
+	frame = {
+        number = 25 # none
+        trigger = {
+			OR = {
+				always = yes
+			}
+		}
+    }
+}
+

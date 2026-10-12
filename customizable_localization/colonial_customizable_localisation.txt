@@ -1,0 +1,39 @@
+defined_text = {
+	name = GetColonialPermissionStatus
+	random = no
+
+	text = {
+		localisation_key = ME_colonial_cannot
+		trigger = {
+			FROM = {
+				has_country_flag = ME_colonial_may_not_colonize_outside_region
+			}
+		}
+	}
+	text = {
+		localisation_key = ME_colonial_can
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetColonialPermissionChange
+	random = no
+
+	text = {
+		localisation_key = ME_colonial_permit
+		trigger = {
+			FROM = {
+				has_country_flag = ME_colonial_may_not_colonize_outside_region
+			}
+		}
+	}
+	text = {
+		localisation_key = ME_colonial_forbid
+		trigger = {
+			always = yes
+		}
+	}
+}

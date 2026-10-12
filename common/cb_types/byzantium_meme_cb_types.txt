@@ -1,0 +1,23 @@
+cb_byzantine_subjugation_war = {
+	valid_for_subject = no
+
+	prerequisites_self = {
+		has_reform = turko_hellenic_autocracy
+		OR = {
+			is_neighbor_of = FROM
+			any_subject_country = {
+				is_neighbor_of = FROM
+				is_subject_other_than_tributary_trigger = yes
+			}
+		}
+	}
+
+	prerequisites = {
+		FROM = {
+			NOT = { total_development = 150 }
+			is_subject = no
+		}
+	}
+
+	war_goal = take_capital_pronoyalet_war
+}

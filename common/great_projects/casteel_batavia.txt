@@ -1,0 +1,77 @@
+kasteel_batavia = {
+	start = 630
+	date = 1444.01.01
+	time = { months = 60 }
+	build_cost = 250
+	can_be_moved = no
+	starting_tier = 0 #Not yet constructed
+	type = monument
+	build_trigger = { 
+		technology_group = western
+	}
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			technology_group = western
+		}
+	}
+	can_upgrade_trigger = {
+		owner = {
+			technology_group = western
+		}
+	}
+	keep_trigger = { 
+	}
+	tier_0 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 250 }
+	}
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 250 }
+		
+		province_modifiers = {
+			local_defensiveness = 0.15
+		}
+		area_modifier = { 
+			
+		}
+		country_modifiers = {
+			has_voc_indiamen = yes
+			naval_forcelimit_modifier = 0.1
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 500 }
+		
+		province_modifiers = {
+			
+		}
+		area_modifier = { 
+			local_defensiveness = 0.15
+		}
+		country_modifiers = {
+			has_voc_indiamen = yes
+			naval_forcelimit_modifier = 0.1
+			allowed_voc_indiamen_fraction = 0.1
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 1000 }
+		
+		province_modifiers = {
+			
+		}
+		area_modifier = { 
+			local_defensiveness = 0.25
+		}
+		country_modifiers = {
+			has_voc_indiamen = yes
+			naval_forcelimit_modifier = 0.2
+			allowed_voc_indiamen_fraction = 0.2
+		}
+	}
+}

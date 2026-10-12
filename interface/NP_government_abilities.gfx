@@ -1,0 +1,62 @@
+spriteTypes = {
+	#### All of these is related to "game/common/government_mechanics"
+
+	### Doom ###
+	spriteType = {
+		name = "GFX_single_government_power_bar_doom"
+		texturefile = "gfx/interface/government_mechanics/doom_bar.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_sacrifice_to_gods"
+		texturefile = "gfx/interface/government_mechanics/doom/nahuatl_sacrifice_to_gods.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_sacrifice_ruler"
+		texturefile = "gfx/interface/government_mechanics/doom/nahuatl_sacrifice_ruler.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_nahuatl_raids"
+		texturefile = "gfx/interface/government_mechanics/doom/nahuatl_raids.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_doom_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/doom_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/doom_progress_bar_empty.dds"
+		size = { x = 225 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	##Colonial Influence
+	spriteType = {
+		name = "GFX_fight_colonial_influence"
+		texturefile = "gfx/interface/government_mechanics/cl_fight_influence.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_invest_in_reaction"
+		texturefile = "gfx/interface/government_mechanics/cl_invest_countermeasures.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	progressbartype = {
+		name = "GFX_power_struggle_power_bar"
+		color = { 1.0 0.0 0.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/government_mechanics/power_struggle_progress_bar.dds"
+		textureFile2 = "gfx/interface/government_mechanics/doom_progress_bar_empty.dds"
+		size = { x = 225 y = 20 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+}

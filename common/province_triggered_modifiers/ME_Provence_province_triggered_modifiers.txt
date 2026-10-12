@@ -1,0 +1,64 @@
+ME_PRO_splendor_marseille = {
+	potential = { 
+       owner = { mission_completed = PRO_marseille }
+    }
+    trigger = {
+        owner = { stability = 2 }
+    }
+    monthly_splendor = 1
+    province_trade_power_value = 5
+    on_activation = {
+    }
+    on_deactivation = {
+    }
+}
+
+ME_PRO_push_hungarian_front = {
+	potential = { 
+       owner = { mission_completed = PRO_hungary }
+    }
+    trigger = {
+        any_country = {
+            NOT = { religion_group = christian }
+            num_of_owned_provinces_with = {
+                value = 1
+                region = balkan_region
+            }
+        }
+    }
+    warscore_cost_vs_other_religion = -0.1
+    on_activation = {
+    }
+    on_deactivation = {
+        owner = {
+            random_owned_province = {
+                limit = { has_province_flag = ME_PRO_push_hungarian_front }
+                remove_province_triggered_modifier = ME_PRO_push_hungarian_front
+                clr_province_flag = ME_PRO_push_hungarian_front
+                owner = {
+                    add_country_modifier = {
+                        name = ME_PRO_crusade_won
+                        duration = -1
+                    }  
+                } 
+            }
+        }  
+    }
+}
+
+ME_PRO_arsenal_toulon = {
+	potential = { 
+       owner = { mission_completed = PRO_toulon }
+    }
+    trigger = {
+        has_dock_building_trigger = yes
+        has_shipyard_building_trigger = yes
+    }
+    allowed_num_of_buildings = 2
+    ship_durability = 0.05
+    block_slave_raid = yes
+    on_activation = {
+    }
+    on_deactivation = {  
+    }
+}

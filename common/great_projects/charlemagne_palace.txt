@@ -1,0 +1,146 @@
+# Merge with other file later!
+
+ME_aachen_palace = {
+	start = 1878
+	date = 795.01.01
+	time = { months = 60 }
+	build_cost = 0
+	can_be_moved = no
+	starting_tier = 1 #that's correct
+	type = monument
+	build_trigger = { 
+	}
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = {
+				tag = FRX
+				tag = AAC
+				tag = LOT
+				tag = HLR
+				is_emperor = yes
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		owner = {
+			OR = {
+				tag = FRX
+				tag = AAC
+				tag = LOT
+				tag = HLR
+				is_emperor = yes
+			}
+		}
+	}
+	keep_trigger = { 
+	}
+	tier_0 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 0 }
+	}
+	tier_1 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 1000 }
+		province_modifiers = {
+			tax_income = 6
+		}
+		area_modifier = { }
+		country_modifiers = {
+			papal_influence = 0.5
+			reasons_to_elect = 5
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 2500 }
+		province_modifiers = {
+			tax_income = 12
+		}
+		area_modifier = { }
+		country_modifiers = {
+			papal_influence = 1
+			reasons_to_elect = 15
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					mission_completed = AAC_palace
+				}
+			}
+			modifier = {
+				max_absolutism = 5
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 5000 }
+		province_modifiers = {
+			tax_income = 24
+			local_tax_modifier = 0.5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			max_absolutism_effect = 0.1
+			papal_influence = 1
+			reasons_to_elect = 25
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					mission_completed = AAC_palace
+				}
+			}
+			modifier = {
+				max_absolutism = 10
+			}
+		}
+
+		#Lotharingia
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = ME_LOT_PICKED_MILITARY_PALACE
+						has_country_flag = me_bur_military_palace_flag
+					}
+				}
+			}
+			modifier = {
+				cavalry_cost = -0.1
+				army_tradition_from_battle = 0.5
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = ME_LOT_PICKED_DIPLOMATIC_PALACE
+						has_country_flag = me_bur_diplomatic_palace_flag
+					}
+				}
+			}
+			modifier = {
+				improve_relation_modifier = 0.2
+				diplomatic_reputation = 1
+			}
+		}
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					custom_trigger_tooltip = {
+						tooltip = ME_LOT_PICKED_CULTURE_PALACE
+						has_country_flag = me_bur_culture_palace_flag
+					}
+				}
+			}
+			modifier = {
+				culture_conversion_cost = -0.15
+				culture_conversion_time = -0.15
+			}
+		}
+	}
+}

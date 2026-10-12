@@ -1,0 +1,19 @@
+bookmark = {
+	name = "ME_BOOKMARK_LOW_COUNTRIES"
+	desc = "ME_BOOKMARK_LOW_COUNTRIES_DESC"
+	date = 1444.11.11
+	
+	center = 4383
+	default = yes
+	
+	country = HOL
+	country = BRB
+	country = FLA
+	country = GEL
+	country = UTR
+	country = FRI
+	country = EFR
+	country = LIE
+	
+	easy_country = HOL
+}

@@ -1,0 +1,81 @@
+deactivate_channel_tunnel_modifier = {
+	potential = {
+		has_province_flag = monument_being_destroyed
+		province_id = 235
+	}
+	trigger = {
+		NOT = { has_province_flag = destruction_tick }
+	}
+	hidden = yes 
+	
+	#Province scope
+	on_activation = {
+		set_province_flag = destruction_tick
+		if = {
+			limit = {
+				OR = {
+					is_variable_equal = {
+						which = destruction_progress_days
+						value = 0
+					}
+					check_variable = {
+						which = destruction_progress
+						value = 100
+					}
+				}
+			}
+			owner = {
+				country_event = { 
+					id = ME_Monument_Events.1
+				}
+			}
+			remove_province_triggered_modifier = deactivate_channel_tunnel_modifier
+			clr_province_flag = monument_being_destroyed
+		}
+		else = {
+			change_variable = {
+				which = destruction_progress
+				value = 1.6666
+			}
+			subtract_variable = {
+				which = destruction_progress_days
+				value = 1
+			}
+		}
+	}
+	
+	on_deactivation = {
+		clr_province_flag = destruction_tick
+		if = {
+			limit = {
+				OR = {
+					is_variable_equal = {
+						which = destruction_progress_days
+						value = 0
+					}
+					check_variable = {
+						which = destruction_progress
+						value = 100
+					}
+				}
+			}
+			owner = {
+				country_event = { 
+					id = ME_Monument_Events.1
+				}
+			}
+			remove_province_triggered_modifier = deactivate_channel_tunnel_modifier
+			clr_province_flag = monument_being_destroyed
+		}
+		else = {
+			change_variable = {
+				which = destruction_progress
+				value = 1.6666
+			}
+			subtract_variable = {
+				which = destruction_progress_days
+				value = 1
+			}
+		}
+	}
+}

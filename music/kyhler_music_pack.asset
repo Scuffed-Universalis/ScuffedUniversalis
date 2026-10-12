@@ -1,0 +1,9 @@
+music = {
+	name = "Journey to the East"
+	file = "JourneyToTheEast.ogg"
+}
+
+music = {
+	name = "Ad Terram Incognitam"
+	file = "AdTerramIncognitam.ogg"
+}

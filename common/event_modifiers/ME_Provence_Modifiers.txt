@@ -1,0 +1,130 @@
+PRO_integrated_lorraine = {
+	legitimacy = 1
+	republican_tradition = 0.5
+	devotion = 1
+	horde_unity = 0.5
+	meritocracy = 0.5 #I dare you
+}
+PRO_undisputed_rule = {
+	administrative_efficiency = 0.05
+}
+PRO_justified_demands = {
+	unjustified_demands = -0.25
+	ae_impact = -0.1
+}
+PRO_mercantile_duchy = {
+	global_ship_trade_power = 0.2
+	navy_tradition = 1
+}
+PRO_provencal_trading_fleet = {
+	trade_efficiency = 0.1
+	trade_steering = 0.2
+}
+PRO_pushed_our_claims = {
+	land_morale = 0.1
+	prestige = 1
+}
+PRO_pythean_school_of_cartography = {
+	range = 0.2
+	province_trade_power_value = 5
+}
+PRO_renaissance_architecture = {
+	global_tax_modifier = 0.15
+	prestige = 1
+}
+PRO_provencal_control = {
+	estate_interaction_cooldown_modifier = -0.1
+	loyalty_change_on_revoked = 0.05
+	max_absolutism_effect = 0.05
+}
+PRO_strong_fortifications = {
+	hostile_disembark_speed = 1
+	blockade_force_required = 0.5
+	local_defensiveness = 0.1
+}
+PRO_ignite_crusade = {
+	discipline = 0.05
+}
+PRO_liberating_holy_lands = {
+	tolerance_own = 2
+}
+PRO_immanuel = {
+	global_heathen_missionary_strength = 0.03
+}
+PRO_sacrum_imperium_romanum = {
+	imperial_authority = 0.25
+}
+PRO_overthrowing_an_emperor = {
+	country_military_power = 1
+	country_diplomatic_power = 1
+}
+ME_PRO_rush_germany = {
+	ae_impact = -0.15
+}
+PRO_Naples = {
+	trade_efficiency = 0.1
+}
+PRO_Aragon = {
+	galley_power = 0.2
+	trade_efficiency = 0.1
+}
+PRO_France = {
+	diplomatic_reputation = 1
+	global_manpower_modifier = 0.2
+}
+PRO_Sicily = {
+	land_morale = 0.1
+	global_manpower_modifier = 0.2
+}
+PRO_Hungary = {
+	cavalry_power = 0.2
+	recover_army_morale_speed = 0.05
+}
+PRO_Jerusalem = {
+	missionary_maintenance_cost = -0.25
+	papal_influence = 1
+}
+PRO_court_modifier = {
+	all_estate_loyalty_equilibrium = 0.05
+	advisor_cost = -0.1
+}
+PRO_holy_see_of_avignon = {
+	papal_influence = 2
+	prestige = 0.5
+	missionaries = 1
+}
+PRO_secondary_see_of_avignon = {
+	papal_influence = 1
+	prestige = 0.5
+}
+PRO_refused_avignon = {
+	diplomatic_reputation = -1
+}
+PRO_france_modifier = {
+	liberty_desire_from_subject_development = -0.1
+}
+ME_PRO_provencal_renaissance = {
+	development_cost = -0.1
+	stability_cost_modifier = -0.2
+}
+ME_PRO_crusade_won = {
+	warscore_cost_vs_other_religion = -0.15
+	morale_damage = 0.05
+}
+ME_PRO_under_new_management = {
+	local_prosperity_growth = 0.1
+	local_years_of_nationalism = -5
+}
+ME_PRO_victory_house_capet = {
+	all_power_cost = -0.05
+}
+ME_PRO_restoration = {
+	local_tax_modifier = 0.15
+	local_production_efficiency = 0.15
+	local_manpower = 0.15
+}
+ME_PRO_crusade_frontier = {
+	supply_limit_modifier = 0.25
+	hostile_fleet_attrition = 1
+	hostile_disembark_speed = 0.5
+}

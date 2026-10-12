@@ -1,0 +1,20 @@
+settler_estate_colony_prosperity = { #TODO: this could be subject type modifier
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		is_colonial_nation = yes
+		is_subject = yes
+		colonial_parent = {
+			ROOT = {
+				is_subject_of = PREV 
+			}
+		}
+		colonial_parent = {
+			has_estate_privilege = estate_settlers_expel_minorities
+		}
+	}
+	trigger = {
+		always = yes
+	}
+	
+	global_prosperity_growth = 0.5
+}

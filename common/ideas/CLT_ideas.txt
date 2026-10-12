@@ -1,0 +1,35 @@
+CLT_ideas = {
+	start = {
+		land_morale = 0.1
+		trade_efficiency = 0.1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = CLT
+	}
+	free = yes
+	CLT_idea_1 = {
+		manpower_in_culture_group_provinces = 0.2
+	}
+	CLT_idea_2 = {
+		ae_impact = -0.15
+	}
+	CLT_idea_3 = {
+		idea_cost = -0.1
+	}
+	CLT_idea_4 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	CLT_idea_5 = {
+		global_unrest = -2
+	}
+	CLT_idea_6 = {
+		tolerance_own = 2
+		global_missionary_strength = 0.02
+	}
+	CLT_idea_7 = {
+		land_forcelimit_modifier = 0.25
+	}
+}

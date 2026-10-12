@@ -1,0 +1,17 @@
+bookmark = {
+	name = "ME_BOOKMARK_FRANCE"
+	desc = "ME_BOOKMARK_FRANCE_DESC"
+	date = 1444.11.11
+	
+	center = 183
+	default = yes
+	
+	country = FRA
+	country = BUR
+	country = PRO
+	country = BRI
+	country = ORL
+	
+	easy_country = FRA
+	easy_country = BUR
+}

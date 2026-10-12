@@ -1,0 +1,51 @@
+# province
+# root = location, from = country doing it
+on_added_to_trade_company ={
+	if = { 
+		limit = { 
+			owner = { has_country_flag = adding_provinces_to_trade_c_merc_prod_flag } 
+		}
+		owner = { add_mercantilism = 1 } 
+		add_base_production = 1 
+	}
+	
+	#ME Stuff
+	if = {
+		limit = {
+			FROM = {
+				has_estate_privilege = estate_settlers_give_trade_companies_more_independence
+			}
+		}
+		add_province_modifier = {
+			name = estate_settlers_local_autonomy
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			FROM = {
+				has_estate_privilege = estate_settlers_POR_jesuit_conversions
+			}
+		}
+		add_province_modifier = {
+			name = POR_can_convert_trade_company
+			duration = -1
+		}
+	}
+}
+
+# province
+# root = location, from = country doing it
+on_removed_from_company ={
+	if = { 
+		limit = { 
+			owner = { has_country_flag = adding_provinces_to_trade_c_merc_prod_flag } 
+		}
+		owner = { add_mercantilism = -1 } 
+		add_base_production = -1 
+	}
+	
+	#ME stuff
+	remove_province_modifier = estate_settlers_local_autonomy
+	remove_province_modifier = POR_can_convert_trade_company
+}

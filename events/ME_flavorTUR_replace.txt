@@ -1,0 +1,43 @@
+namespace = flavor_tur.216
+
+# Crown of Rome - written by Big Boss
+country_event = {
+	id = flavor_tur.216
+	title = flavor_tur.216.t 
+	desc = flavor_tur.216.desc
+	picture = DEVLET_I_RUM_eventPicture
+	is_triggered_only = yes 
+	
+	#We shall be officially recognized as the Devlet-i Rűm!
+	option = { 
+		name = flavor_tur.216.a 
+		
+		override_country_name = TRK_PDX 
+		set_country_flag = is_TRK_flag
+		add_country_modifier = { 
+			name = tur_crown_of_rome_modifier
+			duration = -1 
+		}
+		country_event = {
+			id = flavor_tur.217
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	#We should rather stay humble
+	option = {
+		name = flavor_tur.216.b
+		add_country_modifier = { 
+			name = tur_crown_of_rome_modifier
+			duration = -1 
+		}
+		country_event = {
+			id = flavor_tur.217
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}

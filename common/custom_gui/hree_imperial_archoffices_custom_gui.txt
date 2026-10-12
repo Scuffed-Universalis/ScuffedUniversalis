@@ -1,0 +1,396 @@
+custom_button = {
+	name = hree_imperial_archoffices_open_button
+	potential = {
+		ai = no
+		NOT = { has_country_flag = hree_show_imperial_archoffices_window }
+		NOT = { has_global_flag = hre_golden_bull_removed }
+		NOT = { has_global_flag = hre_golden_bull_rejected }
+	}
+	trigger = {
+		hidden_trigger = {
+			has_global_flag = hre_golden_bull_enacted
+		}
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffices_title_tt
+		if = {
+			limit = {
+				NOT = { has_global_flag = hre_golden_bull_enacted }
+			}
+			custom_tooltip = hree_imperial_archoffices_open_button_tt_disabled
+		}
+		hidden_effect = {
+			set_country_flag = hree_show_imperial_archoffices_window
+		}
+	}
+	tooltip = hree_imperial_archoffices_open_button_tt
+}
+
+custom_window = {
+	name = hree_imperial_archoffices_window
+	potential = {
+		ai = no
+		has_country_flag = hree_show_imperial_archoffices_window
+	}
+}
+custom_icon = {
+	name = hree_imperial_archoffices_bg
+	potential = {
+		hre_leagues_enabled = no
+	}
+}
+custom_icon = {
+	name = hree_imperial_archoffices_bg_leagues
+	potential = {
+		hre_leagues_enabled = yes
+	}
+}
+custom_text_box = {
+	name = hree_imperial_archoffices_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffices_title_tt
+}
+custom_button = {
+	name = hree_imperial_archoffices_close_button
+	effect = {
+		clr_country_flag = hree_show_imperial_archoffices_window
+	}
+}
+
+custom_icon = {
+	name = hree_imperial_archoffice_1_shield_bg
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+custom_button = {
+	name = hree_imperial_archoffice_1_shield_disabled
+	potential = {
+		NOT = { has_saved_global_event_target = hre_german_erzkanzler }
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_1_effect_tt
+	}
+	tooltip = hree_imperial_archoffice_1_shield_disabled_tt
+}
+custom_shield = {
+	name = hree_imperial_archoffice_1_shield
+	potential = {
+		has_saved_global_event_target = hre_german_erzkanzler
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_1_effect_tt
+	}
+	global_event_target = hre_german_erzkanzler
+	open_country = yes
+	tooltip = hree_imperial_archoffice_1_shield_tt
+}
+custom_text_box = {
+	name = hree_imperial_archoffice_1_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffice_1_title_tt
+}
+
+custom_icon = {
+	name = hree_imperial_archoffice_2_shield_bg
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 2
+		trigger = {
+			always = yes
+		}
+	}
+}
+custom_button = {
+	name = hree_imperial_archoffice_2_shield_disabled
+	potential = {
+		NOT = { has_saved_global_event_target = hre_burgundian_erzkanzler }
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_2_effect_tt
+	}
+	tooltip = hree_imperial_archoffice_2_shield_disabled_tt
+}
+custom_shield = {
+	name = hree_imperial_archoffice_2_shield
+	potential = {
+		has_saved_global_event_target = hre_burgundian_erzkanzler
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_2_effect_tt
+	}
+	global_event_target = hre_burgundian_erzkanzler
+	open_country = yes
+	tooltip = hree_imperial_archoffice_2_shield_tt
+}
+custom_text_box = {
+	name = hree_imperial_archoffice_2_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffice_2_title_tt
+}
+
+custom_icon = {
+	name = hree_imperial_archoffice_3_shield_bg
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 3
+		trigger = {
+			always = yes
+		}
+	}
+}
+custom_button = {
+	name = hree_imperial_archoffice_3_shield_disabled
+	potential = {
+		NOT = { has_saved_global_event_target = hre_italian_erzkanzler }
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_3_effect_tt
+	}
+	tooltip = hree_imperial_archoffice_3_shield_disabled_tt
+}
+custom_shield = {
+	name = hree_imperial_archoffice_3_shield
+	potential = {
+		has_saved_global_event_target = hre_italian_erzkanzler
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_3_effect_tt
+	}
+	global_event_target = hre_italian_erzkanzler
+	open_country = yes
+	tooltip = hree_imperial_archoffice_3_shield_tt
+}
+custom_text_box = {
+	name = hree_imperial_archoffice_3_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffice_3_title_tt
+}
+
+custom_icon = {
+	name = hree_imperial_archoffice_4_shield_bg
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 4
+		trigger = {
+			always = yes
+		}
+	}
+}
+custom_button = {
+	name = hree_imperial_archoffice_4_shield_disabled
+	potential = {
+		NOT = { has_saved_global_event_target = hre_erztruchsess }
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_4_effect_tt
+	}
+	tooltip = hree_imperial_archoffice_4_shield_disabled_tt
+}
+custom_shield = {
+	name = hree_imperial_archoffice_4_shield
+	potential = {
+		has_saved_global_event_target = hre_erztruchsess
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_4_effect_tt
+	}
+	global_event_target = hre_erztruchsess
+	open_country = yes
+	tooltip = hree_imperial_archoffice_4_shield_tt
+}
+custom_text_box = {
+	name = hree_imperial_archoffice_4_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffice_4_title_tt
+}
+
+custom_icon = {
+	name = hree_imperial_archoffice_5_shield_bg
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 5
+		trigger = {
+			always = yes
+		}
+	}
+}
+custom_button = {
+	name = hree_imperial_archoffice_5_shield_disabled
+	potential = {
+		NOT = { has_saved_global_event_target = hre_erzmarschall }
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_5_effect_tt
+	}
+	tooltip = hree_imperial_archoffice_5_shield_disabled_tt
+}
+custom_shield = {
+	name = hree_imperial_archoffice_5_shield
+	potential = {
+		has_saved_global_event_target = hre_erzmarschall
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_5_effect_tt
+	}
+	global_event_target = hre_erzmarschall
+	open_country = yes
+	tooltip = hree_imperial_archoffice_5_shield_tt
+}
+custom_text_box = {
+	name = hree_imperial_archoffice_5_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffice_5_title_tt
+}
+
+custom_icon = {
+	name = hree_imperial_archoffice_6_shield_bg
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 6
+		trigger = {
+			always = yes
+		}
+	}
+}
+custom_button = {
+	name = hree_imperial_archoffice_6_shield_disabled
+	potential = {
+		NOT = { has_saved_global_event_target = hre_erzkaemmerer }
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_6_effect_tt
+	}
+	tooltip = hree_imperial_archoffice_6_shield_disabled_tt
+}
+custom_shield = {
+	name = hree_imperial_archoffice_6_shield
+	potential = {
+		has_saved_global_event_target = hre_erzkaemmerer
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_6_effect_tt
+	}
+	global_event_target = hre_erzkaemmerer
+	open_country = yes
+	tooltip = hree_imperial_archoffice_6_shield_tt
+}
+custom_text_box = {
+	name = hree_imperial_archoffice_6_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffice_6_title_tt
+}
+
+custom_icon = {
+	name = hree_imperial_archoffice_7_shield_bg
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 7
+		trigger = {
+			always = yes
+		}
+	}
+}
+custom_button = {
+	name = hree_imperial_archoffice_7_shield_disabled
+	potential = {
+		NOT = { has_saved_global_event_target = hre_erzmundschenk }
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_7_effect_tt
+	}
+	tooltip = hree_imperial_archoffice_7_shield_disabled_tt
+}
+custom_shield = {
+	name = hree_imperial_archoffice_7_shield
+	potential = {
+		has_saved_global_event_target = hre_erzmundschenk
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_7_effect_tt
+	}
+	global_event_target = hre_erzmundschenk
+	open_country = yes
+	tooltip = hree_imperial_archoffice_7_shield_tt
+}
+custom_text_box = {
+	name = hree_imperial_archoffice_7_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffice_7_title_tt
+}
+
+custom_icon = {
+	name = hree_imperial_archoffice_8_shield_bg
+	potential = {
+		always = yes
+	}
+	frame = {
+		number = 8
+		trigger = {
+			always = yes
+		}
+	}
+}
+custom_button = {
+	name = hree_imperial_archoffice_8_shield_disabled
+	potential = {
+		NOT = { has_saved_global_event_target = hre_erzbannertraeger }
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_8_effect_tt
+	}
+	tooltip = hree_imperial_archoffice_8_shield_disabled_tt
+}
+custom_shield = {
+	name = hree_imperial_archoffice_8_shield
+	potential = {
+		has_saved_global_event_target = hre_erzbannertraeger
+	}
+	effect = {
+		custom_tooltip = hree_imperial_archoffice_8_effect_tt
+	}
+	global_event_target = hre_erzbannertraeger
+	open_country = yes
+	tooltip = hree_imperial_archoffice_8_shield_tt
+}
+custom_text_box = {
+	name = hree_imperial_archoffice_8_title
+	potential = {
+		always = yes
+	}
+	tooltip = hree_imperial_archoffice_8_title_tt
+}

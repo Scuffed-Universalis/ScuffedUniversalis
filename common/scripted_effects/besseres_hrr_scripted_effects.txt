@@ -1,0 +1,890 @@
+hre_shadow_kingdom_give_up_italy_effect = {
+	add_prestige = -10
+	add_imperial_influence = -20
+	custom_tooltip = shadow_kingdom_emperor_gives_up_tt
+	set_global_flag = italians_leave_hre
+	hidden_effect = {
+		every_country = {
+			limit = {
+				is_shadow_kingdom_eligible_trigger = yes
+				OR = {
+					is_subject = no
+					AND = {
+						is_subject = yes
+						overlord = { # overlord chooses for their vassals if eligible to leave themselves
+							NOT = {
+								is_part_of_hre = yes
+								capital_scope = { region = italy_region }
+							}
+						}
+					}
+				}
+			}
+			country_event = { id = shadow_kingdom.4 }
+		}
+	}
+	every_province = {
+		limit = {
+			is_part_of_hre = yes
+			region = italy_region
+			owner = {
+				is_part_of_hre = no
+			}
+		}
+		set_in_empire = no
+	}
+}
+
+hre_shadow_kingdom_leave_hre_effect = {
+	set_in_empire = no
+	set_country_flag = permanently_left_hre_flag
+	emperor = {
+		add_opinion = {
+			who = PREV
+			modifier = hre_country_left
+		}
+	}
+	if = {
+		limit = {
+			any_subject_country = {
+				capital_scope = {
+					region = italy_region
+				}
+				is_part_of_hre = yes
+			}
+		}
+		every_subject_country = {
+			limit = {
+				capital_scope = {
+					region = italy_region
+				}
+				is_part_of_hre = yes
+			}
+			set_in_empire = no
+		}
+	}
+}
+
+hree_put_imperial_ban_on_this = {
+	clr_country_flag = emperor_used_imperial_ban
+	set_country_flag = emperor_used_imperial_ban
+	set_country_flag = hree_imperial_ban_country_flag
+	set_ruler_flag = hree_imperial_ban
+	if = {
+		limit = {
+			has_regency = yes
+			has_heir = yes
+		}
+		set_heir_flag = hree_imperial_ban
+	}
+	emperor = {
+		add_opinion = {
+			who = PREV
+			modifier = hree_imperial_ban_emperor_opinion
+		}
+	}
+	every_elector = {
+		limit = {
+			is_emperor = no
+			NOT = { tag = PREV }
+		}
+		add_opinion = {
+			who = PREV
+			modifier = hree_imperial_ban_elector_opinion
+		}
+	}
+	every_country = {
+		limit = {
+			is_part_of_hre = yes
+			is_elector = no
+			is_emperor = no
+			NOT = { tag = PREV }
+		}
+		add_opinion = {
+			who = PREV
+			modifier = hree_imperial_ban_member_opinion
+		}
+	}
+	every_country = {
+		limit = {
+			NOT = { tag = PREV }
+			is_subject = no
+			is_part_of_hre = yes
+			is_revolutionary = no
+			NOT = { has_ruler_flag = hree_imperial_ban }
+			NOT = { has_heir_flag = hree_imperial_ban }
+			is_neighbor_of = PREV
+		}
+		add_casus_belli = {
+			target = PREV
+			type = cb_hree_imperial_ban
+		}
+	}
+	country_event = { id = besseres_hrr_events.34 }
+}
+
+hree_lift_imperial_ban_from_this = {
+	clr_country_flag = hree_imperial_ban_country_flag
+	clr_ruler_flag = hree_imperial_ban
+	clr_heir_flag = hree_imperial_ban
+	every_country = {
+		remove_opinion = {
+			who = PREV
+			modifier = hree_imperial_ban_emperor_opinion
+		}
+		remove_opinion = {
+			who = PREV
+			modifier = hree_imperial_ban_elector_opinion
+		}
+		remove_opinion = {
+			who = PREV
+			modifier = hree_imperial_ban_member_opinion
+		}
+		remove_casus_belli = {
+			target = PREV
+			type = cb_hree_imperial_ban
+		}
+	}
+}
+
+hree_add_imperial_arch_office = {
+	if = {
+		limit = {
+			NOT = { has_saved_global_event_target = hre_$name$ }
+			NOT = { hree_has_any_imperial_archoffice = yes }
+		}
+		add_country_modifier = {
+			name = $name$
+			duration = -1
+		}
+		hidden_effect = {
+			save_global_event_target_as = hre_$name$
+			add_opinion = {
+				who = emperor
+				modifier = hree_imperial_archoffice_granted_opinion
+			}
+			country_event = { id = besseres_hrr_events.39 }
+		}
+	}
+	hree_update_imperial_archoffices = yes
+}
+
+hree_update_imperial_archoffices = {
+	hidden_effect = {
+		emperor = {
+			if = {
+				limit = {
+					has_saved_global_event_target = hre_german_erzkanzler
+				}
+				if = {
+					limit = {
+						event_target:hre_german_erzkanzler = {
+							exists = yes
+							has_country_modifier = german_erzkanzler
+							OR = {
+								is_elector = no
+								NOT = { is_an_ecclesiastical_country = yes }
+							}
+						}
+					}
+					event_target:hre_german_erzkanzler = {
+						remove_country_modifier = german_erzkanzler
+					}
+					clear_global_event_target = hre_german_erzkanzler
+				}
+				else_if = {
+					limit = {
+						event_target:hre_german_erzkanzler = {
+							OR = {
+								exists = no
+								NOT = { has_country_modifier = german_erzkanzler }
+							}
+						}
+					}
+					event_target:hre_german_erzkanzler = {
+						if = {
+							limit = {
+								has_country_modifier = german_erzkanzler
+							}
+							remove_country_modifier = german_erzkanzler
+						}
+					}
+					clear_global_event_target = hre_german_erzkanzler
+					if = {
+						limit = {
+							has_country_modifier = german_erzkanzler
+							is_elector = yes
+							is_an_ecclesiastical_country = yes
+						}
+						save_global_event_target_as = hre_german_erzkanzler
+					}
+					else_if = {
+						limit = {
+							any_elector = {
+								has_country_modifier = german_erzkanzler
+								is_elector = yes
+								is_an_ecclesiastical_country = yes
+							}
+						}
+						random_elector = {
+							limit = {
+								has_country_modifier = german_erzkanzler
+								is_elector = yes
+								is_an_ecclesiastical_country = yes
+							}
+							save_global_event_target_as = hre_german_erzkanzler
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_modifier = german_erzkanzler
+						any_country = {
+							has_country_modifier = german_erzkanzler
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = german_erzkanzler
+					}
+					remove_country_modifier = german_erzkanzler
+				}
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = hre_burgundian_erzkanzler
+				}
+				if = {
+					limit = {
+						event_target:hre_burgundian_erzkanzler = {
+							exists = yes
+							has_country_modifier = burgundian_erzkanzler
+							OR = {
+								is_elector = no
+								NOT = { is_an_ecclesiastical_country = yes }
+							}
+						}
+					}
+					event_target:hre_burgundian_erzkanzler = {
+						remove_country_modifier = burgundian_erzkanzler
+					}
+					clear_global_event_target = hre_burgundian_erzkanzler
+				}
+				else_if = {
+					limit = {
+						event_target:hre_burgundian_erzkanzler = {
+							OR = {
+								exists = no
+								NOT = { has_country_modifier = burgundian_erzkanzler }
+							}
+						}
+					}
+					event_target:hre_burgundian_erzkanzler = {
+						if = {
+							limit = {
+								has_country_modifier = burgundian_erzkanzler
+							}
+							remove_country_modifier = burgundian_erzkanzler
+						}
+					}
+					clear_global_event_target = hre_burgundian_erzkanzler
+					if = {
+						limit = {
+							has_country_modifier = burgundian_erzkanzler
+							is_elector = yes
+							is_an_ecclesiastical_country = yes
+						}
+						save_global_event_target_as = hre_burgundian_erzkanzler
+					}
+					else_if = {
+						limit = {
+							any_elector = {
+								has_country_modifier = burgundian_erzkanzler
+								is_elector = yes
+								is_an_ecclesiastical_country = yes
+							}
+						}
+						random_elector = {
+							limit = {
+								has_country_modifier = burgundian_erzkanzler
+								is_elector = yes
+								is_an_ecclesiastical_country = yes
+							}
+							save_global_event_target_as = hre_burgundian_erzkanzler
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_modifier = burgundian_erzkanzler
+						any_country = {
+							has_country_modifier = burgundian_erzkanzler
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = burgundian_erzkanzler
+					}
+					remove_country_modifier = burgundian_erzkanzler
+				}
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = hre_italian_erzkanzler
+				}
+				if = {
+					limit = {
+						event_target:hre_italian_erzkanzler = {
+							exists = yes
+							has_country_modifier = italian_erzkanzler
+							OR = {
+								is_elector = no
+								NOT = { is_an_ecclesiastical_country = yes }
+							}
+						}
+					}
+					event_target:hre_italian_erzkanzler = {
+						remove_country_modifier = italian_erzkanzler
+					}
+					clear_global_event_target = hre_italian_erzkanzler
+				}
+				else_if = {
+					limit = {
+						event_target:hre_italian_erzkanzler = {
+							OR = {
+								exists = no
+								NOT = { has_country_modifier = italian_erzkanzler }
+							}
+						}
+					}
+					event_target:hre_italian_erzkanzler = {
+						if = {
+							limit = {
+								has_country_modifier = italian_erzkanzler
+							}
+							remove_country_modifier = italian_erzkanzler
+						}
+					}
+					clear_global_event_target = hre_italian_erzkanzler
+					if = {
+						limit = {
+							has_country_modifier = italian_erzkanzler
+							is_elector = yes
+							is_an_ecclesiastical_country = yes
+						}
+						save_global_event_target_as = hre_italian_erzkanzler
+					}
+					else_if = {
+						limit = {
+							any_elector = {
+								has_country_modifier = italian_erzkanzler
+								is_elector = yes
+								is_an_ecclesiastical_country = yes
+							}
+						}
+						random_elector = {
+							limit = {
+								has_country_modifier = italian_erzkanzler
+								is_elector = yes
+								is_an_ecclesiastical_country = yes
+							}
+							save_global_event_target_as = hre_italian_erzkanzler
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_modifier = italian_erzkanzler
+						any_country = {
+							has_country_modifier = italian_erzkanzler
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = italian_erzkanzler
+					}
+					remove_country_modifier = italian_erzkanzler
+				}
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = hre_erztruchsess
+				}
+				if = {
+					limit = {
+						event_target:hre_erztruchsess = {
+							exists = yes
+							has_country_modifier = erztruchsess
+							OR = {
+								is_elector = no
+								NOT = { is_a_secular_country = yes }
+							}
+						}
+					}
+					event_target:hre_erztruchsess = {
+						remove_country_modifier = erztruchsess
+					}
+					clear_global_event_target = hre_erztruchsess
+				}
+				else_if = {
+					limit = {
+						event_target:hre_erztruchsess = {
+							OR = {
+								exists = no
+								NOT = { has_country_modifier = erztruchsess }
+							}
+						}
+					}
+					event_target:hre_erztruchsess = {
+						if = {
+							limit = {
+								has_country_modifier = erztruchsess
+							}
+							remove_country_modifier = erztruchsess
+						}
+					}
+					clear_global_event_target = hre_erztruchsess
+					if = {
+						limit = {
+							has_country_modifier = erztruchsess
+							is_elector = yes
+							is_a_secular_country = yes
+						}
+						save_global_event_target_as = hre_erztruchsess
+					}
+					else_if = {
+						limit = {
+							any_elector = {
+								has_country_modifier = erztruchsess
+								is_elector = yes
+								is_a_secular_country = yes
+							}
+						}
+						random_elector = {
+							limit = {
+								has_country_modifier = erztruchsess
+								is_elector = yes
+								is_a_secular_country = yes
+							}
+							save_global_event_target_as = hre_erztruchsess
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_modifier = erztruchsess
+						any_country = {
+							has_country_modifier = erztruchsess
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = erztruchsess
+					}
+					remove_country_modifier = erztruchsess
+				}
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = hre_erzmarschall
+				}
+				if = {
+					limit = {
+						event_target:hre_erzmarschall = {
+							exists = yes
+							has_country_modifier = erzmarschall
+							OR = {
+								is_elector = no
+								NOT = { is_a_secular_country = yes }
+							}
+						}
+					}
+					event_target:hre_erzmarschall = {
+						remove_country_modifier = erzmarschall
+					}
+					clear_global_event_target = hre_erzmarschall
+				}
+				else_if = {
+					limit = {
+						event_target:hre_erzmarschall = {
+							OR = {
+								exists = no
+								NOT = { has_country_modifier = erzmarschall }
+							}
+						}
+					}
+					event_target:hre_erzmarschall = {
+						if = {
+							limit = {
+								has_country_modifier = erzmarschall
+							}
+							remove_country_modifier = erzmarschall
+						}
+					}
+					clear_global_event_target = hre_erzmarschall
+					if = {
+						limit = {
+							has_country_modifier = erzmarschall
+							is_elector = yes
+							is_a_secular_country = yes
+						}
+						save_global_event_target_as = hre_erzmarschall
+					}
+					else_if = {
+						limit = {
+							any_elector = {
+								has_country_modifier = erzmarschall
+								is_elector = yes
+								is_a_secular_country = yes
+							}
+						}
+						random_elector = {
+							limit = {
+								has_country_modifier = erzmarschall
+								is_elector = yes
+								is_a_secular_country = yes
+							}
+							save_global_event_target_as = hre_erzmarschall
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_modifier = erzmarschall
+						any_country = {
+							has_country_modifier = erzmarschall
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = erzmarschall
+					}
+					remove_country_modifier = erzmarschall
+				}
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = hre_erzkaemmerer
+				}
+				if = {
+					limit = {
+						event_target:hre_erzkaemmerer = {
+							exists = yes
+							has_country_modifier = erzkaemmerer
+							OR = {
+								is_elector = no
+								NOT = { is_a_secular_country = yes }
+							}
+						}
+					}
+					event_target:hre_erzkaemmerer = {
+						remove_country_modifier = erzkaemmerer
+					}
+					clear_global_event_target = hre_erzkaemmerer
+				}
+				else_if = {
+					limit = {
+						event_target:hre_erzkaemmerer = {
+							OR = {
+								exists = no
+								NOT = { has_country_modifier = erzkaemmerer }
+							}
+						}
+					}
+					event_target:hre_erzkaemmerer = {
+						if = {
+							limit = {
+								has_country_modifier = erzkaemmerer
+							}
+							remove_country_modifier = erzkaemmerer
+						}
+					}
+					clear_global_event_target = hre_erzkaemmerer
+					if = {
+						limit = {
+							has_country_modifier = erzkaemmerer
+							is_elector = yes
+							is_a_secular_country = yes
+						}
+						save_global_event_target_as = hre_erzkaemmerer
+					}
+					else_if = {
+						limit = {
+							any_elector = {
+								has_country_modifier = erzkaemmerer
+								is_elector = yes
+								is_a_secular_country = yes
+							}
+						}
+						random_elector = {
+							limit = {
+								has_country_modifier = erzkaemmerer
+								is_elector = yes
+								is_a_secular_country = yes
+							}
+							save_global_event_target_as = hre_erzkaemmerer
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_modifier = erzkaemmerer
+						any_country = {
+							has_country_modifier = erzkaemmerer
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = erzkaemmerer
+					}
+					remove_country_modifier = erzkaemmerer
+				}
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = hre_erzmundschenk
+				}
+				if = {
+					limit = {
+						event_target:hre_erzmundschenk = {
+							exists = yes
+							has_country_modifier = erzmundschenk
+							OR = {
+								is_elector = no
+								NOT = { is_a_secular_country = yes }
+							}
+						}
+					}
+					event_target:hre_erzmundschenk = {
+						remove_country_modifier = erzmundschenk
+					}
+					clear_global_event_target = hre_erzmundschenk
+				}
+				else_if = {
+					limit = {
+						event_target:hre_erzmundschenk = {
+							OR = {
+								exists = no
+								NOT = { has_country_modifier = erzmundschenk }
+							}
+						}
+					}
+					event_target:hre_erzmundschenk = {
+						if = {
+							limit = {
+								has_country_modifier = erzmundschenk
+							}
+							remove_country_modifier = erzmundschenk
+						}
+					}
+					clear_global_event_target = hre_erzmundschenk
+					if = {
+						limit = {
+							has_country_modifier = erzmundschenk
+							is_elector = yes
+							is_a_secular_country = yes
+						}
+						save_global_event_target_as = hre_erzmundschenk
+					}
+					else_if = {
+						limit = {
+							any_elector = {
+								has_country_modifier = erzmundschenk
+								is_elector = yes
+								is_a_secular_country = yes
+							}
+						}
+						random_elector = {
+							limit = {
+								has_country_modifier = erzmundschenk
+								is_elector = yes
+								is_a_secular_country = yes
+							}
+							save_global_event_target_as = hre_erzmundschenk
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_modifier = erzmundschenk
+						any_country = {
+							has_country_modifier = erzmundschenk
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = erzmundschenk
+					}
+					remove_country_modifier = erzmundschenk
+				}
+			}
+			if = {
+				limit = {
+					has_saved_global_event_target = hre_erzbannertraeger
+				}
+				if = {
+					limit = {
+						event_target:hre_erzbannertraeger = {
+							exists = yes
+							has_country_modifier = erzbannertraeger
+							is_part_of_hre = no
+						}
+					}
+					event_target:hre_erzbannertraeger = {
+						remove_country_modifier = erzbannertraeger
+					}
+					clear_global_event_target = hre_erzbannertraeger
+				}
+				else_if = {
+					limit = {
+						event_target:hre_erzbannertraeger = {
+							OR = {
+								exists = no
+								NOT = { has_country_modifier = erzbannertraeger }
+							}
+						}
+					}
+					event_target:hre_erzbannertraeger = {
+						if = {
+							limit = {
+								has_country_modifier = erzbannertraeger
+							}
+							remove_country_modifier = erzbannertraeger
+						}
+					}
+					clear_global_event_target = hre_erzbannertraeger
+					if = {
+						limit = {
+							has_country_modifier = erzbannertraeger
+							is_part_of_hre = yes
+						}
+						save_global_event_target_as = hre_erzbannertraeger
+					}
+					else_if = {
+						limit = {
+							any_country = {
+								has_country_modifier = erzbannertraeger
+								is_part_of_hre = yes
+							}
+						}
+						random_country = {
+							limit = {
+								has_country_modifier = erzbannertraeger
+								is_part_of_hre = yes
+							}
+							save_global_event_target_as = hre_erzbannertraeger
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_modifier = erzbannertraeger
+						any_country = {
+							has_country_modifier = erzbannertraeger
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_modifier = erzbannertraeger
+					}
+					remove_country_modifier = erzbannertraeger
+				}
+			}
+		}
+	}
+}
+
+hree_clear_imperial_archoffices = {
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_german_erzkanzler
+		}
+		clear_global_event_target = hre_german_erzkanzler
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_burgundian_erzkanzler
+		}
+		clear_global_event_target = hre_burgundian_erzkanzler
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_italian_erzkanzler
+		}
+		clear_global_event_target = hre_italian_erzkanzler
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_erztruchsess
+		}
+		clear_global_event_target = hre_erztruchsess
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_erzmarschall
+		}
+		clear_global_event_target = hre_erzmarschall
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_erzkaemmerer
+		}
+		clear_global_event_target = hre_erzkaemmerer
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_erzmundschenk
+		}
+		clear_global_event_target = hre_erzmundschenk
+	}
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_erzbannertraeger
+		}
+		clear_global_event_target = hre_erzbannertraeger
+	}
+	every_country = {
+		limit = {
+			hree_has_any_imperial_archoffice = yes
+		}
+		remove_country_modifier = german_erzkanzler
+		remove_country_modifier = burgundian_erzkanzler
+		remove_country_modifier = italian_erzkanzler
+		remove_country_modifier = erztruchsess
+		remove_country_modifier = erzmarschall
+		remove_country_modifier = erzkaemmerer
+		remove_country_modifier = erzmundschenk
+		remove_country_modifier = erzbannertraeger
+	}
+	every_country = {
+		limit = {
+			ai = no
+			has_country_flag = hree_show_imperial_archoffices_window
+		}
+		clr_country_flag = hree_show_imperial_archoffices_window
+	}
+}

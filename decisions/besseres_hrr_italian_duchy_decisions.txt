@@ -1,0 +1,345 @@
+country_decisions = {
+	hre_italian_duchy_decision_sardinia_piedmont = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_italian_duchy_decision_sardinia_piedmont }
+			NOT = { tag = SPI }
+			OR = {
+				piedmont_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SPI }
+				}
+				corsica_sardinia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SPI }
+				}
+				102 = {
+					hre_can_cede_province_to_hre_duchy = { tag = SPI }
+				}
+				2992 = {
+					hre_can_cede_province_to_hre_duchy = { tag = SPI }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = piedmont_area
+				area = corsica_sardinia_area
+				province_id = 102
+				province_id = 2992
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = SPI }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = SPI }
+				SPI = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_italian_duchy_decision_sardinia_piedmont
+			add_imperial_influence = -10
+			custom_tooltip = hre_italian_duchy_decision_sardinia_piedmont_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = piedmont_area
+					tag = SPI
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = corsica_sardinia_area
+					tag = SPI
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 102
+					tag = SPI
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 2992
+					tag = SPI
+				}
+				SPI = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = sardinian
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_italian_duchy_decision_milan = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_italian_duchy_decision_milan }
+			NOT = { tag = MLO }
+			OR = {
+				lombardy_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MLO }
+				}
+				po_valley_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MLO }
+				}
+				emilia_romagna_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MLO }
+				}
+				venetia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MLO }
+				}
+				101 = {
+					hre_can_cede_province_to_hre_duchy = { tag = MLO }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lombardy_area
+				area = po_valley_area
+				area = emilia_romagna_area
+				area = venetia_area
+				province_id = 101
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = MLO }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = MLO }
+				MLO = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_italian_duchy_decision_milan
+			add_imperial_influence = -10
+			custom_tooltip = hre_italian_duchy_decision_milan_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = lombardy_area
+					tag = MLO
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = po_valley_area
+					tag = MLO
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = emilia_romagna_area
+					tag = MLO
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = venetia_area
+					tag = MLO
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 101
+					tag = MLO
+				}
+				MLO = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = lombard
+						kingdom = yes
+					}
+					override_country_name = HRE_DUCHY_LOMBARDY
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_italian_duchy_decision_tuscany = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_italian_duchy_decision_tuscany }
+			NOT = { tag = TUS }
+			OR = {
+				tuscany_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TUS }
+				}
+				lazio_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TUS }
+				}
+				central_italy_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TUS }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tuscany_area
+				area = lazio_area
+				area = central_italy_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = TUS }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = TUS }
+				TUS = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_italian_duchy_decision_tuscany
+			add_imperial_influence = -10
+			custom_tooltip = hre_italian_duchy_decision_tuscany_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = tuscany_area
+					tag = TUS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = lazio_area
+					tag = TUS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = central_italy_area
+					tag = TUS
+				}
+				TUS = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = tuscan
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_italian_duchy_decision_sicily = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_italian_duchy_decision_sicily }
+			NOT = { tag = SIC }
+			OR = {
+				apulia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SIC }
+				}
+				naples_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SIC }
+				}
+				calabria_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SIC }
+				}
+				sicily_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SIC }
+				}
+				western_sicily_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SIC }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = apulia_area
+				area = naples_area
+				area = calabria_area
+				area = sicily_area
+				area = western_sicily_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = SIC }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = SIC }
+				SIC = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_italian_duchy_decision_sicily
+			add_imperial_influence = -10
+			custom_tooltip = hre_italian_duchy_decision_sicily_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = apulia_area
+					tag = SIC
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = naples_area
+					tag = SIC
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = calabria_area
+					tag = SIC
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = sicily_area
+					tag = SIC
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = western_sicily_area
+					tag = SIC
+				}
+				SIC = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = sicilian
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

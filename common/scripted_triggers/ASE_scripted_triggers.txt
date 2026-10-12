@@ -1,0 +1,12 @@
+is_owner_culture_or_accepted = {
+	OR = {
+		has_owner_culture = yes
+		AND = {
+			culture_group = owner
+			OR = {
+				owner = { has_cultural_union = yes }
+				has_owner_accepted_culture = yes
+			}
+		}
+	}
+}

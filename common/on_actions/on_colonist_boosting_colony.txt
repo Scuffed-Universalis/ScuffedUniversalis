@@ -1,0 +1,27 @@
+##scope = colony province, FROM = owner country or province if there's a minority expulsion source
+on_colonist_boosting_colony = {
+	on_colonist_boosting_colony_effect = yes
+	if = {
+		limit = {
+			FROM = {
+				OR = {
+					has_estate_privilege = estate_settlers_jesuits
+					has_estate_privilege = estate_settlers_religious_missions
+				}
+			}
+			OR = {
+				continent = north_america
+				continent = south_america
+			}
+			NOT = { native_size = 50 }
+			native_size = 1
+		}
+		change_native_size = 1
+		while = {
+			limit = {
+				native_size = 50
+			}
+			change_native_size = -1
+		}
+	}
+}

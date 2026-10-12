@@ -1,0 +1,508 @@
+EE_FRA_managing_finances = {
+	yearly_corruption = -0.02
+	inflation_reduction = 0.2
+}
+EE_FRA_control_curia = {
+	curia_powers_cost = -0.25
+}
+EE_FRA_heirs_st_peter = {
+	missionary_maintenance_cost = -0.5
+}
+EE_FRA_protector_reformation = {
+	morale_damage_received = -0.05
+	war_exhaustion = -0.1
+}
+EE_FRA_true_heirs_christ = {
+	monthly_church_power = 1
+	monthly_fervor_increase = 1
+}
+EE_FRA_judge_judged = {
+	tolerance_of_heathens_capacity = 2
+	tolerance_of_heretics_capacity = 2
+	global_heretic_missionary_strength = -0.1
+}
+EE_FRA_expert_forts_1 = {
+	siege_ability = 0.1
+}
+EE_FRA_expert_forts = {
+	siege_ability = 0.05
+}
+EE_FRA_Grand_Finistere_base = {
+	range = 0.1
+}
+EE_FRA_overshadowing_iberia = {
+	country_military_power = 1
+}
+EE_FRA_limited_conscription = {
+	land_forcelimit = -5
+	nobles_loyalty_modifier = 0.05
+}
+EE_FRA_english_blockade = {
+	province_trade_power_modifier = -0.1
+}
+EE_FRA_widespread_support = {
+	global_unrest = -1
+}
+EE_FRA_loose_taxation = {
+	global_tax_modifier = -0.05
+}
+EE_FRA_strict_taxation = {
+	war_taxes_cost_modifier = -0.5
+}
+EE_FRA_eternal_dispute = {
+	global_unrest = 1
+}
+EE_FRA_iberian_assymilation = {
+	num_accepted_cultures = 2
+}
+EE_FRA_french_rule = {
+	local_governing_cost = -0.15
+	local_manpower_modifier = 0.15
+}
+EE_FRA_mediterranean_hegemony = {
+	galley_power = 0.1
+	naval_morale = 0.1
+}
+EE_FRA_naval_arsenal = {
+	ship_recruit_speed = -0.3
+	hostile_fleet_attrition = 1
+	block_slave_raid = yes
+	allowed_num_of_buildings = 1
+}
+EE_FRA_french_centre_power = {
+	local_tax_modifier = 0.25
+	local_production_efficiency = 0.25
+	local_state_maintenance_modifier = -0.25
+}
+EE_FRA_revival_arsenal = {
+	local_great_project_upgrade_cost = -0.2
+}
+EE_FRA_french_bombardes = {
+	artillery_barrage_cost = -0.5
+	artillery_cost = -1
+}
+EE_FRA_master_gunner = {
+	siege_ability = 0.05
+}
+EE_FRA_bastard_orleans = {
+	morale_damage = 0.05
+}
+EE_FRA_early_victories = {
+	land_morale = 0.05
+}
+EE_FRA_first_standing_army = {
+	shock_damage = 0.05
+	reinforce_speed = 0.25
+}
+EE_FRA_montjoie = {
+	army_tradition = 0.5
+	prestige_from_land = 1
+}
+EE_FRA_broke_english_spine = {
+	army_tradition_decay = -0.01
+}
+EE_FRA_treaty_picquiny = {
+	unjustified_demands = -0.35
+	province_warscore_cost = -0.1
+}
+EE_FRA_law_guarantee = {
+	min_local_autonomy = 10
+}
+EE_FRA_god_french = {
+	tolerance_own = 1
+	curia_powers_cost = -0.25
+}
+EE_FRA_armed_pilgrimage = {
+	warscore_cost_vs_other_religion = -0.05
+	enforce_religion_cost = -0.5
+	extra_manpower_at_religious_war = yes
+}
+EE_FRA_armed_pilgrimage_1 = {
+	warscore_cost_vs_other_religion = -0.1
+	enforce_religion_cost = -0.5
+	extra_manpower_at_religious_war = yes
+}
+EE_FRA_global_crusade = {
+	liberty_desire_from_subject_development = -0.75
+	governing_capacity_modifier = 0.5
+}
+EE_FRA_food_surplus = {
+	local_manpower = 0.5
+}
+EE_FRA_Grand_French_Dockyard = {
+	local_development_cost = -0.1
+	local_ship_cost = -0.1
+}
+EE_FRA_back_french_rule = {
+	local_autonomy = -0.025
+	local_years_of_nationalism = -5
+	local_prosperity_growth = 0.25
+}
+EE_FRA_control_church = {
+	innovativeness_gain = 0.25
+	embracement_cost = -0.15
+}
+EE_FRA_eliminating_feudalism = {
+	allow_free_estate_privilege_revocation = yes
+	loyalty_change_on_revoked = 0.5
+}
+EE_FRA_slipping_opportunity = {
+	land_morale = -0.05
+	global_unrest = 1
+}
+EE_FRA_increased_european_prestige = {
+	diplomatic_reputation = 1
+}
+EE_FRA_averted_holyness = {
+	manpower_in_true_faith_provinces = 0.1
+}
+EE_FRA_success_italy = {
+	fire_damage = 0.05
+	shock_damage = 0.05
+}
+EE_FRA_supply_lines = {
+	land_attrition = -0.1
+	reinforce_speed = 0.25
+}
+EE_FRA_prelude_navy_supremacy = {
+	galley_power = 0.1
+}
+EE_FRA_artillery_evolution = {
+	siege_ability = 0.05
+}
+EE_FRA_doorway_italy = {
+	local_friendly_movement_speed = 0.15
+	supply_limit_modifier = 0.25
+}
+EE_FRA_french_signoria = {
+	interest = -0.25
+	province_trade_power_modifier = 0.1
+}
+EE_FRA_start_monopoly = {
+	center_of_trade_upgrade_cost = -0.25
+}
+EE_FRA_genoa_monopoly = {
+	province_trade_power_value = 5
+	trade_value = 1
+}
+EE_FRA_urban_planning = {
+	local_development_cost = -0.1
+	local_prosperity_growth = 0.5
+}
+EE_FRA_mercure_galant = {
+	global_institution_spread = 0.15
+}
+EE_FRA_mercure_galant_1 = {
+	global_institution_spread = 0.15
+	innovativeness_gain = 0.15
+}
+EE_FRA_mercure_galant_2 = {
+	global_institution_spread = 0.15
+	innovativeness_gain = 0.15
+	technology_cost = -0.05
+}
+EE_FRA_proto_industrialization = {
+	trade_goods_size = 1
+}
+EE_FRA_evolution_economy = {
+	build_cost = -0.15
+	build_time = -0.15
+}
+EE_FRA_power_steam_trade = {
+	province_trade_power_modifier = 0.25
+}
+EE_FRA_power_steam_production = {
+	local_production_efficiency = 0.25
+}
+EE_FRA_power_steam_tax = {
+	local_tax_modifier = 0.25
+}
+EE_FRA_voyages_new_world = {
+	global_colonial_growth = 20
+	ship_durability = 0.05
+}
+EE_FRA_fur_grounds = {
+	trade_goods_size = 1
+}
+EE_FRA_commercial_competition = {
+	province_trade_power_modifier = 0.15
+	local_center_of_trade_upgrade_cost = -0.25
+}
+EE_FRA_new_lingua_franca = {
+	diplomats = 1
+	envoy_travel_time = -0.5
+}
+EE_FRA_diplomatic_moves = {
+	diplomatic_reputation = 1
+}
+EE_FRA_rivality_fra_hab = {
+	spy_offence = 0.2
+}
+EE_FRA_tree_lined_highways = {
+	prestige_decay = -0.01
+}
+EE_FRA_steelmaking = {
+	local_production_efficiency = 0.15
+}
+EE_FRA_la_mode = {
+	trade_goods_size = 1
+	trade_goods_size_modifier = 0.25
+}
+fra_silk_must_flow = {
+	trade_goods_size_modifier = 0.1
+	local_development_cost_modifier = -0.2
+}
+fra_invest_lyon = {
+	trade_goods_size_modifier = 0.1
+	local_development_cost_modifier = -0.2
+}
+EE_FRA_modern_government = {
+	governing_capacity_modifier = 0.15
+	adm_tech_cost_modifier = -0.1
+}
+EE_FRA_admin_evolution = {
+	local_governing_cost = -0.1
+}
+EE_FRA_consul_haut_modifier = {
+	estate_interaction_cooldown_modifier = -0.25
+}
+EE_FRA_consul_finances_modifier = {
+	global_tax_modifier = 0.15
+	interest = -1
+}
+EE_FRA_consul_prive_modifier = {
+	global_unrest = -2
+	years_of_nationalism = -5
+}
+EE_FRA_port_havre = {
+	local_sailors = 500
+	local_sailors_modifier = 0.1
+}
+EE_FRA_maritime_investments = {
+	ship_trade_power_modifier = 0.1
+}
+EE_FRA_cote_divoire = {
+	trade_value_modifier = 0.15
+}
+EE_FRA_french_protectorate = {
+	province_trade_power_modifier = 0.1
+}
+EE_FRA_wealth_madagascar = {
+	merchants = 1
+	trade_efficiency = 0.05
+}
+EE_FRA_south_american_outpost = {
+	province_trade_power_modifier = 0.1
+}
+EE_FRA_settle_south_america = {
+	global_colonial_growth = 20
+}
+EE_FRA_pearl_antilles = {
+	colonists = 1
+	production_efficiency = 0.1
+	global_colonial_growth = 25
+}
+EE_FRA_share_triangle = {
+	trade_steering = 0.1
+}
+EE_FRA_management_affairs = {
+	colonist_placement_chance = 0.1
+	global_colonial_growth = 20
+}
+EE_FRA_ENG_wars_expanded = {
+	regiment_disembark_speed = 0.75
+	movement_speed_in_fleet_modifier = 2
+}
+EE_FRA_ENG_london = {
+	siege_ability = 0.1
+}
+EE_FRA_man_war = {
+	has_man_of_war = yes
+}
+EE_FRA_french_system = {
+	culture_conversion_cost = -0.25
+	culture_conversion_time = -0.5
+}
+EE_FRA_cultural_administration = {
+	country_diplomatic_power = -1
+	global_tax_income = -24
+}
+EE_FRA_british_maritime_ambitions = {
+	max_flagships = 1
+	leader_naval_fire = 1
+}
+EE_FRA_influx_french_ideals = {
+	development_cost_modifier = -0.1
+	build_cost = -0.2
+}
+
+EE_FRA_influx_french_ideals_buffed = {
+	development_cost_modifier = -0.1
+	build_cost = -0.2
+	discipline = 0.05
+}
+
+EE_FRA_swiss_hundred = {
+	mercenary_discipline = 0.05
+	merc_maintenance_modifier = -0.15
+}
+EE_FRA_loyalist_victory = {
+	legitimacy = 1
+	church_loyalty_modifier = 0.05
+	burghers_loyalty_modifier = 0.05
+}
+EE_FRA_will_god = {
+	EE_FRA_consolidation_power_gain_modifier = 0.25
+	max_absolutism = 10
+}
+EE_FRA_will_god_2 = {
+	EE_FRA_consolidation_power_gain_modifier = 0.25
+	max_absolutism = 15
+	max_absolutism_effect = 0.05
+}
+EE_FRA_core_french_army = {
+	infantry_fire = 0.1
+	fire_damage_received = -0.05
+	is_musketeer_modifier = yes	
+}
+EE_FRA_increased_conscription = {
+	allowed_musketeer_fraction = 0.1
+	reinforce_cost_modifier = -0.25
+	is_musketeer_modifier = yes
+}
+EE_FRA_muskets_horseback = {
+	cavalry_fire = 0.5
+	cavalry_flanking = 0.5
+}
+EE_FRA_modernization_gendarmes = {
+	mil_tech_cost_modifier = -0.1
+}
+EE_FRA_charting_africa = {
+	trade_range_modifier = 0.25
+	global_trade_power = 0.1
+}
+EE_FRA_french_entrepot = {
+	province_trade_power_modifier = 0.1
+}
+fra_india_trade_center = {
+	province_trade_power_value = 20
+}
+EE_FRA_compagnie_orientales = {
+	trade_company_investment_cost = -0.2
+	trade_company_governing_cost = -0.1
+}
+EE_FRA_indian_expansion = {
+	min_local_autonomy = -5
+}
+fra_earth_not_flat = {
+	leader_naval_manuever = 1
+	ship_durability = 0.05
+}
+EE_FRA_small_collection = {
+	monthly_splendor = 2
+}
+EE_FRA_grand_collection = {
+	monthly_splendor = 3
+	advisor_cost = -0.15
+}
+EE_FRA_legendary_collection = {
+	monthly_splendor = 4
+	advisor_cost = -0.2
+	administrative_efficiency = 0.05
+}
+EE_FRA_french_colonial_Empire = {
+	movement_speed = 0.05
+	land_attrition = -0.1
+	global_tariffs = 0.1
+}
+EE_FRA_north_african_investments = {
+	min_local_autonomy = -5
+}
+EE_FRA_successors_charlemagne = {
+	imperial_authority = 0.1
+}
+EE_FRA_rapid_militarization = {
+	manpower_recovery_speed = 0.25
+	manpower_in_culture_group_provinces = 0.1
+}
+EE_FRA_legacy_charlemagne = {
+	reasons_to_elect = 20
+}
+EE_FRA_imperial_line = {
+	imperial_authority_value = 0.25
+}
+EE_FRA_imperial_religion = {
+	relation_with_same_religion = 25
+}
+EE_FRA_new_free_cities = {
+	max_free_cities = 3
+}
+EE_FRA_mobilize_imperial_circles = {
+	vassal_income = 0.2
+	vassal_forcelimit_bonus = 0.5
+}
+EE_FRA_integration_imperial_circles = {
+	land_forcelimit_modifier = 0.15
+	land_maintenance_modifier = -0.1
+}
+EE_FRA_battle_ready_conscripts = {
+	yearly_army_professionalism = 0.015
+}
+EE_FRA_drilling_Draftees = {
+	drill_gain_modifier = 0.1
+	drill_decay_modifier = -0.1
+}
+EE_FRA_europe_leading_monarchy = {
+	manpower_against_imperial_enemies = 35000
+}
+ME_FRA_prelude_war = {
+	manpower_recovery_speed = 0.25
+	global_tax_modifier = 0.15
+}
+ME_FRA_conquered_holy_land = {
+	all_power_cost = -0.05
+}
+
+fra_french_missionaries = {
+	local_missionary_strength = 0.03
+	local_missionary_maintenance_cost = -0.25
+}
+
+fra_religious_absolutism_modifier = {
+	religious_unity = 0.15
+	monthly_EE_FRA_consolidation_power = 0.15
+}
+
+me_fra_french_ties = {
+	global_trade_goods_size_modifier = 0.2
+	technology_cost = -0.1
+}
+
+fra_aiding_the_second_hundred_years_war = {
+	discipline = 0.05
+	global_unrest = -2
+	global_regiment_cost = -0.1
+}
+
+fra_war_at_sea = {
+	global_ship_recruit_speed = -0.25
+	global_ship_repair = 0.5
+	global_ship_cost = -0.15
+}
+
+fra_monopoly_of_force_modifier = {
+	harsh_treatment_cost = -0.25
+	global_autonomy = -0.05
+	EE_FRA_consolidation_power_gain_modifier = 0.2
+}
+
+fra_absolutism_ministry = {
+	max_absolutism_effect = 0.05
+	yearly_absolutism = 1
+}
+
+fra_curtailed_estate_influence = {
+	loyalty_change_on_revoked = 0.1
+	allow_free_estate_privilege_revocation = yes
+	estate_interaction_cooldown_modifier = -0.2
+}

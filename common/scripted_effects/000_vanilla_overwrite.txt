@@ -1,0 +1,246 @@
+set_center_level_2_center_of_trade = {
+	custom_tooltip = ME_set_to_level_2_cot
+	hidden_effect = {
+		if = {
+			limit = { NOT = { province_has_center_of_trade_of_level = 1 } }
+			center_of_trade = 2
+		}
+		else = {
+			if = {
+				limit = { province_has_center_of_trade_of_level = 2 }
+				add_base_production = 2
+			}
+			else = {
+				add_center_of_trade_level = 1
+			}
+		}
+	}
+}
+
+on_change_tag_effect = {
+	hidden_effect = {
+		restore_country_name = yes
+		restore_country_color = yes
+		#England specific
+		if = { limit = { has_country_modifier = royal_impressment_act_modifier } remove_country_modifier = royal_impressment_act_modifier }
+		if = { limit = { has_country_modifier = isolationism_act_modifier } remove_country_modifier = isolationism_act_modifier }
+		if = { limit = { has_country_modifier = colonial_act_modifier } remove_country_modifier = colonial_act_modifier }
+		if = { limit = { has_country_modifier = military_reassignment_act_modifier } remove_country_modifier = military_reassignment_act_modifier }
+		if = { limit = { has_country_modifier = acts_of_development_modifier } remove_country_modifier = acts_of_development_modifier }
+		if = { limit = { has_country_modifier = global_empire_act_modifier } remove_country_modifier = global_empire_act_modifier }
+		if = { limit = { has_country_modifier = naval_reassignment_act_modifier } remove_country_modifier = naval_reassignment_act_modifier }
+		if = { limit = { has_country_modifier = diplomatic_act_modifier } remove_country_modifier = diplomatic_act_modifier }
+		if = { limit = { has_country_modifier = internal_focus_act_modifier } remove_country_modifier = internal_focus_act_modifier }
+		#EE specific
+		if = {
+			limit = {
+				has_country_flag = unified_islam
+			}
+			save_global_event_target_as = ME_caliphate_tag
+			save_global_event_target_as = Caliph_province_holder
+		}
+		if = {
+			limit = {
+				AND = {
+					religion = sunni
+					any_owned_province = {
+						province_id = event_target:Caliph_province
+					}
+				}
+			}
+			save_global_event_target_as = Caliph_province_holder
+		}
+		ME_change_all_subject_colors = yes
+	}
+}
+
+convert_special_subject_to_vassal = {
+	if = {
+		limit = {
+			$subject$ = { is_subject_of = $overlord$ }
+			OR = {
+				AND = {
+					$overlord$ = { NOT = { has_government_attribute = has_eyalets } }
+					$subject$ = {
+						OR = {
+							is_subject_of_type = eyalet
+							is_subject_of_type = core_eyalet
+						}
+					}
+				}
+				AND = {
+					$overlord$ = { NOT = { has_government_attribute = enables_pronoias } }
+					$subject$ = {
+						OR = {
+							is_subject_of_type = pronoia_subject_type
+							is_subject_of_type = hereditary_pronoia_subject_type
+						}
+					}
+				}
+				AND = {
+					$overlord$ = { NOT = { has_government_mechanic = persian_influence_mechanic } }
+					$subject$ = {
+						is_subject_of_type = cultural_sphere_of_influence_subject
+					}
+				}
+				AND = {
+					$overlord$ = { NOT = { has_mission = ME_bur_rein_in_stadholders } }
+					$subject$ = {
+						is_subject_of_type = dutch_vassal
+					}
+				}
+				AND = {
+					$overlord$ = { NOT = { tag = QAR } }
+					$subject$ = {
+						is_subject_of_type = QAR_baghdad_vassal
+					}
+				}
+				AND = {
+					$overlord$ = {
+						NOT = {
+							can_have_mor_tuaths = yes
+						}	
+					}
+					$subject$ = {
+						is_subject_of_type = EE_Minor_IRI_Mor_Tuath
+					}
+				}
+				AND = {
+					$overlord$ = {
+						NOT = {
+							has_country_modifier = PRU_vassal_play
+						}	
+					}
+					$subject$ = {
+						is_subject_of_type = prussian_vassal
+					}
+				}
+			}
+		}
+		$overlord$ = {
+			create_subject = {
+				subject_type = vassal
+				subject = $subject$
+				keep_liberty_desire = yes
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			$subject$ = { is_subject_of = $overlord$ }
+			AND = {
+				$overlord$ = { NOT = { has_mission = ME_bur_rein_in_stadholders } }
+				$subject$ = {
+					is_subject_of_type = dutch_personal_union
+				}
+			}
+		}
+		$overlord$ = {
+			create_subject = {
+				subject_type = personal_union
+				subject = $subject$
+				keep_liberty_desire = yes
+			}
+		}
+	}
+	else = {
+		limit = {
+			$subject$ = { is_subject_of = $overlord$ }
+			AND = {
+				$overlord$ = { NOT = { tag = CAS } }
+				$subject$ = {
+					is_subject_of_type = EE_granadan_tributary
+				}
+			}
+		}
+		$subject$ = {
+			grant_independence = yes
+		}
+	}
+}
+
+# enhanced interaction, gained by CLT MT
+
+estate_action_GRANT_GENERALSHIP_NOBLES = {
+	if = {
+		limit = {
+			has_country_flag = INC_upgrade_general_privilege_for_the_nobles_flag
+		}
+		create_general_scaling_with_tradition_and_pips = {
+			add_shock = 1
+			add_manuever = 1
+		}
+	}
+	else = {
+		create_leader_scaling_with_tradition = {
+			leader = general
+			type = army
+		}
+	}
+	if = {
+		limit = {
+			NOT = {
+				mission_completed = EE_Celtica_conflicting_interest
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+	}
+	if = {
+		limit = {
+			has_estate = estate_rajput
+		}
+		add_estate_loyalty = {
+			estate = estate_rajput
+			loyalty = -5
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_maratha
+		}
+		add_estate_loyalty = {
+			estate = estate_maratha
+			loyalty = -5
+		}
+	}
+	if = {
+		limit = {
+			has_estate = estate_qizilbash
+		}
+		add_estate_loyalty = {
+			estate = estate_qizilbash
+			loyalty = -5
+		}
+	}
+	if = {
+		limit = {
+			has_estate = estate_ghulams
+		}
+		add_estate_loyalty = {
+			estate = estate_ghulams
+			loyalty = -5
+		}
+	}
+}
+
+estate_action_DEMAND_MORE_TROOPS_NOBLES = {
+	estate_action_scaling_modifier = {
+		estate = estate_nobles
+		name = DEMAND_MORE_TROOPS_NOBLES
+		duration = 7300
+	}
+	if = {
+		limit = {
+			NOT = {
+				mission_completed = EE_Celtica_conflicting_interest
+			}
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15
+		}
+	}
+}

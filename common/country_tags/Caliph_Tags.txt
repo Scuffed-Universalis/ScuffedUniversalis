@@ -1,0 +1,8 @@
+ABA = "countries/AbbasidsME.txt"
+RSL = "countries/RasulidsME.txt"
+SUQ = "countries/Socotra.txt"
+BAG = "countries/Baghdad.txt"
+JAL = "countries/Jalayirids.txt"
+QIZ = "countries/Qizil_Qoyunlu.txt"
+RST = "countries/Rustamids.txt"
+BKT = "countries/Bektashi.txt"

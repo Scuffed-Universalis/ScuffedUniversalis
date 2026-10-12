@@ -1,0 +1,41 @@
+#EE- used for the missions button
+missions_yes = {
+	reason = {
+		tooltip_desc = "missions_yes_desc"
+		tooltip_reason = ""
+		weight = 100
+		trigger = {
+			OR = {
+				#tag = BYZ
+				country_has_me_missions = yes #automatic, with parser
+				country_has_both_paradox_and_me_missions = yes #crafted by hand across years, reliable
+			}
+			NOT = { country_has_good_me_missions = yes }
+		}
+	}
+}
+
+missions_yes_recommend = {
+	reason = {
+		tooltip_desc = "missions_yes_recommend_desc"
+		tooltip_reason = ""
+		weight = 100
+		trigger = {
+			OR = {
+				#tag = BYZ
+				country_has_good_me_missions = yes
+			}
+		}
+	}
+}
+
+# missions_no = {
+	# reason = {
+		# tooltip_desc = "missions_no_desc"
+		# tooltip_reason = ""
+		# weight = 1
+		# trigger = {
+			# always = yes
+		# }
+	# }
+# }

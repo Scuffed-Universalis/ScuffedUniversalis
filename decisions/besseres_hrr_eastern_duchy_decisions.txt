@@ -1,0 +1,337 @@
+country_decisions = {
+	hre_eastern_duchy_decision_hungary = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_eastern_duchy_decision_hungary }
+			NOT = { tag = HUN }
+			OR = {
+				slovakia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = HUN }
+				}
+				transdanubia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = HUN }
+				}
+				alfold_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = HUN }
+				}
+				southern_transylvania_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = HUN }
+				}
+				transylvania_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = HUN }
+				}
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						1954 = {
+							hre_can_cede_province_to_hre_duchy = { tag = HUN }
+						}
+						4126 = {
+							hre_can_cede_province_to_hre_duchy = { tag = HUN }
+						}
+						4173 = {
+							hre_can_cede_province_to_hre_duchy = { tag = HUN }
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = slovakia_area
+				area = transdanubia_area
+				area = alfold_area
+				area = southern_transylvania_area
+				area = transylvania_area
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						province_id = 1954
+						province_id = 4126
+						province_id = 4173
+					}
+				}
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = HUN }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = HUN }
+				HUN = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_eastern_duchy_decision_hungary
+			add_imperial_influence = -10
+			custom_tooltip = hre_eastern_duchy_decision_hungary_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = slovakia_area
+					tag = HUN
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = transdanubia_area
+					tag = HUN
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = alfold_area
+					tag = HUN
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = southern_transylvania_area
+					tag = HUN
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = transylvania_area
+					tag = HUN
+				}
+				if = {
+					limit = {
+						has_global_flag = extended_timeline_mod
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 1954
+						tag = HUN
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 4126
+						tag = HUN
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 4173
+						tag = HUN
+					}
+				}
+				HUN = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = hungarian
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_eastern_duchy_decision_mazovia = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_eastern_duchy_decision_mazovia }
+			NOT = { tag = MAZ }
+			OR = {
+				mazovia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MAZ }
+				}
+				sandomierz_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MAZ }
+				}
+				malopolska_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MAZ }
+				}
+				central_poland_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MAZ }
+				}
+				kuyavia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MAZ }
+				}
+				wielkopolska_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MAZ }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = mazovia_area
+				area = sandomierz_area
+				area = malopolska_area
+				area = central_poland_area
+				area = kuyavia_area
+				area = wielkopolska_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = MAZ }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = MAZ }
+				MAZ = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_eastern_duchy_decision_mazovia
+			add_imperial_influence = -10
+			custom_tooltip = hre_eastern_duchy_decision_mazovia_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = mazovia_area
+					tag = MAZ
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = sandomierz_area
+					tag = MAZ
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = malopolska_area
+					tag = MAZ
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = central_poland_area
+					tag = MAZ
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = kuyavia_area
+					tag = MAZ
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = wielkopolska_area
+					tag = MAZ
+				}
+				MAZ = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = polish
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_eastern_duchy_decision_moldavia = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_eastern_duchy_decision_moldavia }
+			NOT = { tag = MOL }
+			OR = {
+				moldavia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOL }
+				}
+				red_ruthenia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOL }
+				}
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						3249 = {
+							hre_can_cede_province_to_hre_duchy = { tag = MOL }
+						}
+						2405 = {
+							hre_can_cede_province_to_hre_duchy = { tag = MOL }
+						}
+						1756 = {
+							hre_can_cede_province_to_hre_duchy = { tag = MOL }
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = moldavia_area
+				area = red_ruthenia_area
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						province_id = 3249
+						province_id = 2405
+						province_id = 1756
+					}
+				}
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = MOL }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = MOL }
+				MOL = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_eastern_duchy_decision_moldavia
+			add_imperial_influence = -10
+			custom_tooltip = hre_eastern_duchy_decision_moldavia_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = moldavia_area
+					tag = MOL
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = red_ruthenia_area
+					tag = MOL
+				}
+				if = {
+					limit = {
+						has_global_flag = extended_timeline_mod
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 3249
+						tag = MOL
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 2405
+						tag = MOL
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 1756
+						tag = MOL
+					}
+				}
+				MOL = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = romanian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

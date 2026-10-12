@@ -1,0 +1,113 @@
+EE_FRA_mad_wars = {
+	ended_by_country_breaking_to_rebels = no
+	potential = { 
+		has_country_flag = EE_FRA_unlock_public_weal_disaster
+		NOT = { has_country_flag = EE_FRA_finished_public_weal_disaster }
+		has_subject_of_type = appanage
+		OR = {
+			exists = BUR
+			exists = BRI
+		}
+	}
+	can_start = {
+		NOT = { has_any_disaster = yes }
+		NOT = { alliance_with = BUR }
+		NOT = { alliance_with = BRI }
+	}
+	can_stop = { has_any_disaster = yes }
+	progress = {
+		modifier = {
+			factor = 1
+			BUR = {
+				NOT = {
+					has_opinion = {
+						who = FRA
+						value = 100
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			BRI = {
+				NOT = {
+					has_opinion = {
+						who = FRA
+						value = 100
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 1
+			estate_influence = {
+				estate = estate_nobles
+				influence = 50
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { crown_land_share = 40 }
+		}
+		modifier = {
+			factor = 2
+			is_rival = BUR
+		}
+		modifier = {
+			factor = 2
+			any_subject_country = { liberty_desire = 20 }
+		}
+		modifier = {
+			factor = -2
+			all_subject_country = {
+				NOT = { liberty_desire = 5 }
+			}
+		}
+		modifier = {
+			factor = 2
+			custom_trigger_tooltip = {
+				tooltip = ME_FRA_exiled_Louis
+				has_country_flag = ME_FRA_didnt_pick_louis
+			}
+		}
+	}
+	can_end = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_one_rein_appanage_tt
+				has_country_flag = ME_FRA_won_mad_wars_with_PO
+			}
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_one_rein_appanage_tt_1
+				has_country_flag = ME_FRA_won_mad_wars_without_PO
+			}
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_5_years_since_war_weal_tt
+				OR = {
+					has_country_flag = ME_FRA_lost_mad_wars
+					AND = {
+						is_in_war = { casus_belli = EE_FRA_war_weal }
+						had_country_flag = {
+							flag = EE_FRA_war_weal_flag
+							days = 1825
+						}
+					}
+				}
+			}
+		}
+	}
+	modifier = {
+		nobles_loyalty_modifier = -0.1
+		global_unrest = 2
+	}
+	on_monthly = {
+        random_events = { 
+            1000 = 0
+            15 = ME_France_Events.65
+            15 = ME_France_Events.66
+			15 = ME_France_Events.67
+        }
+	}
+	on_start = ME_France_Events.63
+	on_end = ME_France_Events.68
+}

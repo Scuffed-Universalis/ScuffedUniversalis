@@ -1,0 +1,27 @@
+ME_has_french_minor_missions = {
+	OR = {
+		tag = BAR
+		#tag = LIE # We gotta get something unique for them 
+		tag = HAI
+		tag = LOR # coupled with these for now
+		AND = {
+			has_country_flag = use_missions_expanded_missions_instead_of_paradox
+			OR = {
+				tag = NRM
+				tag = ALE
+				tag = ORL
+				tag = CHP
+				tag = NEV
+				tag = BER
+				tag = BOU
+				tag = AMG
+				tag = AUV
+				tag = GUY
+				tag = FOI
+				tag = TOU
+				tag = DAU
+				tag = PIC
+			}
+	}	}
+	}
+}

@@ -1,0 +1,224 @@
+country_decisions = {
+	hre_asia_minor_duchy_decision_trebizond = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_asia_minor_duchy_decision_trebizond }
+			NOT = { tag = TRE }
+			OR = {
+				hudavendigar_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				aydin_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				germiyan_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				karaman_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				ankara_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				kastamonu_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				rum_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				erzurum_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				cukurova_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				332 = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				2303 = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+				4310 = {
+					hre_can_cede_province_to_hre_duchy = { tag = TRE }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = hudavendigar_area
+				area = aydin_area
+				area = germiyan_area
+				area = karaman_area
+				area = ankara_area
+				area = kastamonu_area
+				area = rum_area
+				area = erzurum_area
+				area = cukurova_area
+				province_id = 332
+				province_id = 2303
+				province_id = 4310
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = TRE }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = TRE }
+				TRE = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_asia_minor_duchy_decision_trebizond
+			add_imperial_influence = -10
+			custom_tooltip = hre_asia_minor_duchy_decision_trebizond_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = hudavendigar_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = aydin_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = germiyan_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = karaman_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = ankara_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = kastamonu_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = rum_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = erzurum_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = cukurova_area
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 332
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 2303
+					tag = TRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4310
+					tag = TRE
+				}
+				TRE = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = pontic_greek
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_asia_minor_duchy_decision_georgia = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_asia_minor_duchy_decision_georgia }
+			NOT = { tag = GEO }
+			OR = {
+				imereti_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GEO }
+				}
+				kartli_kakheti_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GEO }
+				}
+				samtskhe_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GEO }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = imereti_area
+				area = kartli_kakheti_area
+				area = samtskhe_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = GEO }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = GEO }
+				GEO = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_asia_minor_duchy_decision_georgia
+			add_imperial_influence = -10
+			custom_tooltip = hre_asia_minor_duchy_decision_georgia_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = imereti_area
+					tag = GEO
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = kartli_kakheti_area
+					tag = GEO
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = samtskhe_area
+					tag = GEO
+				}
+				GEO = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = georgian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

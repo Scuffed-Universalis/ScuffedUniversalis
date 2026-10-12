@@ -1,0 +1,6 @@
+﻿l_english:
+ EMPEROR_DIPACTIONS_DESC:0 "The Emperor may take the following diplomatic actions: \n$LIST|Y$ \n§YImpose Imperial Ban§! \n§YLift Imperial Ban§! \n§YAsk or force nations to join the HRE§! \n§YForce members by war to leave the HRE§!"
+
+ add_5_crown_land_share:0 "§Y[This.GetName]§! gains §G5§! crown land ownership."
+
+ vassalize_empire2:0 "All members of the §YHoly Roman Empire§! will become our direct vassals or leave the empire, giving us claim on their lands! \nAllows the Emperor to unify larger duchies and kingdoms within the Holy Roman Empire in most of Europe without the consent of the affected vassals."

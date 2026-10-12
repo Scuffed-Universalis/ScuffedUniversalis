@@ -1,0 +1,742 @@
+country_decisions = {
+	hre_far_eastern_duchy_decision_lithuania = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_far_eastern_duchy_decision_lithuania }
+			NOT = { tag = LIT }
+			OR = {
+				samogitia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = LIT }
+				}
+				lithuania_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = LIT }
+				}
+				podlasie_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = LIT }
+				}
+				pripyat_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = LIT }
+				}
+				volhynia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = LIT }
+				}
+				minsk_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = LIT }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = samogitia_area
+				area = lithuania_area
+				area = podlasie_area
+				area = pripyat_area
+				area = volhynia_area
+				area = minsk_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = LIT }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = LIT }
+				LIT = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_far_eastern_duchy_decision_lithuania
+			add_imperial_influence = -10
+			custom_tooltip = hre_far_eastern_duchy_decision_lithuania_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = samogitia_area
+					tag = LIT
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = lithuania_area
+					tag = LIT
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = podlasie_area
+					tag = LIT
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = pripyat_area
+					tag = LIT
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = volhynia_area
+					tag = LIT
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = minsk_area
+					tag = LIT
+				}
+				LIT = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = lithuanian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_far_eastern_duchy_decision_kiev = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_far_eastern_duchy_decision_kiev }
+			NOT = { tag = KIE }
+			OR = {
+				podolia_volhynia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KIE }
+				}
+				west_dniepr_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KIE }
+				}
+				east_dniepr_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KIE }
+				}
+				yedisan_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KIE }
+				}
+				zaporizhia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KIE }
+				}
+				crimea_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KIE }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = podolia_volhynia_area
+				area = west_dniepr_area
+				area = east_dniepr_area
+				area = yedisan_area
+				area = zaporizhia_area
+				area = crimea_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = KIE }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = KIE }
+				KIE = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_far_eastern_duchy_decision_kiev
+			add_imperial_influence = -10
+			custom_tooltip = hre_far_eastern_duchy_decision_kiev_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = podolia_volhynia_area
+					tag = KIE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = west_dniepr_area
+					tag = KIE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = east_dniepr_area
+					tag = KIE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = yedisan_area
+					tag = KIE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = zaporizhia_area
+					tag = KIE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = crimea_area
+					tag = KIE
+				}
+				KIE = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = ruthenian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_far_eastern_duchy_decision_curonia = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_far_eastern_duchy_decision_curonia }
+			NOT = { tag = KUR }
+			OR = {
+				estonia_ingria_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KUR }
+				}
+				livonia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KUR }
+				}
+				curonia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = KUR }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = estonia_ingria_area
+				area = livonia_area
+				area = curonia_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = KUR }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = KUR }
+				KUR = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_far_eastern_duchy_decision_curonia
+			add_imperial_influence = -10
+			custom_tooltip = hre_far_eastern_duchy_decision_curonia_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = estonia_ingria_area
+					tag = KUR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = livonia_area
+					tag = KUR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = curonia_area
+					tag = KUR
+				}
+				KUR = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = prussian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_far_eastern_duchy_decision_novgorod = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_far_eastern_duchy_decision_novgorod }
+			NOT = { tag = NOV }
+			OR = {
+				pskov_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOV }
+				}
+				novgorod_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOV }
+				}
+				karelia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOV }
+				}
+				north_karelia = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOV }
+				}
+				pomor_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOV }
+				}
+				beloozero_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOV }
+				}
+				1777 = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOV }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = pskov_area
+				area = novgorod_area
+				area = karelia_area
+				area = north_karelia
+				area = pomor_area
+				area = beloozero_area
+				province_id = 1777
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = NOV }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = NOV }
+				NOV = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_far_eastern_duchy_decision_novgorod
+			add_imperial_influence = -10
+			custom_tooltip = hre_far_eastern_duchy_decision_novgorod_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = pskov_area
+					tag = NOV
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = novgorod_area
+					tag = NOV
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = karelia_area
+					tag = NOV
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = north_karelia
+					tag = NOV
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = pomor_area
+					tag = NOV
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = beloozero_area
+					tag = NOV
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 1777
+					tag = NOV
+				}
+				NOV = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = novgorodian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_far_eastern_duchy_decision_muscovy = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_far_eastern_duchy_decision_muscovy }
+			NOT = { tag = MOS }
+			OR = {
+				white_ruthenia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				tver_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				smolensk_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				moscow_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				oka_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				chernigov_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				sloboda_ukraine_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				tambov_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				ryazan_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+				vladimir_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = MOS }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = white_ruthenia_area
+				area = tver_area
+				area = smolensk_area
+				area = moscow_area
+				area = oka_area
+				area = chernigov_area
+				area = sloboda_ukraine_area
+				area = tambov_area
+				area = ryazan_area
+				area = vladimir_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = MOS }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = MOS }
+				MOS = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_far_eastern_duchy_decision_muscovy
+			add_imperial_influence = -10
+			custom_tooltip = hre_far_eastern_duchy_decision_muscovy_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = white_ruthenia_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = tver_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = smolensk_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = moscow_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = oka_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = chernigov_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = sloboda_ukraine_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = tambov_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = ryazan_area
+					tag = MOS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = vladimir_area
+					tag = MOS
+				}
+				MOS = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = russian
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_far_eastern_duchy_decision_perm = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_far_eastern_duchy_decision_perm }
+			NOT = { tag = PRM }
+			OR = {
+				ural_region = {
+					hre_can_cede_province_to_hre_duchy = { tag = PRM }
+				}
+				suzdal_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = PRM }
+				}
+				yaroslavl_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = PRM }
+				}
+				vologda_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = PRM }
+				}
+				arkhangelsk_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = PRM }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = ural_region
+				area = suzdal_area
+				area = yaroslavl_area
+				area = vologda_area
+				area = arkhangelsk_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = PRM }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = PRM }
+				PRM = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_far_eastern_duchy_decision_perm
+			add_imperial_influence = -10
+			custom_tooltip = hre_far_eastern_duchy_decision_perm_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = ural_region
+					tag = PRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = suzdal_area
+					tag = PRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = yaroslavl_area
+					tag = PRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = vologda_area
+					tag = PRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = arkhangelsk_area
+					tag = PRM
+				}
+				PRM = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = russian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_far_eastern_duchy_decision_circassia = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_far_eastern_duchy_decision_circassia }
+			NOT = { tag = CIR }
+			OR = {
+				lower_don_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CIR }
+				}
+				azov_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CIR }
+				}
+				astrakhan_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CIR }
+				}
+				dagestan_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CIR }
+				}
+				circassia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CIR }
+				}
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						469 = {
+							hre_can_cede_province_to_hre_duchy = { tag = CIR }
+						}
+						2365 = {
+							hre_can_cede_province_to_hre_duchy = { tag = CIR }
+						}
+						2367 = {
+							hre_can_cede_province_to_hre_duchy = { tag = CIR }
+						}
+						474 = {
+							hre_can_cede_province_to_hre_duchy = { tag = CIR }
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lower_don_area
+				area = azov_area
+				area = astrakhan_area
+				area = dagestan_area
+				area = circassia_area
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						province_id = 469
+						province_id = 2365
+						province_id = 2367
+						province_id = 474
+					}
+				}
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = CIR }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = CIR }
+				CIR = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_far_eastern_duchy_decision_circassia
+			add_imperial_influence = -10
+			custom_tooltip = hre_far_eastern_duchy_decision_circassia_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = lower_don_area
+					tag = CIR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = azov_area
+					tag = CIR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = astrakhan_area
+					tag = CIR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = dagestan_area
+					tag = CIR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = circassia_area
+					tag = CIR
+				}
+				if = {
+					limit = {
+						has_global_flag = extended_timeline_mod
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 469
+						tag = CIR
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 2365
+						tag = CIR
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 2367
+						tag = CIR
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 474
+						tag = CIR
+					}
+				}
+				CIR = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = circassian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

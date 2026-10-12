@@ -1,0 +1,60 @@
+ME_on_startup = {
+	hidden_effect = {
+		ADE = {
+			country_event = { id = ME_Yemen_Events.2 }
+			set_ai_personality = {
+				personality = ai_militarist
+			}
+		}
+		RAS = {
+			country_event = { id = ME_Yemen_Events.5 }
+			set_ai_personality = {
+				personality = ai_militarist
+			}
+		}
+		RSL = {
+			country_event = { id = ME_Yemen_Events.1 }
+			set_ai_personality = {
+				personality = ai_militarist
+			}
+		}
+		
+		MAM = {
+			set_ai_personality = {
+				personality = ai_capitalist 
+			}
+		}
+		MOR = {
+			set_ai_personality = {
+				personality = ai_diplomat
+			}
+		}
+		
+		NAV = {
+			country_event = { id = ME_Navarra_Events.4 }
+		}
+		
+		REB = {
+			country_event = { id = ME_Dutch_Factionalism_Events.1 }
+		}
+		if = {
+			limit = {
+				CAS = {
+					ai = yes
+				}
+			}
+			CAS = {
+				add_opinion = {
+					who = GRA
+					modifier = spain_granada_tributary
+				}
+			}
+		}
+		random_country = {
+			limit = {
+				ai = no
+			}
+			set_country_flag = gamerule_window_visible
+		}
+	}
+}

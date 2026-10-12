@@ -1,0 +1,10 @@
+advisor = {
+	advisor_id = 10001
+	name = "Barthelemy de Neufchatel"
+	location = 91
+	discount = yes
+	skill = 2
+	type = trader
+	date = 1410.1.1
+	death_date = 1459.3.23 #died
+}

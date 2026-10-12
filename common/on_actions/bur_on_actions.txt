@@ -1,0 +1,32 @@
+on_province_culture_converted = {
+    if = {
+        limit = {
+            has_province_modifier = me_lot_restore_frankish_culture_mododifier
+            OR = {
+                culture = frankish
+                NOT = { culture_group = germanic }
+                NOT = { culture_group = french }
+            }
+        }
+        remove_province_modifier = me_lot_restore_frankish_culture_mododifier
+    }
+}
+
+on_province_owner_change = {
+    if = {
+        limit = {
+            owner = {
+                has_country_flag = me_lot_buff_culture_conversion_flag
+            }
+            OR = {
+                culture_group = germanic
+                culture_group = french
+            }
+            NOT = { culture = frankish }
+        }
+		add_province_modifier = {
+			name = me_lot_restore_frankish_culture_mododifier
+			duration = -1
+		}
+    }
+}

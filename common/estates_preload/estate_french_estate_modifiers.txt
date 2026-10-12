@@ -1,0 +1,23 @@
+estate_french = {
+	modifier_definition = {
+		type = loyalty
+		key = estate_french_loyalty_modifier
+		trigger = {
+			has_estate = estate_french
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = estate_french_influence_modifier
+		trigger = {
+			has_estate = estate_french
+		}
+	}
+	modifier_definition = {
+		type = privileges
+		key = french_privilege_slots
+		trigger = {
+			has_estate = estate_french
+		}
+	}
+}

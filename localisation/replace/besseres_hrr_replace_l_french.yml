@@ -1,0 +1,4 @@
+﻿l_french:
+ EMPEROR_DIPACTIONS_DESC:0 "The Emperor may take the following diplomatic actions: \n$LIST|Y$ \n§YImpose Imperial Ban§! \n§YLift Imperial Ban§! \n§YAsk or force nations to join the HRE§! \n§YForce members by war to leave the HRE§!"
+
+ vassalize_empire2:0 "L'ensemble des membres du §YSaint-Empire§! vont soit devenir nos vassaux directs, soit quitter l'Empire en nous offrant une revendication sur leurs territoires. \nAllows the Emperor to unify larger duchies and kingdoms within the Holy Roman Empire in most of Europe without the consent of the affected vassals."

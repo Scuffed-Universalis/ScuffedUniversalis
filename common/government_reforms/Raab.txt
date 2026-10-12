@@ -1,0 +1,21 @@
+EE_Raabsolute_Monarchy = {
+	icon = "blackmailing"
+	allow_normal_conversion = no
+	potential = {
+		dynasty = "von Raab"
+	}
+	trigger = {
+		dynasty = "von Raab"
+	}
+	
+	lock_level_when_selected = yes
+	valid_for_nation_designer = no
+	
+	modifiers = {
+		global_unrest = 10
+		all_estate_influence_modifier = -0.1
+		global_tax_modifier = 0.50
+		max_absolutism_effect = 0.2		
+		harsh_treatment_cost = -0.33
+	}
+}

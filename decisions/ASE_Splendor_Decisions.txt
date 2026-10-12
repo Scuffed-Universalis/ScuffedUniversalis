@@ -1,0 +1,68 @@
+country_decisions = {
+	ase_retain_decision = {
+		major = yes
+		potential = {
+			ai = yes
+			splendor = 1700
+			NOT = { has_country_flag = ase_retaining_age_ability }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+			ase_retain_age_ability_not_selected_for_current_age = yes
+		}
+		allow = {
+		}
+		effect = {
+			custom_tooltip = ase_retain_decision_tooltip
+			set_country_flag = ase_retaining_age_ability
+			if = {
+				limit = { current_age = age_of_reformation }
+				country_event = {
+					id = Ages_Splendor_Expanded_Events.11
+				}
+			}
+			else_if = {
+				limit = { current_age = age_of_absolutism }
+				country_event = {
+					id = Ages_Splendor_Expanded_Events.12
+				}
+			}
+			else_if = {
+				limit = { current_age = age_of_revolutions }
+				country_event = {
+					id = Ages_Splendor_Expanded_Events.13
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	ase_invest_splendor_decision = {
+		major = yes
+		potential = {
+			ai = yes
+			splendor = 900
+			NOT = { has_country_flag = ase_invest_splendor_flag }
+		}
+		allow = {
+		}
+		effect = {
+			set_country_flag = ase_invest_splendor_flag
+			country_event = {
+				id = ASE_Splendor_Events.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { current_age = age_of_discovery }
+				ase_retain_age_ability_not_selected_for_current_age = yes
+			}
+		}
+	}
+}

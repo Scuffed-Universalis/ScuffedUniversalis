@@ -1,0 +1,279 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_custom_achievement_slot_1"
+		texturefile = "gfx/interface/achievements/custom/custom_achievement_slot_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_custom_achievement_slot_2"
+		texturefile = "gfx/interface/achievements/custom/custom_achievement_slot_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_custom_achievement_slot_3"
+		texturefile = "gfx/interface/achievements/custom/custom_achievement_slot_3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_custom_achievement_slot_4"
+		texturefile = "gfx/interface/achievements/custom/custom_achievement_slot_4.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_custom_achievement_slot_5"
+		texturefile = "gfx/interface/achievements/custom/custom_achievement_slot_5.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_custom_achievement_slot_6"
+		texturefile = "gfx/interface/achievements/custom/custom_achievement_slot_6.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_PDX_text_icon"
+		texturefile = "gfx/texticons/PDX_text_icon.dds"
+		transparencecheck = no
+	}
+
+	spriteType = {
+		name = "GFX_requirements_dummy"
+		texturefile = "gfx/interface/achievements/custom/requirements_dummy.dds"
+		transparencecheck = no
+	}
+
+	spriteType = {
+		name = "GFX_EE_UI"
+		texturefile = "gfx/interface/EE_ui.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_nah_id_win_popup_trim"
+		texturefile = "gfx/interface/achievements/popups/nah_id_win_popup_trim.dds"
+		transparencecheck = yes
+		alwaystransparent = yes
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_absolutely_berberic_popup"
+		loadType = "INGAME"
+		#loadType = "FRONTEND"
+		#legacy_lazy_load = yes
+		texturefile = "gfx/interface/achievements/popups/absolutely_berberic_popup_up.dds"
+		noOfFrames = 47
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+		alwaystransparent = yes
+		#pause_on_loop = 60.0
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_jenne_d_arc_popup"
+		loadType = "INGAME"
+		#loadType = "FRONTEND"
+		#legacy_lazy_load = yes
+		texturefile = "gfx/interface/achievements/popups/jenne_d_arc_popup_up.dds"
+		noOfFrames = 47
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+		alwaystransparent = yes
+		#pause_on_loop = 60.0
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_habsburg_qin_popup"
+		loadType = "INGAME"
+		#loadType = "FRONTEND"
+		#legacy_lazy_load = yes
+		texturefile = "gfx/interface/achievements/popups/habsburg_qin_popup_up.dds"
+		noOfFrames = 47
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+		alwaystransparent = yes
+		#pause_on_loop = 60.0
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_sus_innit_popup"
+		loadType = "INGAME"
+		#loadType = "FRONTEND"
+		#legacy_lazy_load = yes
+		texturefile = "gfx/interface/achievements/popups/sus_innit_popup_up.dds"
+		noOfFrames = 47
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+		alwaystransparent = yes
+		#pause_on_loop = 60.0
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_no_heir_of_timur_popup"
+		loadType = "INGAME"
+		#loadType = "FRONTEND"
+		#legacy_lazy_load = yes
+		texturefile = "gfx/interface/achievements/popups/no_heir_of_timur_popup_up.dds"
+		noOfFrames = 47
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+		alwaystransparent = yes
+		#pause_on_loop = 60.0
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_im_batu_khan_popup"
+		loadType = "INGAME"
+		#loadType = "FRONTEND"
+		#legacy_lazy_load = yes
+		texturefile = "gfx/interface/achievements/popups/im_batu_khan_popup_up.dds"
+		noOfFrames = 47
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+		alwaystransparent = yes
+		#pause_on_loop = 60.0
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_hegemonic_republic_of_europe_popup"
+		loadType = "INGAME"
+		#loadType = "FRONTEND"
+		#legacy_lazy_load = yes
+		texturefile = "gfx/interface/achievements/popups/hegemonic_republic_of_europe_popup_up.dds"
+		noOfFrames = 47
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+		alwaystransparent = yes
+		#pause_on_loop = 60.0
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_nah_id_win_popup"
+		loadType = "INGAME"
+		#loadType = "FRONTEND"
+		#legacy_lazy_load = yes
+		texturefile = "gfx/interface/achievements/popups/nah_id_win_popup_up.dds"
+		noOfFrames = 47
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+		alwaystransparent = yes
+		#pause_on_loop = 60.0
+	}
+
+
+	spriteType = {
+		name = "GFX_achievement_ee_501" # absolutely berberic
+		texturefile = "gfx/interface/achievements/custom/achievement_absolutely_berberic.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_501_g" # absolutely berberic
+		texturefile = "gfx/interface/achievements/custom/achievement_absolutely_berberic_g.dds"
+        loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_ee_502" # jenne darc
+		texturefile = "gfx/interface/achievements/custom/achievement_jenne_d_arc.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_502_g" # jenne darc
+		texturefile = "gfx/interface/achievements/custom/achievement_jenne_d_arc_g.dds"
+        loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_ee_503" # habsburg qin
+		texturefile = "gfx/interface/achievements/custom/achievement_habsburg_qin.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_503_g" # habsburg qin
+		texturefile = "gfx/interface/achievements/custom/achievement_habsburg_qin_g.dds"
+        loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_ee_504" # sus innit
+		texturefile = "gfx/interface/achievements/custom/achievement_sus_innit.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_504_g" # sus innit
+		texturefile = "gfx/interface/achievements/custom/achievement_sus_innit_g.dds"
+        loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_ee_505" # no heir of timur
+		texturefile = "gfx/interface/achievements/custom/achievement_no_heir_of_timur.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_505_g" # no heir of timur
+		texturefile = "gfx/interface/achievements/custom/achievement_no_heir_of_timur_g.dds"
+        loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_ee_506" # im batu khan
+		texturefile = "gfx/interface/achievements/custom/achievement_im_batu_khan.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_506_g" # im batu khan
+		texturefile = "gfx/interface/achievements/custom/achievement_im_batu_khan_g.dds"
+        loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_ee_507" # hegemonic republic of europe
+		texturefile = "gfx/interface/achievements/custom/achievement_hegemonic_republic_of_europe.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_507_g" # hegemonic republic of europe
+		texturefile = "gfx/interface/achievements/custom/achievement_hegemonic_republic_of_europe_g.dds"
+        loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_ee_508" # nah id win
+		texturefile = "gfx/interface/achievements/custom/achievement_nah_id_win.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_508_g" # nah id win
+		texturefile = "gfx/interface/achievements/custom/achievement_nah_id_win_g.dds"
+        loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_achievement_ee_509" # nah id win
+		texturefile = "gfx/interface/achievements/custom/achievement_respect_ma_authoritah.dds"
+        loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_achievement_ee_509_g" # nah id win
+		texturefile = "gfx/interface/achievements/custom/achievement_respect_ma_authoritah_g.dds"
+        loadType = "INGAME"
+	}
+	
+}

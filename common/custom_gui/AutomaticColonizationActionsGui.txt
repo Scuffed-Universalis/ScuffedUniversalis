@@ -1,0 +1,1428 @@
+custom_window = {
+	name = auto_colonization_custom_window
+	potential = {
+		has_country_flag = showing_colonization_policies_menu
+	}
+}
+
+custom_button = {
+	name = colonization_policy
+	potential = {
+		
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = ""
+			num_of_colonists = 1
+			OR = {
+				native_policy = native_policy_coexist
+				native_policy = native_policy_trade
+				native_policy = native_policy_hostile
+				NOT = { has_dlc = "The Cossacks" }
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						native_policy = native_policy_coexist
+						native_policy = native_policy_trade
+						native_policy = native_policy_hostile
+					}
+				}
+				NOT = { has_dlc = "The Cossacks" }
+			}
+			custom_tooltip = "[Root.GetNegativePrefix]We need to have selected a Native Policy[Root.GetUniversalPostfix]"
+		}
+		if = {
+			limit = {
+				NOT = {
+					num_of_colonists = 1
+				}
+			}
+			custom_tooltip = "[Root.GetNegativePrefix]We need to have at least 1 Colonist[Root.GetUniversalPostfix]"
+		}
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						OR = {
+							native_policy = native_policy_coexist
+							native_policy = native_policy_trade
+							native_policy = native_policy_hostile
+						}
+						has_dlc = "The Cossacks"
+					}
+					NOT = {
+						num_of_colonists = 1
+					}
+				}
+			}
+			custom_tooltip = "--------------"
+		}
+		
+		custom_tooltip = "A colonization policy allows colonists to autonomously settle land in a specified colonial region or trade company region."
+		if = {
+			limit = {
+				NOT = { has_country_flag = showing_colonization_policies_menu }
+			}
+			set_country_flag = showing_colonization_policies_menu
+		}
+		else = { clr_country_flag = showing_colonization_policies_menu }
+		
+		if = {
+			limit = {
+				NOT = { has_country_flag = amount_autonomous_colonies_initialized }
+			}
+			set_country_flag = amount_autonomous_colonies_initialized
+			hidden_effect = {
+				set_variable = {
+					which = amount_autonomous_colonies
+					value = 0
+				}
+			}
+		}
+	}
+	tooltip = "View Colonial Policy"
+}
+
+custom_icon = {
+    name = colonization_policy_menu_bg
+    potential = {
+		AND = {
+			ai = no
+		}
+	}
+}
+
+custom_text_box = {
+    name = colonization_policy_colonist_amount
+    potential = {
+		AND = {
+			ai = no
+		}
+	}
+    tooltip = colonization_policy_colonist_explanation_tooltip
+}
+
+custom_button = {
+	name = increase_autonomous_colonists
+	potential = {
+		AND = {
+			ai = no
+		}
+	}
+	trigger = {
+		num_of_colonists = 1
+		custom_trigger_tooltip = {
+			tooltip = "Has selected a region"
+			OR = {
+				has_country_flag = autonomous_colonist_region_north_africa_selected
+				has_country_flag = autonomous_colonist_region_south_africa_selected
+				has_country_flag = autonomous_colonist_region_east_indies_selected
+				has_country_flag = autonomous_colonist_region_mexico_selected
+				has_country_flag = autonomous_colonist_region_eastern_america_selected
+				has_country_flag = autonomous_colonist_region_louisiana_selected
+				has_country_flag = autonomous_colonist_region_canada_selected
+				has_country_flag = autonomous_colonist_region_the_carribean_selected
+				has_country_flag = autonomous_colonist_region_brazil_selected
+				has_country_flag = autonomous_colonist_region_california_selected
+				has_country_flag = autonomous_colonist_region_colombia_selected
+				has_country_flag = autonomous_colonist_region_la_plata_selected
+				has_country_flag = autonomous_colonist_region_peru_selected
+				has_country_flag = autonomous_colonist_region_australia_selected
+				has_country_flag = autonomous_colonist_region_alaska_selected
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = colonization_policy_region_tooltip_false
+			if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_north_africa_selected }
+				}
+				any_province = {
+					superregion = africa_superregion
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_south_africa_selected }
+				}
+				any_province = {
+					superregion = southern_africa_superregion
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_east_indies_selected }
+				}
+				any_province = {
+					OR = {
+						superregion = east_indies_superregion
+						trade_company_region = trade_company_polynesia
+					}
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_mexico_selected }
+				}
+				any_province = {
+					colonial_region = colonial_mexico
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_eastern_america_selected }
+				}
+				any_province = {
+					colonial_region = colonial_eastern_america
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_louisiana_selected }
+				}
+				any_province = {
+					colonial_region = colonial_louisiana
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_canada_selected }
+				}
+				any_province = {
+					colonial_region = colonial_canada
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_the_carribean_selected }
+				}
+				any_province = {
+					colonial_region = colonial_the_carribean
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_brazil_selected }
+				}
+				any_province = {
+					colonial_region = colonial_brazil
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_california_selected }
+				}
+				any_province = {
+					colonial_region = colonial_california
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_colombia_selected }
+				}
+				any_province = {
+					colonial_region = colonial_colombia
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_la_plata_selected }
+				}
+				any_province = {
+					colonial_region = colonial_la_plata
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_peru_selected }
+				}
+				any_province = {
+					colonial_region = colonial_peru
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_australia_selected }
+				}
+				any_province = {
+					colonial_region = colonial_australia
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { has_country_flag = autonomous_colonist_region_alaska_selected }
+				}
+				any_province = {
+					colonial_region = colonial_alaska
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+		}
+	}
+	effect = { 
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				save_event_target_as = auto_colonizing_nation
+				change_variable = {
+					which = amount_autonomous_colonies
+					value = 1
+				}
+				ME_automatic_colonization_button_effect = yes
+			}
+			#custom_tooltip = xxx
+		}
+		
+	}
+	tooltip = "Assign a colonist to work autonomously."
+}
+
+custom_button = {
+	name = decrease_autonomous_colonists
+	potential = {
+		AND = {
+			ai = no
+		}
+	}
+	trigger = {
+		num_of_colonists = 1
+		custom_trigger_tooltip = {
+			tooltip = "Has at least one colonist assigned to colonizing autonomously."
+			hidden_trigger = {
+				check_variable = {
+					which = amount_autonomous_colonies
+					value = 1
+				}
+			}
+		}
+	}
+	effect = { 
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				change_variable = {
+					which = amount_autonomous_colonies
+					value = -1
+				}
+			}
+			#custom_tooltip = xxx
+		}
+		
+	}
+	tooltip = "Unassign a colonist from working autonomously."
+}
+
+custom_button = {
+	name = autonomous_colonist_region_north_africa
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_north_africa_selected}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = { 
+			tooltip = colonization_policy_region_north_africa_tooltip
+			NOT = { has_country_flag = autonomous_colonist_region_north_africa_selected }
+			any_province = {
+				superregion = africa_superregion
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_north_africa_selected
+				
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize North Africa"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_south_africa
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_south_africa_selected}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = { 
+			tooltip = colonization_policy_region_south_africa_tooltip
+			NOT = { has_country_flag = autonomous_colonist_region_south_africa_selected }
+			any_province = {
+				superregion = southern_africa_superregion
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_south_africa_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize South Africa"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_east_indies
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_east_indies_selected}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = colonization_policy_region_east_indies_tooltip
+			NOT = { has_country_flag = autonomous_colonist_region_east_indies_selected }
+			any_province = {
+				OR = {
+					superregion = east_indies_superregion
+					trade_company_region = trade_company_polynesia
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_east_indies_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize The East Indies"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_mexico
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_mexico_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = mexico
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_mexico_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Mexico"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_eastern_america
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_eastern_america_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = eastern_america
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_eastern_america_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Eastern America"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_louisiana
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_louisiana_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = louisiana
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_louisiana_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Louisiana"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_canada
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_canada_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = canada
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_canada_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Canada"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_the_carribean
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag =autonomous_colonist_region_the_carribean_selected }
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = the_carribean
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_the_carribean_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize the Carribean"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_brazil
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_brazil_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = brazil
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_brazil_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Brazil"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_california
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_california_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = california
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_california_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize California"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_colombia
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag =autonomous_colonist_region_colombia_selected }
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = colombia
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_colombia_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Colombia"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_la_plata
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_la_plata_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = la_plata
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_la_plata_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize La Plata"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_peru
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_peru_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = peru
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_peru_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Peru"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_australia
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_australia_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = australia
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_australia_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Australia"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_alaska
+	potential = {
+		AND = {
+			ai = no
+			NOT = { has_country_flag = autonomous_colonist_region_alaska_selected}
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = alaska
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_alaska_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Alaska"
+}
+
+custom_button = {
+	name = autonomous_colonist_region_none
+	potential = {
+		AND = {
+			ai = no
+			OR = {
+				has_country_flag = autonomous_colonist_region_north_africa_selected
+				has_country_flag = autonomous_colonist_region_south_africa_selected
+				has_country_flag = autonomous_colonist_region_east_indies_selected
+				has_country_flag = autonomous_colonist_region_mexico_selected
+				has_country_flag = autonomous_colonist_region_eastern_america_selected
+				has_country_flag = autonomous_colonist_region_louisiana_selected
+				has_country_flag = autonomous_colonist_region_canada_selected
+				has_country_flag = autonomous_colonist_region_the_carribean_selected
+				has_country_flag = autonomous_colonist_region_brazil_selected
+				has_country_flag = autonomous_colonist_region_california_selected
+				has_country_flag = autonomous_colonist_region_colombia_selected
+				has_country_flag = autonomous_colonist_region_la_plata_selected
+				has_country_flag = autonomous_colonist_region_peru_selected
+				has_country_flag = autonomous_colonist_region_australia_selected
+				has_country_flag = autonomous_colonist_region_alaska_selected
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = "Have any region selected for autonomous colonization"
+			OR = {
+				has_country_flag = autonomous_colonist_region_north_africa_selected
+				has_country_flag = autonomous_colonist_region_south_africa_selected
+				has_country_flag = autonomous_colonist_region_east_indies_selected
+				has_country_flag = autonomous_colonist_region_mexico_selected
+				has_country_flag = autonomous_colonist_region_eastern_america_selected
+				has_country_flag = autonomous_colonist_region_louisiana_selected
+				has_country_flag = autonomous_colonist_region_canada_selected
+				has_country_flag = autonomous_colonist_region_the_carribean_selected
+				has_country_flag = autonomous_colonist_region_brazil_selected
+				has_country_flag = autonomous_colonist_region_california_selected
+				has_country_flag = autonomous_colonist_region_colombia_selected
+				has_country_flag = autonomous_colonist_region_la_plata_selected
+				has_country_flag = autonomous_colonist_region_peru_selected
+				has_country_flag = autonomous_colonist_region_australia_selected
+				has_country_flag = autonomous_colonist_region_alaska_selected
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_variable = {
+					which = amount_autonomous_colonies
+					value = 0
+				}
+			}
+		}
+	}
+	tooltip = "Having no region selected for autonomous colonization will pause the process."
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_north_africa
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_north_africa_selected
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = { 
+			tooltip = colonization_policy_region_north_africa_tooltip
+			NOT = { has_country_flag = autonomous_colonist_region_north_africa_selected }
+			any_province = {
+				superregion = africa_superregion
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_north_africa_selected
+				
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize North Africa"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_south_africa
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_south_africa_selected
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = { 
+			tooltip = colonization_policy_region_south_africa_tooltip
+			NOT = { has_country_flag = autonomous_colonist_region_south_africa_selected }
+			any_province = {
+				superregion = southern_africa_superregion
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_south_africa_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize South Africa"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_east_indies
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_east_indies_selected
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = colonization_policy_region_east_indies_tooltip
+			NOT = { has_country_flag = autonomous_colonist_region_east_indies_selected }
+			any_province = {
+				OR = {
+					superregion = southern_africa_superregion
+					trade_company_region = trade_company_polynesia
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_east_indies_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize The East Indies"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_mexico
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_mexico_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = mexico
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_mexico_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Mexico"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_eastern_america
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_eastern_america_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = eastern_america
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_eastern_america_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Eastern America"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_louisiana
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_louisiana_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = louisiana
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_louisiana_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Louisiana"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_canada
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_canada_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = canada
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_canada_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Canada"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_the_carribean
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_the_carribean_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = the_carribean
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_the_carribean_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize the Carribean"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_brazil
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_brazil_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = brazil
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_brazil_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Brazil"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_california
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_california_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = california
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_california_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize California"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_colombia
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_colombia_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = colombia
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_colombia_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Colombia"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_la_plata
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_la_plata_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = la_plata
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_la_plata_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize La Plata"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_peru
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_peru_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = peru
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_peru_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Peru"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_australia
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_australia_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = australia
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_australia_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Australia"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_alaska
+	potential = {
+		AND = {
+			ai = no
+			has_country_flag = autonomous_colonist_region_alaska_selected
+		}
+	}
+	trigger = {
+		autonomous_colonist_region_custom_trigger_tooltip = {
+			target_region = alaska
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_country_flag = autonomous_colonist_region_alaska_selected
+				ME_automatic_colonization_button_effect = yes
+			}
+		}
+	}
+	tooltip = "Autonomously Colonize Alaska"
+}
+
+custom_button = {
+	name = color_autonomous_colonist_region_none
+	potential = {
+		AND = {
+			ai = no
+			NOT = {
+				OR = {
+					has_country_flag = autonomous_colonist_region_north_africa_selected
+					has_country_flag = autonomous_colonist_region_south_africa_selected
+					has_country_flag = autonomous_colonist_region_east_indies_selected
+					has_country_flag = autonomous_colonist_region_mexico_selected
+					has_country_flag = autonomous_colonist_region_eastern_america_selected
+					has_country_flag = autonomous_colonist_region_louisiana_selected
+					has_country_flag = autonomous_colonist_region_canada_selected
+					has_country_flag = autonomous_colonist_region_the_carribean_selected
+					has_country_flag = autonomous_colonist_region_brazil_selected
+					has_country_flag = autonomous_colonist_region_california_selected
+					has_country_flag = autonomous_colonist_region_colombia_selected
+					has_country_flag = autonomous_colonist_region_la_plata_selected
+					has_country_flag = autonomous_colonist_region_peru_selected
+					has_country_flag = autonomous_colonist_region_australia_selected
+					has_country_flag = autonomous_colonist_region_alaska_selected
+				}
+			}
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = "Have any region selected for autonomous colonization"
+			OR = {
+				has_country_flag = autonomous_colonist_region_north_africa_selected
+				has_country_flag = autonomous_colonist_region_south_africa_selected
+				has_country_flag = autonomous_colonist_region_east_indies_selected
+				has_country_flag = autonomous_colonist_region_mexico_selected
+				has_country_flag = autonomous_colonist_region_eastern_america_selected
+				has_country_flag = autonomous_colonist_region_louisiana_selected
+				has_country_flag = autonomous_colonist_region_canada_selected
+				has_country_flag = autonomous_colonist_region_the_carribean_selected
+				has_country_flag = autonomous_colonist_region_brazil_selected
+				has_country_flag = autonomous_colonist_region_california_selected
+				has_country_flag = autonomous_colonist_region_colombia_selected
+				has_country_flag = autonomous_colonist_region_la_plata_selected
+				has_country_flag = autonomous_colonist_region_peru_selected
+				has_country_flag = autonomous_colonist_region_australia_selected
+				has_country_flag = autonomous_colonist_region_alaska_selected
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				always = yes
+			}
+			hidden_effect = {
+				ME_automatic_colonization_clear_flags_effect = yes
+				save_event_target_as = auto_colonizing_nation
+				set_variable = {
+					which = amount_autonomous_colonies
+					value = 0
+				}
+			}
+		}
+	}
+	tooltip = "Having no region selected for autonomous colonization will pause the process."
+}
+
+##############################  Supported files with scopes ##############################
+#   The Gui objects must be directly inside the specified window Gui element!
+#   FROM is always the country that clicks
+#   provinceview.gui:
+#       province_window         (ROOT: Clicked province)
+#       buildings_window        (ROOT: Clicked province)
+#       state_window            (ROOT: Clicked province)
+#   countrycourtview.gui:
+#       countrycourtview        (ROOT = FROM)
+#   countrygovernmentview.gui:
+#       countrygovernmentview   (ROOT = FROM)
+#   countrydiplomacyview.gui:
+#       countrydiplimacyview    (ROOT: Selected country)
+#   countryeconomyview.gui:
+#       countryeconomyview      (ROOT = FROM)
+#   countrytradeview.gui:
+#       countrytradeview        (ROOT = FROM)
+#   countrytechnologyview.gui:
+#       countrytechnologyview   (ROOT = FROM)
+#   countryideasview.gui:
+#       countryideasview        (ROOT = FROM)
+#   countrymissionsview.gui:
+#       countrymissionsview     (ROOT: Selected country)
+#   countrydecisionview.gui:
+#       countrydecisionsview    (ROOT = FROM)
+#   countrystabilityview.gui:
+#       countrystabilityview    (ROOT = FROM)
+#   countryreligionview.gui:
+#       countryreligionview     (ROOT = FROM)
+#   countrymilitaryview.gui:
+#       countrymilitaryview     (ROOT = FROM)
+#   countrysubjectsview.gui:
+#       countrysubjectview      (ROOT = FROM)
+#   countryestatesview.gui:
+#       countryestatesview      (ROOT = FROM)
+#   ages_view.gui:
+#       ages_view               (ROOT = FROM)
+#   tradeinterface.gui:
+#       TradeNodeInterface      (ROOT: Trade capital of a trade node)
+#   hre.gui:
+#       hre_window              (ROOT = FROM)
+#   papacy.gui:
+#       papacy_window           (ROOT = FROM)
+#   faction.gui:
+#       All faction windows     (ROOT = FROM)
+#   celestialempireview.gui:
+#       celestial_window        (ROOT = FROM)
+#   countrynativesview.gui:
+#       natives_window          (ROOT = FROM)
+#   religiousreforms.gui:
+#       reforms_window          (ROOT = FROM)
+#   parliament.gui:
+#       parliament_window       (ROOT = FROM)

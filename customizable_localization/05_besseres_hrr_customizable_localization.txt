@@ -1,0 +1,96 @@
+defined_text = {
+	name = GetIfCedingLandToHREDuchyCanBeOurs
+	random = no
+
+	text = {
+        trigger = {
+			NOT = { has_global_flag = hre_duchy_emperor_cede_owned_provinces }
+        }
+		localisation_key = string_hre_duchy_land_can_not_cede_our_land
+	}
+	text = {
+        trigger = {
+			always = yes
+        }
+		localisation_key = ""
+	}
+}
+
+defined_text = {
+	name = GetIfCedingLandToHREDuchyCanBeOursDecision
+	random = no
+
+	text = {
+        trigger = {
+			NOT = { has_global_flag = hre_duchy_emperor_cede_owned_provinces }
+        }
+		localisation_key = string_hre_duchy_land_can_not_cede_our_land_decision
+	}
+	text = {
+        trigger = {
+			always = yes
+        }
+		localisation_key = ""
+	}
+}
+
+defined_text = {
+	name = GetAdditionallyAffectedProvincesForHREDuchyWithET
+	random = no
+
+	text = {
+        trigger = {
+			has_global_flag = extended_timeline_mod
+			tag = LOR
+        }
+		localisation_key = string_additionally_affected_provinces_for_hre_duchy_with_et_lor
+	}
+	text = {
+        trigger = {
+			has_global_flag = extended_timeline_mod
+			tag = HUN
+        }
+		localisation_key = string_additionally_affected_provinces_for_hre_duchy_with_et_hun
+	}
+	text = {
+        trigger = {
+			has_global_flag = extended_timeline_mod
+			tag = MOL
+        }
+		localisation_key = string_additionally_affected_provinces_for_hre_duchy_with_et_mol
+	}
+	text = {
+        trigger = {
+			has_global_flag = extended_timeline_mod
+			tag = GRE
+        }
+		localisation_key = string_additionally_affected_provinces_for_hre_duchy_with_et_gre
+	}
+	text = {
+        trigger = {
+			has_global_flag = extended_timeline_mod
+			tag = NOR
+        }
+		localisation_key = string_additionally_affected_provinces_for_hre_duchy_with_et_nor
+	}
+	text = {
+        trigger = {
+			has_global_flag = extended_timeline_mod
+			tag = FIN
+        }
+		localisation_key = string_additionally_affected_provinces_for_hre_duchy_with_et_fin
+	}
+	text = {
+        trigger = {
+			has_global_flag = extended_timeline_mod
+			tag = CIR
+        }
+		localisation_key = string_additionally_affected_provinces_for_hre_duchy_with_et_cir
+	}
+	text = {
+        trigger = {
+			always = yes
+        }
+		localisation_key = ""
+	}
+}

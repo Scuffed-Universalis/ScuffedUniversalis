@@ -1,0 +1,472 @@
+defined_text = {
+	name = EstateDecisionButtonLocalization
+	random = no
+
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localisation_key = "Estate Interactions"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = EstateDecisionButtonIconNameLocalization
+	random = no
+
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = no
+		}
+	}
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_brahmins
+        trigger = { has_country_flag = estate_interaction_target_brahmins } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_church
+        trigger = { has_country_flag = estate_interaction_target_church } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_maratha
+        trigger = { has_country_flag = estate_interaction_target_maratha } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_nobles
+        trigger = { has_country_flag = estate_interaction_target_nobles } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_vaisyas
+        trigger = { has_country_flag = estate_interaction_target_vaisyas } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_burghers
+        trigger = { has_country_flag = estate_interaction_target_burghers } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_cossacks
+        trigger = { has_country_flag = estate_interaction_target_cossacks } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_nomadic_tribes
+        trigger = { has_country_flag = estate_interaction_target_nomadic_tribes } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_dhimmi
+        trigger = { has_country_flag = estate_interaction_target_dhimmi } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_jains
+        trigger = { has_country_flag = estate_interaction_target_jains } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_janissaries
+        trigger = { has_country_flag = estate_interaction_target_janissaries } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_eunuchs
+        trigger = { has_country_flag = estate_interaction_target_eunuchs } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_qizilbash
+        trigger = { has_country_flag = estate_interaction_target_qizilbash } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_ghulams
+        trigger = { has_country_flag = estate_interaction_target_ghulams } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_rajput
+        trigger = { has_country_flag = estate_interaction_target_rajput } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_berbers
+        trigger = { has_country_flag = estate_interaction_target_berbers } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_cultural_minorities
+        trigger = { has_country_flag = estate_interaction_target_cultural_minorities } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_industrial
+        trigger = { has_country_flag = estate_interaction_target_industrial } #First matched text clause will be used.
+    }
+	text = {  #Can define multiple text clauses
+        localisation_key = estate_turkic_tribes
+        trigger = { has_country_flag = estate_interaction_target_turkic_tribes } #First matched text clause will be used.
+    }
+}
+
+defined_text = {
+	name = EstateDecisionLeftTooltip
+	random = no
+
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localisation_key = "Previous Estate"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = EstateDecisionRightTooltip
+	random = no
+
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = no
+		}
+	}
+	text = {
+		localisation_key = "Next Estate"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = ESTATE_ACTION_BUTTON_ONE_TOOLTIP_loc
+	random = no
+
+
+	text = {
+		localisation_key = MAKE_GENEROUS_DONATION_BRAHMINS
+		trigger = { show_brahmins_interactions = yes }
+	}
+
+	text = {
+		localisation_key = ASK_FOR_CONTRIBUTION_BURGHERS
+		trigger = { show_burghers_interactions = yes }
+	}
+
+	text = {
+		localisation_key = MAKE_GENEROUS_DONATION_CHURCH
+		trigger = { show_church_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RAISE_COSSACK_HOST_COSSACKS
+		trigger = { show_cossacks_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_DHIMMI
+		trigger = { show_dhimmi_interactions = yes }
+	}
+
+	text = {
+		localisation_key = PROMOTE_CAUCASIAN_TROOPS
+		trigger = { show_ghulams_interactions = yes }
+	}
+
+	text = {
+		localisation_key = PROCURE_LOANS_JAINS
+		trigger = { show_jains_interactions = yes }
+	}
+
+	text = {
+		localisation_key = PROMOTE_MARATHA_NOBILITY_MARATHA
+		trigger = { show_maratha_interactions = yes }
+	}
+
+	text = {
+		localisation_key = CALL_DIET_NOBLES
+		trigger = { show_nobles_interactions = yes }
+	}
+
+	text = {
+		localisation_key = SUPPORT_TRIBES_NOMADIC_TRIBES
+		trigger = { show_nomadic_tribes_interactions = yes }
+	}
+
+	text = {
+		localisation_key = GRANT_QIZILBASH_HORSES
+		trigger = { show_qizilbash_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_RAJPUT_GENERAL_RAJPUT
+		trigger = { show_rajput_interactions = yes }
+	}
+
+	text = {
+		localisation_key = ASK_FOR_CONTRIBUTION_VAISYAS
+		trigger = { show_vaisyas_interactions = yes }
+	}
+
+	text = {
+		localisation_key = no_estate_action
+		trigger = { always = yes }
+	}
+}
+defined_text = {
+	name = ESTATE_ACTION_BUTTON_TWO_TOOLTIP_loc
+	random = no
+
+
+	text = {
+		localisation_key = SEEK_SUPPORT_OF_BRAHMINS
+		trigger = { show_brahmins_interactions = yes }
+	}
+
+	text = {
+		localisation_key = GRANT_MONOPOLY_CHARTER_BURGHERS
+		trigger = { show_burghers_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_CHURCH
+		trigger = { show_church_interactions = yes }
+	}
+
+	text = {
+		localisation_key = COSSACK_CONQUISTADOR_COSSACKS
+		trigger = { show_cossacks_interactions = yes }
+	}
+
+	text = {
+		localisation_key = PROMOTE_DHIMMI_NOBLES_DHIMMI
+		trigger = { show_dhimmi_interactions = yes }
+	}
+
+	text = {
+		localisation_key = INVESTIGATE_CORRUPTION_JAINS
+		trigger = { show_jains_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_MARATHA
+		trigger = { show_maratha_interactions = yes }
+	}
+
+	text = {
+		localisation_key = GRANT_GENERALSHIP_NOBLES
+		trigger = { show_nobles_interactions = yes }
+	}
+
+	text = {
+		localisation_key = CONTRIBUTE_WARRIORS_NOMADIC_TRIBES
+		trigger = { show_nomadic_tribes_interactions = yes }
+	}
+
+	text = {
+		localisation_key = PROMOTE_RAJPUT_NOBILITY_RAJPUT
+		trigger = { show_rajput_interactions = yes }
+	}
+
+	text = {
+		localisation_key = SEEK_GUILD_SUPPORT_VAISYAS
+		trigger = { show_vaisyas_interactions = yes }
+	}
+
+	text = {
+		localisation_key = no_estate_action
+		trigger = { always = yes }
+	}
+}
+defined_text = {
+	name = ESTATE_ACTION_BUTTON_THREE_TOOLTIP_loc
+	random = no
+
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_BRAHMINS
+		trigger = { show_brahmins_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_BURGHERS
+		trigger = { show_burghers_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_INQUISITOR_CHURCH
+		trigger = { show_church_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_COSSACKS
+		trigger = { show_cossacks_interactions = yes }
+	}
+
+	text = {
+		localisation_key = DEMAND_CONTRIBUTION_DHIMMI
+		trigger = { show_dhimmi_interactions = yes }
+	}
+
+	text = {
+		localisation_key = PATRONIZE_JAIN_FAMILIES_JAINS
+		trigger = { show_jains_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MARATHI_TROOPS_MARATHA
+		trigger = { show_maratha_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_CONQUISTADOR_ESTATES_NOBLES
+		trigger = { show_nobles_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RAISE_HOST_NOMADIC_TRIBES
+		trigger = { show_nomadic_tribes_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_RAJPUT_TROOPS_RAJPUT
+		trigger = { show_rajput_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_VAISYAS
+		trigger = { show_vaisyas_interactions = yes }
+	}
+
+	text = {
+		localisation_key = no_estate_action
+		trigger = { always = yes }
+	}
+}
+defined_text = {
+	name = ESTATE_ACTION_BUTTON_FOUR_TOOLTIP_loc
+	random = no
+
+
+	text = {
+		localisation_key = RECRUIT_INQUISITOR_BRAHMINS
+		trigger = { show_brahmins_interactions = yes }
+	}
+
+	text = {
+		localisation_key = GRANT_ADMIRALSHIP_BURGHERS
+		trigger = { show_burghers_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RELIGIOUS_DELEGATION_CHURCH
+		trigger = { show_church_interactions = yes }
+	}
+
+	text = {
+		localisation_key = CONSCRIPT_COSSACK_ELITE_COSSACKS
+		trigger = { show_cossacks_interactions = yes }
+	}
+
+	text = {
+		localisation_key = COMMISSION_JAIN_SCRIPTURES_JAINS
+		trigger = { show_jains_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_NOBLES
+		trigger = { show_nobles_interactions = yes }
+	}
+
+	text = {
+		localisation_key = RECRUIT_MINISTER_NOMADIC_TRIBES
+		trigger = { show_nomadic_tribes_interactions = yes }
+	}
+
+	text = {
+		localisation_key = COMISSION_MERCHANT_SHIPS_FOR_WAR_VAISYAS
+		trigger = { show_vaisyas_interactions = yes }
+	}
+
+	text = {
+		localisation_key = no_estate_action
+		trigger = { always = yes }
+	}
+}
+defined_text = {
+	name = ESTATE_ACTION_BUTTON_FIVE_TOOLTIP_loc
+	random = no
+
+
+	text = {
+		localisation_key = SEEK_BRAHMIN_LEGITIMACY_BRAHMINS
+		trigger = { show_brahmins_interactions = yes }
+	}
+
+	text = {
+		localisation_key = COMISSION_MERCHANT_SHIPS_FOR_WAR_BURGHERS
+		trigger = { show_burghers_interactions = yes }
+	}
+
+	text = {
+		localisation_key = SEEK_SUPPORT_OF_CLERGY_CHURCH
+		trigger = { show_church_interactions = yes }
+	}
+
+	text = {
+		localisation_key = SUPPLY_ARMS_COSSACKS
+		trigger = { show_cossacks_interactions = yes }
+	}
+
+	text = {
+		localisation_key = DEMAND_MORE_TROOPS_NOBLES
+		trigger = { show_nobles_interactions = yes }
+	}
+
+	text = {
+		localisation_key = REDISTRIBUTE_HORDE_AUTHORITY_TRIBES
+		trigger = { show_nomadic_tribes_interactions = yes }
+	}
+
+	text = {
+		localisation_key = no_estate_action
+		trigger = { always = yes }
+	}
+}
+defined_text = {
+	name = ESTATE_ACTION_BUTTON_SIX_TOOLTIP_loc
+	random = no
+
+
+	text = {
+		localisation_key = PERMIT_SELF_GOVERNANCE_COSSACKS
+		trigger = { show_cossacks_interactions = yes }
+	}
+
+	text = {
+		localisation_key = no_estate_action
+		trigger = { always = yes }
+	}
+}
+defined_text = {
+	name = ESTATE_ACTION_BUTTON_SEVEN_TOOLTIP_loc
+	random = no
+
+
+	text = {
+		localisation_key = no_estate_action
+		trigger = { always = yes }
+	}
+}
+defined_text = {
+	name = ESTATE_ACTION_BUTTON_EIGHT_TOOLTIP_loc
+	random = no
+
+
+	text = {
+		localisation_key = no_estate_action
+		trigger = { always = yes }
+	}
+}

@@ -1,0 +1,39 @@
+ARA_free_subjects_debate = {
+	category = 4
+
+	allow = {
+		has_country_flag = ara_war_of_remences_progressing_flag
+		current_age = age_of_discovery
+		NOT = {
+			has_country_flag = ara_normal_branch_flag
+			has_country_flag = ara_peasants_branch_flag
+		}
+	}
+	
+	effect = {
+		clr_country_flag = ara_war_of_remences_progressing_flag
+		clr_country_flag = ara_placated_peasants_flag
+		set_country_flag = ara_placated_peasants_flag
+		
+		custom_tooltip = ARA_FREE_SUBJECTS_TOOLTIP
+		
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -5
+		}
+	}
+	
+	modifier = {
+		global_unrest = -1
+		nobles_loyalty_modifier = -0.05
+	}
+	backing_percentage = 10
+	
+	chance = {
+		factor = 100
+	}
+
+	ai_will_do = {
+		factor = 1000
+	}
+}

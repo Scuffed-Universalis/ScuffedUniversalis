@@ -1,0 +1,83 @@
+ME_personal_union_with_25_FL = {
+	copy_from = personal_union
+	takes_diplo_slot = no
+	# Graphics:
+	sprite = GFX_court_union
+	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
+	diplomacy_subject_sprite = GFX_diplomacy_inunion
+	# Modifiers:
+	modifier_overlord = {
+		modifier = union_subject
+	}
+	# Properties
+	forcelimit_to_overlord = 0.25
+
+	overlord_opinion_modifier = in_union
+	subject_opinion_modifier = in_union
+}
+
+EE_FRA_fief = {
+    sprite = GFX_icon_appanage
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_appanage
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_appanage
+	# Properties:
+	joins_overlords_wars = no
+	has_power_projection = no
+	can_be_integrated = no
+	can_be_annexed = yes
+	takes_diplo_slot = yes
+	overlord_protects_external = yes
+	gets_help_with_rebels = no
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	forms_trade_companies = no
+	can_concentrate_development = no
+	liberty_desire_development_ratio = 0.25
+	trust_on_start = 0
+	base_liberty_desire = 35.0
+	military_focus = 1.2
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+
+	can_fight = {
+		same_overlord = appanage
+	}
+	can_rival = {
+		same_overlord = appanage
+	}
+	can_ally = {
+		same_overlord = appanage
+	}
+	can_marry = {
+		same_overlord = appanage
+	}
+
+	# Subject Interactions
+	seize_court_resources = yes
+	request_extra_levies = yes
+	grant_administrative_autonomy = yes
+	#(disable)
+	scutage = yes
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	#(enable)
+	contribute_to_capital = yes
+	return_land = yes
+	conscript_general = yes
+
+	# Modifiers
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = subject_tax_modifier
+		trigger = {
+			overlord = {
+				has_government_attribute = subject_tax_modifier_25
+			}
+		}
+	}
+}

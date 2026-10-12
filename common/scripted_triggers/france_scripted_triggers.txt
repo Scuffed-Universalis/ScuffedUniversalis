@@ -1,0 +1,22 @@
+EE_FRA_trigger_1 = {
+	custom_trigger_tooltip = {
+		tooltip = EE_FRA_no_country_stronger_navy_tt
+		all_country = {
+			OR = {
+				AND = {
+					culture_group = latin
+					NOT = {
+						naval_strength = {
+							who = ROOT
+							value = 1
+						}
+					}
+				}
+				NOT = { culture_group = latin }
+			}
+		}
+	}
+}
+EE_FRA_trigger_2 = { has_ruler = "Charles VII" }
+
+EE_FRA_trigger_3 = { has_ruler = "Louis" }

@@ -1,0 +1,4182 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_prestige"
+		texturefile = "gfx/interface/ideas_EU4/prestige.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_production_efficiency"
+		texturefile = "gfx/interface/ideas_EU4/production_efficiency.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stability_cost_modifier"
+		texturefile = "gfx/interface/ideas_EU4/stability_cost_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_global_tax_modifier"
+		texturefile = "gfx/interface/ideas_EU4/global_tax_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_global_unrest"
+		texturefile = "gfx/interface/ideas_EU4/global_unrest.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_inflation_reduction"
+		texturefile = "gfx/interface/ideas_EU4/inflation_reduction.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_global_missionary_strength"
+		texturefile = "gfx/interface/ideas_EU4/global_missionary_strength.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tolerance_heretic"
+		texturefile = "gfx/interface/ideas_EU4/tolerance_heretic.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_country_admin_power"
+		texturefile = "gfx/interface/ideas_EU4/country_admin_power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_technology_cost"
+		texturefile = "gfx/interface/ideas_EU4/technology_cost.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_adm_tech_cost_modifier"
+		texturefile = "gfx/interface/ideas_EU4/adm_tech_cost_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_development_cost"
+		texturefile = "gfx/interface/ideas_EU4/development_cost.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_diplomatic_reputation"
+		texturefile = "gfx/interface/ideas_EU4/diplomatic_reputation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_naval_morale"
+		texturefile = "gfx/interface/ideas_EU4/naval_morale.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_trade_efficiency"
+		texturefile = "gfx/interface/ideas_EU4/trade_efficiency.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_spy_offence"
+		texturefile = "gfx/interface/ideas_EU4/spy_offence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_improve_relation_modifier"
+		texturefile = "gfx/interface/ideas_EU4/improve_relation_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_global_tariffs"
+		texturefile = "gfx/interface/ideas_EU4/global_tariffs.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_range"
+		texturefile = "gfx/interface/ideas_EU4/range.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_global_trade_power"
+		texturefile = "gfx/interface/ideas_EU4/global_trade_power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_global_colonial_growth"
+		texturefile = "gfx/interface/ideas_EU4/global_colonial_growth.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_build_cost"
+		texturefile = "gfx/interface/ideas_EU4/build_cost.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_land_morale"
+		texturefile = "gfx/interface/ideas_EU4/land_morale.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_land_forcelimit_modifier"
+		texturefile = "gfx/interface/ideas_EU4/land_forcelimit_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_discipline"
+		texturefile = "gfx/interface/ideas_EU4/discipline.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_reinforce_speed"
+		texturefile = "gfx/interface/ideas_EU4/reinforce_speed.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_global_manpower_modifier"
+		texturefile = "gfx/interface/ideas_EU4/global_manpower_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_defensiveness"
+		texturefile = "gfx/interface/ideas_EU4/defensiveness.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_land_maintenance_modifier"
+		texturefile = "gfx/interface/ideas_EU4/land_maintenance_modifier.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_cavalry_power"
+		texturefile = "gfx/interface/ideas_EU4/cavalry_power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mercenary_discipline"
+		texturefile = "gfx/interface/ideas_EU4/mercenary_discipline.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_siege_ability"
+		texturefile = "gfx/interface/ideas_EU4/siege_ability.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_ISR"
+		texturefile = "gfx/flags/ISR.tga"
+	}
+	spriteType = {
+		name = "GFX_SYN"
+		texturefile = "gfx/flags/SYN.tga"
+	}
+	spriteType = {
+		name = "GFX_ROM"
+		texturefile = "gfx/flags/ROM.tga"
+	}
+	spriteType = {
+		name = "GFX_JMN"
+		texturefile = "gfx/flags/JMN.tga"
+	}
+	spriteType = {
+		name = "GFX_AGQ"
+		texturefile = "gfx/flags/AGQ.tga"
+	}
+	spriteType = {
+		name = "GFX_WAM"
+		texturefile = "gfx/flags/WAM.tga"
+	}
+	spriteType = {
+		name = "GFX_INN"
+		texturefile = "gfx/flags/INN.tga"
+	}
+	spriteType = {
+		name = "GFX_LAK"
+		texturefile = "gfx/flags/LAK.tga"
+	}
+	spriteType = {
+		name = "GFX_WCY"
+		texturefile = "gfx/flags/WCY.tga"
+	}
+	spriteType = {
+		name = "GFX_MSG"
+		texturefile = "gfx/flags/MSG.tga"
+	}
+	spriteType = {
+		name = "GFX_KSP"
+		texturefile = "gfx/flags/KSP.tga"
+	}
+	spriteType = {
+		name = "GFX_CLG"
+		texturefile = "gfx/flags/CLG.tga"
+	}
+	spriteType = {
+		name = "GFX_HWK"
+		texturefile = "gfx/flags/HWK.tga"
+	}
+	spriteType = {
+		name = "GFX_NAK"
+		texturefile = "gfx/flags/NAK.tga"
+	}
+	spriteType = {
+		name = "GFX_NEH"
+		texturefile = "gfx/flags/NEH.tga"
+	}
+	spriteType = {
+		name = "GFX_MLS"
+		texturefile = "gfx/flags/MLS.tga"
+	}
+	spriteType = {
+		name = "GFX_PEN"
+		texturefile = "gfx/flags/PEN.tga"
+	}
+	spriteType = {
+		name = "GFX_KSK"
+		texturefile = "gfx/flags/KSK.tga"
+	}
+	spriteType = {
+		name = "GFX_PEO"
+		texturefile = "gfx/flags/PEO.tga"
+	}
+	spriteType = {
+		name = "GFX_CAO"
+		texturefile = "gfx/flags/CAO.tga"
+	}
+	spriteType = {
+		name = "GFX_ACO"
+		texturefile = "gfx/flags/ACO.tga"
+	}
+	spriteType = {
+		name = "GFX_ISL"
+		texturefile = "gfx/flags/ISL.tga"
+	}
+	spriteType = {
+		name = "GFX_OHK"
+		texturefile = "gfx/flags/OHK.tga"
+	}
+	spriteType = {
+		name = "GFX_TSC"
+		texturefile = "gfx/flags/TSC.tga"
+	}
+	spriteType = {
+		name = "GFX_WEN"
+		texturefile = "gfx/flags/WEN.tga"
+	}
+	spriteType = {
+		name = "GFX_ERI"
+		texturefile = "gfx/flags/ERI.tga"
+	}
+	spriteType = {
+		name = "GFX_STA"
+		texturefile = "gfx/flags/STA.tga"
+	}
+	spriteType = {
+		name = "GFX_OSH"
+		texturefile = "gfx/flags/OSH.tga"
+	}
+	spriteType = {
+		name = "GFX_TIO"
+		texturefile = "gfx/flags/TIO.tga"
+	}
+	spriteType = {
+		name = "GFX_ARN"
+		texturefile = "gfx/flags/ARN.tga"
+	}
+	spriteType = {
+		name = "GFX_ATW"
+		texturefile = "gfx/flags/ATW.tga"
+	}
+	spriteType = {
+		name = "GFX_AGG"
+		texturefile = "gfx/flags/AGG.tga"
+	}
+	spriteType = {
+		name = "GFX_ATT"
+		texturefile = "gfx/flags/ATT.tga"
+	}
+	spriteType = {
+		name = "GFX_TAH"
+		texturefile = "gfx/flags/TAH.tga"
+	}
+	spriteType = {
+		name = "GFX_SEN"
+		texturefile = "gfx/flags/SEN.tga"
+	}
+	spriteType = {
+		name = "GFX_CAY"
+		texturefile = "gfx/flags/CAY.tga"
+	}
+	spriteType = {
+		name = "GFX_ONO"
+		texturefile = "gfx/flags/ONO.tga"
+	}
+	spriteType = {
+		name = "GFX_ONE"
+		texturefile = "gfx/flags/ONE.tga"
+	}
+	spriteType = {
+		name = "GFX_MOH"
+		texturefile = "gfx/flags/MOH.tga"
+	}
+	spriteType = {
+		name = "GFX_HNI"
+		texturefile = "gfx/flags/HNI.tga"
+	}
+	spriteType = {
+		name = "GFX_NTC"
+		texturefile = "gfx/flags/NTC.tga"
+	}
+	spriteType = {
+		name = "GFX_ANL"
+		texturefile = "gfx/flags/ANL.tga"
+	}
+	spriteType = {
+		name = "GFX_OEO"
+		texturefile = "gfx/flags/OEO.tga"
+	}
+	spriteType = {
+		name = "GFX_KSI"
+		texturefile = "gfx/flags/KSI.tga"
+	}
+	spriteType = {
+		name = "GFX_ATA"
+		texturefile = "gfx/flags/ATA.tga"
+	}
+	spriteType = {
+		name = "GFX_CCA"
+		texturefile = "gfx/flags/CCA.tga"
+	}
+	spriteType = {
+		name = "GFX_QUI"
+		texturefile = "gfx/flags/QUI.tga"
+	}
+	spriteType = {
+		name = "GFX_PCH"
+		texturefile = "gfx/flags/PCH.tga"
+	}
+	spriteType = {
+		name = "GFX_CAQ"
+		texturefile = "gfx/flags/CAQ.tga"
+	}
+	spriteType = {
+		name = "GFX_NTZ"
+		texturefile = "gfx/flags/NTZ.tga"
+	}
+	spriteType = {
+		name = "GFX_COW"
+		texturefile = "gfx/flags/COW.tga"
+	}
+	spriteType = {
+		name = "GFX_ABI"
+		texturefile = "gfx/flags/ABI.tga"
+	}
+	spriteType = {
+		name = "GFX_COO"
+		texturefile = "gfx/flags/COO.tga"
+	}
+	spriteType = {
+		name = "GFX_CIA"
+		texturefile = "gfx/flags/CIA.tga"
+	}
+	spriteType = {
+		name = "GFX_SAT"
+		texturefile = "gfx/flags/SAT.tga"
+	}
+	spriteType = {
+		name = "GFX_ETO"
+		texturefile = "gfx/flags/ETO.tga"
+	}
+	spriteType = {
+		name = "GFX_JOA"
+		texturefile = "gfx/flags/JOA.tga"
+	}
+	spriteType = {
+		name = "GFX_COF"
+		texturefile = "gfx/flags/COF.tga"
+	}
+	spriteType = {
+		name = "GFX_ICH"
+		texturefile = "gfx/flags/ICH.tga"
+	}
+	spriteType = {
+		name = "GFX_ALT"
+		texturefile = "gfx/flags/ALT.tga"
+	}
+	spriteType = {
+		name = "GFX_LAI"
+		texturefile = "gfx/flags/LAI.tga"
+	}
+	spriteType = {
+		name = "GFX_VNL"
+		texturefile = "gfx/flags/VNL.tga"
+	}
+	spriteType = {
+		name = "GFX_VIL"
+		texturefile = "gfx/flags/VIL.tga"
+	}
+	spriteType = {
+		name = "GFX_VIT"
+		texturefile = "gfx/flags/VIT.tga"
+	}
+	spriteType = {
+		name = "GFX_SAM"
+		texturefile = "gfx/flags/SAM.tga"
+	}
+	spriteType = {
+		name = "GFX_TOG"
+		texturefile = "gfx/flags/TOG.tga"
+	}
+	spriteType = {
+		name = "GFX_KAA"
+		texturefile = "gfx/flags/KAA.tga"
+	}
+	spriteType = {
+		name = "GFX_OAH"
+		texturefile = "gfx/flags/OAH.tga"
+	}
+	spriteType = {
+		name = "GFX_MAU"
+		texturefile = "gfx/flags/MAU.tga"
+	}
+	spriteType = {
+		name = "GFX_HAW"
+		texturefile = "gfx/flags/HAW.tga"
+	}
+	spriteType = {
+		name = "GFX_UHW"
+		texturefile = "gfx/flags/UHW.tga"
+	}
+	spriteType = {
+		name = "GFX_WAI"
+		texturefile = "gfx/flags/WAI.tga"
+	}
+	spriteType = {
+		name = "GFX_TTT"
+		texturefile = "gfx/flags/TTT.tga"
+	}
+	spriteType = {
+		name = "GFX_TEA"
+		texturefile = "gfx/flags/TEA.tga"
+	}
+	spriteType = {
+		name = "GFX_TNK"
+		texturefile = "gfx/flags/TNK.tga"
+	}
+	spriteType = {
+		name = "GFX_TAK"
+		texturefile = "gfx/flags/TAK.tga"
+	}
+	spriteType = {
+		name = "GFX_TAN"
+		texturefile = "gfx/flags/TAN.tga"
+	}
+	spriteType = {
+		name = "GFX_MAA"
+		texturefile = "gfx/flags/MAA.tga"
+	}
+	spriteType = {
+		name = "GFX_AOT"
+		texturefile = "gfx/flags/AOT.tga"
+	}
+	spriteType = {
+		name = "GFX_MLG"
+		texturefile = "gfx/flags/MLG.tga"
+	}
+	spriteType = {
+		name = "GFX_NOO"
+		texturefile = "gfx/flags/NOO.tga"
+	}
+	spriteType = {
+		name = "GFX_WRU"
+		texturefile = "gfx/flags/WRU.tga"
+	}
+	spriteType = {
+		name = "GFX_PLW"
+		texturefile = "gfx/flags/PLW.tga"
+	}
+	spriteType = {
+		name = "GFX_KAU"
+		texturefile = "gfx/flags/KAU.tga"
+	}
+	spriteType = {
+		name = "GFX_KUL"
+		texturefile = "gfx/flags/KUL.tga"
+	}
+	spriteType = {
+		name = "GFX_EOR"
+		texturefile = "gfx/flags/EOR.tga"
+	}
+	spriteType = {
+		name = "GFX_MIA"
+		texturefile = "gfx/flags/MIA.tga"
+	}
+	spriteType = {
+		name = "GFX_GMI"
+		texturefile = "gfx/flags/GMI.tga"
+	}
+	spriteType = {
+		name = "GFX_AWN"
+		texturefile = "gfx/flags/AWN.tga"
+	}
+	spriteType = {
+		name = "GFX_YNU"
+		texturefile = "gfx/flags/YNU.tga"
+	}
+	spriteType = {
+		name = "GFX_YOL"
+		texturefile = "gfx/flags/YOL.tga"
+	}
+	spriteType = {
+		name = "GFX_LAR"
+		texturefile = "gfx/flags/LAR.tga"
+	}
+	spriteType = {
+		name = "GFX_TIW"
+		texturefile = "gfx/flags/TIW.tga"
+	}
+	spriteType = {
+		name = "GFX_SIA"
+		texturefile = "gfx/flags/SIA.tga"
+	}
+	spriteType = {
+		name = "GFX_KOH"
+		texturefile = "gfx/flags/KOH.tga"
+	}
+	spriteType = {
+		name = "GFX_RHA"
+		texturefile = "gfx/flags/RHA.tga"
+	}
+	spriteType = {
+		name = "GFX_JAR"
+		texturefile = "gfx/flags/JAR.tga"
+	}
+	spriteType = {
+		name = "GFX_IND"
+		texturefile = "gfx/flags/IND.tga"
+	}
+	spriteType = {
+		name = "GFX_KEL"
+		texturefile = "gfx/flags/KEL.tga"
+	}
+	spriteType = {
+		name = "GFX_PAH"
+		texturefile = "gfx/flags/PAH.tga"
+	}
+	spriteType = {
+		name = "GFX_JMB"
+		texturefile = "gfx/flags/JMB.tga"
+	}
+	spriteType = {
+		name = "GFX_DLI"
+		texturefile = "gfx/flags/DLI.tga"
+	}
+	spriteType = {
+		name = "GFX_BRS"
+		texturefile = "gfx/flags/BRS.tga"
+	}
+	spriteType = {
+		name = "GFX_SMB"
+		texturefile = "gfx/flags/SMB.tga"
+	}
+	spriteType = {
+		name = "GFX_BEU"
+		texturefile = "gfx/flags/BEU.tga"
+	}
+	spriteType = {
+		name = "GFX_BNE"
+		texturefile = "gfx/flags/BNE.tga"
+	}
+	spriteType = {
+		name = "GFX_SWA"
+		texturefile = "gfx/flags/SWA.tga"
+	}
+	spriteType = {
+		name = "GFX_FKN"
+		texturefile = "gfx/flags/FKN.tga"
+	}
+	spriteType = {
+		name = "GFX_TTS"
+		texturefile = "gfx/flags/TTS.tga"
+	}
+	spriteType = {
+		name = "GFX_PGA"
+		texturefile = "gfx/flags/PGA.tga"
+	}
+	spriteType = {
+		name = "GFX_LOT"
+		texturefile = "gfx/flags/LOT.tga"
+	}
+	spriteType = {
+		name = "GFX_COB"
+		texturefile = "gfx/flags/COB.tga"
+	}
+	spriteType = {
+		name = "GFX_VRN"
+		texturefile = "gfx/flags/VRN.tga"
+	}
+	spriteType = {
+		name = "GFX_OSN"
+		texturefile = "gfx/flags/OSN.tga"
+	}
+	spriteType = {
+		name = "GFX_DWT"
+		texturefile = "gfx/flags/DWT.tga"
+	}
+	spriteType = {
+		name = "GFX_CLB"
+		texturefile = "gfx/flags/CLB.tga"
+	}
+	spriteType = {
+		name = "GFX_PAD"
+		texturefile = "gfx/flags/PAD.tga"
+	}
+	spriteType = {
+		name = "GFX_LPP"
+		texturefile = "gfx/flags/LPP.tga"
+	}
+	spriteType = {
+		name = "GFX_RUP"
+		texturefile = "gfx/flags/RUP.tga"
+	}
+	spriteType = {
+		name = "GFX_BAM"
+		texturefile = "gfx/flags/BAM.tga"
+	}
+	spriteType = {
+		name = "GFX_MLH"
+		texturefile = "gfx/flags/MLH.tga"
+	}
+	spriteType = {
+		name = "GFX_BRG"
+		texturefile = "gfx/flags/BRG.tga"
+	}
+	spriteType = {
+		name = "GFX_TNT"
+		texturefile = "gfx/flags/TNT.tga"
+	}
+	spriteType = {
+		name = "GFX_HRZ"
+		texturefile = "gfx/flags/HRZ.tga"
+	}
+	spriteType = {
+		name = "GFX_CLI"
+		texturefile = "gfx/flags/CLI.tga"
+	}
+	spriteType = {
+		name = "GFX_RUG"
+		texturefile = "gfx/flags/RUG.tga"
+	}
+	spriteType = {
+		name = "GFX_SOR"
+		texturefile = "gfx/flags/SOR.tga"
+	}
+	spriteType = {
+		name = "GFX_GOS"
+		texturefile = "gfx/flags/GOS.tga"
+	}
+	spriteType = {
+		name = "GFX_STE"
+		texturefile = "gfx/flags/STE.tga"
+	}
+	spriteType = {
+		name = "GFX_WOL"
+		texturefile = "gfx/flags/WOL.tga"
+	}
+	spriteType = {
+		name = "GFX_SPL"
+		texturefile = "gfx/flags/SPL.tga"
+	}
+	spriteType = {
+		name = "GFX_SZO"
+		texturefile = "gfx/flags/SZO.tga"
+	}
+	spriteType = {
+		name = "GFX_PDV"
+		texturefile = "gfx/flags/PDV.tga"
+	}
+	spriteType = {
+		name = "GFX_BLG"
+		texturefile = "gfx/flags/BLG.tga"
+	}
+	spriteType = {
+		name = "GFX_GLG"
+		texturefile = "gfx/flags/GLG.tga"
+	}
+	spriteType = {
+		name = "GFX_OPL"
+		texturefile = "gfx/flags/OPL.tga"
+	}
+	spriteType = {
+		name = "GFX_TTL"
+		texturefile = "gfx/flags/TTL.tga"
+	}
+	spriteType = {
+		name = "GFX_GNV"
+		texturefile = "gfx/flags/GNV.tga"
+	}
+	spriteType = {
+		name = "GFX_REG"
+		texturefile = "gfx/flags/REG.tga"
+	}
+	spriteType = {
+		name = "GFX_BYT"
+		texturefile = "gfx/flags/BYT.tga"
+	}
+	spriteType = {
+		name = "GFX_ROT"
+		texturefile = "gfx/flags/ROT.tga"
+	}
+	spriteType = {
+		name = "GFX_KNZ"
+		texturefile = "gfx/flags/KNZ.tga"
+	}
+	spriteType = {
+		name = "GFX_MBZ"
+		texturefile = "gfx/flags/MBZ.tga"
+	}
+	spriteType = {
+		name = "GFX_PSS"
+		texturefile = "gfx/flags/PSS.tga"
+	}
+	spriteType = {
+		name = "GFX_ING"
+		texturefile = "gfx/flags/ING.tga"
+	}
+	spriteType = {
+		name = "GFX_LBV"
+		texturefile = "gfx/flags/LBV.tga"
+	}
+	spriteType = {
+		name = "GFX_UBV"
+		texturefile = "gfx/flags/UBV.tga"
+	}
+	spriteType = {
+		name = "GFX_LIB"
+		texturefile = "gfx/flags/LIB.tga"
+	}
+	spriteType = {
+		name = "GFX_TOR"
+		texturefile = "gfx/flags/TOR.tga"
+	}
+	spriteType = {
+		name = "GFX_PRY"
+		texturefile = "gfx/flags/PRY.tga"
+	}
+	spriteType = {
+		name = "GFX_NSS"
+		texturefile = "gfx/flags/NSS.tga"
+	}
+	spriteType = {
+		name = "GFX_YKT"
+		texturefile = "gfx/flags/YKT.tga"
+	}
+	spriteType = {
+		name = "GFX_YAQ"
+		texturefile = "gfx/flags/YAQ.tga"
+	}
+	spriteType = {
+		name = "GFX_TON"
+		texturefile = "gfx/flags/TON.tga"
+	}
+	spriteType = {
+		name = "GFX_CNP"
+		texturefile = "gfx/flags/CNP.tga"
+	}
+	spriteType = {
+		name = "GFX_TAI"
+		texturefile = "gfx/flags/TAI.tga"
+	}
+	spriteType = {
+		name = "GFX_MIS"
+		texturefile = "gfx/flags/MIS.tga"
+	}
+	spriteType = {
+		name = "GFX_CHT"
+		texturefile = "gfx/flags/CHT.tga"
+	}
+	spriteType = {
+		name = "GFX_LIP"
+		texturefile = "gfx/flags/LIP.tga"
+	}
+	spriteType = {
+		name = "GFX_MSC"
+		texturefile = "gfx/flags/MSC.tga"
+	}
+	spriteType = {
+		name = "GFX_ZNI"
+		texturefile = "gfx/flags/ZNI.tga"
+	}
+	spriteType = {
+		name = "GFX_KER"
+		texturefile = "gfx/flags/KER.tga"
+	}
+	spriteType = {
+		name = "GFX_CTM"
+		texturefile = "gfx/flags/CTM.tga"
+	}
+	spriteType = {
+		name = "GFX_KAQ"
+		texturefile = "gfx/flags/KAQ.tga"
+	}
+	spriteType = {
+		name = "GFX_LAC"
+		texturefile = "gfx/flags/LAC.tga"
+	}
+	spriteType = {
+		name = "GFX_YOK"
+		texturefile = "gfx/flags/YOK.tga"
+	}
+	spriteType = {
+		name = "GFX_OTO"
+		texturefile = "gfx/flags/OTO.tga"
+	}
+	spriteType = {
+		name = "GFX_CCM"
+		texturefile = "gfx/flags/CCM.tga"
+	}
+	spriteType = {
+		name = "GFX_HST"
+		texturefile = "gfx/flags/HST.tga"
+	}
+	spriteType = {
+		name = "GFX_GAM"
+		texturefile = "gfx/flags/GAM.tga"
+	}
+	spriteType = {
+		name = "GFX_XAL"
+		texturefile = "gfx/flags/XAL.tga"
+	}
+	spriteType = {
+		name = "GFX_TEO"
+		texturefile = "gfx/flags/TEO.tga"
+	}
+	spriteType = {
+		name = "GFX_COI"
+		texturefile = "gfx/flags/COI.tga"
+	}
+	spriteType = {
+		name = "GFX_MAT"
+		texturefile = "gfx/flags/MAT.tga"
+	}
+	spriteType = {
+		name = "GFX_ICM"
+		texturefile = "gfx/flags/ICM.tga"
+	}
+	spriteType = {
+		name = "GFX_CAB"
+		texturefile = "gfx/flags/CAB.tga"
+	}
+	spriteType = {
+		name = "GFX_ARW"
+		texturefile = "gfx/flags/ARW.tga"
+	}
+	spriteType = {
+		name = "GFX_PCJ"
+		texturefile = "gfx/flags/PCJ.tga"
+	}
+	spriteType = {
+		name = "GFX_CRA"
+		texturefile = "gfx/flags/CRA.tga"
+	}
+	spriteType = {
+		name = "GFX_CLA"
+		texturefile = "gfx/flags/CLA.tga"
+	}
+	spriteType = {
+		name = "GFX_CYA"
+		texturefile = "gfx/flags/CYA.tga"
+	}
+	spriteType = {
+		name = "GFX_WKA"
+		texturefile = "gfx/flags/WKA.tga"
+	}
+	spriteType = {
+		name = "GFX_CUA"
+		texturefile = "gfx/flags/CUA.tga"
+	}
+	spriteType = {
+		name = "GFX_GUA"
+		texturefile = "gfx/flags/GUA.tga"
+	}
+	spriteType = {
+		name = "GFX_TUA"
+		texturefile = "gfx/flags/TUA.tga"
+	}
+	spriteType = {
+		name = "GFX_TPA"
+		texturefile = "gfx/flags/TPA.tga"
+	}
+	spriteType = {
+		name = "GFX_TPQ"
+		texturefile = "gfx/flags/TPQ.tga"
+	}
+	spriteType = {
+		name = "GFX_PTG"
+		texturefile = "gfx/flags/PTG.tga"
+	}
+	spriteType = {
+		name = "GFX_HJA"
+		texturefile = "gfx/flags/HJA.tga"
+	}
+	spriteType = {
+		name = "GFX_CJA"
+		texturefile = "gfx/flags/CJA.tga"
+	}
+	spriteType = {
+		name = "GFX_QTO"
+		texturefile = "gfx/flags/QTO.tga"
+	}
+	spriteType = {
+		name = "GFX_MCA"
+		texturefile = "gfx/flags/MCA.tga"
+	}
+	spriteType = {
+		name = "GFX_MPC"
+		texturefile = "gfx/flags/MPC.tga"
+	}
+	spriteType = {
+		name = "GFX_CCQ"
+		texturefile = "gfx/flags/CCQ.tga"
+	}
+	spriteType = {
+		name = "GFX_CSU"
+		texturefile = "gfx/flags/CSU.tga"
+	}
+	spriteType = {
+		name = "GFX_BTU"
+		texturefile = "gfx/flags/BTU.tga"
+	}
+	spriteType = {
+		name = "GFX_CEB"
+		texturefile = "gfx/flags/CEB.tga"
+	}
+	spriteType = {
+		name = "GFX_MNA"
+		texturefile = "gfx/flags/MNA.tga"
+	}
+	spriteType = {
+		name = "GFX_TDO"
+		texturefile = "gfx/flags/TDO.tga"
+	}
+	spriteType = {
+		name = "GFX_PGS"
+		texturefile = "gfx/flags/PGS.tga"
+	}
+	spriteType = {
+		name = "GFX_MAS"
+		texturefile = "gfx/flags/MAS.tga"
+	}
+	spriteType = {
+		name = "GFX_TID"
+		texturefile = "gfx/flags/TID.tga"
+	}
+	spriteType = {
+		name = "GFX_TER"
+		texturefile = "gfx/flags/TER.tga"
+	}
+	spriteType = {
+		name = "GFX_MGD"
+		texturefile = "gfx/flags/MGD.tga"
+	}
+	spriteType = {
+		name = "GFX_LUW"
+		texturefile = "gfx/flags/LUW.tga"
+	}
+	spriteType = {
+		name = "GFX_LNO"
+		texturefile = "gfx/flags/LNO.tga"
+	}
+	spriteType = {
+		name = "GFX_LFA"
+		texturefile = "gfx/flags/LFA.tga"
+	}
+	spriteType = {
+		name = "GFX_BNJ"
+		texturefile = "gfx/flags/BNJ.tga"
+	}
+	spriteType = {
+		name = "GFX_KUT"
+		texturefile = "gfx/flags/KUT.tga"
+	}
+	spriteType = {
+		name = "GFX_SUN"
+		texturefile = "gfx/flags/SUN.tga"
+	}
+	spriteType = {
+		name = "GFX_SAK"
+		texturefile = "gfx/flags/SAK.tga"
+	}
+	spriteType = {
+		name = "GFX_PSA"
+		texturefile = "gfx/flags/PSA.tga"
+	}
+	spriteType = {
+		name = "GFX_PLB"
+		texturefile = "gfx/flags/PLB.tga"
+	}
+	spriteType = {
+		name = "GFX_PGR"
+		texturefile = "gfx/flags/PGR.tga"
+	}
+	spriteType = {
+		name = "GFX_DMK"
+		texturefile = "gfx/flags/DMK.tga"
+	}
+	spriteType = {
+		name = "GFX_CRB"
+		texturefile = "gfx/flags/CRB.tga"
+	}
+	spriteType = {
+		name = "GFX_BTN"
+		texturefile = "gfx/flags/BTN.tga"
+	}
+	spriteType = {
+		name = "GFX_BLM"
+		texturefile = "gfx/flags/BLM.tga"
+	}
+	spriteType = {
+		name = "GFX_XIU"
+		texturefile = "gfx/flags/XIU.tga"
+	}
+	spriteType = {
+		name = "GFX_WIC"
+		texturefile = "gfx/flags/WIC.tga"
+	}
+	spriteType = {
+		name = "GFX_TOT"
+		texturefile = "gfx/flags/TOT.tga"
+	}
+	spriteType = {
+		name = "GFX_TLX"
+		texturefile = "gfx/flags/TLX.tga"
+	}
+	spriteType = {
+		name = "GFX_TLA"
+		texturefile = "gfx/flags/TLA.tga"
+	}
+	spriteType = {
+		name = "GFX_TAR"
+		texturefile = "gfx/flags/TAR.tga"
+	}
+	spriteType = {
+		name = "GFX_SAL"
+		texturefile = "gfx/flags/SAL.tga"
+	}
+	spriteType = {
+		name = "GFX_MIX"
+		texturefile = "gfx/flags/MIX.tga"
+	}
+	spriteType = {
+		name = "GFX_KIO"
+		texturefile = "gfx/flags/KIO.tga"
+	}
+	spriteType = {
+		name = "GFX_KIC"
+		texturefile = "gfx/flags/KIC.tga"
+	}
+	spriteType = {
+		name = "GFX_ITZ"
+		texturefile = "gfx/flags/ITZ.tga"
+	}
+	spriteType = {
+		name = "GFX_HDA"
+		texturefile = "gfx/flags/HDA.tga"
+	}
+	spriteType = {
+		name = "GFX_COC"
+		texturefile = "gfx/flags/COC.tga"
+	}
+	spriteType = {
+		name = "GFX_CNK"
+		texturefile = "gfx/flags/CNK.tga"
+	}
+	spriteType = {
+		name = "GFX_CLM"
+		texturefile = "gfx/flags/CLM.tga"
+	}
+	spriteType = {
+		name = "GFX_ARP"
+		texturefile = "gfx/flags/ARP.tga"
+	}
+	spriteType = {
+		name = "GFX_BRT"
+		texturefile = "gfx/flags/BRT.tga"
+	}
+	spriteType = {
+		name = "GFX_KMC"
+		texturefile = "gfx/flags/KMC.tga"
+	}
+	spriteType = {
+		name = "GFX_CHV"
+		texturefile = "gfx/flags/CHV.tga"
+	}
+	spriteType = {
+		name = "GFX_HOD"
+		texturefile = "gfx/flags/HOD.tga"
+	}
+	spriteType = {
+		name = "GFX_CHU"
+		texturefile = "gfx/flags/CHU.tga"
+	}
+	spriteType = {
+		name = "GFX_BPR"
+		texturefile = "gfx/flags/BPR.tga"
+	}
+	spriteType = {
+		name = "GFX_HSI"
+		texturefile = "gfx/flags/HSI.tga"
+	}
+	spriteType = {
+		name = "GFX_KAL"
+		texturefile = "gfx/flags/KAL.tga"
+	}
+	spriteType = {
+		name = "GFX_MNI"
+		texturefile = "gfx/flags/MNI.tga"
+	}
+	spriteType = {
+		name = "GFX_MPA"
+		texturefile = "gfx/flags/MPA.tga"
+	}
+	spriteType = {
+		name = "GFX_MKA"
+		texturefile = "gfx/flags/MKA.tga"
+	}
+	spriteType = {
+		name = "GFX_MMA"
+		texturefile = "gfx/flags/MMA.tga"
+	}
+	spriteType = {
+		name = "GFX_PRK"
+		texturefile = "gfx/flags/PRK.tga"
+	}
+	spriteType = {
+		name = "GFX_MYA"
+		texturefile = "gfx/flags/MYA.tga"
+	}
+	spriteType = {
+		name = "GFX_MPH"
+		texturefile = "gfx/flags/MPH.tga"
+	}
+	spriteType = {
+		name = "GFX_LIG"
+		texturefile = "gfx/flags/LIG.tga"
+	}
+	spriteType = {
+		name = "GFX_KED"
+		texturefile = "gfx/flags/KED.tga"
+	}
+	spriteType = {
+		name = "GFX_JOH"
+		texturefile = "gfx/flags/JOH.tga"
+	}
+	spriteType = {
+		name = "GFX_HSE"
+		texturefile = "gfx/flags/HSE.tga"
+	}
+	spriteType = {
+		name = "GFX_AVA"
+		texturefile = "gfx/flags/AVA.tga"
+	}
+	spriteType = {
+		name = "GFX_NDO"
+		texturefile = "gfx/flags/NDO.tga"
+	}
+	spriteType = {
+		name = "GFX_ZZZ"
+		texturefile = "gfx/flags/ZZZ.tga"
+	}
+	spriteType = {
+		name = "GFX_ZAF"
+		texturefile = "gfx/flags/ZAF.tga"
+	}
+	spriteType = {
+		name = "GFX_YAT"
+		texturefile = "gfx/flags/YAT.tga"
+	}
+	spriteType = {
+		name = "GFX_YAO"
+		texturefile = "gfx/flags/YAO.tga"
+	}
+	spriteType = {
+		name = "GFX_TMB"
+		texturefile = "gfx/flags/TMB.tga"
+	}
+	spriteType = {
+		name = "GFX_NUP"
+		texturefile = "gfx/flags/NUP.tga"
+	}
+	spriteType = {
+		name = "GFX_MSI"
+		texturefile = "gfx/flags/MSI.tga"
+	}
+	spriteType = {
+		name = "GFX_KTS"
+		texturefile = "gfx/flags/KTS.tga"
+	}
+	spriteType = {
+		name = "GFX_KNG"
+		texturefile = "gfx/flags/KNG.tga"
+	}
+	spriteType = {
+		name = "GFX_KBU"
+		texturefile = "gfx/flags/KBU.tga"
+	}
+	spriteType = {
+		name = "GFX_KAN"
+		texturefile = "gfx/flags/KAN.tga"
+	}
+	spriteType = {
+		name = "GFX_JNN"
+		texturefile = "gfx/flags/JNN.tga"
+	}
+	spriteType = {
+		name = "GFX_FUL"
+		texturefile = "gfx/flags/FUL.tga"
+	}
+	spriteType = {
+		name = "GFX_DGB"
+		texturefile = "gfx/flags/DGB.tga"
+	}
+	spriteType = {
+		name = "GFX_DAH"
+		texturefile = "gfx/flags/DAH.tga"
+	}
+	spriteType = {
+		name = "GFX_BON"
+		texturefile = "gfx/flags/BON.tga"
+	}
+	spriteType = {
+		name = "GFX_AIR"
+		texturefile = "gfx/flags/AIR.tga"
+	}
+	spriteType = {
+		name = "GFX_WCR"
+		texturefile = "gfx/flags/WCR.tga"
+	}
+	spriteType = {
+		name = "GFX_SUS"
+		texturefile = "gfx/flags/SUS.tga"
+	}
+	spriteType = {
+		name = "GFX_SIO"
+		texturefile = "gfx/flags/SIO.tga"
+	}
+	spriteType = {
+		name = "GFX_SHO"
+		texturefile = "gfx/flags/SHO.tga"
+	}
+	spriteType = {
+		name = "GFX_PUE"
+		texturefile = "gfx/flags/PUE.tga"
+	}
+	spriteType = {
+		name = "GFX_POW"
+		texturefile = "gfx/flags/POW.tga"
+	}
+	spriteType = {
+		name = "GFX_POT"
+		texturefile = "gfx/flags/POT.tga"
+	}
+	spriteType = {
+		name = "GFX_PIM"
+		texturefile = "gfx/flags/PIM.tga"
+	}
+	spriteType = {
+		name = "GFX_PEQ"
+		texturefile = "gfx/flags/PEQ.tga"
+	}
+	spriteType = {
+		name = "GFX_PAW"
+		texturefile = "gfx/flags/PAW.tga"
+	}
+	spriteType = {
+		name = "GFX_OTT"
+		texturefile = "gfx/flags/OTT.tga"
+	}
+	spriteType = {
+		name = "GFX_OSA"
+		texturefile = "gfx/flags/OSA.tga"
+	}
+	spriteType = {
+		name = "GFX_OJI"
+		texturefile = "gfx/flags/OJI.tga"
+	}
+	spriteType = {
+		name = "GFX_NAH"
+		texturefile = "gfx/flags/NAH.tga"
+	}
+	spriteType = {
+		name = "GFX_MMI"
+		texturefile = "gfx/flags/MMI.tga"
+	}
+	spriteType = {
+		name = "GFX_MIK"
+		texturefile = "gfx/flags/MIK.tga"
+	}
+	spriteType = {
+		name = "GFX_MAH"
+		texturefile = "gfx/flags/MAH.tga"
+	}
+	spriteType = {
+		name = "GFX_LEN"
+		texturefile = "gfx/flags/LEN.tga"
+	}
+	spriteType = {
+		name = "GFX_ILL"
+		texturefile = "gfx/flags/ILL.tga"
+	}
+	spriteType = {
+		name = "GFX_FOX"
+		texturefile = "gfx/flags/FOX.tga"
+	}
+	spriteType = {
+		name = "GFX_COM"
+		texturefile = "gfx/flags/COM.tga"
+	}
+	spriteType = {
+		name = "GFX_CHY"
+		texturefile = "gfx/flags/CHY.tga"
+	}
+	spriteType = {
+		name = "GFX_CHO"
+		texturefile = "gfx/flags/CHO.tga"
+	}
+	spriteType = {
+		name = "GFX_CHI"
+		texturefile = "gfx/flags/CHI.tga"
+	}
+	spriteType = {
+		name = "GFX_CAD"
+		texturefile = "gfx/flags/CAD.tga"
+	}
+	spriteType = {
+		name = "GFX_BLA"
+		texturefile = "gfx/flags/BLA.tga"
+	}
+	spriteType = {
+		name = "GFX_ASI"
+		texturefile = "gfx/flags/ASI.tga"
+	}
+	spriteType = {
+		name = "GFX_APA"
+		texturefile = "gfx/flags/APA.tga"
+	}
+	spriteType = {
+		name = "GFX_ABE"
+		texturefile = "gfx/flags/ABE.tga"
+	}
+	spriteType = {
+		name = "GFX_HIN"
+		texturefile = "gfx/flags/HIN.tga"
+	}
+	spriteType = {
+		name = "GFX_MSA"
+		texturefile = "gfx/flags/MSA.tga"
+	}
+	spriteType = {
+		name = "GFX_KOJ"
+		texturefile = "gfx/flags/KOJ.tga"
+	}
+	spriteType = {
+		name = "GFX_NZH"
+		texturefile = "gfx/flags/NZH.tga"
+	}
+	spriteType = {
+		name = "GFX_SMO"
+		texturefile = "gfx/flags/SMO.tga"
+	}
+	spriteType = {
+		name = "GFX_HSA"
+		texturefile = "gfx/flags/HSA.tga"
+	}
+	spriteType = {
+		name = "GFX_BAR"
+		texturefile = "gfx/flags/BAR.tga"
+	}
+	spriteType = {
+		name = "GFX_RJP"
+		texturefile = "gfx/flags/RJP.tga"
+	}
+	spriteType = {
+		name = "GFX_SRH"
+		texturefile = "gfx/flags/SRH.tga"
+	}
+	spriteType = {
+		name = "GFX_TNJ"
+		texturefile = "gfx/flags/TNJ.tga"
+	}
+	spriteType = {
+		name = "GFX_GNG"
+		texturefile = "gfx/flags/GNG.tga"
+	}
+	spriteType = {
+		name = "GFX_KMN"
+		texturefile = "gfx/flags/KMN.tga"
+	}
+	spriteType = {
+		name = "GFX_KTU"
+		texturefile = "gfx/flags/KTU.tga"
+	}
+	spriteType = {
+		name = "GFX_SRM"
+		texturefile = "gfx/flags/SRM.tga"
+	}
+	spriteType = {
+		name = "GFX_MKP"
+		texturefile = "gfx/flags/MKP.tga"
+	}
+	spriteType = {
+		name = "GFX_LWA"
+		texturefile = "gfx/flags/LWA.tga"
+	}
+	spriteType = {
+		name = "GFX_JML"
+		texturefile = "gfx/flags/JML.tga"
+	}
+	spriteType = {
+		name = "GFX_GRK"
+		texturefile = "gfx/flags/GRK.tga"
+	}
+	spriteType = {
+		name = "GFX_DTI"
+		texturefile = "gfx/flags/DTI.tga"
+	}
+	spriteType = {
+		name = "GFX_DNG"
+		texturefile = "gfx/flags/DNG.tga"
+	}
+	spriteType = {
+		name = "GFX_KLT"
+		texturefile = "gfx/flags/KLT.tga"
+	}
+	spriteType = {
+		name = "GFX_TLG"
+		texturefile = "gfx/flags/TLG.tga"
+	}
+	spriteType = {
+		name = "GFX_KND"
+		texturefile = "gfx/flags/KND.tga"
+	}
+	spriteType = {
+		name = "GFX_SRG"
+		texturefile = "gfx/flags/SRG.tga"
+	}
+	spriteType = {
+		name = "GFX_JPR"
+		texturefile = "gfx/flags/JPR.tga"
+	}
+	spriteType = {
+		name = "GFX_PRD"
+		texturefile = "gfx/flags/PRD.tga"
+	}
+	spriteType = {
+		name = "GFX_KJH"
+		texturefile = "gfx/flags/KJH.tga"
+	}
+	spriteType = {
+		name = "GFX_KLH"
+		texturefile = "gfx/flags/KLH.tga"
+	}
+	spriteType = {
+		name = "GFX_RTT"
+		texturefile = "gfx/flags/RTT.tga"
+	}
+	spriteType = {
+		name = "GFX_PTT"
+		texturefile = "gfx/flags/PTT.tga"
+	}
+	spriteType = {
+		name = "GFX_SBP"
+		texturefile = "gfx/flags/SBP.tga"
+	}
+	spriteType = {
+		name = "GFX_KLP"
+		texturefile = "gfx/flags/KLP.tga"
+	}
+	spriteType = {
+		name = "GFX_PAN"
+		texturefile = "gfx/flags/PAN.tga"
+	}
+	spriteType = {
+		name = "GFX_PRB"
+		texturefile = "gfx/flags/PRB.tga"
+	}
+	spriteType = {
+		name = "GFX_JGD"
+		texturefile = "gfx/flags/JGD.tga"
+	}
+	spriteType = {
+		name = "GFX_RJK"
+		texturefile = "gfx/flags/RJK.tga"
+	}
+	spriteType = {
+		name = "GFX_NVR"
+		texturefile = "gfx/flags/NVR.tga"
+	}
+	spriteType = {
+		name = "GFX_PTL"
+		texturefile = "gfx/flags/PTL.tga"
+	}
+	spriteType = {
+		name = "GFX_JLV"
+		texturefile = "gfx/flags/JLV.tga"
+	}
+	spriteType = {
+		name = "GFX_IDR"
+		texturefile = "gfx/flags/IDR.tga"
+	}
+	spriteType = {
+		name = "GFX_SKK"
+		texturefile = "gfx/flags/SKK.tga"
+	}
+	spriteType = {
+		name = "GFX_MBL"
+		texturefile = "gfx/flags/MBL.tga"
+	}
+	spriteType = {
+		name = "GFX_DGL"
+		texturefile = "gfx/flags/DGL.tga"
+	}
+	spriteType = {
+		name = "GFX_YOR"
+		texturefile = "gfx/flags/YOR.tga"
+	}
+	spriteType = {
+		name = "GFX_BHA"
+		texturefile = "gfx/flags/BHA.tga"
+	}
+	spriteType = {
+		name = "GFX_SDY"
+		texturefile = "gfx/flags/SDY.tga"
+	}
+	spriteType = {
+		name = "GFX_TPR"
+		texturefile = "gfx/flags/TPR.tga"
+	}
+	spriteType = {
+		name = "GFX_BGA"
+		texturefile = "gfx/flags/BGA.tga"
+	}
+	spriteType = {
+		name = "GFX_CMP"
+		texturefile = "gfx/flags/CMP.tga"
+	}
+	spriteType = {
+		name = "GFX_TRT"
+		texturefile = "gfx/flags/TRT.tga"
+	}
+	spriteType = {
+		name = "GFX_JAJ"
+		texturefile = "gfx/flags/JAJ.tga"
+	}
+	spriteType = {
+		name = "GFX_NGP"
+		texturefile = "gfx/flags/NGP.tga"
+	}
+	spriteType = {
+		name = "GFX_CHD"
+		texturefile = "gfx/flags/CHD.tga"
+	}
+	spriteType = {
+		name = "GFX_GHR"
+		texturefile = "gfx/flags/GHR.tga"
+	}
+	spriteType = {
+		name = "GFX_PTA"
+		texturefile = "gfx/flags/PTA.tga"
+	}
+	spriteType = {
+		name = "GFX_JFN"
+		texturefile = "gfx/flags/JFN.tga"
+	}
+	spriteType = {
+		name = "GFX_BGL"
+		texturefile = "gfx/flags/BGL.tga"
+	}
+	spriteType = {
+		name = "GFX_LDK"
+		texturefile = "gfx/flags/LDK.tga"
+	}
+	spriteType = {
+		name = "GFX_RMP"
+		texturefile = "gfx/flags/RMP.tga"
+	}
+	spriteType = {
+		name = "GFX_NGA"
+		texturefile = "gfx/flags/NGA.tga"
+	}
+	spriteType = {
+		name = "GFX_HAD"
+		texturefile = "gfx/flags/HAD.tga"
+	}
+	spriteType = {
+		name = "GFX_MLB"
+		texturefile = "gfx/flags/MLB.tga"
+	}
+	spriteType = {
+		name = "GFX_KOC"
+		texturefile = "gfx/flags/KOC.tga"
+	}
+	spriteType = {
+		name = "GFX_KAT"
+		texturefile = "gfx/flags/KAT.tga"
+	}
+	spriteType = {
+		name = "GFX_KGR"
+		texturefile = "gfx/flags/KGR.tga"
+	}
+	spriteType = {
+		name = "GFX_KMT"
+		texturefile = "gfx/flags/KMT.tga"
+	}
+	spriteType = {
+		name = "GFX_KAC"
+		texturefile = "gfx/flags/KAC.tga"
+	}
+	spriteType = {
+		name = "GFX_JSL"
+		texturefile = "gfx/flags/JSL.tga"
+	}
+	spriteType = {
+		name = "GFX_CEY"
+		texturefile = "gfx/flags/CEY.tga"
+	}
+	spriteType = {
+		name = "GFX_BND"
+		texturefile = "gfx/flags/BND.tga"
+	}
+	spriteType = {
+		name = "GFX_BHU"
+		texturefile = "gfx/flags/BHU.tga"
+	}
+	spriteType = {
+		name = "GFX_BST"
+		texturefile = "gfx/flags/BST.tga"
+	}
+	spriteType = {
+		name = "GFX_BDA"
+		texturefile = "gfx/flags/BDA.tga"
+	}
+	spriteType = {
+		name = "GFX_MEW"
+		texturefile = "gfx/flags/MEW.tga"
+	}
+	spriteType = {
+		name = "GFX_MAB"
+		texturefile = "gfx/flags/MAB.tga"
+	}
+	spriteType = {
+		name = "GFX_VND"
+		texturefile = "gfx/flags/VND.tga"
+	}
+	spriteType = {
+		name = "GFX_ODH"
+		texturefile = "gfx/flags/ODH.tga"
+	}
+	spriteType = {
+		name = "GFX_KHD"
+		texturefile = "gfx/flags/KHD.tga"
+	}
+	spriteType = {
+		name = "GFX_KLN"
+		texturefile = "gfx/flags/KLN.tga"
+	}
+	spriteType = {
+		name = "GFX_KSH"
+		texturefile = "gfx/flags/KSH.tga"
+	}
+	spriteType = {
+		name = "GFX_DHU"
+		texturefile = "gfx/flags/DHU.tga"
+	}
+	spriteType = {
+		name = "GFX_GWA"
+		texturefile = "gfx/flags/GWA.tga"
+	}
+	spriteType = {
+		name = "GFX_GRJ"
+		texturefile = "gfx/flags/GRJ.tga"
+	}
+	spriteType = {
+		name = "GFX_GDW"
+		texturefile = "gfx/flags/GDW.tga"
+	}
+	spriteType = {
+		name = "GFX_KRK"
+		texturefile = "gfx/flags/KRK.tga"
+	}
+	spriteType = {
+		name = "GFX_JAN"
+		texturefile = "gfx/flags/JAN.tga"
+	}
+	spriteType = {
+		name = "GFX_BRR"
+		texturefile = "gfx/flags/BRR.tga"
+	}
+	spriteType = {
+		name = "GFX_SND"
+		texturefile = "gfx/flags/SND.tga"
+	}
+	spriteType = {
+		name = "GFX_PUN"
+		texturefile = "gfx/flags/PUN.tga"
+	}
+	spriteType = {
+		name = "GFX_ORI"
+		texturefile = "gfx/flags/ORI.tga"
+	}
+	spriteType = {
+		name = "GFX_NPL"
+		texturefile = "gfx/flags/NPL.tga"
+	}
+	spriteType = {
+		name = "GFX_NAG"
+		texturefile = "gfx/flags/NAG.tga"
+	}
+	spriteType = {
+		name = "GFX_MUL"
+		texturefile = "gfx/flags/MUL.tga"
+	}
+	spriteType = {
+		name = "GFX_MER"
+		texturefile = "gfx/flags/MER.tga"
+	}
+	spriteType = {
+		name = "GFX_MAW"
+		texturefile = "gfx/flags/MAW.tga"
+	}
+	spriteType = {
+		name = "GFX_MLW"
+		texturefile = "gfx/flags/MLW.tga"
+	}
+	spriteType = {
+		name = "GFX_MAD"
+		texturefile = "gfx/flags/MAD.tga"
+	}
+	spriteType = {
+		name = "GFX_JNP"
+		texturefile = "gfx/flags/JNP.tga"
+	}
+	spriteType = {
+		name = "GFX_GUJ"
+		texturefile = "gfx/flags/GUJ.tga"
+	}
+	spriteType = {
+		name = "GFX_ASS"
+		texturefile = "gfx/flags/ASS.tga"
+	}
+	spriteType = {
+		name = "GFX_AHM"
+		texturefile = "gfx/flags/AHM.tga"
+	}
+	spriteType = {
+		name = "GFX_VIJ"
+		texturefile = "gfx/flags/VIJ.tga"
+	}
+	spriteType = {
+		name = "GFX_MYS"
+		texturefile = "gfx/flags/MYS.tga"
+	}
+	spriteType = {
+		name = "GFX_MUG"
+		texturefile = "gfx/flags/MUG.tga"
+	}
+	spriteType = {
+		name = "GFX_MAR"
+		texturefile = "gfx/flags/MAR.tga"
+	}
+	spriteType = {
+		name = "GFX_DEC"
+		texturefile = "gfx/flags/DEC.tga"
+	}
+	spriteType = {
+		name = "GFX_GOC"
+		texturefile = "gfx/flags/GOC.tga"
+	}
+	spriteType = {
+		name = "GFX_DLH"
+		texturefile = "gfx/flags/DLH.tga"
+	}
+	spriteType = {
+		name = "GFX_BAH"
+		texturefile = "gfx/flags/BAH.tga"
+	}
+	spriteType = {
+		name = "GFX_BIJ"
+		texturefile = "gfx/flags/BIJ.tga"
+	}
+	spriteType = {
+		name = "GFX_BNG"
+		texturefile = "gfx/flags/BNG.tga"
+	}
+	spriteType = {
+		name = "GFX_BAL"
+		texturefile = "gfx/flags/BAL.tga"
+	}
+	spriteType = {
+		name = "GFX_CGS"
+		texturefile = "gfx/flags/CGS.tga"
+	}
+	spriteType = {
+		name = "GFX_HUA"
+		texturefile = "gfx/flags/HUA.tga"
+	}
+	spriteType = {
+		name = "GFX_QIN"
+		texturefile = "gfx/flags/QIN.tga"
+	}
+	spriteType = {
+		name = "GFX_LNG"
+		texturefile = "gfx/flags/LNG.tga"
+	}
+	spriteType = {
+		name = "GFX_JIN"
+		texturefile = "gfx/flags/JIN.tga"
+	}
+	spriteType = {
+		name = "GFX_YAN"
+		texturefile = "gfx/flags/YAN.tga"
+	}
+	spriteType = {
+		name = "GFX_QIC"
+		texturefile = "gfx/flags/QIC.tga"
+	}
+	spriteType = {
+		name = "GFX_WUU"
+		texturefile = "gfx/flags/WUU.tga"
+	}
+	spriteType = {
+		name = "GFX_TNG"
+		texturefile = "gfx/flags/TNG.tga"
+	}
+	spriteType = {
+		name = "GFX_CHC"
+		texturefile = "gfx/flags/CHC.tga"
+	}
+	spriteType = {
+		name = "GFX_NNG"
+		texturefile = "gfx/flags/NNG.tga"
+	}
+	spriteType = {
+		name = "GFX_SHU"
+		texturefile = "gfx/flags/SHU.tga"
+	}
+	spriteType = {
+		name = "GFX_YUE"
+		texturefile = "gfx/flags/YUE.tga"
+	}
+	spriteType = {
+		name = "GFX_MIN"
+		texturefile = "gfx/flags/MIN.tga"
+	}
+	spriteType = {
+		name = "GFX_CMI"
+		texturefile = "gfx/flags/CMI.tga"
+	}
+	spriteType = {
+		name = "GFX_CYI"
+		texturefile = "gfx/flags/CYI.tga"
+	}
+	spriteType = {
+		name = "GFX_CDL"
+		texturefile = "gfx/flags/CDL.tga"
+	}
+	spriteType = {
+		name = "GFX_PHA"
+		texturefile = "gfx/flags/PHA.tga"
+	}
+	spriteType = {
+		name = "GFX_GUG"
+		texturefile = "gfx/flags/GUG.tga"
+	}
+	spriteType = {
+		name = "GFX_KAM"
+		texturefile = "gfx/flags/KAM.tga"
+	}
+	spriteType = {
+		name = "GFX_UTS"
+		texturefile = "gfx/flags/UTS.tga"
+	}
+	spriteType = {
+		name = "GFX_SYG"
+		texturefile = "gfx/flags/SYG.tga"
+	}
+	spriteType = {
+		name = "GFX_KSD"
+		texturefile = "gfx/flags/KSD.tga"
+	}
+	spriteType = {
+		name = "GFX_CHH"
+		texturefile = "gfx/flags/CHH.tga"
+	}
+	spriteType = {
+		name = "GFX_KAS"
+		texturefile = "gfx/flags/KAS.tga"
+	}
+	spriteType = {
+		name = "GFX_ZUN"
+		texturefile = "gfx/flags/ZUN.tga"
+	}
+	spriteType = {
+		name = "GFX_HMI"
+		texturefile = "gfx/flags/HMI.tga"
+	}
+	spriteType = {
+		name = "GFX_KLK"
+		texturefile = "gfx/flags/KLK.tga"
+	}
+	spriteType = {
+		name = "GFX_KRC"
+		texturefile = "gfx/flags/KRC.tga"
+	}
+	spriteType = {
+		name = "GFX_MJZ"
+		texturefile = "gfx/flags/MJZ.tga"
+	}
+	spriteType = {
+		name = "GFX_MHX"
+		texturefile = "gfx/flags/MHX.tga"
+	}
+	spriteType = {
+		name = "GFX_MYR"
+		texturefile = "gfx/flags/MYR.tga"
+	}
+	spriteType = {
+		name = "GFX_NHX"
+		texturefile = "gfx/flags/NHX.tga"
+	}
+	spriteType = {
+		name = "GFX_EJZ"
+		texturefile = "gfx/flags/EJZ.tga"
+	}
+	spriteType = {
+		name = "GFX_SOL"
+		texturefile = "gfx/flags/SOL.tga"
+	}
+	spriteType = {
+		name = "GFX_NVK"
+		texturefile = "gfx/flags/NVK.tga"
+	}
+	spriteType = {
+		name = "GFX_SOO"
+		texturefile = "gfx/flags/SOO.tga"
+	}
+	spriteType = {
+		name = "GFX_MGE"
+		texturefile = "gfx/flags/MGE.tga"
+	}
+	spriteType = {
+		name = "GFX_KLM"
+		texturefile = "gfx/flags/KLM.tga"
+	}
+	spriteType = {
+		name = "GFX_ILK"
+		texturefile = "gfx/flags/ILK.tga"
+	}
+	spriteType = {
+		name = "GFX_FRM"
+		texturefile = "gfx/flags/FRM.tga"
+	}
+	spriteType = {
+		name = "GFX_YUA"
+		texturefile = "gfx/flags/YUA.tga"
+	}
+	spriteType = {
+		name = "GFX_CXI"
+		texturefile = "gfx/flags/CXI.tga"
+	}
+	spriteType = {
+		name = "GFX_CSH"
+		texturefile = "gfx/flags/CSH.tga"
+	}
+	spriteType = {
+		name = "GFX_CZH"
+		texturefile = "gfx/flags/CZH.tga"
+	}
+	spriteType = {
+		name = "GFX_VIE"
+		texturefile = "gfx/flags/VIE.tga"
+	}
+	spriteType = {
+		name = "GFX_TOK"
+		texturefile = "gfx/flags/TOK.tga"
+	}
+	spriteType = {
+		name = "GFX_TIB"
+		texturefile = "gfx/flags/TIB.tga"
+	}
+	spriteType = {
+		name = "GFX_TAU"
+		texturefile = "gfx/flags/TAU.tga"
+	}
+	spriteType = {
+		name = "GFX_SUL"
+		texturefile = "gfx/flags/SUL.tga"
+	}
+	spriteType = {
+		name = "GFX_SUK"
+		texturefile = "gfx/flags/SUK.tga"
+	}
+	spriteType = {
+		name = "GFX_SST"
+		texturefile = "gfx/flags/SST.tga"
+	}
+	spriteType = {
+		name = "GFX_RYU"
+		texturefile = "gfx/flags/RYU.tga"
+	}
+	spriteType = {
+		name = "GFX_QNG"
+		texturefile = "gfx/flags/QNG.tga"
+	}
+	spriteType = {
+		name = "GFX_PEG"
+		texturefile = "gfx/flags/PEG.tga"
+	}
+	spriteType = {
+		name = "GFX_PAT"
+		texturefile = "gfx/flags/PAT.tga"
+	}
+	spriteType = {
+		name = "GFX_OIR"
+		texturefile = "gfx/flags/OIR.tga"
+	}
+	spriteType = {
+		name = "GFX_MTR"
+		texturefile = "gfx/flags/MTR.tga"
+	}
+	spriteType = {
+		name = "GFX_MNG"
+		texturefile = "gfx/flags/MNG.tga"
+	}
+	spriteType = {
+		name = "GFX_MLC"
+		texturefile = "gfx/flags/MLC.tga"
+	}
+	spriteType = {
+		name = "GFX_MKS"
+		texturefile = "gfx/flags/MKS.tga"
+	}
+	spriteType = {
+		name = "GFX_MCH"
+		texturefile = "gfx/flags/MCH.tga"
+	}
+	spriteType = {
+		name = "GFX_MAJ"
+		texturefile = "gfx/flags/MAJ.tga"
+	}
+	spriteType = {
+		name = "GFX_LXA"
+		texturefile = "gfx/flags/LXA.tga"
+	}
+	spriteType = {
+		name = "GFX_LUA"
+		texturefile = "gfx/flags/LUA.tga"
+	}
+	spriteType = {
+		name = "GFX_LNA"
+		texturefile = "gfx/flags/LNA.tga"
+	}
+	spriteType = {
+		name = "GFX_KOR"
+		texturefile = "gfx/flags/KOR.tga"
+	}
+	spriteType = {
+		name = "GFX_KHM"
+		texturefile = "gfx/flags/KHM.tga"
+	}
+	spriteType = {
+		name = "GFX_KHA"
+		texturefile = "gfx/flags/KHA.tga"
+	}
+	spriteType = {
+		name = "GFX_TTI"
+		texturefile = "gfx/flags/TTI.tga"
+	}
+	spriteType = {
+		name = "GFX_UTN"
+		texturefile = "gfx/flags/UTN.tga"
+	}
+	spriteType = {
+		name = "GFX_TKI"
+		texturefile = "gfx/flags/TKI.tga"
+	}
+	spriteType = {
+		name = "GFX_STK"
+		texturefile = "gfx/flags/STK.tga"
+	}
+	spriteType = {
+		name = "GFX_SHN"
+		texturefile = "gfx/flags/SHN.tga"
+	}
+	spriteType = {
+		name = "GFX_OGS"
+		texturefile = "gfx/flags/OGS.tga"
+	}
+	spriteType = {
+		name = "GFX_KNO"
+		texturefile = "gfx/flags/KNO.tga"
+	}
+	spriteType = {
+		name = "GFX_KKC"
+		texturefile = "gfx/flags/KKC.tga"
+	}
+	spriteType = {
+		name = "GFX_ITO"
+		texturefile = "gfx/flags/ITO.tga"
+	}
+	spriteType = {
+		name = "GFX_ISK"
+		texturefile = "gfx/flags/ISK.tga"
+	}
+	spriteType = {
+		name = "GFX_CBA"
+		texturefile = "gfx/flags/CBA.tga"
+	}
+	spriteType = {
+		name = "GFX_AKT"
+		texturefile = "gfx/flags/AKT.tga"
+	}
+	spriteType = {
+		name = "GFX_AKM"
+		texturefile = "gfx/flags/AKM.tga"
+	}
+	spriteType = {
+		name = "GFX_ANU"
+		texturefile = "gfx/flags/ANU.tga"
+	}
+	spriteType = {
+		name = "GFX_KTB"
+		texturefile = "gfx/flags/KTB.tga"
+	}
+	spriteType = {
+		name = "GFX_ASK"
+		texturefile = "gfx/flags/ASK.tga"
+	}
+	spriteType = {
+		name = "GFX_RFR"
+		texturefile = "gfx/flags/RFR.tga"
+	}
+	spriteType = {
+		name = "GFX_YMN"
+		texturefile = "gfx/flags/YMN.tga"
+	}
+	spriteType = {
+		name = "GFX_UES"
+		texturefile = "gfx/flags/UES.tga"
+	}
+	spriteType = {
+		name = "GFX_TKG"
+		texturefile = "gfx/flags/TKG.tga"
+	}
+	spriteType = {
+		name = "GFX_TKD"
+		texturefile = "gfx/flags/TKD.tga"
+	}
+	spriteType = {
+		name = "GFX_SMZ"
+		texturefile = "gfx/flags/SMZ.tga"
+	}
+	spriteType = {
+		name = "GFX_SBA"
+		texturefile = "gfx/flags/SBA.tga"
+	}
+	spriteType = {
+		name = "GFX_OUC"
+		texturefile = "gfx/flags/OUC.tga"
+	}
+	spriteType = {
+		name = "GFX_OTM"
+		texturefile = "gfx/flags/OTM.tga"
+	}
+	spriteType = {
+		name = "GFX_ODA"
+		texturefile = "gfx/flags/ODA.tga"
+	}
+	spriteType = {
+		name = "GFX_MRI"
+		texturefile = "gfx/flags/MRI.tga"
+	}
+	spriteType = {
+		name = "GFX_MAE"
+		texturefile = "gfx/flags/MAE.tga"
+	}
+	spriteType = {
+		name = "GFX_IMG"
+		texturefile = "gfx/flags/IMG.tga"
+	}
+	spriteType = {
+		name = "GFX_IKE"
+		texturefile = "gfx/flags/IKE.tga"
+	}
+	spriteType = {
+		name = "GFX_HTK"
+		texturefile = "gfx/flags/HTK.tga"
+	}
+	spriteType = {
+		name = "GFX_HSK"
+		texturefile = "gfx/flags/HSK.tga"
+	}
+	spriteType = {
+		name = "GFX_HJO"
+		texturefile = "gfx/flags/HJO.tga"
+	}
+	spriteType = {
+		name = "GFX_DTE"
+		texturefile = "gfx/flags/DTE.tga"
+	}
+	spriteType = {
+		name = "GFX_CSK"
+		texturefile = "gfx/flags/CSK.tga"
+	}
+	spriteType = {
+		name = "GFX_ASA"
+		texturefile = "gfx/flags/ASA.tga"
+	}
+	spriteType = {
+		name = "GFX_AMA"
+		texturefile = "gfx/flags/AMA.tga"
+	}
+	spriteType = {
+		name = "GFX_JAP"
+		texturefile = "gfx/flags/JAP.tga"
+	}
+	spriteType = {
+		name = "GFX_DAI"
+		texturefile = "gfx/flags/DAI.tga"
+	}
+	spriteType = {
+		name = "GFX_CHK"
+		texturefile = "gfx/flags/CHK.tga"
+	}
+	spriteType = {
+		name = "GFX_CHG"
+		texturefile = "gfx/flags/CHG.tga"
+	}
+	spriteType = {
+		name = "GFX_CHA"
+		texturefile = "gfx/flags/CHA.tga"
+	}
+	spriteType = {
+		name = "GFX_BEI"
+		texturefile = "gfx/flags/BEI.tga"
+	}
+	spriteType = {
+		name = "GFX_BAN"
+		texturefile = "gfx/flags/BAN.tga"
+	}
+	spriteType = {
+		name = "GFX_BLI"
+		texturefile = "gfx/flags/BLI.tga"
+	}
+	spriteType = {
+		name = "GFX_AYU"
+		texturefile = "gfx/flags/AYU.tga"
+	}
+	spriteType = {
+		name = "GFX_ATJ"
+		texturefile = "gfx/flags/ATJ.tga"
+	}
+	spriteType = {
+		name = "GFX_ARK"
+		texturefile = "gfx/flags/ARK.tga"
+	}
+	spriteType = {
+		name = "GFX_ANN"
+		texturefile = "gfx/flags/ANN.tga"
+	}
+	spriteType = {
+		name = "GFX_ANT"
+		texturefile = "gfx/flags/ANT.tga"
+	}
+	spriteType = {
+		name = "GFX_MFY"
+		texturefile = "gfx/flags/MFY.tga"
+	}
+	spriteType = {
+		name = "GFX_BTS"
+		texturefile = "gfx/flags/BTS.tga"
+	}
+	spriteType = {
+		name = "GFX_SKA"
+		texturefile = "gfx/flags/SKA.tga"
+	}
+	spriteType = {
+		name = "GFX_MIR"
+		texturefile = "gfx/flags/MIR.tga"
+	}
+	spriteType = {
+		name = "GFX_RZW"
+		texturefile = "gfx/flags/RZW.tga"
+	}
+	spriteType = {
+		name = "GFX_MKU"
+		texturefile = "gfx/flags/MKU.tga"
+	}
+	spriteType = {
+		name = "GFX_TBK"
+		texturefile = "gfx/flags/TBK.tga"
+	}
+	spriteType = {
+		name = "GFX_LDU"
+		texturefile = "gfx/flags/LDU.tga"
+	}
+	spriteType = {
+		name = "GFX_MRA"
+		texturefile = "gfx/flags/MRA.tga"
+	}
+	spriteType = {
+		name = "GFX_UBH"
+		texturefile = "gfx/flags/UBH.tga"
+	}
+	spriteType = {
+		name = "GFX_BSG"
+		texturefile = "gfx/flags/BSG.tga"
+	}
+	spriteType = {
+		name = "GFX_BNY"
+		texturefile = "gfx/flags/BNY.tga"
+	}
+	spriteType = {
+		name = "GFX_KRW"
+		texturefile = "gfx/flags/KRW.tga"
+	}
+	spriteType = {
+		name = "GFX_NKO"
+		texturefile = "gfx/flags/NKO.tga"
+	}
+	spriteType = {
+		name = "GFX_BUG"
+		texturefile = "gfx/flags/BUG.tga"
+	}
+	spriteType = {
+		name = "GFX_BUU"
+		texturefile = "gfx/flags/BUU.tga"
+	}
+	spriteType = {
+		name = "GFX_RWA"
+		texturefile = "gfx/flags/RWA.tga"
+	}
+	spriteType = {
+		name = "GFX_KUB"
+		texturefile = "gfx/flags/KUB.tga"
+	}
+	spriteType = {
+		name = "GFX_KLD"
+		texturefile = "gfx/flags/KLD.tga"
+	}
+	spriteType = {
+		name = "GFX_YAK"
+		texturefile = "gfx/flags/YAK.tga"
+	}
+	spriteType = {
+		name = "GFX_KZB"
+		texturefile = "gfx/flags/KZB.tga"
+	}
+	spriteType = {
+		name = "GFX_KIK"
+		texturefile = "gfx/flags/KIK.tga"
+	}
+	spriteType = {
+		name = "GFX_CKW"
+		texturefile = "gfx/flags/CKW.tga"
+	}
+	spriteType = {
+		name = "GFX_LND"
+		texturefile = "gfx/flags/LND.tga"
+	}
+	spriteType = {
+		name = "GFX_LUB"
+		texturefile = "gfx/flags/LUB.tga"
+	}
+	spriteType = {
+		name = "GFX_KSJ"
+		texturefile = "gfx/flags/KSJ.tga"
+	}
+	spriteType = {
+		name = "GFX_SYO"
+		texturefile = "gfx/flags/SYO.tga"
+	}
+	spriteType = {
+		name = "GFX_TYO"
+		texturefile = "gfx/flags/TYO.tga"
+	}
+	spriteType = {
+		name = "GFX_ABB"
+		texturefile = "gfx/flags/ABB.tga"
+	}
+	spriteType = {
+		name = "GFX_JJI"
+		texturefile = "gfx/flags/JJI.tga"
+	}
+	spriteType = {
+		name = "GFX_SOA"
+		texturefile = "gfx/flags/SOA.tga"
+	}
+	spriteType = {
+		name = "GFX_HDY"
+		texturefile = "gfx/flags/HDY.tga"
+	}
+	spriteType = {
+		name = "GFX_DAM"
+		texturefile = "gfx/flags/DAM.tga"
+	}
+	spriteType = {
+		name = "GFX_WLY"
+		texturefile = "gfx/flags/WLY.tga"
+	}
+	spriteType = {
+		name = "GFX_JIM"
+		texturefile = "gfx/flags/JIM.tga"
+	}
+	spriteType = {
+		name = "GFX_BEJ"
+		texturefile = "gfx/flags/BEJ.tga"
+	}
+	spriteType = {
+		name = "GFX_BTI"
+		texturefile = "gfx/flags/BTI.tga"
+	}
+	spriteType = {
+		name = "GFX_WAR"
+		texturefile = "gfx/flags/WAR.tga"
+	}
+	spriteType = {
+		name = "GFX_PTE"
+		texturefile = "gfx/flags/PTE.tga"
+	}
+	spriteType = {
+		name = "GFX_MRE"
+		texturefile = "gfx/flags/MRE.tga"
+	}
+	spriteType = {
+		name = "GFX_MJE"
+		texturefile = "gfx/flags/MJE.tga"
+	}
+	spriteType = {
+		name = "GFX_MED"
+		texturefile = "gfx/flags/MED.tga"
+	}
+	spriteType = {
+		name = "GFX_KAF"
+		texturefile = "gfx/flags/KAF.tga"
+	}
+	spriteType = {
+		name = "GFX_HOB"
+		texturefile = "gfx/flags/HOB.tga"
+	}
+	spriteType = {
+		name = "GFX_HAR"
+		texturefile = "gfx/flags/HAR.tga"
+	}
+	spriteType = {
+		name = "GFX_GLE"
+		texturefile = "gfx/flags/GLE.tga"
+	}
+	spriteType = {
+		name = "GFX_DAR"
+		texturefile = "gfx/flags/DAR.tga"
+	}
+	spriteType = {
+		name = "GFX_ALO"
+		texturefile = "gfx/flags/ALO.tga"
+	}
+	spriteType = {
+		name = "GFX_AFA"
+		texturefile = "gfx/flags/AFA.tga"
+	}
+	spriteType = {
+		name = "GFX_WAD"
+		texturefile = "gfx/flags/WAD.tga"
+	}
+	spriteType = {
+		name = "GFX_KIT"
+		texturefile = "gfx/flags/KIT.tga"
+	}
+	spriteType = {
+		name = "GFX_RZI"
+		texturefile = "gfx/flags/RZI.tga"
+	}
+	spriteType = {
+		name = "GFX_NBI"
+		texturefile = "gfx/flags/NBI.tga"
+	}
+	spriteType = {
+		name = "GFX_GZI"
+		texturefile = "gfx/flags/GZI.tga"
+	}
+	spriteType = {
+		name = "GFX_AKS"
+		texturefile = "gfx/flags/AKS.tga"
+	}
+	spriteType = {
+		name = "GFX_SOM"
+		texturefile = "gfx/flags/SOM.tga"
+	}
+	spriteType = {
+		name = "GFX_ZUL"
+		texturefile = "gfx/flags/ZUL.tga"
+	}
+	spriteType = {
+		name = "GFX_OGD"
+		texturefile = "gfx/flags/OGD.tga"
+	}
+	spriteType = {
+		name = "GFX_TEN"
+		texturefile = "gfx/flags/TEN.tga"
+	}
+	spriteType = {
+		name = "GFX_GUR"
+		texturefile = "gfx/flags/GUR.tga"
+	}
+	spriteType = {
+		name = "GFX_ZND"
+		texturefile = "gfx/flags/ZND.tga"
+	}
+	spriteType = {
+		name = "GFX_WGD"
+		texturefile = "gfx/flags/WGD.tga"
+	}
+	spriteType = {
+		name = "GFX_ENA"
+		texturefile = "gfx/flags/ENA.tga"
+	}
+	spriteType = {
+		name = "GFX_MDI"
+		texturefile = "gfx/flags/MDI.tga"
+	}
+	spriteType = {
+		name = "GFX_AJU"
+		texturefile = "gfx/flags/AJU.tga"
+	}
+	spriteType = {
+		name = "GFX_MLI"
+		texturefile = "gfx/flags/MLI.tga"
+	}
+	spriteType = {
+		name = "GFX_MBA"
+		texturefile = "gfx/flags/MBA.tga"
+	}
+	spriteType = {
+		name = "GFX_SFA"
+		texturefile = "gfx/flags/SFA.tga"
+	}
+	spriteType = {
+		name = "GFX_JOL"
+		texturefile = "gfx/flags/JOL.tga"
+	}
+	spriteType = {
+		name = "GFX_SOK"
+		texturefile = "gfx/flags/SOK.tga"
+	}
+	spriteType = {
+		name = "GFX_SOF"
+		texturefile = "gfx/flags/SOF.tga"
+	}
+	spriteType = {
+		name = "GFX_OYO"
+		texturefile = "gfx/flags/OYO.tga"
+	}
+	spriteType = {
+		name = "GFX_LOA"
+		texturefile = "gfx/flags/LOA.tga"
+	}
+	spriteType = {
+		name = "GFX_KBO"
+		texturefile = "gfx/flags/KBO.tga"
+	}
+	spriteType = {
+		name = "GFX_HAU"
+		texturefile = "gfx/flags/HAU.tga"
+	}
+	spriteType = {
+		name = "GFX_ADA"
+		texturefile = "gfx/flags/ADA.tga"
+	}
+	spriteType = {
+		name = "GFX_ZIM"
+		texturefile = "gfx/flags/ZIM.tga"
+	}
+	spriteType = {
+		name = "GFX_ZAN"
+		texturefile = "gfx/flags/ZAN.tga"
+	}
+	spriteType = {
+		name = "GFX_SON"
+		texturefile = "gfx/flags/SON.tga"
+	}
+	spriteType = {
+		name = "GFX_NUB"
+		texturefile = "gfx/flags/NUB.tga"
+	}
+	spriteType = {
+		name = "GFX_MAL"
+		texturefile = "gfx/flags/MAL.tga"
+	}
+	spriteType = {
+		name = "GFX_KON"
+		texturefile = "gfx/flags/KON.tga"
+	}
+	spriteType = {
+		name = "GFX_ETH"
+		texturefile = "gfx/flags/ETH.tga"
+	}
+	spriteType = {
+		name = "GFX_BEN"
+		texturefile = "gfx/flags/BEN.tga"
+	}
+	spriteType = {
+		name = "GFX_ASH"
+		texturefile = "gfx/flags/ASH.tga"
+	}
+	spriteType = {
+		name = "GFX_ZAP"
+		texturefile = "gfx/flags/ZAP.tga"
+	}
+	spriteType = {
+		name = "GFX_SHA"
+		texturefile = "gfx/flags/SHA.tga"
+	}
+	spriteType = {
+		name = "GFX_MAY"
+		texturefile = "gfx/flags/MAY.tga"
+	}
+	spriteType = {
+		name = "GFX_IRO"
+		texturefile = "gfx/flags/IRO.tga"
+	}
+	spriteType = {
+		name = "GFX_INC"
+		texturefile = "gfx/flags/INC.tga"
+	}
+	spriteType = {
+		name = "GFX_HUR"
+		texturefile = "gfx/flags/HUR.tga"
+	}
+	spriteType = {
+		name = "GFX_CRE"
+		texturefile = "gfx/flags/CRE.tga"
+	}
+	spriteType = {
+		name = "GFX_CHM"
+		texturefile = "gfx/flags/CHM.tga"
+	}
+	spriteType = {
+		name = "GFX_CHE"
+		texturefile = "gfx/flags/CHE.tga"
+	}
+	spriteType = {
+		name = "GFX_AZT"
+		texturefile = "gfx/flags/AZT.tga"
+	}
+	spriteType = {
+		name = "GFX_QOM"
+		texturefile = "gfx/flags/QOM.tga"
+	}
+	spriteType = {
+		name = "GFX_MGR"
+		texturefile = "gfx/flags/MGR.tga"
+	}
+	spriteType = {
+		name = "GFX_BSR"
+		texturefile = "gfx/flags/BSR.tga"
+	}
+	spriteType = {
+		name = "GFX_TBR"
+		texturefile = "gfx/flags/TBR.tga"
+	}
+	spriteType = {
+		name = "GFX_ISF"
+		texturefile = "gfx/flags/ISF.tga"
+	}
+	spriteType = {
+		name = "GFX_YZD"
+		texturefile = "gfx/flags/YZD.tga"
+	}
+	spriteType = {
+		name = "GFX_KRM"
+		texturefile = "gfx/flags/KRM.tga"
+	}
+	spriteType = {
+		name = "GFX_FRS"
+		texturefile = "gfx/flags/FRS.tga"
+	}
+	spriteType = {
+		name = "GFX_BPI"
+		texturefile = "gfx/flags/BPI.tga"
+	}
+	spriteType = {
+		name = "GFX_SIS"
+		texturefile = "gfx/flags/SIS.tga"
+	}
+	spriteType = {
+		name = "GFX_LRI"
+		texturefile = "gfx/flags/LRI.tga"
+	}
+	spriteType = {
+		name = "GFX_ORM"
+		texturefile = "gfx/flags/ORM.tga"
+	}
+	spriteType = {
+		name = "GFX_TAB"
+		texturefile = "gfx/flags/TAB.tga"
+	}
+	spriteType = {
+		name = "GFX_IME"
+		texturefile = "gfx/flags/IME.tga"
+	}
+	spriteType = {
+		name = "GFX_GAZ"
+		texturefile = "gfx/flags/GAZ.tga"
+	}
+	spriteType = {
+		name = "GFX_CIR"
+		texturefile = "gfx/flags/CIR.tga"
+	}
+	spriteType = {
+		name = "GFX_KRY"
+		texturefile = "gfx/flags/KRY.tga"
+	}
+	spriteType = {
+		name = "GFX_TRS"
+		texturefile = "gfx/flags/TRS.tga"
+	}
+	spriteType = {
+		name = "GFX_TIM"
+		texturefile = "gfx/flags/TIM.tga"
+	}
+	spriteType = {
+		name = "GFX_QAR"
+		texturefile = "gfx/flags/QAR.tga"
+	}
+	spriteType = {
+		name = "GFX_PER"
+		texturefile = "gfx/flags/PER.tga"
+	}
+	spriteType = {
+		name = "GFX_KHO"
+		texturefile = "gfx/flags/KHO.tga"
+	}
+	spriteType = {
+		name = "GFX_AFG"
+		texturefile = "gfx/flags/AFG.tga"
+	}
+	spriteType = {
+		name = "GFX_BUK"
+		texturefile = "gfx/flags/BUK.tga"
+	}
+	spriteType = {
+		name = "GFX_KOK"
+		texturefile = "gfx/flags/KOK.tga"
+	}
+	spriteType = {
+		name = "GFX_SHY"
+		texturefile = "gfx/flags/SHY.tga"
+	}
+	spriteType = {
+		name = "GFX_KHI"
+		texturefile = "gfx/flags/KHI.tga"
+	}
+	spriteType = {
+		name = "GFX_KZH"
+		texturefile = "gfx/flags/KZH.tga"
+	}
+	spriteType = {
+		name = "GFX_MRK"
+		texturefile = "gfx/flags/MRK.tga"
+	}
+	spriteType = {
+		name = "GFX_TET"
+		texturefile = "gfx/flags/TET.tga"
+	}
+	spriteType = {
+		name = "GFX_SLE"
+		texturefile = "gfx/flags/SLE.tga"
+	}
+	spriteType = {
+		name = "GFX_MZB"
+		texturefile = "gfx/flags/MZB.tga"
+	}
+	spriteType = {
+		name = "GFX_FZA"
+		texturefile = "gfx/flags/FZA.tga"
+	}
+	spriteType = {
+		name = "GFX_GHD"
+		texturefile = "gfx/flags/GHD.tga"
+	}
+	spriteType = {
+		name = "GFX_TGT"
+		texturefile = "gfx/flags/TGT.tga"
+	}
+	spriteType = {
+		name = "GFX_TLC"
+		texturefile = "gfx/flags/TLC.tga"
+	}
+	spriteType = {
+		name = "GFX_SOS"
+		texturefile = "gfx/flags/SOS.tga"
+	}
+	spriteType = {
+		name = "GFX_TFL"
+		texturefile = "gfx/flags/TFL.tga"
+	}
+	spriteType = {
+		name = "GFX_KBA"
+		texturefile = "gfx/flags/KBA.tga"
+	}
+	spriteType = {
+		name = "GFX_EGY"
+		texturefile = "gfx/flags/EGY.tga"
+	}
+	spriteType = {
+		name = "GFX_TUN"
+		texturefile = "gfx/flags/TUN.tga"
+	}
+	spriteType = {
+		name = "GFX_TRP"
+		texturefile = "gfx/flags/TRP.tga"
+	}
+	spriteType = {
+		name = "GFX_MOR"
+		texturefile = "gfx/flags/MOR.tga"
+	}
+	spriteType = {
+		name = "GFX_MAM"
+		texturefile = "gfx/flags/MAM.tga"
+	}
+	spriteType = {
+		name = "GFX_FEZ"
+		texturefile = "gfx/flags/FEZ.tga"
+	}
+	spriteType = {
+		name = "GFX_ALG"
+		texturefile = "gfx/flags/ALG.tga"
+	}
+	spriteType = {
+		name = "GFX_RUM"
+		texturefile = "gfx/flags/RUM.tga"
+	}
+	spriteType = {
+		name = "GFX_MSY"
+		texturefile = "gfx/flags/MSY.tga"
+	}
+	spriteType = {
+		name = "GFX_ARL"
+		texturefile = "gfx/flags/ARL.tga"
+	}
+	spriteType = {
+		name = "GFX_SME"
+		texturefile = "gfx/flags/SME.tga"
+	}
+	spriteType = {
+		name = "GFX_MLK"
+		texturefile = "gfx/flags/MLK.tga"
+	}
+	spriteType = {
+		name = "GFX_AVR"
+		texturefile = "gfx/flags/AVR.tga"
+	}
+	spriteType = {
+		name = "GFX_RAM"
+		texturefile = "gfx/flags/RAM.tga"
+	}
+	spriteType = {
+		name = "GFX_MEN"
+		texturefile = "gfx/flags/MEN.tga"
+	}
+	spriteType = {
+		name = "GFX_SRU"
+		texturefile = "gfx/flags/SRU.tga"
+	}
+	spriteType = {
+		name = "GFX_TRE"
+		texturefile = "gfx/flags/TRE.tga"
+	}
+	spriteType = {
+		name = "GFX_SYR"
+		texturefile = "gfx/flags/SYR.tga"
+	}
+	spriteType = {
+		name = "GFX_KAR"
+		texturefile = "gfx/flags/KAR.tga"
+	}
+	spriteType = {
+		name = "GFX_IRQ"
+		texturefile = "gfx/flags/IRQ.tga"
+	}
+	spriteType = {
+		name = "GFX_DUL"
+		texturefile = "gfx/flags/DUL.tga"
+	}
+	spriteType = {
+		name = "GFX_CND"
+		texturefile = "gfx/flags/CND.tga"
+	}
+	spriteType = {
+		name = "GFX_AYD"
+		texturefile = "gfx/flags/AYD.tga"
+	}
+	spriteType = {
+		name = "GFX_AKK"
+		texturefile = "gfx/flags/AKK.tga"
+	}
+	spriteType = {
+		name = "GFX_BTL"
+		texturefile = "gfx/flags/BTL.tga"
+	}
+	spriteType = {
+		name = "GFX_HSN"
+		texturefile = "gfx/flags/HSN.tga"
+	}
+	spriteType = {
+		name = "GFX_YEM"
+		texturefile = "gfx/flags/YEM.tga"
+	}
+	spriteType = {
+		name = "GFX_YAS"
+		texturefile = "gfx/flags/YAS.tga"
+	}
+	spriteType = {
+		name = "GFX_SRV"
+		texturefile = "gfx/flags/SRV.tga"
+	}
+	spriteType = {
+		name = "GFX_SHR"
+		texturefile = "gfx/flags/SHR.tga"
+	}
+	spriteType = {
+		name = "GFX_SHM"
+		texturefile = "gfx/flags/SHM.tga"
+	}
+	spriteType = {
+		name = "GFX_RAS"
+		texturefile = "gfx/flags/RAS.tga"
+	}
+	spriteType = {
+		name = "GFX_OMA"
+		texturefile = "gfx/flags/OMA.tga"
+	}
+	spriteType = {
+		name = "GFX_NJR"
+		texturefile = "gfx/flags/NJR.tga"
+	}
+	spriteType = {
+		name = "GFX_NAJ"
+		texturefile = "gfx/flags/NAJ.tga"
+	}
+	spriteType = {
+		name = "GFX_MHR"
+		texturefile = "gfx/flags/MHR.tga"
+	}
+	spriteType = {
+		name = "GFX_MFL"
+		texturefile = "gfx/flags/MFL.tga"
+	}
+	spriteType = {
+		name = "GFX_MDA"
+		texturefile = "gfx/flags/MDA.tga"
+	}
+	spriteType = {
+		name = "GFX_MAK"
+		texturefile = "gfx/flags/MAK.tga"
+	}
+	spriteType = {
+		name = "GFX_LEB"
+		texturefile = "gfx/flags/LEB.tga"
+	}
+	spriteType = {
+		name = "GFX_HED"
+		texturefile = "gfx/flags/HED.tga"
+	}
+	spriteType = {
+		name = "GFX_HDR"
+		texturefile = "gfx/flags/HDR.tga"
+	}
+	spriteType = {
+		name = "GFX_GRM"
+		texturefile = "gfx/flags/GRM.tga"
+	}
+	spriteType = {
+		name = "GFX_FAD"
+		texturefile = "gfx/flags/FAD.tga"
+	}
+	spriteType = {
+		name = "GFX_ERE"
+		texturefile = "gfx/flags/ERE.tga"
+	}
+	spriteType = {
+		name = "GFX_DAW"
+		texturefile = "gfx/flags/DAW.tga"
+	}
+	spriteType = {
+		name = "GFX_BHT"
+		texturefile = "gfx/flags/BHT.tga"
+	}
+	spriteType = {
+		name = "GFX_ARD"
+		texturefile = "gfx/flags/ARD.tga"
+	}
+	spriteType = {
+		name = "GFX_ARB"
+		texturefile = "gfx/flags/ARB.tga"
+	}
+	spriteType = {
+		name = "GFX_ANZ"
+		texturefile = "gfx/flags/ANZ.tga"
+	}
+	spriteType = {
+		name = "GFX_ALH"
+		texturefile = "gfx/flags/ALH.tga"
+	}
+	spriteType = {
+		name = "GFX_ADE"
+		texturefile = "gfx/flags/ADE.tga"
+	}
+	spriteType = {
+		name = "GFX_GLH"
+		texturefile = "gfx/flags/GLH.tga"
+	}
+	spriteType = {
+		name = "GFX_GOL"
+		texturefile = "gfx/flags/GOL.tga"
+	}
+	spriteType = {
+		name = "GFX_RSO"
+		texturefile = "gfx/flags/RSO.tga"
+	}
+	spriteType = {
+		name = "GFX_BLO"
+		texturefile = "gfx/flags/BLO.tga"
+	}
+	spriteType = {
+		name = "GFX_BSH"
+		texturefile = "gfx/flags/BSH.tga"
+	}
+	spriteType = {
+		name = "GFX_FEO"
+		texturefile = "gfx/flags/FEO.tga"
+	}
+	spriteType = {
+		name = "GFX_PRM"
+		texturefile = "gfx/flags/PRM.tga"
+	}
+	spriteType = {
+		name = "GFX_PLT"
+		texturefile = "gfx/flags/PLT.tga"
+	}
+	spriteType = {
+		name = "GFX_SIB"
+		texturefile = "gfx/flags/SIB.tga"
+	}
+	spriteType = {
+		name = "GFX_NOG"
+		texturefile = "gfx/flags/NOG.tga"
+	}
+	spriteType = {
+		name = "GFX_ZAZ"
+		texturefile = "gfx/flags/ZAZ.tga"
+	}
+	spriteType = {
+		name = "GFX_YAR"
+		texturefile = "gfx/flags/YAR.tga"
+	}
+	spriteType = {
+		name = "GFX_UKR"
+		texturefile = "gfx/flags/UKR.tga"
+	}
+	spriteType = {
+		name = "GFX_TVE"
+		texturefile = "gfx/flags/TVE.tga"
+	}
+	spriteType = {
+		name = "GFX_RYA"
+		texturefile = "gfx/flags/RYA.tga"
+	}
+	spriteType = {
+		name = "GFX_RUS"
+		texturefile = "gfx/flags/RUS.tga"
+	}
+	spriteType = {
+		name = "GFX_QAS"
+		texturefile = "gfx/flags/QAS.tga"
+	}
+	spriteType = {
+		name = "GFX_PSK"
+		texturefile = "gfx/flags/PSK.tga"
+	}
+	spriteType = {
+		name = "GFX_NOV"
+		texturefile = "gfx/flags/NOV.tga"
+	}
+	spriteType = {
+		name = "GFX_MOS"
+		texturefile = "gfx/flags/MOS.tga"
+	}
+	spriteType = {
+		name = "GFX_KAZ"
+		texturefile = "gfx/flags/KAZ.tga"
+	}
+	spriteType = {
+		name = "GFX_GEO"
+		texturefile = "gfx/flags/GEO.tga"
+	}
+	spriteType = {
+		name = "GFX_CRI"
+		texturefile = "gfx/flags/CRI.tga"
+	}
+	spriteType = {
+		name = "GFX_AST"
+		texturefile = "gfx/flags/AST.tga"
+	}
+	spriteType = {
+		name = "GFX_ARM"
+		texturefile = "gfx/flags/ARM.tga"
+	}
+	spriteType = {
+		name = "GFX_UTR"
+		texturefile = "gfx/flags/UTR.tga"
+	}
+	spriteType = {
+		name = "GFX_NED"
+		texturefile = "gfx/flags/NED.tga"
+	}
+	spriteType = {
+		name = "GFX_LUX"
+		texturefile = "gfx/flags/LUX.tga"
+	}
+	spriteType = {
+		name = "GFX_LIE"
+		texturefile = "gfx/flags/LIE.tga"
+	}
+	spriteType = {
+		name = "GFX_HOL"
+		texturefile = "gfx/flags/HOL.tga"
+	}
+	spriteType = {
+		name = "GFX_HAI"
+		texturefile = "gfx/flags/HAI.tga"
+	}
+	spriteType = {
+		name = "GFX_GEL"
+		texturefile = "gfx/flags/GEL.tga"
+	}
+	spriteType = {
+		name = "GFX_FRI"
+		texturefile = "gfx/flags/FRI.tga"
+	}
+	spriteType = {
+		name = "GFX_FLA"
+		texturefile = "gfx/flags/FLA.tga"
+	}
+	spriteType = {
+		name = "GFX_BRB"
+		texturefile = "gfx/flags/BRB.tga"
+	}
+	spriteType = {
+		name = "GFX_JAI"
+		texturefile = "gfx/flags/JAI.tga"
+	}
+	spriteType = {
+		name = "GFX_LAN"
+		texturefile = "gfx/flags/LAN.tga"
+	}
+	spriteType = {
+		name = "GFX_LUC"
+		texturefile = "gfx/flags/LUC.tga"
+	}
+	spriteType = {
+		name = "GFX_MFA"
+		texturefile = "gfx/flags/MFA.tga"
+	}
+	spriteType = {
+		name = "GFX_VEN"
+		texturefile = "gfx/flags/VEN.tga"
+	}
+	spriteType = {
+		name = "GFX_URB"
+		texturefile = "gfx/flags/URB.tga"
+	}
+	spriteType = {
+		name = "GFX_TUS"
+		texturefile = "gfx/flags/TUS.tga"
+	}
+	spriteType = {
+		name = "GFX_SIE"
+		texturefile = "gfx/flags/SIE.tga"
+	}
+	spriteType = {
+		name = "GFX_SIC"
+		texturefile = "gfx/flags/SIC.tga"
+	}
+	spriteType = {
+		name = "GFX_SAV"
+		texturefile = "gfx/flags/SAV.tga"
+	}
+	spriteType = {
+		name = "GFX_SAR"
+		texturefile = "gfx/flags/SAR.tga"
+	}
+	spriteType = {
+		name = "GFX_PIS"
+		texturefile = "gfx/flags/PIS.tga"
+	}
+	spriteType = {
+		name = "GFX_PAR"
+		texturefile = "gfx/flags/PAR.tga"
+	}
+	spriteType = {
+		name = "GFX_PAP"
+		texturefile = "gfx/flags/PAP.tga"
+	}
+	spriteType = {
+		name = "GFX_NAP"
+		texturefile = "gfx/flags/NAP.tga"
+	}
+	spriteType = {
+		name = "GFX_MOD"
+		texturefile = "gfx/flags/MOD.tga"
+	}
+	spriteType = {
+		name = "GFX_MLO"
+		texturefile = "gfx/flags/MLO.tga"
+	}
+	spriteType = {
+		name = "GFX_MAN"
+		texturefile = "gfx/flags/MAN.tga"
+	}
+	spriteType = {
+		name = "GFX_ITA"
+		texturefile = "gfx/flags/ITA.tga"
+	}
+	spriteType = {
+		name = "GFX_GEN"
+		texturefile = "gfx/flags/GEN.tga"
+	}
+	spriteType = {
+		name = "GFX_FER"
+		texturefile = "gfx/flags/FER.tga"
+	}
+	spriteType = {
+		name = "GFX_ETR"
+		texturefile = "gfx/flags/ETR.tga"
+	}
+	spriteType = {
+		name = "GFX_AQU"
+		texturefile = "gfx/flags/AQU.tga"
+	}
+	spriteType = {
+		name = "GFX_MJO"
+		texturefile = "gfx/flags/MJO.tga"
+	}
+	spriteType = {
+		name = "GFX_ASU"
+		texturefile = "gfx/flags/ASU.tga"
+	}
+	spriteType = {
+		name = "GFX_VAL"
+		texturefile = "gfx/flags/VAL.tga"
+	}
+	spriteType = {
+		name = "GFX_ADU"
+		texturefile = "gfx/flags/ADU.tga"
+	}
+	spriteType = {
+		name = "GFX_LON"
+		texturefile = "gfx/flags/LON.tga"
+	}
+	spriteType = {
+		name = "GFX_GAL"
+		texturefile = "gfx/flags/GAL.tga"
+	}
+	spriteType = {
+		name = "GFX_SPA"
+		texturefile = "gfx/flags/SPA.tga"
+	}
+	spriteType = {
+		name = "GFX_POR"
+		texturefile = "gfx/flags/POR.tga"
+	}
+	spriteType = {
+		name = "GFX_NAV"
+		texturefile = "gfx/flags/NAV.tga"
+	}
+	spriteType = {
+		name = "GFX_GRA"
+		texturefile = "gfx/flags/GRA.tga"
+	}
+	spriteType = {
+		name = "GFX_CAT"
+		texturefile = "gfx/flags/CAT.tga"
+	}
+	spriteType = {
+		name = "GFX_CAS"
+		texturefile = "gfx/flags/CAS.tga"
+	}
+	spriteType = {
+		name = "GFX_ARA"
+		texturefile = "gfx/flags/ARA.tga"
+	}
+	spriteType = {
+		name = "GFX_DTT"
+		texturefile = "gfx/flags/DTT.tga"
+	}
+	spriteType = {
+		name = "GFX_RVA"
+		texturefile = "gfx/flags/RVA.tga"
+	}
+	spriteType = {
+		name = "GFX_NSA"
+		texturefile = "gfx/flags/NSA.tga"
+	}
+	spriteType = {
+		name = "GFX_VER"
+		texturefile = "gfx/flags/VER.tga"
+	}
+	spriteType = {
+		name = "GFX_MEM"
+		texturefile = "gfx/flags/MEM.tga"
+	}
+	spriteType = {
+		name = "GFX_NUM"
+		texturefile = "gfx/flags/NUM.tga"
+	}
+	spriteType = {
+		name = "GFX_WUR"
+		texturefile = "gfx/flags/WUR.tga"
+	}
+	spriteType = {
+		name = "GFX_WES"
+		texturefile = "gfx/flags/WES.tga"
+	}
+	spriteType = {
+		name = "GFX_WBG"
+		texturefile = "gfx/flags/WBG.tga"
+	}
+	spriteType = {
+		name = "GFX_ULM"
+		texturefile = "gfx/flags/ULM.tga"
+	}
+	spriteType = {
+		name = "GFX_TRI"
+		texturefile = "gfx/flags/TRI.tga"
+	}
+	spriteType = {
+		name = "GFX_TIR"
+		texturefile = "gfx/flags/TIR.tga"
+	}
+	spriteType = {
+		name = "GFX_THU"
+		texturefile = "gfx/flags/THU.tga"
+	}
+	spriteType = {
+		name = "GFX_SWI"
+		texturefile = "gfx/flags/SWI.tga"
+	}
+	spriteType = {
+		name = "GFX_STY"
+		texturefile = "gfx/flags/STY.tga"
+	}
+	spriteType = {
+		name = "GFX_SLZ"
+		texturefile = "gfx/flags/SLZ.tga"
+	}
+	spriteType = {
+		name = "GFX_SIL"
+		texturefile = "gfx/flags/SIL.tga"
+	}
+	spriteType = {
+		name = "GFX_SAX"
+		texturefile = "gfx/flags/SAX.tga"
+	}
+	spriteType = {
+		name = "GFX_POM"
+		texturefile = "gfx/flags/POM.tga"
+	}
+	spriteType = {
+		name = "GFX_PAL"
+		texturefile = "gfx/flags/PAL.tga"
+	}
+	spriteType = {
+		name = "GFX_OLD"
+		texturefile = "gfx/flags/OLD.tga"
+	}
+	spriteType = {
+		name = "GFX_MVA"
+		texturefile = "gfx/flags/MVA.tga"
+	}
+	spriteType = {
+		name = "GFX_MUN"
+		texturefile = "gfx/flags/MUN.tga"
+	}
+	spriteType = {
+		name = "GFX_MKL"
+		texturefile = "gfx/flags/MKL.tga"
+	}
+	spriteType = {
+		name = "GFX_MEI"
+		texturefile = "gfx/flags/MEI.tga"
+	}
+	spriteType = {
+		name = "GFX_MAI"
+		texturefile = "gfx/flags/MAI.tga"
+	}
+	spriteType = {
+		name = "GFX_MAG"
+		texturefile = "gfx/flags/MAG.tga"
+	}
+	spriteType = {
+		name = "GFX_LUN"
+		texturefile = "gfx/flags/LUN.tga"
+	}
+	spriteType = {
+		name = "GFX_LOR"
+		texturefile = "gfx/flags/LOR.tga"
+	}
+	spriteType = {
+		name = "GFX_LAU"
+		texturefile = "gfx/flags/LAU.tga"
+	}
+	spriteType = {
+		name = "GFX_KOL"
+		texturefile = "gfx/flags/KOL.tga"
+	}
+	spriteType = {
+		name = "GFX_KLE"
+		texturefile = "gfx/flags/KLE.tga"
+	}
+	spriteType = {
+		name = "GFX_HLR"
+		texturefile = "gfx/flags/HLR.tga"
+	}
+	spriteType = {
+		name = "GFX_HES"
+		texturefile = "gfx/flags/HES.tga"
+	}
+	spriteType = {
+		name = "GFX_HAN"
+		texturefile = "gfx/flags/HAN.tga"
+	}
+	spriteType = {
+		name = "GFX_HAM"
+		texturefile = "gfx/flags/HAM.tga"
+	}
+	spriteType = {
+		name = "GFX_HAB"
+		texturefile = "gfx/flags/HAB.tga"
+	}
+	spriteType = {
+		name = "GFX_GER"
+		texturefile = "gfx/flags/GER.tga"
+	}
+	spriteType = {
+		name = "GFX_FRN"
+		texturefile = "gfx/flags/FRN.tga"
+	}
+	spriteType = {
+		name = "GFX_EFR"
+		texturefile = "gfx/flags/EFR.tga"
+	}
+	spriteType = {
+		name = "GFX_BRU"
+		texturefile = "gfx/flags/BRU.tga"
+	}
+	spriteType = {
+		name = "GFX_BRE"
+		texturefile = "gfx/flags/BRE.tga"
+	}
+	spriteType = {
+		name = "GFX_BRA"
+		texturefile = "gfx/flags/BRA.tga"
+	}
+	spriteType = {
+		name = "GFX_BOH"
+		texturefile = "gfx/flags/BOH.tga"
+	}
+	spriteType = {
+		name = "GFX_BAV"
+		texturefile = "gfx/flags/BAV.tga"
+	}
+	spriteType = {
+		name = "GFX_BAD"
+		texturefile = "gfx/flags/BAD.tga"
+	}
+	spriteType = {
+		name = "GFX_AUG"
+		texturefile = "gfx/flags/AUG.tga"
+	}
+	spriteType = {
+		name = "GFX_ANS"
+		texturefile = "gfx/flags/ANS.tga"
+	}
+	spriteType = {
+		name = "GFX_ANH"
+		texturefile = "gfx/flags/ANH.tga"
+	}
+	spriteType = {
+		name = "GFX_AAC"
+		texturefile = "gfx/flags/AAC.tga"
+	}
+	spriteType = {
+		name = "GFX_BER"
+		texturefile = "gfx/flags/BER.tga"
+	}
+	spriteType = {
+		name = "GFX_TOU"
+		texturefile = "gfx/flags/TOU.tga"
+	}
+	spriteType = {
+		name = "GFX_SPI"
+		texturefile = "gfx/flags/SPI.tga"
+	}
+	spriteType = {
+		name = "GFX_PRO"
+		texturefile = "gfx/flags/PRO.tga"
+	}
+	spriteType = {
+		name = "GFX_PIC"
+		texturefile = "gfx/flags/PIC.tga"
+	}
+	spriteType = {
+		name = "GFX_ORL"
+		texturefile = "gfx/flags/ORL.tga"
+	}
+	spriteType = {
+		name = "GFX_NRM"
+		texturefile = "gfx/flags/NRM.tga"
+	}
+	spriteType = {
+		name = "GFX_NEV"
+		texturefile = "gfx/flags/NEV.tga"
+	}
+	spriteType = {
+		name = "GFX_GUY"
+		texturefile = "gfx/flags/GUY.tga"
+	}
+	spriteType = {
+		name = "GFX_FRA"
+		texturefile = "gfx/flags/FRA.tga"
+	}
+	spriteType = {
+		name = "GFX_FOI"
+		texturefile = "gfx/flags/FOI.tga"
+	}
+	spriteType = {
+		name = "GFX_DAU"
+		texturefile = "gfx/flags/DAU.tga"
+	}
+	spriteType = {
+		name = "GFX_COR"
+		texturefile = "gfx/flags/COR.tga"
+	}
+	spriteType = {
+		name = "GFX_CHP"
+		texturefile = "gfx/flags/CHP.tga"
+	}
+	spriteType = {
+		name = "GFX_BUR"
+		texturefile = "gfx/flags/BUR.tga"
+	}
+	spriteType = {
+		name = "GFX_BRI"
+		texturefile = "gfx/flags/BRI.tga"
+	}
+	spriteType = {
+		name = "GFX_BOU"
+		texturefile = "gfx/flags/BOU.tga"
+	}
+	spriteType = {
+		name = "GFX_AVI"
+		texturefile = "gfx/flags/AVI.tga"
+	}
+	spriteType = {
+		name = "GFX_AUV"
+		texturefile = "gfx/flags/AUV.tga"
+	}
+	spriteType = {
+		name = "GFX_AMG"
+		texturefile = "gfx/flags/AMG.tga"
+	}
+	spriteType = {
+		name = "GFX_ALS"
+		texturefile = "gfx/flags/ALS.tga"
+	}
+	spriteType = {
+		name = "GFX_ALE"
+		texturefile = "gfx/flags/ALE.tga"
+	}
+	spriteType = {
+		name = "GFX_OKA"
+		texturefile = "gfx/flags/OKA.tga"
+	}
+	spriteType = {
+		name = "GFX_CHR"
+		texturefile = "gfx/flags/CHR.tga"
+	}
+	spriteType = {
+		name = "GFX_KIE"
+		texturefile = "gfx/flags/KIE.tga"
+	}
+	spriteType = {
+		name = "GFX_VOL"
+		texturefile = "gfx/flags/VOL.tga"
+	}
+	spriteType = {
+		name = "GFX_PLC"
+		texturefile = "gfx/flags/PLC.tga"
+	}
+	spriteType = {
+		name = "GFX_TEU"
+		texturefile = "gfx/flags/TEU.tga"
+	}
+	spriteType = {
+		name = "GFX_RIG"
+		texturefile = "gfx/flags/RIG.tga"
+	}
+	spriteType = {
+		name = "GFX_KUR"
+		texturefile = "gfx/flags/KUR.tga"
+	}
+	spriteType = {
+		name = "GFX_PRU"
+		texturefile = "gfx/flags/PRU.tga"
+	}
+	spriteType = {
+		name = "GFX_POL"
+		texturefile = "gfx/flags/POL.tga"
+	}
+	spriteType = {
+		name = "GFX_MAZ"
+		texturefile = "gfx/flags/MAZ.tga"
+	}
+	spriteType = {
+		name = "GFX_LIV"
+		texturefile = "gfx/flags/LIV.tga"
+	}
+	spriteType = {
+		name = "GFX_LIT"
+		texturefile = "gfx/flags/LIT.tga"
+	}
+	spriteType = {
+		name = "GFX_KRA"
+		texturefile = "gfx/flags/KRA.tga"
+	}
+	spriteType = {
+		name = "GFX_DNZ"
+		texturefile = "gfx/flags/DNZ.tga"
+	}
+	spriteType = {
+		name = "GFX_CUB"
+		texturefile = "gfx/flags/CUB.tga"
+	}
+	spriteType = {
+		name = "GFX_WSI"
+		texturefile = "gfx/flags/WSI.tga"
+	}
+	spriteType = {
+		name = "GFX_SNA"
+		texturefile = "gfx/flags/SNA.tga"
+	}
+	spriteType = {
+		name = "GFX_VRM"
+		texturefile = "gfx/flags/VRM.tga"
+	}
+	spriteType = {
+		name = "GFX_FLO"
+		texturefile = "gfx/flags/FLO.tga"
+	}
+	spriteType = {
+		name = "GFX_ILI"
+		texturefile = "gfx/flags/ILI.tga"
+	}
+	spriteType = {
+		name = "GFX_NZL"
+		texturefile = "gfx/flags/NZL.tga"
+	}
+	spriteType = {
+		name = "GFX_ALA"
+		texturefile = "gfx/flags/ALA.tga"
+	}
+	spriteType = {
+		name = "GFX_CSC"
+		texturefile = "gfx/flags/CSC.tga"
+	}
+	spriteType = {
+		name = "GFX_TEX"
+		texturefile = "gfx/flags/TEX.tga"
+	}
+	spriteType = {
+		name = "GFX_CAL"
+		texturefile = "gfx/flags/CAL.tga"
+	}
+	spriteType = {
+		name = "GFX_AUS"
+		texturefile = "gfx/flags/AUS.tga"
+	}
+	spriteType = {
+		name = "GFX_VNZ"
+		texturefile = "gfx/flags/VNZ.tga"
+	}
+	spriteType = {
+		name = "GFX_USA"
+		texturefile = "gfx/flags/USA.tga"
+	}
+	spriteType = {
+		name = "GFX_CAM"
+		texturefile = "gfx/flags/CAM.tga"
+	}
+	spriteType = {
+		name = "GFX_QUE"
+		texturefile = "gfx/flags/QUE.tga"
+	}
+	spriteType = {
+		name = "GFX_PRG"
+		texturefile = "gfx/flags/PRG.tga"
+	}
+	spriteType = {
+		name = "GFX_PEU"
+		texturefile = "gfx/flags/PEU.tga"
+	}
+	spriteType = {
+		name = "GFX_MEX"
+		texturefile = "gfx/flags/MEX.tga"
+	}
+	spriteType = {
+		name = "GFX_LOU"
+		texturefile = "gfx/flags/LOU.tga"
+	}
+	spriteType = {
+		name = "GFX_LAP"
+		texturefile = "gfx/flags/LAP.tga"
+	}
+	spriteType = {
+		name = "GFX_HAT"
+		texturefile = "gfx/flags/HAT.tga"
+	}
+	spriteType = {
+		name = "GFX_COL"
+		texturefile = "gfx/flags/COL.tga"
+	}
+	spriteType = {
+		name = "GFX_CHL"
+		texturefile = "gfx/flags/CHL.tga"
+	}
+	spriteType = {
+		name = "GFX_CAN"
+		texturefile = "gfx/flags/CAN.tga"
+	}
+	spriteType = {
+		name = "GFX_BRZ"
+		texturefile = "gfx/flags/BRZ.tga"
+	}
+	spriteType = {
+		name = "GFX_EIC"
+		texturefile = "gfx/flags/EIC.tga"
+	}
+	spriteType = {
+		name = "GFX_LOI"
+		texturefile = "gfx/flags/LOI.tga"
+	}
+	spriteType = {
+		name = "GFX_KOI"
+		texturefile = "gfx/flags/KOI.tga"
+	}
+	spriteType = {
+		name = "GFX_MCM"
+		texturefile = "gfx/flags/MCM.tga"
+	}
+	spriteType = {
+		name = "GFX_FLY"
+		texturefile = "gfx/flags/FLY.tga"
+	}
+	spriteType = {
+		name = "GFX_TRY"
+		texturefile = "gfx/flags/TRY.tga"
+	}
+	spriteType = {
+		name = "GFX_ORD"
+		texturefile = "gfx/flags/ORD.tga"
+	}
+	spriteType = {
+		name = "GFX_HSC"
+		texturefile = "gfx/flags/HSC.tga"
+	}
+	spriteType = {
+		name = "GFX_KID"
+		texturefile = "gfx/flags/KID.tga"
+	}
+	spriteType = {
+		name = "GFX_SLN"
+		texturefile = "gfx/flags/SLN.tga"
+	}
+	spriteType = {
+		name = "GFX_DMS"
+		texturefile = "gfx/flags/DMS.tga"
+	}
+	spriteType = {
+		name = "GFX_ULS"
+		texturefile = "gfx/flags/ULS.tga"
+	}
+	spriteType = {
+		name = "GFX_MTH"
+		texturefile = "gfx/flags/MTH.tga"
+	}
+	spriteType = {
+		name = "GFX_AVE"
+		texturefile = "gfx/flags/AVE.tga"
+	}
+	spriteType = {
+		name = "GFX_GBR"
+		texturefile = "gfx/flags/GBR.tga"
+	}
+	spriteType = {
+		name = "GFX_NOL"
+		texturefile = "gfx/flags/NOL.tga"
+	}
+	spriteType = {
+		name = "GFX_WLS"
+		texturefile = "gfx/flags/WLS.tga"
+	}
+	spriteType = {
+		name = "GFX_TYR"
+		texturefile = "gfx/flags/TYR.tga"
+	}
+	spriteType = {
+		name = "GFX_SCO"
+		texturefile = "gfx/flags/SCO.tga"
+	}
+	spriteType = {
+		name = "GFX_MNS"
+		texturefile = "gfx/flags/MNS.tga"
+	}
+	spriteType = {
+		name = "GFX_IRE"
+		texturefile = "gfx/flags/IRE.tga"
+	}
+	spriteType = {
+		name = "GFX_LEI"
+		texturefile = "gfx/flags/LEI.tga"
+	}
+	spriteType = {
+		name = "GFX_ENG"
+		texturefile = "gfx/flags/ENG.tga"
+	}
+	spriteType = {
+		name = "GFX_CRN"
+		texturefile = "gfx/flags/CRN.tga"
+	}
+	spriteType = {
+		name = "GFX_CNN"
+		texturefile = "gfx/flags/CNN.tga"
+	}
+	spriteType = {
+		name = "GFX_TUR"
+		texturefile = "gfx/flags/TUR.tga"
+	}
+	spriteType = {
+		name = "GFX_SLO"
+		texturefile = "gfx/flags/SLO.tga"
+	}
+	spriteType = {
+		name = "GFX_HUN"
+		texturefile = "gfx/flags/HUN.tga"
+	}
+	spriteType = {
+		name = "GFX_WAL"
+		texturefile = "gfx/flags/WAL.tga"
+	}
+	spriteType = {
+		name = "GFX_TRA"
+		texturefile = "gfx/flags/TRA.tga"
+	}
+	spriteType = {
+		name = "GFX_SER"
+		texturefile = "gfx/flags/SER.tga"
+	}
+	spriteType = {
+		name = "GFX_RMN"
+		texturefile = "gfx/flags/RMN.tga"
+	}
+	spriteType = {
+		name = "GFX_RAG"
+		texturefile = "gfx/flags/RAG.tga"
+	}
+	spriteType = {
+		name = "GFX_NAX"
+		texturefile = "gfx/flags/NAX.tga"
+	}
+	spriteType = {
+		name = "GFX_MON"
+		texturefile = "gfx/flags/MON.tga"
+	}
+	spriteType = {
+		name = "GFX_MOL"
+		texturefile = "gfx/flags/MOL.tga"
+	}
+	spriteType = {
+		name = "GFX_MOE"
+		texturefile = "gfx/flags/MOE.tga"
+	}
+	spriteType = {
+		name = "GFX_KNI"
+		texturefile = "gfx/flags/KNI.tga"
+	}
+	spriteType = {
+		name = "GFX_GRE"
+		texturefile = "gfx/flags/GRE.tga"
+	}
+	spriteType = {
+		name = "GFX_EPI"
+		texturefile = "gfx/flags/EPI.tga"
+	}
+	spriteType = {
+		name = "GFX_DAL"
+		texturefile = "gfx/flags/DAL.tga"
+	}
+	spriteType = {
+		name = "GFX_CYP"
+		texturefile = "gfx/flags/CYP.tga"
+	}
+	spriteType = {
+		name = "GFX_CRT"
+		texturefile = "gfx/flags/CRT.tga"
+	}
+	spriteType = {
+		name = "GFX_CRO"
+		texturefile = "gfx/flags/CRO.tga"
+	}
+	spriteType = {
+		name = "GFX_CEP"
+		texturefile = "gfx/flags/CEP.tga"
+	}
+	spriteType = {
+		name = "GFX_LAE"
+		texturefile = "gfx/flags/LAE.tga"
+	}
+	spriteType = {
+		name = "GFX_BYZ"
+		texturefile = "gfx/flags/BYZ.tga"
+	}
+	spriteType = {
+		name = "GFX_BUL"
+		texturefile = "gfx/flags/BUL.tga"
+	}
+	spriteType = {
+		name = "GFX_BOS"
+		texturefile = "gfx/flags/BOS.tga"
+	}
+	spriteType = {
+		name = "GFX_ATH"
+		texturefile = "gfx/flags/ATH.tga"
+	}
+	spriteType = {
+		name = "GFX_ALB"
+		texturefile = "gfx/flags/ALB.tga"
+	}
+	spriteType = {
+		name = "GFX_ACH"
+		texturefile = "gfx/flags/ACH.tga"
+	}
+	spriteType = {
+		name = "GFX_ICE"
+		texturefile = "gfx/flags/ICE.tga"
+	}
+	spriteType = {
+		name = "GFX_KRL"
+		texturefile = "gfx/flags/KRL.tga"
+	}
+	spriteType = {
+		name = "GFX_SMI"
+		texturefile = "gfx/flags/SMI.tga"
+	}
+	spriteType = {
+		name = "GFX_LTG"
+		texturefile = "gfx/flags/LTG.tga"
+	}
+	spriteType = {
+		name = "GFX_LVA"
+		texturefile = "gfx/flags/LVA.tga"
+	}
+	spriteType = {
+		name = "GFX_EST"
+		texturefile = "gfx/flags/EST.tga"
+	}
+	spriteType = {
+		name = "GFX_SCA"
+		texturefile = "gfx/flags/SCA.tga"
+	}
+	spriteType = {
+		name = "GFX_SHL"
+		texturefile = "gfx/flags/SHL.tga"
+	}
+	spriteType = {
+		name = "GFX_NOR"
+		texturefile = "gfx/flags/NOR.tga"
+	}
+	spriteType = {
+		name = "GFX_GOT"
+		texturefile = "gfx/flags/GOT.tga"
+	}
+	spriteType = {
+		name = "GFX_FIN"
+		texturefile = "gfx/flags/FIN.tga"
+	}
+	spriteType = {
+		name = "GFX_DAN"
+		texturefile = "gfx/flags/DAN.tga"
+	}
+	spriteType = {
+		name = "GFX_SWE"
+		texturefile = "gfx/flags/SWE.tga"
+	}
+	spriteType = {
+		name = "GFX_NAT"
+		texturefile = "gfx/flags/NAT.tga"
+	}
+	spriteType = {
+		name = "GFX_PIR"
+		texturefile = "gfx/flags/PIR.tga"
+	}
+	spriteType = {
+		name = "GFX_REB"
+		texturefile = "gfx/flags/REB.tga"
+	}
+	spriteType = {
+		name = "GFX_GLU"
+		texturefile = "gfx/flags/GLU.tga"
+	}
+	spriteType = {
+		name = "GFX_XSN"
+		texturefile = "gfx/flags/XSN.tga"
+	}
+	spriteType = {
+		name = "GFX_NWC"
+		texturefile = "gfx/flags/NWC.tga"
+	}
+	spriteType = {
+		name = "GFX_NVC"
+		texturefile = "gfx/flags/NVC.tga"
+	}
+	spriteType = {
+		name = "GFX_MAV"
+		texturefile = "gfx/flags/MAV.tga"
+	}
+	spriteType = {
+		name = "GFX_CLT"
+		texturefile = "gfx/flags/CLT.tga"
+	}
+	spriteType = {
+		name = "GFX_HER"
+		texturefile = "gfx/flags/HER.tga"
+	}
+	spriteType = {
+		name = "GFX_BGZ"
+		texturefile = "gfx/flags/BGZ.tga"
+	}
+	spriteType = {
+		name = "GFX_ZCV"
+		texturefile = "gfx/flags/ZCV.tga"
+	}
+	spriteType = {
+		name = "GFX_UKS"
+		texturefile = "gfx/flags/UKS.tga"
+	}
+	spriteType = {
+		name = "GFX_TRN"
+		texturefile = "gfx/flags/TRN.tga"
+	}
+	spriteType = {
+		name = "GFX_TRK"
+		texturefile = "gfx/flags/TRK.tga"
+	}
+	spriteType = {
+		name = "GFX_SOE"
+		texturefile = "gfx/flags/SOE.tga"
+	}
+	spriteType = {
+		name = "GFX_RHN"
+		texturefile = "gfx/flags/RHN.tga"
+	}
+	spriteType = {
+		name = "GFX_REI"
+		texturefile = "gfx/flags/REI.tga"
+	}
+	spriteType = {
+		name = "GFX_REA"
+		texturefile = "gfx/flags/REA.tga"
+	}
+	spriteType = {
+		name = "GFX_MCC"
+		texturefile = "gfx/flags/MCC.tga"
+	}
+	spriteType = {
+		name = "GFX_KRD"
+		texturefile = "gfx/flags/KRD.tga"
+	}
+	spriteType = {
+		name = "GFX_JOS"
+		texturefile = "gfx/flags/JOS.tga"
+	}
+	spriteType = {
+		name = "GFX_HNS"
+		texturefile = "gfx/flags/HNS.tga"
+	}
+	spriteType = {
+		name = "GFX_HBC"
+		texturefile = "gfx/flags/HBC.tga"
+	}
+	spriteType = {
+		name = "GFX_GRC"
+		texturefile = "gfx/flags/GRC.tga"
+	}
+	spriteType = {
+		name = "GFX_FRX"
+		texturefile = "gfx/flags/FRX.tga"
+	}
+	spriteType = {
+		name = "GFX_DAG"
+		texturefile = "gfx/flags/DAG.tga"
+	}
+	spriteType = {
+		name = "GFX_CYR"
+		texturefile = "gfx/flags/CYR.tga"
+	}
+	spriteType = {
+		name = "GFX_CAU"
+		texturefile = "gfx/flags/CAU.tga"
+	}
+	spriteType = {
+		name = "GFX_BRL"
+		texturefile = "gfx/flags/BRL.tga"
+	}
+	spriteType = {
+		name = "GFX_AZE"
+		texturefile = "gfx/flags/AZE.tga"
+	}
+	spriteType = {
+		name = "GFX_AYY"
+		texturefile = "gfx/flags/AYY.tga"
+	}
+	spriteType = {
+		name = "GFX_BKT"
+		texturefile = "gfx/flags/BKT.tga"
+	}
+	spriteType = {
+		name = "GFX_RST"
+		texturefile = "gfx/flags/RST.tga"
+	}
+	spriteType = {
+		name = "GFX_QIZ"
+		texturefile = "gfx/flags/QIZ.tga"
+	}
+	spriteType = {
+		name = "GFX_JAL"
+		texturefile = "gfx/flags/JAL.tga"
+	}
+	spriteType = {
+		name = "GFX_BAG"
+		texturefile = "gfx/flags/BAG.tga"
+	}
+	spriteType = {
+		name = "GFX_SUQ"
+		texturefile = "gfx/flags/SUQ.tga"
+	}
+	spriteType = {
+		name = "GFX_RSL"
+		texturefile = "gfx/flags/RSL.tga"
+	}
+	spriteType = {
+		name = "GFX_ABA"
+		texturefile = "gfx/flags/ABA.tga"
+	}
+	spriteType = {
+		name = "GFX_KUY"
+		texturefile = "gfx/flags/KUY.tga"
+	}
+	spriteType = {
+		name = "GFX_WRM"
+		texturefile = "gfx/flags/WRM.tga"
+	}
+	spriteType = {
+		name = "GFX_GNE"
+		texturefile = "gfx/flags/GNE.tga"
+	}
+	spriteType = {
+		name = "GFX_LRP"
+		texturefile = "gfx/flags/LRP.tga"
+	}
+	spriteType = {
+		name = "GFX_GRP"
+		texturefile = "gfx/flags/GRP.tga"
+	}
+}

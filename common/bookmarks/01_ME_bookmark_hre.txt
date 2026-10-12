@@ -1,0 +1,31 @@
+bookmark = {
+	name = "ME_BOOKMARK_HRE"
+	desc = "ME_BOOKMARK_HRE_DESC"
+	date = 1444.11.11
+
+	center = 67
+	default = yes
+	
+	country = HAB
+	country = AAC
+	country = CLI
+	country = BRA
+	country = SAX
+	country = HSA
+	country = BRU
+	country = MUN
+	country = STE
+	country = TEU
+	country = HES
+	country = PAL
+	country = NUM
+	country = LBV
+	#country = UBV
+	#country = ING
+
+	easy_country = BRA
+	easy_country = HES
+	easy_country = HAB
+	easy_country = CLI
+	easy_country = AAC
+}

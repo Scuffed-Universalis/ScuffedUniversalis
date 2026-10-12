@@ -1,0 +1,85 @@
+# Merge with other file later!
+
+the_bock = {
+	start = 94
+	date = 963.01.01
+	time = { months = 60 }
+	build_cost = 100
+	can_be_moved = no
+	starting_tier = 1
+	type = monument
+	tier_0 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 100 }
+	}
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 100 }
+		
+		province_modifiers = { 
+			local_defensiveness = 0.15
+			local_garrison_size = 0.1
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 120 }
+		cost_to_upgrade = { factor = 400 }
+		
+		province_modifiers = { 
+			local_defensiveness = 0.25
+			local_garrison_size = 0.25
+		}
+		
+		country_modifiers = { 
+			defensiveness = 0.1
+			army_tradition = 0.2
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 1000 }
+		
+		province_modifiers = { 
+			local_defensiveness = 0.5
+			local_garrison_size = 0.5
+			fort_level = 1
+		}
+		
+		country_modifiers = { 
+			defensiveness = 0.2
+			army_tradition = 0.5
+		}
+		
+		conditional_modifier = {
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = ME_GOT_SPECIAL_REWARD
+					owner = {
+						OR = {
+							mission_completed = LUX_thungen
+							mission_completed = ME_bur_the_bock
+							overlord = {
+								mission_completed = ME_bur_the_bock
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				max_general_siege = 1
+				defensiveness = 0.1
+			}
+		}
+		
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = ME_siege_engineer
+					skill = 3
+					location = 94
+					cost_multiplier = 0.33
+				}
+			}
+		}
+	}
+}

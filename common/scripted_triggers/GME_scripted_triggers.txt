@@ -1,0 +1,26 @@
+province_is_owner_culture_or_owner_has_cultural_union = {
+	custom_trigger_tooltip = {
+		tooltip = province_is_$culture_group$_or_owner_has_cultural_union_tt
+		culture_group = $culture_group$
+		OR = {
+			has_owner_culture = yes
+			owner = {
+				culture_group = $culture_group$
+				has_cultural_union = yes
+			}
+		}
+	}
+}
+
+province_is_tibetan = {
+	OR = {
+		culture = tibetan
+		culture = tibetan_new
+	}
+}
+province_is_buddhist_or_dharmic = {
+	OR = {
+		emf_religion_is_buddhist = yes
+		religion_group = dharmic
+	}
+}

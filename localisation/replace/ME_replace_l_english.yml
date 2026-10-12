@@ -1,0 +1,51 @@
+﻿l_english:
+ MISSION_COMPLETED:1 "Completed Mission §Y$MISSION_TITLE$§!\n"
+ MISSION_NOT_COMPLETED:1 "Not completed Mission §Y$MISSION_TITLE$§!\n"
+ ENACT_REFORM_EFFECT_LOCK_WARNING:0 "(§RThis is a locked reform. You will not be able to switch to other reforms on the same Tier.§!)\n"
+ 
+ maintheme: "Europa Expanded Theme - A World to Explore"
+ 
+ IS_RIVAL_WITH:0 "Has rivaled"
+ IS_NOT_RIVAL_WITH:0 "Has NOT rivaled"
+ 
+ HAVE_LESS_DEVELOPMENT_THAN_COMP:1 "Have less Development (currently $CURRENT|Y0$) than $COUNTRYNAME|Y$ ($VAL|Y$)"
+ HAVE_MORE_DEVELOPMENT_THAN_COMP:1 "Have more Development (currently $CURRENT|Y0$) than $COUNTRYNAME|Y$ ($VAL|Y$)"
+  
+ IS_PROSPEROUS: "Is prosperous"
+ 
+ 
+ ACHIEVEMENTS_DISABLED_BECAUSE:0 "This game is played with §YMissions Expanded§!. \n\nAchievements are disabled because:\n"
+ 
+ IS_ACCEPTED_CULTURE:0 "Has accepted the culture "
+ 
+ START_SCREEN_UP_LEFT_DESC:0 "[StartScreenUpLeftDesc] [GetMissionsExpandedStartScreenText]"
+ 
+ shadow_kingdom_decision_title: "£hre_text_icon£ Rein in Italy"
+ great_peasants_war_emperor_decision_title: "£hre_text_icon£ End the Great Peasants' War"
+ HAVE_LESS_PORTS_THAN:0 "Have less ports connected to capital than "
+ HAVE_MORE_PORTS_THAN:0 "Number of ports connected to capital at least "
+ 
+ ADE: "Tahirids"
+ ADE_ADJ: "Tahirid"
+
+ spanish_nation_title: "@SPA Form Spanish Nation Militarily"
+ spanish_nation_diplomatically_title: "@SPA Form Spanish Nation Diplomatically"
+ english_nation_title: "@ENG Form English Nation"
+ british_nation_title: "@GBR Form British Nation"
+ french_nation_title: "@FRA Form French Nation"
+ 
+ netherlands_nation_title: "@NED Form Dutch Nation"
+
+ castilian_civil_war.1.a: "Support Joanna of Portugal"
+ castilian_civil_war.1.b: "Support Isabella of Castile"
+ 
+ standardized_uniforms_title: "£army_professionalism_text_icon£ State Firearm Regiments"
+ state_firearm_regiments_title: "£army_professionalism_text_icon£ Standardized Uniforms"
+ abolish_state_firearm_regiments_title: "£army_professionalism_text_icon£ Abolish our Armed Elite Regiments"
+ abolish_standardized_uniforms_title: "£army_professionalism_text_icon£ Abolish Standardized Uniforms"
+ ME_until_revoked_state_firearm_regiments: "until revoked with '§YAbolish our Armed Elite Regiments§!' Decision for §R-25§! Military Power"
+ ME_until_revoked_standardized_uniforms: "until revoked with '§YAbolish Standardized Uniforms§!' Decision for §R-25§! Military Power"
+ ME_gunpowder_core_extra_context: "If we get Military Technology §Y19§! and we have had this enabled for at least §Y10§! Years, '§YProliferation of the Musket§!' event will give us additional §G+2.5%§! Army Professionalism."
+ 
+ bullion_famine.1.tooltip: "The first §YChristian European§! power to secure a new source of §YGold§! will reap great benefits, gaining the following modifier in the province:"
+ bullion_famine_ME_exceptions: "Owning §Y[346.GetName]§! will not trigger success."

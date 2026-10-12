@@ -1,0 +1,1250 @@
+declarewar = {
+	condition = {
+		tooltip = AI_CANNOT_DECLARE_WHEN_STABILITY_LOSS
+		potential = {
+			ai = yes
+		}
+		allow = {
+			ai = yes
+			NOT = {
+				has_global_modifier_value = {
+					which = stability_cost_to_declare_war
+					value = 1
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_DECLARE_WARS_OTHER_THAN_INDEPENDENCE_WARS
+		potential = {
+			has_country_modifier = revoked_war_rights
+			FROM = { NOT = { overlord_of = ROOT } }
+		}
+		allow = {
+			OR = {
+				NOT = { has_country_modifier = revoked_war_rights }
+				FROM = { overlord_of = ROOT }
+			}
+		}
+	}
+	condition = {
+		tooltip = ME_TIM_STRATOCRACY_CANNOT_DECLARE_WARS
+		potential = {
+			tag = TIM
+		}
+		allow = {
+			OR = {
+				NOT = {
+					has_reform = timurid_stratocracy
+				}
+				mission_completed = ME_tim_by_blood_alone
+				has_country_flag = me_tim_allows_decleration_of_war
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = GRAND_CRUSADE_NO_OTHER_WAR
+		potential = { 
+			has_country_flag = can_declare_grand_crusade_wars
+		}
+		allow = {
+			NOT = {
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_grand_crusade
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = ME_BUR_NO_DECLARING_WAR_IN_HRE
+		potential = { 
+			has_country_flag = me_bur_no_hre_wars
+			is_part_of_hre = yes
+			is_emperor = no
+			FROM = {
+				is_part_of_hre = yes
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	effect = {
+		###############
+		####VANILLA####
+		###############
+		on_war_declaration_effect = yes
+		if = {
+			limit = { 
+				has_country_flag = nor_norwegian_independence_modifier
+				FROM = { tag = DAN }
+			}
+			add_country_modifier = {
+				name = nor_norwegian_independence_war_mod
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = teu_joined_the_hre
+				tag = TEU
+				is_part_of_hre = yes
+				FROM = { is_part_of_hre = yes }
+			}
+			clr_country_flag = teu_joined_the_hre
+			country_event = {
+				id = flavor_teu.33
+				days = 10
+			}
+		}
+		#################
+		####/ VANILLA####
+		#################
+		if = {
+			limit = {
+				has_reform = timurid_stratocracy
+			}
+			clr_country_flag = me_tim_allows_decleration_of_war
+		}
+
+		if = {
+			limit = {
+				has_reform = timurid_stratocracy
+				NOT = { mission_completed = ME_tim_by_blood_alone }
+			}
+			add_government_power = {
+				mechanic_type = timurid_militarization
+				power_type = timurid_stratocracy_power
+				value = -30
+			}
+		}
+		
+		if = {
+			limit = {
+				mission_completed = sweden_support_the_roman_church
+				FROM = {
+					NOT = { religion = catholic }
+				}
+			}
+			change_variable = { which = swe_num_of_wars_against_non_catholics value = 1 }
+		}
+		############
+		#EE_Pope#
+		############
+		if = {
+			limit = {
+				has_government_mechanic = papal_factionalism_mechanic
+				FROM = { religion = catholic }
+			}
+			add_government_power = {
+				mechanic_type = papal_factionalism_mechanic
+				power_type = papal_factionalism
+				value = -5
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = grand_crusades_enabled
+				has_country_flag = grand_crusader_war_monger_flag
+				is_in_war = {
+					attacker_leader = ROOT
+					casus_belli = cb_grand_crusade
+				}
+			}
+			FROM = {
+				save_global_event_target_as = grand_crusade_target
+			}
+		}
+		############
+		#EE_Austria#
+		############
+		if = {
+			limit = {
+				has_country_flag = me_hab_von_haugwitz_reforms
+			}
+			remove_country_modifier = me_hab_peacetime_army
+			add_country_modifier = {
+				name = me_hab_wartime_army
+				duration = -1
+				desc = me_as_long_as_we_are_at_war
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = me_hab_hofkriegstrat_flag
+			}
+			add_country_modifier = {
+				name = me_hab_war_council
+				duration = -1
+			}
+		}
+		every_ally = {
+			if = {
+				limit = {
+					has_reform = timurid_governor
+				}
+				add_government_reform = timurid_prince
+			}
+		}
+		if = {
+			limit = {
+				has_reform = timurid_governor
+			}
+			add_government_reform = timurid_prince
+		}
+		if = {
+			limit = {
+				has_country_flag = me_mug_imperialism
+				has_casus_belli = {
+					type = cb_imperial
+					target = FROM
+				}
+			}
+			change_variable = {
+				which = MEImperialismUsage
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = me_tim_planned_war_with_china
+				war_with = MNG
+			}
+			clr_country_flag = me_tim_planned_war_with_china
+			add_country_modifier = {
+				name = me_tim_modern_siege_engines
+				duration = 7300
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = me_tim_no_stab_hit_vassal
+				war_with = TIM
+				has_casus_belli = {
+					type = cb_independence_war
+					target = FROM
+				}
+			}
+			clr_country_flag = me_tim_no_stab_hit_vassal
+			add_stability = 3
+		}
+		
+		if = {
+			limit = {
+				FROM = {
+					has_government_mechanic = peasant_vigour_mechanic
+				}
+			}
+			FROM = {
+				country_event = { id = ME_Peasant_Republics_Events.1 }
+			}
+		}
+		#################
+		#EE Irish Minors#
+		#################
+		if = {
+			limit = {
+				OR = {
+					tag = ENG
+					tag = SCO
+					tag = GBR
+				}
+				FROM = { primary_culture = irish }
+			}
+			every_country = {
+				limit = { has_country_flag = EE_Minor_IRI_call_arms }
+				country_event = { id = EE_Irish_Minors_Events.14 }
+			}
+		}
+		#############
+		#EE Brittany#
+		############# 
+		if = {
+			limit = {
+				is_in_war = { casus_belli = EE_BRI_Mad_war }
+			}
+			if = {
+				limit = { has_country_flag = EE_BRI_ENG_GBR_Mad_War }
+				add_country_modifier = {
+					name = EE_BRI_English_Longbow
+					duration = -1
+					desc = during_mad_war
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = EE_BRI_HAB_Mad_War }
+				add_country_modifier = {
+					name = EE_BRI_German_Landsknechts
+					duration = -1
+					desc = during_mad_war
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = EE_BRI_CAS_ARA_SPA_Mad_War }
+				add_country_modifier = {
+					name = EE_BRI_Spanish_Steel
+					duration = -1
+					desc = during_mad_war
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = EE_BRI_Foreign_support
+					duration = -1
+					desc = during_mad_war
+				}
+			}
+		}
+		############
+		#EE Celtica#
+		############
+		if = {
+			limit = {
+				tag = CLT
+				FROM = { is_emperor = yes }
+			}
+			if = {
+				limit = {
+					is_in_war = { casus_belli = EE_CLT_celtic_fury }
+				}
+				if = {
+					limit = { has_country_flag = EE_CLT_direct_path_done }
+					if = {
+						limit = {
+							OR = {
+								has_country_flag = EE_CLT_disrupted_logistics_10 
+								has_country_flag = EE_CLT_disrupted_logistics_no_hre_rival
+							}
+						}
+						emperor = {
+							add_country_modifier = {
+								name = EE_CLT_disrupted_logistics_10_modifier
+								duration = -1
+								desc = as_long_as_celtic_fury
+							}
+						}
+					}
+					else_if = {
+						limit = { has_country_flag = EE_CLT_disrupted_logistics_less_10 }
+						every_country = {
+							limit = { has_country_flag = EE_CLT_disrupted_logistics }
+							emperor = {
+								add_country_modifier = {
+									name = EE_CLT_disrupted_logistics_modifier
+									duration = -1
+									hidden = yes
+									desc = as_long_as_celtic_fury
+								}
+							}
+						}
+					}
+					if = {
+						limit = { has_country_flag = EE_CLT_cath_zealots }
+						random_province = {
+							limit = { owned_by = emperor }
+							spawn_rebels = {
+								size = 2
+								type = catholic_rebels
+								friend = CLT
+							}
+							set_province_flag = EE_CLT_rebel_spawned
+						}
+						random_province = {
+							limit = { 
+								owned_by = emperor
+								NOT = { has_province_flag = EE_CLT_rebel_spawned }
+							}
+							spawn_rebels = {
+								size = 2
+								type = catholic_rebels
+								friend = CLT
+							} 
+						}
+					}
+					else_if = {
+						limit = { has_country_flag = EE_CLT_NON_hre_religion_prince_flag }
+						random_country = {
+							limit = { has_country_flag = EE_CLT_NON_hre_religion_prince_choice_flag }
+							country_event = {
+								id = EE_Celtica_Events.32
+							}
+						}
+					}
+					else_if = {
+						limit = { has_country_flag = EE_CLT_prince_tt }
+						random_country = {
+							limit = { has_country_flag = EE_CLT_prince_choice_flag }
+							country_event = {
+								id = EE_Celtica_Events.32
+							}
+						}
+					}
+					emperor = {
+						add_country_modifier = {
+							name = EE_CLT_Reichsstrabe_sabotaged
+							duration = -1
+							desc = as_long_as_celtic_fury
+						}
+					}
+				}
+				else_if = {
+					limit = { has_country_flag = EE_CLT_diplo_path_done }
+					random_country = {
+						limit = { has_country_flag = EE_CLT_50_dev_prince_choice_flag }
+						country_event = {
+							id = EE_Celtica_Events.32
+						}
+					}
+					if = {
+						limit = { has_country_flag = EE_CLT_Reichsarmatur_20 }
+						emperor = {
+							add_country_modifier = {
+								name = EE_CLT_Reichsarmatur_20_modifier
+								duration = -1
+								desc = as_long_as_celtic_fury
+							}
+						}
+					}
+					else_if = {
+						limit = { has_country_flag = EE_CLT_Reichsarmatur_less_20 }
+						every_country = {
+							limit = { has_country_flag = EE_CLT_Reichsarmatur }
+							emperor = {
+								add_country_modifier = {
+									name = EE_CLT_Reichsarmatur_modifier
+									duration = -1
+									desc = as_long_as_celtic_fury
+									hidden = yes
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		### EE France ###
+		if = {
+			limit = {
+				tag = FRA
+				is_in_war = { casus_belli = cb_EE_FRA_italian_wars }
+			}
+			set_country_flag = EE_FRA_Italian_Wars_incident_tree
+			swap_non_generic_missions = yes
+			random_war_enemy_country = {
+				limit = {
+					is_in_war = {
+						casus_belli = cb_EE_FRA_italian_wars
+						attacker_leader = FRA
+					}
+				}
+				every_country = {
+					limit = { has_country_flag = EE_FRA_league_venice_flag }
+					join_all_defensive_wars_of = PREV
+				}
+			}
+			
+			#variables to use in IW MT
+			
+			set_variable = {
+				which = EE_units_killed_counter
+				value = 0
+			}
+			# for some reason doesn't work?
+			set_variable = {
+				which = EE_FRA_IW_num_of_won_battles
+				value = 1
+			}
+			set_variable = {
+				which = EE_naval_won
+				value = 0
+			}
+			set_variable = {
+				which = EE_ships_killed_counter
+				value = 0
+			}
+		}
+		if = {
+			limit = {
+				tag = FRA
+				is_in_war = { casus_belli = EE_FRA_transport_invasion }
+			}
+			add_country_modifier = {
+				name = EE_FRA_ENG_wars_expanded
+				duration = -1
+				desc = during_transport_invasion
+			}
+		}
+		#################
+		## EE Angevins ##
+		#################
+		if = {
+			limit = {
+				is_in_war = {
+					casus_belli = cb_ave_italian_wars
+				}
+			}
+			clr_country_flag = AVE_unlock_italian_wars_cb_flag
+			FROM = { 
+				save_event_target_as = eng_defender
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_enemy = ROOT
+						culture_group = latin
+					}
+				}
+				country_event = { id = ME_Angevin_Empire_Events.11 }
+			}
+		}
+		############
+		#EE Burgundy#
+		############
+		if = {
+			limit = {
+				has_country_flag = me_bur_planned_war_flag
+				NOT = {
+					had_country_flag = {
+						flag = me_bur_planned_war_flag
+						days = 365
+					}
+				}
+			}
+			create_general_with_pips = {
+				tradition = 60
+				add_shock = 1
+			}
+			add_country_modifier = {
+				name = me_bur_planned_war
+				duration = 1825
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = me_bur_planned_war_by_bribery_flag
+				NOT = {
+					had_country_flag = {
+						flag = me_bur_planned_war_by_bribery_flag
+						days = 365
+					}
+				}
+			}
+			create_general_with_pips = {
+				tradition = 40
+				add_shock = 1
+			}
+			add_country_modifier = {
+				name = me_bur_planned_war
+				duration = 1825
+			}
+		}
+		############
+		#End of EE Burgundy#
+		############
+	}
+}
+
+requestpeace = {
+	###VANILLA
+	#######################
+	#k
+	###END OF VANILLA
+	#######################
+
+	#######################
+	###EUROPA EXPANDED
+	condition = {
+		tooltip = CANNOT_SIGN_SEPERATE_PEACE_AS_INDIAN_HEGEMONY_COUP_TARGET
+		potential = {
+			is_in_war = {
+				participants = ROOT
+				participants = FROM
+				casus_belli = cb_persia_indian_hegemony_coup
+			}
+			OR = {
+				tag = event_target:me_persia_indian_hegemony_mechanic_coup_target
+				FROM = {
+					tag = event_target:me_persia_indian_hegemony_mechanic_coup_target
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	###END OF EUROPA EXPANDED
+	#########################
+}
+
+annexationaction = {
+	condition = {
+		tooltip = ANNEX_TOO_LOW
+		potential = {
+			FROM = {
+				vassal_of = ROOT
+			}
+		}
+		allow = {
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+			}
+		}
+	}
+	#condition = {
+	#	tooltip = ANNEXINVALID
+	#	potential = {
+	#		FROM = {
+	#			vassal_of = ROOT
+	#		}
+	#	}
+	#	allow = {
+	#		FROM = {
+	#			years_in_vassalage_under = {
+	#				who = ROOT
+	#				years = 10
+	#			}
+	#		}
+	#	}
+	#}
+	condition = {
+		tooltip = CANNOT_ANNEX
+		potential = {
+			FROM = {
+				has_country_modifier = tur_mamlukian_administration
+			}
+		}
+		allow = {
+			FROM = {
+				NOT = { has_country_modifier = tur_mamlukian_administration }
+			}
+		}
+	}
+	condition = {
+		tooltip = NEEDS_50_CROWNLAND_TT
+		potential = {
+			has_government_attribute = need_crownland_to_annex
+			NOT = { crown_land_share = 50 }
+		}
+		allow = {
+			crown_land_share = 50
+		}
+	}
+
+	###EUROPA EXPANDED
+	condition = {
+		tooltip = " "
+		potential = {
+			FROM = {
+				vassal_of = ROOT
+			}
+			ai = yes
+			FROM = {
+				OR = {
+					has_country_flag = PRU_ducal
+					has_country_flag = KUR_ducal
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = " "
+		potential = {
+			FROM = {
+				vassal_of = ROOT
+			}
+			ai = yes
+			FROM = {
+				has_country_flag = ME_released_as_vassal
+			}
+			NOT = {
+				FROM = {
+					OR = {
+						num_of_cities = 8
+						NOT = {
+							any_core_province = {
+								NOT = { country_or_non_sovereign_subject_holds = ROOT }
+							}
+						}
+						had_country_flag = {
+							flag = ME_released_as_vassal
+							days = 10950
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = " "
+		potential = {
+			FROM = {
+				vassal_of = ROOT
+				tag = HED
+			}
+			ai = yes
+			alliance_with = MDA
+		}
+		allow = {
+			always = no
+		}
+	}
+	condition = {
+		tooltip = HAS_PRIVILIGE
+		potential = {
+			FROM = {
+				vassal_of = ROOT
+			}
+		}
+		allow = {
+			NOT = {
+				has_estate_privilege = ME_estate_nobles_TIM_disloyal_princes
+			}
+		}
+	}
+	condition = {
+		tooltip = EE_IRE_CANNOT_ANNEX
+		potential = {
+			FROM = { is_subject_of_type = EE_Minor_IRI_Mor_Tuath }
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = EE_IRE_completed_clan_loyalty
+				has_country_flag = EE_IRE_Ruiri_Integrate_flag
+			}
+		}
+	}
+	condition = {
+		tooltip = EE_FRA_CANNOT_ANNEX
+		potential = {
+			has_country_flag = EE_FRA_unlock_centralize_fief
+			FROM = { is_subject_of_type = EE_FRA_fief }
+		}
+		allow = {
+			stability = 1
+			adm_power = 50
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_seize_crownlands_counter_tt
+				check_variable = {
+					which = EE_FRA_seize_crownlands_counter
+					value = 1
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = EE_FRA_unlock_centralize_fief
+				FROM = { is_subject_of_type = EE_FRA_fief }
+			}
+			add_stability = -1
+			add_adm_power = -50
+			custom_tooltip = EE_FRA_change_crownlands_Counter
+			custom_tooltip = EE_FRA_fuedal_fief_lib_desire_tt
+			hidden_effect = {
+				change_variable = {
+					which = EE_FRA_seize_crownlands_counter
+					value = -1
+				}
+				every_subject_country = {
+					limit = { is_subject_of_type = EE_FRA_fief }
+					add_liberty_desire = 10
+				}
+			}
+			FROM = {
+				capital_scope = {
+					spawn_rebels = {
+						type = pretender_rebels
+						size = 3
+					}
+				}
+			}
+		}
+	}
+	#condition = {
+	#	tooltip = ANNEXINVALID
+	#	potential = {
+	#		FROM = {
+	#			vassal_of = ROOT
+	#		}
+	#	}
+	#	allow = {
+	#		FROM = {
+	#			years_in_vassalage_under = {
+	#				who = ROOT
+	#				years = 10
+	#			}
+	#		}
+	#	}
+	#}
+}
+
+tributary_state_action = {
+	condition = {
+		potential = {
+			ai = yes
+		}
+		allow = {
+			OR = {
+				NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+				AND = {
+					ROOT = { capital_scope = { superregion = china_superregion } }
+					NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
+				}
+			}
+			OR = {
+				NOT = { ROOT = { capital_scope = { region = japan_region } } }
+				AND = {
+					ROOT = { capital_scope = { region = japan_region } }
+					NOT = { FROM = { capital_scope = { region = japan_region } } }
+				}
+			}
+		}
+	}
+	
+	condition = {
+		tooltip = " "
+		potential = {
+			ai = yes
+			capital_scope = {
+				OR = {
+					region = malaya_region
+					region = indonesia_region
+					region = moluccas_region
+				}
+			}
+			FROM = {
+				capital_scope = {
+					OR = {
+						region = malaya_region
+						region = indonesia_region
+						region = moluccas_region
+					}
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+ask_for_tributary_state_action = {
+	condition = {
+		potential = {
+			ai = yes
+		}
+		allow = {
+			OR = {
+				NOT = { FROM = { capital_scope = { superregion = china_superregion } } }
+				AND = {
+					FROM = { capital_scope = { superregion = china_superregion } }
+					NOT = { ROOT = { capital_scope = { superregion = china_superregion } } }
+				}
+			}
+			OR = {
+				NOT = { FROM = { capital_scope = { region = japan_region } } }
+				AND = {
+					FROM = { capital_scope = { region = japan_region } }
+					NOT = { ROOT = { capital_scope = { region = japan_region } } }
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = " "
+		potential = {
+			ai = yes
+			capital_scope = {
+				OR = {
+					region = malaya_region
+					region = indonesia_region
+					region = moluccas_region
+				}
+			}
+			FROM = {
+				capital_scope = {
+					OR = {
+						region = malaya_region
+						region = indonesia_region
+						region = moluccas_region
+					}
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+warningaction = {
+	condition = {
+		tooltip = " "
+		potential = { #this locks AQ out of expansion
+			ai = yes
+			tag = QAR
+			FROM = {
+				tag = AKK
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+royal_marriage = {
+	condition = {
+		tooltip = MARWAR
+		potential = {
+		}
+		allow = {
+			NOT = { war_with = FROM }
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = POR_marrying_cas_or_spa_is_good
+				FROM = {
+					OR = {
+						tag = CAS
+						tag = SPA
+					}
+				}
+			}
+			add_favors = {
+				who = FROM
+				amount = 5
+			}
+		}
+	}
+}
+
+break_marriage = {
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = POR_marrying_cas_or_spa_is_good
+				FROM = {
+					OR = {
+						tag = CAS
+						tag = SPA
+					}
+				}
+			}
+			add_favors = {
+				who = FROM
+				amount = -5
+			}
+		}
+	}
+}
+
+###########################################
+#Alliance Diplo action for EE Irish Minors#
+###########################################
+allianceaction = {
+	condition = {
+		tooltip = PIRATE_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_pirates
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_pirates }
+				FROM = { has_government_attribute = is_pirate_republic_reform }
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_PIRATE_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_pirates
+			}
+			NOT = { has_government_attribute = is_pirate_republic_reform }
+		}
+		allow = {
+			OR = {
+				has_government_attribute = is_pirate_republic_reform
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_pirates } }
+			}
+		}
+	}
+	condition = {
+		tooltip = REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_republics
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_republics }
+				FROM = { government = republic }
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_republics
+			}
+			NOT = { government = republic }
+		}
+		allow = {
+			OR = {
+				government = republic
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics } }
+			}
+		}
+	}
+	condition = {
+		tooltip = REV_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			has_government_attribute = cannot_ally_non_republics_or_non_rev
+		}
+		allow = {
+			OR = {
+				NOT = { has_government_attribute = cannot_ally_non_republics_or_non_rev }
+				FROM = { 
+					OR = {
+						government = republic 
+						is_revolutionary = yes
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_REV_REPUBLIC_DENIED_ALLIANCE
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_ally_non_republics_or_non_rev
+			}
+			NOT = { government = republic }
+			is_revolutionary = no
+		}
+		allow = {
+			OR = {
+				government = republic 
+				is_revolutionary = yes
+				NOT = { FROM = { has_government_attribute = cannot_ally_non_republics_or_non_rev } }
+			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_MAKE_ALLIANCES
+		potential = {
+			has_government_attribute = cannot_form_alliances
+		}
+		allow = {
+			NOT = { has_government_attribute = cannot_form_alliances }
+		}
+	}
+	condition = {
+		tooltip = FROM_CANNOT_MAKE_ALLIANCES
+		potential = {
+			FROM = {
+				has_government_attribute = cannot_form_alliances
+			}
+		}
+		allow = {
+			NOT = { FROM = { has_government_attribute = cannot_form_alliances } }
+		}
+	}
+	condition = {
+		tooltip = EE_Minor_IRI_cant_ally_irish_countries_tt
+		potential = { has_country_flag = EE_Minor_IRI_Irish_alliances_disabled }
+		allow = {
+			FROM = {
+				NOT = { culture = irish }
+			}
+		}
+	}
+	condition = {
+		tooltip = FROM_EE_Minor_IRI_cant_ally_irish_countries_tt
+		potential = { culture = irish }
+		allow = {
+			FROM = {
+				NOT = { has_country_flag = EE_Minor_IRI_Irish_alliances_disabled }
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_government_mechanic = papal_factionalism_mechanic
+				FROM = { religion = catholic }
+			}
+			add_government_power = {
+				mechanic_type = papal_factionalism_mechanic
+				power_type = papal_factionalism
+				value = 10
+			}
+		}
+	}
+}
+#########################################
+#Vassal Diplo action for EE Irish Minors#
+#########################################
+vassalaction = {
+	condition = {
+		tooltip = VASSALINVALID
+		potential = {
+		}
+		allow = {
+			alliance_with = FROM
+			FROM = {
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+			}
+			FROM = { is_at_war = no }
+		}
+	}
+	condition = {
+		tooltip = EE_Minor_IRI_Irish_vassalization_disabled_tt
+		potential = { has_country_flag = EE_Minor_IRI_Irish_alliances_disabled }
+		allow = {
+			FROM = {
+				NOT = { culture = irish }
+			}
+		}
+	}
+}
+
+excommunicate_action = {
+	condition = {
+		tooltip = EE_FRA_blocked
+		potential = {
+			FRA = { has_country_flag = EE_FRA_block_excommunication }
+			has_dlc = "Leviathan"
+		}
+		allow = {
+			NOT = {
+				AND = {
+					FROM = { tag = FRA }	
+					183 = {
+						owned_by = FRA
+						religion = catholic
+						has_great_project = {
+							type = notre_dame_cathedral
+							tier = 3
+						}
+					}
+					202 = {
+						owned_by = FRA
+						religion = catholic
+						has_great_project = {
+							type = palace_of_the_popes
+							tier = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = ME_PRO_block_excommunication_dip_tt
+		potential = { 
+			FROM = { has_country_flag = ME_PRO_block_excommunication }
+		}
+		allow = {
+			if = {
+				limit = {
+					FROM = { has_country_flag = ME_PRO_block_excommunication }
+				}
+				379 = {
+					NOT = { owned_by = KOJ }
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = { mission_completed = ME_pap_control_of_churches }
+			add_power_projection = {
+				type = ME_excommunicated_catholic
+				amount = 5
+			}
+		}
+	}
+}
+
+form_coalition = {
+	condition = {
+		tooltip = MINAGGRESSIVEEXPANSION
+		potential = { }
+		allow = {
+			if = {
+				limit = { 
+					FROM = { 
+						tag = FRA
+						NOT = { mission_completed = fra_age_france }
+					}
+				}
+				NOT = { guaranteed_by = FRA }
+				has_opinion_modifier = {
+					modifier = aggressive_expansion
+					who = FROM
+				}		
+				NOT = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+						value = -49
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = { 
+						tag = FRA
+						mission_completed = fra_age_france
+					}
+				}
+				guaranteed_by = FRA
+				has_opinion_modifier = {
+					modifier = aggressive_expansion
+					who = FROM
+				}		
+				NOT = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+						value = -74
+					}
+				}
+			}
+			else = {
+				has_opinion_modifier = {
+					modifier = aggressive_expansion
+					who = FROM
+				}		
+				NOT = {
+					has_opinion_modifier = {
+						modifier = aggressive_expansion
+						who = FROM
+						value = -49
+					}
+				}
+			}
+		}
+	}
+}

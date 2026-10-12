@@ -1,0 +1,18 @@
+﻿l_french:
+ DIPLOMACYACTION_CATEGORY_colonial_region: "Colonial actions"
+ 
+ ME_colonial_give_up_provinces_title: "Redraw Colonial Borders"
+ ME_colonial_give_up_provinces_tooltip: "Force the Target Colonial Nation to give up its provinces outside of its Colonial Region to the crown."
+ ME_colonial_has_province_outside_colonial_region: "§Y[This.GetName]§! has a province outside of its §YColonial Region§!."
+ ME_colonial_give_up_provinces_desc: "Do you wish to Redraw Colonial Borders of [From.GetName]?\n\n§Y[From.GetName]§! will be forced to give up all of its provinces outside of their §YColonial Region§! to §Y[Root.GetName]§!. This may result in Overextension for §Y[Root.GetName]§!. §Y[From.GetName]§! will get §R+5.0%§! Liberty Desire for every province."
+ 
+ ME_colonial_respect_colonial_borders_title: "Forbid Frontier Violations"
+ ME_colonial_respect_colonial_borders_tooltip: "May forbid Colonial Nation from colonizing outside its Colonial Region, or permit, if they had already been forbidden."
+ ME_colonial_respect_colonial_borders_desc: "Do you wish to [From.GetColonialPermissionChange] Frontier Violations of §Y[From.GetName]§!?\n\n§Y[From.GetName]§! currently [From.GetColonialPermissionStatus] colonize outside its §YColonial Region§!.\n\nThis action will [From.GetColonialPermissionChange] that."
+ 
+ ME_colonial_cannot_colonize: "Our §YColonial Overlord§! forbid expansion outside our §YColonial Region§!."
+ 
+ ME_colonial_cannot: "§Rcannot§!"
+ ME_colonial_can: "§Gcan§!"
+ ME_colonial_permit: "§YPermit§!"
+ ME_colonial_forbid: "§YForbid§!"

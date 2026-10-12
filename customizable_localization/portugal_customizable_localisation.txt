@@ -1,0 +1,44 @@
+defined_text = {
+	name = PORGetDLCFeitoriaThing
+	random = no
+
+	text = {
+		localisation_key = POR_feitoria_thing_for_Dlc
+		trigger = {
+			OR = {
+				has_dlc = "Dharma"
+				has_dlc = "Wealth of Nations"
+			}
+		}
+	}
+	text = {
+		localisation_key = ""
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetFeitoriaArrowStatus
+	random = no
+
+	text = {
+		localisation_key = feitoria_is_increasing_TT
+		trigger = {
+			has_province_flag = feitoria_is_increasing
+		}
+	}
+	text = {
+		localisation_key = feitoria_is_decreasing_TT
+		trigger = {
+			has_province_flag = feitoria_is_decreasing
+		}
+	}
+	text = {
+		localisation_key = feitoria_is_equilibrium_TT
+		trigger = {
+			always = yes
+		}
+	}
+}

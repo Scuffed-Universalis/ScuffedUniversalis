@@ -1,0 +1,203 @@
+ase_retain_age_ability_max_page_for_age_not_reached = {
+	hidden_trigger = {
+		OR = {
+			AND = {
+				ase_retain_age_ability_max_page_for_age_is_2 = yes
+				NOT = { check_variable = { which = ase_retain_age_ability_page value = 2 } }
+			}
+			AND = {
+				ase_retain_age_ability_max_page_for_age_is_3 = yes
+				NOT = { check_variable = { which = ase_retain_age_ability_page value = 3 } }
+			}
+		}
+	}
+}
+
+ase_retain_age_ability_max_page_for_age_is_2 = {
+	OR = {
+		current_age = age_of_reformation
+	}
+}
+
+ase_retain_age_ability_max_page_for_age_is_3 = {
+	OR = {
+		current_age = age_of_absolutism
+		current_age = age_of_revolutions
+	}
+}
+
+ase_retain_age_ability_entry_selectable = {
+	splendor = 1600
+	ase_retain_age_ability_not_selected_for_current_age = yes
+}
+
+ase_retain_age_ability_not_selected_for_current_age = {
+	custom_trigger_tooltip = {
+		tooltip = ase_chosen_retain_age_ability
+		OR = {
+			AND = {
+				current_age = age_of_reformation
+				NOT = { has_country_flag = ase_chosen_age_of_reformation }
+			}
+			AND = {
+				current_age = age_of_absolutism
+				NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+			}
+			AND = {
+				current_age = age_of_revolutions
+				NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+			}
+		}
+	}
+}
+
+ase_retain_age_ability_entry_1_visible = {
+	OR = {
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+	}
+}
+ase_retain_age_ability_entry_1_selectable = {
+	if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		if = {
+			limit = {
+				check_variable = { which = ase_retain_age_ability_page value = 3 }
+			}
+			religion_group = dharmic
+		}
+	}
+}
+
+ase_retain_age_ability_entry_2_visible = {
+	OR = {
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+			OR = {
+				current_age = age_of_revolutions
+			}
+		}
+	}
+}
+ase_retain_age_ability_entry_2_selectable = {
+	if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		if = {
+			limit = {
+				check_variable = { which = ase_retain_age_ability_page value = 2 }
+			}
+			government = republic
+		}
+	}
+}
+
+ase_retain_age_ability_entry_3_visible = {
+	OR = {
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+	}
+}
+ase_retain_age_ability_entry_3_selectable = {
+	if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		if = {
+			limit = {
+				check_variable = { which = ase_retain_age_ability_page value = 2 }
+			}
+			religion_group = muslim
+		}
+	}
+}
+
+ase_retain_age_ability_entry_4_visible = {
+	OR = {
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		AND = {
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			OR = {
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+	}
+}
+ase_retain_age_ability_entry_4_selectable = {
+	if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		if = {
+			limit = {
+				check_variable = { which = ase_retain_age_ability_page value = 2 }
+			}
+			religion_group = christian
+			NOT = { religion = orthodox }
+			NOT = { religion = coptic }
+		}
+	}
+}

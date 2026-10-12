@@ -1,0 +1,840 @@
+defined_text = {
+	name = GetAseRetainAgeAbilityMaxPage
+	random = no
+
+	text = {
+		trigger = {
+			ase_retain_age_ability_max_page_for_age_is_3 = yes
+		}
+		localisation_key = "3"
+	}
+	text = {
+		trigger = {
+			ase_retain_age_ability_max_page_for_age_is_2 = yes
+		}
+		localisation_key = "2"
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "1"
+	}
+}
+
+defined_text = {
+	name = GetAseRetainAgeAbilityPrevPageTooltip
+	random = no
+
+	text = {
+		trigger = {
+			check_variable = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = string_ase_retain_age_ability_prev_page_button_tt
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_ase_retain_age_ability_prev_page_button_tt_min_reached
+	}
+}
+
+defined_text = {
+	name = GetAseRetainAgeAbilityNextPageTooltip
+	random = no
+
+	text = {
+		trigger = {
+			ase_retain_age_ability_max_page_for_age_not_reached = yes
+		}
+		localisation_key = string_ase_retain_age_ability_next_page_button_tt
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_ase_retain_age_ability_next_page_button_tt_max_reached
+	}
+}
+
+defined_text = {
+	name = GetAsePreviousAge
+	random = no
+
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+		}
+		localisation_key = age_of_discovery
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+		}
+		localisation_key = age_of_reformation
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+		}
+		localisation_key = age_of_absolutism
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = age_of_discovery
+	}
+}
+
+defined_text = {
+	name = GetAseRetainAgeAbilityName1
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_justified_wars
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_glorious_renaissance
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_siege_blockades
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ab_institution_spread_from_true_faith
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_dharmic_syncretism
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_rival_change
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ab_adm_efficiency
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_imperial_control
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+defined_text = {
+	name = GetAseRetainAgeAbilityEffects1
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_justified_wars
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_glorious_renaissance
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_siege_blockades
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_institution_spread_from_true_faith
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_dharmic_syncretism
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_rival_change
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_adm_efficiency
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_imperial_control
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+defined_text = {
+	name = GetAseRetainAgeAbilityPicture1
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_justified_wars
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_glorious_renaissance
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_siege_blockades
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_institution_spread_from_true_faith
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_dharmic_syncretism
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_rival_change
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_adm_efficiency
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_imperial_control
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+
+defined_text = {
+	name = GetAseRetainAgeAbilityName2
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_free_war_taxes
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_ruling_dynasty
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_warscore_vs_religion
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ab_prestige_per_development_from_conversion
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_rival_border_fort
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ab_yearly_absolutism
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_centralised_state
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+defined_text = {
+	name = GetAseRetainAgeAbilityEffects2
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_free_war_taxes
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_ruling_dynasty
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_warscore_vs_religion
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_prestige_per_development_from_conversion
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_rival_border_fort
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_yearly_absolutism
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_centralised_state
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+defined_text = {
+	name = GetAseRetainAgeAbilityPicture2
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_free_war_taxes
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_ruling_dynasty
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_warscore_vs_religion
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_prestige_per_development_from_conversion
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_rival_border_fort
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_yearly_absolutism
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_centralised_state
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+
+defined_text = {
+	name = GetAseRetainAgeAbilityName3
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_cavalry_armies
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ab_attack_bonus_in_capital_terrain
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_mercenary_discipline
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_muslim_jihad
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_autonomy
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_strategic_warfare
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+defined_text = {
+	name = GetAseRetainAgeAbilityEffects3
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_cavalry_armies
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_attack_bonus_in_capital_terrain
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_mercenary_discipline
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_muslim_jihad
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_autonomy
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_strategic_warfare
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+defined_text = {
+	name = GetAseRetainAgeAbilityPicture3
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_cavalry_armies
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_attack_bonus_in_capital_terrain
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_mercenary_discipline
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_muslim_jihad
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_autonomy
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_strategic_warfare
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+
+defined_text = {
+	name = GetAseRetainAgeAbilityName4
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_colony_boost_development
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_exploration_corp
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_ship_power_propagation
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_confessionalism
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ab_harsh_treatment
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_cultural_relativism
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+defined_text = {
+	name = GetAseRetainAgeAbilityEffects4
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_colony_boost_development
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_exploration_corp
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_ship_power_propagation
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_confessionalism
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ab_harsh_treatment
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_effects_ase_cultural_relativism
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}
+defined_text = {
+	name = GetAseRetainAgeAbilityPicture4
+	random = no
+
+	# Age of Reformation
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_colony_boost_development
+	}
+	text = {
+		trigger = {
+			current_age = age_of_reformation
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_exploration_corp
+	}
+	# Age of Absolutism
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_ship_power_propagation
+	}
+	text = {
+		trigger = {
+			current_age = age_of_absolutism
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_confessionalism
+	}
+	# Age of Revolutions
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ab_harsh_treatment
+	}
+	text = {
+		trigger = {
+			current_age = age_of_revolutions
+			is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+		}
+		localisation_key = ase_retain_age_ability_picture_ase_cultural_relativism
+	}
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = "?"
+	}
+}

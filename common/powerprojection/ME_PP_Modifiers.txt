@@ -1,0 +1,13 @@
+ME_permanent_circumnavigation = {
+	max = 5
+	min = 5
+	power = 1
+	decay = no
+}
+
+ME_excommunicated_catholic = {
+	max = 25
+	min = 1
+	power = 1
+	yearly_decay = 1
+}

@@ -1,0 +1,526 @@
+country_decisions = {
+	EE_FRA_reconcile_louis = {
+		potential = { 
+			tag = FRA
+			has_country_flag = EE_FRA_start_louis_events
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				has_country_flag = EE_FRA_start_louis_events
+			}
+			if = {
+				limit = {
+					tag = FRA
+					has_country_flag = EE_FRA_start_louis_events
+				}
+				stability = 1
+				prestige = 25
+			}
+		}
+		effect = {
+			country_event = { id = ME_France_Events.5 }
+		}
+	}
+	EE_FRA_commandeer_ships = {
+		potential = {
+			tag = FRA
+			has_country_flag = EE_FRA_unlock_heavy_decision
+			has_country_flag = EE_FRA_HYW_incident_tree
+		}
+		allow = {
+			if = {
+				limit = {
+					has_country_flag = EE_FRA_unlock_heavy_decision
+					has_country_flag = EE_FRA_HYW_incident_tree
+				}
+				any_owned_province = { has_port = yes }
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					normandy_area = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				random_owned_province = {
+					limit = {
+						area = normandy_area
+						has_port = yes
+					}
+					heavy_ship = ROOT
+					heavy_ship = ROOT
+					heavy_ship = ROOT
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = { has_port = yes }
+					heavy_ship = ROOT
+					heavy_ship = ROOT
+					heavy_ship = ROOT
+				}
+			}
+			clr_country_flag = EE_FRA_unlock_heavy_decision
+		}
+	}
+	EE_FRA_fund_war_effort = {
+		potential = {
+			tag = FRA
+			has_country_flag = EE_FRA_fund_war_Effort_flag 
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				has_country_flag = EE_FRA_fund_war_Effort_flag 	
+			}
+			if = {
+				limit = { has_country_flag = EE_FRA_fund_war_Effort_flag }
+				OR = {
+					years_of_income = 0.3
+					mil_power = 100
+				}
+			}
+		}
+		effect = {
+			country_event = { id = ME_France_Events.34 }
+		}
+	}
+	EE_FRA_regulate_serfs = {
+		potential = {
+			tag = FRA
+			mission_completed = fra_urbanization
+			NOT = { has_country_flag = EE_FRA_edit_serfs_event_flag }
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				mission_completed = fra_urbanization
+				NOT = { has_country_flag = EE_FRA_edit_serfs_event_flag }
+			}
+			if = {
+				limit = {
+					mission_completed = fra_urbanization
+					NOT = { has_country_flag = EE_FRA_edit_serfs_event_flag }
+				}
+				if = {
+					limit = { has_estate = estate_nobles }
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+				}
+				monthly_adm = 10
+				crown_land_share = 25
+			}
+		}
+		effect = {
+			custom_tooltip = EE_FRA_edit_serfs_event
+			set_country_flag = EE_FRA_edit_serfs_event_flag
+		}
+	}
+	EE_FRA_evolution_mercure_galant = {
+		potential = {
+			tag = FRA
+			mission_completed = fra_mercure_france
+			NOT = { has_country_modifier = EE_FRA_mercure_galant_2 }
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				mission_completed = fra_mercure_france
+				NOT = { has_country_modifier = EE_FRA_mercure_galant_2 }
+			}
+			if = {
+				limit = { has_country_modifier = EE_FRA_mercure_galant }
+				paper = 5
+			}
+			else = { paper = 10 }
+		}
+		effect = {
+			if = {
+				limit = { has_country_modifier = EE_FRA_mercure_galant }
+				remove_country_modifier = EE_FRA_mercure_galant
+				add_country_modifier = {
+					name = EE_FRA_mercure_galant_1
+					duration = -1
+				}
+			}
+			else = {
+				remove_country_modifier = EE_FRA_mercure_galant_1
+				add_country_modifier = {
+					name = EE_FRA_mercure_galant_2
+					duration = -1
+				}
+			}
+		}
+	}
+	EE_FRA_marechaussee_cnnetablie = {
+		potential = {
+			tag = FRA
+			mission_completed = fra_gendarmes_ordonnance
+			has_dlc = "Domination"
+			NOT = { has_country_flag = ME_FRA_took_connetablie }
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				mission_completed = fra_gendarmes_ordonnance
+				has_dlc = "Domination"
+			}
+			if = {
+				limit = {
+					mission_completed = fra_gendarmes_ordonnance
+					has_dlc = "Domination"
+				}
+				has_reform = gendarmes_reform
+				OR = {
+					has_global_modifier_value = {
+						which = cavalry_power
+						value = 0.25
+					}
+					custom_trigger_tooltip = {
+						tooltip = EE_FRA_won_50_battles
+						check_variable = {
+							which = EE_FRA_num_of_won_battles 
+							value = 50
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = EE_FRA_empower_gendarmes
+			add_government_reform = EE_FRA_gendarmes_reform
+			set_country_flag = ME_FRA_took_connetablie
+		}
+	}
+	EE_FRA_french_assimilation_start ={
+		potential = {
+			tag = FRA
+			has_country_flag = EE_FRA_english_conversion_reward_flag
+			NOT = { has_country_modifier = EE_FRA_cultural_administration }
+			british_isles_region = {
+				country_or_non_sovereign_subject_holds = ROOT
+				culture = english
+			}
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				has_country_flag = EE_FRA_english_conversion_reward_flag
+				NOT = { has_country_modifier = EE_FRA_cultural_administration }
+				british_isles_region = {
+					country_or_non_sovereign_subject_holds = ROOT
+					culture = english
+				}
+			}
+			if = {
+				limit = { has_country_flag = ME_FRA_assimilation_cooldown }
+				had_country_flag = {
+					flag = ME_FRA_assimilation_cooldown
+					days = 1825
+				}
+			}
+			else_if = {
+				limit = { 
+					has_country_flag = ME_FRA_assimilation_cooldown
+					NOT = {
+						had_country_flag = {
+							flag = ME_FRA_assimilation_cooldown
+							days = 1825
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = ME_FRA_cooldown_finished
+					had_country_flag = {
+						flag = ME_FRA_assimilation_cooldown
+						days = 1825
+					}
+				}
+				had_country_flag = {
+					flag = ME_FRA_assimilation_cooldown
+					days = 1825
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = EE_FRA_convert_french_tt
+			add_country_modifier = {
+				name = EE_FRA_cultural_administration
+				duration = -1
+			}
+			hidden_effect = {
+				country_event = { id = ME_France_Events.57 }
+			}
+		}
+	}
+	EE_FRA_french_assimilation_pause = {
+		potential = {
+			tag = FRA
+			has_country_modifier = EE_FRA_cultural_administration 
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				has_country_modifier = EE_FRA_cultural_administration 	
+			}
+			if = {
+				limit = { has_country_modifier = EE_FRA_cultural_administration }
+				tag = FRA 
+			}
+		}
+		effect = { 
+			remove_country_modifier = EE_FRA_cultural_administration
+			set_country_flag = ME_FRA_assimilation_cooldown
+		}
+	}
+	ME_FRA_capetial_house_anjou = {
+		potential = {
+			tag = FRA
+			mission_completed = fra_dynastic_struggle
+			NOT = { has_country_flag = ME_FRA_capetian_decision_taken }
+			PRO = { exists = yes }
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				mission_completed = fra_dynastic_struggle
+				NOT = { has_country_flag = ME_FRA_capetian_decision_taken }
+				PRO = { exists = yes }
+			}
+			PRO = { 
+				OR = {
+					is_subject_of = ROOT
+					AND = {
+						alliance_with = ROOT
+						marriage_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						trust = {
+							who = ROOT
+							value = 90
+						}
+					}
+					AND = {
+						loire_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						provence_area = {
+							type = all
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = ME_FRA_capetian_decision_taken
+			complex_dynamic_effect = {
+				first_custom_tooltip = ME_FRA_pro_subject
+				first_limit = "
+					PRO = { is_subject_of = ROOT }
+				"
+				first_effect = "
+					add_stability_or_adm_power = yes 
+					change_heir_adm = 1 
+					change_heir_dip = 1 
+					change_heir_mil = 1 
+				"
+				second_custom_tooltip = ME_FRA_pro_ally
+				second_limit = "
+					PRO = {
+						alliance_with = ROOT
+						marriage_with = ROOT
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+						trust = {
+							who = ROOT
+							value = 90
+						}
+					}
+				"
+				second_effect = "
+					PRO = { country_event = { id = ME_France_Events.76 } }
+				"
+				third_custom_tooltip = ME_FRA_conquest
+				third_limit = "
+					loire_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					provence_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				"
+				third_effect = "
+					add_prestige_or_monarch_power = { value = 20 } 
+					add_country_modifier = { 
+						name = fra_conquered_the_capetian_house_of_anjou_modifier
+						duration = 5475 
+					}
+				"
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { PRO = { is_subject_of = ROOT } }
+						AND = {
+							PRO = {
+								alliance_with = ROOT
+								marriage_with = ROOT
+								has_opinion = {
+									who = ROOT
+									value = 150
+								}
+								trust = {
+									who = ROOT
+									value = 90
+								}
+							}
+						}
+					}
+					PRO = { country_event = { id = ME_France_Events.76 } }
+				}
+			}
+		}
+	}
+	ME_FRA_end_incident_tree = {
+		potential = { 
+			tag = FRA
+			OR = {
+				has_country_flag = EE_FRA_HYW_incident_tree
+				has_country_flag = EE_FRA_Italian_Wars_incident_tree
+			} 
+		}
+		allow = {
+			hidden_trigger = {
+				tag = FRA
+				OR = {
+					has_country_flag = EE_FRA_HYW_incident_tree
+					has_country_flag = EE_FRA_Italian_Wars_incident_tree
+				} 
+			}
+			always = yes
+		}
+		effect = {
+			custom_tooltip = ME_FRA_reset_tree
+			clr_country_flag = EE_FRA_Italian_Wars_incident_tree
+			clr_country_flag = EE_FRA_HYW_incident_tree
+			swap_non_generic_missions = yes
+		}
+	}
+	ME_FRA_reclaim_east = {
+		potential = { 
+			tag = FRA
+			has_country_flag = ME_FRA_unlock_crusade_decision
+			OR = {
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+			}
+		}
+		allow = {
+			OR = {
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+				current_age = age_of_absolutism
+			}
+			KNI = {
+				is_subject_of = ROOT
+				hudavendigar_area = {
+					type = all
+					owned_by = KNI
+				}
+				aydin_area = {
+					type = all
+					owned_by = KNI
+				}
+				germiyan_area = {
+					type = all
+					owned_by = KNI
+				}
+				cukurova_area = {
+					type = all
+					owned_by = KNI
+				}
+			}
+			KOJ = {
+				is_subject_of = ROOT
+				palestine_area = {
+					type = all
+					owned_by = KNI
+				}
+				syria_area = {
+					type = all
+					owned_by = KNI
+				}
+				trans_jordan_area = {
+					type = all
+					owned_by = KNI
+				}
+				aleppo_area = {
+					type = all
+					owned_by = KNI
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = EE_FRA_unlock_propagate_religion
+			custom_tooltip = EE_FRA_buff_conversion_force_conversion_tt
+			custom_tooltip = EE_FRA_append_armed_pilgrimage
+			tooltip = {
+				add_country_modifier = {
+					name = EE_FRA_armed_pilgrimage_1
+					duration = -1
+				}
+			}
+			hidden_effect = {
+				remove_country_modifier = EE_FRA_armed_pilgrimage
+				add_country_modifier = {
+					name = EE_FRA_armed_pilgrimage_1
+					duration = -1
+				}
+				set_country_flag = can_use_propagate_religion
+				set_country_flag = EE_FRA_buff_conversion_force_conversion
+			}
+			KOJ = {
+				inherit = KNI
+				override_country_name = OUT
+				add_government_reform = militarized_crusader_order_reform
+				add_country_modifier = {
+					name = EE_FRA_global_crusade
+					duration = -1
+				}
+				add_country_modifier = {
+					name = EE_FRA_armed_pilgrimage_1
+					duration = -1
+				}
+			}
+		}
+	}
+	# ME_FRA_Iberian_succession = {
+	# 	potential = { 
+	# 		always = no
+	# 	}
+	# 	allow = {
+	# 		hidden_trigger = {
+	# 			tag = FRA
+	# 			mission_completed = fra_franco_iberian_relationship
+	# 		}
+			
+	# 	}
+	# 	effect = {
+	# 		custom_tooltip = ME_FRA_reset_tree
+	# 		clr_country_flag = EE_FRA_Italian_Wars_incident_tree
+	# 		clr_country_flag = EE_FRA_HYW_incident_tree
+	# 		swap_non_generic_missions = yes
+	# 	}
+	# }
+}

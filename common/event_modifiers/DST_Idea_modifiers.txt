@@ -1,0 +1,24 @@
+dse_fortress_local_mechanic_province_mod = {
+	local_monthly_devastation = -0.1
+	local_state_maintenance_modifier = -0.15
+}
+
+ai_policy_reset_modifier = {
+    free_policy = -4
+}
+
+ai_policy_reset_cooldown = {}
+
+dse_centralization_mechanic_country_mod = {
+	picture = "chorapolis_modifier_icon"
+    development_cost_modifier = -0.1
+}
+
+dse_centralization_mechanic_province_mod = {
+	picture = "chorapolis_modifier_icon"
+	local_development_cost = -0.2
+}
+
+recently_hired_advisor_mechanic = {
+	global_tax_modifier = 0.01
+}

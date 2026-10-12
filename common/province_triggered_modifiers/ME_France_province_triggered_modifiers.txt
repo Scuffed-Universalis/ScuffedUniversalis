@@ -1,0 +1,46 @@
+EE_toulon_arsenal_triggered_modifier = {
+	potential = { 
+        owner = { has_country_flag = EE_FRA_toulon_arsenal_flag }
+    }
+    trigger = {
+        112 = {
+            country_or_non_sovereign_subject_holds = FRA
+			NOT = {
+                has_great_project = {
+                    type = venetian_arsenal_gp
+                    tier = 1
+                }
+            }
+		}
+    }
+    ship_recruit_speed = -0.1
+    local_ship_repair = 0.15
+    local_ship_cost = -0.1
+    naval_forcelimit_modifier = 0.05
+    ship_durability = 0.05 
+}
+
+EE_FRA_sale_artistic_masterpiece = {
+	potential = { 
+        owner = { mission_completed = fra_fontainebleau }
+    }
+    trigger = {
+        owner = { prestige = 75 }
+    }
+    trade_efficiency = 0.05
+    monthly_splendor = 2
+}
+
+EE_FRA_royal_ordinance = {
+	potential = { 
+        owner = { mission_completed = fra_higher_education }
+    }
+    trigger = {
+        owner = { 
+            has_adm_advisor_3 = yes
+            has_dip_advisor_3 = yes
+            has_mil_advisor_3 = yes
+        }
+    }
+    all_power_cost = -0.01
+}

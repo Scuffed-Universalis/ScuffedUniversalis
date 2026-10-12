@@ -1,0 +1,96 @@
+# All is province scope here
+## add/upgrade trade building in province
+### add_or_upgrade_trade_building = yes  # feel free to refactor to include the amount of upgrades
+add_or_upgrade_monument = {
+	[[monument_name_tt]
+		custom_tooltip = $monument_name_tt$
+	]
+	[[is_monument]
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_great_project = {
+							type = $monument_name$
+							tier = 0
+						}
+					}
+				}
+				add_great_project = {
+					type = $monument_name$
+					instant = yes
+				}
+			}
+			else = {
+				add_great_project_tier = {
+					type = $monument_name$
+					tier = 1
+				}
+			}
+		}
+	]
+	[[is_canal]
+		hidden_effect = {
+			owner = { add_treasury = 50000 }
+			add_great_project = {
+				type = $monument_name$
+				instant = yes
+			}
+			owner = { add_treasury = -50000 }
+			add_great_project_tier = {
+				type = $monument_name$
+				tier = 3
+			}
+		}
+	]
+}
+
+deactivate_artificial_strait = {
+	custom_tooltip = artificial_strait_disabled_canal_broken
+	hidden_effect = {
+		add_great_project_tier = {
+			type = $main_name$
+			tier = -3
+		}
+		show_ambient_object = $ambient_object_disabled$
+		hide_ambient_object = $ambient_object_enabled$
+		$strait_crossing$ = { remove_canal = $canal_name$ }
+		$counterpart_province$ = {
+			if = {
+				limit = {
+					AND = {
+						has_great_project = {
+							type = $counterpart_name$
+							tier = 3
+						}
+					}
+				}
+				add_great_project_tier = {
+					type = $counterpart_name$
+					tier = -3
+				}
+			}
+		}
+		$strait_crossing$ = {
+			if = {
+				limit = {
+					has_global_flag = $strait_flag$
+				}
+				destroy_great_project = {
+					type = $canal_name$
+				}
+				clr_global_flag = $strait_flag$
+			}
+		}
+	}
+}
+	#deactivate_artificial_strait = {
+	#	main_name = english_french_ferry_main
+	#	ambient_object_disabled = english_french_ferry_disabled_strait
+	#	ambient_object_enabled = english_french_ferry_strait
+	#	strait_crossing = 1271
+	#	canal_name = english_french_ferry
+	#	counterpart_province = 87
+	#	counterpart_name = english_french_ferry_counterpart
+	#	strait_flag = channel_tunnel_open
+	#}

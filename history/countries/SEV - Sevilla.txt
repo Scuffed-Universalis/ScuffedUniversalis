@@ -1,0 +1,5 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+capital = 224 # Sevilla
+primary_culture = andalucian

@@ -1,0 +1,15 @@
+end_an_incident_tree_effect = {
+	if = {
+		limit = {
+			has_country_flag = MAM_ottoman_incident_tree
+		}
+		custom_tooltip = MAM_end_ottoman_incident_tooltip
+		MAM_end_ottoman_incident = yes
+	}
+	if = {
+		limit = {
+			has_country_flag = GRA_incident_castile
+		}
+		GRA_end_incident = yes
+	}
+}

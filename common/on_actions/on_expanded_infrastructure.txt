@@ -1,0 +1,44 @@
+#ROOT = province that was expanded in, FROM = country that did it
+on_expanded_infrastructure = {
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = ee_bourbon_reforms_province_counter
+					value = 2
+				}
+			}
+			owner = {
+				mission_completed = EE_spa_reform_countryside
+			}
+		}
+		add_base_production = 1
+		add_base_manpower = 1
+		add_base_tax = 1
+		change_variable = {
+			which = ee_bourbon_reforms_province_counter
+			value = 1
+		}
+	}
+    if = {
+        limit = {
+            owner = {
+                mission_completed = EE_syn_human_governments
+            }
+        }
+        owner = {
+            change_government_reform_progress = 2
+        }
+    }
+	if = {
+		limit = {
+			owner = {
+				mission_completed = ME_pap_develop_rome
+			}
+			province_id = 118
+		}
+		add_base_production = 1
+		add_base_manpower = 1
+		add_base_tax = 1
+	}
+}

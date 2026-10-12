@@ -1,0 +1,355 @@
+country_decisions = {
+	hre_balkans_duchy_decision_cilli = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_balkans_duchy_decision_cilli }
+			NOT = { tag = CLI }
+			OR = {
+				croatia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CLI }
+				}
+				carinthia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CLI }
+				}
+				east_adriatic_coast_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CLI }
+				}
+				bosnia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CLI }
+				}
+				slavonia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CLI }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = croatia_area
+				area = carinthia_area
+				area = east_adriatic_coast_area
+				area = bosnia_area
+				area = slavonia_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = CLI }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = CLI }
+				CLI = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_balkans_duchy_decision_cilli
+			add_imperial_influence = -10
+			custom_tooltip = hre_balkans_duchy_decision_cilli_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = croatia_area
+					tag = CLI
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = carinthia_area
+					tag = CLI
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = east_adriatic_coast_area
+					tag = CLI
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = bosnia_area
+					tag = CLI
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = slavonia_area
+					tag = CLI
+				}
+				CLI = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = slovene
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_balkans_duchy_decision_bulgaria = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_balkans_duchy_decision_bulgaria }
+			NOT = { tag = BUL }
+			OR = {
+				wallachia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUL }
+				}
+				silistria_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUL }
+				}
+				serbia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUL }
+				}
+				rascia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUL }
+				}
+				2746 = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUL }
+				}
+				1765 = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUL }
+				}
+				150 = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUL }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wallachia_area
+				area = silistria_area
+				area = serbia_area
+				area = rascia_area
+				province_id = 2746
+				province_id = 1765
+				province_id = 150
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = BUL }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = BUL }
+				BUL = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_balkans_duchy_decision_bulgaria
+			add_imperial_influence = -10
+			custom_tooltip = hre_balkans_duchy_decision_bulgaria_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = wallachia_area
+					tag = BUL
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = silistria_area
+					tag = BUL
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = serbia_area
+					tag = BUL
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = rascia_area
+					tag = BUL
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 2746
+					tag = BUL
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 1765
+					tag = BUL
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 150
+					tag = BUL
+				}
+				BUL = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = bulgarian
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_balkans_duchy_decision_greece = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_balkans_duchy_decision_greece }
+			NOT = { tag = GRE }
+			OR = {
+				thrace_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GRE }
+				}
+				macedonia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GRE }
+				}
+				albania_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GRE }
+				}
+				northern_greece_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GRE }
+				}
+				morea_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GRE }
+				}
+				aegean_archipelago_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GRE }
+				}
+				2750 = {
+					hre_can_cede_province_to_hre_duchy = { tag = GRE }
+				}
+				4703 = {
+					hre_can_cede_province_to_hre_duchy = { tag = GRE }
+				}
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						146 = {
+							hre_can_cede_province_to_hre_duchy = { tag = GRE }
+						}
+						147 = {
+							hre_can_cede_province_to_hre_duchy = { tag = GRE }
+						}
+						3003 = {
+							hre_can_cede_province_to_hre_duchy = { tag = GRE }
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = thrace_area
+				area = macedonia_area
+				area = albania_area
+				area = northern_greece_area
+				area = morea_area
+				area = aegean_archipelago_area
+				province_id = 2750
+				province_id = 4703
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						province_id = 146
+						province_id = 147
+						province_id = 3003
+					}
+				}
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = GRE }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = GRE }
+				GRE = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_balkans_duchy_decision_greece
+			add_imperial_influence = -10
+			custom_tooltip = hre_balkans_duchy_decision_greece_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = thrace_area
+					tag = GRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = macedonia_area
+					tag = GRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = albania_area
+					tag = GRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = northern_greece_area
+					tag = GRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = morea_area
+					tag = GRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = aegean_archipelago_area
+					tag = GRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 2750
+					tag = GRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4703
+					tag = GRE
+				}
+				if = {
+					limit = {
+						has_global_flag = extended_timeline_mod
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 146
+						tag = GRE
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 147
+						tag = GRE
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 3003
+						tag = GRE
+					}
+				}
+				GRE = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = greek
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

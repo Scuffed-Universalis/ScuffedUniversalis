@@ -1,0 +1,2286 @@
+# All is province scope here
+## add/upgrade trade building in province
+### add_or_upgrade_trade_building = yes  # feel free to refactor to include the amount of upgrades
+add_or_upgrade_trade_building = {
+	custom_tooltip = add_or_upgrade_trade_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = marketplace
+			}
+			add_building = trade_depot
+		}
+		else_if = {
+			limit = {
+				has_building = trade_depot
+			}
+			add_building = stock_exchange
+		}
+		else_if = {
+			limit = {
+				has_building = stock_exchange
+			}
+			add_base_tax = 1
+			add_base_production = 1
+		}
+		else = {
+			add_building = marketplace
+		}
+	}
+}
+
+add_or_upgrade_tax_building = {
+	custom_tooltip = add_or_upgrade_tax_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = temple
+			}
+			add_building = cathedral
+		}
+		else_if = {
+			limit = {
+				has_building = cathedral
+			}
+			add_base_tax = 2
+		}
+		else = {
+			add_building = temple
+		}
+	}
+}
+
+add_or_upgrade_production_building = {
+	custom_tooltip = add_or_upgrade_production_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = workshop
+			}
+			add_building = counting_house
+		}
+		else_if = {
+			limit = {
+				has_building = counting_house
+			}
+			add_base_production = 2
+		}
+		else = {
+			add_building = workshop
+		}
+	}
+}
+
+add_or_upgrade_dock_building = {
+	custom_tooltip = add_or_upgrade_dock_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = dock
+			}
+			add_building = drydock
+		}
+		else_if = {
+			limit = {
+				has_building = drydock
+			}
+			ROOT = { add_sailors = 0.5 }
+		}
+		else = {
+			add_building = dock
+		}
+	}
+}
+
+add_or_upgrade_shipyard_building = {
+	custom_tooltip = add_or_upgrade_shipyard_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = shipyard
+			}
+			add_building = grand_shipyard 
+		}
+		else_if = {
+			limit = {
+				has_building = grand_shipyard 
+			}
+			ROOT = { add_sailors = 0.5 }
+		}
+		else = {
+			add_building = shipyard
+		}
+	}
+}
+
+add_or_upgrade_manpower_building = {
+	custom_tooltip = add_or_upgrade_manpower_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = barracks
+			}
+			add_building = training_fields  
+		}
+		else_if = {
+			limit = {
+				has_building = training_fields  
+			}
+			add_base_tax = 1
+			add_base_manpower = 1
+		}
+		else = {
+			add_building = barracks
+		}
+	}
+}
+
+add_or_upgrade_forcelimit_building = {
+	custom_tooltip = add_or_upgrade_forcelimit_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = regimental_camp
+			}
+			add_building = conscription_center   
+		}
+		else_if = {
+			limit = {
+				has_building = conscription_center   
+			}
+			add_base_manpower = 2
+		}
+		else = {
+			add_building = regimental_camp
+		}
+	}
+}
+
+add_or_upgrade_university_building = {
+	custom_tooltip = add_or_upgrade_university_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = university
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		else = {
+			add_building = university
+		}
+	}
+}
+
+add_or_upgrade_courthouse_building = {
+	custom_tooltip = add_or_upgrade_courthouse_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = courthouse
+			}
+			add_building = town_hall   
+		}
+		else_if = {
+			limit = {
+				has_building = town_hall   
+			}
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		else = {
+			add_building = courthouse
+		}
+	}
+}
+
+add_or_upgrade_fort_building = {
+	custom_tooltip = add_or_upgrade_fort_building_tt
+	hidden_effect = {
+		if = {
+			limit = {
+				has_building = fort_15th
+			}
+			add_building = fort_16th
+		}
+		else_if = {
+			limit = {
+				has_building = fort_16th
+			}
+			add_building = fort_17th
+		}
+		else_if = {
+			limit = {
+				has_building = fort_17th
+			}
+			add_building = fort_18th
+		}
+		else_if = {
+			limit = {
+				has_building = fort_18th
+			}
+			add_base_manpower = 3
+		}
+		else = {
+			add_building = fort_15th
+		}
+	}
+}
+
+build_as_many_as_possible = {
+	hidden_effect = {
+		set_variable = {
+			which = num_built
+			value = 0
+		}
+		[[upgrade_target]$pick_best_function$ = {
+			scope = every_owned_province
+			trigger = "$all_prior_trig$
+				can_build = $new_building$
+				can_construct_building = yes"
+		}]
+		[[construct_new]$pick_best_function$ = {
+			scope = every_owned_province
+			trigger = "can_build = $new_building$
+				can_construct_building = yes"
+		}]
+		
+		export_to_variable = {
+			which = treasury_1
+			value = treasury
+		}
+		set_variable = {
+			which = MAX_BUILDINGS
+			which = treasury_1
+		}
+		event_target:highest_score_trade = { #TAIL
+			add_building_construction = {
+				building = $new_building$
+				speed = $speed$
+				cost = $cost$
+			}
+		}
+		export_to_variable = {
+			which = treasury_2
+			value = treasury
+		}
+		
+		event_target:highest_score_trade = { #TAIL
+			cancel_construction = yes
+		}
+		
+		subtract_variable = {
+			which = treasury_1
+			which = treasury_2
+		}
+		
+		divide_variable = {
+			which = MAX_BUILDINGS
+			which = treasury_1
+		}
+		
+		set_variable = {
+			which = CURRENT_SIZE
+			value = 0
+		}
+		
+		event_target:highest_score_trade = {
+			set_province_flag = build_here
+			owner = {
+				change_variable = {
+					which = CURRENT_SIZE
+					value = 1
+				}
+			}
+		}
+
+		change_variable = { which = MAX_BUILDINGS value = 1 }
+		
+		every_owned_province = {
+			limit = {
+				$all_prior_trig$
+				can_build = $new_building$
+				can_construct_building = yes
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = province_trade_score
+						which = event_target:highest_score_trade
+					}
+				}
+				
+				if = {
+					limit = {
+						owner = {
+							check_variable = {
+								which = MAX_BUILDINGS
+								which = CURRENT_SIZE
+							}
+						}
+					}
+					set_province_flag = build_here
+					owner = {
+						change_variable = {
+							which = CURRENT_SIZE
+							value = 1
+						}
+					}
+				}
+				else = {
+					set_province_flag = build_here
+					
+					event_target:highest_score_trade = {
+						clr_province_flag = build_here
+					}
+					
+					save_global_event_target_as = highest_score_trade
+					
+					owner = {
+						every_owned_province = {
+							limit = {
+								has_province_flag = build_here
+							}
+							if = {
+								limit = {
+									check_variable = {
+										which = province_trade_score
+										which = event_target:highest_score_trade
+									}
+								}
+							}
+							else = {
+								save_global_event_target_as = highest_score_trade
+							}
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						owner = {
+							check_variable = {
+								which = MAX_BUILDINGS
+								which = CURRENT_SIZE
+							}
+						}
+					}
+					set_province_flag = build_here
+					owner = {
+						change_variable = {
+							which = CURRENT_SIZE
+							value = 1
+						}
+					}
+					save_global_event_target_as = highest_score_trade
+				}
+			}
+		}
+		
+		every_owned_province = {
+			limit = {
+				has_province_flag = build_here
+			}
+			FROM = {
+				export_to_variable = {
+					which = treasury_3
+					value = treasury
+				}
+			}
+			add_building_construction = {
+				building = $new_building$
+				speed = $speed$
+				cost = $cost$
+			}
+			FROM = {
+				change_variable = {
+					which = num_built
+					value = 1
+				}
+			}
+			clr_province_flag = build_here
+			if = {
+				limit = { FROM = { treasury = 0 } }
+				FROM = {
+					export_to_variable = {
+						which = treasury_4
+						value = treasury
+					}
+					subtract_variable = {
+						which = treasury_3
+						which = treasury_4
+					}
+					subtract_variable = {
+						which = total_cost_$new_building$
+						which = treasury_3
+					}
+					change_variable = {
+						which = total_num_$new_building$
+						value = -1
+					}
+				}
+			}
+			else = {
+				cancel_construction = yes
+				FROM = { set_country_flag = built_all_possible }
+			}
+		}
+		set_variable = {
+			which = affordable_cost_$new_building$
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_$new_building$
+			value = 0
+		}
+		clr_country_flag = built_all_possible
+	}
+}
+
+find_newest_best_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = $variable$
+					which = event_target:$target$ 
+				}
+			}
+			save_global_event_target_as = $target$ 
+		}
+	}
+}
+
+pick_best_trade_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_trade_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_trade_power_flat
+			value = modifier:province_trade_power_value
+		}
+		if = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+			}
+			change_variable = {
+				which = province_trade_score
+				value = 10
+			}
+		}
+		change_variable = {
+			which = province_trade_score
+			which = province_trade_power_flat
+		}
+		if = {
+			limit = {
+				is_owned_by_trade_company = yes
+			}
+			multiply_variable = {
+				which = province_trade_score
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_trade } 
+			}
+			FROM = { set_country_flag = choosing_best_trade }
+			save_global_event_target_as = highest_score_trade
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_trade_score
+						which = event_target:highest_score_trade
+					}
+				}
+				save_global_event_target_as = highest_score_trade
+			}
+		}
+	}
+	clr_country_flag = choosing_best_trade
+}
+
+pick_best_gov_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_gov_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_gov_power_flat
+			value = modifier:local_governing_cost_increase
+		}
+		change_variable = {
+			which = province_gov_score
+			which = province_gov_power_flat
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_gov } 
+			}
+			FROM = { set_country_flag = choosing_best_gov }
+			save_global_event_target_as = highest_score_gov
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_gov_score
+						which = event_target:highest_score_gov
+					}
+				}
+				save_global_event_target_as = highest_score_gov
+			}
+		}
+	}
+	clr_country_flag = choosing_best_gov
+}
+
+pick_best_sailor_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_sailor_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_sailor_power_flat
+			value = modifier:local_sailors
+		}
+		change_variable = {
+			which = province_sailor_score
+			which = province_sailor_power_flat
+		}
+		if = {
+			limit = {
+				is_owned_by_trade_company = yes
+			}
+			multiply_variable = {
+				which = province_sailor_score
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_sailor } 
+			}
+			FROM = { set_country_flag = choosing_best_sailor }
+			save_global_event_target_as = highest_score_sailor
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_sailor_score
+						which = event_target:highest_score_sailor
+					}
+				}
+				save_global_event_target_as = highest_score_sailor
+			}
+		}
+	}
+	clr_country_flag = choosing_best_sailor
+}
+
+pick_best_navy_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_navy_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_navy_power_flat
+			value = modifier:local_sailors
+		}
+		change_variable = {
+			which = province_navy_score
+			which = province_navy_power_flat
+		}
+		if = {
+			limit = {
+				is_owned_by_trade_company = yes
+			}
+			multiply_variable = {
+				which = province_navy_score
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_navy } 
+			}
+			FROM = { set_country_flag = choosing_best_navy }
+			save_global_event_target_as = highest_score_navy
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_navy_score
+						which = event_target:highest_score_navy
+					}
+				}
+				save_global_event_target_as = highest_score_navy
+			}
+		}
+	}
+	clr_country_flag = choosing_best_navy
+}
+
+pick_best_manpower_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_manpower_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_manpower_power_flat
+			value = modifier:local_manpower
+		}
+		change_variable = {
+			which = province_manpower_score
+			which = province_manpower_power_flat
+		}
+		if = {
+			limit = {
+				is_owned_by_trade_company = yes
+			}
+			divide_variable = {
+				which = province_manpower_score
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_manpower } 
+			}
+			FROM = { set_country_flag = choosing_best_manpower }
+			save_global_event_target_as = highest_score_manpower
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_manpower_score
+						which = event_target:highest_score_manpower
+					}
+				}
+				save_global_event_target_as = highest_score_manpower
+			}
+		}
+	}
+	clr_country_flag = choosing_best_manpower
+}
+
+pick_best_army_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_army_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_army_power_flat
+			value = modifier:local_manpower
+		}
+		change_variable = {
+			which = province_army_score
+			which = province_army_power_flat
+		}
+		if = {
+			limit = {
+				is_owned_by_trade_company = yes
+			}
+			divide_variable = {
+				which = province_army_score
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_army } 
+			}
+			FROM = { set_country_flag = choosing_best_army }
+			save_global_event_target_as = highest_score_army
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_army_score
+						which = event_target:highest_score_army
+					}
+				}
+				save_global_event_target_as = highest_score_army
+			}
+		}
+	}
+	clr_country_flag = choosing_best_army
+}
+
+pick_best_prod_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_prod_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_prod_power_flat
+			value = modifier:trade_goods_size
+		}
+		change_variable = {
+			which = province_prod_score
+			which = province_prod_power_flat
+		}
+		if = {
+			limit = {
+				is_owned_by_trade_company = yes
+			}
+			multiply_variable = {
+				which = province_prod_score
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_prod } 
+			}
+			FROM = { set_country_flag = choosing_best_prod }
+			save_global_event_target_as = highest_score_prod
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_prod_score
+						which = event_target:highest_score_prod
+					}
+				}
+				save_global_event_target_as = highest_score_prod
+			}
+		}
+	}
+	clr_country_flag = choosing_best_prod
+}
+
+pick_best_tax_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_tax_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_tax_power_flat
+			value = modifier:tax_income
+		}
+		change_variable = {
+			which = province_tax_score
+			which = province_tax_power_flat
+		}
+		if = {
+			limit = {
+				is_owned_by_trade_company = yes
+			}
+			divide_variable = {
+				which = province_tax_score
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_tax } 
+			}
+			FROM = { set_country_flag = choosing_best_tax }
+			save_global_event_target_as = highest_score_tax
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_tax_score
+						which = event_target:highest_score_tax
+					}
+				}
+				save_global_event_target_as = highest_score_tax
+			}
+		}
+	}
+	clr_country_flag = choosing_best_tax
+}
+
+pick_best_navydef_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_navydef_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_navydef_power_flat
+			value = modifier:hostile_fleet_attrition
+		}
+		change_variable = {
+			which = province_navydef_score
+			which = province_navydef_power_flat
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_navydef } 
+			}
+			FROM = { set_country_flag = choosing_best_navydef }
+			save_global_event_target_as = highest_score_navydef
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_navydef_score
+						which = event_target:highest_score_navydef
+					}
+				}
+				save_global_event_target_as = highest_score_navydef
+			}
+		}
+	}
+	clr_country_flag = choosing_best_navydef
+}
+
+pick_best_fort_province = {
+	$scope$ = {
+		limit = {
+			$trigger$
+		}
+		clr_province_flag = already_processed
+		set_variable = {
+			which = province_fort_score
+			value = 0
+		}
+		export_to_variable = {
+			which = province_fort_power_flat
+			value = modifier:local_defensiveness
+		}
+		change_variable = {
+			which = province_fort_score
+			which = province_fort_power_flat
+		}
+		export_to_variable = {
+			which = province_dice_roll_flat
+			value = modifier:local_defender_dice_roll_bonus
+		}
+		change_variable = {
+			which = province_fort_score
+			which = province_dice_roll_flat
+		}
+		export_to_variable = {
+			which = province_garrison_flat
+			value = modifier:local_garrison_size
+		}
+		change_variable = {
+			which = province_fort_score
+			which = province_garrison_flat
+		}
+		if = {
+			limit = {
+				NOT = { has_saved_global_event_target = highest_score_fort } 
+			}
+			FROM = { set_country_flag = choosing_best_fort }
+			save_global_event_target_as = highest_score_fort
+		}
+		else = {
+			if = {
+				limit = {
+					check_variable = {
+						which = province_fort_score
+						which = event_target:highest_score_fort
+					}
+				}
+				save_global_event_target_as = highest_score_fort
+			}
+		}
+	}
+	clr_country_flag = choosing_best_fort
+}
+
+predict_build_costs = {
+	hidden_effect = {
+		set_variable = {
+			which = affordable_cost_trade_depot
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_trade_depot
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_stock_exchange
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_stock_exchange
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_town_hall
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_town_hall
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_drydock
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_drydock
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_grand_shipyard
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_grand_shipyard
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_counting_house
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_counting_house
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_training_fields
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_training_fields
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_conscription_center
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_conscription_center
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_cathedral
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_cathedral
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_fort_16th
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_fort_16th
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_fort_17th
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_fort_17th
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_fort_18th
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_fort_18th
+			value = 0
+		}
+		set_variable = {
+			which = affordable_cost_naval_battery
+			value = 0
+		}
+		set_variable = {
+			which = affordable_num_naval_battery
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_trade_depot
+			value = 0
+		}
+		set_variable = {
+			which = total_num_trade_depot
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_stock_exchange
+			value = 0
+		}
+		set_variable = {
+			which = total_num_stock_exchange
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_town_hall
+			value = 0
+		}
+		set_variable = {
+			which = total_num_town_hall
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_drydock
+			value = 0
+		}
+		set_variable = {
+			which = total_num_drydock
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_grand_shipyard
+			value = 0
+		}
+		set_variable = {
+			which = total_num_grand_shipyard
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_counting_house
+			value = 0
+		}
+		set_variable = {
+			which = total_num_counting_house
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_training_fields
+			value = 0
+		}
+		set_variable = {
+			which = total_num_training_fields
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_conscription_center
+			value = 0
+		}
+		set_variable = {
+			which = total_num_conscription_center
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_cathedral
+			value = 0
+		}
+		set_variable = {
+			which = total_num_cathedral
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_fort_16th
+			value = 0
+		}
+		set_variable = {
+			which = total_num_fort_16th
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_fort_17th
+			value = 0
+		}
+		set_variable = {
+			which = total_num_fort_17th
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_fort_18th
+			value = 0
+		}
+		set_variable = {
+			which = total_num_fort_18th
+			value = 0
+		}
+		set_variable = {
+			which = total_cost_naval_battery
+			value = 0
+		}
+		set_variable = {
+			which = total_num_naval_battery
+			value = 0
+		}
+		###
+		export_to_variable = {
+			which = treasury_estimate_orig
+			value = treasury
+		}
+		export_to_variable = {
+			which = global_construction_cost
+			value = build_cost
+		}
+		set_variable = {
+			which = budget_trade_depot
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_stock_exchange
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_town_hall
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_drydock
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_grand_shipyard
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_counting_house
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_training_fields
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_conscription_center
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_cathedral
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_fort_16th
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_fort_17th
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_fort_18th
+			which = treasury_estimate_orig
+		}
+		set_variable = {
+			which = budget_naval_battery
+			which = treasury_estimate_orig
+		}
+		###
+		$scope$ = {
+			limit = {
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = courthouse
+					has_building = dock
+					has_building = shipyard
+					has_building = workshop
+					has_building = barracks
+					has_building = regimental_camp
+					has_building = temple
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = coastal_defence
+				}
+				can_construct_building = yes
+			}
+			export_to_variable = {
+				which = local_construction_cost
+				value = local_build_cost
+			}
+			set_variable = {
+				which = total_construction_cost
+				value = 0
+			}
+			set_variable = {
+				which = global_construction_cost
+				value = PREV
+			}
+			change_variable = {
+				which = total_construction_cost
+				which = global_construction_cost
+			}
+			change_variable = {
+				which = total_construction_cost
+				which = local_construction_cost
+			}
+			change_variable = {
+				which = total_construction_cost
+				value = 1
+			}
+			if = {
+				limit = {
+					has_building = marketplace
+					can_build = trade_depot
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 300
+					}
+					set_variable = {
+						which = treasury_estimate_t3
+						value = 400
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t3
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_trade_depot
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_trade_depot
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_trade_depot
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_trade_depot
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_trade_depot
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_trade_depot
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_building = marketplace
+						has_building = trade_depot
+					}
+					can_build = stock_exchange
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 300
+					}
+					set_variable = {
+						which = treasury_estimate_t3
+						value = 400
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t3
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t3
+					}
+					if = {
+						limit = { ROOT = { has_building = marketplace } }
+						subtract_variable = {
+							which = total_build_cost
+							which = treasury_estimate_t1
+						}
+					}
+					else_if = {
+						limit = { ROOT = { has_building = trade_depot } }
+						subtract_variable = {
+							which = total_build_cost
+							which = treasury_estimate_t2
+						}
+					}
+					###
+					subtract_variable = {
+						which = budget_stock_exchange
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_stock_exchange
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_stock_exchange
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_stock_exchange
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_stock_exchange
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_stock_exchange
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = courthouse
+					can_build = town_hall
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 200
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_town_hall
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_town_hall
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_town_hall
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_town_hall
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_town_hall
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_town_hall
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = dock
+					can_build = drydock
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 300
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_drydock
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_drydock
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_drydock
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_drydock
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_drydock
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_drydock
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = shipyard
+					can_build = grand_shipyard
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 300
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_grand_shipyard
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_grand_shipyard
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_grand_shipyard
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_grand_shipyard
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_grand_shipyard
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_grand_shipyard
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = workshop
+					can_build = counting_house
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 400
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_counting_house
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_counting_house
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_counting_house
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_counting_house
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_counting_house
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_counting_house
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = barracks
+					can_build = training_fields
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 300
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_training_fields
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_training_fields
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_training_fields
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_training_fields
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_training_fields
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_training_fields
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = regimental_camp
+					can_build = conscription_center
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 200
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 400
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_conscription_center
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_conscription_center
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_conscription_center
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_conscription_center
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_conscription_center
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_conscription_center
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = temple
+					can_build = cathedral
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 300
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_cathedral
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_cathedral
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_cathedral
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_cathedral
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_cathedral
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_cathedral
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = fort_15th
+					can_build = fort_16th
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 200
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 400
+					}
+					set_variable = {
+						which = treasury_estimate_t3
+						value = 600
+					}
+					set_variable = {
+						which = treasury_estimate_t4
+						value = 800
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t3
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t4
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_fort_16th
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_fort_16th
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_fort_16th
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_fort_16th
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_fort_16th
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_fort_16th
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+					}
+					can_build = fort_17th
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 200
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 400
+					}
+					set_variable = {
+						which = treasury_estimate_t3
+						value = 600
+					}
+					set_variable = {
+						which = treasury_estimate_t4
+						value = 800
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t3
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t4
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t3
+					}
+					if = {
+						limit = { ROOT = { has_building = fort_15th } }
+						subtract_variable = {
+							which = total_build_cost
+							which = treasury_estimate_t1
+						}
+					}
+					else_if = {
+						limit = { ROOT = { has_building = fort_16th } }
+						subtract_variable = {
+							which = total_build_cost
+							which = treasury_estimate_t2
+						}
+					}
+					###
+					subtract_variable = {
+						which = budget_fort_17th
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_fort_17th
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_fort_17th
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_fort_17th
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_fort_17th
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_fort_17th
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+					}
+					can_build = fort_18th
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 200
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 400
+					}
+					set_variable = {
+						which = treasury_estimate_t3
+						value = 600
+					}
+					set_variable = {
+						which = treasury_estimate_t4
+						value = 800
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t3
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t4
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t4
+					}
+					if = {
+						limit = { ROOT = { has_building = fort_15th } }
+						subtract_variable = {
+							which = total_build_cost
+							which = treasury_estimate_t1
+						}
+					}
+					else_if = {
+						limit = { ROOT = { has_building = fort_16th } }
+						subtract_variable = {
+							which = total_build_cost
+							which = treasury_estimate_t2
+						}
+					}
+					else_if = {
+						limit = { ROOT = { has_building = fort_17th } }
+						subtract_variable = {
+							which = total_build_cost
+							which = treasury_estimate_t3
+						}
+					}
+					###
+					subtract_variable = {
+						which = budget_fort_18th
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_fort_18th
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_fort_18th
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_fort_18th
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_fort_18th
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_fort_18th
+						value = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_building = coastal_defence
+					can_build = naval_battery
+					can_construct_building = yes
+				}
+				PREV = {
+					set_variable = {
+						which = total_construction_cost
+						which = PREV
+					}
+					set_variable = {
+						which = treasury_estimate_t1
+						value = 100
+					}
+					set_variable = {
+						which = treasury_estimate_t2
+						value = 200
+					}
+					multiply_variable = {
+						which = treasury_estimate_t1
+						which = total_construction_cost
+					}
+					multiply_variable = {
+						which = treasury_estimate_t2
+						which = total_construction_cost
+					}
+					set_variable = {
+						which = total_build_cost
+						value = 0
+					}
+					change_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t2
+					}
+					subtract_variable = {
+						which = total_build_cost
+						which = treasury_estimate_t1
+					}
+					###
+					subtract_variable = {
+						which = budget_naval_battery
+						which = total_build_cost
+					}
+					if = {
+						limit = {
+							check_variable = {
+								which = budget_naval_battery
+								value = 0
+							}
+						}
+						change_variable = {
+							which = affordable_cost_naval_battery
+							which = total_build_cost
+						}
+						change_variable = {
+							which = affordable_num_naval_battery
+							value = 1
+						}
+					}
+					change_variable = {
+						which = total_cost_naval_battery
+						which = total_build_cost
+					}
+					change_variable = {
+						which = total_num_naval_battery
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}

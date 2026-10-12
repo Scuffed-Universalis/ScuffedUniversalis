@@ -1,0 +1,22 @@
+##EE France Local Organization##
+EE_FRA_les_invalides = {
+    icon = GFX_holy_order_franciscans
+    trigger = { has_country_flag = EE_FRA_unlock_les_invalides_organization }
+    color = { 110 190 240 }
+    cost = 50
+    cost_type = mil_power
+    per_province_effect = { add_base_manpower = 1 }
+    per_province_abandon_effect = { add_base_manpower = -1 }
+    modifier = {
+        local_manpower_modifier = 0.25
+        local_prosperity_growth = 0.1
+    }
+    ai_priority = {
+        factor = 1
+        modifier = {
+            factor = 1.5
+            devastation = 50
+        }
+    }
+    localization = local_organization
+}

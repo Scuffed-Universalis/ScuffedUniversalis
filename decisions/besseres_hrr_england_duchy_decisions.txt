@@ -1,0 +1,327 @@
+country_decisions = {
+	hre_england_duchy_decision_england = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_england_duchy_decision_england }
+			NOT = { tag = ENG }
+			OR = {
+				home_counties_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ENG }
+				}
+				wessex_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ENG }
+				}
+				east_anglia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ENG }
+				}
+				west_midlands_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ENG }
+				}
+				east_midlands_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ENG }
+				}
+				wales_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ENG }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = home_counties_area
+				area = wessex_area
+				area = east_anglia_area
+				area = west_midlands_area
+				area = east_midlands_area
+				area = wales_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = ENG }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = ENG }
+				ENG = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_england_duchy_decision_england
+			add_imperial_influence = -10
+			custom_tooltip = hre_england_duchy_decision_england_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = home_counties_area
+					tag = ENG
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = wessex_area
+					tag = ENG
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = east_anglia_area
+					tag = ENG
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = west_midlands_area
+					tag = ENG
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = east_midlands_area
+					tag = ENG
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = wales_area
+					tag = ENG
+				}
+				ENG = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = english
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_england_duchy_decision_northumberland = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_england_duchy_decision_northumberland }
+			NOT = { tag = NOL }
+			OR = {
+				yorkshire_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOL }
+				}
+				scottish_marches_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOL }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = yorkshire_area
+				area = scottish_marches_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = NOL }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = NOL }
+				NOL = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_england_duchy_decision_northumberland
+			add_imperial_influence = -10
+			custom_tooltip = hre_england_duchy_decision_northumberland_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = yorkshire_area
+					tag = NOL
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = scottish_marches_area
+					tag = NOL
+				}
+				NOL = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = english
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_england_duchy_decision_scotland = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_england_duchy_decision_scotland }
+			NOT = { tag = SCO }
+			OR = {
+				lowlands_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SCO }
+				}
+				highlands_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SCO }
+				}
+				kingdom_of_the_isles_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SCO }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lowlands_area
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = SCO }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = SCO }
+				SCO = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_england_duchy_decision_scotland
+			add_imperial_influence = -10
+			custom_tooltip = hre_england_duchy_decision_scotland_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = lowlands_area
+					tag = SCO
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = highlands_area
+					tag = SCO
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = kingdom_of_the_isles_area
+					tag = SCO
+				}
+				SCO = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = scottish
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_england_duchy_decision_ireland = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_england_duchy_decision_ireland }
+			NOT = { tag = IRE }
+			OR = {
+				ulster_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = IRE }
+				}
+				leinster_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = IRE }
+				}
+				munster_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = IRE }
+				}
+				connacht_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = IRE }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = ulster_area
+				area = leinster_area
+				area = munster_area
+				area = connacht_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = IRE }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = IRE }
+				IRE = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_england_duchy_decision_ireland
+			add_imperial_influence = -10
+			custom_tooltip = hre_england_duchy_decision_ireland_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = ulster_area
+					tag = IRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = leinster_area
+					tag = IRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = munster_area
+					tag = IRE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = connacht_area
+					tag = IRE
+				}
+				IRE = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = irish
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+objectTypes = {
+	
+	pdxmesh = {
+		name = "english_french_ferry_mesh"
+		file = "gfx/straits/active_straits.mesh"			
+		
+		scale = 0.4
+		
+		cull_distance = 9999.0f
+	}
+	
+	pdxmesh = {
+		name = "english_french_ferry_disabled_mesh"
+		file = "gfx/straits/inactive_straits.mesh"			
+		
+		scale = 0.4
+		
+		cull_distance = 9999.0f
+	}
+	
+}

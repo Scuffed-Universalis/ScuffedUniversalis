@@ -1,0 +1,26 @@
+timurid_prince_persia_restoration = {
+    icon = GFX_holy_order_benedictines
+    trigger = {
+    	has_country_flag = me_prince_unlocked_persian_restoration
+    }
+    color = { 15 170 212 }
+    cost = 250
+    cost_type = adm_power
+    per_province_effect = {
+        add_base_tax = 1
+        add_base_production = 1
+        add_base_manpower = 1
+    }
+    per_province_abandon_effect = {
+        add_base_tax = -1
+        add_base_production = -1
+        add_base_manpower = -1
+    }
+    modifier = {
+        local_development_cost = -0.05
+    }
+    ai_priority = {
+        factor = 2
+    }
+    localization = coordinator_office
+}

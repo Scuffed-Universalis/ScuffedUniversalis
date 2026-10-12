@@ -1,0 +1,195 @@
+ME_colonial_give_up_provinces = {
+	category = colonial_region
+
+	require_acceptance = no
+
+	is_visible = {
+		colony = 1
+		FROM = {
+			is_colonial_nation_of = ROOT
+		}
+	}
+	
+	is_allowed = {
+		hidden_trigger = {
+			colony = 1
+			FROM = {
+				is_colonial_nation_of = ROOT
+			}
+		}
+		FROM = {
+			custom_trigger_tooltip = {
+				tooltip = ME_colonial_has_province_outside_colonial_region
+				any_owned_province = {
+					NOT = {
+						colonial_region_for_scope_province = {
+							is_capital_of = FROM
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	on_accept = {
+		FROM = {
+			capital_scope = {
+				save_event_target_as = ME_colonial_capital
+			}
+			every_owned_province = {
+				limit = {
+					NOT = { colonial_region = event_target:ME_colonial_capital }
+				}
+				cede_province = ROOT
+				owner = {
+					add_liberty_desire = 5
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		always = no #let AI be random, it's for players mainly.
+	}
+}
+
+ME_colonial_respect_colonial_borders = {
+	category = colonial_region
+
+	require_acceptance = no
+
+	is_visible = {
+		colony = 1
+		FROM = {
+			is_colonial_nation_of = ROOT
+		}
+	}
+	
+	is_allowed = {
+		hidden_trigger = {
+			colony = 1
+			FROM = {
+				is_colonial_nation_of = ROOT
+			}
+		}
+	}
+	
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = ME_colonial_may_not_colonize_outside_region
+				}
+			}
+			FROM = {
+				clr_country_flag = ME_colonial_may_not_colonize_outside_region
+			}
+		}
+		else = {
+			FROM = {
+				set_country_flag = ME_colonial_may_not_colonize_outside_region
+			}
+		}
+	}
+	
+	ai_will_do = {
+		always = no #let AI be random, it's for players mainly.
+	}
+}
+
+ME_colonial_request_war_help = {
+	category = colonial_region
+
+	require_acceptance = no
+
+	is_visible = {
+		colony = 1
+		FROM = {
+			is_colonial_nation_of = ROOT
+		}
+		always = no
+	}
+	
+	is_allowed = {
+		hidden_trigger = {
+			colony = 1
+			FROM = {
+				is_colonial_nation_of = ROOT
+			}
+			is_at_war = yes
+			any_war_enemy_country = {
+				war_with = ROOT
+			}
+		}
+	}
+	
+	on_accept = {
+		if = {
+			limit = {
+				FROM = {
+					num_of_cities = 50
+				}
+			}
+			for = {
+				amount = 30
+				effect = "
+					infantry = FROM
+				"
+			}
+			for = {
+				amount = 10
+				effect = "
+					artillery = FROM
+				"
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					num_of_cities = 30
+				}
+			}
+			for = {
+				amount = 20
+				effect = "
+					infantry = FROM
+				"
+			}
+			for = {
+				amount = 5
+				effect = "
+					artillery = FROM
+				"
+			}
+		}
+		else_if = {
+			limit = {
+				FROM = {
+					num_of_cities = 15
+				}
+			}
+			capital_scope = {
+				for = {
+					amount = 10
+					effect = "
+						infantry = FROM
+					"
+				}
+			}
+		}
+		else = {
+			capital_scope = {
+				for = {
+					amount = 5
+					effect = "
+						infantry = FROM
+					"
+				}
+			}
+		}
+	}
+	
+	ai_will_do = {
+		always = no #let AI be random, it's for players mainly.
+	}
+}

@@ -1,0 +1,500 @@
+custom_button = {
+	name = transfer_occupation_from_ally_button
+	potential = {
+		#ROOT = { controlled_by = HAB }
+		ROOT = {
+			owner = {
+				war_with = FROM
+			}
+		}
+		FROM = {
+			any_ally = {
+				OR = {
+					is_in_war = {
+						attackers = FROM
+					}
+					is_in_war = {
+						defenders = FROM
+					}
+				}
+				ROOT = { controlled_by = PREV }
+			}
+		}
+	}
+	trigger = {
+		controller = {
+			if = {
+				limit = {
+					is_core = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Since they have a core on this province, [Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] needs to owe us at least 10 favors"
+					owes_favors = { 
+						 who = FROM 
+						 value = 10
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_claim = ROOT
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Since they have a claim on this province, [Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] needs to owe us at least 5 favors"
+					owes_favors = { 
+						 who = FROM 
+						 value = 5
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					always = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Since they have no claim on this province, [Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] needs to owe us at least 2 favors"
+					owes_favors = { 
+						 who = FROM 
+						 value = 2
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		controller = {
+			if = {
+				limit = {
+					is_core = ROOT
+				}
+				custom_tooltip = "[Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] will owe 10 less favors to [Root.GetInfoPrefix][From.GetName][Root.GetUniversalPostfix]"
+			}
+			else_if = {
+				limit = {
+					is_claim = ROOT
+				}
+				custom_tooltip = "[Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] will owe 5 less favors to [Root.GetInfoPrefix][From.GetName][Root.GetUniversalPostfix]"
+			}
+			else_if = {
+				limit = {
+					always = yes
+				}
+				custom_tooltip = "[Root.GetInfoPrefix][This.GetName][Root.GetUniversalPostfix] will owe 2 less favors to [Root.GetInfoPrefix][From.GetName][Root.GetUniversalPostfix]"
+			}
+		}
+		hidden_effect = {
+			controller = {
+				if = {
+					limit = {
+						is_core = ROOT
+					}
+					FROM = {
+						add_favors = { 
+							 who = PREV 
+							 amount = -10
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						is_claim = ROOT
+					}
+					FROM = {
+						add_favors = { 
+							 who = PREV 
+							 amount = -5
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						always = yes
+					}
+					FROM = {
+						add_favors = { 
+							 who = PREV 
+							 amount = -2
+						}
+					}
+				}
+			}
+		}
+		change_controller = FROM
+	}
+	tooltip = transfer_occupation_from_ally_button_tooltip
+}
+
+custom_button = { #also change ME_build_CoT_ai
+	name = ME_build_CoT
+	tooltip = ME_build_CoT_tt
+	potential = {
+		NOT = { province_has_center_of_trade_of_level = 1 }
+		owned_by = FROM
+		always = no #WIP
+	}
+	trigger = {
+		NOT = {
+			area_for_scope_province = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		
+		FROM = {
+			treasury = 200
+		}
+		
+		OR = {
+			province_trade_power = 25 
+			AND = {
+				province_trade_power = 15
+				area_for_scope_province = {
+					type = all
+					province_trade_power = 5
+				}
+			}
+		}
+	}
+	effect = { 
+		FROM = {
+			add_treasury = -200
+		}
+		
+		custom_tooltip = " "
+	
+		center_of_trade = 1
+		
+		custom_tooltip = " "
+		
+		add_permanent_province_modifier = {
+			name = ME_custom_cot_penalty_modifier
+			duration = -1
+		}
+	}
+}
+
+custom_button = {
+	name = scripted_trade_company_button_add
+	potential = {
+		OR = {
+			ME_provinces_are_in_same_superregion = yes
+			colonial_region_for_scope_province = { ROOT = { colonial_region = PREV } }
+		}
+		ROOT = { owned_by = FROM }
+		ROOT = { is_owned_by_trade_company = no }
+		ROOT = { is_part_of_hre = no }
+		always = no
+	}
+	trigger = {
+		hidden_trigger = {
+			ROOT = { is_territory = yes }
+			ROOT = { NOT = { has_province_modifier = left_trade_company } }
+		}
+	}
+	frame = {
+        number = 3
+        trigger = { 
+			OR = {
+				ME_provinces_are_in_same_superregion = yes
+				colonial_region_for_scope_province = { ROOT = { colonial_region = PREV } }
+			}
+			ROOT = { owned_by = FROM }
+			ROOT = { is_owned_by_trade_company = no }
+			ROOT = { is_part_of_hre = no }
+		}
+    }
+	frame = {
+        number = 4
+        trigger = { 
+			OR = {
+				ME_provinces_are_in_same_superregion = yes
+				colonial_region_for_scope_province = { ROOT = { colonial_region = PREV } }
+			}
+			ROOT = { owned_by = FROM }
+			ROOT = { is_territory = yes }
+			ROOT = { is_owned_by_trade_company = yes }
+		}
+    }
+	effect = { 
+		hidden_effect = {
+			if = {
+				limit = {
+					is_owned_by_trade_company = no
+				}
+				add_to_trade_company = FROM
+			}
+			else = {
+				#custom_tooltip = remove_province_from_trade_company_effect_tooltip
+				hidden_effect = {
+					cede_province = ---
+					cede_province = FROM
+				}
+			}
+		}
+	}
+	tooltip = scripted_trade_company_tooltip
+}
+
+custom_button = {
+	name = scripted_trade_company_button_remove
+	potential = {
+		OR = {
+			ME_provinces_are_in_same_superregion = yes
+			colonial_region_for_scope_province = { ROOT = { colonial_region = PREV } }
+		}
+		ROOT = { owned_by = FROM }
+		ROOT = { is_territory = yes }
+		ROOT = { is_owned_by_trade_company = yes }
+		always = no
+	}
+	trigger = {
+		#is_owned_by_trade_company = no
+	}
+	frame = {
+        number = 3
+        trigger = { 
+			OR = {
+				ME_provinces_are_in_same_superregion = yes
+				colonial_region_for_scope_province = { ROOT = { colonial_region = PREV } }
+			}
+			ROOT = { owned_by = FROM }
+			ROOT = { is_owned_by_trade_company = no }
+			ROOT = { is_part_of_hre = no }
+		}
+    }
+	frame = {
+        number = 4
+        trigger = { 
+			OR = {
+				ME_provinces_are_in_same_superregion = yes
+				colonial_region_for_scope_province = { ROOT = { colonial_region = PREV } }
+			}
+			ROOT = { owned_by = FROM }
+			ROOT = { is_territory = yes }
+			ROOT = { is_owned_by_trade_company = yes }
+		}
+    }
+	effect = { 
+		if = {
+			limit = {
+				is_owned_by_trade_company = no
+			}
+			hidden_effect = {
+				add_to_trade_company = FROM
+			}
+		}
+		else = {
+			#custom_tooltip = remove_province_from_trade_company_effect_tooltip
+			hidden_effect = {
+				#variable stuff
+				FROM = {
+					export_to_variable = {
+						variable_name = province_adm_dev
+						value = trigger_value:base_tax
+						who = PREV
+					}
+					export_to_variable = {
+						variable_name = province_dip_dev
+						value = trigger_value:base_production
+						who = PREV
+					}
+					export_to_variable = {
+						variable_name = province_mil_dev
+						value = trigger_value:base_manpower
+						who = PREV
+					}
+				}
+				if = {
+					limit = {
+						has_province_modifier = Abbasid_Caliph_in_province
+					}
+					set_province_flag = need_to_readd_caliph
+				}
+			
+				cede_province = ---
+				cede_province = FROM
+				add_territorial_core = FROM
+				set_base_tax = 0
+				set_base_production = 0
+				set_base_manpower = 0
+				
+			}
+			hidden_effect = {
+				#variable stuff
+				FROM = {
+					while = {
+						limit = {
+							check_variable = {
+								which = province_adm_dev
+								value = 1
+							}
+						}
+						ROOT = { add_base_tax = 1 }
+						subtract_variable = {
+							which = province_adm_dev
+							value = 1
+						}
+					}
+					while = {
+						limit = {
+							check_variable = {
+								which = province_dip_dev
+								value = 1
+							}
+						}
+						ROOT = { add_base_production = 1 }
+						subtract_variable = {
+							which = province_dip_dev
+							value = 1
+						}
+					}
+					while = {
+						limit = {
+							check_variable = {
+								which = province_mil_dev
+								value = 1
+							}
+						}
+						ROOT = { add_base_manpower = 1 }
+						subtract_variable = {
+							which = province_mil_dev
+							value = 1
+						}
+					}
+				}
+				
+				if = {
+					limit = {
+						has_province_flag = need_to_readd_caliph
+					}
+					clr_province_flag = need_to_readd_caliph
+					add_permanent_province_modifier = {
+						name = Abbasid_Caliph_in_province
+						duration = -1
+					}
+				}
+			}
+			add_province_modifier = {
+				name = left_trade_company
+				duration = 1825
+			}
+		}
+	}
+	tooltip = scripted_trade_company_tooltip
+}
+
+custom_icon = {
+	name = scripted_trade_company_icon
+	potential = {
+		always = no
+		OR = {
+			AND = {
+				OR = {
+					ME_provinces_are_in_same_superregion = yes
+					colonial_region_for_scope_province = { ROOT = { colonial_region = PREV } }
+				}
+				ROOT = { NOT = { owned_by = FROM } }
+				ROOT = { is_owned_by_trade_company = yes }
+			}
+			#AND = {
+			#	ME_provinces_are_in_same_superregion = yes
+			#	ROOT = { owned_by = FROM }
+			#	ROOT = { is_territory = yes }
+			#}
+		}
+	}
+	
+	frame = {  #Can define multiple frame clauses
+        number = 1 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { 
+			always = no
+		}
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 2 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+		trigger = { 
+			AND = {
+				ME_provinces_are_in_same_superregion = yes
+				ROOT = { NOT = { owned_by = FROM } }
+				ROOT = { is_owned_by_trade_company = yes }
+			}
+			ROOT = { is_owned_by_trade_company = yes }
+		}
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 3 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { 
+			AND = {
+				ME_provinces_are_in_same_superregion = yes
+				ROOT = { owned_by = FROM }
+				ROOT = { is_territory = yes }
+			}
+			ROOT = { is_owned_by_trade_company = no }
+		}
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 4 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { 
+			AND = {
+				ME_provinces_are_in_same_superregion = yes
+				ROOT = { owned_by = FROM }
+				ROOT = { is_territory = yes }
+			}
+			ROOT = { is_owned_by_trade_company = yes }
+		}
+    }
+	tooltip = scripted_trade_company_icon_tooltip
+}
+
+##############################  Supported files with scopes ##############################
+#   The Gui objects must be directly inside the specified window Gui element!
+#   FROM is always the country that clicks
+#   provinceview.gui:
+#       province_window         (ROOT: Clicked province)
+#       buildings_window        (ROOT: Clicked province)
+#       state_window            (ROOT: Clicked province)
+#   countrycourtview.gui:
+#       countrycourtview        (ROOT = FROM)
+#   countrygovernmentview.gui:
+#       countrygovernmentview   (ROOT = FROM)
+#   countrydiplomacyview.gui:
+#       countrydiplimacyview    (ROOT: Selected country)
+#   countryeconomyview.gui:
+#       countryeconomyview      (ROOT = FROM)
+#   countrytradeview.gui:
+#       countrytradeview        (ROOT = FROM)
+#   countrytechnologyview.gui:
+#       countrytechnologyview   (ROOT = FROM)
+#   countryideasview.gui:
+#       countryideasview        (ROOT = FROM)
+#   countrymissionsview.gui:
+#       countrymissionsview     (ROOT: Selected country)
+#   countrydecisionview.gui:
+#       countrydecisionsview    (ROOT = FROM)
+#   countrystabilityview.gui:
+#       countrystabilityview    (ROOT = FROM)
+#   countryreligionview.gui:
+#       countryreligionview     (ROOT = FROM)
+#   countrymilitaryview.gui:
+#       countrymilitaryview     (ROOT = FROM)
+#   countrysubjectsview.gui:
+#       countrysubjectview      (ROOT = FROM)
+#   countryestatesview.gui:
+#       countryestatesview      (ROOT = FROM)
+#   ages_view.gui:
+#       ages_view               (ROOT = FROM)
+#   tradeinterface.gui:
+#       TradeNodeInterface      (ROOT: Trade capital of a trade node)
+#   hre.gui:
+#       hre_window              (ROOT = FROM)
+#   papacy.gui:
+#       papacy_window           (ROOT = FROM)
+#   faction.gui:
+#       All faction windows     (ROOT = FROM)
+#   celestialempireview.gui:
+#       celestial_window        (ROOT = FROM)
+#   countrynativesview.gui:
+#       natives_window          (ROOT = FROM)
+#   religiousreforms.gui:
+#       reforms_window          (ROOT = FROM)
+#   parliament.gui:
+#       parliament_window       (ROOT = FROM)

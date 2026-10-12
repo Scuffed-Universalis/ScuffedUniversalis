@@ -1,0 +1,56 @@
+autonomous_colonist_region_custom_trigger_tooltip = {
+	custom_trigger_tooltip = {
+		tooltip = colonization_policy_region_$target_region$_tooltip
+		NOT = { has_country_flag = autonomous_colonist_region_$target_region$_selected }
+		any_province = {
+			colonial_region = colonial_$target_region$
+			autonomous_colonist_region_province_reachable_trigger = yes
+		}
+	}
+}
+
+autonomous_colonist_region_province_reachable_trigger = {
+	is_empty = yes
+	is_wasteland = no
+	is_sea = no
+	has_discovered = ROOT
+	OR = {
+		range = ROOT
+		AND = {
+			any_neighbor_province = {
+				owned_by = ROOT
+				is_colony = yes
+			}
+			has_port = yes
+		}
+		AND = {
+			any_neighbor_province = {
+				owner = {
+					has_colonial_parent = ROOT
+				}
+				is_colony = yes
+			}
+			has_port = yes
+		}
+		AND = {
+			any_neighbor_province = {
+				owned_by = ROOT
+				is_core = owner
+			}
+		}
+	}
+	OR = {
+		has_port = yes
+		any_neighbor_province = {
+			owned_by = ROOT
+			is_core = owner
+		}
+		any_neighbor_province = {
+			owner = {
+				has_colonial_parent = ROOT
+			}
+			is_core = owner
+		}
+		#any_neighbor_province = { owner = { has_colonial_parent = ROOT } is_colony = no }
+	}
+}

@@ -1,0 +1,234 @@
+custom_button = {
+		name = estate_jains_procure_loans_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = PROCURE_LOANS_JAINS
+			}
+			has_estate = estate_jains
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			is_bankrupt = no
+			estate_influence = {
+				estate = estate_jains
+				influence = 15
+			}
+			estate_action_off_cooldown = {
+				estate_action = PROCURE_LOANS_JAINS
+				days = 1825
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = PROCURE_LOANS_JAINS
+			}
+			estate_action = {
+				estate_action = PROCURE_LOANS_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		estate_jains_investigate_corruption_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = INVESTIGATE_CORRUPTION_JAINS
+			}
+			has_estate = estate_jains
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			corruption = 2
+			estate_loyalty = {
+				estate = estate_jains
+				loyalty = 40
+			}
+			estate_influence = {
+				estate = estate_jains
+				influence = 60
+			}
+			estate_action_off_cooldown = {
+				estate_action = INVESTIGATE_CORRUPTION_JAINS
+				days = 10950
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = INVESTIGATE_CORRUPTION_JAINS
+			}
+			estate_action = {
+				estate_action = INVESTIGATE_CORRUPTION_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_jains_patronize_jain_families_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = PATRONIZE_JAIN_FAMILIES_JAINS
+			}
+			has_estate = estate_jains
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = PATRONIZE_JAIN_FAMILIES_JAINS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = PATRONIZE_JAIN_FAMILIES_JAINS
+			}
+			estate_action = {
+				estate_action = PATRONIZE_JAIN_FAMILIES_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_jains_commision_jain_scriptures_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = COMMISSION_JAIN_SCRIPTURES_JAINS
+			}
+			has_estate = estate_jains
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_jains
+				influence = 30
+			}
+			estate_action_off_cooldown = {
+				estate_action = COMMISSION_JAIN_SCRIPTURES_JAINS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = COMMISSION_JAIN_SCRIPTURES_JAINS
+			}
+			estate_action = {
+				estate_action = COMMISSION_JAIN_SCRIPTURES_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_jains_demand_support_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = DEMAND_SUPPORT_JAINS
+			}
+			has_estate = estate_jains
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_vaisyas }
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_jains
+				loyalty = 30
+			}	
+			estate_influence = {
+				estate = estate_jains
+				influence = 25
+			}
+			estate_action_off_cooldown = {
+				estate_action = DEMAND_SUPPORT_JAINS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = DEMAND_SUPPORT_JAINS
+			}
+			estate_action = {
+				estate_action = DEMAND_SUPPORT_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_cossacks_supply_arms_cossacks_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+			}
+			estate_action = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_cossacks_permit_self_governance_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+			}
+			estate_action = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}

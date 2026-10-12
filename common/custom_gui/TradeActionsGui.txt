@@ -1,0 +1,3276 @@
+custom_button = {
+	name = add_trade_to_company_button_scripted_add
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			is_node_in_trade_company_region = yes
+			ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = no
+			#is_territory = yes 
+		}
+		always = no
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_to_company_button_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = no
+				is_territory = yes
+			}
+		}
+	}
+	effect = { 
+		hidden_effect = {
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = no
+					is_territory = yes
+				}
+				add_to_trade_company = FROM
+			}
+		}
+	}
+	tooltip = "Assign Provinces to Trade Company"
+}
+
+custom_button = {
+	name = add_trade_to_company_button_scripted_remove
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			is_node_in_trade_company_region = yes
+			ME_provinces_are_in_same_superregion = yes
+		}
+		NOT = {
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		always = no
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = remove_trade_to_company_button_scripted_loc
+			all_trade_node_member_province = {
+				owner = { tag = FROM }
+				ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+	}
+	effect = { 
+		hidden_effect = {
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+				}
+				#remove_from_trade_company = FROM
+			}
+		}
+	}
+	tooltip = "Remove Provinces from Trade Company"
+}
+
+custom_button = {
+	name = add_trade_company_investments_scripted
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			if = {
+				limit = {
+					FROM = { NOT = { has_country_flag = showing_trade_TC_macros } }
+				}
+				set_country_flag = showing_trade_TC_macros
+			}
+			else = { clr_country_flag = showing_trade_TC_macros }
+			export_tc_costs_effect = yes
+		}
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = local_quarter
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = permanent_quarters
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+				}
+			}
+		}
+	}
+	tooltip = "Add Investments to Trade Company"
+}
+
+custom_window = {
+	name = tc_macros_custom_window
+	potential = {
+		FROM = { has_country_flag = showing_trade_TC_macros }
+	}
+}
+
+custom_icon = {
+	name = background_tc_investments_scripted
+	potential = {
+	}
+}
+
+custom_button = {
+	name = add_trade_company_investment_local_quarter
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Local Quarters in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = local_quarter
+							investor = FROM
+						}
+						has_trade_company_investment_in_area  = {
+							investment = permanent_quarters
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_one_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = local_quarter
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = permanent_quarters
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = local_quarter
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = permanent_quarters
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t1
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_one_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_one_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = local_quarter
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = permanent_quarters
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = local_quarter
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Local Quarter"
+}
+
+custom_button = {
+	name = add_trade_company_investment_permanent_quarter
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Permanent Quarters in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = permanent_quarters
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_two_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = permanent_quarters
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = permanent_quarters
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t2
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_two_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_two_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = permanent_quarters
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = permanent_quarters
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Permanent Quarter"
+}
+
+custom_button = {
+	name = add_trade_company_investment_officers_mess
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Officers Messes in this node"
+			NOT = {
+				OR = {
+					any_trade_node_member_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+					colonial_region_for_scope_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_three_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = 1 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						any_trade_node_member_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+						colonial_region_for_scope_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t3
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_three_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_three_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			random_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = officers_mess
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	tooltip = "Build Officers Mess"
+}
+
+custom_button = {
+	name = add_trade_company_investment_brokers_office
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Broker's Offices in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = brokers_office
+							investor = FROM
+						}
+						has_trade_company_investment_in_area  = {
+							investment = brokers_exchange
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_one_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = brokers_office
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = brokers_exchange
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = brokers_office
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = brokers_exchange
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t1
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_one_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_one_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = brokers_office
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = brokers_exchange
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = brokers_office
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Broker's Office"
+}
+
+custom_button = {
+	name = add_trade_company_investment_brokers_exchange
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Broker's Exchanges in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = brokers_exchange
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_two_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = brokers_exchange
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = brokers_exchange
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t2
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_two_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_two_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = brokers_exchange
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = brokers_exchange
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Broker's Exchange"
+}
+
+custom_button = {
+	name = add_trade_company_investment_property_appraiser
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Property Appraisers in this node"
+			NOT = {
+				OR = {
+					any_trade_node_member_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+					colonial_region_for_scope_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_three_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = 1 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						any_trade_node_member_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+						colonial_region_for_scope_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t3
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_three_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_three_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			random_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = property_appraiser
+					}
+				}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	tooltip = "Build Property Appraiser"
+}
+
+custom_button = {
+	name = add_trade_company_investment_company_administration
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Company Administrations in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = company_administration
+							investor = FROM
+						}
+						has_trade_company_investment_in_area  = {
+							investment = military_administration
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_one_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_administration
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = military_administration
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_administration
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = military_administration
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t1
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_one_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_one_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_administration
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = military_administration
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = company_administration
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Company Administration"
+}
+
+custom_button = {
+	name = add_trade_company_investment_military_administration
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Military Administrations in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = military_administration
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_two_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = military_administration
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = military_administration
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t2
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_two_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_two_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = military_administration
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = military_administration
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Local Quarter"
+}
+
+custom_button = {
+	name = add_trade_company_investment_governor_general_mansion
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Governor General's Mansions in this node"
+			NOT = {
+				OR = {
+					any_trade_node_member_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+					colonial_region_for_scope_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_three_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = 1 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						any_trade_node_member_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+						colonial_region_for_scope_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t3
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_three_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_three_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			random_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = governor_general_mansion
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	tooltip = "Build Governor General's Mansion"
+}
+
+custom_button = {
+	name = add_trade_company_investment_company_warehouse
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Warehouses in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = company_warehouse
+							investor = FROM
+						}
+						has_trade_company_investment_in_area  = {
+							investment = company_depot
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_one_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_warehouse
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = company_depot
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_warehouse
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = company_depot
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t1
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_one_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_one_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_warehouse
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = company_depot
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = company_warehouse
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Local Quarter"
+}
+
+custom_button = {
+	name = add_trade_company_investment_company_depot
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Depots in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = company_depot
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_two_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_depot
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_depot
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t2
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_two_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_two_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = company_depot
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = company_depot
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Local Quarter"
+}
+
+custom_button = {
+	name = add_trade_company_investment_admiralty
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Admiralties in this node"
+			NOT = {
+				OR = {
+					any_trade_node_member_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+					colonial_region_for_scope_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_three_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = 1 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						any_trade_node_member_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+						colonial_region_for_scope_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t1
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_one_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_three_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			random_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = admiralty
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	tooltip = "Build Admiralty"
+}
+
+custom_button = {
+	name = add_trade_company_investment_settlements
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Settlements in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = settlements
+							investor = FROM
+						}
+						has_trade_company_investment_in_area  = {
+							investment = district
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_one_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = settlements
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = district
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = settlements
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = district
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t1
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_one_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_one_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = settlements
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = district
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = settlements
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build Settlement"
+}
+
+custom_button = {
+	name = add_trade_company_investment_district
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Districts in this node"
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+				NOT = {
+					OR = {
+						has_trade_company_investment_in_area  = {
+							investment = district
+							investor = FROM
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_two_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				set_variable = {            
+					which = amount_of_tc_areas
+					value = 0
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = district
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_province_flag = area_has_processed }
+					}
+					area = { set_province_flag = area_has_processed }
+					FROM = {
+						change_variable = {            
+							which = amount_of_tc_areas
+							value = 1
+						}
+					}
+					clr_province_flag = area_has_processed
+				}
+			}
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = amount_of_tc_areas }
+			}
+		}
+		if = {
+			limit = {
+				any_trade_node_member_province = {
+					owner = { tag = FROM }
+					#ME_provinces_are_in_same_superregion = yes
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = district
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t1
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_one_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_two_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = district
+								investor = FROM
+							}
+						}
+					}
+					NOT = {
+						has_province_flag = area_has_processed
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = district
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+			every_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+				}
+				clr_province_flag = area_has_processed
+			}
+		}
+	}
+	tooltip = "Build District"
+}
+
+custom_button = {
+	name = add_trade_company_investment_townships
+	potential = {
+		any_trade_node_member_province = {
+			owner = { tag = FROM }
+			#ME_provinces_are_in_same_superregion = yes
+			#is_owned_by_trade_company = yes
+		}
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = add_trade_company_investments_scripted_loc
+			any_trade_node_member_province = {
+				owner = { tag = FROM }
+				#ME_provinces_are_in_same_superregion = yes
+				is_owned_by_trade_company = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Can build any Townships in this node"
+			NOT = {
+				OR = {
+					any_trade_node_member_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+					colonial_region_for_scope_province = {
+						owner = { tag = FROM }
+						is_owned_by_trade_company = yes
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			variable_arithmetic_trigger = {
+				custom_tooltip = "Can afford at least one investment."
+				export_to_variable = {
+					which = our_treasury
+					value = trigger_value:treasury
+				}
+				multiply_variable = {            
+					which = our_treasury
+					value = -1
+				}
+				
+				check_variable = { which = tier_three_tc_cost which = our_treasury }
+			}
+		}
+	}
+	effect = {
+		FROM = { export_tc_costs_effect = yes }
+		hidden_effect = {
+			FROM = {
+				export_tc_costs_effect_adjust_by_provinces = { num_of_provinces = 1 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						any_trade_node_member_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+						colonial_region_for_scope_province = {
+							owner = { tag = FROM }
+							is_owned_by_trade_company = yes
+							OR = {
+								has_trade_company_investment_in_area  = {
+									investment = officers_mess
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = admiralty
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = property_appraiser
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = townships
+									investor = FROM
+								}
+								has_trade_company_investment_in_area  = {
+									investment = governor_general_mansion
+									investor = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+			FROM = {
+				custom_tooltip = TC_investment_macro_cost_t1
+				hidden_effect = { variable_use_in_effect_effect = { effect = add_treasury variable = tier_one_tc_cost_adjusted } }
+			}
+			FROM = {
+				hidden_effect = {
+					export_to_variable = {            
+						which = amount_we_can_afford
+						value = trigger_value:treasury
+					}
+					divide_variable = {            
+						which = amount_we_can_afford
+						which = tier_three_tc_cost
+					}
+					multiply_variable = {            
+						which = amount_we_can_afford
+						value = -1
+					}
+				}
+			}
+			random_trade_node_member_province = {
+				limit = {
+					owner = { tag = FROM }
+					is_owned_by_trade_company = yes
+					NOT = {
+						OR = {
+							has_trade_company_investment_in_area  = {
+								investment = officers_mess
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = admiralty
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = property_appraiser
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = townships
+								investor = FROM
+							}
+							has_trade_company_investment_in_area  = {
+								investment = governor_general_mansion
+								investor = FROM
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							check_variable = {
+								which = amount_we_can_afford
+								value = 1
+							}
+						}
+					}
+					add_trade_company_investment = {
+						investor = FROM
+						investment = townships
+					}
+				}
+				hidden_effect = {
+					FROM = {
+						subtract_variable = {            
+							which = amount_we_can_afford
+							value = 1
+						}
+					}
+				}
+			}
+		}
+	}
+	tooltip = "Build Township"
+}
+
+##############################  Supported files with scopes ##############################
+#   The Gui objects must be directly inside the specified window Gui element!
+#   FROM is always the country that clicks
+#   provinceview.gui:
+#       province_window         (ROOT: Clicked province)
+#       buildings_window        (ROOT: Clicked province)
+#       state_window            (ROOT: Clicked province)
+#   countrycourtview.gui:
+#       countrycourtview        (ROOT = FROM)
+#   countrygovernmentview.gui:
+#       countrygovernmentview   (ROOT = FROM)
+#   countrydiplomacyview.gui:
+#       countrydiplimacyview    (ROOT: Selected country)
+#   countryeconomyview.gui:
+#       countryeconomyview      (ROOT = FROM)
+#   countrytradeview.gui:
+#       countrytradeview        (ROOT = FROM)
+#   countrytechnologyview.gui:
+#       countrytechnologyview   (ROOT = FROM)
+#   countryideasview.gui:
+#       countryideasview        (ROOT = FROM)
+#   countrymissionsview.gui:
+#       countrymissionsview     (ROOT: Selected country)
+#   countrydecisionview.gui:
+#       countrydecisionsview    (ROOT = FROM)
+#   countrystabilityview.gui:
+#       countrystabilityview    (ROOT = FROM)
+#   countryreligionview.gui:
+#       countryreligionview     (ROOT = FROM)
+#   countrymilitaryview.gui:
+#       countrymilitaryview     (ROOT = FROM)
+#   countrysubjectsview.gui:
+#       countrysubjectview      (ROOT = FROM)
+#   countryestatesview.gui:
+#       countryestatesview      (ROOT = FROM)
+#   ages_view.gui:
+#       ages_view               (ROOT = FROM)
+#   tradeinterface.gui:
+#       TradeNodeInterface      (ROOT: Trade capital of a trade node)
+#   hre.gui:
+#       hre_window              (ROOT = FROM)
+#   papacy.gui:
+#       papacy_window           (ROOT = FROM)
+#   faction.gui:
+#       All faction windows     (ROOT = FROM)
+#   celestialempireview.gui:
+#       celestial_window        (ROOT = FROM)
+#   countrynativesview.gui:
+#       natives_window          (ROOT = FROM)
+#   religiousreforms.gui:
+#       reforms_window          (ROOT = FROM)
+#   parliament.gui:
+#       parliament_window       (ROOT = FROM)

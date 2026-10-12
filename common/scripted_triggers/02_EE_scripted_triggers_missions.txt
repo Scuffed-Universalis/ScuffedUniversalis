@@ -1,0 +1,171 @@
+EE_has_branching_missions = {
+	OR = {
+		#EE
+		has_mission = GRA_dar_jihad
+		has_mission = fra_preparing_field
+	}
+}
+
+EE_can_preview_missions = {
+	custom_trigger_tooltip = {
+		tooltip = preview_missions_decision_ct
+		OR = {
+			#EE
+			can_preview_mission_of_key = { key = ADU }
+			can_preview_mission_of_key = { key = ARA }
+			can_preview_mission_of_key = { key = FRA }
+		}
+	}
+}
+
+EE_has_selected_a_branch = {
+	custom_trigger_tooltip = {
+		tooltip = has_selected_a_branch_tt
+		OR = {
+			#EE
+			AND = {
+				OR = {
+					has_country_flag = GRA_western_military_flag
+					has_country_flag = GRA_muslim_military_flag
+				}
+				can_preview_mission_of_key = { key = ADU }
+			}
+			AND = {
+				OR = {
+					has_country_flag = ARA_peasants_branch_flag
+					has_country_flag = ARA_normal_branch_flag
+				}
+				can_preview_mission_of_key = { key = ARA }
+			}
+			AND = {
+				OR = {
+					has_country_flag = EE_FRA_unlock_conquest_missions
+					has_country_flag = EE_FRA_unlock_diplomatic_missions
+				}
+				can_preview_mission_of_key = { key = FRA }
+			}
+		}
+	}
+}
+
+EE_has_locked_a_branch = {
+	OR = {
+		#ADU
+		OR = {
+			has_country_flag = GRA_western_military_flag
+			has_country_flag = GRA_muslim_military_flag
+		}
+		#ARA
+		OR = {
+			has_country_flag = ARA_peasants_branch_flag
+			has_country_flag = ARA_normal_branch_flag
+		}
+		#FRA
+		OR = {
+			has_country_flag = EE_FRA_unlock_conquest_missions
+			has_country_flag = EE_FRA_unlock_diplomatic_missions
+		}
+	}
+}
+
+EE_num_of_mission_branches_3 = {
+	always = no
+}
+
+EE_num_of_mission_branches_4 = {
+	always = no
+}
+
+EE_num_of_mission_branches_5 = {
+	always = no
+}
+EE_num_of_mission_branches = {
+	EE_num_of_mission_branches_$value$ = yes
+}
+
+EE_currently_selected_branch_1 = {
+	OR = {
+		#ADU
+		AND = {
+			can_preview_mission_of_key = { key = ADU }
+			has_country_flag = GRA_western_military_flag
+		}
+		#ARA
+		AND = {
+			can_preview_mission_of_key = { key = ARA }
+			has_country_flag = ARA_peasants_branch_flag
+		}
+		#FRA
+		AND = {
+			can_preview_mission_of_key = { key = FRA }
+			has_country_flag = EE_FRA_unlock_diplomatic_missions
+		}
+	}
+}
+EE_currently_selected_branch_2 = {
+	OR = {
+		#ADU
+		AND = {
+			can_preview_mission_of_key = { key = ADU }
+			has_country_flag = GRA_muslim_military_flag
+		}
+		#ARA
+		AND = {
+			can_preview_mission_of_key = { key = ARA }
+			has_country_flag = ARA_normal_branch_flag
+		}
+		#FRA
+		AND = {
+			can_preview_mission_of_key = { key = FRA }
+			has_country_flag = EE_FRA_unlock_conquest_missions
+		}
+	}
+}
+EE_currently_selected_branch_3 = {
+	always = no
+}
+EE_currently_selected_branch_4 = {
+	always = no
+}
+EE_currently_selected_branch_5 = {
+	always = no
+}
+EE_currently_selected_branch = {
+	EE_currently_selected_branch_$value$ = yes
+}
+
+EE_can_select_branch_1 = {
+	hidden_trigger = { always = yes }
+}
+EE_can_select_branch_2 = {
+	hidden_trigger = { always = yes }
+}
+EE_can_select_branch_3 = {
+	hidden_trigger = { always = yes }
+}
+EE_can_select_branch_4 = {
+	hidden_trigger = { always = yes }
+}
+EE_can_select_branch_5 = {
+	hidden_trigger = { always = yes }
+}
+EE_can_select_branch = {
+	EE_can_select_branch_$value$ = yes
+}
+
+EE_can_select_current_branch = {
+	#ARA
+	if = {
+		limit = { can_preview_mission_of_key = { key = ARA } }
+		always = no
+	}
+	#FRA
+	if = {
+		limit = { can_preview_mission_of_key = { key = FRA } }
+		custom_trigger_tooltip = {
+			tooltip = BRANCH_WILL_BE_SELECTED_FROM_FRENCH_MISSION
+			always = no
+		}
+	}
+	else = { hidden_trigger = { always = yes } }
+}

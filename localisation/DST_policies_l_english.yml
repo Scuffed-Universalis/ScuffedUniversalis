@@ -1,0 +1,1563 @@
+﻿l_english:
+ 
+ any_army_doctrine_idea: "§OAny Land Doctrine§!" # Conscription/Standing
+ any_army_focus_idea: "§RAny Army Focus§!" # Shock/Fire
+ any_fleet_focus_idea: "§TAny Naval Focus§!" # Heavies, Galleys, Trade
+ any_government_type_idea: "§WAny Goverment Type Idea§!" # Monarchy, Republic, Theocracy etc.
+ any_state_focus_idea: "§lAny State Focus§!" # Central/Decentral
+ any_state_power_idea: "§WState Power Idea§!" # Minor/Great Power Ideas
+
+ dse_policies_doctrine_cap: "Have no more than §T2§! §YDiscipline§! and/or §YLand Morale§! policies active, as they share the same limit cap."
+ dse_policies_army_focus_cap: "Have no more than §T2§! §YFire Damage/Received§! and/or §YShock Damage/Received§! type policies active, as they share the same limit cap."
+ dse_policies_dev_cap: "Have no more than §T2§! §YDevelopment Cost§! and/or §YDevelopment Cost in Primary Culture§! policies active, as they share the same limit cap."
+ dse_policies_liberty_cap: "Have no more than §T2§! §YLiberty Desire§! type policies active, as they share the same limit cap."
+ dse_policies_governingcapacity_cap: "Have no more than §T2§! §YGoverning Capacity§! type policies active, as they share the same limit cap."
+ 
+ dse_policies_normal_limiter_1: "Have no more than §T1§! of the same policy active."
+ dse_policies_normal_limiter_2: "Have no more than §T2§! of the same policy active."
+ dse_policies_normal_limiter_4: "Have no more than §T4§! of the same policy active."
+ # UI
+ dst_show_policy_viewer_options_button_tt: "Show Policy Combinations\n\n§gDue to game interface limitation, policies are not always properly shown. This interface allows for a much more easier viewing experience.\n\nYou are also able to view it online on a spreadsheet.§!\n\n§g================================================§!\n§gHow to Read: \n\nBe Literate.\n\n§g`X CAP` means that despite the policy modifiers being different they have the same maximum limit. \n\n`Doctrine Cap` for example limits Discipline and Morale, either commit into one or have a mix of both.§!\n"
+ dst_policy_viewer_adm_mil_button_tt: "Show §YAdministrative§! & §YMilitary§! Combinations"
+ dst_policy_viewer_dip_adm_button_tt: "Show §YDiplomatic§! & §YAdministrative§! Combinations"
+ dst_policy_viewer_mil_dip_button_tt: "Show §YMilitary§! & §YDiplomatic§! Combinations"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ # Policies
+ dst_policy_1: "1st Act"
+ desc_dst_policy_1: ""
+ 
+ dst_policy_2: "2nd Act"
+ desc_dst_policy_2: ""
+ 
+ dst_policy_3: "3rd Act"
+ desc_dst_policy_3: ""
+ 
+ dst_policy_4: "4th Act"
+ desc_dst_policy_4: ""
+ 
+ dst_policy_5: "5th Act"
+ desc_dst_policy_5: ""
+ 
+ dst_policy_6: "6th Act"
+ desc_dst_policy_6: ""
+ 
+ dst_policy_7: "7th Act"
+ desc_dst_policy_7: ""
+ 
+ dst_policy_8: "8th Act"
+ desc_dst_policy_8: ""
+ 
+ dst_policy_9: "9th Act"
+ desc_dst_policy_9: ""
+ 
+ dst_policy_10: "10th Act"
+ desc_dst_policy_10: ""
+ 
+ dst_policy_11: "11th Act"
+ desc_dst_policy_11: ""
+ 
+ dst_policy_12: "12th Act"
+ desc_dst_policy_12: ""
+ 
+ dst_policy_13: "13th Act"
+ desc_dst_policy_13: ""
+ 
+ dst_policy_14: "14th Act"
+ desc_dst_policy_14: ""
+ 
+ dst_policy_15: "15th Act"
+ desc_dst_policy_15: ""
+ 
+ dst_policy_16: "16th Act"
+ desc_dst_policy_16: ""
+ 
+ dst_policy_17: "17th Act"
+ desc_dst_policy_17: ""
+ 
+ dst_policy_18: "18th Act"
+ desc_dst_policy_18: ""
+ 
+ dst_policy_19: "19th Act"
+ desc_dst_policy_19: ""
+ 
+ dst_policy_20: "20th Act"
+ desc_dst_policy_20: ""
+ 
+ dst_policy_21: "21st Act"
+ desc_dst_policy_21: ""
+ 
+ dst_policy_22: "22nd Act"
+ desc_dst_policy_22: ""
+ 
+ dst_policy_23: "23rd Act"
+ desc_dst_policy_23: ""
+ 
+ dst_policy_24: "24th Act"
+ desc_dst_policy_24: ""
+ 
+ dst_policy_25: "25th Act"
+ desc_dst_policy_25: ""
+ 
+ dst_policy_26: "26th Act"
+ desc_dst_policy_26: ""
+ 
+ dst_policy_27: "27th Act"
+ desc_dst_policy_27: ""
+ 
+ dst_policy_28: "28th Act"
+ desc_dst_policy_28: ""
+ 
+ dst_policy_29: "29th Act"
+ desc_dst_policy_29: ""
+ 
+ dst_policy_30: "30th Act"
+ desc_dst_policy_30: ""
+ 
+ dst_policy_31: "31st Act"
+ desc_dst_policy_31: ""
+ 
+ dst_policy_32: "32nd Act"
+ desc_dst_policy_32: ""
+ 
+ dst_policy_33: "33rd Act"
+ desc_dst_policy_33: ""
+ 
+ dst_policy_34: "34th Act"
+ desc_dst_policy_34: ""
+ 
+ dst_policy_35: "35th Act"
+ desc_dst_policy_35: ""
+ 
+ dst_policy_36: "36th Act"
+ desc_dst_policy_36: ""
+ 
+ dst_policy_37: "37th Act"
+ desc_dst_policy_37: ""
+ 
+ dst_policy_38: "38th Act"
+ desc_dst_policy_38: ""
+ 
+ dst_policy_39: "39th Act"
+ desc_dst_policy_39: ""
+ 
+ dst_policy_40: "40th Act"
+ desc_dst_policy_40: ""
+ 
+ dst_policy_41: "41st Act"
+ desc_dst_policy_41: ""
+ 
+ dst_policy_42: "42nd Act"
+ desc_dst_policy_42: ""
+ 
+ dst_policy_43: "43rd Act"
+ desc_dst_policy_43: ""
+ 
+ dst_policy_44: "44th Act"
+ desc_dst_policy_44: ""
+ 
+ dst_policy_45: "45th Act"
+ desc_dst_policy_45: ""
+ 
+ dst_policy_46: "46th Act"
+ desc_dst_policy_46: ""
+ 
+ dst_policy_47: "47th Act"
+ desc_dst_policy_47: ""
+ 
+ dst_policy_48: "48th Act"
+ desc_dst_policy_48: ""
+ 
+ dst_policy_49: "49th Act"
+ desc_dst_policy_49: ""
+ 
+ dst_policy_50: "50th Act"
+ desc_dst_policy_50: ""
+ 
+ dst_policy_51: "51st Act"
+ desc_dst_policy_51: ""
+ 
+ dst_policy_52: "52nd Act"
+ desc_dst_policy_52: ""
+ 
+ dst_policy_53: "53rd Act"
+ desc_dst_policy_53: ""
+ 
+ dst_policy_54: "54th Act"
+ desc_dst_policy_54: ""
+ 
+ dst_policy_55: "55th Act"
+ desc_dst_policy_55: ""
+ 
+ dst_policy_56: "56th Act"
+ desc_dst_policy_56: ""
+ 
+ dst_policy_57: "57th Act"
+ desc_dst_policy_57: ""
+ 
+ dst_policy_58: "58th Act"
+ desc_dst_policy_58: ""
+ 
+ dst_policy_59: "59th Act"
+ desc_dst_policy_59: ""
+ 
+ dst_policy_60: "60th Act"
+ desc_dst_policy_60: ""
+ 
+ dst_policy_61: "61st Act"
+ desc_dst_policy_61: ""
+ 
+ dst_policy_62: "62nd Act"
+ desc_dst_policy_62: ""
+ 
+ dst_policy_63: "63rd Act"
+ desc_dst_policy_63: ""
+ 
+ dst_policy_64: "64th Act"
+ desc_dst_policy_64: ""
+ 
+ dst_policy_65: "65th Act"
+ desc_dst_policy_65: ""
+ 
+ dst_policy_66: "66th Act"
+ desc_dst_policy_66: ""
+ 
+ dst_policy_67: "67th Act"
+ desc_dst_policy_67: ""
+ 
+ dst_policy_68: "68th Act"
+ desc_dst_policy_68: ""
+ 
+ dst_policy_69: "69th Act"
+ desc_dst_policy_69: ""
+ 
+ dst_policy_70: "70th Act"
+ desc_dst_policy_70: ""
+ 
+ dst_policy_71: "71st Act"
+ desc_dst_policy_71: ""
+ 
+ dst_policy_72: "72nd Act"
+ desc_dst_policy_72: ""
+ 
+ dst_policy_73: "73rd Act"
+ desc_dst_policy_73: ""
+ 
+ dst_policy_74: "74th Act"
+ desc_dst_policy_74: ""
+ 
+ dst_policy_75: "75th Act"
+ desc_dst_policy_75: ""
+ 
+ dst_policy_76: "76th Act"
+ desc_dst_policy_76: ""
+ 
+ dst_policy_77: "77th Act"
+ desc_dst_policy_77: ""
+ 
+ dst_policy_78: "78th Act"
+ desc_dst_policy_78: ""
+ 
+ dst_policy_79: "79th Act"
+ desc_dst_policy_79: ""
+ 
+ dst_policy_80: "80th Act"
+ desc_dst_policy_80: ""
+ 
+ dst_policy_81: "81st Act"
+ desc_dst_policy_81: ""
+ 
+ dst_policy_82: "82nd Act"
+ desc_dst_policy_82: ""
+ 
+ dst_policy_83: "83rd Act"
+ desc_dst_policy_83: ""
+ 
+ dst_policy_84: "84th Act"
+ desc_dst_policy_84: ""
+ 
+ dst_policy_85: "85th Act"
+ desc_dst_policy_85: ""
+ 
+ dst_policy_86: "86th Act"
+ desc_dst_policy_86: ""
+ 
+ dst_policy_87: "87th Act"
+ desc_dst_policy_87: ""
+ 
+ dst_policy_88: "88th Act"
+ desc_dst_policy_88: ""
+ 
+ dst_policy_89: "89th Act"
+ desc_dst_policy_89: ""
+ 
+ dst_policy_90: "90th Act"
+ desc_dst_policy_90: ""
+ 
+ dst_policy_91: "91st Act"
+ desc_dst_policy_91: ""
+ 
+ dst_policy_92: "92nd Act"
+ desc_dst_policy_92: ""
+ 
+ dst_policy_93: "93rd Act"
+ desc_dst_policy_93: ""
+ 
+ dst_policy_94: "94th Act"
+ desc_dst_policy_94: ""
+ 
+ dst_policy_95: "95th Act"
+ desc_dst_policy_95: ""
+ 
+ dst_policy_96: "96th Act"
+ desc_dst_policy_96: ""
+ 
+ dst_policy_97: "97th Act"
+ desc_dst_policy_97: ""
+ 
+ dst_policy_98: "98th Act"
+ desc_dst_policy_98: ""
+ 
+ dst_policy_99: "99th Act"
+ desc_dst_policy_99: ""
+ 
+ dst_policy_100: "100th Act"
+ desc_dst_policy_100: ""
+ 
+ dst_policy_101: "101st Act"
+ desc_dst_policy_101: ""
+ 
+ dst_policy_102: "102nd Act"
+ desc_dst_policy_102: ""
+ 
+ dst_policy_103: "103rd Act"
+ desc_dst_policy_103: ""
+ 
+ dst_policy_104: "104th Act"
+ desc_dst_policy_104: ""
+ 
+ dst_policy_105: "105th Act"
+ desc_dst_policy_105: ""
+ 
+ dst_policy_106: "106th Act"
+ desc_dst_policy_106: ""
+ 
+ dst_policy_107: "107th Act"
+ desc_dst_policy_107: ""
+ 
+ dst_policy_108: "108th Act"
+ desc_dst_policy_108: ""
+ 
+ dst_policy_109: "109th Act"
+ desc_dst_policy_109: ""
+ 
+ dst_policy_110: "110th Act"
+ desc_dst_policy_110: ""
+ 
+ dst_policy_111: "111th Act"
+ desc_dst_policy_111: ""
+ 
+ dst_policy_112: "112th Act"
+ desc_dst_policy_112: ""
+ 
+ dst_policy_113: "113th Act"
+ desc_dst_policy_113: ""
+ 
+ dst_policy_114: "114th Act"
+ desc_dst_policy_114: ""
+ 
+ dst_policy_115: "115th Act"
+ desc_dst_policy_115: ""
+ 
+ dst_policy_116: "116th Act"
+ desc_dst_policy_116: ""
+ 
+ dst_policy_117: "117th Act"
+ desc_dst_policy_117: ""
+ 
+ dst_policy_118: "118th Act"
+ desc_dst_policy_118: ""
+ 
+ dst_policy_119: "119th Act"
+ desc_dst_policy_119: ""
+ 
+ dst_policy_120: "120th Act"
+ desc_dst_policy_120: ""
+ 
+ dst_policy_121: "121st Act"
+ desc_dst_policy_121: ""
+ 
+ dst_policy_122: "122nd Act"
+ desc_dst_policy_122: ""
+ 
+ dst_policy_123: "123rd Act"
+ desc_dst_policy_123: ""
+ 
+ dst_policy_124: "124th Act"
+ desc_dst_policy_124: ""
+ 
+ dst_policy_125: "125th Act"
+ desc_dst_policy_125: ""
+ 
+ dst_policy_126: "126th Act"
+ desc_dst_policy_126: ""
+ 
+ dst_policy_127: "127th Act"
+ desc_dst_policy_127: ""
+ 
+ dst_policy_128: "128th Act"
+ desc_dst_policy_128: ""
+ 
+ dst_policy_129: "129th Act"
+ desc_dst_policy_129: ""
+ 
+ dst_policy_130: "130th Act"
+ desc_dst_policy_130: ""
+ 
+ dst_policy_131: "131st Act"
+ desc_dst_policy_131: ""
+ 
+ dst_policy_132: "132nd Act"
+ desc_dst_policy_132: ""
+ 
+ dst_policy_133: "133rd Act"
+ desc_dst_policy_133: ""
+ 
+ dst_policy_134: "134th Act"
+ desc_dst_policy_134: ""
+ 
+ dst_policy_135: "135th Act"
+ desc_dst_policy_135: ""
+ 
+ dst_policy_136: "136th Act"
+ desc_dst_policy_136: ""
+ 
+ dst_policy_137: "137th Act"
+ desc_dst_policy_137: ""
+ 
+ dst_policy_138: "138th Act"
+ desc_dst_policy_138: ""
+ 
+ dst_policy_139: "139th Act"
+ desc_dst_policy_139: ""
+ 
+ dst_policy_140: "140th Act"
+ desc_dst_policy_140: ""
+ 
+ dst_policy_141: "141st Act"
+ desc_dst_policy_141: ""
+ 
+ dst_policy_142: "142nd Act"
+ desc_dst_policy_142: ""
+ 
+ dst_policy_143: "143rd Act"
+ desc_dst_policy_143: ""
+ 
+ dst_policy_144: "144th Act"
+ desc_dst_policy_144: ""
+ 
+ dst_policy_145: "145th Act"
+ desc_dst_policy_145: ""
+ 
+ dst_policy_146: "146th Act"
+ desc_dst_policy_146: ""
+ 
+ dst_policy_147: "147th Act"
+ desc_dst_policy_147: ""
+ 
+ dst_policy_148: "148th Act"
+ desc_dst_policy_148: ""
+ 
+ dst_policy_149: "149th Act"
+ desc_dst_policy_149: ""
+ 
+ dst_policy_150: "150th Act"
+ desc_dst_policy_150: ""
+ 
+ dst_policy_151: "151st Act"
+ desc_dst_policy_151: ""
+ 
+ dst_policy_152: "152nd Act"
+ desc_dst_policy_152: ""
+ 
+ dst_policy_153: "153rd Act"
+ desc_dst_policy_153: ""
+ 
+ dst_policy_154: "154th Act"
+ desc_dst_policy_154: ""
+ 
+ dst_policy_155: "155th Act"
+ desc_dst_policy_155: ""
+ 
+ dst_policy_156: "156th Act"
+ desc_dst_policy_156: ""
+ 
+ dst_policy_157: "157th Act" # of Covert Prosperity
+ desc_dst_policy_157: "In the pursuit of national prosperity, our leaders recognize the value of secrecy and subterfuge. By blending the art of espionage with strategic development initiatives, we aim to secure our economic future through covert means."
+ 
+ dst_policy_158: "158th Act"
+ desc_dst_policy_158: ""
+ 
+ dst_policy_159: "159th Act"
+ desc_dst_policy_159: ""
+ 
+ dst_policy_160: "160th Act"
+ desc_dst_policy_160: ""
+ 
+ dst_policy_161: "161st Act"
+ desc_dst_policy_161: ""
+ 
+ dst_policy_162: "162nd Act"
+ desc_dst_policy_162: ""
+ 
+ dst_policy_163: "163rd Act"
+ desc_dst_policy_163: ""
+ 
+ dst_policy_164: "164th Act"
+ desc_dst_policy_164: ""
+ 
+ dst_policy_165: "165th Act"
+ desc_dst_policy_165: ""
+ 
+ dst_policy_166: "166th Act"
+ desc_dst_policy_166: ""
+ 
+ dst_policy_167: "167th Act"
+ desc_dst_policy_167: ""
+ 
+ dst_policy_168: "168th Act"
+ desc_dst_policy_168: ""
+ 
+ dst_policy_169: "169th Act"
+ desc_dst_policy_169: ""
+ 
+ dst_policy_170: "170th Act"
+ desc_dst_policy_170: ""
+ 
+ dst_policy_171: "171st Act"
+ desc_dst_policy_171: ""
+ 
+ dst_policy_172: "172nd Act"
+ desc_dst_policy_172: ""
+ 
+ dst_policy_173: "173rd Act"
+ desc_dst_policy_173: ""
+ 
+ dst_policy_174: "174th Act"
+ desc_dst_policy_174: ""
+ 
+ dst_policy_175: "175th Act"
+ desc_dst_policy_175: ""
+ 
+ dst_policy_176: "176th Act"
+ desc_dst_policy_176: ""
+ 
+ dst_policy_177: "177th Act"
+ desc_dst_policy_177: ""
+ 
+ dst_policy_178: "178th Act"
+ desc_dst_policy_178: ""
+ 
+ dst_policy_179: "179th Act"
+ desc_dst_policy_179: ""
+ 
+ dst_policy_180: "180th Act"
+ desc_dst_policy_180: ""
+ 
+ dst_policy_181: "181st Act"
+ desc_dst_policy_181: ""
+
+ dst_policy_182: "182nd Act"
+ desc_dst_policy_182: ""
+ 
+ dst_policy_183: "183rd Act"
+ desc_dst_policy_183: ""
+ 
+ dst_policy_184: "184th Act"
+ desc_dst_policy_184: ""
+ 
+ dst_policy_185: "185th Act"
+ desc_dst_policy_185: ""
+ 
+ dst_policy_186: "186th Act"
+ desc_dst_policy_186: ""
+ 
+ dst_policy_187: "187th Act"
+ desc_dst_policy_187: ""
+ 
+ dst_policy_188: "188th Act"
+ desc_dst_policy_188: ""
+ 
+ dst_policy_189: "189th Act"
+ desc_dst_policy_189: ""
+ 
+ dst_policy_190: "190th Act"
+ desc_dst_policy_190: ""
+ 
+ dst_policy_191: "191st Act"
+ desc_dst_policy_191: ""
+ 
+ dst_policy_192: "192nd Act"
+ desc_dst_policy_192: ""
+ 
+ dst_policy_193: "193rd Act"
+ desc_dst_policy_193: ""
+ 
+ dst_policy_194: "194th Act"
+ desc_dst_policy_194: ""
+ 
+ dst_policy_195: "195th Act"
+ desc_dst_policy_195: ""
+ 
+ dst_policy_196: "196th Act"
+ desc_dst_policy_196: ""
+ 
+ dst_policy_197: "197th Act"
+ desc_dst_policy_197: ""
+ 
+ dst_policy_198: "198th Act"
+ desc_dst_policy_198: ""
+ 
+ dst_policy_199: "199th Act"
+ desc_dst_policy_199: ""
+ 
+ dst_policy_200: "200th Act"
+ desc_dst_policy_200: ""
+
+ dst_policy_201: "201st Act"
+ desc_dst_policy_201: ""
+ 
+ dst_policy_202: "202nd Act"
+ desc_dst_policy_202: ""
+ 
+ dst_policy_203: "203rd Act"
+ desc_dst_policy_203: ""
+ 
+ dst_policy_204: "204th Act"
+ desc_dst_policy_204: ""
+ 
+ dst_policy_205: "205th Act"
+ desc_dst_policy_205: ""
+ 
+ dst_policy_206: "206th Act"
+ desc_dst_policy_206: ""
+ 
+ dst_policy_207: "207th Act"
+ desc_dst_policy_207: ""
+ 
+ dst_policy_208: "208th Act"
+ desc_dst_policy_208: ""
+ 
+ dst_policy_209: "209th Act"
+ desc_dst_policy_209: ""
+ 
+ dst_policy_210: "210th Act"
+ desc_dst_policy_210: ""
+ 
+ dst_policy_211: "211th Act"
+ desc_dst_policy_211: ""
+ 
+ dst_policy_212: "212th Act"
+ desc_dst_policy_212: ""
+ 
+ dst_policy_213: "213th Act"
+ desc_dst_policy_213: ""
+ 
+ dst_policy_214: "214th Act"
+ desc_dst_policy_214: ""
+ 
+ dst_policy_215: "215th Act"
+ desc_dst_policy_215: ""
+ 
+ dst_policy_216: "216th Act"
+ desc_dst_policy_216: ""
+ 
+ dst_policy_217: "217th Act"
+ desc_dst_policy_217: ""
+ 
+ dst_policy_218: "218th Act"
+ desc_dst_policy_218: ""
+ 
+ dst_policy_219: "219th Act"
+ desc_dst_policy_219: ""
+ 
+ dst_policy_220: "220th Act"
+ desc_dst_policy_220: ""
+ 
+ dst_policy_221: "221st Act"
+ desc_dst_policy_221: ""
+ 
+ dst_policy_222: "222nd Act"
+ desc_dst_policy_222: ""
+ 
+ dst_policy_223: "223rd Act"
+ desc_dst_policy_223: ""
+ 
+ dst_policy_224: "224th Act"
+ desc_dst_policy_224: ""
+ 
+ dst_policy_225: "225th Act"
+ desc_dst_policy_225: ""
+ 
+ dst_policy_226: "226th Act"
+ desc_dst_policy_226: ""
+ 
+ dst_policy_227: "227th Act"
+ desc_dst_policy_227: ""
+ 
+ dst_policy_228: "228th Act"
+ desc_dst_policy_228: ""
+ 
+ dst_policy_229: "229th Act"
+ desc_dst_policy_229: ""
+ 
+ dst_policy_230: "230th Act"
+ desc_dst_policy_230: ""
+ 
+ dst_policy_231: "231st Act"
+ desc_dst_policy_231: ""
+ 
+ dst_policy_232: "232nd Act"
+ desc_dst_policy_232: ""
+ 
+ dst_policy_233: "233rd Act"
+ desc_dst_policy_233: ""
+ 
+ dst_policy_234: "234th Act"
+ desc_dst_policy_234: ""
+ 
+ dst_policy_235: "235th Act"
+ desc_dst_policy_235: ""
+ 
+ dst_policy_236: "236th Act"
+ desc_dst_policy_236: ""
+ 
+ dst_policy_237: "237th Act"
+ desc_dst_policy_237: ""
+ 
+ dst_policy_238: "238th Act"
+ desc_dst_policy_238: ""
+ 
+ dst_policy_239: "239th Act"
+ desc_dst_policy_239: ""
+ 
+ dst_policy_240: "240th Act"
+ desc_dst_policy_240: ""
+ 
+ dst_policy_241: "241st Act"
+ desc_dst_policy_241: ""
+ 
+ dst_policy_242: "242nd Act"
+ desc_dst_policy_242: ""
+ 
+ dst_policy_243: "243rd Act"
+ desc_dst_policy_243: ""
+ 
+ dst_policy_244: "244th Act"
+ desc_dst_policy_244: ""
+ 
+ dst_policy_245: "245th Act"
+ desc_dst_policy_245: ""
+ 
+ dst_policy_246: "246th Act"
+ desc_dst_policy_246: ""
+ 
+ dst_policy_247: "247th Act"
+ desc_dst_policy_247: ""
+ 
+ dst_policy_248: "248th Act"
+ desc_dst_policy_248: ""
+ 
+ dst_policy_249: "249th Act"
+ desc_dst_policy_249: ""
+ 
+ dst_policy_250: "250th Act"
+ desc_dst_policy_250: ""
+
+ dst_policy_251: "251st Act"
+ desc_dst_policy_251: ""
+ 
+ dst_policy_252: "252nd Act"
+ desc_dst_policy_252: ""
+ 
+ dst_policy_253: "253rd Act"
+ desc_dst_policy_253: ""
+ 
+ dst_policy_254: "254th Act"
+ desc_dst_policy_254: ""
+ 
+ dst_policy_255: "255th Act"
+ desc_dst_policy_255: ""
+ 
+ dst_policy_256: "256th Act"
+ desc_dst_policy_256: ""
+ 
+ dst_policy_257: "257th Act"
+ desc_dst_policy_257: ""
+ 
+ dst_policy_258: "258th Act"
+ desc_dst_policy_258: ""
+ 
+ dst_policy_259: "259th Act"
+ desc_dst_policy_259: ""
+ 
+ dst_policy_260: "260th Act"
+ desc_dst_policy_260: ""
+ 
+ dst_policy_261: "261st Act"
+ desc_dst_policy_261: ""
+ 
+ dst_policy_262: "262nd Act"
+ desc_dst_policy_262: ""
+ 
+ dst_policy_263: "263rd Act"
+ desc_dst_policy_263: ""
+ 
+ dst_policy_264: "264th Act"
+ desc_dst_policy_264: ""
+ 
+ dst_policy_265: "265th Act"
+ desc_dst_policy_265: ""
+ 
+ dst_policy_266: "266th Act"
+ desc_dst_policy_266: ""
+ 
+ dst_policy_267: "267th Act"
+ desc_dst_policy_267: ""
+ 
+ dst_policy_268: "268th Act"
+ desc_dst_policy_268: ""
+ 
+ dst_policy_269: "269th Act"
+ desc_dst_policy_269: ""
+ 
+ dst_policy_270: "270th Act"
+ desc_dst_policy_270: ""
+ 
+ dst_policy_271: "271st Act"
+ desc_dst_policy_271: ""
+ 
+ dst_policy_272: "272nd Act"
+ desc_dst_policy_272: ""
+ 
+ dst_policy_273: "273rd Act"
+ desc_dst_policy_273: ""
+ 
+ dst_policy_274: "274th Act"
+ desc_dst_policy_274: ""
+ 
+ dst_policy_275: "275th Act"
+ desc_dst_policy_275: ""
+ 
+ dst_policy_276: "276th Act"
+ desc_dst_policy_276: ""
+ 
+ dst_policy_277: "277th Act"
+ desc_dst_policy_277: ""
+ 
+ dst_policy_278: "278th Act"
+ desc_dst_policy_278: ""
+ 
+ dst_policy_279: "279th Act"
+ desc_dst_policy_279: ""
+ 
+ dst_policy_280: "280th Act"
+ desc_dst_policy_280: ""
+ 
+ dst_policy_281: "281st Act"
+ desc_dst_policy_281: ""
+ 
+ dst_policy_282: "282nd Act"
+ desc_dst_policy_282: ""
+ 
+ dst_policy_283: "283rd Act"
+ desc_dst_policy_283: ""
+ 
+ dst_policy_284: "284th Act"
+ desc_dst_policy_284: ""
+ 
+ dst_policy_285: "285th Act"
+ desc_dst_policy_285: ""
+ 
+ dst_policy_286: "286th Act"
+ desc_dst_policy_286: ""
+ 
+ dst_policy_287: "287th Act"
+ desc_dst_policy_287: ""
+ 
+ dst_policy_288: "288th Act"
+ desc_dst_policy_288: ""
+ 
+ dst_policy_289: "289th Act"
+ desc_dst_policy_289: ""
+ 
+ dst_policy_290: "290th Act"
+ desc_dst_policy_290: ""
+ 
+ dst_policy_291: "291st Act"
+ desc_dst_policy_291: ""
+ 
+ dst_policy_292: "292nd Act"
+ desc_dst_policy_292: ""
+ 
+ dst_policy_293: "293rd Act"
+ desc_dst_policy_293: ""
+ 
+ dst_policy_294: "294th Act"
+ desc_dst_policy_294: ""
+ 
+ dst_policy_295: "295th Act"
+ desc_dst_policy_295: ""
+ 
+ dst_policy_296: "296th Act"
+ desc_dst_policy_296: ""
+ 
+ dst_policy_297: "297th Act"
+ desc_dst_policy_297: ""
+ 
+ dst_policy_298: "298th Act"
+ desc_dst_policy_298: ""
+ 
+ dst_policy_299: "299th Act"
+ desc_dst_policy_299: ""
+ 
+ dst_policy_300: "300th Act"
+ desc_dst_policy_300: ""
+
+ dst_policy_301: "301st Act"
+ desc_dst_policy_301: ""
+ 
+ dst_policy_302: "302nd Act"
+ desc_dst_policy_302: ""
+ 
+ dst_policy_303: "303rd Act"
+ desc_dst_policy_303: ""
+ 
+ dst_policy_304: "304th Act"
+ desc_dst_policy_304: ""
+ 
+ dst_policy_305: "305th Act"
+ desc_dst_policy_305: ""
+ 
+ dst_policy_306: "306th Act"
+ desc_dst_policy_306: ""
+ 
+ dst_policy_307: "307th Act"
+ desc_dst_policy_307: ""
+ 
+ dst_policy_308: "308th Act"
+ desc_dst_policy_308: ""
+ 
+ dst_policy_309: "309th Act"
+ desc_dst_policy_309: ""
+ 
+ dst_policy_310: "310th Act"
+ desc_dst_policy_310: ""
+ 
+ dst_policy_311: "311th Act"
+ desc_dst_policy_311: ""
+ 
+ dst_policy_312: "312th Act"
+ desc_dst_policy_312: ""
+ 
+ dst_policy_313: "313th Act"
+ desc_dst_policy_313: ""
+ 
+ dst_policy_314: "314th Act"
+ desc_dst_policy_314: ""
+ 
+ dst_policy_315: "315th Act"
+ desc_dst_policy_315: ""
+ 
+ dst_policy_316: "316th Act"
+ desc_dst_policy_316: ""
+ 
+ dst_policy_317: "317th Act"
+ desc_dst_policy_317: ""
+ 
+ dst_policy_318: "318th Act"
+ desc_dst_policy_318: ""
+ 
+ dst_policy_319: "319th Act"
+ desc_dst_policy_319: ""
+ 
+ dst_policy_320: "320th Act"
+ desc_dst_policy_320: ""
+ 
+ dst_policy_321: "321st Act"
+ desc_dst_policy_321: ""
+ 
+ dst_policy_322: "322nd Act"
+ desc_dst_policy_322: ""
+ 
+ dst_policy_323: "323rd Act"
+ desc_dst_policy_323: ""
+ 
+ dst_policy_324: "324th Act"
+ desc_dst_policy_324: ""
+ 
+ dst_policy_325: "325th Act"
+ desc_dst_policy_325: ""
+ 
+ dst_policy_326: "326th Act"
+ desc_dst_policy_326: ""
+ 
+ dst_policy_327: "327th Act"
+ desc_dst_policy_327: ""
+ 
+ dst_policy_328: "328th Act"
+ desc_dst_policy_328: ""
+ 
+ dst_policy_329: "329th Act"
+ desc_dst_policy_329: ""
+ 
+ dst_policy_330: "330th Act"
+ desc_dst_policy_330: ""
+ 
+ dst_policy_331: "331st Act"
+ desc_dst_policy_331: ""
+ 
+ dst_policy_332: "332nd Act"
+ desc_dst_policy_332: ""
+ 
+ dst_policy_333: "333rd Act"
+ desc_dst_policy_333: ""
+ 
+ dst_policy_334: "334th Act"
+ desc_dst_policy_334: ""
+ 
+ dst_policy_335: "335th Act"
+ desc_dst_policy_335: ""
+ 
+ dst_policy_336: "336th Act"
+ desc_dst_policy_336: ""
+ 
+ dst_policy_337: "337th Act"
+ desc_dst_policy_337: ""
+ 
+ dst_policy_338: "338th Act"
+ desc_dst_policy_338: ""
+ 
+ dst_policy_339: "339th Act"
+ desc_dst_policy_339: ""
+ 
+ dst_policy_340: "340th Act"
+ desc_dst_policy_340: ""
+ 
+ dst_policy_341: "341st Act"
+ desc_dst_policy_341: ""
+ 
+ dst_policy_342: "342nd Act"
+ desc_dst_policy_342: ""
+ 
+ dst_policy_343: "343rd Act"
+ desc_dst_policy_343: ""
+ 
+ dst_policy_344: "344th Act"
+ desc_dst_policy_344: ""
+ 
+ dst_policy_345: "345th Act"
+ desc_dst_policy_345: ""
+ 
+ dst_policy_346: "346th Act"
+ desc_dst_policy_346: ""
+ 
+ dst_policy_347: "347th Act"
+ desc_dst_policy_347: ""
+ 
+ dst_policy_348: "348th Act"
+ desc_dst_policy_348: ""
+ 
+ dst_policy_349: "349th Act"
+ desc_dst_policy_349: ""
+ 
+ dst_policy_350: "350th Act"
+ desc_dst_policy_350: ""
+ 
+ dst_policy_351: "351st Act"
+ desc_dst_policy_351: ""
+ 
+ dst_policy_352: "352nd Act"
+ desc_dst_policy_352: ""
+ 
+ dst_policy_353: "353rd Act"
+ desc_dst_policy_353: ""
+ 
+ dst_policy_354: "354th Act"
+ desc_dst_policy_354: ""
+ 
+ dst_policy_355: "355th Act"
+ desc_dst_policy_355: ""
+ 
+ dst_policy_356: "356th Act"
+ desc_dst_policy_356: ""
+ 
+ dst_policy_357: "357th Act"
+ desc_dst_policy_357: ""
+ 
+ dst_policy_358: "358th Act"
+ desc_dst_policy_358: ""
+ 
+ dst_policy_359: "359th Act"
+ desc_dst_policy_359: ""
+ 
+ dst_policy_360: "360th Act"
+ desc_dst_policy_360: ""
+ 
+ dst_policy_361: "361st Act"
+ desc_dst_policy_361: ""
+ 
+ dst_policy_362: "362nd Act"
+ desc_dst_policy_362: ""
+ 
+ dst_policy_363: "363rd Act"
+ desc_dst_policy_363: ""
+ 
+ dst_policy_364: "364th Act"
+ desc_dst_policy_364: ""
+ 
+ dst_policy_365: "365th Act"
+ desc_dst_policy_365: ""
+ 
+ dst_policy_366: "366th Act"
+ desc_dst_policy_366: ""
+ 
+ dst_policy_367: "367th Act"
+ desc_dst_policy_367: ""
+ 
+ dst_policy_368: "368th Act"
+ desc_dst_policy_368: ""
+ 
+ dst_policy_369: "369th Act"
+ desc_dst_policy_369: ""
+ 
+ dst_policy_370: "370th Act"
+ desc_dst_policy_370: ""
+ 
+ dst_policy_371: "371st Act"
+ desc_dst_policy_371: ""
+ 
+ dst_policy_372: "372nd Act"
+ desc_dst_policy_372: ""
+ 
+ dst_policy_373: "373rd Act"
+ desc_dst_policy_373: ""
+ 
+ dst_policy_374: "374th Act"
+ desc_dst_policy_374: ""
+ 
+ dst_policy_375: "375th Act"
+ desc_dst_policy_375: ""
+ 
+ dst_policy_376: "376th Act"
+ desc_dst_policy_376: ""
+ 
+ dst_policy_377: "377th Act"
+ desc_dst_policy_377: ""
+ 
+ dst_policy_378: "378th Act"
+ desc_dst_policy_378: ""
+ 
+ dst_policy_379: "379th Act"
+ desc_dst_policy_379: ""
+ 
+ dst_policy_380: "380th Act"
+ desc_dst_policy_380: ""
+ 
+ dst_policy_381: "381st Act"
+ desc_dst_policy_381: ""
+ 
+ dst_policy_382: "382nd Act"
+ desc_dst_policy_382: ""
+ 
+ dst_policy_383: "383rd Act"
+ desc_dst_policy_383: ""
+ 
+ dst_policy_384: "384th Act"
+ desc_dst_policy_384: ""
+ 
+ dst_policy_385: "385th Act"
+ desc_dst_policy_385: ""
+ 
+ dst_policy_386: "386th Act"
+ desc_dst_policy_386: ""
+ 
+ dst_policy_387: "387th Act"
+ desc_dst_policy_387: ""
+ 
+ dst_policy_388: "388th Act"
+ desc_dst_policy_388: ""
+ 
+ dst_policy_389: "389th Act"
+ desc_dst_policy_389: ""
+ 
+ dst_policy_390: "390th Act"
+ desc_dst_policy_390: ""
+ 
+ dst_policy_391: "391st Act"
+ desc_dst_policy_391: ""
+ 
+ dst_policy_392: "392nd Act"
+ desc_dst_policy_392: ""
+ 
+ dst_policy_393: "393rd Act"
+ desc_dst_policy_393: ""
+ 
+ dst_policy_394: "394th Act"
+ desc_dst_policy_394: ""
+ 
+ dst_policy_395: "395th Act"
+ desc_dst_policy_395: ""
+ 
+ dst_policy_396: "396th Act"
+ desc_dst_policy_396: ""
+ 
+ dst_policy_397: "397th Act"
+ desc_dst_policy_397: ""
+ 
+ dst_policy_398: "398th Act"
+ desc_dst_policy_398: ""
+ 
+ dst_policy_399: "399th Act"
+ desc_dst_policy_399: ""
+ 
+ dst_policy_400: "400th Act"
+ desc_dst_policy_400: ""
+
+ dst_policy_401: "401st Act"
+ desc_dst_policy_401: ""
+ 
+ dst_policy_402: "402nd Act"
+ desc_dst_policy_402: ""
+ 
+ dst_policy_403: "403rd Act"
+ desc_dst_policy_403: ""
+ 
+ dst_policy_404: "404th Act"
+ desc_dst_policy_404: ""
+ 
+ dst_policy_405: "405th Act"
+ desc_dst_policy_405: ""
+ 
+ dst_policy_406: "406th Act"
+ desc_dst_policy_406: ""
+ 
+ dst_policy_407: "407th Act"
+ desc_dst_policy_407: ""
+ 
+ dst_policy_408: "408th Act"
+ desc_dst_policy_408: ""
+ 
+ dst_policy_409: "409th Act"
+ desc_dst_policy_409: ""
+ 
+ dst_policy_410: "410th Act"
+ desc_dst_policy_410: ""
+ 
+ dst_policy_411: "411th Act"
+ desc_dst_policy_411: ""
+ 
+ dst_policy_412: "412th Act"
+ desc_dst_policy_412: ""
+ 
+ dst_policy_413: "413th Act"
+ desc_dst_policy_413: ""
+ 
+ dst_policy_414: "414th Act"
+ desc_dst_policy_414: ""
+ 
+ dst_policy_415: "415th Act"
+ desc_dst_policy_415: ""
+ 
+ dst_policy_416: "416th Act"
+ desc_dst_policy_416: ""
+ 
+ dst_policy_417: "417th Act"
+ desc_dst_policy_417: ""
+ 
+ dst_policy_418: "418th Act"
+ desc_dst_policy_418: ""
+ 
+ dst_policy_419: "419th Act"
+ desc_dst_policy_419: ""
+ 
+ dst_policy_420: "420th Act"
+ desc_dst_policy_420: ""
+ 
+ dst_policy_421: "421st Act"
+ desc_dst_policy_421: ""
+ 
+ dst_policy_422: "422nd Act"
+ desc_dst_policy_422: ""
+ 
+ dst_policy_423: "423rd Act"
+ desc_dst_policy_423: ""
+ 
+ dst_policy_424: "424th Act"
+ desc_dst_policy_424: ""
+ 
+ dst_policy_425: "425th Act"
+ desc_dst_policy_425: ""
+ 
+ dst_policy_426: "426th Act"
+ desc_dst_policy_426: ""
+ 
+ dst_policy_427: "427th Act"
+ desc_dst_policy_427: ""
+ 
+ dst_policy_428: "428th Act"
+ desc_dst_policy_428: ""
+ 
+ dst_policy_429: "429th Act"
+ desc_dst_policy_429: ""
+ 
+ dst_policy_430: "430th Act"
+ desc_dst_policy_430: ""
+ 
+ dst_policy_431: "431st Act"
+ desc_dst_policy_431: ""
+ 
+ dst_policy_432: "432nd Act"
+ desc_dst_policy_432: ""
+ 
+ dst_policy_433: "433rd Act"
+ desc_dst_policy_433: ""
+ 
+ dst_policy_434: "434th Act"
+ desc_dst_policy_434: ""
+ 
+ dst_policy_435: "435th Act"
+ desc_dst_policy_435: ""
+ 
+ dst_policy_436: "436th Act"
+ desc_dst_policy_436: ""
+ 
+ dst_policy_437: "437th Act"
+ desc_dst_policy_437: ""
+ 
+ dst_policy_438: "438th Act"
+ desc_dst_policy_438: ""
+ 
+ dst_policy_439: "439th Act"
+ desc_dst_policy_439: ""
+ 
+ dst_policy_440: "440th Act"
+ desc_dst_policy_440: ""
+ 
+ dst_policy_441: "441st Act"
+ desc_dst_policy_441: ""
+ 
+ dst_policy_442: "442nd Act"
+ desc_dst_policy_442: ""
+ 
+ dst_policy_443: "443rd Act"
+ desc_dst_policy_443: ""
+ 
+ dst_policy_444: "444th Act"
+ desc_dst_policy_444: ""
+ 
+ dst_policy_445: "445th Act"
+ desc_dst_policy_445: ""
+ 
+ dst_policy_446: "446th Act"
+ desc_dst_policy_446: ""
+ 
+ dst_policy_447: "447th Act"
+ desc_dst_policy_447: ""
+ 
+ dst_policy_448: "448th Act"
+ desc_dst_policy_448: ""
+ 
+ dst_policy_449: "449th Act"
+ desc_dst_policy_449: ""
+ 
+ dst_policy_450: "450th Act"
+ desc_dst_policy_450: ""
+
+ dst_policy_451: "451st Act"
+ desc_dst_policy_451: ""
+ 
+ dst_policy_452: "452nd Act"
+ desc_dst_policy_452: ""
+ 
+ dst_policy_453: "453rd Act"
+ desc_dst_policy_453: ""
+ 
+ dst_policy_454: "454th Act"
+ desc_dst_policy_454: ""
+ 
+ dst_policy_455: "455th Act"
+ desc_dst_policy_455: ""
+ 
+ dst_policy_456: "456th Act"
+ desc_dst_policy_456: ""
+ 
+ dst_policy_457: "457th Act"
+ desc_dst_policy_457: ""
+ 
+ dst_policy_458: "458th Act"
+ desc_dst_policy_458: ""
+ 
+ dst_policy_459: "459th Act"
+ desc_dst_policy_459: ""
+ 
+ dst_policy_460: "460th Act"
+ desc_dst_policy_460: ""
+ 
+ dst_policy_461: "461st Act"
+ desc_dst_policy_461: ""
+ 
+ dst_policy_462: "462nd Act"
+ desc_dst_policy_462: ""
+ 
+ dst_policy_463: "463rd Act"
+ desc_dst_policy_463: ""
+ 
+ dst_policy_464: "464th Act"
+ desc_dst_policy_464: ""
+ 
+ dst_policy_465: "465th Act"
+ desc_dst_policy_465: ""
+ 
+ dst_policy_466: "466th Act"
+ desc_dst_policy_466: ""
+ 
+ dst_policy_467: "467th Act"
+ desc_dst_policy_467: ""
+ 
+ dst_policy_468: "468th Act"
+ desc_dst_policy_468: ""
+ 
+ dst_policy_469: "469th Act"
+ desc_dst_policy_469: ""
+ 
+ dst_policy_470: "470th Act"
+ desc_dst_policy_470: ""
+ 
+ dst_policy_471: "471st Act"
+ desc_dst_policy_471: ""
+ 
+ dst_policy_472: "472nd Act"
+ desc_dst_policy_472: ""
+ 
+ dst_policy_473: "473rd Act"
+ desc_dst_policy_473: ""
+ 
+ dst_policy_474: "474th Act"
+ desc_dst_policy_474: ""
+ 
+ dst_policy_475: "475th Act"
+ desc_dst_policy_475: ""
+ 
+ dst_policy_476: "476th Act"
+ desc_dst_policy_476: ""
+ 
+ dst_policy_477: "477th Act"
+ desc_dst_policy_477: ""
+ 
+ dst_policy_478: "478th Act"
+ desc_dst_policy_478: ""
+ 
+ dst_policy_479: "479th Act"
+ desc_dst_policy_479: ""
+ 
+ dst_policy_480: "480th Act"
+ desc_dst_policy_480: ""
+ 
+ dst_policy_481: "481st Act"
+ desc_dst_policy_481: ""
+ 
+ dst_policy_482: "482nd Act"
+ desc_dst_policy_482: ""
+ 
+ dst_policy_483: "483rd Act"
+ desc_dst_policy_483: ""
+ 
+ dst_policy_484: "484th Act"
+ desc_dst_policy_484: ""
+ 
+ dst_policy_485: "485th Act"
+ desc_dst_policy_485: ""
+ 
+ dst_policy_486: "486th Act"
+ desc_dst_policy_486: ""
+ 
+ dst_policy_487: "487th Act"
+ desc_dst_policy_487: ""
+ 
+ dst_policy_488: "488th Act"
+ desc_dst_policy_488: ""
+ 
+ dst_policy_489: "489th Act"
+ desc_dst_policy_489: ""
+ 
+ dst_policy_490: "490th Act"
+ desc_dst_policy_490: ""
+ 
+ dst_policy_491: "491st Act"
+ desc_dst_policy_491: ""
+ 
+ dst_policy_492: "492nd Act"
+ desc_dst_policy_492: ""
+ 
+ dst_policy_493: "493rd Act"
+ desc_dst_policy_493: ""
+ 
+ dst_policy_494: "494th Act"
+ desc_dst_policy_494: ""
+ 
+ dst_policy_495: "495th Act"
+ desc_dst_policy_495: ""
+ 
+ dst_policy_496: "496th Act"
+ desc_dst_policy_496: ""
+ 
+ dst_policy_497: "497th Act"
+ desc_dst_policy_497: ""
+ 
+ dst_policy_498: "498th Act"
+ desc_dst_policy_498: ""
+ 
+ dst_policy_499: "499th Act"
+ desc_dst_policy_499: ""
+ 
+ dst_policy_500: "500th Act"
+ desc_dst_policy_500: ""
+ 
+ dst_policy_501: "501st Act"
+ desc_dst_policy_501: ""
+ 
+ dst_policy_502: "502nd Act"
+ desc_dst_policy_502: ""
+ 
+ dst_policy_503: "503rd Act"
+ desc_dst_policy_503: ""
+ 
+ dst_policy_504: "504th Act"
+ desc_dst_policy_504: ""
+ 
+ dst_policy_505: "505th Act"
+ desc_dst_policy_505: ""
+ 
+ dst_policy_506: "506th Act"
+ desc_dst_policy_506: ""
+ 
+ dst_policy_507: "507th Act"
+ desc_dst_policy_507: ""

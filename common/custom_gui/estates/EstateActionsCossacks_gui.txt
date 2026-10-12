@@ -1,0 +1,236 @@
+custom_button = {
+		name = estate_cossacks_expand_cossack_registry_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = EXPAND_COSSACK_REGISTRY_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = EXPAND_COSSACK_REGISTRY_COSSACKS
+				days = 7300
+			}
+			any_owned_province = {
+				has_terrain = steppe
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = EXPAND_COSSACK_REGISTRY_COSSACKS
+			}
+			estate_action = {
+				estate_action = EXPAND_COSSACK_REGISTRY_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_cossacks_raise_cossack_host_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = RAISE_COSSACK_HOST_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			NOT = { army_size_percentage = 1 }
+			estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 50
+			}
+			estate_influence = {
+				estate = estate_cossacks
+				influence = 40
+			}
+			any_owned_province = {
+				has_terrain = steppe
+			}
+			estate_action_off_cooldown = {
+				estate_action = RAISE_COSSACK_HOST_COSSACKS
+				days = 3650
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = RAISE_COSSACK_HOST_COSSACKS
+			}
+			estate_action = {
+				estate_action = RAISE_COSSACK_HOST_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_cossacks_cossack_conquistador_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = COSSACK_CONQUISTADOR_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_cossacks
+				loyalty = 50
+			}
+			estate_influence = {
+				estate = estate_cossacks
+				influence = 40
+			}
+			estate_action_off_shared_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+				days = 3650
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+			}
+			estate_action = {
+				estate_action = COSSACK_CONQUISTADOR_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_cossacks_recruit_minister_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_MINISTER_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_cossacks
+				influence = 40
+			}
+			estate_action_off_cooldown = {
+				estate_action = RECRUIT_MINISTER_COSSACKS
+				days = 10950
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_COSSACKS
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_cossacks_conscript_cossack_elite_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = CONSCRIPT_COSSACK_ELITE_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			any_owned_province = {
+				has_terrain = steppe
+			}
+			estate_action_off_cooldown = {
+				estate_action = CONSCRIPT_COSSACK_ELITE_COSSACKS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = CONSCRIPT_COSSACK_ELITE_COSSACKS
+			}
+			estate_action = {
+				estate_action = CONSCRIPT_COSSACK_ELITE_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_cossacks_supply_arms_cossacks_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+			}
+			estate_action = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_cossacks_permit_self_governance_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+			}
+			has_estate = estate_cossacks
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+			}
+			estate_action = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}

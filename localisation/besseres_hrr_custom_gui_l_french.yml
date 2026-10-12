@@ -1,0 +1,54 @@
+﻿l_french:
+ # GUIs:
+ hree_imperial_archoffices_open_button_tt: "View the §YImperial Archoffices§! and their current holders."
+ hree_imperial_archoffices_open_button_tt_disabled: "-------------\n§RThe §YGolden Bull§! must be active to view and grant §YImperial Archoffices§!.§W"
+ hree_imperial_archoffices_title: "Archoffices"
+ hree_imperial_archoffices_title_tt: "The Emperor can grant up to §Y8§! Imperial Archoffices. Out of those §Y7§! can only be granted to Electors, while §Y1§! can be granted to any independent Member of the Empire. \nWhen the Emperor dies and §YErbkaisertum§! is not proclaimed yet, all Imperial Archoffices will be removed from their holder and the new Emperor has to grant them again. \nShould an Elector lose its Electorship, he will also lose the granted Imperial Archoffice, if it requires to be an Elector. Becoming a subject will not automatically remove a granted Imperial Archoffices. \n\nThe Emperor cannot grant an Imperial Archoffice to himself. \nA country can only be granted §Y1§! Imperial Archoffice. \nEach Imperial Archoffice grants bonuses to its current holder and might have effects on the Empire and the Emperor. \n-------------\nOnly if all §Y8§! Imperial Archoffices are granted the Emperor gains the following bonuses: \n[reasons_to_elect]: §G+10§!"
+
+ hree_imperial_archoffice_1_shield_disabled_tt: "There currrently is no country holding the Imperial Archoffice of §YArch-Chancellor of Germany§!. \nThe Emperor may grant it to an ecclesiastical Elector of the Holy Roman Empire via a diplomatic action."
+ hree_imperial_archoffice_1_shield_tt: "@[hre_german_erzkanzler.GetTag] §Y[hre_german_erzkanzler.GetName]§! is the current §YArch-Chancellor of Germany§!."
+ hree_imperial_archoffice_1_title: "German Chancellor"
+ hree_imperial_archoffice_1_title_tt: "§YArch-Chancellor of Germany§! \nThe §YArch-Chancellor of Germany§! handles affairs in the Kingdom of Germany. His main responsibilities are managing the Imperial Election and directing the Imperial Diets."
+ hree_imperial_archoffice_1_effect_tt: "The §YArch-Chancellor of Germany§! gains the following bonuses: \n[diplomatic_reputation]: §G+1.00§! \n[yearly_devotion]: §G+0.25§! \n\nThe Emperor cannot demand unlawful territory against the §YArch-Chancellor of Germany§!, if they vote for the Emperor and only own unlawful territory in the §YNorth Germany§! or §YSouth Germany§! region."
+
+ hree_imperial_archoffice_2_shield_disabled_tt: "There currrently is no country holding the Imperial Archoffice of §YArch-Chancellor of Burgundy§!. \nThe Emperor may grant it to an ecclesiastical Elector of the Holy Roman Empire via a diplomatic action."
+ hree_imperial_archoffice_2_shield_tt: "@[hre_burgundian_erzkanzler.GetTag] §Y[hre_burgundian_erzkanzler.GetName]§! is the current §YArch-Chancellor of Burgundy§!."
+ hree_imperial_archoffice_2_title: "Burgundian Chancellor"
+ hree_imperial_archoffice_2_title_tt: "§YArch-Chancellor of Burgundy§! \nThe §YArch-Chancellor of Burgundy§! handles affairs in the Burgundian and French parts of the Empire."
+ hree_imperial_archoffice_2_effect_tt: "The §YArch-Chancellor of Burgundy§! gains the following bonuses: \n[diplomats]: §G+1§! \n[yearly_devotion]: §G+0.25§! \n\nThe Emperor cannot demand unlawful territory against the §YArch-Chancellor of Burgundy§!, if they vote for the Emperor and only own unlawful territory in the §YFrance§! or §YLow Countries§! region."
+
+ hree_imperial_archoffice_3_shield_disabled_tt: "There currrently is no country holding the Imperial Archoffice of §YArch-Chancellor of Italy§!. \nThe Emperor may grant it to an ecclesiastical Elector of the Holy Roman Empire via a diplomatic action."
+ hree_imperial_archoffice_3_shield_tt: "@[hre_italian_erzkanzler.GetTag] §Y[hre_italian_erzkanzler.GetName]§! is the current §YArch-Chancellor of Italy§!."
+ hree_imperial_archoffice_3_title: "Italian Chancellor"
+ hree_imperial_archoffice_3_title_tt: "§YArch-Chancellor of Italy§! \nThe §YArch-Chancellor of Italy§! handles affairs in the Italian parts of the Empire."
+ hree_imperial_archoffice_3_effect_tt: "The §YArch-Chancellor of Italy§! gains the following bonuses: \n[improve_relation_modifier]: §G+15.0%§! \n[yearly_devotion]: §G+0.25§! \n\nThe Emperor cannot demand unlawful territory against the §YArch-Chancellor of Italy§!, if they vote for the Emperor and only own unlawful territory in the §YItaly§! or §YBalkans§! region."
+
+ hree_imperial_archoffice_4_shield_disabled_tt: "There currrently is no country holding the Imperial Archoffice of §YArch-Steward§!. \nThe Emperor may grant it to a secular Elector of the Holy Roman Empire via a diplomatic action."
+ hree_imperial_archoffice_4_shield_tt: "@[hre_erztruchsess.GetTag] §Y[hre_erztruchsess.GetName]§! is the current §YArch-Steward§!."
+ hree_imperial_archoffice_4_title: "Steward"
+ hree_imperial_archoffice_4_title_tt: "§YArch-Steward§! \nThe §YArch-Steward§! handles the Imperial Court organisation and accomplishes ceremonial tasks during banquets."
+ hree_imperial_archoffice_4_effect_tt: "The §YArch-Steward§! gains the following bonuses: \n[yearly_prestige]: §G+0.50§! \n[yearly_legitimacy]: §G+0.25§!"
+
+ hree_imperial_archoffice_5_shield_disabled_tt: "There currrently is no country holding the Imperial Archoffice of §YArch-Marshal§!. \nThe Emperor may grant it to a secular Elector of the Holy Roman Empire via a diplomatic action."
+ hree_imperial_archoffice_5_shield_tt: "@[hre_erzmarschall.GetTag] §Y[hre_erzmarschall.GetName]§! is the current §YArch-Marshal§!."
+ hree_imperial_archoffice_5_title: "Marshal"
+ hree_imperial_archoffice_5_title_tt: "§YArch-Marshal§! \nThe §YArch-Marshal§! is the military deputy of the Emperor. In absence of the Emperor, he has the command over the Imperial Army."
+ hree_imperial_archoffice_5_effect_tt: "The §YArch-Marshal§! gains the following bonuses: \n[own_territory_dice_roll_bonus]: §G+1.00§! \n[yearly_legitimacy]: §G+0.25§! \n\nThe §YArch-Marshal§! gains access to the §MImperial Mercenary Company§!. \nWhen the Emperor accepts a call to arms to defend a member of the HRE against an Imperial Enemy, the §YArch-Marshal§! will also be called to arms."
+
+ hree_imperial_archoffice_6_shield_disabled_tt: "There currrently is no country holding the Imperial Archoffice of §YArch-Chamberlain§!. \nThe Emperor may grant it to a secular Elector of the Holy Roman Empire via a diplomatic action."
+ hree_imperial_archoffice_6_shield_tt: "@[hre_erzkaemmerer.GetTag] §Y[hre_erzkaemmerer.GetName]§! is the current §YArch-Chamberlain§!."
+ hree_imperial_archoffice_6_title: "Chamber-\nlain"
+ hree_imperial_archoffice_6_title_tt: "§YArch-Chamberlain§! \nThe §YArch-Chamberlain§! handles the finances of the Imperial Court and accomplishes ceremonial tasks during banquets."
+ hree_imperial_archoffice_6_effect_tt: "The §YArch-Chamberlain§! gains the following bonuses: \n[global_tax_modifier]: §G+10.0%§! \n[yearly_legitimacy]: §G+0.25§!"
+
+ hree_imperial_archoffice_7_shield_disabled_tt: "There currrently is no country holding the Imperial Archoffice of §YArch-Cup-Bearer§!. \nThe Emperor may grant it to a secular Elector of the Holy Roman Empire via a diplomatic action."
+ hree_imperial_archoffice_7_shield_tt: "@[hre_erzmundschenk.GetTag] §Y[hre_erzmundschenk.GetName]§! is the current §YArch-Cup-Bearer§!."
+ hree_imperial_archoffice_7_title: "Cup-\nBearer"
+ hree_imperial_archoffice_7_title_tt: "§YArch-Cup-Bearer§! \nThe §YArch-Cup-Bearer§! is responsible for managing the supply of the Imperial Court with food and drinks, especially wine, and accomplishes ceremonial tasks during banquets."
+ hree_imperial_archoffice_7_effect_tt: "The §YArch-Cup-Bearer§! gains the following bonuses: \n[global_trade_goods_size_modifier]: §G+5.0%§! \n[yearly_legitimacy]: §G+0.25§!"
+
+ hree_imperial_archoffice_8_shield_disabled_tt: "There currrently is no country holding the Imperial Archoffice of §YArch-Standard-Bearer§!. \nThe Emperor may grant it to an independent Member of the Holy Roman Empire via a diplomatic action."
+ hree_imperial_archoffice_8_shield_tt: "@[hre_erzbannertraeger.GetTag] §Y[hre_erzbannertraeger.GetName]§! is the current §YArch-Standard-Bearer§!."
+ hree_imperial_archoffice_8_title: "Standard-\nBearer"
+ hree_imperial_archoffice_8_title_tt: "§YArch-Standard-Bearer§! \nThe §YArch-Standard-Bearer§! carries the Imperial Standard in battle and thus represents the Imperial Army."
+ hree_imperial_archoffice_8_effect_tt: "The §YArch-Standard-Bearer§! gains the following bonuses: \n[land_morale]: §G+5.0%§! \n[yearly_legitimacy]: §G+0.25§! \n[yearly_devotion]: §G+0.25§!"

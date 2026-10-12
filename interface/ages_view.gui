@@ -1,0 +1,1421 @@
+guiTypes = {
+	windowType = {
+		name = "ages_view"
+		backGround=""
+		position = { x = -290 y = -280 }
+		size = { x = 512 y = 512 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		Orientation = "CENTER"
+
+		iconType = {
+			name ="picture"
+			spriteType = "GFX_event_event_test"
+			position = { x = 172 y = -5 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="background"
+			spriteType = "GFX_age_base"
+			position = { x = -42 y = -43 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		WindowType = {
+			name = "age_of_discovery"
+			position = { x = 148 y = -29}
+			upsound = age_of_discovery
+
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_l"
+				position = { x = -30 y = 18 }
+				frame = 1
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_s"
+				position = { x = -15 y = 70 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_s"
+				position = { x = -15 y = 111 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_s"
+				position = { x = -15 y = 152 }
+				frame = 4
+			}
+		}
+
+		WindowType = {
+			name = "age_of_reformation"
+			position = { x = 148 y = -29}
+			upsound = age_of_reformation
+
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_of_discovery_g"
+				position = { x = -15 y = 22 }
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_l"
+				position = { x = -30 y = 59 }
+				frame = 2
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_s"
+				position = { x = -15 y = 111 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_s"
+				position = { x = -15 y = 152 }
+				frame = 4
+			}
+		}
+
+		WindowType = {
+			name = "age_of_absolutism"
+			position = { x = 148 y = -29}
+			upsound = age_of_absolutism
+
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_of_discovery_g"
+				position = { x = -15 y = 22 }
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_l"
+				position = { x = -30 y = 100 }
+				frame = 3
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_of_reformation_g"
+				position = { x = -15 y = 63 }
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_s"
+				position = { x = -15 y = 152 }
+				frame = 4
+			}
+		}
+
+		WindowType = {
+			name = "age_of_revolutions"
+			position = { x = 148 y = -29}
+			upsound = age_of_revolutions
+
+			iconType = {
+				name ="icon_age_of_discovery"
+				spriteType = "GFX_icon_age_of_discovery_g"
+				position = { x = -15 y = 22 }
+			}
+			iconType = {
+				name ="icon_age_of_reformation"
+				spriteType = "GFX_icon_age_of_reformation_g"
+				position = { x = -15 y = 63 }
+			}
+			iconType = {
+				name ="icon_age_of_absolutism"
+				spriteType = "GFX_icon_age_of_absolutism_g"
+				position = { x = -15 y = 104 }
+			}
+			iconType = {
+				name ="icon_age_of_revolutions"
+				spriteType = "GFX_icon_age_l"
+				position = { x = -30 y = 141 }
+				frame = 4
+			}
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			position = { x = 186 y = -27 }
+			font = "vic_29s"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 400
+			maxHeight = 32
+			format = centre
+		}
+
+		iconType = {
+			name ="icon_absolutism"
+			spriteType = "GFX_icon_absolutism"
+			position = { x = 186 y = 195 }
+		}
+		iconType = {
+			name ="icon_religious"
+			spriteType = "GFX_icon_religious"
+			position = { x = 150 y = 195 }
+		}
+		iconType = {
+			name ="splendor_icon"
+			spriteType = "GFX_icon_splendor_tiny"
+			position = { x = 150 y = 165 }
+		}
+		instantTextBoxType = {
+			name = "splendor"
+			position = { x = 165 y = 165 }
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 44
+			maxHeight = 32
+			format = right
+		}
+		guiButtonType = {
+			name = "golden_age"
+			quadTextureSprite ="GFX_age_golden_age_button"
+			position = { x = 278 y = 140 }
+			buttonText = "START_GOLDEN_AGE"
+			buttonFont = "vic_18"
+		}
+		iconType = {
+			name = "in_golden_age_banner"
+			spriteType = "GFX_golden_age_banner"
+			position = { x = 215 y = 130 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "after_golden_age_banner"
+			spriteType = "GFX_golden_age_banner_tattered"
+			position = { x = 215 y = 130 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "in_or_after_golden_age_text"
+			position = { x = 254 y =134 }
+			font = "vic_22s"
+			borderSize = {x = 4 y = 4}
+			text = ""
+			maxWidth = 330
+			maxHeight = 30
+			format = center
+		}
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = 225 y = 179 }
+			font = "Main_14"
+			borderSize = {x = 0 y = 0}
+			text = ""
+			maxWidth = 405
+			maxHeight = 42
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+		guiButtonType = {
+			name ="close_button"
+			if_resolution = {
+				max_height = 867
+				position = { x = 640 y = -48 }
+				quadTextureSprite = "GFX_button_close"
+				buttonText = ""
+			}
+			if_resolution = {
+				min_height = 868
+				quadTextureSprite ="button_type_1"
+				position = { x = 295 y = 664 }
+				buttonText = "CLOSE"
+			}
+			buttonFont = "vic_18"
+			shortcut = "ESCAPE"
+		}
+
+		listboxType = {
+			name ="objectives"
+			position = { x = 138 y = 225 }
+			backGround=""
+			size = { x = 570 y = 440}
+			Orientation = "UPPER_LEFT"
+			spacing = 2
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+		}
+		listboxType = {
+			name ="abilities"
+			position = { x = 5 y = 17 }
+			backGround=""
+			size = { x = 70 y = 660 }
+			Orientation = "UPPER_LEFT"
+			spacing = 0
+			scrollbartype = "standardlistbox_slider"
+			borderSize = {x = 0 y = 0}
+			horizontal = 0
+		}
+
+		###############################################
+		## Ages & Splendor Expanded Custom GUI START ##
+		###############################################
+
+		guiButtonType = {
+			name = "ase_spend_additional_splendor_open_button"
+			position = { x = 650 y = 168 }
+			spriteType = "GFX_ase_spend_additional_splendor_open_button"
+			clicksound = ok_click
+			scripted = yes
+		}
+		guiButtonType = {
+			name = "ase_retain_age_ability_open_button"
+			position = { x = 695 y = 168 }
+			spriteType = "GFX_ase_retain_age_ability_open_button"
+			clicksound = ok_click
+			scripted = yes
+		}
+
+		##############################################################
+		## Ages & Splendor Expanded Spend Additional Splendor START ##
+		##############################################################
+
+		windowType = {
+			name = "ase_spend_additional_splendor_window"
+			position = { x = 213 y = 130 }
+			size = { x = 446 y = 437 }
+			moveable = 1
+			backGround = "ase_spend_additional_splendor_bg"
+			scripted = yes
+
+			guiButtonType = {
+				name = "ase_spend_additional_splendor_bg"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ase_spend_additional_splendor_bg"
+			}
+
+			instantTextBoxType = {
+				name = "ase_spend_additional_splendor_header"
+				position = { x = 62 y = 14 }
+				format = centre
+				font = "vic_29"
+				maxWidth = 330
+				maxHeight = 20
+				fixedsize = yes
+				alwaystransparent = yes
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "ase_spend_additional_splendor_close_button"
+				position = { x = 148 y = 387 }
+				spriteType = "button_type_1"
+				buttonText = "CLOSE"
+				buttonFont = "vic_18"
+				shortcut = "ESCAPE"
+				clicksound = back_click
+				scripted = yes
+			}
+
+			## Option 1
+			windowType = {
+				name = "option_1_window"
+				position = { x = 32 y = 65 }
+
+				iconType = {
+					name = "ase_spend_additional_splendor_entry_bg_1"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text_1"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 320
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button_1"
+					position = { x = 337 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_1_button"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+			## Option 2
+			windowType = {
+				name = "option_2_window"
+				position = { x = 32 y = 120 }
+
+				iconType = {
+					name = "ase_spend_additional_splendor_entry_bg_2"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text_2"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 320
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button_2"
+					position = { x = 337 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_2_button"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+			## Option 3
+			windowType = {
+				name = "option_3_window"
+				position = { x = 32 y = 175 }
+
+				iconType = {
+					name = "ase_spend_additional_splendor_entry_bg_3"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text_3"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 320
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text2_3"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 280
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button_3"
+					position = { x = 297 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_3_button"
+					clicksound = ok_click
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button2_3"
+					position = { x = 337 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_3_button2"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+			## Option 4
+			windowType = {
+				name = "option_4_window"
+				position = { x = 32 y = 230 }
+
+				iconType = {
+					name = "ase_spend_additional_splendor_entry_bg_4"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text_4"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 320
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text2_4"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 280
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button_4"
+					position = { x = 297 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_4_button"
+					clicksound = ok_click
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button2_4"
+					position = { x = 337 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_4_button2"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+			## Option 5
+			windowType = {
+				name = "option_5_window"
+				position = { x = 32 y = 285 }
+
+				iconType = {
+					name = "ase_spend_additional_splendor_entry_bg_5"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text_5"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 320
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text2_5"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 280
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button_5"
+					position = { x = 297 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_5_button"
+					clicksound = ok_click
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button2_5"
+					position = { x = 337 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_5_button2"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+			## Option 6
+			windowType = {
+				name = "option_6_window"
+				position = { x = 32 y = 340 }
+
+				iconType = {
+					name = "ase_spend_additional_splendor_entry_bg_6"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text_6"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 320
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_entry_text2_6"
+					position = { x = 10 y = 0 }
+					format = centre
+					font = "vic_22"
+					maxWidth = 280
+					maxHeight = 45
+					fixedsize = yes
+					vertical_alignment = centre
+					alwaystransparent = yes
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button_6"
+					position = { x = 297 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_6_button"
+					clicksound = ok_click
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_entry_button2_6"
+					position = { x = 337 y = 1 }
+					spriteType = "GFX_ase_spend_additional_splendor_entry_6_button2"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+		}
+
+		#################################################################
+		## Ages & Splendor Expanded Recruit Advisor for Splendor START ##
+		#################################################################
+
+		windowType = {
+			name = "ase_spend_additional_splendor_to_recruit_advisor_window"
+			position = { x = 210 y = 150 }
+			size = { x = 433 y = 348 }
+			moveable = 1
+			backGround = "ase_spend_additional_splendor_to_recruit_advisor_bg"
+			scripted = yes
+
+			guiButtonType = {
+				name = "ase_spend_additional_splendor_to_recruit_advisor_bg"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ase_spend_additional_splendor_recruit_advisor_bg"
+			}
+
+			instantTextBoxType = {
+				name = "ase_spend_additional_splendor_to_recruit_advisor_title"
+				position = { x = 28 y = 22 }
+				format = centre
+				font = "vic_18"
+				maxWidth = 370
+				maxHeight = 20
+				fixedsize = yes
+				alwaystransparent = yes
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "ase_spend_additional_splendor_to_recruit_advisor_close_button"
+				position = { x = 174 y = 287 }
+				spriteType = "GFX_province_back_button"
+				buttonText = "BACK"
+				buttonFont = "vic_18"
+				shortcut = "ESCAPE"
+				clicksound = back_click
+				scripted = yes
+			}
+			windowType = {
+				name = "ase_spend_additional_splendor_to_recruit_advisor_page_selection_window"
+				position = { x = 129 y = 287 }
+				scripted = yes
+
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_to_recruit_advisor_prev_page_button_ate"
+					position = { x = 0 y = 0 }
+					spriteType = "button_left"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_spend_additional_splendor_to_recruit_advisor_next_page_button_ate"
+					position = { x = 139 y = 0 }
+					spriteType = "button_right"
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_spend_additional_splendor_to_recruit_advisor_page_text_ate"
+					position = { x = 211 y = 7 }
+					format = right
+					font = "vic_18"
+					maxWidth = 50
+					maxHeight = 20
+					fixedsize = yes
+					alwaystransparent = yes
+					scripted = yes
+				}
+			}
+			## Vanilla ##
+			windowType = {
+				name = "ase_spend_additional_splendor_to_recruit_advisor_vanilla_window"
+				position = { x = 0 y = 0 }
+				scripted = yes
+
+				## Option 1
+				windowType = {
+					name = "option_1_window"
+					position = { x = 30 y = 61 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_1"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_1_icon_strip"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_1"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 2
+				windowType = {
+					name = "option_2_window"
+					position = { x = 123 y = 61 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_2"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_2_icon_strip"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_2"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 3
+				windowType = {
+					name = "option_3_window"
+					position = { x = 219 y = 61 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_3"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_3_icon_strip"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_3"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 4
+				windowType = {
+					name = "option_4_window"
+					position = { x = 312 y = 61 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_4"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_4_icon_strip"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_4"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 5
+				windowType = {
+					name = "option_5_window"
+					position = { x = 77 y = 173 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_5"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_5_icon_strip"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_5"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 6
+				windowType = {
+					name = "option_6_window"
+					position = { x = 170 y = 173 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_6"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_6_icon_strip"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_6"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 7
+				windowType = {
+					name = "option_7_window"
+					position = { x = 263 y = 173 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_7"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_7_icon_strip"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_7"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+			}
+			## Advisor Types Expanded ##
+			windowType = {
+				name = "ase_spend_additional_splendor_to_recruit_advisor_ate_window"
+				position = { x = 0 y = 0 }
+				scripted = yes
+
+				## Option 1
+				windowType = {
+					name = "option_1_window"
+					position = { x = 30 y = 61 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_1_ate"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_1_icon_strip_ate"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_1_ate"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 2
+				windowType = {
+					name = "option_2_window"
+					position = { x = 123 y = 61 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_2_ate"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_2_icon_strip_ate"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_2_ate"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 3
+				windowType = {
+					name = "option_3_window"
+					position = { x = 219 y = 61 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_3_ate"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_3_icon_strip_ate"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_3_ate"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 4
+				windowType = {
+					name = "option_4_window"
+					position = { x = 312 y = 61 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_4_ate"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_4_icon_strip_ate"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_4_ate"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 5
+				windowType = {
+					name = "option_5_window"
+					position = { x = 77 y = 173 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_5_ate"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_5_icon_strip_ate"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_5_ate"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 6
+				windowType = {
+					name = "option_6_window"
+					position = { x = 170 y = 173 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_6_ate"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_6_icon_strip_ate"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_6_ate"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+				## Option 7
+				windowType = {
+					name = "option_7_window"
+					position = { x = 263 y = 173 }
+
+					guiButtonType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_button_7_ate"
+						position = { x = 5 y = 0 }
+						spriteType = "GFX_ase_spend_additional_splendor_to_recruit_advisor_entry_7_icon_strip_ate"
+						scripted = yes
+					}
+					instantTextBoxType = {
+						name = "ase_spend_additional_splendor_to_recruit_advisor_entry_text_7_ate"
+						position = { x = 0 y = 76 }
+						format = centre
+						font = "vic_18"
+						maxWidth = 85
+						maxHeight = 40
+						fixedsize = yes
+						alwaystransparent = yes
+						scripted = yes
+					}
+				}
+			}
+		}
+
+		#################################################################
+		##  Ages & Splendor Expanded Recruit Advisor for Splendor END  ##
+		#################################################################
+		##############################################################
+		##  Ages & Splendor Expanded Spend Additional Splendor END  ##
+		##############################################################
+
+		#######################################################
+		## Ages & Splendor Expanded Retain Age Ability START ##
+		#######################################################
+
+		windowType = {
+			name = "ase_retain_age_ability_window"
+			position = { x = 110 y = 20 }
+			size = { x = 543 y = 624 }
+			moveable = 1
+			backGround = "ase_retain_age_ability_bg"
+			scripted = yes
+
+			guiButtonType = {
+				name = "ase_retain_age_ability_bg"
+				position = { x = 0 y = 0 }
+				spriteType = "GFX_ase_retain_age_ability_bg"
+			}
+
+			instantTextBoxType = {
+				name = "ase_retain_age_ability_header"
+				position = { x = 96 y = 35 }
+				format = centre
+				font = "vic_29s"
+				maxWidth = 350
+				maxHeight = 20
+				fixedsize = yes
+				alwaystransparent = yes
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "ase_retain_age_ability_desc"
+				position = { x = 40 y = 70 }
+				format = left
+				font = "vic_18"
+				maxWidth = 462
+				maxHeight = 60
+				fixedsize = yes
+				vertical_alignment = centre
+				scripted = yes
+			}
+			instantTextBoxType = {
+				name = "ase_retain_age_ability_title"
+				position = { x = 70 y = 134 }
+				format = centre
+				font = "vic_22s"
+				maxWidth = 400
+				maxHeight = 20
+				fixedsize = yes
+				alwaystransparent = yes
+				scripted = yes
+			}
+			guiButtonType = {
+				name = "ase_retain_age_ability_close_button"
+				position = { x = 197 y = 571 }
+				spriteType = "button_type_1"
+				buttonText = "CLOSE"
+				buttonFont = "vic_18"
+				shortcut = "ESCAPE"
+				clicksound = back_click
+				scripted = yes
+			}
+
+			windowType = {
+				name = "pages_window"
+				position = { x = 140 y = 571 }
+
+				guiButtonType = {
+					name = "ase_retain_age_ability_prev_page_button"
+					position = { x = 0 y = 0 }
+					spriteType = "button_left"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_retain_age_ability_next_page_button"
+					position = { x = 234 y = 0 }
+					spriteType = "button_right"
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_page_text"
+					position = { x = 300 y = 7 }
+					format = right
+					font = "vic_18"
+					maxWidth = 50
+					maxHeight = 20
+					fixedsize = yes
+					alwaystransparent = yes
+					scripted = yes
+				}
+			}
+
+			## Option 1
+			windowType = {
+				name = "ase_retain_age_ability_entry_1_window"
+				position = { x = 17 y = 170 }
+				scripted = yes
+
+				iconType = {
+					name = "ase_retain_age_ability_entry_banner_1"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_retain_age_ability_entry_banner"
+				}
+				iconType = {
+					name = "ase_retain_age_ability_entry_icon_bg_1"
+					position = { x = 20 y = 38 }
+					spriteType = "GFX_ase_retain_age_ability_entry_icon_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_icon_1"
+					position = { x = 25 y = 54 }
+					format = left
+					font = "vic_18"
+					maxWidth = 40
+					maxHeight = 40
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_title_1"
+					position = { x = 33 y = 8 }
+					format = centre
+					font = "vic_22s"
+					maxWidth = 420
+					maxHeight = 20
+					fixedsize = yes
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_desc_1"
+					position = { x = 83 y = 38 }
+					format = left
+					font = "vic_18"
+					maxWidth = 245
+					maxHeight = 53
+					scrollbartype = "standardtext_slider"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_retain_age_ability_entry_button_1"
+					position = { x = 343 y = 49 }
+					spriteType = "button_type_1"
+					buttonFont = "vic_18"
+					buttonText = "ASE_RETAIN_AGE_ABILITY_ENTRY_BUTTON_TEXT"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+			## Option 2
+			windowType = {
+				name = "ase_retain_age_ability_entry_2_window"
+				position = { x = 17 y = 265 }
+				scripted = yes
+
+				iconType = {
+					name = "ase_retain_age_ability_entry_banner_2"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_retain_age_ability_entry_banner"
+				}
+				iconType = {
+					name = "ase_retain_age_ability_entry_icon_bg_2"
+					position = { x = 20 y = 38 }
+					spriteType = "GFX_ase_retain_age_ability_entry_icon_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_icon_2"
+					position = { x = 25 y = 54 }
+					format = left
+					font = "vic_18"
+					maxWidth = 40
+					maxHeight = 40
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_title_2"
+					position = { x = 33 y = 8 }
+					format = centre
+					font = "vic_22s"
+					maxWidth = 420
+					maxHeight = 20
+					fixedsize = yes
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_desc_2"
+					position = { x = 83 y = 38 }
+					format = left
+					font = "vic_18"
+					maxWidth = 245
+					maxHeight = 53
+					scrollbartype = "standardtext_slider"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_retain_age_ability_entry_button_2"
+					position = { x = 343 y = 49 }
+					spriteType = "button_type_1"
+					buttonFont = "vic_18"
+					buttonText = "ASE_RETAIN_AGE_ABILITY_ENTRY_BUTTON_TEXT"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+			## Option 3
+			windowType = {
+				name = "ase_retain_age_ability_entry_3_window"
+				position = { x = 17 y = 360 }
+				scripted = yes
+
+				iconType = {
+					name = "ase_retain_age_ability_entry_banner_3"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_retain_age_ability_entry_banner"
+				}
+				iconType = {
+					name = "ase_retain_age_ability_entry_icon_bg_3"
+					position = { x = 20 y = 38 }
+					spriteType = "GFX_ase_retain_age_ability_entry_icon_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_icon_3"
+					position = { x = 25 y = 54 }
+					format = left
+					font = "vic_18"
+					maxWidth = 40
+					maxHeight = 40
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_title_3"
+					position = { x = 33 y = 8 }
+					format = centre
+					font = "vic_22s"
+					maxWidth = 420
+					maxHeight = 20
+					fixedsize = yes
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_desc_3"
+					position = { x = 83 y = 38 }
+					format = left
+					font = "vic_18"
+					maxWidth = 245
+					maxHeight = 53
+					scrollbartype = "standardtext_slider"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_retain_age_ability_entry_button_3"
+					position = { x = 343 y = 49 }
+					spriteType = "button_type_1"
+					buttonFont = "vic_18"
+					buttonText = "ASE_RETAIN_AGE_ABILITY_ENTRY_BUTTON_TEXT"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+			## Option 4
+			windowType = {
+				name = "ase_retain_age_ability_entry_4_window"
+				position = { x = 17 y = 455 }
+				scripted = yes
+
+				iconType = {
+					name = "ase_retain_age_ability_entry_banner_4"
+					position = { x = 0 y = 0 }
+					spriteType = "GFX_ase_retain_age_ability_entry_banner"
+				}
+				iconType = {
+					name = "ase_retain_age_ability_entry_icon_bg_4"
+					position = { x = 20 y = 38 }
+					spriteType = "GFX_ase_retain_age_ability_entry_icon_bg"
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_icon_4"
+					position = { x = 25 y = 54 }
+					format = left
+					font = "vic_18"
+					maxWidth = 40
+					maxHeight = 40
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_title_4"
+					position = { x = 33 y = 8 }
+					format = centre
+					font = "vic_22s"
+					maxWidth = 420
+					maxHeight = 20
+					fixedsize = yes
+					scripted = yes
+				}
+				instantTextBoxType = {
+					name = "ase_retain_age_ability_entry_desc_4"
+					position = { x = 83 y = 38 }
+					format = left
+					font = "vic_18"
+					maxWidth = 245
+					maxHeight = 53
+					scrollbartype = "standardtext_slider"
+					scripted = yes
+				}
+				guiButtonType = {
+					name = "ase_retain_age_ability_entry_button_4"
+					position = { x = 343 y = 49 }
+					spriteType = "button_type_1"
+					buttonFont = "vic_18"
+					buttonText = "ASE_RETAIN_AGE_ABILITY_ENTRY_BUTTON_TEXT"
+					clicksound = ok_click
+					scripted = yes
+				}
+			}
+		}
+
+		#######################################################
+		##  Ages & Splendor Expanded Retain Age Ability END  ##
+		#######################################################
+		###############################################
+		##  Ages & Splendor Expanded Custom GUI END  ##
+		###############################################
+	}
+
+	###### OBJECTIVES ENTRY
+	windowType = {
+		name = "age_objectives_entry"
+		backGround=""
+		position = { x = 0 y = 0 }
+		size = { x = 600 y = 54 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType =
+		{
+			name = "_entry_bg"
+			spriteType = "GFX_age_objective_bg"
+			position = { x=5 y=4 }
+			Orientation = "UPPER_LEFT"
+		}
+
+		iconType = {
+			name ="icon"
+			spriteType = "GFX_idea_unknown"
+			position = { x = 8 y = 4 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 64 y = 2 }
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "name"
+			maxWidth = 390
+			maxHeight = 32
+			fixedsize = yes
+			format = left
+		}
+		instantTextBoxType = {
+			name = "desc"
+			position = { x = 64 y = 20 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "desc"
+			maxWidth = 390
+			maxHeight = 24
+			format = left
+		}
+		## stuff to the right
+		iconType = {
+			name ="progress"
+			spriteType = "achievement_progress"
+			position = { x = 469 y = 34 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="progress_overlay"
+			spriteType = "GFX_achievement_progress_frame"
+			position = { x = 454 y = 29 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "progress_text"
+			position = { x = 470 y = 8 }
+			font = "vic_22"
+			borderSize = {x = 0 y = 0}
+			text = "7/14"
+			maxWidth = 70
+			maxHeight = 32
+			format = centre
+		}
+	}
+
+	###### ABILITIES ENTRY
+	windowType = {
+		name = "age_ability_entry"
+		backGround=""
+		position = { x = 0 y = 0 }
+		size = { x = 50 y = 41 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name ="icon"
+			spriteType = "GFX_idea_empty"
+			position = { x = 16 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="can_unlock"
+			spriteType = "GFX_age_can_unlock"
+			position = { x = 16 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+		iconType = {
+			name ="cannot_unlock"
+			spriteType = "GFX_age_cannot_unlock"
+			position = { x = 16 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+		guiButtonType = {
+			name ="button"
+			quadTextureSprite= "GFX_idea_empty"
+			position = { x = 16 y = -7 }
+			Orientation = "UPPER_LEFT"
+		}
+	}
+}

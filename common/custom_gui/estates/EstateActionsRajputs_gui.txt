@@ -1,0 +1,216 @@
+custom_button = {
+		name = estate_rajput_recruit_rajput_general_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_RAJPUT_GENERAL_RAJPUT
+			}
+			has_estate = estate_rajput
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_rajput
+				loyalty = 30
+			}	
+			estate_influence = {
+				estate = estate_rajput
+				influence = 40
+			}
+			estate_action_off_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+				days = 3650
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+			}
+			estate_action = {
+				estate_action = RECRUIT_RAJPUT_GENERAL_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_rajput_look_up_purbias_action_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = LOOK_UP_PURBIAS_RAJPUT
+			}
+			has_estate = estate_rajput
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_rajput
+				loyalty = 50
+			}
+			estate_influence = {
+				estate = estate_rajput
+				influence = 40
+			}
+			estate_action_off_cooldown = {
+				estate_action = LOOK_UP_PURBIAS_RAJPUT
+				days = 3650
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = LOOK_UP_PURBIAS_RAJPUT
+			}
+			estate_action = {
+				estate_action = LOOK_UP_PURBIAS_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_rajput_demand_support_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = DEMAND_SUPPORT_RAJPUT
+			}
+			has_estate = estate_rajput
+			NOT = { has_estate = estate_nobles }
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_rajput
+				loyalty = 30
+			}	
+			estate_influence = {
+				estate = estate_rajput
+				influence = 25
+			}
+			estate_action_off_cooldown = {
+				estate_action = DEMAND_SUPPORT_RAJPUT
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = DEMAND_SUPPORT_RAJPUT
+			}
+			estate_action = {
+				estate_action = DEMAND_SUPPORT_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_rajput_exempt_from_jizya_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = EXEMPT_FROM_JIZYA_RAJPUT
+			}
+			has_estate = estate_rajput
+			religion_group = muslim
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_rajput
+				influence = 20
+			}
+			estate_action_off_cooldown = {
+				estate_action = EXEMPT_FROM_JIZYA_RAJPUT
+				days = 3650
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = EXEMPT_FROM_JIZYA_RAJPUT
+			}
+			estate_action = {
+				estate_action = EXEMPT_FROM_JIZYA_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_rajput_promote_rajput_nobility_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = PROMOTE_RAJPUT_NOBILITY_RAJPUT
+			}
+			has_estate = estate_rajput
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = PROMOTE_RAJPUT_NOBILITY_RAJPUT
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = PROMOTE_RAJPUT_NOBILITY_RAJPUT
+			}
+			estate_action = {
+				estate_action = PROMOTE_RAJPUT_NOBILITY_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_rajput_recruit_rajput_troops_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_RAJPUT_TROOPS_RAJPUT
+			}
+			has_estate = estate_rajput
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_rajput
+				loyalty = 30
+			}
+			estate_influence = {
+				estate = estate_rajput
+				influence = 40
+			}
+			estate_action_off_cooldown = {
+				estate_action = RECRUIT_RAJPUT_TROOPS_RAJPUT
+				days = 9125
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_RAJPUT_TROOPS_RAJPUT
+			}
+			estate_action = {
+				estate_action = RECRUIT_RAJPUT_TROOPS_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+

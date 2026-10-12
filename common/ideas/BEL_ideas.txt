@@ -1,0 +1,43 @@
+BEL_ideas = {
+	start = {
+		papal_influence = 2
+		land_morale = 0.1 
+	}
+
+	bonus = {
+		yearly_corruption = -0.15
+	}
+
+	trigger = {
+		tag = BEL
+	}
+	free = yes
+
+	BEL_two_cultures_united = {
+		improve_relation_modifier = 0.3
+		reform_progress_growth = 0.1 
+	}
+	BEL_happy_revolution = {
+		tolerance_heretic = 2
+	}
+	BEL_busy_trade_routes = {
+		global_ship_trade_power = 0.25
+		merchants = 1 
+	}
+	BEL_between_hammer_and_anvil = {
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
+	}
+	BEL_late_colonial_ambitions = {
+		colonists = 1 
+	}
+	BEL_seven_nation_army = { # I had to do it. There isn't even seven nations!
+		manpower_in_accepted_culture_provinces = 0.10
+		manpower_in_own_culture_provinces = 0.10
+		morale_damage = 0.05
+	}
+	BEL_belgian_prosperity = {
+		development_cost = -0.1
+		trade_efficiency = 0.15
+	}
+}

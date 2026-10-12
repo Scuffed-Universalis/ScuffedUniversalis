@@ -1,0 +1,51 @@
+﻿l_spanish:
+# Tier 1
+ empire_in_the_sky_reform: "The Empire in the Sky"
+ empire_in_the_sky_reform_desc: "We stand above most in our kingdom among the clouds, an empire that transcends the rules of the lands below. Our goal has always been to unite the Himalayas under one crown, a realm that rises above the past and carves out a future worthy of our people. The peaceful yet rich mountains are our sanctuary, and it is in their embrace that we place our trust. Though our attempts to reclaim our homeland in the Ganges and Rajasthan have faltered, we are resolved to rise above these past failures and forge a new destiny. \nOur lineage runs deep within the Hindu faith and the epic history of the Vedic people, tracing back to the time when the gods themselves walked the mortal plane. We descend from the illustrious Lunar dynasty, the line of Yadu, which gave birth to epic dynasties-the Pandyas and Cheras of the Tamil kings, the Maurya dynasty of Ashoka the Great, and of course, our own humble branch. We are related to the Guhilot dynasty, the very line that also birthed the Sisodiyas of Mewar and the Chauhans, one of the most ancient and prestigious lines in all of Rajputana. This connection extends further, linking us to the great Parmaras of the ancient Malwa kingdom. \nThis sacred lineage, the last of the divine lines ordained by Shiva himself, exemplifies the rulers we are meant to be: the Lunar kings, diplomats and patrons of trade and the arts, protectors of the sacred waters, and guardians of life itself. Our past may be behind us, but our future is a canvas upon which we shall carve our destiny, guided by the legacy of our divine heritage."
+
+# Tier 2
+ chhetri_clans_reform: "Chhetri Clans"
+ chhetri_clans_reform_desc: "The Khas Rajput nobility of the Gorkha kingdom are invaluable in the adminstartion of our military and conquered regions ensuring our rule for years to come."
+ indo_tibetan_union_reform: "Indo-Tibetan Union"
+ indo_tibetan_union_reform_desc: "Nestled in the highest valleys of the Himalayas, where the harsh climate demands cooperation, our people have found a unique unity. For centuries, the nobility of Tibetan descent and the Vedic people of the subcontinent have forged a bridge between their cultures, creating a resilient hybrid that thrives against all odds. This fusion combines the agricultural, artisanal, and economic strengths of the Vedic tradition with the spiritual devotion and architectural mastery of the Tibetans. Now, we stand at the precipice of exporting this model of unity to the wider region, binding our people together to resist the relentless invasions of foreign empires. Together, as one, we will stand strong against the forces that have sought to subjugate us for generations, forging a shared destiny out of our common struggles."
+
+# Tier 3
+ newar_and_gorkhali_reform: "Newar and Gorkhali"
+ newar_and_gorkhali_reform_desc: "The dynamic between the savage and powerful Gorkhali and the pacific and industrious Newar made controlling the newly conquered Newar people to ensure peace for the Kingdom of Gorkha."
+ ain_i_akbari_reform: "Ain-i-Akbari"
+ ain_i_akbari_reform_desc: "Also known as the administration of Akbar, Akbar introduced significant administrative reforms to the Mughal Empire, often credited with creating the first "modern" administration. His system aimed to maintain the legitimacy of ancient institutions while reforming and modernizing them. Akbar implemented an early form of universal equality before the law and government, utilizing institutions such as the Diwan and local courts to enact extensive land and class reforms. He established a ambitious form of provincial delegation known as the Subah system. While the modernization of ancient Persian systems stirred discontent in traditional institutions, the positive effects were substantial. The functional large state that resulted didn't rely on ancient social contracts, enabling efficient taxation, census, trade control, and large-scale construction projects."
+
+# Tier 5
+ frontier_guards_reform: "Frontier Guards"
+ frontier_guards_reform_desc: "Before the arrival of the Muslim conquerors, our noble Rajput dynasties ruled over much of northern and western India. As proud warriors from illustrious Hindu families, we Rajputs stood as the guardians of our lands, our culture, and our people. The rising threat from the expansionist empires of the Muslim world, including the Arabs, Turks, Pashtuns, and Mughals, only strengthened our resolve. In 712 A.D., the Umayyad Caliphate seized Sindh and Multan, marking the beginning of a series of fierce battles between us and the Arab invaders. Among our fiercest defenders was the Gurjara-Pratihara dynasty, led by the valiant Nagabhata I, who repeatedly drove the Arabs from our lands. Under the leadership of Bappa Rawal, a united Rajput confederacy successfully repelled an Arab invasion with an army composed of warriors from nearly all the northern dynasties. As the centuries passed, new threats emerged from the Turkic and Turco-Persian states such as the Ghaznavids and Ghorids, who launched fresh raids into our sacred soil. Our Rajput kingdoms, including the mighty realm of Prithviraj Chauhan, fought tirelessly against these invaders. Despite our relentless resistance, the Ghorids eventually captured Delhi and the fertile Gangetic plains, leading to the fragmentation of our territories and the rise of the Delhi Sultanate. Yet, the spirit of the Rajput defenders endures, a testament to our bravery and unwavering dedication to protecting our homeland."
+
+# Tier 8
+ desert_construction_reform: "Desert Construction"
+ desert_construction_reform_desc: "Construction in the desert presents formidable challenges due to the extreme heat during the day, the biting cold at night, and the presence of unfriendly creatures in such a desolate place. However, we have devised an efficient system that allows for swift and effective building. Our builders work in two shifts: one around sunrise and another around sundown. To maintain productivity, we supply the construction sites with imported ice and, occasionally, the frost or snow that forms during the cold desert nights. This ingenious approach enables our men to stay productive and complete large buildings and projects at a relatively fast pace. Our kingdom lies largely within the unforgiving Thar Desert. Despite this, our traders and caravans are among the few brave enough and knowledgeable enough to traverse the sand sea. The trade routes, known only to our people, are kept a closely guarded secret. This is not only for economic purposes but also for military security. If these desert corridors, which run from oasis to oasis, were to become known to our enemies, we would lose the natural protection of the desert. Therefore, we must maintain the necessity of our traders for transporting goods and ensure the security of our nation by keeping the Thar trade routes confidential."
+
+# Privileges
+ estate_rajput_increased_rajput_volunteers: "Increased Rajput Volunteers"
+ estate_rajput_increased_rajput_volunteers_desc: "While family is first the clan comes second. The clan system was created long ago during the dark ages. A time period in ancient Indian folklore that happened after the fall of the divine cities of the Indus and the Ganges a long time ago after the war of the gods and demons. For a period kingdoms and kings were non-existent so families banded together forming tribes. These tribes would survive into the new age of kings and kingdoms evolving into clans. These clans formed the fundamental bedrock of rajput society. A system that is not only meant to sustain the culture but also tries to maintain the survival of every family. These families of the clans are as ancient as the clans themselves. Thanks to the clans we do not only have a near infinity supply of willing soldiers who want to join in the family business of war. They are already trained and experienced due to the martial education thats patronised by the clans itself"
+
+# Mechanics
+ mechanic_enables_uidapur_state_yes: "§YUidapur State§!: Our Capital State will be improved."
+ mechanic_enables_western_aryan_province_yes: "§YDivine Rajputana Splendor§!: §G-5.0%§! Local Development Cost and §G-7.5%§! Local Construction Cost in §YWestern Aryan§! provinces following the country religion"
+ mechanic_enables_western_indian_frontier_guards_province_yes: "Every owned province in the §YWestern India§! region that borders arother region will gain §YInvasion Defense§!:\n  Local Defensiveness: §G+15.0%§!\n  Local Fort Maintenance Modifier: §G-15.0%§!\n  Local Manpower Modifier: §G+15.0%§!\n  Local Recruitment Time: §G-15.0%§!\n  Local Regiment Cost: §G-15.0%§!"
+ mechanic_enables_desert_construction_province_yes: "§YDesert Construction§!: §G-15.0%§! Local Construction Cost and §G-15.0%§! Local Development Cost in §YDesert§! provinces"
+
+# Modifiers
+ ge_mer_city_of_lakes: "City of Lakes"
+ desc_ge_mer_city_of_lakes: ""
+ ge_maw_blue_city: "Blue City"
+ desc_ge_maw_blue_city: ""
+
+ ge_western_aryan_province_modifier: "Divine Rajputana Splendor"
+ desc_ge_western_aryan_province_modifier: ""
+
+ ge_western_indian_frontier_guards_province_modifier: "Invasion Defense"
+ desc_ge_western_indian_frontier_guards_province_modifier: ""
+
+ ge_desert_construction_province_modifier: "Desert Construction"
+ desc_ge_desert_construction_province_modifier: ""
+
+# Tooltips

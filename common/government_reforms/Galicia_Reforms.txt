@@ -1,0 +1,29 @@
+GAL_settling_the_terra_icognita = {
+	icon = "peasants"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = GAL
+			was_tag = GAL
+		}
+	}
+	trigger = {
+		OR = {
+			tag = GAL
+			was_tag = GAL
+		}
+	}
+	modifiers = {
+		colony_development_boost = 1
+		colonist_placement_chance = 0.05
+		settlers_loyalty_modifier = 0.05
+	}
+
+	government_abilities = {
+		spanish_economic_decline_mechanic
+	}
+
+	ai = {
+		factor = 1
+	}
+}

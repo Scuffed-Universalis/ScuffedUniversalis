@@ -1,0 +1,341 @@
+defined_text = {
+	name = GetGameRule1
+	random = no
+
+	text = {
+		localisation_key = "Only EE Trees"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_1_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "Only PDX Trees"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_1_var
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = "Default"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRuleDesc1
+	random = no
+
+	text = {
+		localisation_key = "All AI Nations will receive their EE Tree, if it exists."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_1_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "All AI Nations will receive their PDX Tree."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_1_var
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = "Mission Trees for AI Nations will default to EE trees, except for Nations where the PDX tree is significantly newer."
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRule2
+	random = no
+
+	text = {
+		localisation_key = "No AI Subject Releasing"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_2_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "Default"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRuleDesc2
+	random = no
+
+	text = {
+		localisation_key = "AI Nations will not release subjects from conquered territories."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_2_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "AI Nations will release subjects from conquered territories if they have 4 or more cores availiable for reconquest."
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRule3
+	random = no
+
+	text = {
+		localisation_key = "Old Estate Disasters"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_3_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "Default"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRuleDesc3
+	random = no
+
+	text = {
+		localisation_key = "Estate Disasters will use the vanilla system, making them easier to avoid and resolve."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_3_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "Estate Disasters are reworked, making them easier to trigger and harder to resolve."
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRule4
+	random = no
+
+	text = {
+		localisation_key = "Settled Tribes"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_4_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "Cleared Americas"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_4_var
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = "Cleared World"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_4_var
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = "Default"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRuleDesc4
+	random = no
+
+	text = {
+		localisation_key = "All migratory tribes will be forced to settle and lose access to federations."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_4_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "All migratory tribes in the americas will be removed."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_4_var
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = "All migratory tribes in the world will be removed."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_4_var
+				value = 3
+			}
+		}
+	}
+	text = {
+		localisation_key = "Migratory tribes exist as normal."
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRule5
+	random = no
+
+	text = {
+		localisation_key = "Aragonese Wedding"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_5_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "Portuguese Wedding"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_5_var
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = "Default"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRuleDesc5
+	random = no
+
+	text = {
+		localisation_key = "The AI will choose Aragon as its partner for the Iberian Wedding."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_5_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "The AI will choose Portugal as its partner for the Iberian Wedding."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_5_var
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = "The junior partner of the Iberian Wedding is decided dynamically."
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRule6
+	random = no
+
+	text = {
+		localisation_key = "Strengthened Revolt"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_6_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "Subdued Revolt"
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_6_var
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = "Default"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetGameRuleDesc6
+	random = no
+
+	text = {
+		localisation_key = "The Dutch Revolt will be more likely to occur."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_6_var
+				value = 1
+			}
+		}
+	}
+	text = {
+		localisation_key = "The Dutch Revolt will be less likely to occur."
+		trigger = {
+			is_variable_equal = {
+				which = game_rule_6_var
+				value = 2
+			}
+		}
+	}
+	text = {
+		localisation_key = "The Dutch Revolt will happen dynamically."
+		trigger = {
+			always = yes
+		}
+	}
+}

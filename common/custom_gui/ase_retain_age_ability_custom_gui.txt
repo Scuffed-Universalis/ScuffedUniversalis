@@ -1,0 +1,277 @@
+custom_button = {
+	name = ase_retain_age_ability_open_button
+	potential = {
+		ai = no
+	}
+	trigger = {
+		hidden_trigger = {
+			OR = {
+				NOT = { current_age = age_of_discovery }
+			}
+			ase_retain_age_ability_not_selected_for_current_age = yes
+		}
+	}
+	effect = {
+		hidden_effect = {
+			clr_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_opened
+			clr_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			clr_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_opened
+			clr_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			clr_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_opened
+			clr_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			if = {
+				limit = {
+					has_country_flag = ase_retain_age_ability_opened
+				}
+				clr_country_flag = ase_retain_age_ability_opened
+				set_variable = { which = ase_retain_age_ability_page value = 0 }
+			}
+			else = {
+				clr_country_flag = ase_spend_additional_splendor_opened
+				set_country_flag = ase_retain_age_ability_opened
+				set_variable = { which = ase_retain_age_ability_page value = 1 }
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						NOT = { has_global_flag = extended_timeline_mod }
+						current_age = age_of_discovery
+					}
+				}
+			}
+			custom_tooltip = ase_retain_age_ability_open_button_tt_no_previous_age
+		}
+		else_if = {
+			limit = {
+				NOT = { ase_retain_age_ability_not_selected_for_current_age = yes }
+			}
+			custom_tooltip = ase_retain_age_ability_open_button_tt_already_selected
+		}
+	}
+	tooltip = ase_retain_age_ability_open_button_tt
+}
+
+custom_window = {
+	name = ase_retain_age_ability_window
+	potential = {
+		ai = no
+		has_country_flag = ase_retain_age_ability_opened
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_header
+	potential = {
+		always = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_desc
+	potential = {
+		always = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_title
+	potential = {
+		always = yes
+	}
+}
+custom_button = {
+	name = ase_retain_age_ability_close_button
+	effect = {
+		hidden_effect = {
+			clr_country_flag = ase_retain_age_ability_opened
+			set_variable = { which = ase_retain_age_ability_page value = 0 }
+		}
+	}
+	tooltip = CLOSE
+}
+custom_button = {
+	name = ase_retain_age_ability_prev_page_button
+	trigger = {
+		hidden_trigger = {
+			check_variable = { which = ase_retain_age_ability_page value = 2 }
+		}
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = { which = ase_retain_age_ability_page value = -1 }
+		}
+	}
+	tooltip = ase_retain_age_ability_prev_page_button_tt
+}
+custom_button = {
+	name = ase_retain_age_ability_next_page_button
+	trigger = {
+		ase_retain_age_ability_max_page_for_age_not_reached = yes
+	}
+	effect = {
+		hidden_effect = {
+			change_variable = { which = ase_retain_age_ability_page value = 1 }
+		}
+	}
+	tooltip = ase_retain_age_ability_next_page_button_tt
+}
+custom_text_box = {
+	name = ase_retain_age_ability_page_text
+	potential = {
+		always = yes
+	}
+}
+
+custom_window = {
+	name = ase_retain_age_ability_entry_1_window
+	potential = {
+		ase_retain_age_ability_entry_1_visible = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_icon_1
+	potential = {
+		always = yes
+	}
+	tooltip = ase_retain_age_ability_entry_1_tt
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_title_1
+	potential = {
+		always = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_desc_1
+	potential = {
+		always = yes
+	}
+	tooltip = ase_retain_age_ability_entry_1_tt
+}
+custom_button = {
+	name = ase_retain_age_ability_entry_button_1
+	trigger = {
+		ase_retain_age_ability_entry_selectable = yes
+		ase_retain_age_ability_entry_1_selectable = yes
+	}
+	effect = {
+		ase_retain_age_ability_entry_1_effect = yes
+	}
+	tooltip = ase_retain_age_ability_entry_button_1_tt
+}
+
+custom_window = {
+	name = ase_retain_age_ability_entry_2_window
+	potential = {
+		ase_retain_age_ability_entry_2_visible = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_icon_2
+	potential = {
+		always = yes
+	}
+	tooltip = ase_retain_age_ability_entry_2_tt
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_title_2
+	potential = {
+		always = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_desc_2
+	potential = {
+		always = yes
+	}
+	tooltip = ase_retain_age_ability_entry_2_tt
+}
+custom_button = {
+	name = ase_retain_age_ability_entry_button_2
+	trigger = {
+		ase_retain_age_ability_entry_selectable = yes
+		ase_retain_age_ability_entry_2_selectable = yes
+	}
+	effect = {
+		ase_retain_age_ability_entry_2_effect = yes
+	}
+	tooltip = ase_retain_age_ability_entry_button_2_tt
+}
+
+custom_window = {
+	name = ase_retain_age_ability_entry_3_window
+	potential = {
+		ase_retain_age_ability_entry_3_visible = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_icon_3
+	potential = {
+		always = yes
+	}
+	tooltip = ase_retain_age_ability_entry_3_tt
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_title_3
+	potential = {
+		always = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_desc_3
+	potential = {
+		always = yes
+	}
+	tooltip = ase_retain_age_ability_entry_3_tt
+}
+custom_button = {
+	name = ase_retain_age_ability_entry_button_3
+	trigger = {
+		ase_retain_age_ability_entry_selectable = yes
+		ase_retain_age_ability_entry_3_selectable = yes
+	}
+	effect = {
+		ase_retain_age_ability_entry_3_effect = yes
+	}
+	tooltip = ase_retain_age_ability_entry_button_3_tt
+}
+
+custom_window = {
+	name = ase_retain_age_ability_entry_4_window
+	potential = {
+		ase_retain_age_ability_entry_4_visible = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_icon_4
+	potential = {
+		always = yes
+	}
+	tooltip = ase_retain_age_ability_entry_4_tt
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_title_4
+	potential = {
+		always = yes
+	}
+}
+custom_text_box = {
+	name = ase_retain_age_ability_entry_desc_4
+	potential = {
+		always = yes
+	}
+	tooltip = ase_retain_age_ability_entry_4_tt
+}
+custom_button = {
+	name = ase_retain_age_ability_entry_button_4
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ase_retain_age_ability_entry_selectable = yes
+		ase_retain_age_ability_entry_4_selectable = yes
+	}
+	effect = {
+		ase_retain_age_ability_entry_4_effect = yes
+	}
+	tooltip = ase_retain_age_ability_entry_button_4_tt
+}

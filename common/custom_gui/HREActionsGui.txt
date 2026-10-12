@@ -1,0 +1,571 @@
+custom_button = {
+	name = emperor_usurp_electorate
+	potential = {
+		OR = {
+			AND = {
+				is_elector = no
+				is_emperor = yes
+			}
+			AND = {
+				is_elector = no
+				is_emperor = no
+				is_part_of_hre = yes
+			}
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				is_elector = no
+				is_emperor = yes
+			}
+			is_part_of_hre = yes
+			NOT = { is_elector = yes }
+			is_emperor = yes
+			any_subject_country = {
+				is_elector = yes
+			}
+			stability = 1
+			imperial_influence = 5
+		}
+		else_if = {
+			limit = {
+				is_elector = no
+				is_emperor = no
+				is_part_of_hre = yes
+			}
+			NOT = { is_elector = yes }
+			is_emperor = no
+			any_subject_country = {
+				is_elector = yes
+			}
+			religion = emperor
+			custom_trigger_tooltip = {
+				tooltip = purchase_the_electorate_ct
+				OR = {
+					NOT = { has_country_flag = tried_to_get_elector_role }
+					had_country_flag = {
+						flag = tried_to_get_elector_role
+						days = 730
+					}
+				}
+			}
+			NOT = { war_with = emperor }
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = to_request_tooltip
+					OR = {
+						AND = {
+							alliance_with = emperor
+							reverse_has_opinion = {
+								who = emperor
+								value = 200
+							}
+							emperor = {
+								trust = {
+									who = ROOT
+									value = 80
+								}
+							}
+						}
+						always = no
+					}
+				}
+				AND = {
+					alliance_with = emperor
+					reverse_has_opinion = {
+						who = emperor
+						value = 200
+					}
+					emperor = {
+						trust = {
+							who = ROOT
+							value = 80
+						}
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = to_purchase_tooltip
+					OR = {
+						AND = {
+							treasury = 6000
+							NOT = { num_of_loans = 1 }
+							NOT = { corruption = 1 }
+							is_in_deficit = no
+							reverse_has_opinion = {
+								who = emperor
+								value = 0
+							}
+						}
+						always = no
+					}
+				}
+				AND = {
+					treasury = 6000
+					NOT = { num_of_loans = 1 }
+					NOT = { corruption = 1 }
+					is_in_deficit = no
+					reverse_has_opinion = {
+						who = emperor
+						value = 0
+					}
+				}
+			}
+		}
+	
+		
+	}
+	effect = { 
+		if = {
+			limit = {
+				is_emperor = no
+			}
+			custom_tooltip = purchase_or_request_the_electorate_tt
+		}
+		if = {
+			limit = {
+				is_elector = no
+				is_emperor = yes
+			}
+			add_imperial_influence = -5
+			random_subject_country = {
+				limit = { is_elector = yes }
+				elector = no
+				tooltip = {
+					add_opinion = {
+						who = ROOT
+						modifier = usurped_our_electorate
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = hre_event.14
+					}
+				}
+			}
+			elector = yes
+		}
+		else_if = {
+			limit = {
+				is_elector = no
+				is_emperor = no
+				any_subject_country = {
+					is_elector = yes
+				}
+				religion = emperor
+				alliance_with = emperor
+				reverse_has_opinion = {
+					who = emperor
+					value = 200
+				}
+				emperor = {
+					trust = {
+						who = ROOT
+						value = 80
+					}
+				}
+				NOT = { war_with = emperor }
+				custom_trigger_tooltip = {
+					tooltip = purchase_the_electorate_ct
+					OR = {
+						NOT = { has_country_flag = tried_to_get_elector_role }
+						had_country_flag = {
+							flag = tried_to_get_elector_role
+							days = 730
+						}
+					}
+				}
+			}
+			#custom_tooltip = request_the_electorate_tt
+			hidden_effect = {
+				clr_country_flag = tried_to_get_elector_role
+				set_country_flag = tried_to_get_elector_role
+				emperor = {
+					country_event = {
+						id = hre_event.11
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_elector = no
+				is_emperor = no
+				any_subject_country = {
+					is_elector = yes
+				}
+				religion = emperor
+				treasury = 6000
+				NOT = { num_of_loans = 1 }
+				NOT = { corruption = 1 }
+				is_in_deficit = no
+				NOT = { war_with = emperor }
+				reverse_has_opinion = {
+					who = emperor
+					value = 0
+				}
+				custom_trigger_tooltip = {
+					tooltip = purchase_the_electorate_ct
+					OR = {
+						NOT = { has_country_flag = tried_to_get_elector_role }
+						had_country_flag = {
+							flag = tried_to_get_elector_role
+							days = 730
+						}
+					}
+				}
+			}
+			#custom_tooltip = purchase_the_electorate_tt
+			hidden_effect = {
+				clr_country_flag = tried_to_get_elector_role
+				set_country_flag = tried_to_get_elector_role
+				emperor = {
+					country_event = {
+						id = hre_event.8
+					}
+				}
+			}
+		}
+	}
+	tooltip = get_take_the_electorate_desc_loc
+}
+
+custom_text_box = {
+    name = hre_imperial_titles_banner_text
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+		}
+	}
+	tooltip = hre_imperial_titles_banner_text_tooltip
+}
+
+custom_icon = {
+    name = cover_right_side_decentral_base
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+		}
+	}
+}
+
+custom_icon = {
+    name = cover_right_side_decentral_titles
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+		}
+	}
+}
+
+custom_shield = {
+    name = hre_imperial_titles_treasurer_shield
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+			has_saved_global_event_target = imperial_treasurer
+		}
+	}
+    trigger = {
+		#has_saved_global_event_target = imperial_treasurer
+	}
+    #effect = { }
+    tooltip = hre_imperial_titles_treasurer_text
+    global_event_target = imperial_treasurer
+    open_country = yes
+}
+
+custom_shield = {
+    name = hre_imperial_titles_marshal_shield
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+			has_saved_global_event_target = imperial_marshal
+		}
+	}
+    trigger = {
+	}
+    #effect = { }
+    tooltip = hre_imperial_titles_marshal_text
+    global_event_target = imperial_marshal
+    open_country = yes
+}
+
+custom_shield = {
+    name = hre_imperial_titles_chaplain_shield
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+			has_saved_global_event_target = imperial_chaplain
+		}
+	}
+    trigger = {
+		#has_saved_global_event_target = imperial_chaplain
+	}
+    #effect = { }
+    tooltip = hre_imperial_titles_chaplain_text
+    global_event_target = imperial_chaplain
+    open_country = yes
+}
+
+custom_button = {
+    name = hre_imperial_titles_treasurer_shield_empty
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+			NOT = { has_saved_global_event_target = imperial_treasurer }
+		}
+	}
+	frame = {
+        number = 1
+        trigger = { 
+			is_emperor = no
+		}
+    }
+	frame = {
+        number = 2
+        trigger = { 
+			is_emperor = yes
+		}
+    }
+    trigger = {
+		#custom_trigger_tooltip = {
+		#	tooltip = ""
+		#	has_saved_global_event_target = imperial_treasurer
+		#}
+	}
+    #effect = { }
+    tooltip = hre_imperial_titles_treasurer_text
+}
+
+custom_button = {
+    name = hre_imperial_titles_marshal_shield_empty
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+			NOT = { has_saved_global_event_target = imperial_marshal }
+		}
+	}
+	frame = {
+        number = 1
+        trigger = { 
+			is_emperor = no
+		}
+    }
+	frame = {
+        number = 2
+        trigger = { 
+			is_emperor = yes
+		}
+    }
+    trigger = {
+		if = {
+			limit = {
+				#is_emperor = yes
+				always = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = ""
+				always = yes
+			}
+		}
+		else_if = {
+			limit = {
+				always = no
+				is_part_of_hre = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = "To become Imperial Marshal, the Emperor requires us to be rated at 100 points or more."
+				always = yes
+			}
+			if = {
+				limit = {
+					#total_development = 100
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Large Nation in the Empire: +25"
+					total_development = 100
+				}
+			}
+			if = {
+				limit = {
+					#OR = {
+					#	alliance_with = emperor
+					#	reverse_has_opinion = {
+					#		who = emperor
+					#		value = 200
+					#	}
+					#}
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Alliance or Relations: +25"
+					OR = {
+						alliance_with = emperor
+						reverse_has_opinion = {
+							who = emperor
+							value = 200
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					#has_global_modifier_value = {
+					#	which = diplomatic_reputation
+					#	value = 3
+					#}
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Diplomatic Reputation at least 3: +25"
+					has_global_modifier_value = {
+						which = diplomatic_reputation
+						value = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					#OR = {
+					#	has_global_modifier_value = {
+					#		which = discipline
+					#		value = 0.10
+					#	}
+					#	has_global_modifier_value = {
+					#		which = land_morale
+					#		value = 0.20
+					#	}
+					#}
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Strong Military: +25"
+					OR = {
+						has_global_modifier_value = {
+							which = discipline
+							value = 0.10
+						}
+						has_global_modifier_value = {
+							which = land_morale
+							value = 0.20
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					#land_forcelimit = 30
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Large Military: +25"
+					land_forcelimit = 30
+				}
+			}
+			if = {
+				limit = {
+					#army_size_percentage = 1
+					#current_income_balance = 1
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Economy supports Military: +25"
+					army_size_percentage = 1
+					current_income_balance = 1
+				}
+			}
+		}
+	}
+    #effect = { }
+    tooltip = hre_imperial_titles_marshal_text
+}
+
+custom_button = {
+    name = hre_imperial_titles_chaplain_shield_empty
+    potential = {
+		AND = {
+			ai = no
+			hre_reform_passed = emperor_reichskrieg
+			NOT = { has_saved_global_event_target = imperial_chaplain }
+		}
+	}
+	frame = {
+        number = 1
+        trigger = { 
+			is_emperor = no
+		}
+    }
+	frame = {
+        number = 2
+        trigger = { 
+			is_emperor = yes
+		}
+    }
+    trigger = {
+		#custom_trigger_tooltip = {
+		#	tooltip = ""
+		#	has_saved_global_event_target = imperial_chaplain
+		#}
+	}
+    #effect = { }
+    tooltip = hre_imperial_titles_chaplain_text
+}
+
+
+##############################  Supported files with scopes ##############################
+#   The Gui objects must be directly inside the specified window Gui element!
+#   FROM is always the country that clicks
+#   provinceview.gui:
+#       province_window         (ROOT: Clicked province)
+#       buildings_window        (ROOT: Clicked province)
+#       state_window            (ROOT: Clicked province)
+#   countrycourtview.gui:
+#       countrycourtview        (ROOT = FROM)
+#   countrygovernmentview.gui:
+#       countrygovernmentview   (ROOT = FROM)
+#   countrydiplomacyview.gui:
+#       countrydiplimacyview    (ROOT: Selected country)
+#   countryeconomyview.gui:
+#       countryeconomyview      (ROOT = FROM)
+#   countrytradeview.gui:
+#       countrytradeview        (ROOT = FROM)
+#   countrytechnologyview.gui:
+#       countrytechnologyview   (ROOT = FROM)
+#   countryideasview.gui:
+#       countryideasview        (ROOT = FROM)
+#   countrymissionsview.gui:
+#       countrymissionsview     (ROOT: Selected country)
+#   countrydecisionview.gui:
+#       countrydecisionsview    (ROOT = FROM)
+#   countrystabilityview.gui:
+#       countrystabilityview    (ROOT = FROM)
+#   countryreligionview.gui:
+#       countryreligionview     (ROOT = FROM)
+#   countrymilitaryview.gui:
+#       countrymilitaryview     (ROOT = FROM)
+#   countrysubjectsview.gui:
+#       countrysubjectview      (ROOT = FROM)
+#   countryestatesview.gui:
+#       countryestatesview      (ROOT = FROM)
+#   ages_view.gui:
+#       ages_view               (ROOT = FROM)
+#   tradeinterface.gui:
+#       TradeNodeInterface      (ROOT: Trade capital of a trade node)
+#   hre.gui:
+#       hre_window              (ROOT = FROM)
+#   papacy.gui:
+#       papacy_window           (ROOT = FROM)
+#   faction.gui:
+#       All faction windows     (ROOT = FROM)
+#   celestialempireview.gui:
+#       celestial_window        (ROOT = FROM)
+#   countrynativesview.gui:
+#       natives_window          (ROOT = FROM)
+#   religiousreforms.gui:
+#       reforms_window          (ROOT = FROM)
+#   parliament.gui:
+#       parliament_window       (ROOT = FROM)

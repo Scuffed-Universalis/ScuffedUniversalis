@@ -1,0 +1,733 @@
+namespace = besseres_hrr_incident_foreign_emperor_events
+
+country_event = {
+	id = besseres_hrr_incident_foreign_emperor_events.1
+	title = besseres_hrr_incident_foreign_emperor_events.EVTNAME1
+	desc = besseres_hrr_incident_foreign_emperor_events.EVTDESC1
+	picture = HRE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		has_dlc = "Emperor"
+		is_emperor = yes
+		is_part_of_hre = no
+		NOT = { active_imperial_incident = any }
+		NOT = { hre_reform_passed = emperor_erbkaisertum }
+		NOT = { hre_reform_passed = erbkaisertum }
+		NOT = { has_country_flag = will_not_get_besseres_hrr_incident_foreign_emperor }
+		NOT = { has_ruler_flag = had_besseres_hrr_incident_foreign_emperor }
+		months_of_ruling = 60
+		has_ruler_flag = ruler_of_hre
+		had_ruler_flag = { flag = ruler_of_hre days = 1825 }
+		hree_is_valid_hre_emperor = yes
+		NOT = {
+			is_in_war = {
+				defender_leader = ROOT
+				casus_belli = cb_challenge_foreign_emperor
+			}
+		}
+		NOT = {
+			any_elector = {
+				junior_union_with = ROOT
+			}
+		}
+		NOT = {
+			any_country = {
+				is_part_of_hre = yes
+				total_development = 150
+				junior_union_with = ROOT
+			}
+		}
+		any_country = {
+			is_part_of_hre = yes
+			hree_is_valid_hre_emperor = yes
+			is_elected_by_more_hre_electors_than = { who = ROOT }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_part_of_hre = yes
+					hree_is_valid_hre_emperor = yes
+					is_elected_by_more_hre_electors_than = { who = ROOT }
+				}
+				save_global_event_target_as = besseres_hrr_incident_foreign_emperor_new_emperor
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_part_of_hre = yes
+						hree_is_valid_hre_emperor = yes
+						is_elected_by_more_hre_electors_than = { who = event_target:besseres_hrr_incident_foreign_emperor_new_emperor }
+					}
+				}
+				random_country = {
+					limit = {
+						is_part_of_hre = yes
+						hree_is_valid_hre_emperor = yes
+						is_elected_by_more_hre_electors_than = { who = event_target:besseres_hrr_incident_foreign_emperor_new_emperor }
+					}
+					save_global_event_target_as = besseres_hrr_incident_foreign_emperor_new_emperor
+				}
+			}
+			if = {
+				limit = {
+					any_country = {
+						is_part_of_hre = yes
+						hree_is_valid_hre_emperor = yes
+						all_country = {
+							is_elected_by_less_hre_electors_than = { who = PREV }
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						is_part_of_hre = yes
+						hree_is_valid_hre_emperor = yes
+						all_country = {
+							is_elected_by_less_hre_electors_than = { who = PREV }
+						}
+					}
+					save_global_event_target_as = besseres_hrr_incident_foreign_emperor_new_emperor
+				}
+			}
+			set_imperial_incident = besseres_hrr_incident_foreign_emperor
+		}
+	}
+
+	option = {
+		name = besseres_hrr_incident_foreign_emperor_events1.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = besseres_hrr_incident_foreign_emperor_events.2
+	title = besseres_hrr_incident_foreign_emperor_events.EVTNAME2
+	desc = besseres_hrr_incident_foreign_emperor_events.EVTDESC2
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = besseres_hrr_incident_foreign_emperor_events2.EVTOPT1
+
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 2
+				legitimacy = 80
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					AND = {
+						OR = {
+							has_dlc = "Rights of Man"
+							has_dlc = "Emperor"
+						}
+						is_great_power = no
+					}
+					AND = {
+						NOT = { has_dlc = "Rights of Man" }
+						NOT = { has_dlc = "Emperor" }
+						NOT = { total_development = 500 }
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					any_owned_province = {
+						is_part_of_hre = yes
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_part_of_hre = yes
+					}
+				}
+				NOT = {
+					any_subject_country = {
+						is_part_of_hre = yes
+					}
+				}
+			}
+		}
+
+		add_legitimacy = -10
+		add_prestige = -25
+		add_dip_power = 100
+		tooltip = {
+			set_emperor = no
+		}
+		if = {
+			limit = {
+				emperor = {
+					NOT = { tag = ROOT }
+				}
+			}
+			emperor = {
+				custom_tooltip = ANTI_KING_BECOMES_EMPROR_TT
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:besseres_hrr_incident_foreign_emperor_new_emperor = {
+					is_part_of_hre = yes
+					hree_is_valid_hre_emperor = yes
+					OR = {
+						is_elector = yes
+						any_elector = {
+							preferred_emperor = PREV
+						}
+					}
+				}
+			}
+			event_target:besseres_hrr_incident_foreign_emperor_new_emperor = {
+				custom_tooltip = ANTI_KING_BECOMES_EMPROR_TT
+				hidden_effect = {
+					set_emperor = yes
+				}
+			}
+		}
+		else = {
+			random_country = {
+				limit = {
+					is_part_of_hre = yes
+					hree_is_valid_hre_emperor = yes
+					OR = {
+						is_elector = yes
+						any_elector = {
+							preferred_emperor = PREV
+						}
+					}
+				}
+				custom_tooltip = ANTI_KING_BECOMES_EMPROR_TT
+				hidden_effect = {
+					set_emperor = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = besseres_hrr_incident_foreign_emperor_events2.EVTOPT2
+
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 1.5
+				OR = {
+					AND = {
+						OR = {
+							has_dlc = "Rights of Man"
+							has_dlc = "Emperor"
+						}
+						is_great_power = no
+					}
+					AND = {
+						NOT = { has_dlc = "Rights of Man" }
+						NOT = { has_dlc = "Emperor" }
+						NOT = { total_development = 500 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				any_neighbor_country = {
+					is_part_of_hre = yes
+				}
+			}
+			modifier = {
+				factor = 3
+				any_owned_province = {
+					is_part_of_hre = yes
+				}
+			}
+		}
+
+		add_legitimacy = -25
+		add_prestige = -50
+		add_ruler_modifier = {
+			name = besseres_hrr_incident_foreign_emperor_joined_empire
+			duration = -1
+		}
+		custom_tooltip = BESSERES_HRR_INCIDENT_FOREIGN_EMPEROR_JOINED_EMPIRE_OPINION_TT
+		hidden_effect = {
+			capital_scope = {
+				set_in_empire = yes
+			}
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = besseres_hrr_incident_foreign_emperor_joined_empire_opinion
+				}
+			}
+		}
+	}
+
+	option = {
+		name = besseres_hrr_incident_foreign_emperor_events2.EVTOPT3
+
+		ai_chance = {
+			factor = 0.33
+			modifier = {
+				factor = 1.25
+				is_at_war = no
+			}
+			modifier = {
+				factor = 3
+				OR = {
+					AND = {
+						OR = {
+							has_dlc = "Rights of Man"
+							has_dlc = "Emperor"
+						}
+						is_great_power = yes
+					}
+					AND = {
+						NOT = { has_dlc = "Rights of Man" }
+						NOT = { has_dlc = "Emperor" }
+						total_development = 500
+					}
+				}
+			}
+		}
+
+		add_legitimacy = 10
+		add_prestige = 10
+		if = {
+			limit = {
+				any_country = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = ROOT
+						casus_belli = cb_challenge_foreign_emperor
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = ROOT
+						casus_belli = cb_challenge_foreign_emperor
+					}
+				}
+				custom_tooltip = BESSERES_HRR_INCIDENT_FOREIGN_EMPEROR_DECLARE_WAR_ON_EMPEROR_TT
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:besseres_hrr_incident_foreign_emperor_new_emperor = {
+					is_part_of_hre = yes
+					hree_is_valid_hre_emperor = yes
+					OR = {
+						is_elector = yes
+						any_elector = {
+							preferred_emperor = PREV
+						}
+					}
+				}
+			}
+			event_target:besseres_hrr_incident_foreign_emperor_new_emperor = {
+				hidden_effect = {
+					save_event_target_as = possible_new_emperor
+					add_casus_belli = {
+						target = ROOT
+						type = cb_challenge_foreign_emperor
+					}
+				}
+				declare_war_with_cb = {
+					who = ROOT
+					casus_belli = cb_challenge_foreign_emperor
+				}
+			}
+		}
+		else = {
+			random_country = {
+				limit = {
+					is_part_of_hre = yes
+					hree_is_valid_hre_emperor = yes
+					OR = {
+						is_elector = yes
+						any_elector = {
+							preferred_emperor = PREV
+						}
+					}
+				}
+				hidden_effect = {
+					save_event_target_as = possible_new_emperor
+					add_casus_belli = {
+						target = ROOT
+						type = cb_challenge_foreign_emperor
+					}
+				}
+				declare_war_with_cb = {
+					who = ROOT
+					casus_belli = cb_challenge_foreign_emperor
+				}
+			}
+		}
+		custom_tooltip = BESSERES_HRR_INCIDENT_FOREIGN_EMPEROR_STAY_EMPEROR_TT
+		hidden_effect = {
+			every_elector = {
+				limit = {
+					is_subject = no
+					NOT = { tag = event_target:possible_new_emperor }
+				}
+				if = {
+					limit = {
+						alliance_with = ROOT
+					}
+					country_event = { id = besseres_hrr_incident_foreign_emperor_events.3 days = 1 }
+				}
+				else = {
+					country_event = { id = besseres_hrr_incident_foreign_emperor_events.4 days = 1 }
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject = no
+					is_part_of_hre = yes
+					is_elector = no
+					NOT = { tag = event_target:possible_new_emperor }
+				}
+				if = {
+					limit = {
+						alliance_with = ROOT
+					}
+					country_event = { id = besseres_hrr_incident_foreign_emperor_events.3 days = 1 }
+				}
+				else = {
+					country_event = { id = besseres_hrr_incident_foreign_emperor_events.4 days = 1 }
+				}
+			}
+		}
+	}
+
+	after = {
+		set_ruler_flag = had_besseres_hrr_incident_foreign_emperor
+		clear_global_event_target = besseres_hrr_incident_foreign_emperor_new_emperor
+	}
+}
+
+country_event = {
+	id = besseres_hrr_incident_foreign_emperor_events.3
+	title = besseres_hrr_incident_foreign_emperor_events.EVTNAME3
+	desc = besseres_hrr_incident_foreign_emperor_events.EVTDESC3
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { war_with = FROM }
+		NOT = { war_with = event_target:possible_new_emperor }
+		NOT = { truce_with = event_target:possible_new_emperor }
+		NOT = { alliance_with = FROM }
+		NOT = { alliance_with = event_target:possible_new_emperor }
+	}
+
+	option = {
+		name = besseres_hrr_incident_foreign_emperor_events3.EVTOPT1
+
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				is_rival = event_target:possible_new_emperor
+			}
+			modifier = {
+				factor = 3
+				is_enemy = event_target:possible_new_emperor
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					has_opinion = {
+						who = event_target:possible_new_emperor
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = event_target:possible_new_emperor
+						value = -100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_opinion = {
+					who = FROM
+					value = 75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = FROM
+					value = 150
+				}
+			}
+		}
+
+		custom_tooltip = BESSERES_HRR_INCIDENT_FOREIGN_EMPEROR_JOIN_EMPEROR_IN_WAR_TT
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = FROM
+						defenders = ROOT
+					}
+				}
+				ROOT = { set_country_flag = no_peace_with_@PREV }
+			}
+			join_all_defensive_wars_of = FROM
+			every_country = {
+				limit = {
+					is_in_war = {
+						attacker_leader = THIS
+						defender_leader = FROM
+						defenders = ROOT
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { has_country_flag = no_peace_with_@PREV }
+					}
+					ROOT = { clr_country_flag = no_peace_with_@PREV }
+				}
+				else_if = {
+					limit = {
+						NOT = { tag = FROM }
+						NOT = { tag = event_target:possible_new_emperor }
+					}
+					white_peace = ROOT
+				}
+			}
+		}
+	}
+
+	option = {
+		name = besseres_hrr_incident_foreign_emperor_events3.EVTOPT2
+
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				is_rival = FROM
+			}
+			modifier = {
+				factor = 3
+				is_enemy = FROM
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = -100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_opinion = {
+					who = event_target:possible_new_emperor
+					value = 75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = event_target:possible_new_emperor
+					value = 150
+				}
+			}
+		}
+
+		add_prestige = -10
+	}
+}
+
+country_event = {
+	id = besseres_hrr_incident_foreign_emperor_events.4
+	title = besseres_hrr_incident_foreign_emperor_events.EVTNAME4
+	desc = besseres_hrr_incident_foreign_emperor_events.EVTDESC4
+	picture = HRE_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { war_with = FROM }
+		NOT = { war_with = event_target:possible_new_emperor }
+		NOT = { truce_with = FROM }
+		NOT = { alliance_with = FROM }
+		NOT = { alliance_with = event_target:possible_new_emperor }
+	}
+
+	option = {
+		name = besseres_hrr_incident_foreign_emperor_events4.EVTOPT1
+
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				is_rival = FROM
+			}
+			modifier = {
+				factor = 3
+				is_enemy = FROM
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = FROM
+						value = -100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_opinion = {
+					who = event_target:possible_new_emperor
+					value = 75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = event_target:possible_new_emperor
+					value = 150
+				}
+			}
+			modifier = {
+				factor = 5
+				alliance_with = event_target:possible_new_emperor
+			}
+		}
+
+		custom_tooltip = BESSERES_HRR_INCIDENT_FOREIGN_EMPEROR_JOIN_AGAINST_EMPEROR_IN_WAR_TT
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_war = {
+						attacker_leader = event_target:possible_new_emperor
+						defender_leader = THIS
+						attackers = ROOT
+					}
+				}
+				ROOT = { set_country_flag = no_peace_with_@PREV }
+			}
+			join_all_offensive_wars_of = event_target:possible_new_emperor
+			every_country = {
+				limit = {
+					is_in_war = {
+						attacker_leader = event_target:possible_new_emperor
+						defender_leader = THIS
+						attackers = ROOT
+					}
+				}
+				if = {
+					limit = {
+						ROOT = { has_country_flag = no_peace_with_@PREV }
+					}
+					ROOT = { clr_country_flag = no_peace_with_@PREV }
+				}
+				else_if = {
+					limit = {
+						NOT = { tag = FROM }
+						NOT = { tag = event_target:possible_new_emperor }
+					}
+					white_peace = ROOT
+				}
+			}
+		}
+	}
+
+	option = {
+		name = besseres_hrr_incident_foreign_emperor_events4.EVTOPT2
+
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 3
+				is_rival = event_target:possible_new_emperor
+			}
+			modifier = {
+				factor = 3
+				is_enemy = event_target:possible_new_emperor
+			}
+			modifier = {
+				factor = 1.5
+				NOT = {
+					has_opinion = {
+						who = event_target:possible_new_emperor
+						value = 0
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				NOT = {
+					has_opinion = {
+						who = event_target:possible_new_emperor
+						value = -100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				has_opinion = {
+					who = FROM
+					value = 75
+				}
+			}
+			modifier = {
+				factor = 2
+				has_opinion = {
+					who = FROM
+					value = 150
+				}
+			}
+		}
+
+		add_prestige = -10
+	}
+}

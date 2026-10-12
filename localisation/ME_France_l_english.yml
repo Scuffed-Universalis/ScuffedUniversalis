@@ -1,0 +1,1646 @@
+﻿l_english:
+
+ #Preview:
+ preview_branch_missions_1_title: "Preview the §OFrankish Legacy§! Branch."
+ preview_branch_missions_2_title: "Preview the §ODissolutione Imperii§! Branch."
+
+ # Missions:
+ fra_treasurer_title: "Trésorier de France"
+ fra_treasurer_desc: "A great nation can never run without outstanding financial ministers. With the great might of our nation, financial experts are the only option for the better administration of our nation's many resources. We should make the financial sector one of the epitomes of our great nation."
+
+ fra_church_eldest_daughter_title: "The Church's Eldest Daughter"
+ fra_church_eldest_daughter_desc: "The Catholic church has been the official state religion of France since its conversion to Christianity during the reign of Clovis I. This feat has granted us the title 'Eldest Daughter of the Catholic Church' and our Kings with 'His Most Christian Majesty'. This is an honor that we should strive to keep."
+
+ fra_seats_power_title: "Seats of Power"
+ fra_seats_power_desc: "The French region holds two of the most prestigious temples of Catholicism in Notre Dame and the Avignon Palace."
+
+ fra_religious_civil_war_title: "A Religious Civil War" 
+ fra_religious_civil_war_desc: "Renaissance Humanism has introduced many reformationary ideas in society one of which is the reformation of the Christian religion. In the eyes of the reformists, years of misinterpretation and the corrupt nature of humankind has tainted the holy message of our Lord. This reformative fervor, however, has been met with staunch resistance from the Catholic church and a bloody feud is brewing on the horizon. Let God show mercy on us all!"
+
+ fra_secret_mission_title: "Secret Mission"
+ fra_secret_mission_desc: "The contents of this mission will be unlocked if we fulfill the secret conditions before the year 1460."
+
+ fra_external_french_holdings_title: "An External Holding"
+ fra_external_french_holdings_desc: "Our recent aquisition of [1751.GetName] has opened us the doors to expand into North Africa, and expanding into North Africa we shall!"
+
+ fra_generational_war_title: "A Generational War"
+ fra_generational_war_desc: "The Hundred Years' War has now raged for more than a century between the houses of Valois and Plantagenet, who fought for control of the throne of France. The English territories in France can not withstand any more taxation, whereas the English state is nearing bankruptcy when an uncalmly truce is the master of our time. We can use this truce as a time to strengthen our armies in preparation for a possible resumption of the war."
+
+ fra_brothers_law_title: "Brothers in Law"
+ fra_brothers_law_desc: "The Duchy of Provence has great aspirations and dreams. Its rulers cling on to lost titles and claims which are absurd at best. With its current leader, a brother of our dear [Root.Consort.GetName], a diplomatic solution might be the answer for re-incorporating Provence under our banner."
+
+ fra_returning_fold_title: "Returning to the Fold"
+ fra_returning_fold_desc: "The Duchy of Brittany had been a semi-independent component of the Kingdom of France since 846. Over the centuries, the fealty demonstrated by the Duchy of Brittany towards France depended significantly on the individuals holding the two titles, as well as many foreign factors at that particular time. We should put an end to Breton autonomy one way or another."
+
+ fra_une_series_forts_title: "La Serie de Forts"
+ fra_une_series_forts_desc: "It is accepted that even the strongest fortifications would fall, given time. The process was so well understood that betting on the length of a siege has become a popular craze. As few states could afford large standing armies, defenders needed time to mobilize; to provide this, we should design our fortresses to absorb the attackers' energies and exhaust the besiegers."
+
+ fra_franco_iberian_relationship_title: "Franco-Iberian Relationship"
+ fra_franco_iberian_relationship_desc: "Our Spanish neighbors to the south have always played a big role in French foreign affairs. They fought shoulder to shoulder with Frankish emperors to protect Europe from Al Andalus during which Barcelona was a county of the Frankish Empire, yet their unification presented a new threat to French stability. Reports have arrived carrying news of unrest inside Catalonia which is something we can exploit or help in averting."
+
+ fra_born_die_title: "Born to Die"
+ fra_born_die_desc: "The Spanish monarch has been subject to extended periods of ill-health for much of his life, his death was anticipated almost from birth, and the issue of his successor a matter of diplomatic debate for decades."
+
+ fra_own_peninsula_title: "Our Own Peninsula"
+ fra_own_peninsula_desc: "The Iberian peninsula, a very attractive land, sits to our south. With its gold mines, trade hubs and colonial ports it continues to defy French supremacy over Europe. Integrating these lands inside the French influence will lift the standing of our nation in the eyes of the world."
+
+ fra_traversing_meditteranean_title: "Traversing the Mediterranean"
+ fra_traversing_meditteranean_desc: "The Italians have been claiming ownership of the Mediterranean Sea since antiquity. Slogans such as Mare Nostrum have been used endlessly to depict this belief of theirs. Let us prove to them that the ownership of the Mediterranean is still a contested claim."
+
+ fra_relieve_domain_title: "To Relieve a Domain"
+ fra_relieve_domain_desc: "Constant strife and warfare have been plaguing the Milanese due to incompetent rulers who are only concerned with drinking wine and wasting their time looking at arts. Incompetency can never be forgiven, and we must relieve Lombardy from this dire situation. We should do so by improving the position of Lombardy on the global stage."
+
+ fra_turbulence_serenity_title: "Turbulence in Serenity"
+ fra_turbulence_serenity_desc: "The so-called Most Serene Republic has a very turbulent history. Its fingerprints can be found in many historical incidents that have shaped regional and global politics. A devious nation such as Venice should be dealt with to curb their potential danger."
+
+ fra_matter_theology_title: "A Matter of Theology"
+ fra_matter_theology_desc: "During different intervals throughout history, the Papacy was able to obtain many properties throughout Italy by donations and inheritances. This system has led to the creation of a Papal State that is led by the Pope himself. However, these men of God forget that their responsibilities lie in our worldly matters. They should give up their worldly possession, for is that not the will of Christ?"
+
+ fra_captive_cities_title: "The Captive Cities"
+ fra_captive_cities_desc: "The age of crusades has long since ended, but our newly established geopolitical situation has presented us with a new opportunity. The cities of Constantinople and Jerusalem and crying out to the Christian world, awaiting their salvation and freedom from the clutches of our enemies. We should liberate these cities and hold the annals of history as witness to the sanctity of our devotion."
+
+ fra_agrarian_societies_title: "Agrarian Societies"
+ fra_agrarian_societies_desc: "Currently, our economy relies heavily on our agricultural yields and the income our agricultural goods provide. Let us invest more in this sector for it to flourish more, and benefit France even better."
+
+ fra_chateux_versailles_title: "Chateaux de Versailles"
+ fra_chateux_versailles_desc: "France upholds many natural wonders and beauties that are yet to be tapped by anyone. One such beauty is the department of Yvelines in the Ile-de-France region. A hunting lodge with spectacular natural scenery is awaiting its glorious future. Artists and architects have approached us to ask for permission to build a palace in this wonderful area."
+
+ fra_les_invalides_title: "Les Invalides"
+ fra_les_invalides_desc: "Many believe that death's salvation is much better than the gruesome fate of becoming disabled and infirm due to war. As a nation whose sole priority is the betterment of its people and their social status, prioritizing the welfare of our war veterans is a must. Let us build a complex that can house these veterans of war and provide them proper treatment lest we take for granted the sacrifices they have put forward for the better of France!"
+
+ fra_arsenal_toulon_title: "Arsenal de Toulon"
+ fra_arsenal_toulon_desc: "The need to project our might around the Meditteranean calls for the establishment of a permanent naval base on the shores of the Meditteranean. The province of Toulon has been chosen amongst many candidates due to the geographical advantages it presents."
+
+ fra_compagnies_ordonnance_title: "Compagnies d'Ordonnance"
+ fra_compagnies_ordonnance_desc: "Warfare in its current form relies heavily on mercenaries who are only loyal to the gold they will receive and are very prone to defect once they receive a better offer. To counter this, we should create a private army that will be loyal to the state and the state alone."
+
+ fra_dynastic_struggle_title: "A Dynastic Struggle"
+ fra_dynastic_struggle_desc: "The current feud with the English has been dragging on for far too long. Our nation has invested all of its resources in repelling all the English incursions inside our glorious nation. A decisive victory is of utmost importance for us to end this dynastic struggle."
+
+ fra_burgundian_case_title: "Burgundian Case"
+ fra_burgundian_case_desc: "Due to our affairs with the English, the Duchy of Burgundy has been slowly straying away from our influence. Styling themselves as an independent state, the Duchy of Burgundy is now a vassal of France only by name. Now that we have finally dealt with England, the time has come for us to settle our score with the Burgundians, one way or another."
+
+ fra_royaulme_france_title: "Royaulme de France"
+ fra_royaulme_france_desc: "At long last, France has been united. Never again will a French-born bow down to a foreign lord or power. With the Fleur-De-Lis in tow, France will become a fortress impenetrable against everyone who tries to break its unity."
+
+ fra_tip_balance_title: "Tip the Balance"
+ fra_tip_balance_desc: "The Treaty of Lodi brought an unusual calm to the Italian peninsula. Upon this treaty, Italian powers vowed not to form separate alliances and treaties while committing to maintain the established boundaries. Our Italian contacts have informed us that this 'Equilibrium Policy' has been crafted on mutual suspicion and fear of a potential French threat. Let us show these Italian powers that the might of France is not just by the strength of its armies, but its infamous diplomatic cadre that can also take advantage of political divisions."
+
+ fra_game_crowns_title: "A Game of Crowns"
+ fra_game_crowns_desc: "Disputed successions lead to many pretenders rising to enforce their claim over a certain succession. With a similar event happening in Italy and our claim stronger than ever, our time has come to rise and meet this opportunity head-on."
+
+ fra_doorway_italy_title: "Doorway to Italy"
+ fra_doorway_italy_desc: "Italy is one of the wealthiest regions in Europe. With its rich port cities and centers of art, Italy promises its holder splendor, prestige, and power."
+
+ fra_golden_opportunity_title: "A Golden Opportunity"
+ fra_golden_opportunity_desc: "Genoa occupies a respectable position in global commercial and financial affairs. With its prestigious banks and trade hubs, Genoese wealth is too lucrative for us to ignore."
+
+ fra_ME_italian_heartland_title: "The Italian Heartland"
+ fra_ME_italian_heartland_desc: "Central Italy houses much of Italy's intangible wealth. With its many cultural, and artistic centers, Central Italy is a region just too good to pass up."
+
+ fra_complex_claim_title: "A Complex Claim"
+ fra_complex_claim_desc: "Pretenders to the Neapolitan crown have been a source of constant strife and disunity throughout Southern Italy. The stability of the region is a duty that we must strive for to bring much-needed safety to the region."
+
+ fra_urbanization_title: "Urbanization"
+ fra_urbanization_desc: "With the Rennaissance in full swing, many of our rural populace have started migrating towards our larger towns. Let us accommodate all these migrators and develop our large towns into urban cities."
+
+ fra_fontainebleau_title: "École de Fontainebleau"
+ fra_fontainebleau_desc: "The Renaissance period has increased the amount of artists that are willing to provide their services to the many nobles houses around Europe. We should increase our artistic collection and invite some of these artists to work for us."
+
+ fra_higher_education_title: "Higher Education"
+ fra_higher_education_desc: "With the annexation of the duchies of Brittany and Provence, new projects have risen. One such project is the establishment of educational centers to decrease the illiteracy rates amongst these newly conquered areas."
+
+ fra_mercure_france_title: "Mercure de France"
+ fra_mercure_france_desc: "The rise of Printing has led to the ease of information sharing. With the maturation of printing, journalism has also found its way into our nation. Let us develop these institutions and pave the way to the future."
+
+ fra_power_steam_title: "The Power of Steam"
+ fra_power_steam_desc: "With the discovery of steam engines and machinations we are yet again on the doorstep of another breakthrough. Machines are replacing the workforce due to their ability to increase production and higher production quality. These machines rely on coal to function. Owning and developing coal-producing lands will provide us with all the coal we need."
+
+ fra_gendarmes_ordonnance_title: "Gendarmes d'Ordonnance"
+ fra_gendarmes_ordonnance_desc: "The introduction of a standing army can never be complete without a potent cavalry force. Establishing a permanent cavalry force will present our military with the force required to shock our enemies."
+
+ fra_new_world_title: "The New World"
+ fra_new_world_desc: "The rumors were right all along. Undiscovered lands have been sighted to the West, a huge land mass ripe for the taking. We should start settling these lands and explore them."
+
+ fra_befriend_natives_title: "Befriend the Natives"
+ fra_befriend_natives_desc: "Our explorative ventures have led us to discover many wild men who live primitive lives in this new world. We should decide our policy regarding the method to deal with these natives."
+
+ fra_discover_acadia_title: "Discover Acadia"
+ fra_discover_acadia_desc: "Our colonial ventures have led us to the region of Acadia. We should settle the northern coast of this uncharted land to start exploring inwards."
+
+ fra_hudson_bay_title: "Hudson Bay"
+ fra_hudson_bay_desc: "With the discovery of Acadia, our navigators believe that a northwestern passage to China can be located. If we want to discover this path, further exploration deeper in the new world is required."
+
+ fra_stake_channel_title: "Our Stake in the Channel"
+ fra_stake_channel_desc: "Many of our neighbors rely on commercial revenues incoming from their ports around the English Channel. Let us stake our claim in the lucrative business to enrich our coffers and weaken their economy."
+
+ fra_trouble_horizon_title: "Trouble on the Horizon"
+ fra_trouble_horizon_desc: "Resistance among the moderate nobility and the population of the Netherlands is a growing concern. Centralization efforts, new taxation policies and religious crackdowns are causing unrest and a social eruption is expected to happen soon."
+
+ fra_commercial_coast_title: "A Commercial Coast"
+ fra_commercial_coast_desc: "The coast of the Netherlands houses many of the most advanced shipping and commercial ports the world has ever seen. Controlling this rich area will strengthen our grip on global commerce and provide us with the ducats our treasury needs to fund our future exploits."
+
+ fra_age_france_title: "Age de la France"
+ fra_age_france_desc: "Our dream of European supremacy is becoming a reality. France will hold the reins over the European economy, politics, and culture for ages to come. All of Europe will tremble when they hear the French battle cry of Montjoie Saint-Denis!"
+
+ fra_locked_mission_1_title: "Branching Mission"
+ fra_locked_mission_1_desc: "This mission will be unlocked once §YOvershadowing an Empire§! happens."
+
+ fra_true_heirs_title: "True Heirs of Charlemagne"
+ fra_true_heirs_desc: "[Emperor.Monarch.GetName] derives his legitimacy to wield the Imperial Crown through Charlemagne and his coronation in 800. What these pretenders forget, however, is that France is the true successor state of Charlemagne's empire and we alone are responsible for continuing his legacy."
+
+ fra_redraw_imperial_line_title: "Redraw the Imperial Line"
+ fra_redraw_imperial_line_desc: "The Imperial Borders have always been a matter of constant debate. Throughout history, many nations have devised claims to many parts of the Empire to push their agendas. By careful and strategic actions we as well can redraw and push the Imperial border further into Germany."
+
+ fra_renaissance_title: "La Renaissance"
+ fra_renaissance_desc: "Italian merchants and contractors have been spreading rumors of a golden age of thought that is taking place in their home cities. The common man is opening up to new ideas about nearly every aspect of life. The world is witnessing an evolution like never before in which France should take a part."
+
+ fra_fuel_fire_title: "Fuel the Fire"
+ fra_fuel_fire_desc: "Our lands in the northeast are abundant with minerals and metal. Investing in this industrial sector will greatly benefit our economy and provide us with much-needed resources."
+
+ fra_made_france_title: "Made in France"
+ fra_made_france_desc: "With our recent acquisition of the Burgundian lands, our textile industry has seen an increase in popularity. Investing in these small businesses that are producing these products will undoubtedly enrich our coffers."
+
+ fra_second_paris_title: "A Second Paris"
+ fra_second_paris_desc: "The city of Lyon has always been one of the megacities in France. Rivaled by Paris alone, Lyon's potential to become the second capital of France was always a question. Let us develop Lyon and transform it into the city it deserves to become."
+
+ fra_colbertism_title: "Colbertism"
+ fra_colbertism_desc: "With colonization in full swing, many nations have expanded their commercial activities and commerce is experiencing a big evolution. Yet the rules of commerce remain the same, imports and exports are what drive a commercial sector to success or utter failure. Finding the best method for exploiting this newly discovered commercial interest should benefit France greatly."
+
+ fra_modernization_title: "Modernization"
+ fra_modernization_desc: "With the evolution of the mind, the world has seen advancements in philosophy, administration, and bureaucracy. Keeping up with these advancements will greatly benefit our government with a better administration of governmental duty and power."
+
+ fra_merchant_navy_title: "A Merchant Navy"
+ fra_merchant_navy_desc: "Currently our navy is in a state to be frowned upon. Encroached by naval superpowers from all sides, we have little breathing room. The only logical step forward is the establishment of a merchant navy which will be the stepping stone for a future naval armada."
+
+ fra_dive_into_unknown_title: "Dive into the Unknown"
+ fra_dive_into_unknown_desc: "The news of Papal Bulls and Treaties which aim to divide a New World have reached our ears. We must act quickly and stake our share from these faraway lands, but to do so we need to first discover it. Rumors have reached that many Italian navigators are offering their services as explorers, we should try and employ one of them."
+
+ fra_frontier_west_title: "A Frontier in the West"
+ fra_frontier_west_desc: "Our mission in finding a way to the East has led us to the region of Guinea. Populated by wild tribes who live a primitive life, this area can be easily conquered by the power of our muskets. The conquest of this region is essential if we ever want to dive inwards into Western Africa."
+
+ fra_malagasy_title: "Malagasy"
+ fra_malagasy_desc: "We have received news that one of our businessmen has signed a charter with the inhabitants of Madagascar. The charter states that Madagascar vows to give the exclusive right to exploit all minerals, forests, and unoccupied land in Madagascar in exchange for a 10% royalty. The inhabitants of Madagascar however are not respecting this treaty, therefore military action is required."
+
+ fra_equinoxiale_title: "France Equinoxiale"
+ fra_equinoxiale_desc: "With our continued explorations of the New World, we have ventured to the southern part of this huge land mass. This part of the New World offers us new kinds of crops that are quite unseen and unheard of. Being the first nation to export these goods to Europe will provide us with an enormous amount of money and wealth."
+
+ fra_settle_west_indies_title: "Settle the West Indies"
+ fra_settle_west_indies_desc: "The Caribbean islands, known for their exotic jungles and wares have been recently discovered by our explorers. All of the new goods that have originated in these islands have turned said islands to a desirable location to hold, a location France intends to hold and exploit."
+
+ fra_Compagnie_Cent_Associes_title: "Compagnie des Cent-Associes"
+ fra_Compagnie_Cent_Associes_desc: "Settlement management and development is not an easy task. Luckily, many private enterprises are racing towards the New World to establish colonial companies that aim to administer these colonial regions on behalf of nations. We should contact one of the companies and establish a colonial company of our own."
+
+ fra_most_dear_enemy_title: "Our Most Dear Enemy"
+ fra_most_dear_enemy_desc: "The historical ties between France and England are long and complex, including conquest, wars, and alliances at various points in history. The Norman conquest of England in 1066 decisively shaped English history, as well as the English language. With the end of the Hundred Years War and the unification of France, a crossroads has been placed in front of us which will shape our relationship with our most bitter neighbor for ages to come."
+
+ fra_eng_saga_title: "The End of a Saga"
+ fra_eng_saga_desc: "Throughout history, no other neighbors have had as many memorable encounters such as France and England. These legendary encounters have already carved themselves in the annals of history and what better way to end an epic saga of this magnitude other than a French victory."
+
+ fra_integration_britain_title: "Integration of Britain"
+ fra_integration_britain_desc: "With the English subdued, the British Isles is now ripe for the taking. We should swarm the British Isles and subjugate its population."
+
+ fra_locked_mission_2_title: "Branching Mission"
+ fra_locked_mission_2_desc: "This mission will be unlocked once §YOvershadowing an Empire§! happens."
+
+ fra_locked_mission_3_title: "Branching Mission"
+ fra_locked_mission_3_desc: "This mission will be unlocked once §YOvershadowing an Empire§! happens."
+
+ fra_locked_mission_4_title: "Branching Mission"
+ fra_locked_mission_4_desc: "This mission will be unlocked once §YOvershadowing an Empire§! happens."
+
+ fra_preparing_field_title: "Preparing the Field"
+ fra_preparing_field_desc: "Our bid for Emperorship has sent a sharp echo throughout the Imperial realm. We must break the monopoly imposed on the title of 'Roman Emperor' by careful and strategic diplomatic moves that will present our campaign in the best image possible."
+
+ fra_right_wrong_title: "Right the Wrongs"
+ fra_right_wrong_desc: "We have inherited an Empire that is ill and disunited. We must unify the national interests of the princes and reform the internal administration to evade the problems that plagued our predecessors."
+
+ fra_renovatio_imperii_title: "Renovatio Imperii"
+ fra_renovatio_imperii_desc: "The renewal of the Roman Empire is steadily taking shape and form. Our efforts have not gone in vain and many consider us as the resurrection of the once mighty empire itself. Our place in the annals of history has already been reserved and none dare question our claim of the only and true Roman Empire."
+
+ fra_whats_come_title: "For What to Come"
+ fra_whats_come_desc: "Our decision to face the Empire head-on requires careful planning and preparation in all the fields that are concerned by this matter. The margin of error is small yet the outlying reward is unprecedented."
+
+ fra_break_imperial_ring_title: "Break the Imperial Ring"
+ fra_break_imperial_ring_desc: "The Holy Roman Empire has been dominating European politics for centuries due to their prestigious standing. They have curbed the powers of many up-and-coming states through shrewd diplomatic moves. We should break the Imperial monopoly on European supremacy by breaking their diplomatic stature." 
+
+ fra_ME_dismantle_hre_title: "Dissolutione Imperii"
+ fra_ME_dismantle_hre_desc: "The Holy Roman Empire has hegemonized Europe ever since the coronation of Charlemagne in 800. Charlemagne adopted the Renovatio Imperii Romanorum in hopes of restoring the Roman Empire to its former glory but alas the usurpers of his title defiled and destroyed his legacy. As the true successors of Charlemagne, we must punish these pretenders and free Charlemagne's legacy."
+
+ fra_turmoil_court_title: "Turmoil in the Court"
+ fra_turmoil_court_desc: "It is no secret that the relationship between [Root.Monarch.GetName] and [Root.Heir.GetName] is terrible. Murmurs around the royal court have indicated that [Root.Heir.GetName] thirst for power to accompany his position as Dauphin is causing him to stir dissent and foment plots. We must solve this issue one way or another."
+
+ fra_baillages_title: "Baillages"
+ fra_baillages_desc: "The French royal demesne requires expansion and proper administration and to meet this end, a thorough fiscal and taxational division is required. Many of our advisors have advised us to adopt the 'Baillages' system that many of our neighboring countries have been experiencing success in."
+
+ fra_cent_suisses_title: "Cent-Suisses"
+ fra_cent_suisses_desc: "The men of Switzerland have already established themselves as capable fighters feared for their resilience and tenacity. Many nations have already beaten us in employing them in their armies but it is never too late to follow suit and form Swiss companies ourselves."
+
+ fra_royal_monopoly_force_title: "The Monopoly of Force"
+ fra_royal_monopoly_force_desc: "The estates' long-lasting power over the crown has reached a tipping point. Local nobles, who exercise their self-given right of rule via power should know their place and start heeding the orders of the King, lest they want to be put to the sword."
+
+ fra_rise_absolute_monarchy_title: "The Rise of Absolutism"
+ fra_rise_absolute_monarchy_desc: "The divine right to rule, the right to rule that is bestowed by God should be enforced all around our nation. The monarch should never be questioned nor subjugated, for any attempt to restrict his absolute rule is going against the will of God himself!"
+
+ fra_expansion_musketeers_title: "Expansion of the Musketeers"
+ fra_expansion_musketeers_desc: "Due to their success, the Musketeer companies have become one of the most prestigious companies in our army. Let us expand the Musketeer Corps and transform it into the most professional fighting force in the world."
+
+ fra_journey_eastwards_title: "A Journey Eastwards"
+ fra_journey_eastwards_desc: "With the increased activity of our maritime sector, many have undertaken the mammoth task of finding an easier way to the East. If such a way exists finding it would increase our trade profits by tenfold if not more. Our glory demands that we find a way to the East."
+
+ fra_landing_india_title: "Landing in India"
+ fra_landing_india_desc: "Our mission of finding a way to the East has led us around Africa and into unknown waters. A land has been sighted far away that looks different than any we have seen thus far."
+
+ fra_french_raj_title: "The French Raj"
+ fra_french_raj_desc: "With our foothold cemented in India we can now commence in the total integration of the Indian sub-continent. No nation other than France shall have the privilege of enjoying the riches of India."
+
+ fra_circling_the_globe_title: "Circling the Globe"
+ fra_circling_the_globe_desc: "With the current surge of exploration as a hobby for many, an age-old question has been brought back. Is the earth spherical or flat? Many French enthusiasts have taken that question as a lifelong mission. Should they fail or should they succeed? This is a question which will remain as a mystery until it is answered."
+
+ fra_seconde_guerre_cent_ans_title: "Guerre de Cent Ans"
+ fra_seconde_guerre_cent_ans_desc: "Our colonial ambitions have put us at odds with our old and bitter rival. We should prove our supremacy over the English, as we did in the past, but this time it should be a superiority over the colonial game."
+
+ fra_colonial_empire_title: "Empire Français"
+ fra_colonial_empire_desc: "From east to west all bow down to France. A true colonial empire that reigns over the Native and Asian Indians alike. We should expand our colonial empire until it covers every land on earth."
+
+ fra_locked_mission_5_title: "Branching Mission"
+ fra_locked_mission_5_desc: "This mission will be unlocked once §YOvershadowing an Empire§! happens."
+
+ fra_barbarians_gates_title: "Barbarians at the Gates"
+ fra_barbarians_gates_desc: "The ancient empire of Rome has always been plagued by vultures who grew around its borders and struck whenever they sensed weakness. In our day and time, the same dilemma can be witnessed with the ever-growing threats around the Imperial border. We should bring these nations to heel and eliminate their threats once and for all."
+
+ fra_european_domination_title: "European Domination"
+ fra_european_domination_desc: "The Holy Roman Empire has always claimed supremacy over Europe since the times of old, yet this ill-gotten claim however is currently weak at best. We should show the world that the pages of history are everchanging, many nations fall to pave the way for others to rise."
+
+ fra_new_era_title: "A New Era"
+ fra_new_era_desc: "A new era of warfare has dawned upon us! Innovations in warfare machinery have led to the discovery of the 'Bombardes'. These bombards fire cannonballs which can decimate our foes and their defensive positions alike. We should invest in procuring these machinery."
+
+ fra_leaders_army_title: "Leaders of our Army"
+ fra_leaders_army_desc: "Our preparations have been successful in preparing the men for what is to come, yet a band of men without a leader would just be nothing short of a Motley crew. Luckily men of high capabilities have made themselves available to duty."
+
+ fra_shatter_stronghold_title: "Shatter the Stronghold"
+ fra_shatter_stronghold_desc: "For many years the English have used Normandy as a base of operations for their occupation of French soil. Striking the heart of English occupation of France should deal a serious blow to all English aspirations."
+
+ fra_port_city_calais_title: "Port City of Calais"
+ fra_port_city_calais_desc: "The English atrocities committed in Calais are still fresh on the minds of our people who are still defying the English presence to this day. We must make haste and liberate this city from the English clutches."
+
+ fra_reorganize_army_title: "Reorganize the Army"
+ fra_reorganize_army_desc: "The French army has always been dependant on levies provided by the nobility or mercenaries that are bought by gold. Both sources of might are not loyal to France and this puts us in a precarious position. We should deal with this matter swiftly."
+
+ fra_testamental_act_title: "A Testamental Act"
+ fra_testamental_act_desc: "With our preparations concluded, the enemy awaits us to meet them head-on! We must ride on and test the might of England on the open battlefield."
+
+ fra_break_english_spine_title: "Break the English Spine"
+ fra_break_english_spine_desc: "The English Longbows have long been terrorizing our French knights and have been the main cause of defeat time and time again. With our newfound might, we should face these archers head-on and finally end their immortality once and for all!"
+
+ fra_end_treaty_wars_title: "End the Treaty Wars"
+ fra_end_treaty_wars_desc: "Due to our recent and numerous victories against the French, one can assume that we have come on top in this long-lasting struggle. With all of our core provinces reclaimed, driving the English forces out of France is the only barrier standing in our path and overwhelming victory."
+
+ fra_unlikely_allies_title: "Unlikely Allies"
+ fra_unlikely_allies_desc: "The nobility of our realm has been playing a big role in the ongoing commotion. Their influence on French soil is nothing to scoff about and befriending them wouldn't be such a bad idea."
+
+ fra_liberate_south_title: "Liberate the South"
+ fra_liberate_south_desc: "For 300 years, the English held the city of Bordeaux and its surroundings. Due to this prolonged English rule, the citizens of Bordeaux have started considering themselves subjects of England. We can not let this continue any further, the south must be liberated from English clutches and it must be returned into the embrace of Mother France."
+
+ fra_cloak_dagger_title: "The Cloak and Dagger"
+ fra_cloak_dagger_desc: "Knowledge and information are key factors in gaining an upper hand during times of war. With knowledge and intelligence at hand, we will expose the enemy and make short work of them."
+
+ fra_sacriligeous_union_title: "A Sacriligeous Union"
+ fra_sacriligeous_union_desc: "It is no mystery that nations who have a common adversary often band up together against that common enemy. Such a case can be seen in the Franco-Ottoman relationship. Many early contacts have been made between the two nations and with our involvement in Italy, these contacts can finally bear fruit and pave the way to something greater."
+
+ fra_study_land_title: "Study the Land"
+ fra_study_land_desc: "Knowing the surrounding geography plays an underrated role in picking favorable engagements. To increase our knowledge of Italy and limit the advantage that our Italian enemies possess, we should study the geography of the Italian peninsula and revise its maps."
+
+ fra_victory_alps_title: "Victories on the Alps"
+ fra_victory_alps_desc: "The mountainous terrain of Italy has always made it a region that is difficult to invade and the Italians know it. With their defensive positions set up and perimeters secure, the Italians think that they are safe from the sheer might of France. Let us show these Italians how war is truly done."
+
+ fra_on_offensive_title: "On the Offensive"
+ fra_on_offensive_desc: "Even though every major engagement we take will be deep inside enemy territory, being on the defensive is not an option. Our spies report that the enemy plans to shut down the route between Paris and our Italian holdings. We must never let that happen by routing the enemy's armies."
+
+ fra_spread_fluer_lis_title: "Spread the Fleur-de-Lis"
+ fra_spread_fluer_lis_desc: "The fleur-de-lis is a core symbol of France and what France represents. We should spread the petals of this prestigious flower all over Italy and show them the might of France."
+
+ fra_affirmation_power_title: "Affirmation of Power"
+ fra_affirmation_power_desc: "Our long-lasting rivalry with the Italian powers is finally drawing to a close. Our recent victories against the Italian armies have diminished their morale and reduced their enthusiasm for war. We should take advantage of this and strike at the heart of Italian power."
+
+ fra_set_full_sail_title: "Set Full Sail"
+ fra_set_full_sail_desc: "With the Italian navy roaming the Mediterranean sea, a mammoth task awaits us. A proud and battle-tested fleet will not be easy to overcome but nothing is impossible. We should start small and slowly increase our naval operations in the Mediterranean Sea."
+
+ fra_own_game_title: "Their Own Game"
+ fra_own_game_desc: "Our initial victories have increased the aspirations of our sailors and have proven to the world that impossible is not a word in the French dictionary. We should ride this wave of positivity and crash it upon the navies of the self-proclaimed 'Holy League'."
+
+ fra_machinations_destruction_title: "Machinations of Destruction"
+ fra_machinations_destruction_desc: "War is ever-changing and evolving to unprecedented heights. The invention of new machines of war has led the world to a race of armament, a race that we need to lead."
+
+ fra_kings_daughters_title: "The King's Daughters"
+ fra_kings_daughters_desc: "The King's Daughters were young women sponsored by King Louis XIV of France in the 17th century to immigrate to New France to help populate the colony. Between 1663 and 1673, around 800 women were provided with dowries and safe passage to marry settlers in New France, significantly contributing to the colony's growth and stability. This program was crucial in establishing a stable, self-sustaining population in the early years of French colonization in North America."
+
+ fra_louisiana_title: "Land of Louis"
+ fra_louisiana_desc: "In 1682, the French explorer René-Robert Cavelier, Sieur de La Salle, claimed the vast Mississippi River basin for France, naming it Louisiana in honor of King Louis XIV. French settlers soon established key outposts such as New Orleans in 1718, transforming the region into a bustling center for trade and culture. This new territory, with its fertile lands and strategic waterways, became a vital link in France's expansive North American empire, blending French, Native American, and African influences into a unique cultural tapestry."
+
+ fra_french_east_indies_title: "French East Indies"
+ fra_french_east_indies_desc: "By dominating the trade routes of the East Indies, we have managed to secure the spices there. Let us now export them back to France, where we'll make sure they're put to good use in the French cuisine."
+
+ fra_indochina_title: "Settling Indochina"
+ fra_indochina_desc: "The lands of Indochina are one of the few that are not claimed by any other Europeans. Perhaps by settling them, and by converting them to our faith, we can strengthen our colonial empire."
+
+ fra_brazil_title: "France Anstarctique"
+ fra_brazil_desc: "France Antarctique was a short-lived French colony established in 1555 on the southeastern coast of present-day Brazil, near Rio de Janeiro. Led by Nicolas Durand de Villegaignon, the colony aimed to provide a haven for French Protestants fleeing religious persecution and to expand French influence in the New World. Despite initial success and alliances with local indigenous tribes, the colony ultimately fell to Portuguese forces in 1567, ending France's early attempts at establishing a foothold in South America."
+
+ fra_religious_absolutism_title: "Religious Absolutism"
+ fra_religious_absolutism_desc: "Instead of the Pope managing our religious laws, and intervening in our politics, we should instead change this system, turning [Root.Monarch.GetName] into the supreme ruler of all religious laws in [Root.GetName]."
+
+ fra_dragonnandes_title: "Le Dragonnandes"
+ fra_dragonnandes_desc: "The Dragonnades were a policy implemented by King Louis XIV of France in the late 17th century to force Huguenots to convert to Catholicism. This policy involved quartering dragoons, or soldiers, in the homes of Huguenots, where they would often harass and intimidate the occupants into converting. The Dragonnades were part of a broader strategy of religious persecution that culminated in the revocation of the Edict of Nantes in 1685, leading to the mass exodus of Huguenots from France."
+
+ fra_northern_italy_title: "To Relieve a Domain"
+ fra_northern_italy_desc: "Constant strife and warfare have been plaguing the Milanese due to incompetent rulers who are only concerned with drinking wine and wasting their time looking at arts. Incompetency can never be forgiven, and we must relieve Lombardy from this dire situation. We should do so by improving the position of Lombardy on the global stage."
+
+ # Tooltips:
+ BRANCH_WILL_BE_SELECTED_FROM_FRENCH_MISSION: "We will lock to a branch depending as to how we completed the §YPreparing the Field§! Mission."
+ FRA_BUFFED_EDICT_NANTES: "The §YEdict of Nantes§! [Root.GetBurghersName] Privilege will now grant §G+20.0%§! [religious_unity]."
+ FRA_UNLOCK_EDICT_KILL_HERETICS: "We will revoke the §YEdict of Nantes§! [Root.GetBurghersName] Privilege and unlock the §YEdict of Fontainebleau§! [Root.GetClergyName] Privilege, which will grant the following bonuses scaled with §YInfluence§!:\n[tolerance_heretic]: §R-2.00§!\n[tolerance_heathen]: §R-2.00§!\n[tolerance_own]: §G+3.00§!"
+ FRA_DISTRIBUTE_PRODUCTION_DEV_IN_BRAZIL_COLONIES: "Every §YSubject Country§! whose Capital is in §YBrazil§! will distribute §G10§! Production Development in their §YBrazilian§! lands."
+ FRA_ALL_OVERSEAS_SUBJECTS_GET_FOLLOWING: "All our §YOverseas Subjects§! will get the following:"
+ FRA_IF_FIRST_CIRCUMNAVIGATION: "If we were the first ones to §YCircumnavigate the Glone§!:"
+ FRA_IF_CATALAN_SUBJECT: "If @CAT §Y[CAT.GetName]§! is our §YSubject§!:"
+ EE_FRA_unlock_reconciliation_decision_tt: "Unlock §YReconcile with Louis§! decision.\n\nStart the '§Yde Valois Crisis§!'\nAs long as §YLouis§! is our heir, we will be getting periodic incidents that will negatively affect our country.\n"
+ EE_FRA_1st_tt_means_end: "\n§YLouis§! will seek shelter in §YBurgundy§! and will assist them whenever they are at war with France."
+ EE_FRA_2nd_tt_means_end: "§RBurgundy may use Louis' title to get a claim on France's throne.§!\n"
+ EE_FRA_extra_modifier_bonus_tt: "As long as the §YManaging the Finances§! modifier is active:\n§YTreasurer§! advisors will additionally grant §G-0.05§! Interest per level.\nGain §G+20%§! chance to increase the base §YTax§! of any developed province by §G+1§! whenever we develop the base §YTax§! of that province.\n"
+ EE_FRA_if_pap_controller: "If we are the §YCuria Controller§!:"
+ EE_FRA_buff_development_temples_tt: "'§YDevelopment of Temples§!' Clergy privilege will no longer prevent the §YClergy§! estate from losing Crown Land Share when we develop provinces."
+ EE_FRA_block_excommunication_tt: "\nWe will never be targeted by an §YExcommunication§! as long as §YNotre-Dame Cathedral§! and §YPalace of the Popes§! Great Projects are Magnificent and both §Y[183.GetName]§! and §Y[202.GetName]§! are §YCatholic§! and owned by §Y[Root.GetName]§!."
+ EE_FRA_blocked: "France can't be excommunicated due to having both §YNotre-Dame Cathedral§! and §YPalace of the Popes§! at level 3."
+ EE_FRA_increase_conversion_reward_tt: "Increase §YPapal Influence§! gained from converting provinces to §YCatholic§! by §G+1§! Papal Influence."
+ EE_FRA_if_completed_religious_ideas: "\nIf we have completed the §YReligious§! idea group:"
+ EE_FRA_winning_religious_wars_give_mana_tt: "Winning wars against §YCatholic§! nations when they are the main target of the war will grant us §G+75§! of each Monarch Power."
+ EE_FRA_if_defender_faith: "If we are the §YDefender of the Faith§!:"
+ as_long_as_defender: "as long as we are the Defender of the Faith"
+ EE_FRA_append_edict_de_nantes: "Append '§YEdict de Nantes§!' granted through the '§YEnact Edict de Nantes§!' decision with the following modifier:\nHeretic and Heathen provinces do not give any penalties.\n"
+ EE_FRA_event_insight_joan_arc_tt: "§GEvent Insight:§!"
+ EE_FRA_if_catholic_tt: "If §MCatholic§!:"
+ EE_FRA_not_catholic_tt: "If §MNot Catholic§!:"
+ EE_FRA_if_PRO_subject_tt: "If the Mission was completed by §MSubjugating§! @PRO §MProvence§!:"
+ EE_FRA_if_PRO_conquest_tt: "If the Mission was completed by §MConquering§! @PRO §MProvence§!:"
+ EE_FRA_if_BRI_appanage_tt: "If the Mission was completed by §MSubjugating§! @BRI §M[BRI.GetName]§!:"
+ EE_FRA_if_BRI_conquest_tt: "If the Mission was completed by §MConquering§! @BRI §M[BRI.GetName]§!:"
+ EE_FRA_BRI_inherit_chance_tt: "We will gain the ability to automatically inherit §YBrittany§! which will increase by §G+20%§! whenever a new monarch ascends the §YFrench§! throne."
+ EE_FRA_integration_tt: "If we remain as subjects of §YFrance§!, France will gain an increasing chance to automatically §RIntegrate§! us whenever a new monarch ascends the French throne."
+ EE_FRA_influence_fort_tt: "All owned provinces in the §YFrench§! region are either:\nInfluenced by a §YFort§!.\nHave a §YFort§! building."
+ EE_FRA_buff_expand_fortifications_tt: "\n§YExpand the Fortifications§! [Root.GetNoblesName] Privilege will no longer stop the §Y[Root.GetNoblesName]§! Estate from losing Crownland whenever we develop provinces.\n"
+ EE_FRA_maintain_fort_modifier_tt: "§YExpertise in Fortifications§! will be increased to §G+10.0%§! if §YMaintaned Forts§! grants §G+1.00§! Army Tradition."
+ EE_FRA_lose_15_AE_tt: "Lose §G15§! Aggressive Expansion."
+ EE_FRA_stronger_than_Iberia_tt: "Has higher §YArmy Strength§! then all countries whose capital is in the §YIberia§! region."
+ EE_FRA_dev_than_Iberia_tt: "Has more §YDevelopment§! then all countries whose capital is in the §YIberia§! region."
+ EE_FRA_unlock_public_weal_disaster_tt: "\nUnlock '§YThe Mad Wars§!' disaster.\nTraversing this disaster successfully will integrate the existing §YAppanages§! while also subjugating Burgundy and Brittany.\n"
+ EE_FRA_every_iberian_lose_auto_separa_tt: "\nEvery owned province in §YIberia§! region:"
+ el_gran_capitan: "El Gran Capitan"
+ EE_FRA_french_rule_tt: "Every owned province in §YIberia§!:"
+ EE_FRA_empty_line_tt: " "
+ EE_FRA_if_mission: "If through §MMission Completion§!:"
+ EE_FRA_if_navy: "If through §MNavy§!:"
+ EE_FRA_allow_venice_arsenal_tt: "The §YArsenal of Venice§! can now be upgraded."
+ EE_FRA_event_insight_festa_salute_tt: "\n§GEvent Insight:§!\nWe will have the opportunity to decide on the fate of the §YArsenal of Venice§!."
+ EE_FRA_if_move_toulon: "\nIf §MMoved to Toulon§!:"
+ EE_FRA_if_stay_venice: "If §MKept in Venice§!"
+ EE_FRA_remove_modifier_triggers: "§YToulon Arsenal§! will deactivate if we do not fulfill one of the following requirements:\n§YVenice§! is owned by France or its non-tributary subjects.\nHave the great project §YArsenal of Venice§! at §YTier 0§!.\n"
+ until_HYW_ends: "until the §YHundred Years War§! ends"
+ EE_FRA_jean_dunoi_tt: "§YJean de Dunois§! has won §Y4§! battles (§Y[Root.jean_dunoi_battles_won.GetValue]§!/§Y4§!)"
+ EE_FRA_if_bureau: "If through §MJean Bureau§!:"
+ EE_FRA_if_dunoi: "If through §MJean de Dunois§!:"
+ EE_FRA_if_losses: "If through English §MWar Losses§!:"
+ EE_FRA_if_warscore: "If through §MWarscore§!:"
+ EE_FRA_if_alencon: "\nIf §Y[1879.GetName]§! has less than §Y10.00%§! Devastation:"
+ EE_FRA_stab_alencon_tt: "Not releasing §YAlencon§! as a Vassal will no longer decrease our Stability by 1."
+ EE_FRA_stole_heavies_tt: "\nDuring a raid on the port of §Y[87.GetName]§! we were able to take command of 3 Heavy Ships belonging to §YEngland§!."
+ EE_FRA_unlock_heavy_decision_tt: "Unlock '§YCommandeer English Heavy Ships§!' decision.\n§YThis decision will be available until we finish the '§YHundred Years War§!' incident tree.§!"
+ EE_FRA_battles_won_tt: "Has won at least 2 battles against §YEngland§! in which England has lost at least §Y5000§! soldiers (§Y[Root.EE_FRA_battles_won_counter.GetValue]§!/§Y2§!)."
+ EE_FRA_two_following_true: "Two of the following must be true:\n§Y[Root.GetNobilityName]§! Estate has at least §Y60%§! loyalty.\nHas used estate interaction '§YSale of Titles§!'.\nHas granted the §YNobility§! Estate at least §Y3§! privileges."
+ EE_FRA_disable_HYW_events_tt: "From now on §YIncrease in Demands§! and §YResistance to Order§! will never happen."
+ EE_FRA_occupation_remove_tt: "The modifier '§YOccupation of Rome§!' will never be applied."
+ EE_FRA_seize_curia_tt: "Unlock '§YSeize the Curia§!' Diplomatic Action.\nSeizing the curia will make us the §YCuria Controller§! at the cost of §Y100§! Papal Influence.\n"
+ EE_FRA_enable_peter_basilica_tt: "If religion in [FRA.GetName] is not §YCatholic§!, enable §YSaint Peter's Basilica§!.\n"
+ EE_FRA_release_and_vassalize_tt: "We will release and vassalize @KNI §YThe Knights§! and @KOJ §YJerusalem§!.\n"
+ EE_FRA_prisoner_vatican_insight_tt: "\n§GEvent Insight:§!"
+ EE_FRA_if_prisoner_OPT1: "If §MOption 1§!:"
+ EE_FRA_if_prisoner_OPT2: "If §MOption 2§!:"
+ EE_FRA_if_prisoner_OPT3: "If §MOption 3§!:"
+ EE_FRA_holy_state_reform: "@KOJ §YJerusalem§! and @KNI §YThe Knights§! enact §YCrusader States§! government reform.\n"
+ EE_FRA_if_subtrigger_completed_tt: "If @KOJ §YJerusalem§! and @KNI §YThe Knights§! conquer their claims before the §MAge of Reformation§! ends:"
+ EE_FRA_unlock_propagate_religion: "Unlock access to §YPropagate Religion§! trade policy.\n"
+ EE_FRA_append_armed_pilgrimage: "Buff §YAn Armed Pilgrimage§! to the following:"
+ EE_FRA_militarized_crusader_order_reform: "@KOJ §YOutremer§! enacts §YCrusader Empire§! government reform.\n"
+ EE_FRA_buff_conversion_force_conversion_tt: "Changing the religion of provinces that are located in §YAsia§! to Catholic will grant us a chance for '§YCrusade Evangelism§!' to happen.\n\n§YForcing our Religion§! on other countries will grant us a chance for '§YHerding the Stray and Lost§!' to happen.\n"
+ ME_FRA_force_converted: "Force-converted a nation."
+ ME_FRA_english_hegemony: "Hegemony over the English culture."
+ EE_FRA_agrarian_societies_rewards: "We will never suffer another §YPoor Vintage§!."
+ EE_FRA_if_trubulence_finished: "If we complete this Mission after we've completed the §YTurbulence in Serenity§! one:"
+ EE_FRA_if_charles_alive: "If the Mission was completed whilst §YCharles VII§! is still §YAlive§!:"
+ EE_FRA_if_BUR_appanage: "If the Mission was completed with @BUR §MBurgundy§! as a §MSubject§!:"
+EE_FRA_if_through_conquest: "If the Mission was completed through §MConquest§!:"
+ EE_FRA_inherit_BUR_tt: "We will gain the ability to automatically inherit §YBurgundy§! which will increase by §G+20%§! whenever a new monarch ascends the §YFrench§! throne."
+ EE_FRA_unlock_conditional_modifier_tt: "Unlock §YVersailles§! conditional modifier.\n"
+ EE_FRA_improve_capital_tt: "§YImproving the Capital§! the event will no longer deplete our §YManpower§!.\n"
+ EE_FRA_unlock_les_invalides_organization_tt: "Unlock §YLes Invalides§! Local Organization that grants the following modifier:\nLocal Manpower Modifier: §G+25.0%§!\nLocal Prosperity Growth: §G+0.1§!"
+ local_organization: "Local Organizaiton"
+ EE_FRA_no_louis_heir_tt: "Heir is not '§YLouis de Valois§!'"
+ EE_FRA_dealt_Valois_crisis: "Has dealt with '§Yde Valois Crisis§!'."
+ EE_FRA_depending_outcome_tt: "§MDepending on the outcome a different reward will be given:§!"
+ EE_FRA_if_charles_ruler_tt: "If §MLouis§! is not our §MHeir§! or §MRuler§!:"
+ EE_FRA_if_louis_ruler_tt: "If we supported §MLouis§! and our §MRuler§! is not §MCharles VII§!:"
+ EE_FRA_other_possibility_tt: ""
+ EE_FRA_1st_tt_means_end: "§YLouis§! will seek shelter in Burgundy and will assist §YBurgundy§! whenever France is at war with Burgundy."
+ EE_FRA_2nd_tt_means_end: "§RBurgundy may use Louis' title to get a claim on France's throne§!."
+ EE_FRA_unlock_italian_wars_tt: "Unlock §YThe Italian Wars§! Opportunity."
+ EE_FRA_if_NAP_independent: "\nIf §YNaples§! or §YMilan§! are §MIndependent§!:"
+ EE_FRA_outrage_tt: "§ROur act of subjugation will cause an outrage throughout Italy and will lead to the formation of an opposing league of Italian states.§!"
+ EE_FRA_unlocked_opportunity_five_years_tt: "Has unlocked the Opportunity less than §Y5§! years ago."
+ EE_FRA_funded_war_effort_tt: "Has funded the §YWar Effort§!."
+ EE_FRA_declining_war_enthusiasm_tt: "Declining war enthusiasm."
+ EE_FRA_two_years_start: "Two years have passed since the start of §YThe Italian Wars§! Opportunity."
+ EE_FRA_league_venice_tt: "\nThe §YLeague of Venice§! will come to the aid of this nation regardless of their diplomatic standings.\n\nOnce the §YItalian Wars§! commence we will receive an incident tree that will guide us through it."
+ EE_FRA_gain_new_CB_tt: "Gain the following §YCasus Belli§! against every nation that holds a province in §YItaly§!:"
+ EE_FRA_end_opportunity_tt: "End '§YThe Italian Wars§!' Opportunity."
+ EE_FRA_fund_war_effort_unlocked_tt: "Unlock '§YFund the War Effort§!' Decision.\n"
+ EE_FRA_fire_league_venice_event: "Every country whose capital is in §YItaly§! and is not a subject of §YFrance§!:"
+ EE_FRA_join_league_venice_tt: "Join §YThe League of Venice§!.\n§YThe League of Venice§! is a defensive pact that will take place whenever §YFrance§! declares a war against any Italian country."
+ EE_FRA_if_emperor: "\nIf we have less than §Y100 Opinion§! with the §YHoly Roman Emperor§! (Currently: @[Emperor.GetTag] §Y[Emperor.GetName]§!), they will get the following:"
+ EE_FRA_if_iberia: "\nIf we have less than §Y100 Opinion§! with any country in §YIberia§!, they will get the following:"
+ EE_FRA_league_venice_event_insight_tt: "\n§GEvent Insight:§!\n§YThe League of Venice§! is a defensive pact that will take place whenever §YFrance§! declares a war against any Italian country."
+ EE_FRA_italian_wars_warning_tt: "\n§RCompleting this mission starts opportunity to further mingle in italian realm. Beware, you'll have five years to fulfill certain criteria, otherwise the opportunity will be lost!§!"
+ until_IW_ends: "until §YThe Italian Wars§! end"
+ EE_FRA_improve_inland_routes_tt: "§YImprove Inland Routes§! Trade Policy will no longer require §Y50%§! Trade Share in §YVenice§! and §YGenoa§! trade nodes until the end of the war."
+ EE_FRA_killed_50k_troops_tt: "France has killed at least §Y50,000§! units from the start of the §YItalian Wars§! (§Y[Root.EE_units_killed_counter.GetValue]§!/§Y50000§!)."
+ EE_FRA_won_5_battles: "Has won at least 5 §YBattles§! (§Y[Root.num_of_won_battles.GetValue]§!/§Y5§!)."
+ EE_FRA_controlling_capitals_tt: "Controlling the §YCapital§! province of every warring nation whose capital is in the §YItaly§! region will grant us the following:\n§G+25§! of each Monarch Power.\n§G+25§! Ducats.\n§YThis effect will only happen once for each capital during the Italian Wars.§!"
+ EE_FRA_capitals_occupied_tt: "Has §YOccupied§! the capital province of all countries that are at war with France and follow the §YLatin§! culture group."
+ EE_FRA_affirmation_reward_1: "Gain 1 §YArmy Tradition§! for every 2,000 units we killed during §YThe Italian Wars§! for a maximum of 50 Army Tradition for 100,000 kills (§Y[Root.EE_units_killed_counter.GetValue]§!/§Y100000§!).\n"
+ EE_FRA_affirmation_reward_2: "Gain §G1§! §YNavy Tradition§! for every §Y2§! ships we sunk during §YThe Italian Wars§! for a maximum of §Y25§! Naval Tradition for §Y50§! sunken ships (§Y[Root.EE_ships_killed_counter.GetValue]§!/§Y50§!).\n"
+ EE_FRA_if_100K: "If during §YThe Italian Wars§! we kill §Y100.000 Soldiers§!:"
+ EE_FRA_naval_won_count_tt: "Has won at least 5 §YNaval Engagements§! in the Mediterranean sea (§Y[Root.EE_naval_won.GetValue]§!/§Y5§!)."
+ EE_FRA_if_less_5_casualties: "If §MFrench Naval Casualties§! is less than §Y5§!:"
+ EE_FRA_killed_20_ships_tt: "France has destroyed at least §Y20§! ships from the start of the §YItalian Wars§! (§Y[Root.EE_ships_killed_counter.GetValue]§!/§Y20§!)."
+ EE_FRA_if_prelude_supremacy: "If §YPrelude to Naval Supremacy§! is §MActive§!:"
+ EE_FRA_if_ahead_mil: "If ahead in §MMilitary Technology§!:"
+ EE_FRA_buff_monetary_policy: "\n§YControl over Monetary Policy§! Burghers Privilege will no longer increase §YAll Power Cost§!.\n"
+ EE_FRA_upgrade_CoT: "\nUpgrading §YCenters of Trade§! that are located in the §YGenoa§! trade node will grant §G+1§! Mercantilism and §G+1§! Base Production.\n§YThis effect will be removed if we downgrade the Centers of Trade§!.\n"
+ EE_FRA_gain_diplo_tt: "Gain §G+20§! Diplomatic Power for every owned §YCenter of Trade§! in the §YGenoa§! trade node.\n"
+ EE_FRA_genoa_monopoly_tt: "Every owned province that has a §YCenter of Trade§! in the §YGenoa§! trade node:"
+ EE_FRA_if_favor: "If through §MFavors§!:"
+ EE_FRA_other_possibility: "For every §MOther Possibility§!:"
+ EE_FRA_urban_planning_tt: "\nTen provinces owned by France in the §YFrance region§!:"
+ EE_FRA_regulation_serfs_tt: "Unlock §YRegulation of Serfs§! Decision, which will have the following effects once enacted:"
+ EE_FRA_edit_serfs_event: "§YSerfs Attracted to Growing Cities§! will no longer cause §GNegative Side-Effects§! in provinces that they are migrating from."
+ EE_FRA_remove_masterpiece_triggers: "§YSale of Artistic Masterpieces§! will deactivate whenever we have less than §Y75§! Prestige."
+ EE_FRA_commence_universities: "\nWe will commence with the establishment of §YUniversities§! throughout France.\n"
+ EE_FRA_advisor_trigger_tt: "§YRoyal Ordinance on Parish Schools§! will deactivate whenever we do not fulfill one of the following requirements:\n§YAdministrative§! advisor is at least level 3\n§YDiplomatic§! advisor is at least level 3\n§YMilitary§! advisor is at least level 3"
+ EE_FRA_evolve_mercure_galant: "Unlock '§YEvolution of Mercure Galant§!' decision.\n- This decision can be used to grant §YMercure Galant§! new modifiers multiple times whenever we complete the scaling requirements of this decision.\n- The next milestone will be revealed once we fulfill the previous one.\n"
+ EE_FRA_if_production_leader: "If we are the §YProduction Leader§! of §YPaper§!:"
+ EE_FRA_start_industrialization_events_Tt: "§YIndustrialization§! events will start happening.\n"
+ EE_FRA_eco_buildings_buff_tt: "§YEconomic§! buildings from now on will recieve the following extra modifiers:\nTax Buildings: §G+25%§! Local Tax Modifier.\nProduction Buildings: §G+25%§! Local Production Efficiency.\nTrade Buildings: §G+25%§! Provincial Trade Power.\n"
+ EE_FRA_proto_industrialization_tt: "Our §Y10 Most Developed§! provinces that have a §YManufactory§! will gain the following:"
+ EE_FRA_if_aristo: "\nIf §YNoble Connections§! in Aristocratic Idea Group is §MAdopted§!:"
+ EE_FRA_buff_cultural_events_tt: "The outcome of §YLast Jousting Tournament§!, §YNational Epic§!, and §YEndorse Renaissance Philosophy§! will be improved."
+ EE_FRA_unlock_merge_marechaussee_Connetablie_tt: "\nUnlock '§YMerge the Marechaussee and Connetablie§!' decision."
+ EE_FRA_won_50_battles: "Has won at least 50 §YBattles§! (§Y[Root.num_of_won_battles.GetValue]§!/§Y50§!)."
+ EE_FRA_ducats_fur_tt: "Gain §G30§! ducats per province owned by §YFrance§! or its non-tributary subjects that produce §YFur§! for a maximum of §G600§! ducats.\n"
+ EE_FRA_additional_workshop_bonus_tt: "Building §YProduction§! buildings inside provinces that produce §YFur§! in §YNorth America§!:"
+ EE_FRA_upgrade_CoT_english_channel_tt: "Upgrading §YCenters of Trade§! located in the §YEnglish Channel§! will increase the Base Production of the province by §G+2§!.\n§YThe Base Production will be removed if we downgrade the Center of Trade.§!\n"
+ EE_FRA_spy_network_trigger_tt: "Has at least §Y35%§! Spy Network on the §YOverlord§! of any country that owns a province in the §YLow Countries§! region."
+ EE_FRA_if_espionage: "If through §MEspionage§!:"
+ EE_FRA_disable_dutch_revolt_tt: "Disable the '§YDutch Revolts§!' Disaster."
+ EE_FRA_add_lib_desire_tt: "Every subject country that is not a subject of §YFrance§! and has a capital in the §YLow Countries§! region gains §Y20%§! Liberty Desire.\n" 
+ EE_FRA_agitation_actions_tt: "Gain the ability to support §YDutch Independence§! by funding §YAgitation Actions§!.\n"
+ EE_FRA_france_funded_agitation: "This action has been funded by §YFrance§! therefore it has §GNo Cost§!."
+ EE_FRA_subdue_cities_tt: "French sponsorship of our Agitation will remove the cost of §YSubdue the City§! for one time only.\n§YThis action might become free if France ever decides to sponsor our Agitation§!."
+ EE_FRA_agitate_liberty_tt: "French sponsorship of our Agitation will remove the cost of §YAgitate for Liberty§! for one time only.\n§YThis action might become free if France ever decides to sponsor our Agitation§!"
+ EE_FRA_arm_militia_tt: "French sponsorship of our Agitation will remove the cost of §YArm the Militia§! for one time only.\n§YThis action might become free if France ever decides to sponsor our Agitation§!."
+ EE_FRA_provide_funds_tt: "French sponsorship of our Agitation will remove the cost of §YProvide Funds§! for one time only.\n§YThis action might become free if France ever decides to sponsor our Agitation§!."
+ EE_FRA_cloth_provinces: "All provinces in the §YLow Countries§! region that produce §YCloth§!:\nHas a §YWorkshop§! or better."
+ EE_FRA_unlock_Aula_magna: "Unlock the §YAula Magna§! monument.\n"
+ EE_FRA_upgrade_CoT_2: "\nEvery province owned by France in the §YLow Countries§! region that has a §MCenter of Trade§!:"
+ EE_FRA_AE_threshhold: "Nations that are §YGuaranteed§! by us will require §G75§! Aggressive Expansion instead of §Y50§! to join a §YCoalition§!."
+ EE_FRA_acadia_reward_tt: "Random Province Owned by §YFrance§! or its non-tributary subject in the §YQuebec§! Area will get the following:"
+ EE_FRA_two_neighbor_provinces_tt: "\nTwo neighboring provinces in the §YQuebec§! area that are not §YColonized§!:"
+ EE_FRA_event_insight_44: "\n§GEvent Insight:§!\nWe will have the opportunity to decide on how to deal with the §YHoly Roman Empire§!:\n"
+ EE_FRA_if_diplomacy: "If through §MDiplomacy§!:"
+ EE_FRA_unlock_diplomatic_missions_tt: "Unlock missions that will help us in securing the §YImperial Crown§! to ourselves.\n"
+ EE_FRA_if_dismantle: "If through §MDismantlement§!:"
+ EE_FRA_unlock_conquest_missions_tt: "Unlock missions that will help us in §YDismantling§! the Holy Roman Empire.\n"
+ EE_FRA_overshadowing_empire_happened: "The requirements will be unlocked once §YOvershadowing an Empire§! happens."
+ EE_FRA_reward_after_overshadowing_empire_happened: "The rewards will be unlocked once §YOvershadowing an Empire§! happens."
+ EE_FRA_rest_rewards_tt: "Many events regarding the spread of the §YRenaissance in France§! will now start happening."
+ EE_FRA_distribute_tt: "\nDistribute §G10§! Production Development in §YIron§! Provinces located in the §YFrench§! Region.\n"
+ EE_FRA_french_steelmaking_technique_tt: "Our §Y3§! Most Developed Provinces that produce §MIron§! will get the following:"
+ EE_FRA_poor_uniforms_tt: "§YPoor Uniforms§! will never happen.\n"
+ EE_FRA_la_mode_tt: "The Most Developed Province that fulfills the §YRequirements§! will get the following::"
+ EE_FRA_unlock_mercantilist_advisor_tt: "\nUnlock §YMercantilist Reformer§! Advisor Type, which will grant the following bonuses:\n[build_cost]: §G-10.0%§!\n[mercantilism_cost] per Advisor Level: §G-5.0%§!\n"
+ EE_FRA_buff_protect_state_tt: "If we have finished the §YTrade§! Idea Group:"
+ EE_FRA_new_state_edict: "§YPromote Trade§! State Edict becomes available."
+ EE_FRA_1st_reward: "Upgrade §YPromote Mercantilist Faction§! Privilege of the Bourgeoise, making it no longer give §Y-5.0%§! Loyalty Equilibrium and remove its Absolutism penalty."
+ EE_FRA_2nd_reward: "Upgrade §YPromote Mercantilist Faction§! Privilege of the Bourgeoise by increasing the Development Cost granted at §Y40§! Mercantilism to §G-10.0%§!"
+ EE_FRA_3rd_reward: "Upgrade §YPromote Mercantilist Faction§! Privilege of the Bourgeoise by making it additionally grant §G-25.0%§! Promote Mercantilism Cost."
+ EE_FRA_buff_consiel_haut: "§YConsiel d'en Haut§! will grant the following additional modifier for 5 years:\nEstate Interaction Cooldown Modifier: §G-25%§!"
+ EE_FRA_buff_consiel_finances: "§YConsiel Royal des Finances§! will grant the following additional effect:"
+ EE_FRA_buff_consiel_prive: "§YConsiel Prive§! will grant the following additional effect:\nGain §G+1§! Stability or §G50§! Administrative Power"
+ EE_FRA_if_adm_finished: "If we have completed the §MAdministrative§! idea group:"
+ EE_FRA_buff_conseil_roi: "§YConsolidated Power§! Government Mechanic will the following bonuses when above §Y50§!:\n[advisor_cost]: §G-10.0%§!\n[yearly_absolutism]: §G+1.00§!\n"
+ EE_FRA_lose_autonomy_tt: "Every owned province loses §G-10§! Autonomy.\nGain §G+2.5%§! Crownlands."
+ grand_explorer: "Grand Explorer"
+ desc_grand_explorer: ""
+ grand_explorer_die_desc: ""
+ EE_FRA_quality_ivory_buff_tt: "From now on '§YQuality Ivory§!' will grant us 1 year's worth of §YIvory§! production income.\n"
+ EE_FRA_guinea_region_tt: "Every current and future Coastal Province in the §YGuinea§! Region will gain §G25%§! chance to change their trade good to §YIvory§! when they are fully colonized, as well as the following:"
+ EE_FRA_Malagasy: "Malagasy"
+ EE_FRA_Malagasy: "Madagascan"
+ EE_FRA_malagasy_subject: "as long as §YMalagasy§! is a protectorate"
+ EE_FRA_cede_provinces_tt: "Cede every province owned by France or its non-tributary subjects in Madagascar to §Y[MIR.GetName]§!.\n"
+ EE_FRA_distribute_production_tt: "Distribute §G10§! Production Development in §YBetsimasaraka§!, §YMadagascar Highlands§!, §YSouthern Madagascar§! and §YSakalava§! areas."
+ EE_FRA_settle_south_america_tt: "Our Colonial Subject in §YSouth America§! will gain the following:"
+ EE_FRA_pearl_antilles_tt: "Our Colonial Subject in the §YCaribbean§! region will get the following:"
+ fra_company_west_TT: "§Y[Root.GetName]§! is the strongest trade power in at least 2 trade nodes that are present in §GNorth America§!."
+ EE_FRA_management_colonial_affairs_tt: "Every §YColonial§! nation of France whose capital is in §YNorth America§! will gain the following::"
+ EE_FRA_options_tt: "§YThe following event will have 1 option if we have fulfilled one requirement of this mission.§!"
+ EE_FRA_perma_claims_tt: "Gain permanent claims over every province owned by England or Great Britain in the §YBritish Isles§!.\n"
+ during_transport_invasion: "during The Transport Invasion"
+ EE_FRA_unlock_tower_london: "Unlock §YTower of London§! monument.\n"
+ EE_FRA_if_solo: "If we decided to §MInvade Alone§!:"
+ EE_FRA_if_cooperation: "If we decided to §MCooperate§!:"
+ EE_FRA_distribute_english_tt: "Distribute §Y20§! base production in §YEnglish§! culture group provinces owned by France.\n"
+ EE_FRA_lose_10_auto_devastation_tt: "\nEvery owned province that follows the §YEnglish§! culture:"
+ EE_FRA_unlock_french_assimilation_decision: "Unlock §YFrench Assimilation§! decision.\n"
+ EE_FRA_english_conversion_reward: "Whenever we convert every §YEnglish§! culture group province in the §YBritish Isles§!:"
+ EE_FRA_convert_french_tt: "English culture group provinces in the §YBritish Isles§! will periodically get converted to §YAnglois§!. We can pause this process by retaking the decision.\n"
+ EE_FRA_forfeit_provinces_tt: "We will forfeit our ownership of every province we own in the British Isles to §YScotland§!.\n\nOur show of good faith will play a major role in convincing §YScotland§! to merge their crown into ours in the future."
+ EE_FRA_no_slot_tt: "This union will not have a §YDiplomatic Relations Upkeep§!.\n"
+ EE_FRA_swiss_mercs_no_professionalism_tt: "Recruiting §YFree Swiss Guard§! and §YReislaufer§! mercenary companies will not cost §JArmy Professionalism§!.\n"
+ EE_FRA_unlock_wooden_wall: "Unlock §YWooden Wall§! naval doctrine."
+ EE_FRA_get_HYW_tree: "Unlock a new §YMission Tree§! that will guide us through the Hundred Years War.\n"
+ EE_FRA_galere_extraordinaire: "Galere Extraordinaire"
+ ME_flagship_EE_FRA_galere_extraordinaire_tt: "The §YFlaghsip§! will get §YGalere Extraordinaire§! Modification."
+ EE_FRA_grand_explorer_trait_tt: "This Explorer will have the §YGrand Explorer§! trait giving the following modifier:\nColonial Range: §G+15.0%§!"
+ EE_FRA_unlock_revocable_title_priv: "We will unlock the rest of the §YFrench Model State§! Interactions."
+ EE_FRA_seize_land_tt: "§YSeize Land§! Estate Interaction will only reduce §G10§! loyalty.\n"
+ EE_FRA_if_musketeer_reform: "If we picked the §MMusketeer of the Guard§! Government Reform:"
+ EE_FRA_if_gendarmes_reform: "If we pickced the  §MGendarmes§! Government Reform:"
+ EE_FRA_buff_east_india_company_privilege_tt: "§YEast India Company§! Settlers privilege will grant the following additional modifier:\nGlobal Ship Trade Power Modifier: §G+10%§!\n"
+ EE_FRA_no_country_200_dev_india: "No country other than France has more than 200 development in §YIndia§!."
+ EE_FRA_indian_expansion_tt: "Adding provinces located in the §YIndia§! to §YTrade Companies§! will grant these provinces the following bonuses:"
+ until_TC_removed: "until Trade Company is removed" 
+ EE_FRA_global_expansion_tt: "Unlock the '§YGlobal Expansion§!' Casus Belli against countries whose capital is located in §YAsia§! or §YOceania§!.\n"
+ EE_FRA_if_1_10_monument: "If §YFrance§! or its non-tributary subjects own from 1 to 10 provinces that have a §MGreat Project§!:"
+ EE_FRA_if_11_25_monument: "If §YFrance§! or its non-tributary subjects own from 11 to 25 provinces that have a §MGreat Project§!:"
+ EE_FRA_if_26_monument: "If §YFrance§! or its non-tributary subjects own more than 26 provinces that have a §MGreat Project§!:"
+ EE_FRA_buff_colonial_governors: "§YColonial Governors§! [Root.GetSettlersName] Privilege will from now on grant the following additional modifier scaled with §YLoyalty§!:\nReduced Liberty Desire on Other Continent: §G-25.0%§!\n"
+ EE_FRA_overseas_subject: "France has at least 5 §YOverseas§! subjects."
+ fra_has_circumnavigated_the_globe: "Has §YCircumnavigated the Globe§!."
+ FRA_DISCOVERED_30_PROVINCES_IN_EVERY_CONTINENT: "Has discovered at least §Y30§! provinces in every continent."
+ EE_FRA_if_mint_trader_tt: "If we have a §YTreasurer§! and a §YTrader§! Advisors §YEmployed§!:"
+ EE_FRA_radical_reform: "We will not be forced to fire any advisor."
+ EE_FRA_hidden_conditions: "The conditions to unlock this mission are hidden."
+ EE_FRA_hidden_rewards: "The rewards of this mission are hidden."
+ EE_FRA_every_owned_province_tt: "Every owned province in the §YMaghreb§! region:"
+ EE_FRA_on_investment_tt: "Purchasing §YTrade Company Investments§! in the §YMaghreb§! region will increase the Base Production by §G+1§!."
+ EE_FRA_rein_appanage_tt: "Has used §YRein In Appanage§! Peace Offer on every rebellious §YAppanage§!.\nThis will result in a §GPostitive§! ending for the §YMad Wars§! disaster."
+ EE_FRA_rein_appanage_tt_1: "Has defeated §YBurgundy§! and §YBrittany§! in §YWar of the Public Weal§! if they ever joined.\nThis is required for a §GPostitive§! ending for the §YMad Wars§! disaster."
+ EE_FRA_5_years_since_war_weal_tt: "- Has lost §YWar of the Public Weal§! or five years have passed since the start of §YThe Mad Wars§! and §YWar of the Public Weal§! is still ongoing.\nThis will result in a §RNegative§! ending for the §YMad Wars§! disaster.\n\nDefeating §YBrittany§! and §YBurgundy§! while also §YReining the Appanages§! will subjugate those two nations if they ever join the §YWar of the Public Weal§!."
+ EE_FRA_winning_war_tt: "Winning §YWar of the Public Weal§! by using the §YRein Appanage§! Peace Treaty will force every rebellious §YAppanage§! to integrate their lands into the French royal domain once the §YMad Wars§! disaster is over.\n"
+ EE_FRA_add_appanage_lib_Desire_tt: "Every §YAppanage§! will declare its independence and ally each other."
+ EE_FRA_unlock_rein_appanage_tt: "\nUnlock §YRein Appanage§! Peace Treaty.\n"
+ EE_FRA_appanages_joining_war_tt: "§REvery §YAppanage§! will join the war against France.§!\n"
+ EE_FRA_integrate_appanage: "All §YAppanages§! will be integrated into the French royal domain."
+ EE_FRA_appanage_fief_tt: "Every Appanage will become a §YFeudal Fief§!."
+ EE_FRA_fief_gain_lib_desire: "Every §YFeudal Fief§! gains §R+10§! Liberty Desire.\n"
+ EE_FRA_CANNOT_ANNEX: "We cannot annex the §YFeudal Fief§! due to not fulfilling one of the following requirements:\nHas at least 50 §YAdministartive Power§!.\nHas at least 1 §YStability§!.\n§YSeized Lands§! is at least 1 (§Y[Root.EE_FRA_seize_crownlands_counter_tt.GetValue]§!)"
+ EE_FRA_seize_crownlands_counter_tt: "§YSeized Lands§! is at least 1 (§Y[Root.EE_FRA_seize_crownlands_counter_tt.GetValue]§!)"
+ EE_FRA_change_crownlands_Counter: "Change §YSeized Lands§! value by §R-1§!\n"
+ EE_FRA_fuedal_fief_lib_desire_tt: "Every §YFeudal Fief§! gains §R+10%§! Liberty Desire.\nSeizing Crownlands will increase our §YSeized Lands§! value by 1."
+ EE_FRA_successive_emperorships: "§MSuccessive Emperorships§! will grant the following:"
+ EE_FRA_Imperial_Border_CB_tt: "Gain the following §MCasus Belli§! against every country who is a member of the Holy Roman Empire and borders §YFrance§!:"
+ EE_FRA_12_free_city: "At least 12 countries are a §YFree City§!."
+ EE_FRA_new_imperial_interactions_tt: "Gain various new §MImperial Interactions§!:"
+ EE_FRA_interaction_1: "When we release §YImperial Princes§!:"
+ EE_FRA_interaction_1_desc: "§YSuccessive releases extend 'Expand the Imperial Line' by 5 years.§!\n"
+ EE_FRA_interaction_2: "When we convert §YImperial Princes§! to the Empire's faith:"
+ EE_FRA_interaction_2_desc: "§YSuccessive conversions extend 'Imperial Religion' by 5 years.§!\n"
+ EE_FRA_when_revoke_privilege_tt: "Whenever we pass §MRenovatio Imperii§!:"
+ as_long_slack_recruitment: "as long as we are slackening recruitment"
+ EE_FRA_OPT1_rewards: "Every country that has rivaled §YFrance§! except the Emperor will remove their rivalry.\n\nRemove rivalry with every rivaled country except the §YEmperor§!.\n\nThe next 2 countries that we ally with who aren't allied with the §YEmperor§! will get a choice to rival the Emperor.\n\nBreak all of our §YAlliances§!."
+ EE_FRA_OPT2_rewards: "If any §YAlly§! has less than 100 favor, Gain §G+10§! favors with them.\n\nIf any §YAlly§! has 100 favor, Gain §G+100§! Diplomatic Power per ally that has 100 favor."
+ EE_FRA_killed_75k_troops_tt: "France has killed at least §Y75,000§! units from the start of §YDissolution of the Empire§! (§Y[Root.EE_hre_units_killed_counter.GetValue]§!/§Y75000§!)."
+ EE_FRA_unlock_iron_crowned_personality: "Unlock the §YIron-Crowned§! Ruler Personality."
+ EE_FRA_imperial_eminence: "Defeating countries who are §YEmpire§! rank will grant us the following:"
+ EE_FRA_extend_modifier_tt: "§YDefeating Great Powers in wars while they are the main target will extend French Supremacy in Europe by 5 years.§!"
+ ME_FRA_completed_fra_own_game: "Completed Mission §YTheir Own Game§! (This mission will be unlocked in the §YItalian Wars§! Incident Tree)."
+ ME_FRA_accepted_dutch_cultures_tt: "Either §YDutch§!, §YWalloon§! or §YFlemish§! culture is an accepted culture in §YFrance§!."
+ ME_FRA_dutch_areas_tt: "All provinces in Flanders, South Brabant, North Brabant and Holland areas:\n        Owned by §YFrance§! or its non-Tributary Subjects."
+ ME_FRA_buff_decentralized_reform: "\nAppend §YDecentralized Bureacracy§! with the following:\n\n§YReform Modifiers§!:\nMax Promoted Cultures: §G+2§!\nMinimum Autonomy in Territories: §G-5.0%§!\nAll Estates' Loyalty Equilibrium: §G+5.0%§!\nGoverning Capacity: §G+100§!\nGoverning Capacity Modifier: §G+5.0%§!"
+ ME_FRA_cooldown_finished: "5 years have passed since we last took §YPause French Assimilation§!."
+ ME_FRA_assimilation_cooldown: "Assimilation Cooldown"
+ ME_FRA_empty_line_tt: " "
+ ME_FRA_SCO_ally_tt: "If §YScotland§! is our §MAlly§!:"
+ ME_FRA_SCO_subject_tt: "If §YScotland§! is our §MSubject§!:"
+ ME_FRA_break_SCO_alliance: "Break alliance with §YScotland§!."
+ ME_FRA_break_alliance_FRA: "Break alliance with §YFrance§!."
+ ME_FRA_scotland_event_tt: "(Scotland):"
+ ME_FRA_centraliziation: "§YCentralize State§! will refund §G25§! Administrative power and §G25§! Government Reform Progress as long as §YAncien Regime§! is enacted.\n"
+ ME_FRA_completed_monopoly_force: "Has completed @FRA §YThe Monopoly of Force§! mission."
+ ME_FRA_capetial_house_anjou_decision_tt: "Unlock §YThe Capetian House of Anjou§! decision."
+ ME_FRA_pro_subject: "If through §MSubjugation§!:"
+ ME_FRA_pro_ally: "If through §MAlliance§!:"
+ ME_FRA_conquest: "If through §MConquest§!:"
+ ME_FRA_if_merc_comp_tt: "If we have employed at least 1 §YMercenary Company§!:"
+ ME_FRA_fire_prosper_event_tt: "If §YProspering Times§! hasn't happened:"
+ ME_FRA_reset_tree: "Our §YMission Tree§! will be reset back to its original form. §YThis action is irreversible.§!"
+ ME_FRA_month_mad_war: "Three months have passed since the declaration of §YWar of the Public Weal§!."
+ EE_FRA_one_rein_appanage_tt: "- Has used §YRein In Appanage§! Peace Offer.\nThis will result in a §GPositive§! ending for the §YMad Wars§!.\n\n"
+ EE_FRA_one_rein_appanage_tt_1: "- Has won §YWar of the Public Weal§! without using the §YRein In Appanage§! Peace Offer.\nThis will result in a §YNeutral§! ending for the §YMad Wars§!.\n\n"
+ EE_FRA_inconclusive_outcome_tt: "\nOur §YAppanages§! will be restored.\n"
+ ME_integrated_celtic_clanns: "Has not integrated the §YCeltic Clanns§! into our realm."
+ ME_FRA_tame_celtic_clanns: "The §YCeltic Clanns§! will get integrated into our realm.\n"
+ ME_FRA_no_age_requirement_tt: "§YMusketeers of the Guard§! will no longer require us to not be in the §YAge of Discovery§! or §YAge of Reformation§!."
+ ME_FRA_claimed_5_provinces: "Is claimed by §YFrance§!."
+ ME_FRA_no_alliance_tt: "Is not allied with §Y[Emperor.GetName]§!, §YCastile§!, §YAragon§!, §YPortugal§!, or §YSpain§!."
+ ME_FRA_exiled_Louis: "Has exiled §YLouis§! in §Yde Valois Crisis§!."
+ ME_FRA_unlock_decision_tt: "Unlock §YReclaim the East§! decision."
+ EE_FRA_no_country_stronger_navy_tt: "No country that follows the Latin culture group has a stronger navy than France."
+ ME_FRA_buff_jesuits_priv_tt: "§YSend Jesuit Missions§! [Root.GetSettlersName] privilege will no longer reduce §Y[Root.GetSettlersName]§! loyalty by §G10%§!."
+ EE_FRA_unlock_permit_colonial_self_rule: "Unlock §YPermit Colonial Self-Rule§! Settlers privilege.\n"
+ ME_FRA_defeating_BUR_BRI: "Defeating §YBrittany§! and §YBurgundy§! while also §YReining the Appanages§! will subjugate those two nations if they ever join the §YWar of the Public Weal§!."
+ FRA_DOUBLE_BRINGING_IN_MARRIAGABLE_WOMEN_EVENT: "The event §YBringing in Marriagable Women§! will fire §GTwice§! as often."
+ FRA_BUFF_SPONSOR_TRADE_COMPANIES: "The §YSponsor Trade Companies§! [Root.GetSettlersName] Privilege will have its bonus §GDoubled§!."
+ FRA_ALL_INDOCHINA_PROVINCES_GAIN_FOLLOWING: "All provinces in §YIndochina§! that are owned by us or subjects will get the following:"
+ FRA_IF_CATHOLIC: "If we are §MCatholic§!:"
+ FRA_IF_NO_CATHOLIC: "If we are NOT §MCatholic§!:"
+ FRA_IF_RELIGIOUS_EQUALITY: "If the Mission was completed with §MHumanist Ideas§!:"
+ FRA_IF_CONVERSION: "If the Mission was completed by §MConverting Provinces§!:"
+ FRA_UNLOCK_DRAGONNANDES_PRIVILEGE_FOR_CLERGY: "Unlocks the §YLe Dragonnandes§! [Root.GetClergyName] Privilege, which will grant the following bonuses scaling with §YEstate Influence§!:\n[global_missionary_strength]: §G+3.00%§!\n[tolerance_own]: §G+2.00§!"
+ FRA_HRE_INSIGHT: "We will choose which §YBranching Path§! we'll follow."
+ FRA_IF_GOOD_RELATIONS_ELECTORS: "If the Mission was completed with §MElector Relationship§!:"
+ FRA_IF_MILITARY: "If the Mission was completed §MMilitarily§!:"
+ FRA_IF_BOTH: "If both §Mrequirements§! are met:"
+ FRA_TWO_STRONGEST_NATIVE_AMERICAN_CAPITALS_WILL_GAIN_FOLLOWING: "The two strongest §YNatives§! in §YNorth America§! that have at least §G125§! Opinion with us will gain the following:"
+ FRA_BENEFITS_OF_FUR_TRADE: "The §YCapital Province§! gain a §YFur Trade Outpost§!\n\nAs long as we maintain §G125§! Opinion with them, we will gain §G40§! Trade Power in their Capital Trade Node, and they will gain §G-10.0%§! [technology_cost] and §G+20.0%§! [global_trade_goods_size_modifier]."
+ FRA_IF_SCOTTISH_PRESENCE: "If §YScotland§! has at least §Y20§! provinces in the §YBritish Isles§! whilst they're §YAllied§! to us:"
+ FRA_INFLUX_OF_FRENCH_IDEAS_WILL_GIVE_MIL_BUFFS: "The modifier §YInflux of French Ideas§! from the §YIntegration of Britain§! Mission will now give §G+5.0%§! [discipline]."
+ ME_FRA_disable_opportunity: "The §YItalian Wars§! opportunity will now be disabled."
+ EE_FRA_MODIFY_WILL_OF_GOD_MODIFIER: "Modify §YThe Will of God§! Modifier by:\n[max_absolutism]: §G+5.00§!\n[max_absolutism_effect]: §G+5.00%§!"
+ 
+ # Events:
+ ME_France_Events.1.T: "The Praguerie - de Valois Crisis"
+ ME_France_Events.1.D: "It is no secret that many of [Root.Monarch.GetName] reforms are hated by the nobility. One such reform gave the king an aid of 100,000 francs and demanded royal nominations to officerships in the army. The nobility of our realm, in reaction to this reform, have staged an uprising and have won [Root.Heir.GetName] support by promising him the throne."
+ ME_France_Events.1.OPT1: "Those backstabbing worms!"
+
+ ME_France_Events.2.T: "Challenging Authority - de Valois Crisis"
+ ME_France_Events.2.D: "The rebellious attitude of [Root.Heir.GetName] knows no bounds! In a recent visit to the Archdiocese of Paris, [Root.Heir.GetName] went to greet the Archbishop in a way not fit for any royal. This has caused an uproar in the Archdiocese and word has arrived that the Papacy is furious from our regent's actions."
+ ME_France_Events.2.OPT1: "He was merely showing the Archbishop his 'special greeting'."
+ ME_France_Events.2.OPT2: "A larger donation would be a great apology."
+
+ ME_France_Events.3.T: "Fiery Quarrels - de Valois Crisis"
+ ME_France_Events.3.D: "[Root.Monarch.GetName] is a man of intricate taste when it comes to women. Recently, many in the royal court have started feeling the presence of Agnes Sorel whose company allegedly brought [Root.Monarch.GetName] out of protracted depression, yet Agnes Sorel is not the legal spouse of [Root.Monarch.GetName]. [Root.Heir.GetName] objectionable scheming is now causing him to show disrespectful behavior towards the chief mistress and is testing the patience of [Root.Monarch.GetName]."
+ ME_France_Events.3.OPT1: "He should apologize to her immediately."
+ ME_France_Events.3.OPT2: "We will not upset the Dauphin for a mere common wench."
+
+ ME_France_Events.4.T: "A Scandalous Marriage - de Valois Crisis "
+ ME_France_Events.4.D: "[Root.Heir.GetName] who has been widowed for many years has finally decided to make a move. He secured a strategic marriage with an Italian duchess at a time when seeds of French involvement in Italian affairs were being planted. This entire marriage however happened without the consent of [Root.Monarch.GetName] which can be seen as an insult."
+ ME_France_Events.4.OPT1: "This marriage might be beneficial to the future of France."
+ ME_France_Events.4.OPT2: "His rebellious nature knows no bounds!"
+
+ ME_France_Events.5.T: "Means to an End - de Valois Crisis"
+ ME_France_Events.5.D: "[Root.Monarch.GetName] has had enough of [Root.Heir.GetName] schemes and has decided to summon [Root.Heir.GetName]. With no surprise, [Root.Heir.GetName] has rejected to appear in front of [Root.Monarch.GetName] which has caused an uproar in the royal court. It is up to [Root.Monarch.GetName] to decide [Root.Heir.GetName] fate."
+ ME_France_Events.5.OPT1: "He is still my son..."
+ ME_France_Events.5.OPT2: "I must give in to his demands."
+ ME_France_Events.5.OPT3: "Banish him from the court."
+
+ ME_France_Events.6.T: "The Retrial of Joan of Arc"
+ ME_France_Events.6.D: "The mother of Joan of Arc, with the support of [Root.GetName], has petitioned His Holiness to order an inquiry on her daughter's trial. An inquisition meticulously examined the 1431 trial and after numerous hearings cleared her of all charges. Joan of Arc is now considered a martyr of the Catholic Church and her judge has been declared a heretic."
+ ME_France_Events.6.OPT1: "[Root.Monarch.GetName] is the Church's firstborn."
+
+ ME_France_Events.7.T: "The Fate of our Faith"
+ ME_France_Events.7.D: "God tests his faithful mysterious ways. His divine nature is absolute in front of the human mind and comprehending his means remains a mystery to this day. France has finally reached the end of its divine trial and our faith is now in front of a crossroad."
+ ME_France_Events.7.OPT1: "We will stay faithful to the one true faith!"
+ ME_France_Events.7.OPT2: "Christ accepted everyone and tolerated all!"
+
+ ME_France_Events.8.T: "Onwards to Victory"
+ ME_France_Events.8.D: "The English still linger on French soil disregarding all past treaties. We must use the sword where the pen has failed!"
+ ME_France_Events.8.OPT1: "The Europa Expanded devs will surely help France in kicking out the English."
+ ME_France_Events.8.OPT2: "I do not need any help."
+
+ ME_France_Events.9.T: "Union of Brittany and France"
+ ME_France_Events.9.D: "Due to our misfortunes during the League of Public Weal, French authority in our realm has seen a sharp increase. Consolidated French power in Brittany has now reached a stage where France has the authority to take decisive actions that can shape the future of Brittany unless we can free ourselves from their clutches."
+ ME_France_Events.9.OPT1: "We must take some form of action to limit French meddling."
+
+ ME_France_Events.10.T: "The Surrender of Maine"
+ ME_France_Events.10.D: "Due to our misfortunes during the League of Public Weal, French authority in our realm has seen a sharp increase. Consolidated French power in Brittany has now reached a stage where France has the authority to take decisive actions that can shape the future of Brittany unless we can free ourselves from their clutches."
+ ME_France_Events.10.OPT1: "We must take some form of action to limit French meddling."
+
+ ME_France_Events.11.T: "Resistance to Order"
+ ME_France_Events.11.D: "Our efforts in creating an army employed by the state and loyal only to the state has seen heavy criticism by the nobility of our nation. The nobles believe that the state is adopting these measures to curb their rights and powers."
+ ME_France_Events.11.OPT1: "We shouldn't harm our relations with the nobles of our realm."
+ ME_France_Events.11.OPT2: "These nobles must learn some manners."
+
+ ME_France_Events.12.T: "Increase in Demands"
+ ME_France_Events.12.D: "The French domain isn't solely made up of the Crown of France. Our current war against the English is also being supported by our subjects who are unpleasant with this ongoing war. Their discomfort has reached a point where these subjects have started increasing their demands as compensation for their participation in a war that they believe doesn't concern them."
+ ME_France_Events.12.OPT1: "Grant them whatever they desire."
+ ME_France_Events.12.OPT2: "Our wars concern every subject under the French crown."
+
+ ME_France_Events.13.T: "Coastal Blockades"
+ ME_France_Events.13.D: "Our war with the English has many economical backlashes. Due to the activity of the English navy around the French coast, commercial activities have started experiencing a sharp decline."
+ ME_France_Events.13.OPT1: "Curse them."
+
+ ME_France_Events.14.T: "Supporting Our Cause"
+ ME_France_Events.14.D: "Just and rightful are common words that can be heard all over France nowadays. Many of our subjects are in agreement with our methods and are supporting us till the end."
+ ME_France_Events.14.OPT1: "A great news."
+
+ ME_France_Events.15.T: "The Poor Man's War"
+ ME_France_Events.15.D: "Our current war with the English has been an ugly affair. Due to its strain on the economy, we have been forced to use many unorthodox methods to secure funds to continue this war and the peasant class that lives in our nation has had enough. They believe that the real war they are fighting isn't against England but against poverty itself."
+ ME_France_Events.15.OPT1: "We should ease the burden of war on the peasantry."
+ ME_France_Events.15.OPT2: "Everyone is obliged to support the war effort one way or another."
+
+ ME_France_Events.16.T: "Hidden event"
+ ME_France_Events.16.D: "Hidden event"
+ ME_France_Events.16.OPT1: "Hidden event"
+
+ ME_France_Events.17.T: "An Eternal Dispute"
+ ME_France_Events.17.D: "Our efforts in driving the English out of France have not been going according to plan. The English still defy French resistance and continue to grow like mushrooms in the dark corners of our realms. Many have started accepting the fact that English presence in France will never end, they are here to stay."
+ ME_France_Events.17.OPT1: "Such a shame."
+
+ ME_France_Events.18.T: "Normans on the French Throne"
+ ME_France_Events.18.D: "France has fallen. The English have successfully defeated our armies in open battle and are now triumphantly marching on to claim the Couronne de France. This day will go down in the annals of history as a day of mourning and sadness."
+ ME_France_Events.18.OPT1: "We should welcome our new masters."
+
+ ME_France_Events.19.T: "A Festa Della Salute to Remember"
+ ME_France_Events.19.D: "Our occupation of Venezia has presented us with the opportunity to weaken a major maritime power in the Mediterranean Sea. Venezia houses one of the strongest naval fleets that ever sailed the Mediterranean Sea whose dockyards and naval bases are at our mercy. We can loot the Arsenale of its belongings and move them to Toulon which is safer to defend, or take our time and build the Arsenale yet risk it to fall into enemy hands."
+ ME_France_Events.19.OPT1: "The Toulon Arsenal will be the finest naval base in the Mediterranean Sea."
+ ME_France_Events.19.OPT2: "Let us return the Venetian Arsenal to its former glory."
+
+ ME_France_Events.20.T: "Normandy Reclaimed"
+ ME_France_Events.20.D: "The state of Normandy, a region full of history, be it the home of William of Normandy (also known as William the Conqueror) or the site where St. Joan of Arc martyred has come back into our fold. With this fine addition, we have asserted French control back into northern France."
+ ME_France_Events.20.OPT1: "Glory to France!"
+
+ ME_France_Events.21.T: "The Southern Provinces"
+ ME_France_Events.21.D: "The provinces of Bordeaux and Labourd are back in our hands. With the reclamation of these two provinces, we have strengthened our southern frontier against any Iberian invasion that might happen in the future."
+ ME_France_Events.21.OPT1: "Glory to France!"
+
+ ME_France_Events.22.T: "The Prisoner of the Vatican"
+ ME_France_Events.22.D: "Our conquest of Roma ended the millennium-old temporal rule of the popes over Central Italy. With Papal authority waning due to this incident, the Pope has imprisoned himself in Vatican Hill refusing all of our proposals to amend our relationship with him. With his strong influence amongst global leaders and our Catholic subjects, many of our advisors have started urging us to solve this matter one way or another."
+ ME_France_Events.22.OPT1: "Grant the Pope exclusive honors and privileges."
+ ME_France_Events.22.OPT2: "We should preserve our relationship with the Holy Father."
+ ME_France_Events.22.OPT3: "Rome does not concern us."
+
+ ME_France_Events.23.T: "Renewed Fervor"
+ ME_France_Events.23.D: "The Holy Land is no longer the focus of the West and the subsequent decline of Crusader movements can be credited to many causes, yet our newfound footing in Constantinople and Jerusalem has sent sparks all over the Christian world. Our recovery of these two mighty cities has awoken many devout Christians from their slumber and cheers demanding the renewal of crusading movements can be heard all over Europe."
+ ME_France_Events.23.OPT1: "The Holy Land is the patrimony of Christ and its recovery will be on behalf of God."
+
+ ME_France_Events.24.T: "Renewed Fervor"
+ ME_France_Events.24.D: "'Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.'"
+ ME_France_Events.24.OPT1: "Thy will be done!"
+
+ ME_France_Events.25.T: "Herding the Stray and Lost"
+ ME_France_Events.25.D: "'So we, because of our sinful lusts, were as wandering sheep, treading the path which led to perdition, without a thought of God or heaven, or the salvation of our souls. Wherefore Christ came down from heaven to seek us, and to lead us back from the way of destruction to that which leadeth to eternal life. So we read, all we like sheep have gone astray; we have turned everyone to his way; and the Lord hath laid on Him the iniquity of us all, and again, ye were as sheep going astray; but are now returned unto the Shepherd and Bishop of your souls.'"
+ ME_France_Events.25.OPT1: "There are more who have been lost and went astray that need to be found and saved!"
+
+ ME_France_Events.26.T: "Union of Burgundy and France"
+ ME_France_Events.26.D: "Due to our misfortunes during the League of Public Weal, French authority in our realm has seen a sharp increase. Consolidated French power in Burgundy has now reached a stage where France has the authority to take decisive actions that can shape the future of Burgundy unless we can free ourselves from their clutches."
+ ME_France_Events.26.OPT1: "We must take some form of action to limit French meddling."
+
+ ME_France_Events.27.T: "The Unification of the Royal Domain"
+ ME_France_Events.27.D: "In the year of our lord, $YEAR$, the most esteemed [Root.Monarch.GetName], has finally united the French region under the banner of the fleur-de-lis. A nation's humble beginnings, destined for greatness starts here."
+ ME_France_Events.27.OPT1: "Let the flags and banner of France soar high!"
+
+ ME_France_Events.28.T: "A Pretext to War"
+ ME_France_Events.28.D: "War is a tricky matter. It can be an effective method to gain huge amounts of benefits in a short period, yet the lives that are paid as a price for such a method always cause outrage and unrest in the local populace. Yet throughout history, many countries were able to fabricate different casus bellis to justify their cause. Our ambition of expanding into Italy can not be curbed anymore and all we currently need is an explainable pretext for war."
+ ME_France_Events.28.OPT1: "We should push our Anjou claims over the Neapolitan crown."
+ ME_France_Events.28.OPT2: "We can push our Orleans claims over the Milanese crown."
+
+ ME_France_Events.29.T: "An Invitation to Italy"
+ ME_France_Events.29.D: "Rivalry amongst the Italian states is nothing new and the currently present status quo is not a situation liked by many. These Italian powers always allied with foreign forces to tip the scale of balance into their favor and for this exact reason we have been invited into Italy to break this daunting truce."
+ ME_France_Events.29.OPT1: "We accept this invitation."
+ ME_France_Events.29.OPT2: "Interference in the Italian peninsula is not an option at the moment."
+
+ ME_France_Events.30.T: "Hidden"
+ ME_France_Events.30.D: "Hidden"
+ ME_France_Events.30.OPT1: "Hidden"
+
+ ME_France_Events.31.T: "Treaty of Cateau-Cambresis"
+ ME_France_Events.31.D: "Recent victories on Italian soil have proven decisive to tip the outcome of the war to our favor. With an overwhelming victory against the League of Venice achieved, none can argue against our claim of Italian hegemony."
+ ME_France_Events.31.OPT1: "Italy will be ours in due time."
+
+ ME_France_Events.32.T: "A Fall from Greatness"
+ ME_France_Events.32.D: "The war in Italy has been taking its toll on France due to its complexity and difficulty. With morale higher than ever, the League of Venice doesn't look like surrendering any time soon. To cut any further losses from happening, the state has decided to end its Italian aspirations for they have taken their toll on the French people."
+ ME_France_Events.32.OPT1: "Alas it wasn't our time."
+
+ ME_France_Events.33.T: "The League of Venice"
+ ME_France_Events.33.D: "French expedition inside Italian soil has caused an outrage in the Italian communities. Considered an outsider, newfound French power inside the Italian peninsula has become a cause of concern. To combat this trespass, many Italian states have decided to band up and form the League of Venice as a final resort to expel France from Italian soil."
+ ME_France_Events.33.OPT1: "We have to expel France from Italy at all costs!"
+ ME_France_Events.33.OPT2: "We can't oppose the might of France."
+
+ ME_France_Events.34.T: "To Fund a War"
+ ME_France_Events.34.D: "How should we contribute to our ongoing preparations for war?"
+ ME_France_Events.34.OPT1: "Monetary contributions are necessary."
+ ME_France_Events.34.OPT2: "All military focus should be turned towards this campaign."
+
+ ME_France_Events.35.T: "The Enemy of my Enemy..."
+ ME_France_Events.35.D: "The Habsburg power has been growing out of control. With their title as Holy Roman Emperor, they have continued to fund their rivalry against us by using the Imperial princes. But as the old saying goes; "The enemy of my enemy is my friend" and for that reason, we have found an unusual ally in an unusual place. The French have been very receptive to our anti-Austrian cause and have sent a mission to Constantinople to agree on some final terms with us."
+ ME_France_Events.35.OPT1: "Is my friend!"
+ ME_France_Events.35.OPT2: "Cannot be my friend if he is an infidel..."
+
+ ME_France_Events.36.T: "Aix-Marseille University"
+ ME_France_Events.36.D: "A stadium generally recognized by a papal bull issued by Antipope Alexander V, the University of Provence has served to educate the people of western France to a great degree of success. However, with the rise and success of the University of Paris, a great desire to reform universities all around France is seeing a lot of interest. Thus began the work to expand the University of Provence and transform it into the University of Aix-Marseille."
+ ME_France_Events.36.OPT1: "A beacon of knowledge in the south."
+
+ ME_France_Events.37.T: "Nantes University"
+ ME_France_Events.37.D: "A symbol of independence from France, the University of Brittany was established by Francis II of Brittany as an affirmation of independence from all types of French influence. Yet with our current hold on the region, this university is also a part of France and falls under its influence. We should renovate it and change its autonomous identity."
+ ME_France_Events.37.OPT1: "Let the University of Nantes be born!"
+
+ ME_France_Events.38.T: "The University of Reims"
+ ME_France_Events.38.D: "The establishment of universities and educational centers is not a mere task. Religious institutions usually hold a monopoly on all educational institutions to root out heresy and filter all the knowledge that is being educated to the affiliates. As luck would have it word has reached us that the Cardinal of Lorraine met with [PAP.Monarch.GetName] and convinced him to grant a papal bull that permitted the institution of a university in [186.GetName]."
+ ME_France_Events.38.OPT1: "Education is surely a blessing."
+
+ ME_France_Events.39.T: "Agitation Support"
+ ME_France_Events.39.D: "How should we support the Dutch independence movement?"
+ ME_France_Events.39.OPT1: "Support their administration."
+ ME_France_Events.39.OPT2: "Send diplomatic aid."
+ ME_France_Events.39.OPT3: "Send our finest tacticians and strategists."
+ ME_France_Events.39.OPT4: "Send monetary and militaristic aid."
+
+ ME_France_Events.40.T: "French Support"
+ ME_France_Events.40.D: "French envoys have approached us expressing their concerns of ongoing affairs in our desire for independence. They are willing to show support and have provided us with the required resources to carry out our actions."
+ ME_France_Events.40.OPT1: "That is brilliant news!"
+
+ ME_France_Events.41.T: "French Support"
+ ME_France_Events.41.D: "French envoys have approached us expressing their concerns of ongoing affairs in our desire for independence. They are willing to show support and have provided us with the required resources to carry out our actions."
+ ME_France_Events.41.OPT1: "That is brilliant news!"
+
+ ME_France_Events.42.T: "French Support"
+ ME_France_Events.42.D: "French envoys have approached us expressing their concerns of ongoing affairs in our desire for independence. They are willing to show support and have provided us with the required resources to carry out our actions."
+ ME_France_Events.42.OPT1: "That is brilliant news!"
+
+ ME_France_Events.43.T: "French Support"
+ ME_France_Events.43.D: "French envoys have approached us expressing their concerns of ongoing affairs in our desire for independence. They are willing to show support and have provided us with the required resources to carry out our actions."
+ ME_France_Events.43.OPT1: "That is brilliant news!"
+
+ ME_France_Events.44.T: "Overshadowing an Empire"
+ ME_France_Events.44.D: "With the French region firmly under our grasp our administration can now start looking to expand outwards. To our east lies the infamous Holy Roman Empire which has been a French holding before being passed down to the Germans, who are not worthy to hold such a prestigious title because of their weak authority over the smaller princes. We should use Charlemagne's legacy as a pretext to discredit the current empire and form a true empire worthy of his legacy ourselves."
+ ME_France_Events.44.OPT1: "Our forefathers will be smiling on us."
+ ME_France_Events.44.OPT2: "We shall see to the downfall of this false empire."
+
+ ME_France_Events.45.T: "Francois Clouet"
+ ME_France_Events.45.D: "François Clouet was born in Tours, as the son of the court painter Jean Clouet. François Clouet studied under his father and he inherited his father's nickname 'Janet'. His work is remarkable for the elaborate finish of all the details, the extreme accuracy of the drawing, and the exquisite completeness of the whole portrait."
+ ME_France_Events.45.OPT1: "Excellent"
+
+ ME_France_Events.46.T: "Pierre Lescot"
+ ME_France_Events.46.D: "Pierre Lescot who was born in Paris was a French architect active during the French Renaissance. His most notable works include the Fontaine des Innocents and the Lescot wing of the Louvre in Paris. He played an important role in the introduction of elements of classical architecture into French architecture"
+ ME_France_Events.46.OPT1: "Excellent"
+
+ ME_France_Events.47.T: "Clement Janequin"
+ ME_France_Events.47.D: "Clément Janequin who was born near Poitiers, was a French composer of the Renaissance. He was one of the most famous composers of popular chansons of the entire Renaissance and was hugely influential in the development of the Parisian chanson, especially the programmatic type. The wide spread of his fame was made possible by the concurrent development of music printing."
+ ME_France_Events.47.OPT1: "Excellent"
+
+ ME_France_Events.48.T: "Tree-lined highways"
+ ME_France_Events.48.D: "Time and time again, France has proven to the world that nature is the best decoration a nation could have. Many nature lovers inside France have taken it upon themselves to plant more trees and increase the overall prestige of the nation they love."
+ ME_France_Events.48.OPT1: "Nature is a marvel on by itself." 
+
+ ME_France_Events.49.T: "A Summoner of Demons"
+ ME_France_Events.49.D: "During one of his regular visits, [Root.Monarch.GetName] heard of an unnatural affair happening in the lands west of France. A man named Francois Prelati, who claims to be an alchemist and able to summon demons, has come to odds with the Treasurer of France. After hearing the entire affair [Root.Monarch.GetName] referred the entire matter to the Parliament of Paris for it to be resolved.\n\nAfter summoning Francois Prelati to the royal court, Francois defended his claims of alchemism by brandishing silver ingots. What shall the future of Francois Prelati be?"
+ ME_France_Events.49.OPT1: "What a marvelous show of ability." 
+ ME_France_Events.49.OPT2: "That's a cheap trick, burn him at the stake."
+
+ ME_France_Events.50.T: "The Rise of a New Profession"
+ ME_France_Events.50.D: "Silk is a natural fiber some forms of which can be woven into textiles. For this purpose, silk has always been a commodity that has been sought out by the nobility all over Europe. As the importance of silk grows, the province of Lyon has seen a major development in this aspect. Many of its local inhabitants have turned to silk production and have mastered this craft."
+ ME_France_Events.50.OPT1: "Invest in the Silk industry of Lyon."
+ ME_France_Events.50.OPT2: "Invest in the current industry of Lyon."
+
+ ME_France_Events.51.T: "Protecting our Interests"
+ ME_France_Events.51.D: "The colonization of the Americas has resulted in the expansion of trade and transforming it from a local interaction to a global traffic. This marvelous achievement, however, has resulted in the import of foreign goods which are competing against our local products. To better compete with these foreign goods an economist known as Jean-Baptiste Colbert has put forth a new economic doctrine which will be able to combat the goods coming into France from all around the world."
+ ME_France_Events.51.OPT1: "We should let the Bourgeoise combat these imports in the manner they see fit."
+ ME_France_Events.51.OPT2: "Developing our local markets should be enough."
+ ME_France_Events.51.OPT3: "We should encourage the local market to buy from French merchants instead."
+
+ ME_France_Events.52.T: "A Modern Government"
+ ME_France_Events.52.D: "The governmental structure of France has experienced many shapes and forms. From its feudalist origins, it evolved into its current modern nature that we are currently adopting. As perfect as it may be, our government does have room to be improved one last time. Our officials and regulators have put forth 3 improvements that we may adopt going forward."
+ ME_France_Events.52.OPT1: "Let us improve the High Council."
+ ME_France_Events.52.OPT2: "Let us improve the Royal Council of Finances."
+ ME_France_Events.52.OPT3: "Let us improve the Privy Council."
+
+ ME_France_Events.53.T: "Mass Elephant Sighting"
+ ME_France_Events.53.D: "Our colonial governors have reported that a recent colony houses a large amount of Elephant herds. Not turning this province into an Elephant farm will be a waste."
+ ME_France_Events.53.OPT1: "Invest in the local Ivory business."
+ ME_France_Events.53.OPT2: "Let us not interfere."
+
+ ME_France_Events.54.T: "An Offer of Protection"
+ ME_France_Events.54.D: "Our conquest of Madagascar has finally forced the government of Madagascar to capitulate. Although a poor region, Madagascar can be used to set up a commercial stronghold that would administer our commercial interests in southern Africa and manage trade coming from India. To realize this ambition, a proposal has been presented in front of us. We can let the people of Madagascar govern the area as a protectorate of France and in return gain all the commercial benefits that we need in South Africa."
+ ME_France_Events.54.OPT1: "Set up the Malagasy Protectorate."
+ ME_France_Events.54.OPT2: "We will administer Madagascar ourselves."
+
+ ME_France_Events.55.T: "The Invasion of England"
+ ME_France_Events.55.D: "The English have long been our bitter rivals and a cause for immense despair. Their continued existence so close to our borders threatens our existence and should not be left unchecked. Our forefathers have tried invading England multiple times yet the English Navy has always thwarted their plans. A bold officer by the name of Duc de Choiseul has proposed a daring plan. His conception is relatively simple, a massive fleet of flat-bottomed transport craft will carry a French army across the Channel where they will land on the coast of Southern England."
+ ME_France_Events.55.OPT1: "A bold plan indeed, I like it!"
+ ME_France_Events.55.OPT2: "Didn't Scotland always want to invade England?"
+
+ ME_France_Events.56.T: "A Cultural Shift"
+ ME_France_Events.56.D: "The cultural map of the British Isles has changed many times throughout the ages. The Anglo-Saxon immigration into the British Isles put an end to the Celtic majority which in turn went extinct after the Norman invasion of England.  With our current invasion and subjugation of England, an opportunity has presented itself."
+ ME_France_Events.56.OPT1: "Tolerance is key for a stable future."
+ ME_France_Events.56.OPT2: "The scars the English have left can never be forgiven!"
+
+ ME_France_Events.57.T: "Hidden"
+ ME_France_Events.57.D: "Hidden"
+ ME_France_Events.57.OPT1: "Hidden"
+
+ ME_France_Events.58.T: "A Threatening Presence"
+ ME_France_Events.58.D: "Our increased presence in the British Isles is causing immense pressure on our Scottish allies. After all the assurances we have made to them, Scotland is still full of doubt and is fearful of their future and views us as somehow similar to how they did to the English. The Scottish court has sent us an ultimatum of either forfeiting our ownership of every province we own in the British Isles or stopping all diplomatic ties our two nations have."
+ ME_France_Events.58.OPT1: "Let us ease the tensions."
+ ME_France_Events.58.OPT2: "We have worked too hard to give up all this land."
+
+ ME_France_Events.59.T: "The Review of the Auld Alliance"
+ ME_France_Events.59.D: "Our alliance with France was initially set up to defy and combat English power and influence. With the waning influence of England in the British Isles, some can say that the Auld Alliance has fulfilled its purpose and achieved its goals. Yet the foreign world carries many dangers and can turn hostile at any moment. To protect our newfound power base in the British Isles many in our court are advising us to elevate the status of France and make them the protectors of Scottish interest."
+ ME_France_Events.59.OPT1: "France will protect us."
+ ME_France_Events.59.OPT2: "We prefer relying on our strength."
+
+ ME_France_Events.60.T: "Evolution of the Musketeers"
+ ME_France_Events.60.D: "Our relentless effort in developing our Musketeer companies has presented us with a unique situation. Our Musketeers performed fantastically on foot and horseback which has created a division amongst the ranks of our tacticians on how to best make use of our Musketeers going forward."
+ ME_France_Events.60.OPT1: "They shall form the core of our infantry regiments."
+ ME_France_Events.60.OPT2: "Their performance on horseback seems more appealing."
+
+ ME_France_Events.60.T: "Evolution of the Musketeers"
+ ME_France_Events.60.D: "Our relentless effort in developing our Musketeer companies has presented us with a unique situation. Our Musketeers performed fantastically on foot and horseback which has created a division amongst the ranks of our tacticians on how to best make use of our Musketeers going forward."
+ ME_France_Events.60.OPT1: "They shall form the core of our infantry regiments."
+ ME_France_Events.60.OPT2: "Their performance on horseback seems more appealing."
+
+ ME_France_Events.61.T: "Pondichery"
+ ME_France_Events.61.D: "With our solidified rule over India, a new opportunity has risen. The people of India have no idea about the outside world and most importantly about the goods and wares that are present there. Establishing a trade center in one of the Indian provinces and introducing these new goods to them will provide us with a lot of money by trading with the locals here."
+ ME_France_Events.61.OPT1: "Establish the trade center."
+ ME_France_Events.61.OPT2: "Encourage the local industry instead."
+
+ ME_France_Events.62.T: "An External Holding"
+ ME_France_Events.62.D: "Due to owning [1751.GetName], you have unlocked An External Holding mission."
+ ME_France_Events.62.OPT1: "Excellent"
+
+ ME_France_Events.63.T: "The League of the Public Weal"
+ ME_France_Events.63.D: "For more than a century, our confrontation with England took precedence over internal matters that were plaguing us for so long. The decentralized nature of power in France has been a hurdle against every reform. With the English threat finally gone, we can now start tending to matters at home.\n\nWith the rising interest in centralizing power, many in our nobility felt that their traditional rights and privileges were being threatened. As a response, disloyal vassals of the French crown have banded together in what they call 'The League of Public Weal' in defiance of all the centralization acts that we have been striving to do. Some inside our court also believe that the dukes of Burgundy and Brittany might also have a part in the formation of the League of Public Weal."
+ ME_France_Events.63.OPT1: "Disloyalty is punishable by death!"
+
+ ME_France_Events.64.T: "The League of the Public Weal"
+ ME_France_Events.64.D: "We have received news that the League of Public Weal has mobilized against France. Now seems like the perfect time to take up arms and strike the French crown."
+ ME_France_Events.64.OPT1: "Let us ride and meet the enemy head-on."
+ ME_France_Events.64.OPT2: "Now is not the right time..."
+
+ ME_France_Events.65.T: "Devastation in the Countryside"
+ ME_France_Events.65.D: "The League's army has ravaged parts of our domain that are loyal to the royalist cause."
+ ME_France_Events.65.OPT1: "A proof of their barbarism."
+
+ ME_France_Events.66.T: "Faltering Authority"
+ ME_France_Events.66.D: "Due to our focus being entirely set on dealing with the League, many in the capital have started taking advantage of our absence to further push their corrupt agendas."
+ ME_France_Events.66.OPT1: "They will be the next in line soon..."
+
+ ME_France_Events.67.T: "Support from Afar"
+ ME_France_Events.67.D: "Our allies, sentimental to our cause have decided to help us combat our disloyal subjects. We have received many urgent aid that will be put to good use."
+ ME_France_Events.67.OPT1: "Their generosity is most welcomed."
+
+ ME_France_Events.68.T: "Hidden"
+ ME_France_Events.68.D: "Hidden"
+ ME_France_Events.68.OPT1: "Hidden"
+
+ ME_France_Events.69.T: "Treaty of Sable"
+ ME_France_Events.69.D: "Our overwhelming victory in the Mad Wars has provided us with enough authority to enforce a swear of loyalty and pledges of homage towards [Root.Monarch.GetName]. All appanages henceforth are obliged to pledge their territories to be controlled by the French crown."
+ ME_France_Events.69.OPT1: "A resounding victory!"
+
+ ME_France_Events.70.T: "Treaty of Conflans"
+ ME_France_Events.70.D: "Royalist defeats on multiple fronts during the War of the Public Weal has given the local nobles the ability to force [Root.Monarch.GetName] to sign a peace agreement. The treaty of Conflans has granted the local nobility many concessions and privileges to the point where they have become autonomous and semi-independent."
+ ME_France_Events.70.OPT1: "This is going to set us back tremendously."
+
+ ME_France_Events.71.T: "Diplomatic Revolution"
+ ME_France_Events.71.D: "The stability of the balance of power that has been the master of our times is trembling to its core. Separation of interests between great European powers has shuffled many diplomatic cards. We are currently presented with the opportunity of redrawing our diplomatic cards and improving our diplomatic standing on the European stage."
+ ME_France_Events.71.OPT1: "A new stately quadrille is not a bad idea."
+ ME_France_Events.71.OPT2: "We cannot abandon our long lasted ties!"
+
+ ME_France_Events.72.T: "A New Stately Quadrille"
+ ME_France_Events.72.D: "The balance of power has been hinging on a thin line for some time now. The long-lasted status quo has brought nothing but uncertainty and doubt to us. Our allies in France have presented us with a chance to break this accursed uncertainty and strike at the heart of the Empire."
+ ME_France_Events.72.OPT1: "We shall shift the balance of power to our favor."
+ ME_France_Events.72.OPT2: "Peace must never be broken."
+
+ ME_France_Events.73.t: "Prospering Times"
+ ME_France_Events.73.d: "$MONARCH$ has become renowned for our country's artistic achievements and blossoming economy. Artists, philosophers and poets are flocking to $CAPITAL$ and the thriving economy has allowed extensive artistic funding. Several fine-architectural buildings are being erected and beautiful gardens are built to demonstrate our country's wealth and many members of our new intellectual elite have ideas on how to improve various parts of our country."
+ ME_France_Events.73.opt1: "Invest in better urban infrastructure."
+ ME_France_Events.73.opt2: "Invest in better production methods."
+ ME_France_Events.73.opt3: "Invest in better rural infrastructure."
+
+ ME_France_Events.74.T: "Using Vanilla"
+ ME_France_Events.74.D: "Two of our most trusted advisors, $TREASURER$ and $TRADER$, have been talking a lot recently. Plotting, some say. Drafting plans for [Root.GetName]'s future, others say. Whatever they are discussing, it's controversial enough to warrant some secrecy.\n\nFinally, they approach [Root.Monarch.GetTitle] [Root.Monarch.GetName] to present the results. The thick stack of papers contains plans for monumental changes to the nation's trade practices, including increased protectionism, regulation and industrial policy. Radical, some would say.\n'Necessary,' $TREASURER$ says.\n'Profitable,' says $TRADER$.\n\nWhat does [Root.Monarch.GetName] say about this?"
+
+ ME_France_Events.75.T: "Inconclusive Outcome"
+ ME_France_Events.75.D: "As a last-ditch effort, we have summoned our Appanages and came to terms with them. They are now back in the French domain while gaining some concessions."
+ ME_France_Events.75.OPT1: "At least they aren't independent."
+
+ ME_France_Events.80.T: "End of Italian Aspirations"
+ ME_France_Events.80.D: "Opportunities don't usually stay for a long period of time. Due to requiring more than 5 years to get ready, the opportunity to conquer Italy has been lost."
+ ME_France_Events.80.OPT1: "That's a shame..."
+
+
+ # Modifiers:
+ fra_monopoly_of_force_modifier: "Royal Monopoly of Force"
+ fra_war_at_sea: "War at Sea"
+ fra_aiding_the_second_hundred_years_war: "Aiding the Second Guerre de Cent Ans"
+
+ EE_FRA_managing_finances: "Managing the Finances"
+ desc_EE_FRA_managing_finances: ""
+
+ EE_FRA_control_curia: "Controlling the Curia"
+ desc_EE_FRA_control_curia: ""
+
+ EE_FRA_heirs_st_peter: "Heirs of St. Peter"
+ desc_EE_FRA_heirs_st_peter: ""
+
+ EE_FRA_protector_reformation: "Protector of the Reformation"
+ desc_EE_FRA_protector_reformation: ""
+
+ EE_FRA_true_heirs_christ: "True Heirs of Christ"
+ desc_EE_FRA_true_heirs_christ: ""
+
+ EE_FRA_judge_judged: "Judge and be Judged"
+ desc_EE_FRA_judge_judged: ""
+
+ EE_FRA_expert_forts_1: "Expertise in Fortifications"
+ desc_EE_FRA_expert_forts_1: ""
+
+ EE_FRA_expert_forts: "Expertise in Fortifications"
+ desc_EE_FRA_expert_forts: ""
+
+ EE_FRA_Grand_Finistere_base: "Grand Finistere Naval Base"
+ desc_EE_FRA_Grand_Finistere_base: ""
+
+ EE_FRA_overshadowing_iberia: "Overshadowing Iberia"
+ desc_EE_FRA_overshadowing_iberia: ""
+
+ EE_FRA_limited_conscription: "Limited Conscription"
+ desc_EE_FRA_limited_conscription: ""
+
+ EE_FRA_english_blockade: "English Blockade"
+ desc_EE_FRA_english_blockade: ""
+
+ EE_FRA_widespread_support: "Widespread Support"
+ desc_EE_FRA_widespread_support: ""
+
+ EE_FRA_loose_taxation: "Loose Taxation"
+ desc_EE_FRA_loose_taxation: ""
+
+ EE_FRA_strict_taxation: "Strict Taxation"
+ desc_EE_FRA_strict_taxation: ""
+
+ EE_FRA_eternal_dispute: "Eternal Dispute"
+ desc_EE_FRA_eternal_dispute: ""
+
+ EE_FRA_iberian_assymilation: "Iberian Assimilation"
+ desc_EE_FRA_iberian_assymilation: ""
+
+ EE_FRA_french_rule: "French Rule"
+ desc_EE_FRA_french_rule: ""
+
+ EE_FRA_mediterranean_hegemony: "Mediterranean Hegemony"
+ desc_EE_FRA_mediterranean_hegemony: ""
+
+ EE_FRA_naval_arsenal: "Naval Arsenal"
+ desc_EE_FRA_naval_arsenal: ""
+
+ EE_FRA_french_centre_power: "French Centre of Power"
+ desc_EE_FRA_french_centre_power: ""
+
+ EE_toulon_arsenal_triggered_modifier: "Toulon Arsenal"
+ desc_EE_toulon_arsenal_triggered_modifier: ""
+
+ EE_FRA_revival_arsenal: "Revival of the Arsenal"
+ desc_EE_FRA_revival_arsenal: ""
+
+ EE_FRA_french_bombardes: "French Bombardes"
+ desc_EE_FRA_french_bombardes: ""
+
+ EE_FRA_master_gunner: "Master Gunner"
+ desc_EE_FRA_master_gunner: ""
+
+ EE_FRA_bastard_orleans: "Bastard of Orleans"
+ desc_EE_FRA_bastard_orleans: ""
+
+ EE_FRA_early_victories: "Early Victories"
+ desc_EE_FRA_early_victories: ""
+
+ EE_FRA_first_standing_army: "First Standing Army"
+ desc_EE_FRA_first_standing_army: ""
+
+ EE_FRA_montjoie: "Montjoie Saint Denis"
+ desc_EE_FRA_montjoie: ""
+
+ EE_FRA_broke_english_spine: "Broke the English Spine"
+ desc_EE_FRA_broke_english_spine: ""
+
+ EE_FRA_treaty_picquiny: "Treaty of Picquigny"
+ desc_EE_FRA_treaty_picquiny: ""
+
+ EE_FRA_law_guarantee: "The Law of Guarantees"
+ desc_EE_FRA_law_guarantee: ""
+
+ EE_FRA_god_french: "God is French"
+ desc_EE_FRA_god_french: ""
+
+ EE_FRA_armed_pilgrimage: "An Armed Pilgrimage"
+ desc_EE_FRA_armed_pilgrimage: ""
+
+ EE_FRA_armed_pilgrimage_1: "An Armed Pilgrimage"
+ desc_EE_FRA_armed_pilgrimage_1: ""
+
+ EE_FRA_global_crusade: "A Global Crusade"
+ desc_EE_FRA_global_crusade: ""
+
+ EE_FRA_food_surplus: "Food Surplus"
+ desc_EE_FRA_food_surplus: ""
+
+ EE_FRA_Grand_French_Dockyard: "Grand French Dockyards"
+ desc_EE_FRA_Grand_French_Dockyard: ""
+
+ EE_FRA_back_french_rule: "Back Under French Rule"
+ desc_EE_FRA_back_french_rule: ""
+
+ EE_FRA_control_church: "Controlling the Church"
+ desc_EE_FRA_control_church: ""
+
+ EE_FRA_eliminating_feudalism: "Eliminating Feudalism"
+ desc_EE_FRA_eliminating_feudalism: ""
+
+ EE_FRA_slipping_opportunity: "Slipping Opportunity"
+ desc_EE_FRA_slipping_opportunity: ""
+
+ EE_FRA_increased_european_prestige: "Increased European Prestige"
+ desc_EE_FRA_increased_european_prestige: ""
+
+ EE_FRA_TUR_capitulations: "Ottoman Capitulations"
+
+ EE_FRA_averted_holyness: "Averted Unholiness"
+ desc_EE_FRA_averted_holyness: ""
+
+ EE_FRA_success_italy: "Successful Italian Campaign"
+ desc_EE_FRA_success_italy: ""
+
+ EE_FRA_supply_lines: "Supply Lines Secured"
+ desc_EE_FRA_supply_lines: ""
+
+ EE_FRA_prelude_navy_supremacy: "Prelude to Naval Supremacy"
+ desc_EE_FRA_prelude_navy_supremacy: ""
+
+ EE_FRA_artillery_evolution: "Artillery Evolution"
+ desc_EE_FRA_artillery_evolution: ""
+
+ EE_FRA_doorway_italy: "Doorway to Italy"
+ desc_EE_FRA_doorway_italy: ""
+
+ EE_FRA_french_signoria: "French Signoria"
+ desc_EE_FRA_french_signoria: ""
+
+ EE_FRA_start_monopoly: "Start of a Monopoly"
+ desc_EE_FRA_start_monopoly: ""
+
+ EE_FRA_genoa_monopoly: "Monopoly in Genoa"
+ desc_EE_FRA_genoa_monopoly: ""
+
+ EE_FRA_urban_planning: "Urban Planning"
+ desc_EE_FRA_urban_planning: ""
+
+ EE_FRA_sale_artistic_masterpiece: "Sale of Artistic Masterpieces"
+ desc_EE_FRA_sale_artistic_masterpiece: ""
+
+ EE_FRA_royal_ordinance: "Royal Ordinance on Parish Schools"
+ desc_EE_FRA_royal_ordinance: ""
+
+ EE_FRA_mercure_galant: "Mercure Galant"
+ desc_EE_FRA_mercure_galant: ""
+
+ EE_FRA_mercure_galant_1: "Mercure Galant"
+ desc_EE_FRA_mercure_galant_1: ""
+
+ EE_FRA_mercure_galant_2: "Mercure Galant"
+ desc_EE_FRA_mercure_galant_2: ""
+
+ EE_FRA_proto_industrialization: "Proto-Industrialization"
+ desc_EE_FRA_proto_industrialization: ""
+
+ EE_FRA_evolution_economy: "Evolution of Economy"
+ desc_EE_FRA_evolution_economy: ""
+
+ EE_FRA_power_steam_trade: "Power of Steam"
+ desc_EE_FRA_power_steam_trade: ""
+
+ EE_FRA_power_steam_production: "Power of Steam"
+ desc_EE_FRA_power_steam_production: ""
+
+ EE_FRA_power_steam_tax: "Power of Steam"
+ desc_EE_FRA_power_steam_tax: ""
+
+ EE_FRA_voyages_new_world: "Voyages Towards the New World"
+ desc_EE_FRA_voyages_new_world: ""
+
+ EE_FRA_fur_grounds: "Fur Grounds"
+ desc_EE_FRA_fur_grounds: ""
+
+ EE_FRA_commercial_competition: "Commercial Competition"
+ desc_EE_FRA_commercial_competition: ""
+
+ EE_FRA_new_lingua_franca: "A New Lingua Franca"
+ desc_EE_FRA_new_lingua_franca: ""
+
+ EE_FRA_diplomatic_moves: "Diplomatic Moves"
+ desc_EE_FRA_diplomatic_moves: ""
+
+ EE_FRA_rivality_fra_hab: "Rivalite Franco-Habsbourgeoise"
+ desc_EE_FRA_rivality_fra_hab: ""
+
+ EE_FRA_tree_lined_highways: "Tree-Lined Highways"
+ desc_EE_FRA_tree_lined_highways: ""
+
+ EE_FRA_steelmaking: "French Steelmaking Techniques"
+ desc_EE_FRA_steelmaking: ""
+
+ EE_FRA_la_mode: "La Mode"
+ desc_EE_FRA_la_mode: ""
+
+ fra_silk_must_flow: "The Silk Must Flow"
+ desc_fra_silk_must_flow: ""
+ 
+ fra_invest_lyon: "Investments in Lyon"
+ desc_fra_invest_lyon:  ""
+
+ EE_FRA_man_war: "Man Of War Tactics"
+ desc_EE_FRA_man_war: ""
+
+ EE_FRA_cote_divoire: "Cote d'Ivoire"
+ desc_EE_FRA_cote_divoire: ""
+
+ EE_FRA_french_protectorate: "French Protectorate"
+ desc_EE_FRA_french_protectorate: ""
+
+ EE_FRA_wealth_madagascar: "Wealth of Madagascar"
+ desc_EE_FRA_wealth_madagascar: ""
+
+ fra_wealth_madagascar_triggered: "Wealth of Madagascar"
+ desc_fra_wealth_madagascar_triggered: ""
+
+ EE_FRA_south_american_outpost: "South American Outpost"
+ desc_EE_FRA_south_american_outpost: ""
+
+ EE_FRA_settle_south_america: "Settle South America"
+ desc_EE_FRA_settle_south_america: ""
+
+ EE_FRA_pearl_antilles: "Pearl of the Antilles"
+ desc_EE_FRA_pearl_antilles: ""
+
+ EE_FRA_share_triangle: "Our Share of the Triangle"
+ desc_EE_FRA_share_triangle: ""
+
+ EE_FRA_management_affairs: "Management of Colonial Affairs"
+ desc_EE_FRA_management_affairs: ""
+
+ EE_FRA_ENG_wars_expanded: "English Wars Expanded"
+ desc_EE_FRA_ENG_wars_expanded: ""
+
+ EE_FRA_ENG_london: "On to London"
+ desc_EE_FRA_ENG_london: ""
+
+ EE_FRA_modern_government: "Modern Government"
+ desc_EE_FRA_modern_government: ""
+
+ EE_FRA_admin_evolution: "Administrative Evolution"
+ desc_EE_FRA_admin_evolution: ""
+
+ EE_FRA_maritime_investments: "Maritime Investments"
+ desc_EE_FRA_maritime_investments: ""
+
+ EE_FRA_french_system: "Integration into the French System"
+ desc_EE_FRA_french_system: ""
+
+ EE_FRA_cultural_administration: "Cultural Administration"
+ desc_EE_FRA_cultural_administration: ""
+
+ EE_FRA_british_maritime_ambitions: "British Maritime Ambitions"
+ desc_EE_FRA_british_maritime_ambitions: ""
+
+ EE_FRA_influx_french_ideals: "Influx of French Ideas"
+ desc_EE_FRA_influx_french_ideals: ""
+
+ EE_FRA_influx_french_ideals_buffed: "Influx of French Ideas"
+ desc_EE_FRA_influx_french_ideals_buffed: ""
+
+ EE_FRA_swiss_hundred: "The Swiss Hundred"
+ desc_EE_FRA_swiss_hundred: ""
+
+ EE_FRA_consul_haut_modifier: "Consiel d'en Haut"
+ desc_EE_FRA_consul_haut_modifier: ""
+
+ EE_FRA_consul_finances_modifier: "Consiel Royal des Finances"
+ desc_EE_FRA_consul_finances_modifier: ""
+
+ EE_FRA_consul_prive_modifier: "Consiel Prive"
+ desc_EE_FRA_consul_prive_modifier: ""
+
+ EE_FRA_port_havre: "Port City of Havre"
+ desc_EE_FRA_port_havre: ""
+
+ EE_FRA_loyalist_victory: "Loyalist Victory"
+ desc_EE_FRA_loyalist_victory: ""
+
+ EE_FRA_will_god: "The Will of God"
+ desc_EE_FRA_will_god: ""
+ 
+ EE_FRA_will_god_2: "The Will of God"
+
+ EE_FRA_core_french_army: "Core of the French Army"
+ desc_EE_FRA_core_french_army: ""
+
+ EE_FRA_increased_conscription: "Increased Conscription"
+ desc_EE_FRA_increased_conscription: ""
+
+ EE_FRA_muskets_horseback: "Muskets on Horseback"
+ desc_EE_FRA_muskets_horseback: ""
+
+ EE_FRA_modernization_gendarmes: "Modernization of the Gendarmes"
+ desc_EE_FRA_modernization_gendarmes: ""
+
+ EE_FRA_charting_africa: "Charting Africa"
+ desc_EE_FRA_charting_africa: ""
+
+ EE_FRA_french_entrepot: "French Entrepot"
+ desc_EE_FRA_french_entrepot: ""
+
+ fra_india_trade_center: "Indian Trade Center"
+ desc_fra_india_trade_center: ""
+
+ EE_FRA_compagnie_orientales: "La Compagnie Française des Indes Orientales"
+ desc_EE_FRA_compagnie_orientales: ""
+
+ EE_FRA_indian_expansion: "Indian Expansion"
+ desc_EE_FRA_indian_expansion: ""
+
+ fra_earth_not_flat: "Earth is not Flat"
+ desc_fra_earth_not_flat: ""
+
+ EE_FRA_small_collection: "A Small Collection"
+ desc_EE_FRA_small_collection: ""
+
+ EE_FRA_grand_collection: "A Grand Collection"
+ desc_EE_FRA_grand_collection: ""
+
+ EE_FRA_legendary_collection: "A Legendary Collection"
+ desc_EE_FRA_legendary_collection: ""
+
+ EE_FRA_french_colonial_Empire: "French Colonial Empire"
+ desc_EE_FRA_french_colonial_Empire: ""
+
+ EE_FRA_north_african_investments: "North African Investments"
+ desc_EE_FRA_north_african_investments: ""
+
+ EE_FRA_successors_charlemagne: "Successors of Charlemagne"
+ desc_EE_FRA_successors_charlemagne: ""
+
+ EE_FRA_rapid_militarization: "Rapid Militarization"
+ desc_EE_FRA_rapid_militarization: ""
+
+ EE_FRA_legacy_charlemagne: "Legacy of Charlemagne"
+ desc_EE_FRA_legacy_charlemagne: ""
+
+ EE_FRA_imperial_line: "Expanding the Imperial Line"
+ desc_EE_FRA_imperial_line: ""
+
+ EE_FRA_imperial_religion: "Imperial Religion"
+ desc_EE_FRA_imperial_religion: ""
+
+ EE_FRA_new_free_cities: "New Free Cities"
+ desc_EE_FRA_new_free_cities: ""
+
+ EE_FRA_mobilize_imperial_circles: "Mobilize the Imperial Circles"
+ desc_EE_FRA_mobilize_imperial_circles: ""
+
+ EE_FRA_integration_imperial_circles: "Integration of the Imperial Circle"
+ desc_EE_FRA_integration_imperial_circles: ""
+
+ EE_FRA_battle_ready_conscripts: "Battle-Ready Conscripts"
+ desc_EE_FRA_battle_ready_conscripts: ""
+
+ EE_FRA_drilling_Draftees: "Drilling the Draftees"
+ desc_EE_FRA_drilling_Draftees: ""
+
+ EE_FRA_europe_leading_monarchy: "Europe's Leading Monarchy"
+ desc_EE_FRA_europe_leading_monarchy: ""
+
+ ME_FRA_prelude_war: "Prelude to War"
+ desc_ME_FRA_prelude_war: ""
+
+ ME_FRA_conquered_holy_land: "Conquered the Holy Land"
+ desc_ME_FRA_conquered_holy_land: ""
+
+ FRA_MISSISSIPPI_TRADE_COMPETITION: "Mississippi Trade Competition"
+ fra_french_missionaries: "French Missionaries"
+ fra_religious_absolutism_modifier: "Religious Absolutism"
+ FRA_fur_trade_outpost: "Fur Trade Outpost"
+ FRA_icon: "Fur Trade Outpost"
+ FRA_icon_gray: "Fur Trade Outpost"
+
+ # Estate Privileges:
+ ME_estate_burghers_edict_nantes: "Edict of Nantes"
+ ME_estate_burghers_edict_nantes_desc: " "
+ ME_estate_church_edict_fontainebleau: "Edict of Fontainebleau"
+ ME_estate_church_edict_fontainebleau_desc: " "
+ estate_courer_de_blois: "Coureur de Bois"
+ EE_estate_church_development_of_temples: "Development of Temples"
+ EE_estate_church_development_of_temples_desc: "The temples of the state are places of refuge and the seat of the [Root.GetClergyName]. The sovereignty of these institutions must be guaranteed, and their development must be promoted."
+
+ EE_estate_nobles_development_of_castles: "Expand the Fortifications"
+ EE_estate_nobles_development_of_castles_desc: "The castles and fortifications are our crucial defense lines against the invaders who threaten our existence. By granting our [Root.GetNobilityName] the land of the castles and the privilege to live in these fortifications, we can assure the maintenance of our defense at all times."
+
+ EE_FRA_grant_revocable_titles: "Grant Revocable Titles"
+ EE_FRA_grant_revocable_titles_desc: "Granting merchants titles and high-ranking posts will guarantee the state's control of these positions due to the non-hereditary nature of these granted titles that can be revoked at any given time."
+
+ ME_estate_church_la_dragonnandes: "Le Dragonnades"
+ ME_estate_church_la_dragonnandes_desc: "The Dragonnades were a policy implemented by King Louis XIV of France in the late 17th century to force Huguenots to convert to Catholicism. This policy involved quartering dragoons, or soldiers, in the homes of Huguenots, where they would often harass and intimidate the occupants into converting. The Dragonnades were part of a broader strategy of religious persecution that culminated in the revocation of the Edict of Nantes in 1685, leading to the mass exodus of Huguenots from France."
+
+
+ # Governmental Reforms:
+ EE_FRA_ancien_regime: "Ancien Regime"
+ EE_FRA_ancien_regime_desc: "Centralization movements that aimed to abolish the tight grip of the nobility on French affairs have resulted in the birth of a new governmental structure. Central authorities and governmental representatives are new replacing the feudal lords whose loyalty was never to the state but to themselves."
+ ability_EE_FRA_model_state: "French Model State"
+ EE_FRA_consolidation_power: "Consolidated Power"
+ EE_FRA_consolidation_power_desc: "§YConsolidated Power§! represents our strength within the Ancien Regime. Once we reach §Y100§!, we will be able to strengthen the Regime by §Y1§!. We gain §YConsolidated Power§! from:\n§G+0.1§! Monthly per Loyal §YEstate§!\n§G+0.05§! Monthly per §YAdmin§! skill of our §YRuler§!\n§G+10§! Per Government Reform §YEnacted§!\n§G+1§! when §YCentralizing State§!\n§G+5§! when §YSeizing Crownland§!\n§G+0.1§! when §YCoring§! a province\n\nWe lose §YConsolidated Power§! from:\n§R-0.2§! per Disloyal §YEstate§!\n§R-10§! when §YSelling Crownland§!\n§R-5§! when §YSummoning the Diet§!\n\n"
+ EE_FRA_consolidation_power_progress_ui: "Ancien Regime Strength"
+ EE_FRA_consolidation_power_progress_ui_desc: ""
+ FRA_HAS_AT_LEAST_ONE_LEVEL_OF_REGIME_STRENGTH: "Has at least §Y1§! Ancien Regime Strength."
+ FRA_NO_REWARDS_NO_STRENGTH: "§RAs we have no strength in the Ancien Regime, we are not able to gain any rewards.§!"
+ FRA_STRENGTHEN_REGIME_BY_1: "Strengthen the §YAncient Regime§! by §G1§!."
+ FRA_REWARDS_FOR_LEVEL_1: "The next §YLaw§! will give us the following should we decide to enact it:"
+ FRA_RESET_ANCIEN_REGIME: "Reset the §YAncien Regime Strength§! back to §R0§!."
+ FRA_REDUCE_AUTONOMY_EVERYWHERE: "Reduce §YLocal Autonomy§! in all our provinces by §G5%§!."
+ FRA_MAX_LEVEL: "You have reached the max §YAncien Regime Strength§!."
+ fra_absolutism_ministry: "Absolutist Regime"
+ fra_curtailed_estate_influence: "Curtailed Estate Influence"
+
+
+ EE_FRA_consolidation_power_gain_modifier: "Consolidated Power Gain Modifier"
+ monthly_EE_FRA_consolidation_power: "Monthly Consolidated Power"
+ EE_FRA_enact_regime_law: "Enact Law in Ancien Regime"
+ EE_FRA_enact_regime_law_desc: " "
+ EE_FRA_strengthen_regime: "Strengthen the Ancien Regime"
+ EE_FRA_strengthen_regime_desc: " "
+ 
+ EST_VAL_STRENGTHEN_ANCIEN_REGIME_LAW: "Enacted Ancient Regime Law" 
+
+ EE_FRA_control_church: "Control the Church"
+ EE_FRA_control_church_desc: ""
+ EE_FRA_centralize_government: "Centralize the Government"
+ EE_FRA_centralize_government_desc: ""
+ EE_FRA_eliminate_feudalism: "Eliminate Feudalism"
+ EE_FRA_eliminate_feudalism_desc: ""
+ EE_FRA_consul_haut: "Consiel d'en Haut"
+ EE_FRA_consul_haut_desc: ""
+ EE_FRA_consul_finances: "Consiel Royal des Finances"
+ EE_FRA_consul_finances_desc: ""
+ EE_FRA_consul_prive: "Consiel Prive"
+ EE_FRA_consul_prive_desc: ""
+
+ EE_FRA_gendarmes_reform: "Evolved Gendarmes"
+ EE_FRA_gendarmes_reform_desc: "A powerful corps of heavy cavalry and noble birth, famed for their devastating charges and high morale."
+
+ EE_FRA_baillages: "Baillages"
+ EE_FRA_baillages_desc: "Baillages are extensions of royal power, administration and justice. Representing the central authority in their local towns and homesteads, villages hold many responsibilities some of which are instituting appeals, collecting dominical revenues and raising local contingents."
+ 
+ # Disasters:
+ EE_FRA_guerre_cents_ans: "Guerre de Cents Ans"
+ EE_FRA_italian_wars_opportunity: "The Italian Wars"
+ EE_FRA_mad_wars: "The Mad Wars"
+
+ # Subject type:
+ ME_personal_union_with_25_FL_title: ""
+ ME_personal_union_with_25_FL_title_plural: ""
+ ME_personal_union_with_25_FL_long_desc: ""
+ ME_personal_union_with_25_FL_is_our: ""
+
+ EE_FRA_fief_title: "Feudal Fief"
+ EE_FRA_fief_title_plural: "Feudal Fiefs"
+ EE_FRA_fief_long_desc: "Feudal Fiefdom"
+ EE_FRA_fief_is_our: ""
+
+ # Decisions:
+ EE_FRA_commandeer_ships_title: "Commandeer English Heavy Ships"
+ EE_FRA_commandeer_ships_desc: ""
+
+ EE_FRA_fund_war_effort_title: "Fund the War Effort"
+ EE_FRA_fund_war_effort_desc: "It is no secret that we have aspirations of ruling the entirety of Italy. To further push our goals, however, further funding is required."
+
+ EE_FRA_regulate_serfs_title: "Regulation of Serfs"
+ EE_FRA_regulate_serfs_desc: ""
+
+ EE_FRA_evolution_mercure_galant_title: "Evolution of Mercure Galant"
+ EE_FRA_evolution_mercure_galant_desc: ""
+
+ EE_FRA_marechaussee_cnnetablie_title: "Merge the Marechaussee and Connetablie"
+ EE_FRA_marechaussee_cnnetablie_desc: "The two distinct bodies of the Gendarmes are causing confusion and inefficient leadership. Let us merge the two bodies of the Gendarmes and form a military force unseen and unheard of in the European battlefields."
+
+ EE_FRA_french_assimilation_start_title: "French Assimilation"
+ EE_FRA_french_assimilation_start_desc: ""
+
+ EE_FRA_french_assimilation_pause_title: "Pause French Assimilation"
+ EE_FRA_french_assimilation_pause_desc: ""
+
+ EE_FRA_reconcile_louis_title: "Reconcile with [Root.Heir.GetName]"
+ EE_FRA_reconcile_louis_desc: ""
+
+ ME_FRA_capetial_house_anjou_title: "The Capetian House of Anjou"
+ ME_FRA_capetial_house_anjou_desc: ""
+
+ ME_FRA_end_incident_tree_title: "End Incident Tree"
+ ME_FRA_end_incident_tree_desc: ""
+
+ ME_FRA_reclaim_east_title: "Reclaim the East"
+ ME_FRA_reclaim_east_desc: ""
+
+ # Diplomatic Actions: 
+ EE_FRA_seize_curia_title: "Seize the Curia"
+ EE_FRA_seize_curia_desc: "Become the curia controller."
+ EE_FRA_seize_curia_tooltip: "We will become the §YCuria Controller§!."
+
+ EE_FRA_fund_agitation_title: "Fund Agitation"
+ EE_FRA_fund_agitation_desc: "Fund Agitation Activities."
+ EE_FRA_fund_agitation_tooltip: "The next agitation action §Y[From.GetName]§! commits will have no cost."
+
+ # Local Organization:
+ EE_FRA_les_invalides: "Les Invalides"
+ EE_FRA_les_invalides_desc: ""
+ EE_FRA_les_invalides_short: "local organization"
+ local_organization_short: "local organization"
+
+ # Casus Belli:
+ cb_EE_FRA_italian_wars: "Italian Wars"
+ cb_EE_FRA_italian_wars_desc: "§RLeague of Venice will defend them!§!"
+
+ cb_EE_FRA_conquest_italy: "Conquest of Italy"
+ cb_EE_FRA_conquest_italy_desc: ""
+ EE_FRA_take_italian_capital: "Take Capital"
+ EE_FRA_take_italian_capital_desc: "War goal is to take the capital."
+ ITALIAN_CONQUEST_WAR_NAME: "$ORDER$ $FIRST$ War of Italian dominance."
+
+ EE_FRA_transport_invasion: "The Transport Invasion"
+ EE_FRA_transport_invasion_desc: ""
+
+ EE_FRA_global_expansion: "Global Expansion"
+ EE_FRA_global_expansion_desc: ""
+
+ EE_FRA_war_weal: "War of the Public Weal"
+ EE_FRA_war_weal_desc: ""
+ EE_FRA_take_capital_disloyal: "Show Superiority"
+ EE_FRA_take_capital_disloyal_desc: "War goal is to show superiority by defeating their armies in battle."
+ EE_FRA_po_rein_appanage: "Rein Appanage"
+ EE_FRA_po_rein_appanage_desc: "We will rein [From.GetName]."
+ CB_ALLOWED_EE_FRA_po_rein_appanage: "Rein Appanage"
+ PEACE_EE_FRA_po_rein_appanage: "Rein Appanage"
+ ME_FRA_war_weal: "War of the Public Weal"
+
+ EE_FRA_imperial_border_dispute: "Imperial Border Dispute"
+ EE_FRA_imperial_border_dispute_desc: ""
+
+ EE_FRA_dissolution_empire: "Dissolution of the Empire"
+ EE_FRA_dissolution_empire_desc: ""
+
+ ME_FRA_take_capital_conquest: "Take the capital"
+ ME_FRA_take_capital_conquest_desc: "War goal is to take the capital."
+
+ #Rev stuff:
+ ME_fra_secure_iberia_title:0 "The Peninsular War"
+ ME_fra_secure_iberia_desc:0 "The upstart monarchs of Iberia have taunted us for the last time. We must liberate the people under their chain and introduce their royal family to our guillotines."
+ ME_fra_military_reform_title:0 "Reform the Guard"
+ ME_fra_military_reform_desc:0 "If we are to take on the injustices of Europe's most powerful houses, we will need the army to go with it. Thus, we should look into reforming our armed forces and improve their combat efficiency."
+ ME_fra_cross_rhine_title:0 "Cross the Rhine"
+ ME_fra_cross_rhine_desc:0 "To the East lie the Germanic territories of treacherous monarchs and oppressive overlords. We must swiftly alleviate their citizens of their royal bonds and integrate their lands into our domain."
+ ME_fra_dominate_europe_title:0 "Dominate Europe"
+ ME_fra_dominate_europe_desc:0 "Europe is nothing but a stage upon which we shall proclaim our domination as we prevail against the innumerable foes who seek to quell our movement."
+ ME_fra_religious_settlement_title:0 "Religious Settlement"
+ ME_fra_religious_settlement_desc:0 "The institutions of old may be archaic and of little use, however religion is a powerful tool in the hands of the ruler, and therefore we should investigate its potential uses. According to Napoleon himself, religion excels at preventing the common folk from deposing the rich."
+ ME_fra_invade_italy_title:0 "Invade Italy"
+ ME_fra_invade_italy_desc:0 "The lands of Italy shall be our next campaign as we sweep across Europe. The seat of pretentious men of God and affluence will make a fine addition to our collection of provinces."
+ ME_fra_national_bank_title:1 "Institute the Bank of France"
+ ME_fra_national_bank_desc:0 "The dawn of the Revolution saw our nation destabilized and destitute. To combat this we must enforce and nationalize a very important pillar to assist towards our economic recovery, our own national bank."
+ ME_fra_grande_armee_title:0 "La Grande Armée"
+ ME_fra_grande_armee_desc:0 "Our army is glorious and serves the people! The banners we carry into war, in combination with our superior military maneuvers and discipline shall catch any enemy by surprise."
+ ME_fra_civil_code_title:0 "Napoleonic Code"
+ ME_fra_civil_code_desc:0 "Our society cannot withstand internal and external litmus tests if we do not introduce a central civil code to rule over our society's norms."
+ ME_fra_enlarge_ports_title:0 "Coastal Infrastructure"
+ ME_fra_enlarge_ports_desc:0 "The dawn of the 18th century saw an increased shift towards maintaining a robust naval presence. To achieve that goal we must attend to our naval infrastructure needs."
+ ME_fra_low_countries_title:1 "Dutch Revolts"
+ ME_fra_low_countries_desc:0 "The Low Countries have a history of revolutions and revolts against their masters. Therefore, we must assist them and bring them under our protective wing."
+ ME_fra_educational_reforms_title:1 "Condorcet's Grandes Écoles"
+ ME_fra_educational_reforms_desc:0 "Knowledge can no longer be a noble man's privilege. By funding brave ideas when it comes to granting access to education, it is clear that educating our population is of utmost importance."
+ ME_fra_road_connectivity_title:0 "Renewed Infrastructure"
+ ME_fra_road_connectivity_desc:0 "The era of coal and manufactured goods is dawning upon Europe and the world. If we are to keep up with the times we must make sure our infrastructure is of the highest quality, to assist with both our internal and external agenda."
+ ME_fra_napoleonic_navy_title:0 "Napoleonic Navy"
+ ME_fra_napoleonic_navy_desc:0 "Our foes possess tremendous naval might. If we are to protect our coasts and our people, we must match and outclass them with a powerful navy."
+ ME_fra_great_britain_title:0 "Destroy the British"
+ ME_fra_great_britain_desc:0 "The British have been a thorn in our side for far too long. Their continental meddling and lack of respect towards our head of state threatens to throw a wrench in our plans, thus they must be eradicated."
+ ME_fra_trade_hegemony_title:0 "Maritime Hegemony"
+ ME_fra_trade_hegemony_desc:0 "The conquest of the Isles in conjunction with our naval domination shall pave the way for [Root.GetName] to be the undisputed masters of the sea!"
+ dom_ME_fra_france_discovers_north_america_title:0 "Discover North America"
+ dom_ME_fra_france_discovers_north_america_desc:0 "Our Navigators are beseeching the crown to underwrite a mission to explore the seas to the west of us. They have heard rumors of rich lands that they wish to claim for the glory of France." #old 
+ dom_ME_fra_indian_dominance_title:0 "Indian Dominance"
+ dom_ME_fra_indian_dominance_desc:0 "The riches of India shall be reserved only for the [Root.GetAdjective]. All other European nations with a presence in India must be ejected, by force if necessary." #old

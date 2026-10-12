@@ -1,0 +1,298 @@
+ME_caliph_tag_trigger = {
+	if = {
+		limit = {
+			has_saved_global_event_target = Caliph_province
+		}
+		event_target:Caliph_province = {
+			owner = {
+				$trigger$
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_saved_global_event_target = ME_caliphate_tag
+		}
+		event_target:ME_caliphate_tag = {
+			$trigger$
+		}
+	}
+	else = {
+		always = no
+	}
+}
+
+ME_is_caliphate_trigger = {
+	OR = {
+		has_reform = ME_caliphate_reform_sunni 
+		has_reform = ME_caliphate_reform_sunni_andalusia 
+		has_reform = ME_caliphate_reform_sunni_arabian 
+		has_reform = ME_caliphate_reform_shia_ibadi
+		has_country_flag = unified_islam
+	}
+}
+
+#alias for cases where the condition has to be this
+ME_has_caliphate_reform_trigger = {
+	OR = {
+		has_reform = ME_caliphate_reform_sunni 
+		has_reform = ME_caliphate_reform_sunni_andalusia 
+		has_reform = ME_caliphate_reform_sunni_arabian 
+		has_reform = ME_caliphate_reform_shia_ibadi
+	}
+}
+
+ME_can_benefit_from_abbasid_caliph = {
+	religion = sunni
+	NOT = { has_disaster = ABB_abbasid_caliph_revolt }
+}
+
+# ME_caliphate_is_active
+# ME_abbasid_caliph_exists
+
+# The requirement for all decisions/missions that would fire an event/give the caliphate reform.
+
+ME_there_is_a_caliph = {
+	OR = {
+		has_global_flag = ME_caliphate_is_active
+		has_global_flag = ME_abbasid_caliph_exists
+	}
+}
+
+ME_has_abbasid_caliph = {
+	if = {
+		limit = {
+			has_global_flag = ME_caliphate_is_active
+		}
+		custom_trigger_tooltip = {
+			tooltip = ME_caliphate_is_already_taken_trigger
+			ME_is_caliphate_trigger = yes
+		}
+	}
+	else_if = {
+		limit = {
+			has_global_flag = ME_abbasid_caliph_exists
+			has_saved_global_event_target = Caliph_province_holder
+		}
+		custom_trigger_tooltip = {
+			tooltip = ME_has_abbasid_caliph
+			event_target:Caliph_province_holder = {
+				tag = PREV
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_global_flag = ME_abbasid_caliph_exists
+			has_saved_global_event_target = Caliph_province
+		}
+		custom_trigger_tooltip = {
+			tooltip = ME_has_abbasid_caliph
+			event_target:Caliph_province = {
+				owned_by = PREV
+			}
+		}
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = ME_use_decision
+			always = no 
+		}
+	}
+}
+
+Abbasid_valid_escape_route = {
+	NOT = { has_siege = yes }
+	fort_level = 2
+	controlled_by = ROOT
+	if = {
+		limit = {
+			has_saved_global_event_target = Caliph_province
+		}
+		NOT = { province_id = event_target:Caliph_province }
+	}
+	else = {
+		always = no
+	}
+}
+
+ME_abbasid_caliph_mission_trigger = {
+	if = {
+		limit = {
+			religion = sunni
+		}
+		ME_has_abbasid_caliph = yes
+	}
+	else = {
+		ME_captured_caliph = yes
+	}
+}
+
+ME_captured_caliph = {
+	if = {
+		limit = {
+			OR = {
+				has_global_flag = ME_abbasid_caliph_exists
+				has_country_flag = ME_captured_caliph_at_one_point
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = ABA_captured_caliph
+			has_country_flag = ME_captured_caliph_at_one_point
+		}
+	}
+	else = {
+		is_defender_of_faith = yes
+	}
+}
+
+########
+# ME_can_become_caliphate_gov 
+# A scripted trigger for sunni countries to check
+# whether a caliphate government can be given to them
+#
+########
+ME_can_become_caliphate_gov = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+
+ME_abbasid_caliph_pth = {
+	if = {
+		limit = {
+			has_saved_global_event_target = Caliph_province
+		}
+		province_id = event_target:Caliph_province
+	}
+	else = { always = no }
+	NOT = { owned_by = ROOT }
+}
+
+can_enact_fatwa_effect_tt = {
+	if = {
+		limit = { has_saved_global_event_target = Caliph_province_holder }
+		event_target:Caliph_province_holder = {
+			check_variable = {
+				which = caliphal_influence
+				value = 75
+			}
+		}
+	}
+	OR = {
+		ME_has_abbasid_caliph = yes
+		has_country_flag = unified_islam
+	}
+	NOT = { is_fatwa_active = { fatwa = $fatwa$ } }
+}
+
+is_fatwa_active = {
+	if = {
+		limit = {
+			has_saved_global_event_target = Caliph_province_holder
+		}
+		event_target:Caliph_province_holder = {
+			has_country_modifier = fatwa_$fatwa$_modifier
+		}
+	}
+	else_if = {
+		limit = {
+			has_saved_global_event_target = ME_caliphate_tag
+		}
+		event_target:ME_caliphate_tag = {
+			has_country_modifier = fatwa_$fatwa$_modifier
+		}
+	}
+	else = {
+		always = no
+	}
+}
+
+same_religious_school_trigger = {
+	OR = {
+		AND = {
+			ROOT = {
+				religious_school = {
+					group = muslim
+					school = hanbali_school
+				}
+			}
+			religious_school = {
+				group = muslim
+				school = hanbali_school
+			}	
+		}
+		AND = {
+			ROOT = {
+				religious_school = {
+					group = muslim
+					school = hanafi_school
+				}
+			}
+			religious_school = {
+				group = muslim
+				school = hanafi_school
+			}	
+		}
+		AND = {
+			ROOT = {
+				religious_school = {
+					group = muslim
+					school = shafii_school
+				}
+			}
+			religious_school = {
+				group = muslim
+				school = shafii_school
+			}	
+		}
+		AND = {
+			ROOT = {
+				religious_school = {
+					group = muslim
+					school = maliki_school
+				}
+			}
+			religious_school = {
+				group = muslim
+				school = maliki_school
+			}	
+		}
+		AND = {
+			ROOT = {
+				religious_school = {
+					group = muslim
+					school = ismaili_school
+				}
+			}
+			religious_school = {
+				group = muslim
+				school = ismaili_school
+			}	
+		}
+		AND = {
+			ROOT = {
+				religious_school = {
+					group = muslim
+					school = jafari_school
+				}
+			}
+			religious_school = {
+				group = muslim
+				school = jafari_school
+			}	
+		}
+		AND = {
+			ROOT = {
+				religious_school = {
+					group = muslim
+					school = zaidi_school
+				}
+			}
+			religious_school = {
+				group = muslim
+				school = zaidi_school
+			}	
+		}
+	}
+}

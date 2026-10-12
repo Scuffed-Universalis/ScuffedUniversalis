@@ -1,0 +1,76 @@
+POR_reinvoked_crusader_spirit_trig = {
+	potential = {
+		has_global_flag = POR_can_benefit_from_eth_alliance
+		if = {
+			limit = {
+				has_saved_global_event_target = POR_por 
+			}
+			tag = event_target:POR_por
+		}
+		else = {
+			always = no
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_global_flag = POR_can_benefit_from_eth_alliance
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = POR_eth 
+			}
+			alliance_with = event_target:POR_eth
+		}
+		else = { always = no }
+	}
+	
+	tolerance_own = 1
+}
+
+POR_portuguese_support_trig = {
+	potential = {
+		has_global_flag = POR_can_benefit_from_eth_alliance
+		if = {
+			limit = {
+				has_saved_global_event_target = POR_eth 
+			}
+			tag = event_target:POR_eth
+		}
+		else = {
+			always = no
+		}
+	}
+	trigger = {
+		hidden_trigger = {
+			has_global_flag = POR_can_benefit_from_eth_alliance
+		}
+		if = {
+			limit = {
+				has_saved_global_event_target = POR_por 
+			}
+			alliance_with = event_target:POR_por
+		}
+		else = { always = no }
+	}
+	
+	mil_tech_cost_modifier = -0.1
+	mil_advisor_cost = -0.1
+}
+
+POR_trade_share = {
+	potential = {
+		has_country_flag = POR_flag_trade_share
+	}
+	trigger = {
+		NOT = {
+			1293 = {
+				trade_share = {
+					country = ROOT
+					share = 60
+				}
+			}
+		}
+	}
+	
+	trade_efficiency = 0.2 
+}

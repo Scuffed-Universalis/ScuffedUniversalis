@@ -1,0 +1,333 @@
+country_decisions = {
+	hre_iberian_duchy_decision_catalonia = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_iberian_duchy_decision_catalonia }
+			NOT = { tag = ARA }
+			OR = {
+				catalonia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ARA }
+				}
+				aragon_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ARA }
+				}
+				valencia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ARA }
+				}
+				baleares_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ARA }
+				}
+				basque_country = {
+					hre_can_cede_province_to_hre_duchy = { tag = ARA }
+				}
+				2755 = {
+					hre_can_cede_province_to_hre_duchy = { tag = ARA }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = catalonia_area
+				area = aragon_area
+				area = valencia_area
+				area = baleares_area
+				area = basque_country
+				province_id = 2755
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = ARA }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = ARA }
+				ARA = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_iberian_duchy_decision_catalonia
+			add_imperial_influence = -10
+			custom_tooltip = hre_iberian_duchy_decision_catalonia_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = catalonia_area
+					tag = ARA
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = aragon_area
+					tag = ARA
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = valencia_area
+					tag = ARA
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = baleares_area
+					tag = ARA
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = basque_country
+					tag = ARA
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 2755
+					tag = ARA
+				}
+				ARA = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = catalan
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_iberian_duchy_decision_asturias = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_iberian_duchy_decision_asturias }
+			NOT = { tag = ASU }
+			OR = {
+				galicia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ASU }
+				}
+				beieras_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ASU }
+				}
+				alentejo_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ASU }
+				}
+				asturias_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = ASU }
+				}
+				4553 = {
+					hre_can_cede_province_to_hre_duchy = { tag = ASU }
+				}
+				208 = {
+					hre_can_cede_province_to_hre_duchy = { tag = ASU }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = galicia_area
+				area = beieras_area
+				area = alentejo_area
+				area = asturias_area
+				province_id = 4553
+				province_id = 208
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = ASU }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = ASU }
+				ASU = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_iberian_duchy_decision_asturias
+			add_imperial_influence = -10
+			custom_tooltip = hre_iberian_duchy_decision_asturias_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = galicia_area
+					tag = ASU
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = beieras_area
+					tag = ASU
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = alentejo_area
+					tag = ASU
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = asturias_area
+					tag = ASU
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4553
+					tag = ASU
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 208
+					tag = ASU
+				}
+				ASU = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = galician
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_iberian_duchy_decision_castile = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_iberian_duchy_decision_castile }
+			NOT = { tag = CAS }
+			OR = {
+				extremadura_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				toledo_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				lower_andalucia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				upper_andalucia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				macaronesia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				4551 = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				217 = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				4789 = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				215 = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+				216 = {
+					hre_can_cede_province_to_hre_duchy = { tag = CAS }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = extremadura_area
+				area = toledo_area
+				area = lower_andalucia_area
+				area = upper_andalucia_area
+				area = macaronesia_area
+				province_id = 4551
+				province_id = 217
+				province_id = 4789
+				province_id = 215
+				province_id = 216
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = CAS }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = CAS }
+				CAS = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_iberian_duchy_decision_castile
+			add_imperial_influence = -10
+			custom_tooltip = hre_iberian_duchy_decision_castile_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = extremadura_area
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = toledo_area
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = lower_andalucia_area
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = upper_andalucia_area
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = macaronesia_area
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4551
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 217
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4789
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 215
+					tag = CAS
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 216
+					tag = CAS
+				}
+				CAS = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = castillian
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

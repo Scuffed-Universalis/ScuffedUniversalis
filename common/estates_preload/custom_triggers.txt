@@ -1,0 +1,17 @@
+estate_nobles = {
+	modifier_definition = {
+		key = trent_concilatory
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_nobles = {
+	modifier_definition = {
+		key = trent_harsh
+		trigger = {
+			always = yes
+		}
+	}
+}

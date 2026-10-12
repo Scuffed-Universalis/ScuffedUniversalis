@@ -1,0 +1,11 @@
+﻿l_french:
+ custom_monument_gui_destroy_channel_tunnel_tt: "Starts the partial demolition of §YThe Channel Tunnel§!\nIt will take §Y60§! days"
+ channel_tunnel_needs_to_exist: "§YThe Channel Tunnel§! needs to be built and intact."
+ artificial_strait_disabled_canal_broken: "The §Yartificial strait§! will be disabled and the corresponding monument reduced to the lowest development.\n\n§YTo restore the strait, the monument must be rebuilt and both sides must be owned and controlled§!"
+ monument_destruction_progress_tt: "The demolition will be complete in §Y[Root.destruction_progress_days.GetValue]§! days"
+ channel_tunnel_counterpart_info_tt: "This monument is linked to the §YThe Channel Tunnel§! in [235.GetName].\nIts development is determined by that of its counterpart."
+ destruction_underway_tt: "The demolition of this monument is already underway."
+ cancel_destruction: "Cancel demolition."
+ custom_ee_destroy_monument_popup_title: "[Root.GetMonumentActionTitle]"
+ custom_ee_destroy_monument_popup_description: "[Root.GetMonumentActionDesc]"
+ not_owner_and_controller_tt: "§R-Not the owner and controller of [Root.GetName]§!\n"

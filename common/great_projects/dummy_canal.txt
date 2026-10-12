@@ -1,0 +1,670 @@
+english_french_ferry = {
+	# province it starts in
+	start = 1271 # 235 is kent, 1271 is the sea, 87 is calais
+	
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 1994.05.06 # first proposal 1802 by albert mathiew-favier
+	
+	#time to build
+	time = {
+		months = 24
+	}
+	
+	#how much to build one
+	build_cost = 0
+	
+	#can we move it?
+	can_be_moved = no
+	
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 3
+	
+	#project type
+	type = canal
+
+	#can we build it?
+	build_trigger = {
+		always = yes
+	}
+	
+	#what to do when it's built
+	on_built = {
+		#show_ambient_object = strait_english_french_ferry
+		#hide_ambient_object = strait_english_french_ferry_disabled
+		#1271 = { add_canal = english_french_ferry }
+		#87 = {
+		#	add_great_project = {
+		#		type = english_french_ferry_counterpart
+		#		instant = yes
+		#	}
+		#}
+		#235 = {
+		#	add_great_project = {
+		#		type = english_french_ferry_main
+		#		instant = yes
+		#	}
+		#}
+	}
+	
+	#what to do when it's destroyed
+	on_destroyed = {
+		#show_ambient_object = strait_english_french_ferry_disabled
+		#hide_ambient_object = strait_english_french_ferry
+		#1271 = { remove_canal = english_french_ferry }
+		#87 = {
+		#	destroy_great_project = {
+		#		type = english_french_ferry_counterpart
+		#	}
+		#}
+		#235 = {
+		#	destroy_great_project = {
+		#		type = english_french_ferry_main
+		#	}
+		#}
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 120
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			custom_tooltip = channel_tunnel_gp_desc
+		}
+	}
+}
+
+english_french_ferry_main = {
+	# province it starts in
+	start = 235 # 235 is kent, 1271 is the sea, 87 is calais
+	
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 1994.05.06 # first proposal 1802 by albert mathiew-favier
+	
+	#time to build
+	time = {
+		months = 24
+	}
+	
+	#how much to build one
+	build_cost = 2500
+	
+	#can we move it?
+	can_be_moved = no
+	
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 3
+	
+	#project type
+	type = canal
+
+	#can we build it?
+	build_trigger = {
+		OR = {
+			has_global_flag = channel_tunnel_enabled
+			FROM = {
+				owns_or_vassal_of = 235
+				owns_or_vassal_of = 87
+				adm_tech = 22
+				full_idea_group = infrastructure_ideas
+			}
+		}
+	}
+	
+	#what to do when it's built
+	on_built = {
+		show_ambient_object = english_french_ferry_strait
+		hide_ambient_object = english_french_ferry_disabled_strait
+		1271 = { add_canal = english_french_ferry }
+		87 = {
+			if = {
+				limit = {
+					NOT = {
+						has_great_project = {
+							type = english_french_ferry_counterpart
+							tier = 3
+						}
+					}
+				}
+				set_global_flag = counterpart_spawning
+				add_great_project = {
+					type = english_french_ferry_counterpart
+					instant = yes
+					builder = FROM
+				}
+				add_great_project_tier = {
+					type = english_french_ferry_counterpart
+					tier = 3
+				}
+				clr_global_flag = counterpart_spawning
+			}
+		}
+		1271 = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = channel_tunnel_open
+					}
+				}
+				add_great_project = {
+					type = english_french_ferry
+					instant = yes
+					builder = FROM
+				}
+				set_global_flag = channel_tunnel_open
+			}
+		}
+	}
+	
+	#what to do when it's destroyed
+	on_destroyed = {
+		show_ambient_object = english_french_ferry_disabled_strait
+		hide_ambient_object = english_french_ferry_strait
+		1271 = { remove_canal = english_french_ferry }
+		87 = {
+			if = {
+				limit = {
+					AND = {
+						has_great_project = {
+							type = english_french_ferry_counterpart
+							tier = 3
+						}
+					}
+				}
+				add_great_project_tier = {
+					type = english_french_ferry_counterpart
+					tier = -3
+				}
+			}
+		}
+		1271 = {
+			if = {
+				limit = {
+					has_global_flag = channel_tunnel_open
+				}
+				destroy_great_project = {
+					type = english_french_ferry
+				}
+				clr_global_flag = channel_tunnel_open
+			}
+		}
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = "Owns and Controls [235.GetName]"
+			FROM = {
+				owns = 235
+				controls = 235
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = "Owns and Controls [87.GetName]"
+			FROM = {
+				owns = 87
+				controls = 87
+			}
+		}
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 24
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			custom_tooltip = channel_tunnel_gp_desc
+			hidden_effect = {
+				235 = {
+					add_great_project_tier = {
+						type = english_french_ferry_main
+						tier = 2
+					}
+				}
+				show_ambient_object = english_french_ferry_strait
+				hide_ambient_object = english_french_ferry_disabled_strait
+				1271 = { add_canal = english_french_ferry }
+				87 = {
+					if = {
+						limit = {
+							NOT = {
+								has_great_project = {
+									type = english_french_ferry_counterpart
+									tier = 3
+								}
+							}
+						}
+						set_global_flag = counterpart_spawning
+						add_great_project = {
+							type = english_french_ferry_counterpart
+							instant = yes
+							builder = FROM
+						}
+						add_great_project_tier = {
+							type = english_french_ferry_counterpart
+							tier = 3
+						}
+						clr_global_flag = counterpart_spawning
+					}
+				}
+				1271 = {
+					if = {
+						limit = {
+							NOT = {
+								has_global_flag = channel_tunnel_open
+							}
+						}
+						add_great_project = {
+							type = english_french_ferry
+							instant = yes
+							builder = FROM
+						}
+						set_global_flag = channel_tunnel_open
+					}
+				}
+			}
+		}
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 24
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 24
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			local_attacker_dice_roll_bonus = -2
+			province_trade_power_value = 5
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			custom_tooltip = channel_tunnel_gp_desc
+		}
+	}
+}
+
+english_french_ferry_counterpart = {
+	# province it starts in
+	start = 87 # 235 is kent, 1271 is the sea, 87 is calais
+	
+	# date built in real life (so anything built during game time will be there if you start a game after that date)
+	date = 1994.05.06 # first proposal 1802 by albert mathiew-favier
+	
+	#time to build
+	time = {
+		months = 24
+	}
+	
+	#how much to build one
+	build_cost = 0
+	
+	#can we move it?
+	can_be_moved = no
+	
+	#tier that the project starts at when first placed in the game (be that at game start or when built by a country as the game progresses)
+	starting_tier = 3
+	
+	#project type
+	type = canal
+
+	#can we build it?
+	build_trigger = {
+		has_global_flag = channel_tunnel_enabled
+	}
+	
+	#what to do when it's built
+	on_built = {
+	}
+	
+	#what to do when it's destroyed
+	on_destroyed = {
+	}
+
+	#can our country use it?
+	can_use_modifiers_trigger = {
+	}
+
+	#can our country upgrade it?
+	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = channel_tunnel_counterpart_tt
+			has_global_flag = counterpart_spawning
+		}
+	}
+
+	#can our country keep it or is it destroyed when we get hold of it?
+	keep_trigger = {
+	}
+
+	#tier data
+	tier_0 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 0
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 0
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_1 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 24
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 2500
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_2 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 24
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+		}
+	}
+
+	tier_3 = {
+		#time to upgrade to this level (0 for tier 0)
+		upgrade_time = {
+			months = 24
+		}
+
+		#cost to upgrade to this level (0 for tier 0)
+		cost_to_upgrade = {
+			factor = 1000
+		}
+
+		#what modifiers are added to the province when we have this project here on this tier
+		province_modifiers = {
+			local_attacker_dice_roll_bonus = -2
+			province_trade_power_value = 5
+		}
+
+		#what modifiers are added to the provinces in the map area when we have this project here on this tier
+		area_modifier = {
+		}
+
+		#what modifiers are added to the country when we have this project here on this tier
+		country_modifiers = {
+		}
+
+		#what effects happen when this tier is achieved
+		on_upgraded = {
+			custom_tooltip = channel_tunnel_gp_desc
+		}
+	}
+}

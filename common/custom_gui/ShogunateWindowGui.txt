@@ -1,0 +1,58 @@
+custom_window = {
+	name = PC1_bubble_entry
+	potential = {
+		religion_group = muslim
+		OR = {
+			capital_scope = { region = japan_region }
+			has_country_flag = emperor_of_japan
+			has_reform = shogunate
+		}
+		always = no
+	}
+}
+
+custom_text_box = {
+    name = PC1_frontend_number
+    potential = {
+		always = no
+	}
+}
+
+custom_icon = {
+	name = PC1_frontend_open_bg
+    potential = {
+	}
+}
+
+custom_button = {
+	name = PC1_frontend_open_button
+	potential = {
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = shogunate_window_shown
+			}
+			clr_country_flag = shogunate_window_shown
+		}
+		else = {
+			set_country_flag = shogunate_window_shown
+			clr_country_flag = caliphate_window_shown
+			play_sound = religion_shinto
+		}
+	}
+	tooltip = "Shogunate"
+	frame = {
+        number = 12
+        trigger = { 
+			always = yes
+		}
+    }
+}
+
+custom_window = {
+	name = shogunate_custom_window
+	potential = {
+		has_country_flag = shogunate_window_shown
+	}
+}

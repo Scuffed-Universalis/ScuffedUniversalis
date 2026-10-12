@@ -1,0 +1,100 @@
+# ME_tributary_state_interaction = {
+	# category = influence
+
+	# alert_index = 6
+	# alert_tooltip = ME_tributary_state_interaction_tooltip
+
+	# require_acceptance = yes
+
+	# is_visible = {
+		# culture_group = malay
+		# FROM = {
+			# is_subject_of = ROOT
+			# is_subject_of_type = tributary_state
+		# }
+	# }
+
+	# is_allowed = {
+		# FROM = {
+			# years_in_vassalage_under = {
+				# who = ROOT
+				# years = 30
+			# }
+		# }
+		# is_at_war = no
+		# dip_power = 100
+		# FROM = { is_at_war = no }
+	# }
+
+	# on_accept = {
+		# if = {
+			# limit = {
+				# FROM = {
+					# is_subject_of = ROOT
+					# is_subject_of_type = tributary_state
+					# years_in_vassalage_under = {
+						# who = ROOT
+						# years = 30
+					# }
+					# NOT = { liberty_desire = 5 }
+				# }
+			# }
+			# vassalize = FROM
+			# add_dip_power = -100
+		# }
+	# }
+
+	# on_decline = {
+	# }
+
+	# ai_acceptance = {
+		# add_entry = {
+			# name = OPINION
+			# export_to_variable = {
+				# which = ai_value
+				# value = opinion
+				# who = FROM
+				# with = ROOT
+			# }
+			# divide_variable = { which = ai_value value = 4 }
+		# }
+		# add_entry = {
+			# name = MODIFIER_DIPLO_SKILL
+			# export_to_variable = {
+				# which = ai_value
+				# value = modifier:diplomatic_reputation
+			# }
+			# multiply_variable = { which = ai_value value = 5 }
+		# }
+		# add_entry = {
+			# name = ROOT_IS_VASSAL_FOR_AT_LEAST_10_YEARS
+			# limit = {
+				# years_in_vassalage_under = {
+					# who = FROM
+					# years = 10
+					# all_subject_country = yes
+				# }
+			# }
+			# export_to_variable = {
+				# which = ai_value
+				# value = 1000
+			# }
+			# multiply_variable = { which = ai_value value = -1 }
+		# }
+		# add_entry = {
+			# name = ROOT_HAS_MORE_THAN_25_PERCENT_OF_OVERLORD_DEVELOPMENT
+			# limit = {
+				# development_of_overlord_fraction = 0.25
+			# }
+			# export_to_variable = {
+				# which = ai_value
+				# value = 1000
+			# }
+			# multiply_variable = { which = ai_value value = -1 }
+		# }
+	# }
+
+	# ai_will_do = {
+		# always = yes #if it can, do it.
+	# }
+# }

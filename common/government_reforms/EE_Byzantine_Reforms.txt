@@ -1,0 +1,130 @@
+byzantine_autocracy = {
+	icon = "crown"
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	nation_designer_trigger = {
+		culture_group = byzantine
+	}
+	potential = {
+		has_reform = byzantine_autocracy
+	}
+	trigger = {
+		has_reform = byzantine_autocracy
+	}
+	fixed_rank = 3
+	lock_level_when_selected = yes
+	modifiers = {
+		tolerance_own = 2
+		all_estate_loyalty_equilibrium = -0.1
+		yearly_corruption = 0.05
+	}
+
+	custom_attributes = {
+		enables_reform_progress_on_metrapolitan = yes
+	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+byzantine_late_autocracy = {
+	icon = "crown"
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	nation_designer_trigger = {
+		culture_group = byzantine
+	}
+	potential = {
+		has_reform = byzantine_late_autocracy
+	}
+	trigger = {
+		has_reform = byzantine_late_autocracy
+	}
+	fixed_rank = 3
+	lock_level_when_selected = yes
+	modifiers = {
+		tolerance_own = 2
+		governing_capacity_modifier = 0.1
+		global_autonomy = -0.05
+	}
+
+	custom_attributes = {
+		enables_reform_progress_on_metrapolitan = yes
+	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
+
+	ai = {
+		factor = 1
+	}
+}
+
+turko_hellenic_autocracy = {
+	icon = "ottoman_government"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			is_or_was_tag = { tag = BYZ }
+			is_or_was_tag = { tag = TUR }
+		}
+		has_country_flag = turko_hellenism_realized
+		OR = {
+			has_reform = turko_hellenic_autocracy
+			have_had_reform = turko_hellenic_autocracy
+		}
+	}
+	nation_designer_cost = 30
+	valid_for_nation_designer = yes
+	maintain_dynasty = yes
+	
+	modifiers = {
+		culture_conversion_cost = -0.25
+		years_of_nationalism = -5
+		max_absolutism = 10
+		governing_capacity = 200
+	}
+	
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			enables_pronoyalets = yes
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		custom_attributes = {
+			enables_estate_janissaries = yes
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		has_janissaries = yes
+		has_pashas = yes
+	}
+	conditional = {
+		allow = { 
+			has_dlc = "Cradle of Civilization"
+			NOT = { has_dlc = "Domination" }
+		}
+		has_janissaries = yes
+		has_pashas = yes
+	}
+
+	ai = {
+		factor = 1
+	}
+}

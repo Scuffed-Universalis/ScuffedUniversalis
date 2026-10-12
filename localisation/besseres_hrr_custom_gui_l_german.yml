@@ -1,0 +1,54 @@
+﻿l_german:
+ # GUIs:
+ hree_imperial_archoffices_open_button_tt: "Betrachtet die §YKaiserlichen Erzämter§! und ihre derzeitigen Inhaber."
+ hree_imperial_archoffices_open_button_tt_disabled: "-------------\n§RDie §YGoldene Bulle§! muss aktiv sein, um die §YKaiserlichen Erzämter§! zu betrachten und zu verleihen.§W"
+ hree_imperial_archoffices_title: "Erzämter"
+ hree_imperial_archoffices_title_tt: "Der Kaiser kann bis zu §Y8§! Erzämter verleihen. Von diesen können §Y7§! nur an Kurfürsten vergeben werden, während §Y1§! an irgendein unabhängiges Reichsmitglied verliehen werden kann. \nWenn der Kaiser stirbt und das §YErbkaisertum§! noch nicht eingeführt wurde, werden alle Erzämter von ihren Inhabern entfernt und der Kaiser muss sie erneut vergeben. \nSollte ein Kurfürst seinen Kurfürstenstatus verlieren, verliert er auch das ihm verliehene Erzamt, sofern es nur an Kurfürsten vergeben werden kann. Wenn ein Land, das ein Erzamt bekleidet, zu einem Untertan eines anderen Landes wird, verliert es nicht automatisch das Erzamt. \n\nDer Kaiser kann sich selbst kein Erzamt verleihen. \nEin Land kann nur §Y1§! Erzamt innehaben. \nJedes Erzamt gibt dem jeweiligen Inhaber Boni und hat auch mögliche Auswirkungen auf das Reich und den Kaiser. \n-------------\nNur wenn alle §Y8§! Erzämter verliehen sind, erhält der Kaiser die folgenden Boni: \n[reasons_to_elect]: §G+10§!"
+
+ hree_imperial_archoffice_1_shield_disabled_tt: "Derzeit hat kein Land das Erzamt des §YErzkanzlers für Germanien§! inne. \nDer Kaiser kann es einem geistlichen Kurfürsten des Heiligen Römischen Reiches mithilfe einer diplomatischen Aktion verleihen."
+ hree_imperial_archoffice_1_shield_tt: "@[hre_german_erzkanzler.GetTag] §Y[hre_german_erzkanzler.GetName]§! ist der momentane §YErzkanzler für Germanien§!."
+ hree_imperial_archoffice_1_title: "Kanzler für Germanien"
+ hree_imperial_archoffice_1_title_tt: "§YErzkanzler für Germanien§! \nDer §YErzkanzler für Germanien§! kümmert sich um Angelegenheiten im Regnum Teutonicum, dem deutschen Teil des Reiches. Seine Hauptverantwortungen liegen darin, die Kaiserwahl zu organisieren und die Reichstage zu leiten."
+ hree_imperial_archoffice_1_effect_tt: "Der §YErzkanzler für Germanien§! erhält die folgenden Boni: \n[diplomatic_reputation]: §G+1.00§! \n[yearly_devotion]: §G+0.25§! \n\nDer Kaiser kann von dem §YErzkanlzer für Germanien§! keine Rückgabe von unrechtmäßigem Territorium fordern, wenn dieser für ihn in der Kaiserwahl stimmt und nur unrechtmäßiges Territorium in der Region §YNorddeutschland§! oder §YSüddeutschland§! besitzt."
+
+ hree_imperial_archoffice_2_shield_disabled_tt: "Derzeit hat kein Land das Erzamt des §YErzkanzlers für Burgund§! inne. \nDer Kaiser kann es einem geistlichen Kurfürsten des Heiligen Römischen Reiches mithilfe einer diplomatischen Aktion verleihen."
+ hree_imperial_archoffice_2_shield_tt: "@[hre_burgundian_erzkanzler.GetTag] §Y[hre_burgundian_erzkanzler.GetName]§! ist der momentane §YErzkanzler für Burgund§!."
+ hree_imperial_archoffice_2_title: "Kanzler für Burgund"
+ hree_imperial_archoffice_2_title_tt: "§YErzkanzler für Burgund§! \nDer §YErzkanzler für Burgund§! kümmert sich um Angelegenheiten in den burgundischen und französischen Teilen des Reiches."
+ hree_imperial_archoffice_2_effect_tt: "Der §YErzkanzler für Burgund§! erhält die folgenden Boni: \n[diplomats]: §G+1§! \n[yearly_devotion]: §G+0.25§! \n\nDer Kaiser kann von dem §YErzkanlzer für Burgund§! keine Rückgabe von unrechtmäßigem Territorium fordern, wenn dieser für ihn in der Kaiserwahl stimmt und nur unrechtmäßiges Territorium in der Region §YFrankreich§! oder §YNiederlande§! besitzt."
+
+ hree_imperial_archoffice_3_shield_disabled_tt: "Derzeit hat kein Land das Erzamt des §YErzkanzlers für Italien§! inne. \nDer Kaiser kann es einem geistlichen Kurfürsten des Heiligen Römischen Reiches mithilfe einer diplomatischen Aktion verleihen."
+ hree_imperial_archoffice_3_shield_tt: "@[hre_italian_erzkanzler.GetTag] §Y[hre_italian_erzkanzler.GetName]§! ist der momentane §YErzkanzler für Italien§!."
+ hree_imperial_archoffice_3_title: "Kanzler für Italien"
+ hree_imperial_archoffice_3_title_tt: "§YErzkanzler für Italien§! \nDer §YErzkanzler für Italien§! kümmert sich um die Angelegenheiten im italienischen Teil des Reiches."
+ hree_imperial_archoffice_3_effect_tt: "Der §YErzkanzler für Italien§! erhält die folgenden Boni: \n[improve_relation_modifier]: §G+15.0%§! \n[yearly_devotion]: §G+0.25§!  \n\nDer Kaiser kann von dem §YErzkanlzer für Italien§! keine Rückgabe von unrechtmäßigem Territorium fordern, wenn dieser für ihn in der Kaiserwahl stimmt und nur unrechtmäßiges Territorium in der Region §YItalien§! oder §YBalkan§! besitzt."
+
+ hree_imperial_archoffice_4_shield_disabled_tt: "Derzeit hat kein Land das Erzamt des §YErztruchsess§! inne. \nDer Kaiser kann es einem weltlichen Kurfürsten des Heiligen Römischen Reiches mithilfe einer diplomatischen Aktion verleihen."
+ hree_imperial_archoffice_4_shield_tt: "@[hre_erztruchsess.GetTag] §Y[hre_erztruchsess.GetName]§! ist der momentane §YErztruchsess§!."
+ hree_imperial_archoffice_4_title: "Truchsess"
+ hree_imperial_archoffice_4_title_tt: "§YErztruchsess§! \nDer §YErztruchsess§! kümmert sich um die kaiserliche Hofhaltung und erledigt zeremonielle Aufgaben während der Gastmähler."
+ hree_imperial_archoffice_4_effect_tt: "Der §YErztruchsess§! erhält die folgenden Boni: \n[yearly_prestige]: §G+0.50§! \n[yearly_legitimacy]: §G+0.25§!"
+
+ hree_imperial_archoffice_5_shield_disabled_tt: "Derzeit hat kein Land das Erzamt des §YErzmarschalls§! inne. \nDer Kaiser kann es einem weltlichen Kurfürsten des Heiligen Römischen Reiches mithilfe einer diplomatischen Aktion verleihen."
+ hree_imperial_archoffice_5_shield_tt: "@[hre_erzmarschall.GetTag] §Y[hre_erzmarschall.GetName]§! ist der momentane §YErzmarschall§!."
+ hree_imperial_archoffice_5_title: "Marschall"
+ hree_imperial_archoffice_5_title_tt: "§YErzmarschall§! \nDer §YErzmarschall§! ist der militärische Stellvertreter des Kaisers. In Abwesenheit des Kaisers hat er den Oberbefehl über die kaiserliche Armee."
+ hree_imperial_archoffice_5_effect_tt: "Der §YErzmarschall§! erhält die folgenden Boni: \n[own_territory_dice_roll_bonus]: §G+1.00§! \n[yearly_legitimacy]: §G+0.25§! \n\nDer §YErzmarschall§! erhält Zugang zu der §MKaiserlichen Söldner Kompanie§!. \nWenn der Kaiser einen Ruf zu den Waffen zur Verteidigung eines Mitglieds des Reiches gegen einen Feind des Reiches akzeptiert, wird der §YErzmarschall§! auch zu den Waffen gerufen."
+
+ hree_imperial_archoffice_6_shield_disabled_tt: "Derzeit hat kein Land das Erzamt des §YErzkämmerers§! inne. \nDer Kaiser kann es einem weltlichen Kurfürsten des Heiligen Römischen Reiches mithilfe einer diplomatischen Aktion verleihen."
+ hree_imperial_archoffice_6_shield_tt: "@[hre_erzkaemmerer.GetTag] §Y[hre_erzkaemmerer.GetName]§! ist der momentane §YErzkämmerer§!."
+ hree_imperial_archoffice_6_title: "Kämmerer"
+ hree_imperial_archoffice_6_title_tt: "§YErzkämmerer§! \nDer §YErzkämmerer§! kümmert sich um die Finanzen des kaiserlichen Hofes und erledigt zeremonielle Aufgaben während der Gastmähler."
+ hree_imperial_archoffice_6_effect_tt: "Der §YErzkämmerer§! erhält die folgenden Boni: \n[global_tax_modifier]: §G+10.0%§! \n[yearly_legitimacy]: §G+0.25§!"
+
+ hree_imperial_archoffice_7_shield_disabled_tt: "Derzeit hat kein Land das Erzamt des §YErzmundschenks§! inne. \nDer Kaiser kann es einem weltlichen Kurfürsten des Heiligen Römischen Reiches mithilfe einer diplomatischen Aktion verleihen."
+ hree_imperial_archoffice_7_shield_tt: "@[hre_erzmundschenk.GetTag] §Y[hre_erzmundschenk.GetName]§! ist der momentane §YErzmundschenk§!."
+ hree_imperial_archoffice_7_title: "Mund-\nschenk"
+ hree_imperial_archoffice_7_title_tt: "§YErzmundschenk§! \nDer §YErzmundschenk§! ist verantwortlich für die Organisation der Versorgung des kaiserlichen Hofes mit Essen und Getränken, vor allem Wein, und erledigt zeremonielle Aufgaben während der Gastmähler."
+ hree_imperial_archoffice_7_effect_tt: "Der §YErzmundschenk§! erhält die folgenden Boni: \n[global_trade_goods_size_modifier]: §G+5.0%§! \n[yearly_legitimacy]: §G+0.25§!"
+
+ hree_imperial_archoffice_8_shield_disabled_tt: "Derzeit hat kein Land das Erzamt des §YErzbannerträgers§! inne. \nDer Kaiser kann es einem unabhängigen Reichsmitglied mithilfe einer diplomatischen Aktion verleihen."
+ hree_imperial_archoffice_8_shield_tt: "@[hre_erzbannertraeger.GetTag] §Y[hre_erzbannertraeger.GetName]§! ist der momentane §YErzbannerträger§!."
+ hree_imperial_archoffice_8_title: "Banner-\nträger"
+ hree_imperial_archoffice_8_title_tt: "§YErzbannerträger§! \nDer §YErzbannerträger§! trägt das Banner des Reiches während der Schlacht und repräsentiert so die kaiserliche Armee."
+ hree_imperial_archoffice_8_effect_tt: "Der §YErzbannerträger§! erhält die folgenden Boni: \n[land_morale]: §G+5.0%§! \n[yearly_legitimacy]: §G+0.25§! \n[yearly_devotion]: §G+0.25§!"

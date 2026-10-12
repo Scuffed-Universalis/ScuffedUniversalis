@@ -1,0 +1,43 @@
+defined_text = {
+	name = age_of_discovery
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = age_of_discovery
+	}
+}
+
+defined_text = {
+	name = age_of_reformation
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = age_of_reformation
+	}
+}
+
+defined_text = {
+	name = age_of_absolutism
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = age_of_absolutism
+	}
+}
+
+defined_text = {
+	name = age_of_revolutions
+
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = age_of_revolutions
+	}
+}

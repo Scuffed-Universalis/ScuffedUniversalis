@@ -1,0 +1,432 @@
+estate_industrial_establish_board_of_executives = {
+	icon = privilege_recruit_minister
+	land_share = 0
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.15
+	loyalty = 0.1
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	benefits = {
+		industrial_privilege_slots = 3
+	}
+	penalties = {
+		core_creation = 0.25
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_central_belt = {
+	icon = privilege_monopoly_of_goods_iron
+	land_share = 0
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	loyalty = 0.1
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+		mission_completed = RHN_moselle
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_industrial_all_hessian_culture_provs
+		tooltip = {
+			add_province_modifier = {
+				name = RHN_central_belt
+				duration = -1
+			}
+		}
+		custom_tooltip = estate_industrial_other
+		tooltip = {
+			add_province_modifier = {
+				name = RHN_non_central_belt
+				duration = -1
+			}
+		}
+	}
+	on_granted_province = {
+		if = {
+			limit = {
+				culture = hessian
+			}
+			add_province_modifier = {
+				name = RHN_central_belt
+				duration = -1
+			}
+		}
+		else = {
+			add_province_modifier = {
+				name = RHN_non_central_belt
+				duration = -1
+			}
+		}
+	}
+	on_revoked_province = {
+		remove_province_modifier = RHN_central_belt
+		remove_province_modifier = RHN_non_central_belt
+	}
+	on_invalid_province = {
+		remove_province_modifier = RHN_central_belt
+		remove_province_modifier = RHN_non_central_belt
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_establish_industrial_parks = {
+	icon = privilege_dev_cost
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.1
+	loyalty = 0.0
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	
+	influence_scaled_conditional_modifier = {
+		trigger = {
+			NOT = { mission_completed = RHN_center_of_europe }
+			NOT = { 
+				estate_influence = {
+					estate = estate_industrial
+					influence = 100 
+				}
+			}
+		}
+		modifier = { development_cost_modifier = -0.1 }
+	}
+	
+	conditional_modifier = {
+		trigger = {
+			NOT = { mission_completed = RHN_center_of_europe }
+			estate_influence = {
+				estate = estate_industrial
+				influence = 100 
+			}
+		}
+		modifier = {
+			development_cost_modifier = -0.1
+		}
+	}
+	
+	influence_scaled_conditional_modifier = {
+		trigger = {
+			mission_completed = RHN_center_of_europe
+			NOT = { 
+				estate_influence = {
+					estate = estate_industrial
+					influence = 100 
+				}
+			}
+		}
+		modifier = { development_cost_modifier = -0.2 }
+	}
+	
+	conditional_modifier = {
+		trigger = {
+			mission_completed = RHN_center_of_europe
+			estate_influence = {
+				estate = estate_industrial
+				influence = 100 
+			}
+		}
+		modifier = {
+			development_cost_modifier = -0.2
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_more_worker_rights = {
+	icon = privilege_peasant
+	land_share = 0
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = -0.1
+	loyalty = -0.05
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	on_granted = {
+	}
+	benefits = {
+		global_unrest = -1
+		global_prosperity_growth = 0.5
+	}
+	penalties = {
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_private_armies = {
+	icon = privilege_army_tradition
+	land_share = 0
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.05
+	loyalty = 0.15
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	on_granted = {
+	}
+	benefits = {
+	}
+	penalties = {
+		global_manpower_modifier = -0.1
+		nobles_loyalty_modifier = -0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_industrial_bureaucracy = {
+	icon = privilege_diplomat
+	land_share = 0
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.10
+	loyalty = 0
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	benefits = {
+		free_adm_policy = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_centralized_industry = {
+	icon = privilege_admin_power
+	land_share = 0
+	max_absolutism = 0
+	influence = 0.05
+	loyalty = 0.1
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+		NOT = { has_estate_privilege = estate_industrial_decentralized_industry }
+	}
+	conditional_modifier = {
+		trigger = { has_dlc = "Leviathan" }
+		modifier = {
+			centralize_state_cost = -0.25
+			expand_infrastructure_cost_modifier = -0.25
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			NOT = { has_dlc = "Leviathan" }
+		}
+		modifier = {
+			build_cost = -0.075
+		}
+	}
+	on_granted = {
+		custom_tooltip = RHN_exclusive_with_decentralized_industry
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_decentralized_industry = {
+	icon = privilege_goods_produced
+	land_share = 0
+	max_absolutism = 0
+	influence = 0.10
+	loyalty = 0.05
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+		NOT = { has_estate_privilege = estate_industrial_centralized_industry }
+	}
+	benefits = {
+		global_trade_goods_size = 0.1
+	}
+	on_granted = {
+		custom_tooltip = RHN_exclusive_with_centralized_industry
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_land_appropriation = {
+	icon = privilege_gold_mint
+	land_share = 5
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.10
+	loyalty = 0.1
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	benefits = {
+		global_allowed_num_of_buildings = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_land_developers = {
+	icon = privilege_grant_new_world_charter
+	land_share = 0
+	max_absolutism = -10
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 2 } }
+	influence = 0.05
+	loyalty = 0.1
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+		has_dlc = "Dharma"
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	benefits = {
+		colonists = 3
+		colony_cost_modifier = 1.5
+	}
+	on_granted = {
+		custom_tooltip = estate_industrial_may_only_promote_settlement_growth
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_facilitate_industrial_growth = {
+	icon = privilege_monopoly
+	land_share = 0
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.1
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	conditional_modifier = {
+		trigger = {
+			NOT = { has_country_flag = RHN_upgrade_the_facilitate_industrial_growth_estate_privilege_flag }
+		}
+		modifier = {
+			state_maintenance_modifier = 0.25
+		}
+	}
+	benefits = {
+		build_time = -0.25
+		global_allowed_num_of_manufactories = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+estate_industrial_agroindustrialization = {
+	icon = privilege_serf
+	land_share = 0
+	max_absolutism = -5
+	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
+	influence = 0.05
+	loyalty = 0.1
+	is_valid = {
+		NOT = { estate_industrial_privileges_invalid = yes }
+		mission_completed = RHN_leather
+	}
+	can_select = {
+		NOT = {
+			estate_industrial_privileges_allow = yes
+		}
+	}
+	
+	on_granted = {
+		custom_tooltip = RHN_every_grain_prov
+	}
+	
+	on_granted_province = {
+		if = {
+			limit = {
+				OR = {
+					trade_goods = grain
+					trade_goods = livestock
+				}
+			}
+			add_province_modifier = {
+				name = RHN_grain_buff
+				duration = -1
+			}
+		}
+	}
+	on_invalid_province = {
+		remove_province_modifier = RHN_grain_buff
+	}
+	on_revoked_province = {
+		remove_province_modifier = RHN_grain_buff
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

@@ -1,0 +1,4 @@
+# For Religions & Cultures Expanded:
+rce_gain_religious_power_from_splendor = {
+	custom_tooltip = ase_spend_additional_splendor_entry_button_no_effect
+}

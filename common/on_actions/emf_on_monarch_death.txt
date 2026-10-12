@@ -1,0 +1,367 @@
+on_monarch_death = {
+	EE_FRA_inherit_brittany_chance = yes
+	EE_FRA_inherit_burgundy_chance = yes
+	events = {
+		ME_Reform_Events.1
+		ME_Mzab_Events.2
+		ME_Korea_Events.6
+		ME_Korea_Events.8
+	}
+	
+	random_events = {
+		#100 = 0
+		100 = 0
+		900 = ME_Mamluks_Events.21
+	}
+	
+	if = {
+		limit = {
+			has_ruler_flag = Ulugh_beg_is_ruler
+		}
+		ROOT = {
+			country_event = { id = ME_Timurid_Princes_Event.11 }
+		}
+	}
+	complete_mission = me_tim_regency
+	
+	if = {
+		limit = {
+			tag = TIM
+			has_global_flag = tim_successor
+		}
+		event_target:me_tim_successor = {
+			country_event = { id = ME_Timurid_Princes_Event.20 }
+		}
+		clr_global_flag = tim_successor
+	}
+	else_if = {
+		limit = {
+			tag = TIM
+			has_global_flag = prince_successor
+		}
+		event_target:me_tim_successor = {
+			country_event = { id = ME_Timurid_Princes_Event.19 }
+		}
+		clr_global_flag = prince_successor
+	}
+	else_if = {
+		limit = {
+			tag = TIM
+			has_country_flag = ME_TIM_no_successor
+		}
+		country_event = { id = ME_Timurid_Princes_Event.12 }
+	}
+	else = { } #don't complain error log.
+	
+	if = {
+		limit = {
+			has_country_flag = me_subah_mechanic
+		}
+		every_owned_province = {
+			limit = {
+				has_province_modifier = me_mug_subah_focus
+			}
+			remove_province_modifier = me_mug_subah_focus
+		}
+		remove_country_modifier = me_mug_hindu_subah
+		remove_country_modifier = me_mug_hindu_subah_negative
+		remove_country_modifier = me_mug_bengal_subah
+		remove_country_modifier = me_mug_bengal_subah_negative
+		remove_country_modifier = me_mug_rajput_subah
+		remove_country_modifier = me_mug_rajput_subah_negative
+		remove_country_modifier = me_mug_gujarat_subah
+		remove_country_modifier = me_mug_gujarat_subah_negative
+		remove_country_modifier = me_mug_malwa_subah_bonus
+		remove_country_modifier = me_mug_malwa_subah_negative
+		remove_country_modifier = me_mug_deccan_subah_bonus
+		remove_country_modifier = me_mug_deccan_subah_malus
+		
+		country_event = { id = ME_Mughal_Events.23 }
+	}
+	
+	if = {
+		limit = {
+			has_heir_flag = QAR_fulad
+		}
+		clr_heir_flag = QAR_fulad
+		country_event = { id = ME_Qara_Qoyunlu_Events.7 }
+	}
+	
+	if = {
+		limit = {
+			tag = HAB
+		}
+		country_event = { id = me_austria_nobles.1 }
+	}
+	
+	if = {
+		limit = {
+			has_reform = west_slavic_monarchy
+			NOT = { has_country_flag = ME_FFS_STAP }
+		}
+		set_country_flag = ME_FFS_STAP
+		country_event = { id = ME_Zapadoslavia_Events.9 }
+	}
+	if = {
+		limit = {
+			tag = ERE
+			#mission_completed = ERE_tombs
+		}
+		random_owned_province = {
+			province_event = {
+				id = ME_Beylik_Events.14
+			}
+		}
+	}
+	if = {
+		limit = {
+			has_country_flag = me_hab_iron_fist_flag
+		}
+		ROOT = {
+			change_variable = { #To count how many ruler deaths have happened
+				which = MEIronFistVar
+				value = 1
+			}
+			if = {
+				limit = {
+					check_variable = { #To count how many ruler deaths have happened
+						which = MEIronFistVar
+						value = 1
+					}
+				}
+				clr_country_flag = me_hab_iron_fist_flag
+				every_owned_province = {
+					remove_province_modifier = me_hab_iron_fist
+				}
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			is_emperor = yes
+		}
+		ROOT = {
+			me_decrease_emperor_of_romans_level = yes
+		}
+	}
+	
+	if = {
+		limit = {
+			has_country_flag = me_hab_conquer_iberia
+		}
+		clr_country_flag = me_hab_conquer_iberia
+		break_union = CAS
+		break_union = SPA
+		break_union = POR
+		break_union = ARA
+	}
+	if = {
+		limit = {
+			dip = 0
+			NOT = { dip = 1 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 0 }
+	}
+	else_if = {
+		limit = {
+			dip = 1
+			NOT = { dip = 2 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 1 }
+	}
+	else_if = {
+		limit = {
+			dip = 2
+			NOT = { dip = 3 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 2 }
+	}
+	else_if = {
+		limit = {
+			dip = 3
+			NOT = { dip = 4 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 3 }
+	}
+	else_if = {
+		limit = {
+			dip = 4
+			NOT = { dip = 5 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 4 }
+	}
+	else_if = {
+		limit = {
+			dip = 5
+			NOT = { dip = 6 }
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 5 }
+	}
+	else_if = {
+		limit = {
+			dip = 6
+			has_country_flag = me_tim_caravan_modifier
+		}
+		ME_add_caravan_modifier = { level = 6 }
+	}
+	
+	if = {
+		limit = {
+			has_country_flag = me_tim_picked_regency
+		}
+		restore_country_name = yes
+	}
+	
+	if = {
+		limit = {
+			has_country_flag = GEL_become_subject_soon
+			has_saved_global_event_target = GEL_we_will_take_over_gelre
+		}
+		clr_country_flag = GEL_become_subject_soon
+		event_target:GEL_we_will_take_over_gelre = {
+			create_subject = {
+				subject = ROOT
+				subject_type = dutch_vassal
+			}
+		}
+		clear_global_event_target = GEL_we_will_take_over_gelre
+	}
+	
+	if = {
+		limit = {
+			has_country_flag = AVE_we_will_get_recurring_events
+		}
+		country_event = { id = ME_Angevin_Empire_Events.3 days = 30 random = 1095 }}
+}
+
+on_new_monarch = {	
+
+	events = {
+		ME_Portugal_Events.17   # End of Portuguese Regency
+	}
+
+	#ME Stuff
+	if = {
+		limit = {
+			has_country_flag = me_tim_ruler_timer
+			NOT = {
+				had_country_flag = {
+					flag = me_tim_ruler_timer
+					days = 5475
+				}
+			}
+		}
+		add_country_modifier = {
+			name = me_mug_failed_coinage_reforms
+			duration = 5475
+		}
+		clr_country_flag = me_tim_ruler_timer
+	}
+
+	if = {
+		limit = {
+			mission_completed = EE_syn_synthetic_dawn
+		}
+		add_adm_power = 200
+		add_dip_power = 200
+		add_mil_power = 200
+	}
+	
+	if = {
+		limit = { has_country_flag = EE_CLT_royal_council }
+		country_event = {
+			id = EE_Celtica_Events.40
+		}
+	}
+	
+	if = {
+		limit = {
+			OR = {
+				SPA = {
+					has_ruler_flag = ee_spa_charles_heir
+				}
+				CAS = {
+					has_ruler_flag = ee_spa_charles_heir
+				}
+			}
+			HAB = {
+				has_ruler_flag = ee_spa_charles_heir
+			}
+		}
+		if = {
+			limit = {
+				HAB = {
+					ai = no
+				}
+			}
+			HAB = {
+				country_event = { id = ME_Castile_Events.54 }
+			}
+		}
+		else_if = {
+			limit = {
+				exists = CAS
+			}
+			CAS = {
+				country_event = { id = ME_Castile_Events.54 }
+			}
+			#set_country_flag = ee_spa_peaceful_pu
+		}
+		else = {
+			SPA = {
+				country_event = { id = ME_Castile_Events.54 }
+			}
+			#set_country_flag = ee_spa_peaceful_pu
+		}
+	}
+
+	if = {
+		limit = {
+			government = monarchy
+			has_country_flag = ara_coronation_flag
+			214 = {
+				owned_by = ROOT
+			}
+		}
+		if = {
+			limit = {
+				214 = {
+					has_province_modifier = ara_coronation_celebrations
+				}
+			}
+			214 = {
+				remove_province_modifier = ara_coronation_celebrations
+			}
+		}
+		214 = {
+			add_province_modifier = {
+				name = ara_coronation_celebrations
+				duration = 5475
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			tag = PAP
+			has_global_flag = pap_empire_of_god_ambition
+		}
+		transfer_papal_controller = PAP
+		define_heir = {
+			male = yes
+			claim = 100
+			age = 15
+			block_disinherit = yes
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+		}
+	}
+}

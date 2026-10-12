@@ -1,0 +1,37 @@
+defined_text = {
+	name = MEEstateHasTwoStability
+	random = no
+
+	text = {
+		localisation_key = ME_yes
+		trigger = {
+			stability = 2
+		}
+	}
+	
+	text = {
+		localisation_key = ME_no
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetMercantilismPrivilegeBonus
+	random = no
+
+	text = {
+		localisation_key = ME_burghers_cot_cost
+		trigger = {
+			has_dlc = "Dharma"
+		}
+	}
+	
+	text = {
+		localisation_key = ME_burghers_prod_eff_bonus
+		trigger = {
+			always = yes
+		}
+	}
+}

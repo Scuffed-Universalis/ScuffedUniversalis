@@ -1,0 +1,29 @@
+on_startup = {
+	country_event = { id = advisor_types_expanded_events.1 }
+}
+
+on_bi_yearly_pulse_4 = {
+	random_events = {
+		100 = ate_advisor_court_physician_events.1 # Local Court Physician discovered
+		100 = ate_advisor_feudal_tax_collector_events.1 # Local Feudal Tax Collector discovered
+		60 = ate_advisor_free_thinker_events.1 # Local Free Thinker discovered
+		60 = ate_advisor_genius_events.1 # Local Adm/Dip/Mil Genius discovered
+		100 = ate_advisor_lord_of_a_castle_events.1 # Local Lord of a Castle discovered
+		75 = ate_advisor_loyal_friend_events.1 # Local Adm/Dip/Mil Loyal Friend discovered
+		100 = ate_advisor_siege_expert_events.1 # Local Siege Expert discovered
+		100 = ate_advisor_missionary_events.1 # Local Missionary discovered
+		100 = ate_advisor_plantation_owner_events.1 # Local Planation Owner discovered
+		100 = ate_advisor_scholar_events.1 # Local Scholar discovered
+		100 = ate_advisor_witch_hunter_events.1 # Local Witch Hunter discovered
+		75 = ate_advisor_concubine_events.2 # Local Concubine discovered
+	}
+}
+
+on_four_year_pulse_4 = {
+	random_events = {
+		100 = ate_general_events.66 # ATE ADM Advisor gains power
+		100 = ate_general_events.67 # ATE DIP Advisor gains power
+		100 = ate_general_events.68 # ATE MIL Advisor gains power
+		100 = ate_general_events.77 # Court, to pick advisor
+	}
+}

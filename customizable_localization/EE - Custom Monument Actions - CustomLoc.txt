@@ -1,0 +1,35 @@
+defined_text = {
+	name = GetMonumentActionTitle
+	random = no
+
+	text = {
+		localisation_key = "Cancel demolition"
+		trigger = {
+			has_country_flag = monument_action_cancel
+		}
+	}
+	text = {
+		localisation_key = "Confirm demolition"
+		trigger = {
+			has_country_flag = monument_action_demolish
+		}
+	}
+}
+
+defined_text = {
+	name = GetMonumentActionDesc
+	random = no
+
+	text = {
+		localisation_key = "Are you sure you wish to cancel the monument from being demolished?"
+		trigger = {
+			has_country_flag = monument_action_cancel
+		}
+	}
+	text = {
+		localisation_key = "Are you sure you wish to demolish the monument?"
+		trigger = {
+			has_country_flag = monument_action_demolish
+		}
+	}
+}

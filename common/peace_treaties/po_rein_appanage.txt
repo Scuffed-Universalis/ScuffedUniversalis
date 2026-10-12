@@ -1,0 +1,38 @@
+EE_FRA_po_rein_appanage = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 0
+	prestige_base = 0.155
+	ae_base = 0
+	warscore_cost = {
+		all_provinces = 0.0
+		no_provinces = 100.0
+		owner_keeps = 0.0
+		conquered = 0.0
+		returned_core = 0.0
+		released_nation = 0.0
+		cancelled_subject = 0.0
+		concede_colonial_region = 0.0
+	}
+	warscore_cap = 100
+	requires_is_allowed = yes
+	is_visible = {
+		has_country_flag = EE_FRA_war_weal_flag
+		FROM = { has_country_flag = ME_FRA_ex_appanage }
+	}
+	is_allowed = {
+		FROM = { has_country_flag = ME_FRA_ex_appanage }
+	}
+	effect = {
+		FRA = { set_country_flag = EE_FRA_rein_appanage }
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 10
+		}
+		limit = {
+			always = yes
+		}
+	}
+}

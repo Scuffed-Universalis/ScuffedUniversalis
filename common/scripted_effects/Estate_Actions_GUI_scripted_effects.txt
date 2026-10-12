@@ -1,0 +1,6283 @@
+clear_estate_interaction_flags = {
+	clr_country_flag = estate_interaction_target_brahmins#
+	clr_country_flag = estate_interaction_target_church#
+	clr_country_flag = estate_interaction_target_maratha#
+	clr_country_flag = estate_interaction_target_nobles#
+	clr_country_flag = estate_interaction_target_vaisyas
+	clr_country_flag = estate_interaction_target_burghers
+	clr_country_flag = estate_interaction_target_cossacks
+	clr_country_flag = estate_interaction_target_nomadic_tribes
+	clr_country_flag = estate_interaction_target_dhimmi
+	clr_country_flag = estate_interaction_target_jains
+	clr_country_flag = estate_interaction_target_janissaries
+	clr_country_flag = estate_interaction_target_eunuchs
+	clr_country_flag = estate_interaction_target_qizilbash
+	clr_country_flag = estate_interaction_target_ghulams
+	clr_country_flag = estate_interaction_target_rajput
+	clr_country_flag = estate_interaction_target_berbers
+	clr_country_flag = estate_interaction_target_cultural_minorities
+	clr_country_flag = estate_interaction_target_industrial
+	clr_country_flag = estate_interaction_target_turkic_tribes
+	#once again remove the new element 1 from the list so that the new element 2 is now the beginning
+	#clear_estate_interaction_flags = yes\n\t\t\tset_country_flag
+}
+
+estate_interaction_jump_right = {
+	if = {
+		limit = {
+			has_estate = estate_brahmins
+			OR = { has_country_flag = estate_interaction_target_brahmins }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_church }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_church
+			OR = { has_country_flag = estate_interaction_target_church }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_maratha
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_maratha
+			OR = { has_country_flag = estate_interaction_target_maratha }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_nobles
+			OR = { has_country_flag = estate_interaction_target_nobles }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_vaisyas
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_vaisyas
+			OR = { has_country_flag = estate_interaction_target_vaisyas }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_burghers
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_burghers
+			OR = { has_country_flag = estate_interaction_target_burghers }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_cossacks
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_cossacks
+			OR = { has_country_flag = estate_interaction_target_cossacks }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_nomadic_tribes
+			OR = { has_country_flag = estate_interaction_target_nomadic_tribes }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_dhimmi
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_dhimmi
+			OR = { has_country_flag = estate_interaction_target_dhimmi }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_jains
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_jains
+			OR = { has_country_flag = estate_interaction_target_jains }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_janissaries
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_janissaries
+			OR = { has_country_flag = estate_interaction_target_janissaries }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_eunuchs
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_eunuchs
+			OR = { has_country_flag = estate_interaction_target_eunuchs }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_qizilbash
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_qizilbash
+			OR = { has_country_flag = estate_interaction_target_qizilbash }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_ghulams
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_ghulams
+			OR = { has_country_flag = estate_interaction_target_ghulams }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_rajput
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_rajput
+			OR = { has_country_flag = estate_interaction_target_rajput }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_berbers
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_berbers
+			OR = { has_country_flag = estate_interaction_target_berbers }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_industrial
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_cultural_minorities
+			OR = { has_country_flag = estate_interaction_target_cultural_minorities }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_industrial
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_industrial
+			OR = { has_country_flag = estate_interaction_target_industrial }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_turkic_tribes
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_turkic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_turkic_tribes
+			OR = { has_country_flag = estate_interaction_target_turkic_tribes }
+		}
+
+	}
+
+}
+
+estate_interaction_jump_left = {
+	if = {
+		limit = {
+			has_estate = estate_turkic_tribes
+			OR = { has_country_flag = estate_interaction_target_turkic_tribes }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_industrial
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_industrial
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+				NOT = { has_estate = estate_industrial }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_industrial }
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_industrial
+			OR = { has_country_flag = estate_interaction_target_industrial }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_cultural_minorities
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cultural_minorities
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_berbers
+				NOT = { has_estate = estate_cultural_minorities }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_cultural_minorities }
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_cultural_minorities
+			OR = { has_country_flag = estate_interaction_target_cultural_minorities }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_berbers
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_berbers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_rajput
+				NOT = { has_estate = estate_berbers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_berbers }
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_berbers
+			OR = { has_country_flag = estate_interaction_target_berbers }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_rajput
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_rajput
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_ghulams
+				NOT = { has_estate = estate_rajput }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_rajput }
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_rajput
+			OR = { has_country_flag = estate_interaction_target_rajput }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_ghulams
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_ghulams
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_qizilbash
+				NOT = { has_estate = estate_ghulams }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_ghulams }
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_ghulams
+			OR = { has_country_flag = estate_interaction_target_ghulams }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_qizilbash
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_qizilbash
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_eunuchs
+				NOT = { has_estate = estate_qizilbash }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_qizilbash }
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_qizilbash
+			OR = { has_country_flag = estate_interaction_target_qizilbash }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_eunuchs
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_eunuchs
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_janissaries
+				NOT = { has_estate = estate_eunuchs }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_eunuchs }
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_eunuchs
+			OR = { has_country_flag = estate_interaction_target_eunuchs }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_janissaries
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_janissaries
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_jains
+				NOT = { has_estate = estate_janissaries }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_janissaries }
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_janissaries
+			OR = { has_country_flag = estate_interaction_target_janissaries }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_jains
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_jains
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_dhimmi
+				NOT = { has_estate = estate_jains }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_jains }
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_jains
+			OR = { has_country_flag = estate_interaction_target_jains }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_dhimmi
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_dhimmi
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+				NOT = { has_estate = estate_dhimmi }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_dhimmi }
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_dhimmi
+			OR = { has_country_flag = estate_interaction_target_dhimmi }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_nomadic_tribes
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nomadic_tribes
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_cossacks
+				NOT = { has_estate = estate_nomadic_tribes }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_nomadic_tribes }
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_nomadic_tribes
+			OR = { has_country_flag = estate_interaction_target_nomadic_tribes }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_cossacks
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_cossacks
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_burghers
+				NOT = { has_estate = estate_cossacks }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_cossacks }
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_cossacks
+			OR = { has_country_flag = estate_interaction_target_cossacks }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_burghers
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_burghers
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_vaisyas
+				NOT = { has_estate = estate_burghers }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_burghers }
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_burghers
+			OR = { has_country_flag = estate_interaction_target_burghers }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_vaisyas
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_nobles
+				NOT = { has_estate = estate_vaisyas }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_vaisyas }
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_vaisyas
+			OR = { has_country_flag = estate_interaction_target_vaisyas }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_nobles
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_maratha
+				NOT = { has_estate = estate_nobles }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_nobles }
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_nobles
+			OR = { has_country_flag = estate_interaction_target_nobles }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_maratha
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_maratha
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_church
+				NOT = { has_estate = estate_maratha }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_maratha }
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_maratha
+			OR = { has_country_flag = estate_interaction_target_maratha }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_church
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_church
+		}
+		else_if = {
+			limit = {
+				has_estate = estate_brahmins
+				NOT = { has_estate = estate_church }
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_church
+			OR = { has_country_flag = estate_interaction_target_church }
+		}
+
+		if = {
+			limit = {
+				has_estate = estate_brahmins
+			}
+			set_country_flag = state_interaction_target_changed
+			clear_estate_interaction_flags = yes
+			set_country_flag = estate_interaction_target_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			has_estate = estate_brahmins
+			OR = { has_country_flag = estate_interaction_target_brahmins }
+		}
+
+	}
+
+}
+
+set_initial_estate_decision = {
+	if = {
+		limit = {
+			has_estate = estate_brahmins
+		}
+		set_country_flag = estate_interaction_target_brahmins
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			has_estate = estate_church
+		}
+		set_country_flag = estate_interaction_target_church
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			has_estate = estate_maratha
+		}
+		set_country_flag = estate_interaction_target_maratha
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			has_estate = estate_nobles
+		}
+		set_country_flag = estate_interaction_target_nobles
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			has_estate = estate_vaisyas
+		}
+		set_country_flag = estate_interaction_target_vaisyas
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			has_estate = estate_burghers
+		}
+		set_country_flag = estate_interaction_target_burghers
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			has_estate = estate_cossacks
+		}
+		set_country_flag = estate_interaction_target_cossacks
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			has_estate = estate_nomadic_tribes
+		}
+		set_country_flag = estate_interaction_target_nomadic_tribes
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			has_estate = estate_dhimmi
+		}
+		set_country_flag = estate_interaction_target_dhimmi
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			has_estate = estate_jains
+		}
+		set_country_flag = estate_interaction_target_jains
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			has_estate = estate_janissaries
+		}
+		set_country_flag = estate_interaction_target_janissaries
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			NOT = { has_estate = estate_janissaries }
+			has_estate = estate_eunuchs
+		}
+		set_country_flag = estate_interaction_target_eunuchs
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			NOT = { has_estate = estate_janissaries }
+			NOT = { has_estate = estate_eunuchs }
+			has_estate = estate_qizilbash
+		}
+		set_country_flag = estate_interaction_target_qizilbash
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			NOT = { has_estate = estate_janissaries }
+			NOT = { has_estate = estate_eunuchs }
+			NOT = { has_estate = estate_qizilbash }
+			has_estate = estate_ghulams
+		}
+		set_country_flag = estate_interaction_target_ghulams
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			NOT = { has_estate = estate_janissaries }
+			NOT = { has_estate = estate_eunuchs }
+			NOT = { has_estate = estate_qizilbash }
+			NOT = { has_estate = estate_ghulams }
+			has_estate = estate_rajput
+		}
+		set_country_flag = estate_interaction_target_rajput
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			NOT = { has_estate = estate_janissaries }
+			NOT = { has_estate = estate_eunuchs }
+			NOT = { has_estate = estate_qizilbash }
+			NOT = { has_estate = estate_ghulams }
+			NOT = { has_estate = estate_rajput }
+			has_estate = estate_berbers
+		}
+		set_country_flag = estate_interaction_target_berbers
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			NOT = { has_estate = estate_janissaries }
+			NOT = { has_estate = estate_eunuchs }
+			NOT = { has_estate = estate_qizilbash }
+			NOT = { has_estate = estate_ghulams }
+			NOT = { has_estate = estate_rajput }
+			NOT = { has_estate = estate_berbers }
+			has_estate = estate_cultural_minorities
+		}
+		set_country_flag = estate_interaction_target_cultural_minorities
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			NOT = { has_estate = estate_janissaries }
+			NOT = { has_estate = estate_eunuchs }
+			NOT = { has_estate = estate_qizilbash }
+			NOT = { has_estate = estate_ghulams }
+			NOT = { has_estate = estate_rajput }
+			NOT = { has_estate = estate_berbers }
+			NOT = { has_estate = estate_cultural_minorities }
+			has_estate = estate_industrial
+		}
+		set_country_flag = estate_interaction_target_industrial
+	}
+	if = {
+		limit = {
+			NOT = { has_estate = estate_brahmins }
+			NOT = { has_estate = estate_church }
+			NOT = { has_estate = estate_maratha }
+			NOT = { has_estate = estate_nobles }
+			NOT = { has_estate = estate_vaisyas }
+			NOT = { has_estate = estate_burghers }
+			NOT = { has_estate = estate_cossacks }
+			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = { has_estate = estate_dhimmi }
+			NOT = { has_estate = estate_jains }
+			NOT = { has_estate = estate_janissaries }
+			NOT = { has_estate = estate_eunuchs }
+			NOT = { has_estate = estate_qizilbash }
+			NOT = { has_estate = estate_ghulams }
+			NOT = { has_estate = estate_rajput }
+			NOT = { has_estate = estate_berbers }
+			NOT = { has_estate = estate_cultural_minorities }
+			NOT = { has_estate = estate_industrial }
+			has_estate = estate_turkic_tribes
+		}
+		set_country_flag = estate_interaction_target_turkic_tribes
+	}
+}
+
+brahmins_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = MAKE_GENEROUS_DONATION_BRAHMINS
+			}
+			estate_action = {
+				estate_action = MAKE_GENEROUS_DONATION_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+}
+
+brahmins_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = SEEK_SUPPORT_OF_BRAHMINS
+			}
+			estate_action = {
+				estate_action = SEEK_SUPPORT_OF_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+}
+
+brahmins_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_ADVISOR_BRAHMINS
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+}
+
+brahmins_interaction_four_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_ADVISOR_BRAHMINS
+			}
+			estate_action = {
+				estate_action = RECRUIT_INQUISITOR_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+}
+
+brahmins_interaction_five_effect = {
+			set_estate_action_cooldown = {
+				estate_action = SEEK_BRAHMIN_LEGITIMACY_BRAHMINS
+			}
+			estate_action = {
+				estate_action = SEEK_BRAHMIN_LEGITIMACY_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+}
+
+church_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = MAKE_GENEROUS_DONATION_CHURCH
+			}
+			estate_action = {
+				estate_action = MAKE_GENEROUS_DONATION_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+}
+
+church_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_ADVISOR_CHURCH
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+}
+
+church_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_ADVISOR_CHURCH
+			}
+			estate_action = {
+				estate_action = RECRUIT_INQUISITOR_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+}
+
+church_interaction_four_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RELIGIOUS_DELEGATION_CHURCH
+			}
+			estate_action = {
+				estate_action = RELIGIOUS_DELEGATION_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+}
+
+church_interaction_five_effect = {
+			set_estate_action_cooldown = {
+				estate_action = SEEK_SUPPORT_OF_CLERGY_CHURCH
+			}
+			estate_action = {
+				estate_action = SEEK_SUPPORT_OF_CLERGY_CHURCH
+			}
+			increase_estate_action_counter = {
+				estate = estate_church
+			}
+}
+
+maratha_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = PROMOTE_MARATHA_NOBILITY_MARATHA
+			}
+			estate_action = {
+				estate_action = PROMOTE_MARATHA_NOBILITY_MARATHA
+			}
+			increase_estate_action_counter = {
+				estate = estate_maratha
+			}
+}
+
+maratha_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_MARATHA
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_MARATHA
+			}
+			increase_estate_action_counter = {
+				estate = estate_maratha
+			}
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				add_estate_loyalty = {
+					estate = estate_nobles
+					loyalty = -5
+				}
+			}
+			#add_estate_influence_modifier = {
+			#	estate = estate_maratha
+			#	desc = EST_VAL_MARATHA_MINISTER
+			#	influence = 15
+			#	duration = 10950
+			#}
+}
+
+maratha_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MARATHI_TROOPS_MARATHA
+			}
+			estate_action = {
+				estate_action = RECRUIT_MARATHI_TROOPS_MARATHA
+			}
+			increase_estate_action_counter = {
+				estate = estate_maratha
+			}
+}
+
+nobles_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = CALL_DIET_NOBLES
+			}
+			estate_action = {
+				estate_action = CALL_DIET_NOBLES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nobles
+			}
+}
+
+nobles_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+			}
+			estate_action = {
+				estate_action = GRANT_GENERALSHIP_NOBLES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nobles
+			}
+}
+
+nobles_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+			}
+			estate_action = {
+				estate_action = RECRUIT_CONQUISTADOR_ESTATES_NOBLES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nobles
+			}
+}
+
+nobles_interaction_four_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_NOBLES
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_NOBLES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nobles
+			}
+}
+
+nobles_interaction_five_effect = {
+			set_estate_action_cooldown = {
+				estate_action = DEMAND_MORE_TROOPS_NOBLES
+			}
+			estate_action = {
+				estate_action = DEMAND_MORE_TROOPS_NOBLES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nobles
+			}
+}
+
+vaisyas_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = ASK_FOR_CONTRIBUTION_VAISYAS
+			}
+			estate_action = {
+				estate_action = ASK_FOR_CONTRIBUTION_VAISYAS
+			}
+			increase_estate_action_counter = {
+				estate = estate_vaisyas
+			}
+}
+
+vaisyas_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = SEEK_GUILD_SUPPORT_VAISYAS
+			}
+			estate_action = {
+				estate_action = SEEK_GUILD_SUPPORT_VAISYAS
+			}
+			increase_estate_action_counter = {
+				estate = estate_vaisyas
+			}
+}
+
+vaisyas_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_VAISYAS
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_VAISYAS
+			}
+			increase_estate_action_counter = {
+				estate = estate_vaisyas
+			}
+}
+
+vaisyas_interaction_four_effect = {
+			set_estate_action_cooldown = {
+				estate_action = COMISSION_MERCHANT_SHIPS_FOR_WAR_VAISYAS
+			}
+			estate_action = {
+				estate_action = COMISSION_MERCHANT_SHIPS_FOR_WAR_VAISYAS
+			}
+			increase_estate_action_counter = {
+				estate = estate_vaisyas
+			}
+}
+
+burghers_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = ASK_FOR_CONTRIBUTION_BURGHERS
+			}
+			estate_action = {
+				estate_action = ASK_FOR_CONTRIBUTION_BURGHERS
+			}
+			increase_estate_action_counter = {
+				estate = estate_burghers
+			}
+}
+
+burghers_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = GRANT_MONOPOLY_CHARTER_BURGHERS
+			}
+			estate_action = {
+				estate_action = GRANT_MONOPOLY_CHARTER_BURGHERS
+			}
+			increase_estate_action_counter = {
+				estate = estate_burghers
+			}
+}
+
+burghers_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_BURGHERS
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_BURGHERS
+			}
+			increase_estate_action_counter = {
+				estate = estate_burghers
+			}
+}
+
+burghers_interaction_four_effect = {
+			set_estate_action_cooldown = {
+				estate_action = ADMIRAL_FROM_ESTATE
+			}
+			estate_action = {
+				estate_action = GRANT_ADMIRALSHIP_BURGHERS
+			}
+			increase_estate_action_counter = {
+				estate = estate_burghers
+			}
+}
+
+burghers_interaction_five_effect = {
+			set_estate_action_cooldown = {
+				estate_action = COMISSION_MERCHANT_SHIPS_FOR_WAR_BURGHERS
+			}
+			estate_action = {
+				estate_action = COMISSION_MERCHANT_SHIPS_FOR_WAR_BURGHERS
+			}
+			increase_estate_action_counter = {
+				estate = estate_burghers
+			}
+}
+
+cossacks_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RAISE_COSSACK_HOST_COSSACKS
+			}
+			estate_action = {
+				estate_action = RAISE_COSSACK_HOST_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+}
+
+cossacks_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+			}
+			estate_action = {
+				estate_action = COSSACK_CONQUISTADOR_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+}
+
+cossacks_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_COSSACKS
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+}
+
+cossacks_interaction_four_effect = {
+			set_estate_action_cooldown = {
+				estate_action = CONSCRIPT_COSSACK_ELITE_COSSACKS
+			}
+			estate_action = {
+				estate_action = CONSCRIPT_COSSACK_ELITE_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+}
+
+cossacks_interaction_five_effect = {
+			set_estate_action_cooldown = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+			}
+			estate_action = {
+				estate_action = SUPPLY_ARMS_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+}
+
+cossacks_interaction_six_effect = {
+			set_estate_action_cooldown = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+			}
+			estate_action = {
+				estate_action = PERMIT_SELF_GOVERNANCE_COSSACKS
+			}
+			increase_estate_action_counter = {
+				estate = estate_cossacks
+			}
+}
+
+nomadic_tribes_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = SUPPORT_TRIBES_NOMADIC_TRIBES
+			}
+			estate_action = {
+				estate_action = SUPPORT_TRIBES_NOMADIC_TRIBES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nomadic_tribes
+			}
+}
+
+nomadic_tribes_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = CONTRIBUTE_WARRIORS_NOMADIC_TRIBES
+			}
+			estate_action = {
+				estate_action = CONTRIBUTE_WARRIORS_NOMADIC_TRIBES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nomadic_tribes
+			}
+}
+
+nomadic_tribes_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RAISE_HOST_NOMADIC_TRIBES
+			}
+			estate_action = {
+				estate_action = RAISE_HOST_NOMADIC_TRIBES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nomadic_tribes
+			}
+}
+
+nomadic_tribes_interaction_four_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_NOMADIC_TRIBES
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_NOMADIC_TRIBES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nomadic_tribes
+			}
+}
+
+nomadic_tribes_interaction_five_effect = {
+			set_estate_action_cooldown = {
+				estate_action = REDISTRIBUTE_HORDE_AUTHORITY_TRIBES
+			}
+			estate_action = {
+				estate_action = REDISTRIBUTE_HORDE_AUTHORITY_TRIBES
+			}
+			increase_estate_action_counter = {
+				estate = estate_nomadic_tribes
+			}
+}
+
+dhimmi_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_MINISTER_DHIMMI
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_DHIMMI
+			}
+			increase_estate_action_counter = {
+				estate = estate_dhimmi
+			}
+}
+
+dhimmi_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = PROMOTE_DHIMMI_NOBLES_DHIMMI
+			}
+			estate_action = {
+				estate_action = PROMOTE_DHIMMI_NOBLES_DHIMMI
+			}
+			increase_estate_action_counter = {
+				estate = estate_dhimmi
+			}
+}
+
+dhimmi_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = DEMAND_CONTRIBUTION_DHIMMI
+			}
+			estate_action = {
+				estate_action = DEMAND_CONTRIBUTION_DHIMMI
+			}
+			increase_estate_action_counter = {
+				estate = estate_dhimmi
+			}
+}
+
+jains_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = PROCURE_LOANS_JAINS
+			}
+			estate_action = {
+				estate_action = PROCURE_LOANS_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+}
+
+jains_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = INVESTIGATE_CORRUPTION_JAINS
+			}
+			estate_action = {
+				estate_action = INVESTIGATE_CORRUPTION_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+}
+
+jains_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = PATRONIZE_JAIN_FAMILIES_JAINS
+			}
+			estate_action = {
+				estate_action = PATRONIZE_JAIN_FAMILIES_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+}
+
+jains_interaction_four_effect = {
+			set_estate_action_cooldown = {
+				estate_action = COMMISSION_JAIN_SCRIPTURES_JAINS
+			}
+			estate_action = {
+				estate_action = COMMISSION_JAIN_SCRIPTURES_JAINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_jains
+			}
+}
+
+qizilbash_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = GRANT_QIZILBASH_HORSES
+			}
+			estate_action = {
+				estate_action = GRANT_QIZILBASH_HORSES
+			}
+			increase_estate_action_counter = {
+				estate = estate_qizilbash
+			}
+}
+
+ghulams_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = PROMOTE_CAUCASIAN_TROOPS
+			}
+			estate_action = {
+				estate_action = PROMOTE_CAUCASIAN_TROOPS
+			}
+			increase_estate_action_counter = {
+				estate = estate_ghulams
+			}
+}
+
+rajput_interaction_one_effect = {
+			set_estate_action_cooldown = {
+				estate_action = GENERAL_FROM_ESTATES
+			}
+			estate_action = {
+				estate_action = RECRUIT_RAJPUT_GENERAL_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+}
+
+rajput_interaction_two_effect = {
+			set_estate_action_cooldown = {
+				estate_action = PROMOTE_RAJPUT_NOBILITY_RAJPUT
+			}
+			estate_action = {
+				estate_action = PROMOTE_RAJPUT_NOBILITY_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+}
+
+rajput_interaction_three_effect = {
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_RAJPUT_TROOPS_RAJPUT
+			}
+			estate_action = {
+				estate_action = RECRUIT_RAJPUT_TROOPS_RAJPUT
+			}
+			increase_estate_action_counter = {
+				estate = estate_rajput
+			}
+}
+
+brahmins_interaction_six_effect = {
+
+}
+
+brahmins_interaction_seven_effect = {
+
+}
+
+brahmins_interaction_eight_effect = {
+
+}
+
+church_interaction_six_effect = {
+
+}
+
+church_interaction_seven_effect = {
+
+}
+
+church_interaction_eight_effect = {
+
+}
+
+maratha_interaction_four_effect = {
+
+}
+
+maratha_interaction_five_effect = {
+
+}
+
+maratha_interaction_six_effect = {
+
+}
+
+maratha_interaction_seven_effect = {
+
+}
+
+maratha_interaction_eight_effect = {
+
+}
+
+nobles_interaction_six_effect = {
+
+}
+
+nobles_interaction_seven_effect = {
+
+}
+
+nobles_interaction_eight_effect = {
+
+}
+
+vaisyas_interaction_five_effect = {
+
+}
+
+vaisyas_interaction_six_effect = {
+
+}
+
+vaisyas_interaction_seven_effect = {
+
+}
+
+vaisyas_interaction_eight_effect = {
+
+}
+
+burghers_interaction_six_effect = {
+
+}
+
+burghers_interaction_seven_effect = {
+
+}
+
+burghers_interaction_eight_effect = {
+
+}
+
+cossacks_interaction_seven_effect = {
+
+}
+
+cossacks_interaction_eight_effect = {
+
+}
+
+nomadic_tribes_interaction_six_effect = {
+
+}
+
+nomadic_tribes_interaction_seven_effect = {
+
+}
+
+nomadic_tribes_interaction_eight_effect = {
+
+}
+
+dhimmi_interaction_four_effect = {
+
+}
+
+dhimmi_interaction_five_effect = {
+
+}
+
+dhimmi_interaction_six_effect = {
+
+}
+
+dhimmi_interaction_seven_effect = {
+
+}
+
+dhimmi_interaction_eight_effect = {
+
+}
+
+jains_interaction_five_effect = {
+
+}
+
+jains_interaction_six_effect = {
+
+}
+
+jains_interaction_seven_effect = {
+
+}
+
+jains_interaction_eight_effect = {
+
+}
+
+janissaries_interaction_one_effect = {
+
+}
+
+janissaries_interaction_two_effect = {
+
+}
+
+janissaries_interaction_three_effect = {
+
+}
+
+janissaries_interaction_four_effect = {
+
+}
+
+janissaries_interaction_five_effect = {
+
+}
+
+janissaries_interaction_six_effect = {
+
+}
+
+janissaries_interaction_seven_effect = {
+
+}
+
+janissaries_interaction_eight_effect = {
+
+}
+
+eunuchs_interaction_one_effect = {
+
+}
+
+eunuchs_interaction_two_effect = {
+
+}
+
+eunuchs_interaction_three_effect = {
+
+}
+
+eunuchs_interaction_four_effect = {
+
+}
+
+eunuchs_interaction_five_effect = {
+
+}
+
+eunuchs_interaction_six_effect = {
+
+}
+
+eunuchs_interaction_seven_effect = {
+
+}
+
+eunuchs_interaction_eight_effect = {
+
+}
+
+qizilbash_interaction_two_effect = {
+
+}
+
+qizilbash_interaction_three_effect = {
+
+}
+
+qizilbash_interaction_four_effect = {
+
+}
+
+qizilbash_interaction_five_effect = {
+
+}
+
+qizilbash_interaction_six_effect = {
+
+}
+
+qizilbash_interaction_seven_effect = {
+
+}
+
+qizilbash_interaction_eight_effect = {
+
+}
+
+ghulams_interaction_two_effect = {
+
+}
+
+ghulams_interaction_three_effect = {
+
+}
+
+ghulams_interaction_four_effect = {
+
+}
+
+ghulams_interaction_five_effect = {
+
+}
+
+ghulams_interaction_six_effect = {
+
+}
+
+ghulams_interaction_seven_effect = {
+
+}
+
+ghulams_interaction_eight_effect = {
+
+}
+
+rajput_interaction_four_effect = {
+
+}
+
+rajput_interaction_five_effect = {
+
+}
+
+rajput_interaction_six_effect = {
+
+}
+
+rajput_interaction_seven_effect = {
+
+}
+
+rajput_interaction_eight_effect = {
+
+}
+
+berbers_interaction_one_effect = {
+
+}
+
+berbers_interaction_two_effect = {
+
+}
+
+berbers_interaction_three_effect = {
+
+}
+
+berbers_interaction_four_effect = {
+
+}
+
+berbers_interaction_five_effect = {
+
+}
+
+berbers_interaction_six_effect = {
+
+}
+
+berbers_interaction_seven_effect = {
+
+}
+
+berbers_interaction_eight_effect = {
+
+}
+
+cultural_minorities_interaction_one_effect = {
+
+}
+
+cultural_minorities_interaction_two_effect = {
+
+}
+
+cultural_minorities_interaction_three_effect = {
+
+}
+
+cultural_minorities_interaction_four_effect = {
+
+}
+
+cultural_minorities_interaction_five_effect = {
+
+}
+
+cultural_minorities_interaction_six_effect = {
+
+}
+
+cultural_minorities_interaction_seven_effect = {
+
+}
+
+cultural_minorities_interaction_eight_effect = {
+
+}
+
+industrial_interaction_one_effect = {
+
+}
+
+industrial_interaction_two_effect = {
+
+}
+
+industrial_interaction_three_effect = {
+
+}
+
+industrial_interaction_four_effect = {
+
+}
+
+industrial_interaction_five_effect = {
+
+}
+
+industrial_interaction_six_effect = {
+
+}
+
+industrial_interaction_seven_effect = {
+
+}
+
+industrial_interaction_eight_effect = {
+
+}
+
+turkic_tribes_interaction_one_effect = {
+
+}
+
+turkic_tribes_interaction_two_effect = {
+
+}
+
+turkic_tribes_interaction_three_effect = {
+
+}
+
+turkic_tribes_interaction_four_effect = {
+
+}
+
+turkic_tribes_interaction_five_effect = {
+
+}
+
+turkic_tribes_interaction_six_effect = {
+
+}
+
+turkic_tribes_interaction_seven_effect = {
+
+}
+
+turkic_tribes_interaction_eight_effect = {
+
+}
+

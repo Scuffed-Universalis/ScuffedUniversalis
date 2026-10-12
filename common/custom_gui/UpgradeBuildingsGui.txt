@@ -1,0 +1,575 @@
+custom_window = {
+	name = ee_upgrade_buildings_window
+	potential = {
+		has_country_flag = upgrade_building_toggle_active
+	}
+}
+
+custom_icon = {
+	name = upgrade_buildings_background
+    potential = {
+	}
+}
+
+custom_button = {
+	name = ee_macrobuilder_button
+	tooltip = ee_macrobuilder_open_tt
+	potential = {
+	}
+	trigger = {}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = upgrade_building_toggle_active
+					}
+				}
+				set_country_flag = upgrade_building_toggle_active
+			}
+			else = { clr_country_flag = upgrade_building_toggle_active }
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = ee_macrobuilder_tab_1
+	tooltip = ee_macrobuilder_tab_1_tt
+	potential = {
+	}
+	trigger = {}
+	effect = {
+		hidden_effect = {
+			set_country_flag = upgrade_building_toggle_active
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+	frame = {
+        number = 2
+        trigger = { 
+			has_country_flag = upgrade_building_toggle_active
+		}
+    }
+	frame = {
+        number = 1
+        trigger = { 
+			always = yes
+		}
+    }
+}
+
+custom_button = {
+	name = upgrade_buildings_toggle
+	tooltip = upgrade_buildings_menu_open
+	potential = {
+		NOT = {
+			FROM = { has_country_flag = upgrade_building_toggle_active }
+		}
+	}
+	trigger = {}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					FROM = { has_country_flag = upgrade_building_toggle_active }
+				}
+			}
+			FROM = { set_country_flag = upgrade_building_toggle_active }
+		}
+		else = { FROM = { clr_country_flag = upgrade_building_toggle_active } }
+		hidden_effect = {
+			FROM = {
+				predict_build_costs = {
+					scope = every_owned_province
+				}
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_toggle_quit
+	#tooltip = upgrade_buildings_menu_close
+	potential = {
+	}
+	trigger = {}
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					FROM = { has_country_flag = upgrade_building_toggle_active }
+				}
+			}
+			FROM = { set_country_flag = upgrade_building_toggle_active }
+		}
+		else = { FROM = { clr_country_flag = upgrade_building_toggle_active } }
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_refresh
+	tooltip = upgrade_buildings_refresh_tt
+	potential = {
+	}
+	trigger = {}
+	effect = {
+		FROM = {
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_trade_depot
+	tooltip = upgrade_buildings_build_trade_depot_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = marketplace
+			can_build = trade_depot
+			can_construct_building = yes
+		} dip_tech = 17}
+		can_afford_build_cost = { value = 300 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = trade_depot
+				upgrade_target = marketplace
+				all_prior_trig = "has_building = marketplace"
+				pick_best_function = pick_best_trade_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_stock_exchange
+	tooltip = upgrade_buildings_build_stock_exchange_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			OR = {
+				has_building = marketplace
+				has_building = trade_depot
+			}
+			can_build = stock_exchange
+			can_construct_building = yes
+		} dip_tech = 22}
+		can_afford_build_cost = { value = 400 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = stock_exchange
+				upgrade_target = trade_depot
+				all_prior_trig = "OR = {
+						has_building = marketplace
+						has_building = trade_depot
+					}"
+				pick_best_function = pick_best_trade_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_town_hall
+	tooltip = upgrade_buildings_build_town_hall_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = courthouse
+			can_build = town_hall
+			can_construct_building = yes
+		} adm_tech = 22}
+		can_afford_build_cost = { value = 200 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = town_hall
+				upgrade_target = courthouse
+				all_prior_trig = "has_building = courthouse"
+				pick_best_function = pick_best_gov_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_drydock
+	tooltip = upgrade_buildings_build_drydock_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = dock
+			can_build = drydock
+			can_construct_building = yes
+		} dip_tech = 19}
+		can_afford_build_cost = { value = 300 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = drydock
+				upgrade_target = dock
+				all_prior_trig = "has_building = dock"
+				pick_best_function = pick_best_sailor_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_grand_shipyard
+	tooltip = upgrade_buildings_build_grand_shipyard_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = shipyard
+			can_build = grand_shipyard
+			can_construct_building = yes
+		} dip_tech = 24}
+		can_afford_build_cost = { value = 300 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = grand_shipyard
+				upgrade_target = shipyard
+				all_prior_trig = "has_building = shipyard"
+				pick_best_function = pick_best_navy_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_counting_house
+	tooltip = upgrade_buildings_build_counting_house_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = workshop
+			can_build = counting_house
+			can_construct_building = yes
+		} adm_tech = 24}
+		can_afford_build_cost = { value = 400 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = counting_house
+				upgrade_target = workshop
+				all_prior_trig = "has_building = workshop"
+				pick_best_function = pick_best_prod_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_training_fields
+	tooltip = upgrade_buildings_build_training_fields_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = barracks
+			can_build = training_fields
+			can_construct_building = yes
+		} mil_tech = 16}
+		can_afford_build_cost = { value = 300 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = training_fields
+				upgrade_target = barracks
+				all_prior_trig = "has_building = barracks"
+				pick_best_function = pick_best_manpower_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_conscription_center
+	tooltip = upgrade_buildings_build_conscription_center_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = regimental_camp
+			can_build = conscription_center
+			can_construct_building = yes
+		} mil_tech = 22}
+		can_afford_build_cost = { value = 400 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = conscription_center
+				upgrade_target = regimental_camp
+				all_prior_trig = "has_building = regimental_camp"
+				pick_best_function = pick_best_army_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_cathedral
+	tooltip = upgrade_buildings_build_cathedral_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = temple
+			can_build = cathedral
+			can_construct_building = yes
+		} adm_tech = 19}
+		can_afford_build_cost = { value = 300 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = cathedral
+				upgrade_target = temple
+				all_prior_trig = "has_building = temple"
+				pick_best_function = pick_best_tax_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_fort_16th
+	tooltip = upgrade_buildings_build_fort_16th_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = fort_15th
+			can_build = fort_16th
+			can_construct_building = yes
+		} mil_tech = 14}
+		can_afford_build_cost = { value = 400 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = fort_16th
+				upgrade_target = fort_15th
+				all_prior_trig = "has_building = fort_15th"
+				pick_best_function = pick_best_fort_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_fort_17th
+	tooltip = upgrade_buildings_build_fort_17th_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			OR = {
+				has_building = fort_15th
+				has_building = fort_16th
+			}
+			can_build = fort_17th
+			can_construct_building = yes
+		} mil_tech = 19}
+		can_afford_build_cost = { value = 600 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = fort_17th
+				upgrade_target = fort_16th
+				all_prior_trig = "OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+					}"
+				pick_best_function = pick_best_fort_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_fort_18th
+	tooltip = upgrade_buildings_build_fort_18th_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			OR = {
+				has_building = fort_15th
+				has_building = fort_16th
+				has_building = fort_17th
+			}
+			can_build = fort_18th
+			can_construct_building = yes
+		} mil_tech = 24}
+		can_afford_build_cost = { value = 800 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = fort_18th
+				upgrade_target = fort_17th
+				all_prior_trig = "OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+					}"
+				pick_best_function = pick_best_fort_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = upgrade_buildings_build_naval_battery
+	tooltip = upgrade_buildings_build_naval_battery_tt
+	potential = {
+	}
+	trigger = {
+		FROM = { any_owned_province = {
+			has_building = coastal_defence
+			can_build = naval_battery
+			can_construct_building = yes
+		} dip_tech = 12}
+		can_afford_build_cost = { value = 200 }
+	}
+	effect = { 
+		FROM = {
+			build_as_many_as_possible = {
+				new_building = naval_battery
+				upgrade_target = coastal_defence
+				pick_best_function = pick_best_navydef_province
+				#block_flag = choosing_best_trade
+				#variable = province_trade_score
+				#target = highest_score_trade
+				cost = 1
+				speed = 1
+			}
+			predict_build_costs = {
+				scope = every_owned_province
+			}
+		}
+	}
+}

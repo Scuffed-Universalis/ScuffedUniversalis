@@ -1,0 +1,207 @@
+can_select_estate_agenda = {
+	has_estate = $estate$
+	can_select_estate_agenda_$agenda$ = yes
+}
+
+can_select_estate_agenda_estate_maya_build_university = {
+	adm_tech = 17
+	any_owned_province = {
+		is_state_core = ROOT
+		NOT = { has_building = university }
+		OR = {
+			num_free_building_slots = 1
+			NOT = { num_of_buildings_in_province = 12 }
+		}
+	}
+}
+
+can_select_estate_agenda_estate_maya_develop_province = {
+	any_owned_province = {
+		is_state_core = ROOT
+	}
+}
+
+can_select_estate_agenda_estate_maya_teach_ruler = {
+	OR = {
+		government = monarchy
+		government = native
+		AND = {
+			government = tribal
+			OR = {
+				has_reform = tribal_despotism
+				has_reform = tribal_kingdom
+			}
+		}
+	}
+	has_regency = no
+	NOT = { ADM = 6 }
+	NOT = { has_ruler_flag = estate_maya_teach_ruler_flag }
+}
+
+can_select_estate_agenda_estate_maya_advisor_employed = {
+	NOT = { has_country_modifier = estate_maya_advisor_employed_modifier }
+	NOT = { advisor = mayan_scribe }
+	num_of_owned_provinces_with = {
+		value = 1
+		has_building = university
+	}
+}
+
+estate_industrial_privileges_allow = {
+	# num_of_estate_privileges = {
+		# estate = estate_industrial
+		# value = 4
+	# }
+	always = no
+}
+
+estate_industrial_privileges_invalid = {
+	always = no
+}
+
+ME_has_90_progress_on_estate_disaster_trigger = {
+	OR = {
+		has_disaster_progress = {
+			disaster = estate_church_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_burghers_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_nobility_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_dhimmi_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_brahmins_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_cossacks_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_jains_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_maratha_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_nomadic_tribes_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_rajput_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_vaisyas_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_settlers_disaster
+			value = 90
+		}
+		has_disaster_progress = {
+			disaster = estate_industrial_disaster
+			value = 90
+		}
+	}
+}
+
+ME_has_10_progress_on_estate_disaster_trigger = {
+	OR = {
+		has_disaster_progress = {
+			disaster = estate_church_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_burghers_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_nobility_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_dhimmi_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_brahmins_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_cossacks_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_jains_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_maratha_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_nomadic_tribes_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_rajput_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_vaisyas_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_settlers_disaster
+			value = 10
+		}
+		has_disaster_progress = {
+			disaster = estate_industrial_disaster
+			value = 10
+		}
+	}
+}
+
+ME_less_than_10_provinces_occupied_req = {
+	if = {
+		limit = {
+			num_of_cities = 500
+		}
+		custom_trigger_tooltip = {
+			tooltip = ME_less_than_50_provinces_occupied
+			NOT = { ME_num_of_occupied_provinces_estate = { value = 50 } }
+		}
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				num_of_cities = 10
+			}
+		}
+		is_at_war = no
+	}
+	else = {
+		custom_trigger_tooltip = {
+			tooltip = ME_less_than_10_provinces_occupied_req_tt
+			ME_less_than_10_provinces_occupied_req_script = yes #in file for binary search stuff
+		}
+	}
+}
+
+ME_num_of_occupied_provinces_estate = {
+	num_of_owned_provinces_with = {
+		NOT = { controlled_by = ROOT }
+		value = $value$ 
+	}
+}

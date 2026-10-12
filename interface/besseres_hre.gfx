@@ -1,0 +1,319 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_icon_elector_small"
+		texturefile = "gfx//interface//icon_elector_small.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_icon_church_elector_small"
+		texturefile = "gfx//interface//icon_ecc_elector_small.dds"
+		loadType = "INGAME"
+	}
+
+	# GUIs:
+	spriteType = {
+		name = "GFX_hree_imperial_archoffices_open_button"
+		textureFile = "gfx/interface/hree_imperial_archoffices_open_button.dds"
+	}
+	spriteType = {
+		name = "GFX_hree_imperial_archoffices_bg"
+		textureFile = "gfx/interface/hree_imperial_archoffices_bg.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_hree_imperial_archoffices_bg_leagues"
+		textureFile = "gfx/interface/hree_imperial_archoffices_bg_leagues.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_hree_imperial_archoffices_titles_bg"
+		textureFile = "gfx/interface/hree_imperial_archoffices_titles_bg.dds"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_hree_imperial_archoffices_shield_bg_icon_strip"
+		textureFile = "gfx/interface/hree_imperial_archoffices_shield_bg_icon_strip.dds"
+		noOfFrames = 8
+		allwaystransparent = yes
+	}
+
+	# CBs:
+	spriteType = {
+		name = "GFX_cb_declare_anti_king"
+		texturefile = "gfx/interface/casus_bellis/cb_claim_throne.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_free_imprisoned_ruler"
+		texturefile = "gfx/interface/casus_bellis/cb_liberation.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_enforce_new_pope"
+		texturefile = "gfx/interface/casus_bellis/cb_excommunication.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_convert_slavic_pagans"
+		texturefile = "gfx/interface/casus_bellis/cb_crusade.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_add_country_to_hre"
+		texturefile = "gfx/interface/casus_bellis/cb_hre_attacked.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_remove_country_from_hre"
+		texturefile = "gfx/interface/casus_bellis/cb_imperial_ban.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_free_imperial_vassal"
+		texturefile = "gfx/interface/casus_bellis/cb_liberation.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_revoke_electorate_golden_bull"
+		texturefile = "gfx/interface/casus_bellis/cb_imperial_ban.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_hre_hussite_coalition"
+		texturefile = "gfx/interface/casus_bellis/cb_crusade.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_hre_italian_war"
+		texturefile = "gfx/interface/casus_bellis/cb_hre_attacked.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_enforce_kingdom_rank_in_hre"
+		texturefile = "gfx/interface/casus_bellis/cb_claim_throne.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_challenge_foreign_emperor"
+		texturefile = "gfx/interface/casus_bellis/cb_claim_throne.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_hree_imperial_ban"
+		texturefile = "gfx/interface/casus_bellis/cb_imperial_ban.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_cb_hree_liberate_subject_hre_member"
+		texturefile = "gfx/interface/casus_bellis/cb_hre_attacked.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+
+	# Imperial Incidents
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_golden_bull_events2.EVTOPT1"
+        texturefile = "gfx/interface/imperial_incident_hre.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_golden_bull_events2.EVTOPT2"
+        texturefile = "gfx/interface/imperial_incident_legitimacy.dds"
+        loadType = "INGAME"
+    }
+
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_slavic_pagans_events2.EVTOPT1"
+        texturefile = "gfx/interface/imperial_incident_catholic_religion.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_slavic_pagans_events2.EVTOPT2"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_slavic_pagans_events2.EVTOPT3"
+        texturefile = "gfx/interface/imperial_incident_denial_of_request.dds"
+        loadType = "INGAME"
+    }
+
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_investiture_controversy_events4.EVTOPT1"
+        texturefile = "gfx/interface/imperial_incident_hre.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_investiture_controversy_events4.EVTOPT2"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_investiture_controversy_events4.EVTOPT3"
+        texturefile = "gfx/interface/imperial_incident_catholic_religion.dds"
+        loadType = "INGAME"
+    }
+
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_peace_of_augsburg_events2.EVTOPT1"
+        texturefile = "gfx/interface/imperial_incident_catholic_religion.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_peace_of_augsburg_events2.EVTOPT2"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_the_hussite_question_events2.EVTOPT1"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_the_hussite_question_events2.EVTOPT2"
+        texturefile = "gfx/interface/imperial_incident_sword.dds"
+        loadType = "INGAME"
+    }
+
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_foreign_emperor_events2.EVTOPT1"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_foreign_emperor_events2.EVTOPT2"
+        texturefile = "gfx/interface/imperial_incident_hre.dds"
+        loadType = "INGAME"
+    }
+    spriteType = {
+        name = "GFX_besseres_hrr_incident_foreign_emperor_events2.EVTOPT3"
+        texturefile = "gfx/interface/imperial_incident_sword.dds"
+        loadType = "INGAME"
+    }
+
+	spriteType = {
+        name = "GFX_besseres_hrr_incident_one_empire_one_faith_events2.EVTOPT1"
+        texturefile = "gfx/interface/imperial_incident_catholic_religion.dds"
+        loadType = "INGAME"
+    }
+	spriteType = {
+        name = "GFX_besseres_hrr_incident_one_empire_one_faith_events2.EVTOPT2"
+        texturefile = "gfx/interface/imperial_incident_diplomat.dds"
+        loadType = "INGAME"
+    }
+
+	# Text Icons:
+	spriteType = {
+		name = "GFX_text_hre_eagle"
+		texturefile = "gfx/texticons/text_hre_eagle.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_default"
+		texturefile = "gfx/texticons/text_hre_color_default.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_alternative"
+		texturefile = "gfx/texticons/text_hre_color_alternative.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_HAB"
+		texturefile = "gfx/texticons/text_hre_color_HAB.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_BUR"
+		texturefile = "gfx/texticons/text_hre_color_BUR.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_SOR"
+		texturefile = "gfx/texticons/text_hre_color_SOR.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_SWA"
+		texturefile = "gfx/texticons/text_hre_color_SWA.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_SWA_ET"
+		texturefile = "gfx/texticons/text_hre_color_SWA_ET.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_WUR"
+		texturefile = "gfx/texticons/text_hre_color_WUR.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_LOT"
+		texturefile = "gfx/texticons/text_hre_color_LOT.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_BAV"
+		texturefile = "gfx/texticons/text_hre_color_BAV.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_SAX"
+		texturefile = "gfx/texticons/text_hre_color_SAX.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_FKN"
+		texturefile = "gfx/texticons/text_hre_color_FKN.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_BRA"
+		texturefile = "gfx/texticons/text_hre_color_BRA.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_PRU"
+		texturefile = "gfx/texticons/text_hre_color_PRU.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_DTT"
+		texturefile = "gfx/texticons/text_hre_color_DTT.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_TEU"
+		texturefile = "gfx/texticons/text_hre_color_TEU.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_FRA"
+		texturefile = "gfx/texticons/text_hre_color_FRA.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_POL"
+		texturefile = "gfx/texticons/text_hre_color_POL.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_MLO"
+		texturefile = "gfx/texticons/text_hre_color_MLO.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_NAP"
+		texturefile = "gfx/texticons/text_hre_color_NAP.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_ENG"
+		texturefile = "gfx/texticons/text_hre_color_ENG.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_ITA"
+		texturefile = "gfx/texticons/text_hre_color_ITA.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_SPA"
+		texturefile = "gfx/texticons/text_hre_color_SPA.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_NED"
+		texturefile = "gfx/texticons/text_hre_color_NED.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_BOH"
+		texturefile = "gfx/texticons/text_hre_color_BOH.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_LUX"
+		texturefile = "gfx/texticons/text_hre_color_LUX.tga"
+	}
+	spriteType = {
+		name = "GFX_text_hre_color_CLI"
+		texturefile = "gfx/texticons/text_hre_color_CLI.tga"
+	}
+}

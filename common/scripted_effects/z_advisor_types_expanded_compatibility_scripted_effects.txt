@@ -1,0 +1,3339 @@
+# Compatibility with Peace Treaties Expanded
+ate_pte_take_advisor_adm_effect = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_adm
+		}
+		if = {
+			limit = {
+				ate_advisor_loyal_friend_adm = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_adm skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_loyal_friend_adm = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_adm skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_adm skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_court_physician
+		}
+		if = {
+			limit = {
+				ate_advisor_court_physician = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_court_physician skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_court_physician = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_court_physician skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_court_physician skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cardinal
+		}
+		if = {
+			limit = {
+				ate_advisor_cardinal = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cardinal skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_cardinal = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cardinal skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cardinal skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_catholic
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_bishop_catholic = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_catholic skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_bishop_catholic = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_catholic skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_catholic skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_protestant
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_bishop_protestant = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_protestant skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_bishop_protestant = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_protestant skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_protestant skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_reformed
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_bishop_reformed = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_reformed skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_bishop_reformed = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_reformed skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_bishop_reformed skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_feudal_tax_collector
+		}
+		if = {
+			limit = {
+				ate_advisor_feudal_tax_collector = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_tax_collector skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_feudal_tax_collector = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_tax_collector skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_tax_collector skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_architect
+		}
+		if = {
+			limit = {
+				ate_advisor_architect = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_architect skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_architect = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_architect skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_architect skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_administrator
+		}
+		if = {
+			limit = {
+				ate_advisor_great_administrator = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_administrator skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_great_administrator = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_administrator skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_administrator skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_steward
+		}
+		if = {
+			limit = {
+				ate_advisor_steward = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_steward skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_steward = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_steward skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_steward skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_administrative_genius
+		}
+		if = {
+			limit = {
+				ate_advisor_administrative_genius = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_administrative_genius skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_administrative_genius = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_administrative_genius skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_administrative_genius skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_anti_corruption_officer
+		}
+		if = {
+			limit = {
+				ate_advisor_anti_corruption_officer = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_anti_corruption_officer skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_anti_corruption_officer = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_anti_corruption_officer skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_anti_corruption_officer skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_monarchy
+		}
+		if = {
+			limit = {
+				ate_advisor_first_minister_monarchy = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_monarchy skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_first_minister_monarchy = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_monarchy skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_monarchy skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_theocracy
+		}
+		if = {
+			limit = {
+				ate_advisor_first_minister_theocracy = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_theocracy skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_first_minister_theocracy = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_theocracy skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_theocracy skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_republic
+		}
+		if = {
+			limit = {
+				ate_advisor_first_minister_republic = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_republic skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_first_minister_republic = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_republic skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_first_minister_republic skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_state_administrator
+		}
+		if = {
+			limit = {
+				ate_advisor_state_administrator = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_administrator skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_state_administrator = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_administrator skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_administrator skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_gold_digger
+		}
+		if = {
+			limit = {
+				ate_advisor_gold_digger = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gold_digger skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_gold_digger = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gold_digger skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gold_digger skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_free_thinker
+		}
+		if = {
+			limit = {
+				ate_advisor_free_thinker = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_free_thinker skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_free_thinker = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_free_thinker skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_free_thinker skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_revolutionist
+		}
+		if = {
+			limit = {
+				ate_advisor_revolutionist = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_revolutionist skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_revolutionist = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_revolutionist skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_revolutionist skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_reformist
+		}
+		if = {
+			limit = {
+				ate_advisor_reformist = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_reformist skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_reformist = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_reformist skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_reformist skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_state_theorist
+		}
+		if = {
+			limit = {
+				ate_advisor_state_theorist = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_theorist skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_state_theorist = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_theorist skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_state_theorist skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_visionary
+		}
+		if = {
+			limit = {
+				ate_advisor_visionary = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_visionary skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_visionary = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_visionary skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_visionary skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_philosopher
+		}
+		if = {
+			limit = {
+				ate_advisor_great_philosopher = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_philosopher skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_great_philosopher = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_philosopher skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_philosopher skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_chamberlain
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_chamberlain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chamberlain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_chamberlain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chamberlain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chamberlain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_monk
+		}
+		if = {
+			limit = {
+				ate_advisor_monk = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_monk skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_monk = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_monk skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_monk skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_brahmins_preacher
+		}
+		if = {
+			limit = {
+				ate_advisor_brahmins_preacher = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_brahmins_preacher skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_brahmins_preacher = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_brahmins_preacher skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_brahmins_preacher skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_dhimmi_scholar
+		}
+		if = {
+			limit = {
+				ate_advisor_dhimmi_scholar = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_dhimmi_scholar skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_dhimmi_scholar = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_dhimmi_scholar skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_dhimmi_scholar skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_jains_bureaucrat
+		}
+		if = {
+			limit = {
+				ate_advisor_jains_bureaucrat = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_jains_bureaucrat skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_jains_bureaucrat = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_jains_bureaucrat skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_jains_bureaucrat skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_missionary
+		}
+		if = {
+			limit = {
+				ate_advisor_missionary = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_missionary skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_missionary = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_missionary skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_missionary skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_imperial_bureaucrat
+		}
+		if = {
+			limit = {
+				ate_advisor_imperial_bureaucrat = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imperial_bureaucrat skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_imperial_bureaucrat = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imperial_bureaucrat skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imperial_bureaucrat skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_imam
+		}
+		if = {
+			limit = {
+				ate_advisor_imam = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imam skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_imam = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imam skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_imam skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_scholar
+		}
+		if = {
+			limit = {
+				ate_advisor_scholar = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_scholar skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_scholar = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_scholar skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_scholar skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_inventor
+		}
+		if = {
+			limit = {
+				ate_advisor_inventor = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_inventor skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_inventor = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_inventor skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_inventor skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_witch_hunter
+		}
+		if = {
+			limit = {
+				ate_advisor_witch_hunter = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_witch_hunter skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_witch_hunter = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_witch_hunter skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_witch_hunter skill = 1 }
+			}
+		}
+	}
+}
+
+ate_pte_take_advisor_dip_effect = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_dip
+		}
+		if = {
+			limit = {
+				ate_advisor_loyal_friend_dip = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_dip skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_loyal_friend_dip = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_dip skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_dip skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				advisor = ate_advisor_concubine_female
+				advisor = ate_advisor_concubine_male
+			}
+			ROOT = {
+				is_female = no
+			}
+		}
+		if = {
+			limit = {
+				ate_advisor_concubine_female = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_female skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_concubine_female = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_female skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_female skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				advisor = ate_advisor_concubine_female
+				advisor = ate_advisor_concubine_male
+			}
+			ROOT = {
+				is_female = yes
+			}
+		}
+		if = {
+			limit = {
+				ate_advisor_concubine_male = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_male skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_concubine_male = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_male skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_concubine_male skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_sailors_recruitmaster
+		}
+		if = {
+			limit = {
+				ate_advisor_sailors_recruitmaster = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sailors_recruitmaster skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_sailors_recruitmaster = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sailors_recruitmaster skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sailors_recruitmaster skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_blockade_specialist
+		}
+		if = {
+			limit = {
+				ate_advisor_blockade_specialist = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_blockade_specialist skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_blockade_specialist = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_blockade_specialist skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_blockade_specialist skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_pirate_captain
+		}
+		if = {
+			limit = {
+				ate_advisor_pirate_captain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_pirate_captain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_pirate_captain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_pirate_captain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_pirate_captain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_negotiator
+		}
+		if = {
+			limit = {
+				ate_advisor_great_negotiator = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_negotiator skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_great_negotiator = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_negotiator skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_great_negotiator skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_vicegerent
+		}
+		if = {
+			limit = {
+				ate_advisor_vicegerent = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vicegerent skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_vicegerent = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vicegerent skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vicegerent skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_traveling_salesman
+		}
+		if = {
+			limit = {
+				ate_advisor_traveling_salesman = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traveling_salesman skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_traveling_salesman = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traveling_salesman skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traveling_salesman skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_naval_traditional_tactician
+		}
+		if = {
+			limit = {
+				ate_advisor_naval_traditional_tactician = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_naval_traditional_tactician skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_naval_traditional_tactician = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_naval_traditional_tactician skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_naval_traditional_tactician skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_diplomatic_genius
+		}
+		if = {
+			limit = {
+				ate_advisor_diplomatic_genius = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_diplomatic_genius skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_diplomatic_genius = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_diplomatic_genius skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_diplomatic_genius skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cultural_commissioner
+		}
+		if = {
+			limit = {
+				ate_advisor_cultural_commissioner = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cultural_commissioner skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_cultural_commissioner = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cultural_commissioner skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cultural_commissioner skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_herald
+		}
+		if = {
+			limit = {
+				ate_advisor_herald = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_herald skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_herald = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_herald skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_herald skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_chancellor
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_chancellor = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chancellor skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_chancellor = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chancellor skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_chancellor skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_envoy
+		}
+		if = {
+			limit = {
+				ate_advisor_envoy = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_envoy skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_envoy = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_envoy skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_envoy skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_vaisyas_peasant
+		}
+		if = {
+			limit = {
+				ate_advisor_vaisyas_peasant = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vaisyas_peasant skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_vaisyas_peasant = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vaisyas_peasant skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_vaisyas_peasant skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_guild_trader
+		}
+		if = {
+			limit = {
+				ate_advisor_guild_trader = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_guild_trader skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_guild_trader = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_guild_trader skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_guild_trader skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_historian
+		}
+		if = {
+			limit = {
+				ate_advisor_historian = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_historian skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_historian = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_historian skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_historian skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_plantation_owner
+		}
+		if = {
+			limit = {
+				ate_advisor_plantation_owner = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_plantation_owner skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_plantation_owner = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_plantation_owner skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_plantation_owner skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_galley_captain
+		}
+		if = {
+			limit = {
+				ate_advisor_galley_captain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galley_captain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_galley_captain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galley_captain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galley_captain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_galleon_captain
+		}
+		if = {
+			limit = {
+				ate_advisor_galleon_captain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galleon_captain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_galleon_captain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galleon_captain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_galleon_captain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_colonial_administrator
+		}
+		if = {
+			limit = {
+				ate_advisor_colonial_administrator = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_colonial_administrator skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_colonial_administrator = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_colonial_administrator skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_colonial_administrator skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_treasure_fleet_captain
+		}
+		if = {
+			limit = {
+				ate_advisor_treasure_fleet_captain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_treasure_fleet_captain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_treasure_fleet_captain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_treasure_fleet_captain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_treasure_fleet_captain skill = 1 }
+			}
+		}
+	}
+}
+
+ate_pte_take_advisor_mil_effect = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_mil
+		}
+		if = {
+			limit = {
+				ate_advisor_loyal_friend_mil = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_mil skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_loyal_friend_mil = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_mil skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_loyal_friend_mil skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_feudal_lord
+		}
+		if = {
+			limit = {
+				ate_advisor_feudal_lord = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_lord skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_feudal_lord = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_lord skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_feudal_lord skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_knight
+		}
+		if = {
+			limit = {
+				ate_advisor_knight = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_knight skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_knight = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_knight skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_knight skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_traditional_tactician
+		}
+		if = {
+			limit = {
+				ate_advisor_traditional_tactician = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traditional_tactician skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_traditional_tactician = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traditional_tactician skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_traditional_tactician skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_landsknecht
+		}
+		if = {
+			limit = {
+				ate_advisor_landsknecht = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_landsknecht skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_landsknecht = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_landsknecht skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_landsknecht skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_mercenary_leader
+		}
+		if = {
+			limit = {
+				ate_advisor_mercenary_leader = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_mercenary_leader skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_mercenary_leader = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_mercenary_leader skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_mercenary_leader skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_lord_of_a_castle
+		}
+		if = {
+			limit = {
+				ate_advisor_lord_of_a_castle = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_lord_of_a_castle skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_lord_of_a_castle = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_lord_of_a_castle skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_lord_of_a_castle skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_noble_man
+		}
+		if = {
+			limit = {
+				ate_advisor_noble_man = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_noble_man skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_noble_man = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_noble_man skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_noble_man skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_military_genius
+		}
+		if = {
+			limit = {
+				ate_advisor_military_genius = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_military_genius skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_military_genius = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_military_genius skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_military_genius skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_siege_expert
+		}
+		if = {
+			limit = {
+				ate_advisor_siege_expert = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_siege_expert skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_siege_expert = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_siege_expert skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_siege_expert skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_master_of_artillery
+		}
+		if = {
+			limit = {
+				ate_advisor_master_of_artillery = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_master_of_artillery skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_master_of_artillery = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_master_of_artillery skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_master_of_artillery skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_looting_expert
+		}
+		if = {
+			limit = {
+				ate_advisor_looting_expert = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_looting_expert skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_looting_expert = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_looting_expert skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_looting_expert skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_marshal
+		}
+		if = {
+			limit = {
+				ate_advisor_marshal = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_marshal skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_marshal = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_marshal skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_marshal skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_marshal
+		}
+		if = {
+			limit = {
+				ate_advisor_arch_marshal = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_marshal skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_arch_marshal = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_marshal skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_arch_marshal skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_supply_expert
+		}
+		if = {
+			limit = {
+				ate_advisor_supply_expert = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_supply_expert skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_supply_expert = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_supply_expert skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_supply_expert skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_sergeant
+		}
+		if = {
+			limit = {
+				ate_advisor_sergeant = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sergeant skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_sergeant = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sergeant skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_sergeant skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_maratha_warrior
+		}
+		if = {
+			limit = {
+				ate_advisor_maratha_warrior = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_maratha_warrior skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_maratha_warrior = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_maratha_warrior skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_maratha_warrior skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_gentleman
+		}
+		if = {
+			limit = {
+				ate_advisor_gentleman = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gentleman skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_gentleman = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gentleman skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_gentleman skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cossack
+		}
+		if = {
+			limit = {
+				ate_advisor_cossack = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cossack skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_cossack = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cossack skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_cossack skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_tribal_chieftain
+		}
+		if = {
+			limit = {
+				ate_advisor_tribal_chieftain = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_tribal_chieftain skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_tribal_chieftain = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_tribal_chieftain skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_tribal_chieftain skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_rajputs_warrior
+		}
+		if = {
+			limit = {
+				ate_advisor_rajputs_warrior = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_rajputs_warrior skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_rajputs_warrior = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_rajputs_warrior skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_rajputs_warrior skill = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_banneret
+		}
+		if = {
+			limit = {
+				ate_advisor_banneret = 3
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_banneret skill = 3 }
+			}
+		}
+		else_if = {
+			limit = {
+				ate_advisor_banneret = 2
+			}
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_banneret skill = 2 }
+			}
+		}
+		else = {
+			ROOT = {
+				ate_pte_take_advisor_effect = { type = ate_advisor_banneret skill = 1 }
+			}
+		}
+	}
+}
+
+ate_pte_take_advisor_effect = {
+	define_advisor = {
+		type = $type$
+		skill = $skill$
+		culture = PREV
+		religion = PREV
+		cost_multiplier = 0.66
+	}
+}
+
+# Compatibility for Religions & Cultures Expanded
+ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+	if = {
+		limit = {
+			check_variable = { which = rce_religion_mechanic_nestorian_patriarchy_supported_$category$_advisor_level value = 5 }
+		}
+		if = {
+			limit = {
+				monthly_income = 417
+			}
+			add_treasury = -5000
+		}
+		else = {
+			add_years_of_income = -1
+		}
+		hire_advisor = {
+			type = $type$
+			skill = 5
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = rce_religion_mechanic_nestorian_patriarchy_supported_$category$_advisor_level value = 4 }
+		}
+		if = {
+			limit = {
+				monthly_income = 417
+			}
+			add_treasury = -4250
+		}
+		else = {
+			add_years_of_income = -0.85
+		}
+		hire_advisor = {
+			type = $type$
+			skill = 4
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = rce_religion_mechanic_nestorian_patriarchy_supported_$category$_advisor_level value = 3 }
+		}
+		if = {
+			limit = {
+				monthly_income = 417
+			}
+			add_treasury = -3750
+		}
+		else = {
+			add_years_of_income = -0.75
+		}
+		hire_advisor = {
+			type = $type$
+			skill = 3
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { which = rce_religion_mechanic_nestorian_patriarchy_supported_$category$_advisor_level value = 2 }
+		}
+		if = {
+			limit = {
+				monthly_income = 417
+			}
+			add_treasury = -2500
+		}
+		else = {
+			add_years_of_income = -0.5
+		}
+		hire_advisor = {
+			type = $type$
+			skill = 2
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				monthly_income = 417
+			}
+			add_treasury = -1250
+		}
+		else = {
+			add_years_of_income = -0.25
+		}
+		hire_advisor = {
+			type = $type$
+			skill = 1
+		}
+	}
+}
+
+ate_rce_religion_mechanic_nestorian_patriarchy_clear_flags_for_current_supported_adm_advisor = {
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_loyal_friend_adm
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_court_physician
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_cardinal
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_catholic
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_protestant
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_reformed
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_feudal_tax_collector
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_architect
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_great_administrator
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_steward
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_administrative_genius
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_anti_corruption_officer
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_monarchy
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_theocracy
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_republic
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_state_administrator
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_gold_digger
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_free_thinker
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_revolutionist
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_reformist
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_state_theorist
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_visionary
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_great_philosopher
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_chamberlain
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_monk
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_brahmins_preacher
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_dhimmi_scholar
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_jains_bureaucrat
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_missionary
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_imperial_bureaucrat
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_imam
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_scholar
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_inventor
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_witch_hunter
+}
+ate_rce_religion_mechanic_nestorian_patriarchy_flag_current_supported_adm_advisor = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_adm
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_loyal_friend_adm
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_court_physician
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_court_physician
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cardinal
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_cardinal
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_catholic
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_catholic
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_protestant
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_protestant
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_bishop_reformed
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_reformed
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_feudal_tax_collector
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_feudal_tax_collector
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_architect
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_architect
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_administrator
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_great_administrator
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_steward
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_steward
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_administrative_genius
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_administrative_genius
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_anti_corruption_officer
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_anti_corruption_officer
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_monarchy
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_monarchy
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_theocracy
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_theocracy
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_first_minister_republic
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_republic
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_state_administrator
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_state_administrator
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_gold_digger
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_gold_digger
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_free_thinker
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_free_thinker
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_revolutionist
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_revolutionist
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_reformist
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_reformist
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_state_theorist
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_state_theorist
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_visionary
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_visionary
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_philosopher
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_great_philosopher
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_chamberlain
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_chamberlain
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_monk
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_monk
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_brahmins_preacher
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_brahmins_preacher
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_dhimmi_scholar
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_dhimmi_scholar
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_jains_bureaucrat
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_jains_bureaucrat
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_missionary
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_missionary
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_imperial_bureaucrat
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_imperial_bureaucrat
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_imam
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_imam
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_scholar
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_scholar
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_inventor
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_inventor
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_witch_hunter
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_witch_hunter
+	}
+	else = {
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_treasurer
+	}
+}
+ate_rce_religion_mechanic_nestorian_patriarchy_hire_new_supported_adm_advisor = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_loyal_friend_adm
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_court_physician
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_cardinal
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_catholic
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_protestant
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_reformed
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_feudal_tax_collector
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_architect
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_great_administrator
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_steward
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_administrative_genius
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_anti_corruption_officer
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_monarchy
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_theocracy
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_republic
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_state_administrator
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_gold_digger
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_free_thinker
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_revolutionist
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_reformist
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_state_theorist
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_visionary
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_great_philosopher
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_chamberlain
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_monk
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_brahmins_preacher
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_dhimmi_scholar
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_jains_bureaucrat
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_missionary
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_imperial_bureaucrat
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_imam
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_scholar
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_inventor
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_witch_hunter
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_loyal_friend_adm = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_loyal_friend_adm
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_court_physician = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_court_physician
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_cardinal = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_cardinal
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_catholic = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_arch_bishop_catholic
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_protestant = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_arch_bishop_protestant
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_bishop_reformed = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_arch_bishop_reformed
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_feudal_tax_collector = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_feudal_tax_collector
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_architect = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_architect
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_great_administrator = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_great_administrator
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_steward = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_steward
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_administrative_genius = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_administrative_genius
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_anti_corruption_officer = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_anti_corruption_officer
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_monarchy = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_first_minister_monarchy
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_theocracy = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_first_minister_theocracy
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_first_minister_republic = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_first_minister_republic
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_state_administrator = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_state_administrator
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_gold_digger = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_gold_digger
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_free_thinker = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_free_thinker
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_revolutionist = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_revolutionist
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_reformist = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_reformist
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_state_theorist = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_state_theorist
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_visionary = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_visionary
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_great_philosopher = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_great_philosopher
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_arch_chamberlain = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_arch_chamberlain
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_monk = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_monk
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_brahmins_preacher = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_brahmins_preacher
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_dhimmi_scholar = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_dhimmi_scholar
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_jains_bureaucrat = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_jains_bureaucrat
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_missionary = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_missionary
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_imperial_bureaucrat = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_imperial_bureaucrat
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_imam = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_imam
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_scholar = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_scholar
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_inventor = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_inventor
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_adm_advisor_type_ate_advisor_witch_hunter = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = adm
+					type = ate_advisor_witch_hunter
+				}
+			}
+		}
+	}
+}
+
+ate_rce_religion_mechanic_nestorian_patriarchy_clear_flags_for_current_supported_dip_advisor = {
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_loyal_friend_dip
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_concubine_female
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_concubine_male
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_sailors_recruitmaster
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_blockade_specialist
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_pirate_captain
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_great_negotiator
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_vicegerent
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_traveling_salesman
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_naval_traditional_tactician
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_diplomatic_genius
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_cultural_commissioner
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_herald
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_arch_chancellor
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_envoy
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_vaisyas_peasant
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_guild_trader
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_historian
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_plantation_owner
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_galley_captain
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_galleon_captain
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_colonial_administrator
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_treasure_fleet_captain
+}
+ate_rce_religion_mechanic_nestorian_patriarchy_flag_current_supported_dip_advisor = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_dip
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_loyal_friend_dip
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_concubine_female
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_concubine_female
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_concubine_male
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_concubine_male
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_sailors_recruitmaster
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_sailors_recruitmaster
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_blockade_specialist
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_blockade_specialist
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_pirate_captain
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_pirate_captain
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_great_negotiator
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_great_negotiator
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_vicegerent
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_vicegerent
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_traveling_salesman
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_traveling_salesman
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_naval_traditional_tactician
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_naval_traditional_tactician
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_diplomatic_genius
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_diplomatic_genius
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cultural_commissioner
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_cultural_commissioner
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_herald
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_herald
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_chancellor
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_arch_chancellor
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_envoy
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_envoy
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_vaisyas_peasant
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_vaisyas_peasant
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_guild_trader
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_guild_trader
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_historian
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_historian
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_plantation_owner
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_plantation_owner
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_galley_captain
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_galley_captain
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_galleon_captain
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_galleon_captain
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_colonial_administrator
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_colonial_administrator
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_treasure_fleet_captain
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_treasure_fleet_captain
+	}
+	else = {
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_statesman
+	}
+}
+ate_rce_religion_mechanic_nestorian_patriarchy_hire_new_supported_dip_advisor = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_loyal_friend_dip
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_concubine_female
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_concubine_male
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_sailors_recruitmaster
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_blockade_specialist
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_pirate_captain
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_great_negotiator
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_vicegerent
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_traveling_salesman
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_naval_traditional_tactician
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_diplomatic_genius
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_cultural_commissioner
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_herald
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_arch_chancellor
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_envoy
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_vaisyas_peasant
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_guild_trader
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_historian
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_plantation_owner
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_galley_captain
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_galleon_captain
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_colonial_administrator
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_treasure_fleet_captain
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_loyal_friend_dip = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_loyal_friend_dip
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_concubine_female = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_concubine_female
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_concubine_male = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_concubine_male
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_sailors_recruitmaster = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_sailors_recruitmaster
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_blockade_specialist = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_blockade_specialist
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_pirate_captain = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_pirate_captain
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_great_negotiator = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_great_negotiator
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_vicegerent = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_vicegerent
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_traveling_salesman = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_traveling_salesman
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_naval_traditional_tactician = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_naval_traditional_tactician
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_diplomatic_genius = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_diplomatic_genius
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_cultural_commissioner = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_cultural_commissioner
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_herald = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_herald
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_arch_chancellor = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_arch_chancellor
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_envoy = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_envoy
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_vaisyas_peasant = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_vaisyas_peasant
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_guild_trader = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_guild_trader
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_historian = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_historian
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_plantation_owner = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_plantation_owner
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_galley_captain = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_galley_captain
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_galleon_captain = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_galleon_captain
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_colonial_administrator = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_colonial_administrator
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_dip_advisor_type_ate_advisor_treasure_fleet_captain = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = dip
+					type = ate_advisor_treasure_fleet_captain
+				}
+			}
+		}
+	}
+}
+
+ate_rce_religion_mechanic_nestorian_patriarchy_clear_flags_for_current_supported_mil_advisor = {
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_loyal_friend_mil
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_feudal_lord
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_knight
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_traditional_tactician
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_landsknecht
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_mercenary_leader
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_lord_of_a_castle
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_noble_man
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_military_genius
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_siege_expert
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_master_of_artillery
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_looting_expert
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_marshal
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_arch_marshal
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_supply_expert
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_sergeant
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_maratha_warrior
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_gentleman
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_cossack
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_tribal_chieftain
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_rajputs_warrior
+	clr_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_banneret
+}
+ate_rce_religion_mechanic_nestorian_patriarchy_flag_current_supported_mil_advisor = {
+	if = {
+		limit = {
+			advisor = ate_advisor_loyal_friend_mil
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_loyal_friend_mil
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_feudal_lord
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_feudal_lord
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_knight
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_knight
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_traditional_tactician
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_traditional_tactician
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_landsknecht
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_landsknecht
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_mercenary_leader
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_mercenary_leader
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_lord_of_a_castle
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_lord_of_a_castle
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_noble_man
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_noble_man
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_military_genius
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_military_genius
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_siege_expert
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_siege_expert
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_master_of_artillery
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_master_of_artillery
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_looting_expert
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_looting_expert
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_marshal
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_marshal
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_arch_marshal
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_arch_marshal
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_supply_expert
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_supply_expert
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_sergeant
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_sergeant
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_maratha_warrior
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_maratha_warrior
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_gentleman
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_gentleman
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_cossack
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_cossack
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_tribal_chieftain
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_tribal_chieftain
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_rajputs_warrior
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_rajputs_warrior
+	}
+	else_if = {
+		limit = {
+			advisor = ate_advisor_banneret
+		}
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_banneret
+	}
+	else = {
+		set_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_army_organiser
+	}
+}
+ate_rce_religion_mechanic_nestorian_patriarchy_hire_new_supported_mil_advisor = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_loyal_friend_mil
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_feudal_lord
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_knight
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_traditional_tactician
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_landsknecht
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_mercenary_leader
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_lord_of_a_castle
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_noble_man
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_military_genius
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_siege_expert
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_master_of_artillery
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_looting_expert
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_marshal
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_arch_marshal
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_supply_expert
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_sergeant
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_maratha_warrior
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_gentleman
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_cossack
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_tribal_chieftain
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_rajputs_warrior
+				has_country_flag = rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_banneret
+			}
+		}
+		trigger_switch = {
+			on_trigger = has_country_flag
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_loyal_friend_mil = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_loyal_friend_mil
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_feudal_lord = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_feudal_lord
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_knight = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_knight
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_traditional_tactician = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_traditional_tactician
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_landsknecht = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_landsknecht
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_mercenary_leader = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_mercenary_leader
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_lord_of_a_castle = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_lord_of_a_castle
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_noble_man = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_noble_man
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_military_genius = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_military_genius
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_siege_expert = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_siege_expert
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_master_of_artillery = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_master_of_artillery
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_looting_expert = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_looting_expert
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_marshal = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_marshal
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_arch_marshal = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_arch_marshal
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_supply_expert = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_supply_expert
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_sergeant = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_sergeant
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_maratha_warrior = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_maratha_warrior
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_gentleman = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_gentleman
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_cossack = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_cossack
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_tribal_chieftain = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_tribal_chieftain
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_rajputs_warrior = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_rajputs_warrior
+				}
+			}
+			rce_religion_mechanic_nestorian_patriarchy_supported_mil_advisor_type_ate_advisor_banneret = {
+				ate_rce_religion_mechanic_nestorian_patriarchy_define_supported_advisor = {
+					category = mil
+					type = ate_advisor_banneret
+				}
+			}
+		}
+	}
+}

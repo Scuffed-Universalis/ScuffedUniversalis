@@ -1,0 +1,359 @@
+#vani overwriting
+remove_all_age_of_discovery_modifiers = {
+	if = {
+		limit = {
+			NOT = { current_age = age_of_discovery }
+		}
+		if = {
+			limit = { has_country_modifier = eng_a_house_united }
+			remove_country_modifier = eng_a_house_united
+		}
+		if = {
+			limit = { has_country_modifier = eng_jousting_tournaments }
+			remove_country_modifier = eng_jousting_tournaments
+		}
+		if = {
+			limit = { has_country_modifier = YEM_rise_of_yemen }
+			remove_country_modifier = YEM_rise_of_yemen
+		}
+		if = {
+			limit = { has_country_modifier = INC_bowmen_from_the_jungle }
+			remove_country_modifier = INC_bowmen_from_the_jungle
+		}
+		if = {
+			limit = { has_country_modifier = MAY_religion_reformed }
+			remove_country_modifier = MAY_religion_reformed
+		}
+		if = {
+			limit = { has_country_modifier = MAY_mayan_canoes }
+			remove_country_modifier = MAY_mayan_canoes
+		}
+		if = {
+			limit = { has_country_modifier = MUG_gunpowder_pioneers }
+			remove_country_modifier = MUG_gunpowder_pioneers
+		}
+		if = {
+			limit = { has_country_modifier = MUG_heir_of_timur }
+			remove_country_modifier = MUG_heir_of_timur
+		}
+		if = {
+			limit = { has_country_modifier = TIM_timurid_empire_modifier }
+			remove_country_modifier = TIM_timurid_empire_modifier
+		}
+		if = {
+			limit = { has_country_modifier = hab_onwards_for_glory }
+			remove_country_modifier = hab_onwards_for_glory
+		}
+		ME_on_age_of_reformation_start = yes
+	}
+}
+remove_all_age_of_reformation_modifiers = {
+	if = {
+		limit = {
+			NOT = { current_age = age_of_reformation }
+		}
+		if = {
+			limit = { has_country_modifier = eng_the_age_of_reformation }
+			remove_country_modifier = eng_the_age_of_reformation
+		}
+		if = {
+			limit = { has_country_modifier = eng_reformer_ruler }
+			remove_country_modifier = eng_reformer_ruler
+		}
+		if = {
+			limit = { has_country_modifier = eng_catholic_ruler }
+			remove_country_modifier = eng_catholic_ruler
+		}
+		if = {
+			limit = { has_country_modifier = eng_tolerant_ruler }
+			remove_country_modifier = eng_tolerant_ruler
+		}
+		if = {
+			limit = { has_country_modifier = eng_reformer_ruler_for_catholic_gb }
+			remove_country_modifier = eng_reformer_ruler_for_catholic_gb
+		}
+		if = {
+			limit = { has_country_modifier = eng_catholic_ruler_for_reformed_gb }
+			remove_country_modifier = eng_catholic_ruler_for_reformed_gb
+		}
+		if = {
+			limit = { has_country_modifier = BYZ_ceasarean_conquests }
+			remove_country_modifier = BYZ_ceasarean_conquests
+		}
+		if = {
+			limit = { has_country_modifier = BYZ_economic_intimidation }
+			remove_country_modifier = BYZ_economic_intimidation
+		}
+		if = {
+			limit = { has_country_modifier = BYZ_roman_vigour }
+			remove_country_modifier = BYZ_roman_vigour
+		}
+		if = {
+			limit = { has_country_modifier = ITA_latin_tiara }
+			remove_country_modifier = ITA_latin_tiara
+		}
+		if = {
+			limit = { has_country_modifier = ITA_triumph_for_hispaniae }
+			remove_country_modifier = ITA_triumph_for_hispaniae
+		}
+		if = {
+			limit = { has_country_modifier = ITA_new_renaissance }
+			remove_country_modifier = ITA_new_renaissance
+		}
+		if = {
+			limit = { has_country_modifier = ITA_diplomatic_revolution }
+			remove_country_modifier = ITA_diplomatic_revolution
+			add_country_modifier = {
+				name = ITA_diplomatic_revolution_weaker
+				duration = -1
+			}
+		}
+		if = {
+			limit = { has_country_modifier = MUG_industrial_powerhouse }
+			remove_country_modifier = MUG_industrial_powerhouse
+		}
+		if = {
+			limit = { has_country_modifier = MUG_gunpowder_mastery }
+			remove_country_modifier = MUG_gunpowder_mastery
+		}
+		if = {
+			limit = { has_country_modifier = TIM_golden_horde }
+			remove_country_modifier = TIM_golden_horde
+		}
+		if = {
+			limit = { has_country_modifier = TIM_persian_economic_hegemon }
+			remove_country_modifier = TIM_persian_economic_hegemon
+		}
+		if = {
+			limit = { has_country_modifier = hordes_fall_of_china }
+			remove_country_modifier = hordes_fall_of_china
+		}
+		if = {
+            limit = { has_country_modifier = ITA_new_renaissance_non_dlc }
+            remove_country_modifier = ITA_new_renaissance_non_dlc
+        }
+		ME_on_age_of_absolutism_start = yes
+	}
+}
+remove_all_age_of_absolutism_modifiers = {
+	if = {
+		limit = {
+			NOT = { current_age = age_of_absolutism }
+		}
+		if = {
+			limit = { has_country_modifier = ITA_conquest_of_britain }
+			remove_country_modifier = ITA_conquest_of_britain
+		}
+	}
+	if = {
+		limit = {
+			NOT = { current_age = age_of_absolutism }
+		}
+		if = {
+			limit = { has_country_modifier = GER_economic_influence }
+			remove_country_modifier = GER_economic_influence
+		}
+		ME_on_age_of_revolutions_start = yes
+	}
+}
+
+#end of vani overwriting
+
+
+
+add_age_modifier = {
+	if = {
+		limit = {
+			NOT = {
+				has_global_flag = ME_$age$_ended
+			}
+		}
+		add_country_modifier = {
+			name = $name$
+			duration = $duration$
+			desc = ME_until_the_end_of_$age$
+		}
+		set_country_flag = ME_got_age_modifier_for_$age$
+	}
+	else = {
+		[[else] $else$ ]
+	}
+}
+
+ME_on_age_of_reformation_start = {
+	remove_country_modifier = EE_FRA_success_italy
+	remove_country_modifier = NED_early_netherlands
+	remove_country_modifier = NED_humanism_modifier
+	remove_country_modifier = RUM_beylik_buff
+	remove_country_modifier = RUM_beylik_buff
+	remove_country_modifier = RUM_weakness_in_anatolia
+	remove_country_modifier = colonial_policy
+	remove_country_modifier = AAC_frankish_dream
+	remove_country_modifier = FRI_the_frisian_kingdom
+	remove_country_modifier = FRI_the_frisian_kingdom
+	remove_country_modifier = GRA_enforced_burgher_support
+	remove_country_modifier = GRA_enforced_nobles_support
+	remove_country_modifier = GRA_enforced_church_support
+	remove_country_modifier = ORM_persecute_religions
+	remove_country_modifier = ORM_tolerance
+	remove_country_modifier = ORM_the_fake_omams_removed
+	remove_country_modifier = MSY_massacred_unbelievers
+	remove_country_modifier = MSY_spared_citizens_of_najaf
+	remove_country_modifier = MZB_quest_to_free_the_ibadiyya
+	remove_country_modifier = NED_early_netherlands
+	remove_country_modifier = POR_moroccan_wheat
+	remove_country_modifier = QAR_rise_of_qara_qoyunlu
+	remove_country_modifier = QAR_baghdad_is_curbed
+	remove_country_modifier = QAR_fake_toppled
+	remove_country_modifier = QAR_staying_shia
+	remove_country_modifier = QAR_staying_shia
+	remove_country_modifier = EE_BRI_Breton_Golden_Age
+	remove_country_modifier = AAC_frankish_dream
+	remove_country_modifier = AVE_britain_united
+	remove_country_modifier = AKK_builder_of_monuments_no_dlc
+	remove_country_modifier = AYY_support_of_a_major_power
+	remove_country_modifier = me_bur_burgundian_ambition
+	remove_country_modifier = CRN_early_cannon_dominance
+	remove_country_modifier = CRN_cornish_renaissance
+	remove_country_modifier = EE_FRA_overshadowing_iberia
+	remove_country_modifier = EE_FRA_swiss_hundred
+	remove_country_modifier = LNC_out_with_the_old_in_with_the_new
+	remove_country_modifier = GRA_war_is_imminent
+	remove_country_modifier = ORM_the_fake_omams_removed
+	remove_country_modifier = EE_Minor_IRI_Gallowglass_Ireland
+	remove_country_modifier = MAM_mamluk_diplomacy
+	remove_country_modifier = KOI_scandinavia_modifier
+	remove_country_modifier = MOR_repel_the_europeans
+	remove_country_modifier = MSY_flock_to_standard
+	remove_country_modifier = MZB_rustamid_glory_modifier
+	remove_country_modifier = MZB_quest_to_free_the_ibadiyya
+	remove_country_modifier = MZB_prosperity_in_the_desert
+	remove_country_modifier = NAV_new_world_rush
+	remove_country_modifier = POR_manueline_architecture
+	remove_country_modifier = POR_manueline_architecture_non_dlc
+	remove_country_modifier = POR_holy_orders_decline
+	remove_country_modifier = POR_power_over_castile
+	remove_country_modifier = POR_circumnavigation_in_age_explo
+	remove_country_modifier = POR_settler_support
+	remove_country_modifier = POR_sagres
+	remove_country_modifier = QAR_fake_toppled
+	remove_country_modifier = QIR_major_governmental_changes
+	remove_country_modifier = SOS_imitator_will_be_found
+	remove_country_modifier = TUN_morocco
+	remove_country_modifier = TUN_defeated_mamluks
+	remove_country_modifier = TUN_caliphate_claimant
+	remove_country_modifier = WLS_longbowmen
+	remove_country_modifier = YEM_unified_yemen
+	remove_country_modifier = YEMG_rule_secured
+	remove_country_modifier = YEM_unified_yemen
+	remove_country_modifier = YEM_unified_yemen
+	remove_country_modifier = YEM_unified_yemen
+}
+ME_on_age_of_absolutism_start = {
+	remove_country_modifier = EE_IRE_Peacefull_Assimilation
+	remove_country_modifier = EE_IRE_Four_Corners_World
+	remove_country_modifier = EE_FRA_success_italy
+	remove_country_modifier = EE_IRE_Peacefull_Assimilation
+	remove_country_modifier = EE_IRE_Four_Corners_World
+	remove_country_modifier = EE_BRI_Colonial_Port
+	remove_country_modifier = EE_CLT_charting_west
+	remove_country_modifier = EE_CLT_WLS_condontierri
+	remove_country_modifier = EE_CLT_welsh_longbows
+	remove_country_modifier = EE_IRE_Four_Corners_World
+	remove_country_modifier = EE_IRE_Four_Corners_World
+	remove_country_modifier = EE_IRE_Peacefull_Assimilation
+	remove_country_modifier = EE_IRE_Peacefull_Assimilation
+	remove_country_modifier = ENG_stock_exchange_loans
+	remove_country_modifier = ENG_stock_exchange_control
+	remove_country_modifier = less_colonial_corruption
+	remove_country_modifier = ENG_elizabethan_era
+	remove_country_modifier = EE_FRA_god_french
+	remove_country_modifier = EE_FRA_armed_pilgrimage
+	remove_country_modifier = LIE_belgicus_modifier
+	remove_country_modifier = MAM_reformist
+	remove_country_modifier = MAM_conservative
+	remove_country_modifier = MAM_reformist
+	remove_country_modifier = MAM_conservative
+	remove_country_modifier = me_mug_heir_of_timur
+	remove_country_modifier = MSY_we_must_finish_the_mahdis_will
+	remove_country_modifier = me_tim_triumph_against_ottomans
+	remove_country_modifier = EE_BRI_Colonial_Port
+	remove_country_modifier = ARB_tribal_unity
+	remove_country_modifier = ARB_founding_new_settlements
+	remove_country_modifier = AAC_glory
+	remove_country_modifier = AAC_frankish_peace_modifier
+	remove_country_modifier = AVE_golden_age
+	remove_country_modifier = AVE_religious_cohesion_modifier
+	remove_country_modifier = AVE_conquest_of_netherlands
+	remove_country_modifier = AKK_builder_of_monuments
+	remove_country_modifier = AKK_kitab_i_diyarbakriyya
+	remove_country_modifier = ara_catalan_dominance_modifier
+	remove_country_modifier = ara_curtailed_venice
+	remove_country_modifier = AYY_the_trade_routes_to_india
+	remove_country_modifier = AYY_supporter_of_scholarship
+	remove_country_modifier = AYY_the_protector_of_sunnis
+	remove_country_modifier = me_lot_restoration_of_francia
+	remove_country_modifier = me_bur_new_succession_laws
+	remove_country_modifier = ee_spa_tercio_advancement
+	remove_country_modifier = ee_spa_tercio_infantry
+	remove_country_modifier = ENG_royal_society_modifier
+	remove_country_modifier = ENG_board_of_trade_modifier
+	remove_country_modifier = EE_FRA_share_triangle
+	remove_country_modifier = EE_FRA_armed_pilgrimage
+	remove_country_modifier = BOU_illuminated_manuscripts_modifier
+	remove_country_modifier = LON_reconquista
+	remove_country_modifier = LON_holy_cross
+	remove_country_modifier = GRA_gunpowder
+	remove_country_modifier = GRA_gunpowder
+	remove_country_modifier = GRA_heroes_of_the_faith
+	remove_country_modifier = HOL_emergence_of_the_herring_buss_fleet
+	remove_country_modifier = ORM_aden_conquest
+	remove_country_modifier = GHD_army_buff
+	remove_country_modifier = GHD_markets_of_sahel
+	remove_country_modifier = GHD_rich_empire_maghreb
+	remove_country_modifier = MAM_defeated_europeans
+	remove_country_modifier = KOI_colonial_boom
+	remove_country_modifier = MSY_words_of_the_mahdi
+	remove_country_modifier = POR_spices_boom
+	remove_country_modifier = QIR_population_boost
+	remove_country_modifier = QIR_trade_steering
+	remove_country_modifier = QIR_power
+	remove_country_modifier = RUM_seljuk_inspired_arts
+	remove_country_modifier = me_tim_increase_in_loot
+	remove_country_modifier = TLC_oran_fatwa_modifier
+	remove_country_modifier = TLC_transsaharan_trade
+	remove_country_modifier = TUN_spreading_islam
+	remove_country_modifier = YEM_felicitous_arabia
+	remove_country_modifier = EE_IRE_Global_Economy
+	remove_country_modifier = NED_glorious_revolution
+	remove_country_modifier = NED_state_army
+	remove_country_modifier = NED_civic_militia
+	remove_country_modifier = NED_voc
+	remove_country_modifier = NED_grand_design_mod
+	remove_country_modifier = NED_india
+}
+
+ME_on_age_of_revolutions_start = {
+	remove_country_modifier = EE_FRA_success_italy
+	remove_country_modifier = EE_CLT_human_rights_advocate
+	remove_country_modifier = ENG_the_petition_of_rights
+	remove_country_modifier = ENG_the_petition_of_rights
+	remove_country_modifier = MAM_crusaders_repulsed
+	remove_country_modifier = me_tim_above_the_caliph
+	remove_country_modifier = AYY_the_canal_tolls
+	remove_country_modifier = ENG_fame_of_early_redcoats
+	remove_country_modifier = ENG_setting_the_stage
+	remove_country_modifier = ENG_canada_timber
+	remove_country_modifier = me_mug_sepoy_infantry
+	remove_country_modifier = me_mug_sepoy_infantry
+	remove_country_modifier = me_mug_land_of_monuments
+	remove_country_modifier = me_mug_land_of_monuments
+	remove_country_modifier = me_mug_architecture
+	remove_country_modifier = me_mug_architecture
+	remove_country_modifier = POR_joanine_absolutism
+	remove_country_modifier = PRO_provencal_control
+	remove_country_modifier = TUN_upgrader_of_monuments
+	remove_country_modifier = TUN_upgrader_of_monuments
+	remove_country_modifier = TUN_upgrader_of_monuments
+	remove_country_modifier = NED_bulk_trades
+}

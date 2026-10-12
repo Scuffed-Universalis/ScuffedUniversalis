@@ -1,0 +1,75 @@
+namespace = ee_achievement_system
+
+# Clear Achievement Visibility
+country_event = {
+	id = ee_achievement_system.1
+	title = ee_achievement_system.EVTNAME1
+	desc = ee_achievement_system.EVTDESC1
+	picture = DIPLOMACY_eventPicture
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = test_achievement_achieved_shown }
+			clr_country_flag = test_achievement_achieved_shown
+		}
+		else_if = {
+			limit = { has_country_flag = absolutely_berberic_achieved_shown }
+			clr_country_flag = absolutely_berberic_achieved_shown
+		}
+		else_if = {
+			limit = { has_country_flag = jenne_d_arc_achieved_shown }
+			clr_country_flag = jenne_d_arc_achieved_shown
+		}
+		else_if = {
+			limit = { has_country_flag = habsburg_qin_achieved_shown }
+			clr_country_flag = habsburg_qin_achieved_shown
+		}
+		else_if = {
+			limit = { has_country_flag = sus_innit_achieved_shown }
+			clr_country_flag = sus_innit_achieved_shown
+		}
+		else_if = {
+			limit = { has_country_flag = no_heir_of_timur_achieved_shown }
+			clr_country_flag = no_heir_of_timur_achieved_shown
+		}
+		else_if = {
+			limit = { has_country_flag = im_batu_khan_achieved_shown }
+			clr_country_flag = im_batu_khan_achieved_shown
+		}
+		else_if = {
+			limit = { has_country_flag = hegemonic_republic_of_europe_achieved_shown }
+			clr_country_flag = hegemonic_republic_of_europe_achieved_shown
+		}
+		else_if = {
+			limit = { has_country_flag = nah_id_win_achieved_shown }
+			clr_country_flag = nah_id_win_achieved_shown
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						has_country_flag = test_achievement_achieved_shown
+						has_country_flag = absolutely_berberic_achieved_shown
+						has_country_flag = jenne_d_arc_achieved_shown
+						has_country_flag = habsburg_qin_achieved_shown
+						has_country_flag = sus_innit_achieved_shown
+						has_country_flag = no_heir_of_timur_achieved_shown
+						has_country_flag = im_batu_khan_achieved_shown
+						has_country_flag = hegemonic_republic_of_europe_achieved_shown
+						has_country_flag = nah_id_win_achieved_shown
+					}
+				}
+			}
+			clr_country_flag = achievement_get_activate
+		}
+	}
+
+	option = {
+		name = ee_achievement_system.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}

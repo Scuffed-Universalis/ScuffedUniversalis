@@ -1,0 +1,23 @@
+﻿l_french:
+ Ducal_KUR_embrace_new_thoughts_title: "The News of Colonialism"
+ Ducal_KUR_embrace_new_thoughts_desc: "The news of colonialism - a process where settlers from the Old World migrate to the new lands of the New continent - are spreading to us. What will we do with this knowledge, the future shall decide."
+ Ducal_KUR_acquire_charts_title: "Acquire Charts"
+ Ducal_KUR_acquire_charts_desc: "Well, the tales of the New World are certainly not false, but we cannot do much before we acquire maps of the new lands. Either we wait for the discoveries to spread to us, or we send out our own envoys to explore!"
+ Ducal_KUR_charter_gambia_title: "Charter Gambia"
+ Ducal_KUR_charter_gambia_desc: "In order to establish a great colonial empire, we must start small. Let us begin by purchasing trading rights from a local African chief, before we move onto greater ambitions."
+ Ducal_KUR_establish_colony_in_tobago_title: "A Colony in Tobago"
+ Ducal_KUR_establish_colony_in_tobago_desc: "It is well known that the Caribbean is a lucrative area to control. It sits at the crossroads of sea routes to the Andes and the Mexico, and itself it has many plantations that make it rich beyond compare. We must establish a colony there!"
+ Ducal_KUR_colonial_power_title: "A Rising Empire"
+ Ducal_KUR_colonial_power_desc: "Those steps might seem small for any other step, but for us they denote the beginning of a greater cause. With these ambitions, we might one day become a colonial empire of our own."
+ 
+ Ducal_KUR_ambitions: "Small State, Great Ambitions"
+ Ducal_KUR_exotic_citizens: "Exotic Citizens"
+ Ducal_KUR_funds: "Colonial Funds"
+ 
+ Ducal_KUR_ai: "Tiny Empire"
+ 
+ Ducal_KUR: "Curonia"
+ Ducal_KUR_ADJ: "Curonian"
+ 
+ KUR_offer_100_ducats: "Offer §Y200¤§! to §Y[1114.Owner.GetName]§! in return for the province of §Y[1114.GetName]§!."
+ KUR_we_will_ask_for_money: "We will ask for funds from §Y[Overlord.GetName]§! to fund the purchase of the province."

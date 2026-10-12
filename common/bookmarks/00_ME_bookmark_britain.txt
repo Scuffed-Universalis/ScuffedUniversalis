@@ -1,0 +1,15 @@
+bookmark = {
+	name = "ME_BOOKMARK_BRITAIN"
+	desc = "ME_BOOKMARK_BRITAIN_DESC"
+	date = 1444.11.11
+	
+	center = 241
+	default = yes
+	
+	country = ENG
+	country = SCO
+	country = FLY
+	country = LOI
+	
+	easy_country = ENG
+}

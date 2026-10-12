@@ -1,0 +1,23 @@
+estate_parliament = {
+	modifier_definition = {
+		type = loyalty
+		key = parliament_loyalty_modifier
+		trigger = {
+			has_estate = estate_parliament
+		}
+	}
+	modifier_definition = {
+		type = influence
+		key = parliament_influence_modifier
+		trigger = {
+			has_estate = estate_parliament
+		}
+	}
+	modifier_definition = {
+		type = privileges
+		key = parliament_privilege_slots
+		trigger = {
+			has_estate = estate_parliament
+		}
+	}
+}

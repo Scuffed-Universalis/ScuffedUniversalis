@@ -1,0 +1,43 @@
+ME_PRO_1st_effect = {
+	PAP = {
+		country_event_with_option_insight = {
+			id = ME_Provence_Events.8
+			option_1 = "
+				202 = { cede_province = PRO }
+			"
+			option_2 = "
+				add_historical_rival = PRO
+				add_country_modifier = {
+					name = PRO_refused_avignon
+					duration = 3650
+				}
+			"
+		}
+	}
+}
+ME_PRO_2nd_effect = {
+	custom_tooltip = PRO_every_neapolitan
+	hidden_effect = {
+		calabria_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_core = ROOT
+		}
+		apulia_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+			add_core = ROOT
+		}
+		naples_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+				add_core = ROOT
+		}
+	}
+}

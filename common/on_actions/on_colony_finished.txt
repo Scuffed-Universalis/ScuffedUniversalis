@@ -1,0 +1,12 @@
+on_colony_finished = { #ROOT - Province
+	ME_on_colony_finished_effect = yes
+	#ME Stuff
+	if = {
+		limit = {
+			has_province_flag = created_through_auto_colonies
+		}
+		owner = { save_event_target_as = auto_colonizing_nation }
+		ME_automatic_colonization_effect = yes
+		clr_province_flag = created_through_auto_colonies
+	}
+}

@@ -1,0 +1,8 @@
+﻿l_german:
+ EMPEROR_DIPACTIONS_DESC:0 "Dem Kaiser stehen folgende diplomatische Handlungen offen: \n$LIST|Y$ \n§YReichsacht verhängen§! \n§YReichsacht aufheben§! \n§YNationen bitten oder zwingen, dem HRR beizutreten§! \n§YMitglieder durch Krieg aus dem Reich verbannen§!"
+
+ add_5_crown_land_share:0 "§Y[This.GetName]§! erhält die Kontrolle über §G5§! Kronländer."
+
+ FKN: "Franken"
+
+ vassalize_empire2:0 "Alle Mitglieder des §YHeiligen Römischen Reichs§! werden unsere direkten Vasallen oder verlassen das Reich, was uns wiederum Anspruch auf ihre Ländereien gibt! \nErlaubt es dem Kaiser, größere Herzogtümer und Königreiche im Heiligen Römischen Reich in Europa ohne Zustimmung der betroffenen Vasallen zu vereinen."

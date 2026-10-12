@@ -1,0 +1,88 @@
+## country scope
+num_of_owned_manufactory_trigger = {
+	OR = {
+		wharf = $amount$
+		weapons = $amount$
+		textile = $amount$
+		tradecompany = $amount$
+		farm_estate = $amount$
+		mills = $amount$
+		furnace = $amount$
+		plantations = $amount$
+		ramparts = $amount$
+		soldier_households = $amount$
+		impressment_offices = $amount$
+		state_house = $amount$
+	}
+}
+
+num_of_owned_manufactory_combined_trigger = {
+	calc_true_if = {
+		all_owned_province = {
+			has_manufactory_trigger = yes
+		}
+		amount = $amount$
+	}
+}
+
+can_construct_building = {
+	custom_trigger_tooltip = {
+		tooltip = can_construct_buildings_tt
+		NOT = {
+			OR = {
+				has_construction = core
+				has_construction = culture
+				has_construction = building
+				has_construction = missionary
+				has_construction = canal
+				has_construction = great_project
+				has_construction = state_house
+			}
+		}
+	}
+}
+
+can_afford_build_cost = {
+	custom_trigger_tooltip = {
+		tooltip = upgrade_building_afford_tooltip
+		FROM = {
+			variable_arithmetic_trigger = {
+				export_to_variable = {
+					which = treasury_value
+					value = trigger_value:treasury
+					who = FROM
+				}
+				export_to_variable = {
+					which = build_cost_upgrade
+					value = modifier:build_cost
+					who = FROM
+				}
+				change_variable = {
+					which = build_cost_upgrade
+					value = 1
+				}
+				export_to_variable = {
+					which = build_cost_upgrade_base
+					value = num_of_cities
+					who = FROM
+				}
+				subtract_variable = {
+					which = build_cost_upgrade_base
+					which = build_cost_upgrade_base
+				}
+				change_variable = {
+					which = build_cost_upgrade_base
+					value = $value$
+				}
+				multiply_variable = {
+					which = build_cost_upgrade_base
+					which = build_cost_upgrade
+				}
+				check_variable = {
+					which = treasury_value
+					which = build_cost_upgrade_base
+				}
+			}
+		}
+	}
+}

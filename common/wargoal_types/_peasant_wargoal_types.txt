@@ -1,0 +1,30 @@
+take_capital_protect_serfs = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.0
+		peace_cost_factor = 0.4
+		
+		allowed_provinces = {
+			always = no
+		}
+		
+		peace_options = {
+			po_demand_provinces
+			po_peasant_republic
+		}
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	
+	war_name = PROTECTION_OF_SERFS_WARNAME
+}

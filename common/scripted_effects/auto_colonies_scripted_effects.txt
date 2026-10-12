@@ -1,0 +1,1215 @@
+ME_automatic_colonization_effect = {
+	#clr_province_flag = created_through_auto_colonies
+	if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_north_africa_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_north_africa_colonizing_effect
+			superregion = africa_superregion
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_south_africa_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_south_africa_colonizing_effect
+			superregion = southern_africa_superregion
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_east_indies_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_east_indies_colonizing_effect
+			superregion = east_indies_superregion
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_mexico_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_mexico_colonizing_effect
+			region = colonial_mexico
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_eastern_america_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_eastern_america_colonizing_effect
+			region = colonial_eastern_america
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_louisiana_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_louisiana_colonizing_effect
+			region = colonial_louisiana
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_canada_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_canada_colonizing_effect
+			region = colonial_canada
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_the_carribean_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_the_carribean_colonizing_effect
+			region = colonial_the_carribean
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_brazil_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_brazil_colonizing_effect
+			region = colonial_brazil
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_california_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_california_colonizing_effect
+			region = colonial_california
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_colombia_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_colombia_colonizing_effect
+			region = colonial_colombia
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_la_plata_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_la_plata_colonizing_effect
+			region = colonial_la_plata
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_peru_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_peru_colonizing_effect
+			region = colonial_peru
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_australia_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_australia_colonizing_effect
+			region = colonial_australia
+		}
+	}
+	else_if = {
+		limit = {
+			owner = { has_country_flag = autonomous_colonist_region_alaska_selected }
+		}
+		ME_automatic_colonization_effect_module = {
+			target_region_effect = autonomous_colonist_region_alaska_colonizing_effect
+			region = colonial_alaska
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				NOT = {
+					OR = {
+						has_country_flag = autonomous_colonist_region_north_africa_selected
+						has_country_flag = autonomous_colonist_region_south_africa_selected
+						has_country_flag = autonomous_colonist_region_east_indies_selected
+						has_country_flag = autonomous_colonist_region_mexico_selected
+						has_country_flag = autonomous_colonist_region_eastern_america_selected
+						has_country_flag = autonomous_colonist_region_louisiana_selected
+						has_country_flag = autonomous_colonist_region_canada_selected
+						has_country_flag = autonomous_colonist_region_the_carribean_selected
+						has_country_flag = autonomous_colonist_region_brazil_selected
+						has_country_flag = autonomous_colonist_region_california_selected
+						has_country_flag = autonomous_colonist_region_colombia_selected
+						has_country_flag = autonomous_colonist_region_la_plata_selected
+						has_country_flag = autonomous_colonist_region_peru_selected
+						has_country_flag = autonomous_colonist_region_australia_selected
+						has_country_flag = autonomous_colonist_region_alaska_selected
+					}
+				}
+				check_variable = {
+					which = amount_autonomous_colonies
+					value = 1
+				}
+			}
+		}
+		owner = {
+			set_new_colonization_region = yes
+		}
+	}
+}
+
+ME_automatic_colonization_effect_module = {
+	if = {
+		limit = {
+			owner = {
+				check_variable = {
+					which = amount_autonomous_colonies
+					value = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_province = {
+					OR = {
+						[[superregion]
+							superregion = $superregion$
+						]
+						[[region]
+							colonial_region = $region$
+						]
+					}
+					autonomous_colonist_region_province_reachable_trigger = yes
+				}
+			}
+			owner = {
+				subtract_variable = {
+					which = amount_autonomous_colonies_current_assigned
+					value = 1
+				}
+				set_variable = {
+					which = amount_autonomous_colonies_current_assigned_temp
+					which = amount_autonomous_colonies
+				}
+				subtract_variable = {
+					which = amount_autonomous_colonies_current_assigned_temp
+					which = amount_autonomous_colonies_current_assigned
+				}
+				while = {
+					limit = {
+						check_variable = {
+							which = amount_autonomous_colonies_current_assigned_temp
+							value = 1
+						}
+					}
+					$target_region_effect$ = yes
+					subtract_variable = {
+						which = amount_autonomous_colonies_current_assigned_temp
+						value = 1
+					}
+				}
+			}
+		}
+		else = {
+			owner = {
+				set_new_colonization_region = yes
+			}
+		}
+	}
+}
+
+set_new_colonization_region = {
+	ME_automatic_colonization_clear_flags_effect = yes
+	if = {
+		limit = {
+			any_province = {
+				OR = {
+					superregion = africa_superregion
+					# colonial_region = africa_superregion
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_north_africa_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					superregion = southern_africa_superregion
+					# colonial_region = southern_africa_superregion
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_south_africa_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					superregion = east_indies_superregion
+					# colonial_region = east_indies_superregion
+					trade_company_region = trade_company_polynesia
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_east_indies_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_mexico
+					colonial_region = colonial_mexico
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_mexico_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_eastern_america
+					colonial_region = colonial_eastern_america
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_eastern_america_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_the_carribean
+					colonial_region = colonial_the_carribean
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_the_carribean_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_louisiana
+					colonial_region = colonial_louisiana
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_louisiana_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_canada
+					colonial_region = colonial_canada
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_canada_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_brazil
+					colonial_region = colonial_brazil
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_brazil_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_california
+					colonial_region = colonial_california
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_california_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_colombia
+					colonial_region = colonial_colombia
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_colombia_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_la_plata
+					colonial_region = colonial_la_plata
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_la_plata_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_peru
+					colonial_region = colonial_peru
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_peru_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_australia
+					colonial_region = colonial_australia
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_australia_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		limit = {
+			any_province = {
+				OR = {
+					# superregion = colonial_alaska
+					colonial_region = colonial_alaska
+				}
+				autonomous_colonist_region_province_reachable_trigger = yes
+			}
+		}
+		set_country_flag = autonomous_colonist_region_alaska_selected
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+		ME_automatic_colonization_button_effect = yes
+	}
+	else_if = {
+		ME_automatic_colonization_clear_flags_effect = yes
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 1
+		}
+	}
+}
+
+ME_automatic_colonization_button_effect = {
+	if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_north_africa_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_north_africa_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_south_africa_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_south_africa_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_east_indies_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_east_indies_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_mexico_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_mexico_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_eastern_america_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_eastern_america_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_louisiana_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_louisiana_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_canada_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_canada_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_the_carribean_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_the_carribean_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_brazil_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_brazil_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_california_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_california_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_colombia_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_colombia_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_la_plata_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_la_plata_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_peru_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_peru_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_australia_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_australia_colonizing_effect
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = autonomous_colonist_region_alaska_selected
+		}
+		ME_automatic_colonization_button_effect_module = {
+			target_region_effect = autonomous_colonist_region_alaska_colonizing_effect
+		}
+	}
+}
+
+ME_automatic_colonization_button_effect_module = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = amount_autonomous_colonies_current_assigned_initialized }
+		}
+		set_country_flag = amount_autonomous_colonies_current_assigned_initialized
+		set_variable = {
+			which = amount_autonomous_colonies_current_assigned
+			value = 0
+		}
+	}
+	
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					which = amount_autonomous_colonies
+					value = 1
+				}
+			}
+		}
+		change_variable = {
+			which = amount_autonomous_colonies
+			value = 1
+		}
+	}
+	
+	set_variable = {
+		which = amount_autonomous_colonies_current_assigned_temp
+		which = amount_autonomous_colonies
+	}
+	
+	subtract_variable = {
+		which = amount_autonomous_colonies_current_assigned_temp
+		which = amount_autonomous_colonies_current_assigned
+	}
+	
+	while = {
+		limit = {
+			check_variable = {
+				which = amount_autonomous_colonies_current_assigned_temp
+				value = 1
+			}
+		}
+		$target_region_effect$ = yes
+		subtract_variable = {
+			which = amount_autonomous_colonies_current_assigned_temp
+			value = 1
+		}
+	}
+}
+
+ME_automatic_colonization_clear_flags_effect = {
+	clr_country_flag = autonomous_colonist_region_north_africa_selected
+	clr_country_flag = autonomous_colonist_region_south_africa_selected
+	clr_country_flag = autonomous_colonist_region_east_indies_selected
+	clr_country_flag = autonomous_colonist_region_mexico_selected
+	clr_country_flag = autonomous_colonist_region_eastern_america_selected
+	clr_country_flag = autonomous_colonist_region_louisiana_selected
+	clr_country_flag = autonomous_colonist_region_canada_selected
+	clr_country_flag = autonomous_colonist_region_the_carribean_selected
+	clr_country_flag = autonomous_colonist_region_brazil_selected
+	clr_country_flag = autonomous_colonist_region_california_selected
+	clr_country_flag = autonomous_colonist_region_colombia_selected
+	clr_country_flag = autonomous_colonist_region_la_plata_selected
+	clr_country_flag = autonomous_colonist_region_peru_selected
+	clr_country_flag = autonomous_colonist_region_australia_selected
+	clr_country_flag = autonomous_colonist_region_alaska_selected
+}
+
+autonomous_colonist_region_province_weighing_effect = {
+	event_target:current_selected_colony = {
+		set_variable = {
+			which = province_colonization_score
+			value = 0
+		}
+		if = {
+			limit = {
+				province_has_center_of_trade_of_level = 1
+			}
+			change_variable = {
+				which = province_colonization_score
+				value = 10
+			}
+		}
+		if = {
+			limit = {
+				has_great_project = {
+					type = any
+					tier = 0
+				}
+			}
+			change_variable = {
+				which = province_colonization_score
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				any_neighbor_province = { owned_by = ROOT }
+			}
+			change_variable = {
+				which = province_colonization_score
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				has_port = yes
+			}
+			change_variable = {
+				which = province_colonization_score
+				value = 1
+			}
+		}
+	}
+}
+
+autonomous_colonist_region_argument_colonizing_effect = {
+	$region$ = {
+		limit = {
+			autonomous_colonist_region_province_reachable_trigger = yes
+		}
+		save_event_target_as = current_selected_colony
+		autonomous_colonist_region_province_weighing_effect = yes
+		if = {
+			limit = { NOT = { event_target:auto_colonizing_nation = { has_country_flag = random_province_region_indicator } } }
+			event_target:auto_colonizing_nation = { set_country_flag = random_province_region_indicator }
+			save_event_target_as = highest_score_colony
+		}
+	}
+	event_target:auto_colonizing_nation = { clr_country_flag = random_province_region_indicator }
+	$region$ = {
+		limit = {
+			autonomous_colonist_region_province_reachable_trigger = yes
+		}
+		if = {
+			limit = {
+				if = {
+					limit = {
+						has_saved_event_target = highest_score_colony 
+					}
+					check_variable = {
+						which = province_colonization_score
+						which = event_target:highest_score_colony
+					}
+				}
+			}
+			save_event_target_as = highest_score_colony
+		}
+	}
+	if = {
+		limit = {
+			has_saved_event_target = highest_score_colony 
+		}
+		event_target:highest_score_colony = {
+			create_colony = 10
+			event_target:auto_colonizing_nation = {
+				change_variable = {
+					which = amount_autonomous_colonies_current_assigned
+					value = 1
+				}
+			}
+			set_province_flag = created_through_auto_colonies
+		}
+	}
+}
+autonomous_colonist_region_argument_colonizing_effect_east_indies = {
+	$region$ = {
+		limit = {
+			autonomous_colonist_region_province_reachable_trigger = yes
+		}
+		save_event_target_as = current_selected_colony
+		autonomous_colonist_region_province_weighing_effect = yes
+		if = {
+			limit = { NOT = { event_target:auto_colonizing_nation = { has_country_flag = random_province_region_indicator } } }
+			event_target:auto_colonizing_nation = { set_country_flag = random_province_region_indicator }
+			save_event_target_as = highest_score_colony
+		}
+	}
+	trade_company_polynesia = {
+		limit = {
+			autonomous_colonist_region_province_reachable_trigger = yes
+		}
+		save_event_target_as = current_selected_colony
+		autonomous_colonist_region_province_weighing_effect = yes
+	}
+	event_target:auto_colonizing_nation = { clr_country_flag = random_province_region_indicator }
+	$region$ = {
+		limit = {
+			autonomous_colonist_region_province_reachable_trigger = yes
+		}
+		if = {
+			limit = {
+				if = {
+					limit = {
+						has_saved_event_target = highest_score_colony 
+					}
+					check_variable = {
+						which = province_colonization_score
+						which = event_target:highest_score_colony
+					}
+				}
+			}
+			save_event_target_as = highest_score_colony
+		}
+	}
+	trade_company_polynesia = {
+		limit = {
+			autonomous_colonist_region_province_reachable_trigger = yes
+		}
+		if = {
+			limit = {
+				if = {
+					limit = {
+						has_saved_event_target = highest_score_colony 
+					}
+					check_variable = {
+						which = province_colonization_score
+						which = event_target:highest_score_colony
+					}
+				}
+			}
+			save_event_target_as = highest_score_colony
+		}
+	}
+	if = {
+		limit = {
+			has_saved_event_target = highest_score_colony
+		}
+		event_target:highest_score_colony = {
+			create_colony = 10
+			event_target:auto_colonizing_nation = {
+				change_variable = {
+					which = amount_autonomous_colonies_current_assigned
+					value = 1
+				}
+			}
+			set_province_flag = created_through_auto_colonies
+		}
+	}
+}
+
+autonomous_colonist_region_north_africa_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = africa_superregion
+	}
+}
+
+autonomous_colonist_region_south_africa_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = southern_africa_superregion
+	}
+}
+
+autonomous_colonist_region_east_indies_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect_east_indies = {
+		region = east_indies_superregion
+	}
+}
+
+autonomous_colonist_region_mexico_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_mexico
+	}
+}
+
+autonomous_colonist_region_eastern_america_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_eastern_america
+	}
+}
+
+autonomous_colonist_region_louisiana_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_louisiana
+	}
+}
+
+autonomous_colonist_region_canada_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_canada
+	}
+}
+
+autonomous_colonist_region_the_carribean_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_the_carribean
+	}
+}
+
+autonomous_colonist_region_brazil_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_brazil
+	}
+}
+
+autonomous_colonist_region_california_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_california
+	}
+}
+
+autonomous_colonist_region_colombia_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_colombia
+	}
+}
+
+autonomous_colonist_region_la_plata_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_la_plata
+	}
+}
+
+autonomous_colonist_region_peru_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_peru
+	}
+}
+
+autonomous_colonist_region_australia_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_australia
+	}
+}
+
+autonomous_colonist_region_alaska_colonizing_effect = {
+	autonomous_colonist_region_argument_colonizing_effect = {
+		region = colonial_alaska
+	}
+}
+
+autonomous_colonist_region_unassign_on_colony_removal = {
+	if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_north_africa_selected }
+			superregion = africa_superregion
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_south_africa_selected }
+			superregion = southern_africa_superregion
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_east_indies_selected }
+			OR = {
+				superregion = east_indies_superregion
+				trade_company_region = trade_company_polynesia
+			}
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_mexico_selected }
+			colonial_region = colonial_mexico
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_eastern_america_selected }
+			colonial_region = colonial_eastern_america
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_louisiana_selected }
+			colonial_region = colonial_louisiana
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_canada_selected }
+			colonial_region = colonial_canada
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_the_carribean_selected }
+			colonial_region = colonial_the_carribean
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_brazil_selected }
+			colonial_region = colonial_brazil
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_california_selected }
+			colonial_region = colonial_california
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_colombia_selected }
+			colonial_region = colonial_colombia
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_la_plata_selected }
+			colonial_region = colonial_la_plata
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_peru_selected }
+			colonial_region = colonial_peru
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_australia_selected }
+			colonial_region = colonial_australia
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			FROM = { has_country_flag = autonomous_colonist_region_alaska_selected }
+			colonial_region = colonial_alaska
+			is_city = no
+		}
+		FROM = {
+			subtract_variable = {
+				which = amount_autonomous_colonies
+				value = 1
+			}
+			subtract_variable = {
+				which = amount_autonomous_colonies_current_assigned
+				value = 1
+			}
+		}
+	}
+}
+

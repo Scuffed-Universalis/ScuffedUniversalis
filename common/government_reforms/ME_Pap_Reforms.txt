@@ -1,0 +1,42 @@
+empowered_papal_state_reform = {
+	icon = "kingdom_of_god"
+	potential = {
+		has_reform = papacy_reform
+		OR = {
+			has_reform = empowered_papal_state_reform
+			have_had_reform = empowered_papal_state_reform
+		}
+		NOT = {
+			has_reform = kingdom_of_god_reform
+		}
+	}
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = flavor_sca.2
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			remove_country_modifier = sca_administrative_focus
+			remove_country_modifier = sca_diplomatic_focus
+			remove_country_modifier = sca_military_focus
+			remove_country_modifier = sca_administrative_focus_non_heir
+			remove_country_modifier = sca_diplomatic_focus_non_heir
+			remove_country_modifier = sca_military_focus_non_heir
+		}
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+		monarch_admin_power = 2
+		improve_relation_modifier = 0.25
+		reverse_relation_with_same_religion = 10
+	}
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	fixed_rank = 3
+	custom_attributes = {
+		education_focus_enabled = yes
+	}
+}

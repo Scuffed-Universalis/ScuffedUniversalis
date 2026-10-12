@@ -1,0 +1,29 @@
+namespace = corruption_event
+
+# An Honorable People
+country_event = {
+	id = corruption_event.4
+	title = "corruption_event.4.t"
+	desc = "corruption_event.4.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				NOT = { corruption = 1 }
+				NOT = { yearly_corruption_increase = 0.001 }
+				stability = 3
+			}
+			has_country_flag = ME_golden_age_honorable_people
+		}
+	}
+	
+	option = {
+		name = "corruption_event.4.a"
+		add_prestige_or_monarch_power = {
+			amount = 20
+		}
+	}
+}

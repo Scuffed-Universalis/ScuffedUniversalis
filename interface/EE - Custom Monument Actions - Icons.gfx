@@ -1,0 +1,23 @@
+spriteTypes = {
+	### channel_tunnel_cover ###
+	spriteType = {
+		name = "GFX_channel_tunnel_cover"
+		texturefile = "gfx//interface//custom_monument_actions//channel_tunnel_cover_partial.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	### channel_tunnel_cover ###
+	spriteType = {
+		name = "GFX_channel_tunnel_cover_full"
+		texturefile = "gfx//interface//custom_monument_actions//channel_tunnel_cover_full.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+	### channel_tunnel destroy ###
+	spriteType = {
+		name = "GFX_destroy_great_project"
+		texturefile = "gfx//interface//custom_monument_actions//destroy_great_project_2nd.dds"
+		loadType = "INGAME"
+		transparencecheck = yes
+	}
+}

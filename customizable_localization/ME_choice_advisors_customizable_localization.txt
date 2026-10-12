@@ -1,0 +1,47 @@
+defined_text = {
+	name = GetChoiceAdvisorCost
+	random = no
+
+	text = {
+		localisation_key = choice_advisor_purchase_cost
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetChoiceAdvisorAdm
+	random = no
+
+	text = {
+		localisation_key = choice_advisor_skill_value_adm
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetChoiceAdvisorDip
+	random = no
+
+	text = {
+		localisation_key = choice_advisor_skill_value_dip
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+defined_text = {
+	name = GetChoiceAdvisorMil
+	random = no
+
+	text = {
+		localisation_key = choice_advisor_skill_value_mil
+		trigger = {
+			always = yes
+		}
+	}
+}

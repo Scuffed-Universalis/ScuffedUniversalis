@@ -1,0 +1,11 @@
+##STRAITS##
+
+entity = {
+	name = "english_french_ferry_entity"
+	pdxmesh = "english_french_ferry_mesh"
+}
+
+entity = {
+	name = "english_french_ferry_disabled_entity"
+	pdxmesh = "english_french_ferry_disabled_mesh"
+}

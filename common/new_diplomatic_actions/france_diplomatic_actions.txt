@@ -1,0 +1,46 @@
+EE_FRA_seize_curia = {
+	category = influence
+	require_acceptance = no
+	is_visible = { 
+		has_country_flag = EE_FRA_seize_curia
+		FROM = { tag = PAP }
+	}
+	is_allowed = {
+		papal_influence = 100
+		NOT = { is_papal_controller = yes }
+	}
+	on_accept = {
+		add_papal_influence = -100
+		transfer_papal_controller = ROOT
+	}
+	ai_will_do = {
+		NOT = { is_papal_controller = yes }
+		papal_influence = 100
+	}
+}
+
+# EE_FRA_fund_agitation = {
+	# category = influence
+	# require_acceptance = no
+	# is_visible = { 
+		# mission_completed = fra_trouble_horizon
+		# FROM = { tag = event_target:ME_dutch_revolt_target }
+	# }
+	# is_allowed = {
+		# OR = {
+			# adm_power = 100
+			# dip_power = 100
+			# mil_power = 100
+			# years_of_income = 0.5
+			# manpower = 5
+		# }
+	# }
+	# on_accept = {
+		# country_event = {
+			# id = ME_France_Events.39
+		# }
+	# }
+	# ai_will_do = {
+		# NOT = { always = yes }
+	# }
+# }

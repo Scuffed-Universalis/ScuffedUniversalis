@@ -1,0 +1,293 @@
+Goguryeo_ideas = {
+	start = {
+		global_own_trade_power = 0.25
+		land_forcelimit_modifier = 0.1
+	}
+
+	bonus = {
+		infantry_power = 0.1
+	}
+
+	trigger = {
+		has_country_flag = KOR_New_idea_group
+		tag = KOR
+	}
+	free = yes
+
+	hanguel_alphabet = {
+		technology_cost = -0.1
+	}
+	hostilities_in_the_north = {
+		cavalry_power = 0.10
+		cavalry_cost = -0.10
+	}
+	hyanyak_system = {
+		production_efficiency = 0.10
+	}
+	geobukseon_Goguryeo = {
+		ship_durability = 0.15
+		naval_morale = 0.05
+		has_geobukseon = yes
+	}
+	hopae_system = {
+		global_manpower_modifier = 0.10
+	}
+	kyujanggak = {
+		idea_cost = -0.1
+	}
+	against_the_western_foes = {
+		fire_damage_received = -0.1
+	}
+
+}
+
+AYY_ideas = {
+	start = {
+		shock_damage_received = -0.1
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = AYY
+	}
+	free = yes
+
+	hsn_citadels_and_fortesses = {
+		defensiveness = 0.2
+	}
+	hsn_ayyubid_heritage = {
+		global_manpower_modifier = 0.15
+	}
+	hsn_righteousness_of_the_faith = {
+		land_morale = 0.1
+	}
+	ayy_ayyubid_architecture = {
+		build_cost = -0.1
+		development_cost = -0.1
+	}
+	hsn_rise_of_the_eagle = {
+		core_creation = -0.15
+	}
+	ayy_back_from_ashes = {
+		improve_relation_modifier = 0.3
+		diplomatic_reputation = 1
+	}
+	hsn_state_economics = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+}
+
+TUN_improved_ideas = {
+	start = {
+		may_perform_slave_raid = yes
+		galley_power = 0.2		
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+	trigger = {
+		tag = TUN
+		has_country_flag = TUN_modify_catalan_guard
+	}
+	free = yes
+	tun_catalan_guard_improved = {
+		mercenary_discipline = 0.05
+		infantry_power = 0.1
+	}
+	dual_diplomacy = {
+		diplomatic_upkeep = 1
+	}
+	corsairs = {
+		navy_tradition = 1
+		privateer_efficiency = 0.10
+	}
+	tun_attract_foreign_pirates = {
+		global_sailors_modifier = 0.25
+	}
+	tun_board_of_captains = {
+		leader_naval_fire = 1
+	}
+	tun_export_monopolies = {
+		global_own_trade_power = 0.2
+		trade_efficiency = 0.05
+	}
+	tun_caliphate = {
+		tolerance_own = 1
+		monthly_piety = 0.001
+	}
+}
+
+TIM_improved_ideas = {
+	start = {
+		diplomatic_upkeep = 1
+		leader_land_shock = 1
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = TIM
+		has_country_flag = me_tim_upgraded_ideas
+	}
+	free = yes
+	TIM_shahrukh_empire = {
+		vassal_forcelimit_bonus = 0.5
+		vassal_income = 0.15
+	}
+	TIM_silk_road_domination = {
+		trade_efficiency = 0.05
+		caravan_power = 0.2
+	}
+	TIM_governors = {
+		reduced_liberty_desire = 15
+	}
+	TIM_war_elephants = {
+		cavalry_power = 0.15
+	}
+	TIM_legacy_of_timur = {
+		military_tactics = 0.05
+	}
+	TIM_chaghatai_Literature = {
+		legitimacy = 1
+		expand_administration_cost = -0.5
+	}
+	TIM_rennaisance = {
+		technology_cost = -0.05
+		idea_cost = -0.05
+	}
+}
+
+SPA_improved_ideas = {
+	start = {
+		land_morale = 0.15
+		army_tradition_decay = -0.01
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = SPA
+		mission_completed = EE_spa_golden_century
+	}
+	free = yes		#will be added at load.
+
+	devout_catholisism_upgraded = {
+		papal_influence = 2
+		church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
+	}
+	inter_caetera_upgraded = {
+		idea_claim_colonies = yes
+		colonists = 1
+	}
+	salamanca_scholars = {
+		global_institution_spread = 0.1
+		reform_progress_growth = 0.1
+	}
+	spanish_armada_upgraded = {
+		heavy_ship_power = 0.1
+		naval_forcelimit_modifier = 0.25
+	}
+	spa_casa_de_contracion_upgraded = {
+		envoy_travel_time = -0.33
+		global_tariffs = 0.15
+	}
+	siglo_de_oro_upgraded = {
+		prestige = 1
+		global_unrest = -2
+	}
+	spa_cortes_upgraded = { 
+		possible_dip_policy = 1
+		loyalty_change_on_revoked = 0.05
+	}
+}
+
+NAV_new_world_ideas = {
+	start = {
+		morale_damage = 0.1
+		global_colonial_growth = 25
+	}
+	bonus = {
+		leader_naval_fire = 1
+	}
+	trigger = {
+		tag = NAV
+		has_country_flag = NAV_improved_ideas
+	}
+	free = yes
+
+	fearless_seamen = {
+		ship_durability = 0.05
+		naval_morale = 0.15
+	}
+	NAV_global_empire = {
+		naval_forcelimit_modifier = 0.33
+		max_flagships = 1
+	}
+	NAV_ME_basque_ferocity = {
+		discipline = 0.05
+		land_morale_constant = 0.2
+	}
+	camara_de_comptos = {
+		free_adm_policy = 1
+		inflation_reduction = 0.1
+	}
+	people_of_the_sea = {
+		allowed_marine_fraction = 0.2
+		global_sailors_modifier = 0.25
+	}
+	royal_basque_society = {
+		technology_cost = -0.1
+	}
+	NAV_ME_an_industrious_folk = {
+		culture_conversion_cost = -0.1
+		development_cost_in_primary_culture = -0.15
+		same_culture_advisor_cost = -0.1
+	}
+}
+
+CRN_dumnonian_ideas = {
+	start = {
+		fire_damage = 0.1
+		production_efficiency = 0.1
+	}
+	
+	bonus = {
+		land_morale = 0.10
+	}
+	
+	trigger = {
+		tag = CRN
+		has_country_flag = CRN_dumononian_ideas
+	}
+	free = yes
+	
+	crn_stannary_parliaments = {
+		global_unrest = -2
+	}
+	CRN_resurgence_of_dumnonia = {
+		infantry_power = 0.1
+		years_of_nationalism = -5
+	}
+	crn_prayer_book_traditionaliism = {
+		tolerance_own = 2
+	}
+	crn_pirates_of_penzance = {
+		capture_ship_chance = 0.1
+		privateer_efficiency = 0.2
+	}
+	crn_royalist_army = {
+		land_forcelimit_modifier = 0.2
+	}
+	crn_gear_rout = {
+		movement_speed = 0.15
+	}
+	crn_arthurian_romanticism = {
+		prestige_decay = -0.01
+	}
+}

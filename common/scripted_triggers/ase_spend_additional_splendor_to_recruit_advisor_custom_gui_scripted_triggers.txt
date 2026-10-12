@@ -1,0 +1,1128 @@
+ase_spend_additional_splendor_to_recruit_advisor_entry_selectable = {
+	splendor = 400
+}
+
+# Vanilla
+ase_spend_additional_splendor_to_recruit_advisor_entry_1_visible = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_1_selectable = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_2_visible = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_2_selectable = {
+	if = {
+		limit = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_opened
+		}
+		num_of_total_ports = 1
+		primitives = no
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_3_visible = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_3_selectable = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_4_visible = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_4_selectable = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_5_visible = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_5_selectable = {
+	if = {
+		limit = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_opened
+		}
+		num_of_colonists = 1
+		is_colonial_nation = no
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_6_visible = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_6_selectable = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_7_visible = {
+	hidden_trigger = {
+		always = yes
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_7_selectable = {
+	if = {
+		limit = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_opened
+		}
+		num_of_colonists = 1
+	}
+}
+
+# Advisor Types Expanded
+ase_spend_additional_splendor_to_recruit_advisor_max_page_not_reached_ate = {
+	hidden_trigger = {
+		OR = {
+			AND = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+				NOT = { check_variable = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 } }
+			}
+			AND = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+				NOT = { check_variable = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 } }
+			}
+			AND = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+				NOT = { check_variable = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 } }
+			}
+		}
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_1_ate_visible = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_1_ate_selectable = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		hidden_trigger = {
+			always = yes
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			num_of_subjects = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			uses_republican_tradition = yes
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			if = {
+				limit = {
+					has_dlc = "Leviathan"
+				}
+				any_owned_province = {
+					has_great_project = {
+						type = monument
+					}
+					NOT = {
+						has_great_project = {
+							type = monument
+							tier = 3
+						}
+					}
+				}
+			}
+			else = {
+				has_dlc = "Leviathan"
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			num_of_colonists = 1
+			primitives = no
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			NOT = { religious_unity = 1 }
+		}
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_2_ate_visible = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_2_ate_selectable = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			government = monarchy
+			has_government_attribute = heir
+			is_female = no
+			has_regency = no
+			NOT = { has_government_attribute = has_harem }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			num_of_subjects = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		hidden_trigger = {
+			always = yes
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			num_of_states = 5
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			has_estate = estate_vaisyas
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Cradle of Civilization" }
+				}
+				has_dlc = "Cradle of Civilization"
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			religion = confucianism
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				any_owned_province = {
+					NOT = { religion = PREV }
+					PREV = {
+						NOT = { has_harmonized_with = PREV }
+					}
+				}
+			}
+			else = {
+				has_dlc = "Mandate of Heaven"
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "El Dorado" }
+					NOT = { has_dlc = "Golden Century" }
+				}
+				OR = {
+					has_dlc = "El Dorado"
+					has_dlc = "Golden Century"
+				}
+			}
+			OR = {
+				colony = 1
+				crown_colony = 1
+				private_enterprise = 1
+				self_governing_colony = 1
+			}
+			primitives = no
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				is_emperor_of_china = yes
+			}
+			else = {
+				has_dlc = "Mandate of Heaven"
+			}
+		}
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_3_ate_visible = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_3_ate_selectable = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			uses_papacy = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			government = monarchy
+			has_government_attribute = heir
+			is_female = yes
+			has_regency = no
+			NOT = { has_government_attribute = has_harem }
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			num_of_cavalry = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			num_of_states = 5
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			num_of_total_ports = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			gold = 1
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			has_estate = estate_burghers
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			has_estate = estate_maratha
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			is_emperor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			religion_group = muslim
+			uses_piety = yes
+		}
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_4_ate_visible = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_4_ate_selectable = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			uses_papacy = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			num_of_total_ports = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			num_of_artillery = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			has_estate = estate_nobles
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			has_estate = estate_church
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			is_lacking_institutions = yes
+			primitives = no
+		}
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_5_ate_visible = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_5_ate_selectable = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			uses_church_aspects = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			num_of_total_ports = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			any_owned_province = {
+				has_owner_culture = no
+				has_owner_accepted_culture = no
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			if = {
+				limit = {
+					NOT = { has_dlc = "Emperor" }
+				}
+				has_dlc = "Emperor"
+			}
+			OR = {
+				is_revolution_target = yes
+				is_revolutionary = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			has_estate = estate_cossacks
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			has_estate = estate_brahmins
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				NOT = { innovativeness = 100 }
+			}
+			else = {
+				has_dlc = "Rule Britannia"
+			}
+			primitives = no
+		}
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_6_ate_visible = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_6_ate_selectable = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			uses_fervor = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			num_of_total_ports = 1
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			is_emperor_of_china = no
+			is_nomad = no
+			uses_legitimacy = yes
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			num_of_galley = 1
+			num_of_total_ports = 1
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			has_estate = estate_nomadic_tribes
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			has_estate = estate_dhimmi
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			religion_group = christian
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				OR = {
+					any_owned_province = {
+						religion_group = PREV
+						has_owner_religion = no
+					}
+					any_subject_country = {
+						country_religion = PREV
+						any_owned_province = {
+							religion_group = PREV
+							has_owner_religion = no
+						}
+					}
+				}
+			}
+			else = {
+				any_owned_province = {
+					religion_group = PREV
+					has_owner_religion = no
+				}
+			}
+		}
+	}
+}
+
+ase_spend_additional_splendor_to_recruit_advisor_entry_7_ate_visible = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		OR = {
+			has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+		#	has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		always = no
+	}
+}
+ase_spend_additional_splendor_to_recruit_advisor_entry_7_ate_selectable = {
+	if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 1 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			num_of_subjects = 1
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			any_owned_province = {
+				OR = {
+					AND = {
+						is_capital = yes
+						fort_level = 2
+					}
+					AND = {
+						is_capital = no
+						fort_level = 1
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 2 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			uses_devotion = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			is_emperor = yes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			is_emperor = yes
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 3 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			absolutism = 1 # age trigger doesn't work here for some reason
+			if = {
+				limit = {
+					has_dlc = "Emperor"
+				}
+				is_revolution_target = no
+				is_revolutionary = no
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_dip_ate_opened
+			}
+			num_of_heavy_ship = 1
+			num_of_total_ports = 1
+		}
+		else_if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_mil_ate_opened
+			}
+			has_estate = estate_rajput
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 4 }
+		}
+		if = {
+			limit = {
+				has_country_flag = ase_spend_additional_splendor_recruit_advisor_adm_ate_opened
+			}
+			has_estate = estate_jains
+		}
+	}
+	else_if = {
+		limit = {
+			is_variable_equal = { which = ase_spend_additional_splendor_to_recruit_advisor_ate_page value = 5 }
+		}
+		hidden_trigger = {
+			always = yes
+		}
+	}
+}

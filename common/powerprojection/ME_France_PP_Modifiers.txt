@@ -1,0 +1,10 @@
+ME_FRA_force_converted = {
+	power = 5
+	decay = yes
+}
+ME_FRA_english_hegemony = {
+	max = 10
+	min = 10
+	power = 1
+	decay = no
+}

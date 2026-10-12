@@ -1,0 +1,13 @@
+custom_button = {
+	name = ME_force_issue_button
+	potential = {
+		has_parliament = yes
+	}
+	trigger = {
+		has_active_debate = yes
+	}
+	effect = {
+		end_current_debate = yes
+	} #TODO: 
+	tooltip = ME_force_issue_button_tt
+}

@@ -1,0 +1,11 @@
+fra_wealth_madagascar_triggered = {
+	potential = { has_country_flag = EE_FRA_activate_triggered_modifier }
+	trigger = {
+		MIR = {
+			is_subject_of = FRA
+			is_subject_of_type = trade_protectorate
+		}
+	}
+	merchants = 1
+	trade_efficiency = 0.05
+}

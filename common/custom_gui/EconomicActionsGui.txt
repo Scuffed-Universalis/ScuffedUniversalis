@@ -1,0 +1,50 @@
+custom_button = {
+	name = ME_debase_currency
+	tooltip = ME_debase_currency_tt
+	potential = {
+		has_dlc = "Rights of Man"
+		always = no #WIP
+	}
+	trigger = {
+		
+	}
+	effect = { 
+		
+	}
+}
+
+custom_button = {
+	name = ME_convert_foreign_coins
+	tooltip = ME_convert_foreign_coins_tt
+	potential = {
+		always = no #WIP
+	}
+	trigger = {
+	}
+	effect = {  #remember about ME_convert_foreign_coins_ai
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_modifier = ME_convert_foreign_coins_modifier_1
+				}
+				remove_country_modifier = ME_convert_foreign_coins_modifier_1
+				add_country_modifier = {
+					name = ME_convert_foreign_coins_modifier_2
+					duration = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_modifier = ME_convert_foreign_coins_modifier_2
+				}
+				remove_country_modifier = ME_convert_foreign_coins_modifier_2
+			}
+			else = {
+				add_country_modifier = {
+					name = ME_convert_foreign_coins_modifier_1
+					duration = -1
+				}
+			}
+		}
+	}
+}

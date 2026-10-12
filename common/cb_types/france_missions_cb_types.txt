@@ -1,0 +1,55 @@
+cb_EE_FRA_italian_wars = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 120
+	war_goal = fallback_wargoal
+}
+
+cb_EE_FRA_conquest_italy = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 300
+	war_goal = EE_FRA_take_italian_capital
+}
+
+EE_FRA_transport_invasion = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 600
+	war_goal = ME_FRA_take_capital_conquest
+}
+
+EE_FRA_global_expansion = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 1200
+	war_goal = take_capital_conquest
+}
+
+EE_FRA_war_weal = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 12
+	war_goal = EE_FRA_take_capital_disloyal
+}
+
+EE_FRA_imperial_border_dispute = {
+	valid_for_subject = no
+	prerequisites = {
+		FROM = {
+			is_part_of_hre = yes
+			any_neighbor_province = {
+				owner = { has_country_flag = EE_FRA_unlock_imperial_CB }
+			}
+		}
+	}
+	months = 120
+	war_goal = take_border
+}
+
+EE_FRA_dissolution_empire = {
+	valid_for_subject = no
+	is_triggered_only = yes
+	months = 120
+	war_goal = superiority_insult
+}

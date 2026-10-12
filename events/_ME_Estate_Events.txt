@@ -1,0 +1,96 @@
+namespace = ME_Estate_Events
+
+country_event = {
+	id = ME_Estate_Events.1
+	title = ME_Estate_Events.1.t
+	desc = ME_Estate_Events.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ME_Estate_Events.1.a
+		
+		ai_chance = { factor = 100 }
+		
+		trigger = {
+			NOT = { has_country_modifier = ME_is_countering_estate_power_modifier }
+		}
+		
+		custom_tooltip = ME_the_estate_disasters_will_tick_down
+		add_country_modifier = {
+			name = ME_is_countering_estate_power_modifier
+			duration = 7300
+		}
+	}
+	
+	option = {
+		name = ME_Estate_Events.1.b
+		
+		ai_chance = { factor = 0 }
+		
+		trigger = {
+			NOT = { crown_land_share = 40 }
+		}
+		
+		custom_tooltip = ME_this_is_available_because_we_have_less_than_40_crownland
+		
+		custom_tooltip = " "
+		
+		add_corruption = 2.5
+		
+		change_estate_land_share = {
+			estate = all
+			share = -5
+		}
+	}
+	
+	option = {
+		name = ME_Estate_Events.1.c
+		
+		ai_chance = { factor = 50 }
+		
+		custom_tooltip = ME_if_we_have_at_least_2_stability
+		
+		tooltip = {
+			add_stability = -1
+			dip_power_cost = 50
+			mil_power_cost = 50
+			custom_tooltip = ME_every_estate_gets_minus_ten_influnece
+			hidden_effect = {
+				add_estate_influence_modifier = {
+					estate = all
+					desc = EST_ME_interaction
+					influence = -5
+					duration = 7300
+				}
+			}
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					stability = 2
+				}
+				dip_power_cost = 50
+				mil_power_cost = 50
+				add_stability = -1
+				hidden_effect = {
+					add_estate_influence_modifier = {
+						estate = all
+						desc = EST_ME_interaction
+						influence = -5
+						duration = 7300
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = ME_Estate_Events.1.e
+		
+		ai_chance = { factor = 10 }
+		
+	}
+}

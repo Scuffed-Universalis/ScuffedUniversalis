@@ -1,0 +1,74 @@
+namespace = overextension
+
+# Bad Reputation!
+country_event = {
+	id = overextension.3
+	title = "EVTNAME750"
+	desc = "EVTDESC750"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		prestige = 0
+		NOT = { has_country_flag = ME_no_more_bad_reputation_overextension_event }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA750"
+		add_prestige = -25
+	}
+}
+
+# Merchants Assassinated!
+country_event = {
+	id = overextension.7
+	title = "EVTNAME773"
+	desc = "EVTDESC773"
+	picture = ASSASSINATION_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		num_of_merchants = 1
+		any_active_trade_node = {
+			has_merchant = PREV
+			NOT = { 
+				has_trade_modifier = {
+					who = ROOT
+					name = merchant_recalled
+				}
+			}
+		}	
+		NOT = { has_country_flag = ENG_no_more_assasinations_of_merchants }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "EVTOPTA773"
+		random_active_trade_node = {
+			limit = {
+				has_merchant = PREV
+				NOT = { 
+					has_trade_modifier = {
+						who = ROOT
+						name = merchant_recalled
+					}
+				}				
+			}
+			add_trade_modifier = {
+				who = root
+				duration = 3650
+				power = -10
+				key = merchant_recalled
+			}	
+		}		
+	}
+}

@@ -1,0 +1,394 @@
+country_decisions = {
+	hre_nordic_duchy_decision_denmark = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_nordic_duchy_decision_denmark }
+			NOT = { tag = DAN }
+			OR = {
+				jutland_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = DAN }
+				}
+				denmark_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = DAN }
+				}
+				skaneland_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = DAN }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = jutland_area
+				area = denmark_area
+				area = skaneland_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = DAN }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = DAN }
+				DAN = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_nordic_duchy_decision_denmark
+			add_imperial_influence = -10
+			custom_tooltip = hre_nordic_duchy_decision_denmark_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = jutland_area
+					tag = DAN
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = denmark_area
+					tag = DAN
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = skaneland_area
+					tag = DAN
+				}
+				DAN = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = danish
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_nordic_duchy_decision_norway = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_nordic_duchy_decision_norway }
+			NOT = { tag = NOR }
+			OR = {
+				western_norway = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOR }
+				}
+				eastern_norway = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOR }
+				}
+				northern_norway = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOR }
+				}
+				subarctic_islands_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOR }
+				}
+				315 = {
+					hre_can_cede_province_to_hre_duchy = { tag = NOR }
+				}
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						3046 = {
+							hre_can_cede_province_to_hre_duchy = { tag = NOR }
+						}
+						370 = {
+							hre_can_cede_province_to_hre_duchy = { tag = NOR }
+						}
+						371 = {
+							hre_can_cede_province_to_hre_duchy = { tag = NOR }
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = western_norway
+				area = eastern_norway
+				area = northern_norway
+				area = subarctic_islands_area
+				province_id = 315
+				AND = {
+					has_global_flag = extended_timeline_mod
+					OR = {
+						province_id = 3046
+						province_id = 370
+						province_id = 371
+					}
+				}
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = NOR }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = NOR }
+				NOR = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_nordic_duchy_decision_norway
+			add_imperial_influence = -10
+			custom_tooltip = hre_nordic_duchy_decision_norway_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = western_norway
+					tag = NOR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = eastern_norway
+					tag = NOR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = northern_norway
+					tag = NOR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = subarctic_islands_area
+					tag = NOR
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 315
+					tag = NOR
+				}
+				if = {
+					limit = {
+						has_global_flag = extended_timeline_mod
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 3046
+						tag = NOR
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 370
+						tag = NOR
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 371
+						tag = NOR
+					}
+				}
+				NOR = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = norwegian
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_nordic_duchy_decision_sweden = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_nordic_duchy_decision_sweden }
+			NOT = { tag = SWE }
+			OR = {
+				norrland_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SWE }
+				}
+				svealand_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SWE }
+				}
+				ostra_svealand_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SWE }
+				}
+				gotaland_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SWE }
+				}
+				vastra_gotaland_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = SWE }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = norrland_area
+				area = svealand_area
+				area = ostra_svealand_area
+				area = gotaland_area
+				area = vastra_gotaland_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = SWE }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = SWE }
+				SWE = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_nordic_duchy_decision_sweden
+			add_imperial_influence = -10
+			custom_tooltip = hre_nordic_duchy_decision_sweden_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = norrland_area
+					tag = SWE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = svealand_area
+					tag = SWE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = ostra_svealand_area
+					tag = SWE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = gotaland_area
+					tag = SWE
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = vastra_gotaland_area
+					tag = SWE
+				}
+				SWE = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = swedish
+						kingdom = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_nordic_duchy_decision_finland = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_nordic_duchy_decision_finland }
+			NOT = { tag = FIN }
+			OR = {
+				finland_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = FIN }
+				}
+				bothnia_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = FIN }
+				}
+				4151 = {
+					hre_can_cede_province_to_hre_duchy = { tag = FIN }
+				}
+				AND = {
+					has_global_flag = extended_timeline_mod
+					4152 = {
+						hre_can_cede_province_to_hre_duchy = { tag = FIN }
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = finland_area
+				area = bothnia_area
+				province_id = 4151
+				AND = {
+					has_global_flag = extended_timeline_mod
+					province_id = 4152
+				}
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = FIN }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = FIN }
+				FIN = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_nordic_duchy_decision_finland
+			add_imperial_influence = -10
+			custom_tooltip = hre_nordic_duchy_decision_finland_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = finland_area
+					tag = FIN
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = bothnia_area
+					tag = FIN
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4151
+					tag = FIN
+				}
+				if = {
+					limit = {
+						has_global_flag = extended_timeline_mod
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 4152
+						tag = FIN
+					}
+				}
+				FIN = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = finnish
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

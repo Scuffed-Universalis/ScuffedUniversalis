@@ -1,0 +1,128 @@
+EE_FRA_italian_wars_opportunity = {
+	ended_by_country_breaking_to_rebels = no
+	potential = { 
+		mission_completed = fra_tip_balance
+		NOT = { has_country_flag = EE_FRA_finished_italian_wars_opportunity }
+		NOT = {
+			had_country_flag = {
+				flag = EE_FRA_unlock_italian_wars
+				days = 1825
+			}
+		}
+	}
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = EE_FRA_unlocked_opportunity_five_years_tt
+			NOT = {
+				had_country_flag = {
+					flag = EE_FRA_unlock_italian_wars
+					days = 1825
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = ME_FRA_no_alliance_tt
+			if = {
+				limit = {
+					emperor = { exists = yes }
+				}
+				emperor = {
+					NOT = { alliance_with = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					CAS = { exists = yes }
+				}
+				CAS = {
+					NOT = { alliance_with = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					POR = { exists = yes }
+				}
+				POR  = {
+					NOT = { alliance_with = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					ARA = { exists = yes }
+				}
+				ARA = {
+					NOT = { alliance_with = ROOT }
+				}
+			}
+			if = {
+				limit = {
+					SPA = { exists = yes }
+				}
+				SPA = {
+					NOT = { alliance_with = ROOT }
+				}
+			}
+		}
+		OR = {
+			MLO = { is_subject_of = ROOT }
+			NAP = { is_subject_of = ROOT }
+		}
+	}
+	can_stop = { has_any_disaster = yes }
+	progress = {
+		modifier = {
+			factor = 1
+			manpower_percentage = 0.8
+		}
+		modifier = {
+			factor = 2
+			manpower_percentage = 1
+		}
+		modifier = {
+			factor = 1
+			navy_size_percentage = 0.8
+		}
+		modifier = {
+			factor = 2
+			navy_size_percentage = 1
+		}
+		modifier = {
+			factor = 2
+			army_size_percentage = 0.8
+		}
+		modifier = {
+			factor = 2
+			army_size_percentage = 1
+		}
+		modifier = {
+			factor = 2
+			has_mil_advisor_3 = yes
+		}
+		modifier = {
+			factor = -5
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_declining_war_enthusiasm_tt
+				always = yes
+			}
+		}
+	}
+	can_end = {
+		OR = {
+			mission_completed = fra_affirmation_power
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_two_years_start
+				had_country_flag = {
+					flag = EE_FRA_italian_wars_start
+					days = 730
+				}
+			}
+			hidden_trigger = { has_country_flag = EE_FRA_ended_opportunity }
+		}
+	}
+	modifier = {
+		war_exhaustion = -0.1
+		global_unrest = -2
+	}
+	on_start = ME_France_Events.29
+	on_end = ME_France_Events.30
+}

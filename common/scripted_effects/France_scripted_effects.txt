@@ -1,0 +1,871 @@
+#Country effect
+EE_FRA_give_claims_to_save_space = {
+	hidden_effect = {
+		random_subject_country = {
+			limit = {
+				capital_scope = { region = iberia_region }
+				is_subject_of_type = personal_union
+			}
+			iberia_region  = {
+				limit = {
+					NOT = { owned_by = PREV }
+					NOT = { is_core = PREV }
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = PREV
+			}
+		}
+	}
+}
+
+EE_FRA_inherit_brittany_chance = {
+	if = {
+		limit = {
+			has_country_flag = EE_FRA_BRI_inherit_chance
+			BRI = { is_subject_of = FRA }
+		}
+		random_list = {
+			20 = { inherit = BRI }
+			80 = { 
+				clr_country_flag = EE_FRA_BRI_inherit_chance
+				set_country_flag = EE_FRA_BRI_inherit_chance_1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = EE_FRA_BRI_inherit_chance_1
+			BRI = { is_subject_of = FRA }
+		}
+		random_list = {
+			40 = { inherit = BRI }
+			60 = { 
+				clr_country_flag = EE_FRA_BRI_inherit_chance_1
+				set_country_flag = EE_FRA_BRI_inherit_chance_2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = EE_FRA_BRI_inherit_chance_2
+			BRI = { is_subject_of = FRA }
+		}
+		random_list = {
+			60 = { inherit = BRI }
+			40 = { 
+				clr_country_flag = EE_FRA_BRI_inherit_chance_2
+				set_country_flag = EE_FRA_BRI_inherit_chance_3
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = EE_FRA_BRI_inherit_chance_3
+			BRI = { is_subject_of = FRA }
+		}
+		random_list = {
+			80 = { inherit = BRI }
+			20 = { 
+				clr_country_flag = EE_FRA_BRI_inherit_chance_3
+				set_country_flag = EE_FRA_BRI_inherit_chance_4
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = EE_FRA_BRI_inherit_chance_4
+			BRI = { is_subject_of = FRA }
+		}
+		inherit = BRI
+	}
+}
+
+EE_FRA_inherit_burgundy_chance = {
+	if = {
+		limit = {
+			has_country_flag = EE_FRA_BUR_inherit_chance
+			BUR = { is_subject_of = FRA }
+		}
+		random_list = {
+			20 = { inherit = BUR }
+			80 = { 
+				clr_country_flag = EE_FRA_BUR_inherit_chance
+				set_country_flag = EE_FRA_BUR_inherit_chance_1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = EE_FRA_BUR_inherit_chance_1
+			BUR = { is_subject_of = FRA }
+		}
+		random_list = {
+			40 = { inherit = BUR }
+			60 = { 
+				clr_country_flag = EE_FRA_BUR_inherit_chance_1
+				set_country_flag = EE_FRA_BUR_inherit_chance_2
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = EE_FRA_BUR_inherit_chance_2
+			BUR = { is_subject_of = FRA }
+		}
+		random_list = {
+			60 = { inherit = BUR }
+			40 = { 
+				clr_country_flag = EE_FRA_BUR_inherit_chance_2
+				set_country_flag = EE_FRA_BUR_inherit_chance_3
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = EE_FRA_BUR_inherit_chance_3
+			BUR = { is_subject_of = FRA }
+		}
+		random_list = {
+			80 = { inherit = BUR }
+			20 = { 
+				clr_country_flag = EE_FRA_BUR_inherit_chance_3
+				set_country_flag = EE_FRA_BUR_inherit_chance_4
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_country_flag = EE_FRA_BUR_inherit_chance_4
+			BUR = { is_subject_of = FRA }
+		}
+		inherit = BUR
+	}
+}
+
+EE_FRA_give_age_modifier = {
+	if = {
+		limit = { current_age = age_of_discovery }
+		add_age_modifier = {
+			name = EE_FRA_success_italy
+			duration = -1
+			age = age_of_discovery
+		}
+	}
+	else_if = {
+		limit = { current_age = age_of_reformation }
+		add_age_modifier = {
+			name = EE_FRA_success_italy
+			duration = -1
+			age = age_of_reformation
+		}
+	}
+	else_if = {
+		limit = { current_age = age_of_absolutism }
+		add_age_modifier = {
+			name = EE_FRA_success_italy
+			duration = -1
+			age = age_of_absolutism
+		}
+	}
+	else = {
+		add_age_modifier = {
+			name = EE_FRA_success_italy
+			duration = -1
+			age = age_of_revolution
+		}
+	}
+}
+
+EE_FRA_remove_HYW_win_modifiers = {
+	if = {
+		limit = { has_country_modifier = EE_FRA_french_bombardes }
+		remove_country_modifier = EE_FRA_french_bombardes
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_master_gunner }
+		remove_country_modifier = EE_FRA_master_gunner
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_bastard_orleans }
+		remove_country_modifier = EE_FRA_bastard_orleans
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_early_victories }
+		remove_country_modifier = EE_FRA_early_victories
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_first_standing_army }
+		remove_country_modifier = EE_FRA_first_standing_army
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_montjoie }
+		remove_country_modifier = EE_FRA_montjoie
+	}
+}
+
+EE_FRA_remove_IW_modifiers = {
+	if = {
+		limit = { has_country_modifier = EE_FRA_averted_holyness }
+		remove_country_modifier = EE_FRA_averted_holyness
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_success_italy }
+		remove_country_modifier = EE_FRA_success_italy
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_supply_lines }
+		remove_country_modifier = EE_FRA_supply_lines
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_prelude_navy_supremacy }
+		remove_country_modifier = EE_FRA_prelude_navy_supremacy
+	}
+	if = {
+		limit = { 
+			has_country_modifier = EE_FRA_mediterranean_hegemony
+			has_country_flag = EE_FRA_Italian_Wars_incident_tree
+		}
+		remove_country_modifier = EE_FRA_mediterranean_hegemony
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_montjoie }
+		remove_country_modifier = EE_FRA_montjoie
+	}
+	if = {
+		limit = { has_country_modifier = EE_FRA_artillery_evolution }
+		remove_country_modifier = EE_FRA_artillery_evolution
+	}
+}
+
+EE_FRA_give_italian_claims = {
+	lombardy_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	naples_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	apulia_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	calabria_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+}
+
+EE_FRA_give_fur_grounds_modifier = {
+	# if = {
+		# limit = {
+			# owner = { mission_completed = fra_hudson_bay } 
+			# superregion = north_america_superregion
+			# trade_goods = fur
+		# }
+		# add_province_modifier = {
+			# name = EE_FRA_fur_grounds
+			# duration = -1
+		# }
+	# }
+}
+
+EE_FRA_remove_fur_grounds_modifier = {
+	# if = {
+		# limit = { has_province_modifier = EE_FRA_fur_grounds }
+		# remove_province_modifier = EE_FRA_fur_grounds
+	# }
+}
+
+EE_FRA_trouble_horizon_claims_effect = {
+	flanders_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	brabant_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	north_brabant_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}
+	holland_area = {
+		limit = {
+			NOT = { owned_by = ROOT }
+			NOT = { is_core = ROOT }
+		}
+		add_permanent_claim = ROOT
+	}				
+}
+
+EE_FRA_remove_english_wars_expanded_effect = {
+	if = {
+		limit = { has_country_modifier = EE_FRA_ENG_wars_expanded }
+		remove_country_modifier = EE_FRA_ENG_wars_expanded
+	}
+}
+
+EE_FRA_louis_ruler_effect = {
+	if = {
+		limit = { 
+			has_dlc = "Rights of Man"
+			NOT = { ruler_has_personality = charismatic_negotiator_personality }
+		}
+		add_ruler_personality = charismatic_negotiator_personality
+	}
+}
+
+EE_FRA_invasion_england_1st_OPT_effect = {
+	add_casus_belli = {
+		type = EE_FRA_transport_invasion
+		target = ENG
+		months = 300
+	}
+	custom_tooltip = EE_FRA_empty_line_tt
+	add_country_modifier = {
+		name = EE_FRA_ENG_wars_expanded
+		duration = -1
+		desc = during_transport_invasion
+	}
+	custom_tooltip = EE_FRA_perma_claims_tt
+	hidden_effect = {
+		every_province = {
+			limit = {
+				OR = {
+					owned_by = ENG
+					owned_by = GBR
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+EE_FRA_opt_1_scrippted_effect = {
+	add_country_modifier = {
+		name = EE_FRA_core_french_army
+		duration = -1
+	}
+	complex_dynamic_effect_without_alternative = {
+		first_custom_tooltip = EE_FRA_if_musketeer_reform
+		first_limit = "
+			has_reform = musketeers_reform
+		"
+		first_effect = "
+			add_country_modifier = {
+				name = EE_FRA_increased_conscription
+				duration = -1
+			}
+		"
+	}
+}
+
+EE_FRA_opt_2_scrippted_effect = {
+	add_country_modifier = {
+		name = EE_FRA_muskets_horseback
+		duration = -1
+	}
+	complex_dynamic_effect_without_alternative = {
+		first_custom_tooltip = EE_FRA_if_gendarmes_reform
+		first_limit = "
+			OR = {
+				has_reform = gendarmes_reform
+				has_reform = EE_FRA_gendarmes_reform
+			}
+		"
+		first_effect = "
+			add_country_modifier = {
+				name = EE_FRA_modernization_gendarmes
+				duration = 9125
+			}
+		"
+	}
+}
+
+EE_FRA_won_war_BUR_BRI_effect = {
+	if = {
+		limit = {
+			has_disaster = EE_FRA_mad_wars
+			FROM = { tag = BRI }
+		}
+		set_country_flag = EE_FRA_won_war_against_BRI
+	}
+	else_if = {
+		limit = {
+			has_disaster = EE_FRA_mad_wars
+			FROM = { tag = BUR }
+		}
+		set_country_flag = EE_FRA_won_war_against_BUR
+	}
+}
+
+EE_FRA_seize_lands_counter_effect = {
+	if = {
+		limit = {
+			has_country_flag = EE_FRA_unlock_centralize_fief
+			any_subject_country = { is_subject_of_type = EE_FRA_fief }
+		}
+		hidden_effect = {
+			change_variable = {
+				which = EE_FRA_seize_crownlands_counter
+				value = 1
+			}
+		}
+	}
+}
+
+EE_FRA_successive_emperorship_effect = {
+	if = {
+		limit = { mission_completed = fra_true_heirs }
+		add_ruler_modifier = {
+			name = EE_FRA_successors_charlemagne
+			duration = -1
+		}
+	}
+}
+
+EE_FRA_alliance_effect = {
+	if = {
+		limit = {
+			has_country_flag = EE_FRA_rival_HRE_choice_event
+			NOT = { has_country_flag = EE_FRA_2nd_ally_flag }
+			FROM = {
+				NOT = {
+					alliance_with = emperor
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_1st_ally_flag }
+			}
+			set_country_flag = EE_FRA_1st_ally_flag
+			FROM = {
+				country_event = { id = ME_France_Events.72 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = EE_FRA_1st_ally_flag
+				NOT = { has_country_flag = EE_FRA_2nd_ally_flag }
+			}
+			set_country_flag = EE_FRA_2nd_ally_flag
+			FROM = {
+				country_event = { id = ME_France_Events.72 }
+			}
+		}
+	}
+}
+
+EE_FRA_units_killed_counter_effect = {
+	if = {
+		limit = {
+			FROM = { tag = ENG }
+			has_country_flag = EE_FRA_HYW_incident_tree
+			check_variable = {
+				which = naval_units_killed_var
+				value = 5
+			}
+		}
+		change_variable = {
+			which = EE_FRA_battles_won_counter
+			value = 1
+		}
+	}
+	if = {
+        limit = { 
+			has_country_flag = EE_FRA_Italian_Wars_incident_tree
+			#check_variable = { which = EE_units_killed_counter }
+		}
+        change_variable = {
+            which = EE_units_killed_counter
+            which = land_units_killed_var
+        }
+    }
+	if = {
+        limit = {
+            has_country_flag = EE_FRA_Italian_Wars_incident_tree
+            check_variable = { which = naval_units_killed_var }
+        }
+        change_variable = {
+            which = EE_ships_killed_counter
+            which = naval_units_killed_var
+        }
+    }
+	if = {
+		limit = { mission_completed = fra_gendarmes_ordonnance }
+		change_variable = { 
+			which = EE_FRA_num_of_won_battles 
+			value = 1
+		}
+	}
+	if = {
+		limit = {
+			tag = FRA
+			is_in_war = { casus_belli = EE_FRA_dissolution_empire }
+			check_variable = { which = EE_hre_units_killed_counter }
+		}
+		change_variable = {
+            which = EE_hre_units_killed_counter
+            which = land_units_killed_var
+        }
+	}
+}
+
+EE_FRA_won_empire_effect = {
+	if = {
+		limit = {
+			FROM = { government_rank = 3 }
+			mission_completed = fra_barbarians_gates
+		}
+		add_imperial_influence = 5
+		add_prestige_or_monarch_power = { value = 10 }
+	}
+}
+
+ME_FRA_complex_effect_1_1 = {
+	custom_tooltip = EE_FRA_increase_conversion_reward_tt
+	set_country_flag = EE_FRA_increase_conversion_reward
+	complex_dynamic_effect_without_alternative = {
+		first_custom_tooltip = EE_FRA_if_completed_religious_ideas
+		first_limit = "
+			religious_ideas = 7
+		"
+		first_effect = "
+			set_defender_of_the_faith = { who = ROOT }			
+		"
+	}
+	add_country_modifier = {
+		name = EE_FRA_heirs_st_peter
+		duration = -1
+	}
+}
+
+ME_FRA_complex_effect_1_2 = {
+	custom_tooltip = EE_FRA_winning_religious_wars_give_mana_tt
+	set_country_flag = EE_FRA_winning_religious_wars_give_mana
+	add_country_modifier = {
+		name = EE_FRA_true_heirs_christ
+		duration = -1
+	}
+	complex_dynamic_effect_without_alternative = {
+		first_custom_tooltip = EE_FRA_if_defender_faith
+		first_limit = "
+			is_defender_of_faith = yes
+		"
+		first_effect = "
+			add_country_modifier = {
+				name = EE_FRA_protector_reformation
+				duration = -1
+				desc = as_long_as_defender
+			}
+		"
+	}
+}
+
+ME_FRA_complex_effect_1 = {
+	complex_dynamic_effect = {
+		first_custom_tooltip = EE_FRA_if_catholic_tt
+		first_limit = "
+			religion = catholic
+		"
+		first_effect = "
+			ME_FRA_complex_effect_1_1 = yes
+		"
+		second_custom_tooltip = EE_FRA_not_catholic_tt
+		second_limit = "
+			NOT = { religion = catholic }
+		"
+		second_effect = "
+			ME_FRA_complex_effect_1_2 = yes
+		"
+	}
+}
+
+ME_FRA_complex_effect_2 = {
+	custom_tooltip = EE_FRA_gain_colonialism_tt
+	tooltip = {
+		capital_scope = {
+			add_institution_embracement = {
+				which = new_world_i
+				value = 100
+			}
+		}
+	}
+	set_country_flag = EE_FRA_gain_colonialism
+	custom_tooltip = EE_FRA_gain_colonialism_tt_1
+	hidden_effect = {
+		EE_FRA_give_claims_to_save_space = yes
+		every_subject_country = {
+			limit = {
+				capital_scope = { region = iberia_region }
+				is_subject_of_type = personal_union
+			}
+			ROOT = {
+				create_subject = {
+					subject_type = ME_personal_union
+					subject = PREV
+				}
+			}
+		}
+	}
+}
+
+ME_FRA_complex_effect_3 = {
+	add_years_of_income = -0.5
+	add_country_modifier = {
+		name = versailles
+		duration = -1
+	}
+	if = {
+		limit = { has_dlc = "Leviathan" }
+		183 = {
+			set_great_project_tier_2 = { type = versailles }
+		}
+	}
+}
+
+ME_FRA_complex_effect_4 = {
+	country_event_with_option_insight = {
+		id = ME_France_Events.56
+		option_1 = "
+			custom_tooltip = EE_FRA_distribute_english_tt
+			ME_add_accepted_culture_or_dip_power = { culture = english }
+			custom_tooltip = EE_FRA_lose_10_auto_devastation_tt
+			tooltip = {
+				add_local_autonomy = -10
+				add_devastation = -10
+				add_nationalism = -5
+			}
+			custom_tooltip =  ME_FRA_empty_line_tt
+		"
+		option_2 = "
+			custom_tooltip = EE_FRA_unlock_french_assimilation_decision
+			custom_tooltip = EE_FRA_english_conversion_reward
+			tooltip = {
+				add_permanent_power_projection = {
+					type = ME_FRA_english_hegemony
+					amount = 10 
+				}
+			}
+			add_country_modifier = {
+				name = EE_FRA_french_system
+				duration = -1
+			}
+		"
+	}
+}
+
+ME_FRA_complex_effect_5 = {
+	country_event_with_option_insight = {
+		id = ME_France_Events.58
+		option_1 = "
+			custom_tooltip = EE_FRA_forfeit_provinces_tt
+		"
+		option_2 = "
+			ME_FRA_complex_effect_8 = yes
+		"
+	}
+}
+
+ME_FRA_complex_effect_6 = {
+	country_event_with_option_insight = {
+		id = ME_France_Events.59
+		option_1 = "
+			ME_FRA_complex_effect_7 = yes
+		"
+		option_2 = "
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			custom_tooltip = ME_FRA_break_alliance_FRA
+			hidden_effect = { break_alliance = FRA }
+		"
+	}
+}
+
+ME_FRA_complex_effect_7 = {
+	complex_dynamic_effect = {
+		first_custom_tooltip = ME_FRA_SCO_ally_tt
+		first_limit = "
+			SCO = { alliance_with = FRA }
+		"
+		first_effect = "
+			FRA = {
+				create_subject = {
+					subject_type = vassal
+					subject = SCO
+				}
+			}
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
+			ME_FRA_complex_effect_7_1 = yes
+		"
+		second_custom_tooltip = ME_FRA_SCO_subject_tt
+		second_limit = "
+			SCO = { is_subject_of = ROOT }
+		"
+		second_effect = "
+			add_prestige_or_monarch_power = { amount = 10 }
+
+			custom_tooltip = SEPERATOR_TOOLTIP
+
+			ME_FRA_complex_effect_7_1 = yes
+		"
+	}
+}
+
+ME_FRA_complex_effect_7_1 = {
+	if = {
+		limit = {
+			has_country_flag = fra_influx_of_french_mil_flag
+		}
+		SCO = { 
+			add_liberty_desire = -50
+			add_country_modifier = {
+				name = EE_FRA_influx_french_ideals_buffed
+				duration = -1
+			}
+		}
+	}
+	else = {
+		SCO = { 
+			add_liberty_desire = -50
+			add_country_modifier = {
+				name = EE_FRA_influx_french_ideals
+				duration = -1
+			}
+		}
+	}
+}
+
+ME_FRA_complex_effect_8 = {
+	complex_dynamic_effect = {
+		first_custom_tooltip = ME_FRA_SCO_ally_tt
+		first_limit = "
+			SCO = { alliance_with = FRA }
+		"
+		first_effect = "
+			custom_tooltip = ME_FRA_break_SCO_alliance
+			hidden_effect = { break_alliance = SCO }		
+		"
+		second_custom_tooltip = ME_FRA_SCO_subject_tt
+		second_limit = "
+			SCO = { is_subject_of = ROOT }
+		"
+		second_effect = "
+			SCO = { add_liberty_desire = 30 }
+		"
+	}
+}
+
+ME_FRA_on_reform_enacted_effect = {
+	if = {
+		limit = { has_reform = EE_FRA_ancien_regime }
+		add_government_power = {
+			mechanic_type = EE_FRA_model_state
+			power_type = EE_FRA_consolidation_power
+			value = 10
+		}
+	}
+}
+
+ME_FRA_on_centralization_effect = {
+	if = {
+		limit = { 
+			owner = { has_reform = EE_FRA_ancien_regime }
+		}
+		owner = {
+			change_government_reform_progress = 25
+			add_adm_power = 25
+			add_government_power = {
+				mechanic_type = EE_FRA_model_state
+				power_type = EE_FRA_consolidation_power
+				value = 1
+			}
+		}
+	}
+}
+
+ME_FRA_seize_land_effect = {
+	if = {
+		limit = { has_reform = EE_FRA_ancien_regime }
+		add_government_power = {
+			mechanic_type = EE_FRA_model_state
+			power_type = EE_FRA_consolidation_power
+			value = 5
+		}
+	}
+}
+
+ME_FRA_on_core_effect = {
+	if = {
+		limit = { 
+			owner = { has_reform = EE_FRA_ancien_regime }
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = EE_FRA_model_state
+				power_type = EE_FRA_consolidation_power
+				value = 0.1
+			}
+		}
+	}
+}
+
+ME_FRA_on_war_effects = {
+	EE_FRA_remove_IW_modifiers = yes
+	EE_FRA_won_war_BUR_BRI_effect = yes
+	EE_FRA_remove_english_wars_expanded_effect = yes
+	EE_FRA_remove_HYW_win_modifiers = yes
+}
+
+ME_FRA_on_war_lost_mad_wars_effect = {
+	if = {
+		limit = {
+			FROM = { has_country_flag = ME_FRA_rebel_leader_flag }
+		}
+		FRA = { set_country_flag = ME_FRA_lost_mad_wars }
+	}
+}
+
+ME_FRA_on_war_won_mad_wars_effect = {
+	if = {
+		limit = { has_country_flag = EE_FRA_rein_appanage }
+		set_country_flag = ME_FRA_won_mad_wars_with_PO
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = EE_FRA_rein_appanage }
+			NOT = {
+				is_in_war = { casus_belli = EE_FRA_war_weal }
+			}
+			FROM = { has_country_flag = ME_FRA_rebel_leader_flag }
+		}
+		set_country_flag = ME_FRA_won_mad_wars_without_PO
+	}
+}

@@ -1,0 +1,42 @@
+# Maritime Republic Mechanic
+GE_maritime_republic_triggered_modifier_new_world = {
+	potential = {
+		has_government_mechanic = maritime_republic_mechanic
+	}
+	trigger = {
+		is_institution_enabled = new_world_i
+	}
+
+	monthly_maritime_republic = -0.33
+
+	picture = "monthly_maritime_republic_opposite"
+}
+
+GE_maritime_republic_triggered_modifier_global_trade = {
+	potential = {
+		has_government_mechanic = maritime_republic_mechanic
+	}
+	trigger = {
+		is_institution_enabled = global_trade
+	}
+
+	monthly_maritime_republic = -0.33
+
+	picture = "monthly_maritime_republic_opposite"
+}
+
+# Pratihara Mechanic
+GE_pratihara_mechanic_guards_of_bharat_triggered_modifier = {
+	potential = {
+		has_government_mechanic = pratihara_mechanic
+		has_country_modifier = pratihara_mechanic_guards_of_bharat_modifier
+	}
+	trigger = {
+		is_at_war = yes
+		any_war_enemy_country = {
+			religion_group = muslim
+		}
+	}
+
+	land_morale = 0.15
+}

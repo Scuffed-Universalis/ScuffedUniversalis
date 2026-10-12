@@ -1,0 +1,647 @@
+# string_hree_change_hre_color_text_icon_yes
+# string_hree_change_hre_color_text_icon_no
+defined_text = {
+	name = hree_hre_color_change_HAB
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = HAB
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_BUR
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = BUR
+				was_tag = GEL
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_SOR
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = SOR
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_SWA_full
+	random = no
+
+	text = {
+		trigger = {
+			has_global_flag = extended_timeline_mod
+		}
+		localisation_key = string_hree_hre_color_change_SWA_full_et
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_hre_color_change_SWA_full
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_SWA
+	random = no
+
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					has_global_flag = extended_timeline_mod
+				}
+				was_tag = SHL
+			}
+			else = {
+				OR = {
+					was_tag = SWA
+					was_tag = SHL
+				}
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_SWA_ET
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = SWA
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_WUR
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = WUR
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_LOT_full
+	random = no
+
+	text = {
+		trigger = {
+			has_global_flag = extended_timeline_mod
+		}
+		localisation_key = string_hree_hre_color_change_LOT_full_et
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_hre_color_change_LOT_full
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_LOT
+	random = no
+
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					has_global_flag = extended_timeline_mod
+				}
+				was_tag = LOR
+			}
+			else = {
+				OR = {
+					was_tag = LOT
+					was_tag = LOR
+				}
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_BAV
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = BAV
+				was_tag = UBV
+				was_tag = LBV
+				was_tag = ING
+				was_tag = PSS
+				was_tag = SWE
+				was_tag = NOR
+				was_tag = SCA
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_SAX
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = SAX
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_FKN
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = FKN
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_BRA
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = BRA
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_PRU
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = PRU
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_DTT
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = DTT
+				was_tag = SPI
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_TEU
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = TEU
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_FRA
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = FRA
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_POL
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = POL
+				was_tag = PLC
+				was_tag = DAN
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_MLO_full
+	random = no
+
+	text = {
+		trigger = {
+			has_global_flag = extended_timeline_mod
+		}
+		localisation_key = string_hree_hre_color_change_MLO_full_et
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_hre_color_change_MLO_full
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_MLO
+	random = no
+
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					has_global_flag = extended_timeline_mod
+				}
+				OR = {
+					was_tag = MLO
+					was_tag = LOM
+				}
+			}
+			else = {
+				was_tag = MLO
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_NAP
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = NAP
+				was_tag = BYZ
+				was_tag = AVE
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_ENG
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = ENG
+				was_tag = GBR
+				was_tag = ARA
+				was_tag = EFR
+				was_tag = ROM
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_ITA
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = ITA
+				was_tag = SIC
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_SPA
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = SPA
+				was_tag = CAS
+				was_tag = NAV
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_NED_full
+	random = no
+
+	text = {
+		trigger = {
+			has_global_flag = extended_timeline_mod
+		}
+		localisation_key = string_hree_hre_color_change_NED_full_et
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_hre_color_change_NED_full
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_NED
+	random = no
+
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					has_global_flag = extended_timeline_mod
+				}
+				OR = {
+					was_tag = NED
+					was_tag = HOL
+					was_tag = FRI
+					was_tag = UTR
+					was_tag = LOT
+				}
+			}
+			else = {
+				OR = {
+					was_tag = NED
+					was_tag = HOL
+					was_tag = FRI
+					was_tag = UTR
+				}
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_BOH_full
+	random = no
+
+	text = {
+		trigger = {
+			has_global_flag = extended_timeline_mod
+		}
+		localisation_key = string_hree_hre_color_change_BOH_full_et
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_hre_color_change_BOH_full
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_BOH
+	random = no
+
+	text = {
+		trigger = {
+			if = {
+				limit = {
+					has_global_flag = extended_timeline_mod
+				}
+				OR = {
+					was_tag = BOH
+					was_tag = WES
+					was_tag = FRE
+				}
+			}
+			else = {
+				OR = {
+					was_tag = BOH
+					was_tag = WES
+				}
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_LUX
+	random = no
+
+	text = {
+		trigger = {
+			OR = {
+				was_tag = LUX
+				was_tag = BRB
+			}
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}
+
+defined_text = {
+	name = hree_hre_color_change_CLI
+	random = no
+
+	text = {
+		trigger = {
+			was_tag = CLI
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_yes
+	}
+	text = {
+		trigger = {
+			always = yes
+		}
+		localisation_key = string_hree_change_hre_color_text_icon_no
+	}
+}

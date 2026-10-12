@@ -1,0 +1,33 @@
+# 1.13 Exploratory Tracks created by @kyhler!
+
+song = {
+	name = "Ad Terram Incognitam"
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				num_of_colonists = 1
+			}
+		}
+		modifier = {
+			factor = 2.0
+			num_of_explorers = 2
+		}
+	}
+}
+
+song = {
+	name = "Journey to the East"
+	chance = {
+		modifier = {
+			factor = 0
+			NOT = {
+				num_of_colonists = 1
+			}
+		}
+		modifier = {
+			factor = 2.0
+			num_of_explorers = 2
+		}
+	}
+}

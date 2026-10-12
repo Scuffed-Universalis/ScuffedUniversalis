@@ -1,0 +1,53 @@
+merc_kazakh_company = {
+    regiments_per_development = 0.05
+    home_province = 478 # Argyn
+	cavalry_weight = 0.4
+	cavalry_cap = 6
+	sprites = { dlc048_shy_sprite_pack muslimgfx_sprite_pack }
+	trigger = {
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = me_tim_supported_nomads
+				has_country_flag = me_tim_kazakh_company
+			}
+			capital_scope = { region = central_asia_region }
+			has_estate = estate_nomadic_tribes
+			any_neighbor_country = {
+				has_estate = estate_nomadic_tribes
+			}
+			has_country_modifier = mercenaries_to_the_standard
+			has_country_modifier = glut_of_mercs
+		}
+	}
+    modifier = { }
+}
+
+# Knights Templar
+merc_knights_templar = {
+	regiments_per_development = 0.01
+	mercenary_desc_key = FREE_OF_ARMY_PROFESSIONALISM_COST
+	home_province = 379
+	cavalry_weight = 0.5
+	sprites = { dlc040_kni_sprite_pack westerngfx_sprite_pack }
+    trigger = {
+		is_allowed_to_recruit_mercenaries = yes
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = ME_PAP_COMPLETED_MISSION
+				mission_completed = ME_pap_contact_crusaders
+			}
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = templars_tt
+					has_country_flag = knights_templar_flag
+				}
+				owns = 379
+			}
+		}
+	}
+	modifier = {
+		cavalry_power = 0.15
+		shock_damage = 0.05
+	}
+	cost_modifier = 0.5
+}

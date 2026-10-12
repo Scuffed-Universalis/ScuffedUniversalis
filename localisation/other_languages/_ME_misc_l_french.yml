@@ -1,0 +1,183 @@
+﻿l_french:
+
+l_english:
+ # Tooltips:
+ HAS_NOT_USED_ALL_12_BUILDING_SLOTS: "Has at least §Y1§! unused building slot"
+ THIS_CAPITAL_IS_IN_EUROPE: "Has its capital on the continent §YEurope§!"
+ COUNTRY_IS_PRODUCTION_LEADER_OF_ANY_TRADE_GOOD: "§Y[This.GetName]§! is production leader of any trade good"
+
+ NOTHING_WILL_OCCUR: "Nothing will occur."
+
+
+ ME_playtester_feedback_requested: "§MPlaytester Note§! What is a good value for above? ^ "
+ 
+ CHANNEL_music_zzz_EE_music: "Europa Expanded Music"
+ CHANNEL_music_zzz_kyhler_music_pack: "EE - Kyhler's Exploratory Music Pack"
+ thevoyage: "The Voyage - EUIV Main Theme"
+ 
+ ee_controls_1_lost_cities: "At least §Y1§! Lost City of Gold is owned by §Y[Root.GetName]§! or its non-sovereign subjects."
+ 
+ ME_historian: "Historian"
+ ME_historian_desc: "Historians fulfilled many purposes in early Modern Era. The collection of annals was an excellent propaganda tool and was treated in high regard."
+ # ME_colonial_governor: "Colonial Governor"
+ ME_colonial_governor_desc: "Colonial Governor makes sure all gears are functioning in the government of our colonies."
+ ME_economic_mercantilist: "Mercantilist Reformer"
+ ME_economic_mercantilist_desc: "A Mercantilist Reformer is a minister who implements a variety of economic reforms, many of whom are regarded as protectionist."
+ 
+ # loc for decision to update missions
+ the_fix_title: "§YUpdate Missions§!"
+ the_fix_desc: "If your mission tree is missing a lot or its empty, click this button. If it doesn't work, then blame the LordVarangian for it. Blame his new generic missions as well."
+ me_rename_title: "Restore Original Name"
+ me_rename_desc: "If you wish to restore the original name of the country you are playing, click this button."
+
+ ME_GER_formation: "May form @GER §Y[GER.GetName]§! with §Y12§! Administrative Technology."
+
+ # ME custom loc:
+ string_me_get_country_flag: "@[This.GetTag]"
+ ME_yes: "£yes£"
+ ME_no: "£no£"
+ ME_nothing: ""
+ sufi_scholar_advisor: "Sufi Scholar"
+ sufi_scholar_advisor_desc: "Sufi Scholar is not a simple Theologian. Besides studying the Quran, Sufi Scholars study ways of practising Islam that would bring them the closest to Allah."
+ ME_mercenary_commander: "Mercenary Commander"
+ ME_mercenary_commander_desc: "This person is responsible for management of a great mercenary company and will be able to command our mercenary-oriented army much more efficiently."
+ 
+ ME_preview_PDX_missions_tt: "§YPreview Paradox Missions§!\n--------------\nUse this button to preview the default missions added by §YParadox§!."
+ ME_preview_ME_missions_tt: "§YPreview Europa Expanded Missions§!\n--------------\nUse this button to preview the missions added by the §YEuropa Expanded§! mod."
+ ME_preview_confirm_missions_tt: "§YConfirm Mission Tree Selection§!\n--------------\nUsing this button confirms the choice of your mission tree.\n--------------\n§RYou can NOT change this afterwards, unless you form another country that also has multiple mission sets available.§!"
+ 
+ ME_refresh_missions_tt: "§YRefresh Missions§!\n--------------\nUse this button when your mission tree has been broken due to an update."
+ ME_end_incident_tree_tt: "§YEnd Incident Tree§!\n--------------\nUsing this button you may return to your usual mission tree."
+ byz_vanilla_choice_tt: "§YChoosing the Paradox Missions for Byzantium will give us the intended negative starting privileges and government reform§!"
+
+ ME_cb_20: "This §YCasus Belli§! lasts for §G20§! years."
+ ME_cb_15: "This §YCasus Belli§! lasts for §G15§! years."
+ ME_cb_10: "This §YCasus Belli§! lasts for §G10§! years."
+ ME_cb_25: "This §YCasus Belli§! lasts for §G25§! years."
+ ME_cb_30: "This §YCasus Belli§! lasts for §G30§! years."
+ ME_cb_5: "This §YCasus Belli§! lasts for §G5§! years."
+ ME_cb_40: "This §YCasus Belli§! lasts for §G40§! years."
+ 
+ ME_khalifah: "Claims the Title of Khalifa"
+ ME_claimed_khalifa_non_caliph: "Claimed the Title of Caliph"
+ ME_claimed_khalifa_caliph: "Claimed the Title of Caliph"
+ ME_khalifah_lose_opinion: "Every §YSunni§! Countries' opinion of §Y[Root.GetName]§! is reduced by §R-30.0§!\nThe opinion of the Caliphate Holder (§Y[Root.MEGetCaliphateName]§!) will drop by §R-90.0§! instead.\n"
+ ME_if_caliphate_holder: "If Caliphate Holder (§Y[Root.MEGetCaliphateName]§!) is our §YRival§! or §YEnemy§!:"
+ ME_muslim_enforced_religion: "Enforce Religious Unity"
+ ME_for_as_long_as_this_is_active: "For as long as the '§YEnforce Religious Unity§!' Modifier is active, converting provinces to §Y[Root.Religion.GetName]§! will push us §Y0.02§! towards §YLegalism§! for every point of §YDevelopment§! that we convert."
+ ME_if_we_own_410_no_cost: "If §Y[Root.GetName]§! or their non-sovereign subject holds §Y[410.GetName]§! then the §YAdministrative Cost§! of the Decision will be removed."
+ ME_denounced_sect_practices: "Denouncement of Sect Practices"
+ ME_allowed_sect_practices: "Benign Neglect"
+ ME_if_we_pick_benign_neglect: "Event Option for §MBenign Neglect§!:"
+ ME_if_we_pick_denouncement: "Event Option for §MDenouncement§!:"
+ ME_fed_gain_adm_power: "Gain §G[clan_province.ME_fed_clan_province_variable.GetValue]§! Administrative Power.\nThis is based on the §YDevelopment§! of §Y[clan_province.GetAreaName]§! Area."
+ ME_center_of_scholarly_dynamic_trigger: "If we have the '§YPatronage of Arts§!' Estate Privilege of the §YBurghers§!, the ducat cost of the §YDecision§! will be halved."
+ ME_islamic_scholarly_centre: "Islamic center of Scholarly Learning"
+ ME_venerated_wali: "Venerated Wali"
+ ME_venerate_wali_title: "£piety_text_icon£ Venerate a Wali"
+ ME_venerate_wali_desc: "Wali is a sufi saint. Venerating one of our recently perished sufi masters as a saint would have appease the population and woul push us further towards Mysticism."
+ upkeep_of_holy_cities_cooldown: "Hidden modifier."
+ 
+ ME_muslim_piety.2.a: "We are in need of educated scholars."
+ ME_muslim_piety.2.b: "One needs not be a legalist in order to be a scholar."
+ ME_muslim_piety.3.a: "Call on for support of other Sufi sects!"
+ ME_muslim_piety.4.a: "God is not just Good, the God is Great."
+ ME_this_is_enabled_by_harmony: "This event is available due to being between §Y-25.0§! towards Mysticism and §Y25.0§! towards Legalism."
+ ME_if_we_have_philosopher_advisor: "If we have a §YPhilosopher§! Advisor, the §YOption§! gain double the §YPiety§! impact."
+ ME_muslim_piety.6.a: "Why must we limit the Dhimmi?"
+ ME_no_more_dhimmi_requests: "For as long as §Y[Root.Monarch.GetName]§! remains in power, we will no longer get the '§YDhimmi Building Restrictions§!' event."
+ ME_muslim_piety.7.a: "What bribes? Give me some too!"
+ ME_muslim_piety.8.a: "Offer the Preachers our support."
+ ME_moderates: "Supporting the Moderates"
+ ME_hardliners: "Supporting the Hardliners"
+ ME_opposed_tax_laws: "Opposed the Tax Laws"
+ ME_reformed_tax_laws: "Reformed the Tax Laws"
+ ME_muslim_piety.10.a: "Reform the Tax Laws instead."
+ ME_muslim_piety.12.a: "Let us support those guilds."
+ ME_muslim_piety.13.a: "Perhaps we should abandon our ways and follow the Sufi Master."
+ ME_muslim_piety.14.a: "I sense an opportunity for an extra tax."
+ ME_move_dev_towards_legalism: "Move §Y[new_province_development.GetValue].00§! towards Legalism"
+ ME_move_dev_towards_mysticism: "Move §Y[new_province_development.GetValue].00§! towards Mysticism"
+ ME_muslim_piety.16.a: "Somehow, I don't feel impacted."
+
+ ME_Muslim_Events.1.t: "The Sect Practices"
+ ME_Muslim_Events.1.d: "Recently, a growing amount of Sufi lounges have begun to appear across the country and especially in the capital. The [Root.GetClergyName], worried that an increasing amount of faithful might stray from the light, have arrived in [Root.Monarch.GetName]'s court, requesting [Root.Monarch.GetHerHim] to put an end to those practices, or at the very least limit them." 
+ ME_Muslim_Events.1.a: "Support the [Root.GetClergyName], denounce those practices."
+ ME_Muslim_Events.1.b: "Benign Neglect."
+ 
+ ME_talented_qadi: "Talented Qadi"
+ ME_good_sufi_modifier: "Sufi Sheik-ul-Islam"
+ ME_ok_sufi_modifier: "Sufi Sheik-ul-Islam"
+ ME_bad_sufi_modifier: "Sufi Sheik-ul-Islam"
+ ME_ruler_favoring_sufis: "Favoring Sufis"
+ 
+ ME_muslim_school_events.4.a: "More would flock to my banner naturally."
+ ME_muslim_school_events.7.a: "Let them join our court!"
+ ME_muslim_school_events.13.a: "Protests? Send in the military!"
+ ME_muslim_school_events.13.b: "Let us negotiate."
+ ME_muslim_school_events.14.a: "This seems more like an investment."
+ ME_muslim_school_events.14.b: "I couldn't care less. Tax them all, including the poor!"
+ ME_muslim_school_events.15.a: "Force the city dwellers to pay for it!"
+ ME_muslim_school_events.19.a: "Crack down on the corruption!"
+ ME_muslim_school_events.19.b: "Little do they know, my agents are on their way."
+ 
+ ME_distribute_development_muslim_schools_5: "Distribute §G5§! Base Production among our provinces."
+ ME_distribute_development_muslim_schools_4: "Distribute §G4§! Base Production among our provinces."
+ ME_distribute_development_muslim_schools_3: "Distribute §G3§! Base Production among our provinces."
+ 
+ ME_EST_crown_forced_us_to_pay: "Taxes for Holy Cities"
+ EST_turned_a_blind_eye: "Turned a Blind Way"
+ ME_EST_crackdown: "Crackdown on Corruption"
+ 
+ ME_every_muslim_country: "Every country of §YMuslim§! Religious Group:"
+ ME_promote_dhimmi_privilege: "Every country of §YMuslim§! Religious Group will see the '§YPromote Dhimmi Nobles§!' privilege §YLoyalty Equilibrium§! §RPenalty§! double."
+ me_piety_pious_personality: "Pious"
+ me_piety_pious_personality_die_desc: "The devotion of [Root.Monarch.GetName] will be remembered for decades to come and his legacy will outlive [Root.Monarch.GetHerHim]."
+ ME_gain_less_corruption_if_we_have_2_stability_or_ruler_has_incorruptible_trait: "If we have at least §Y2§! Stability, we will gain §G-2.00§! Corruption instead."
+ ME_gain_less_corruption_if_we_have_2_stability_or_ruler_has_incorruptible_trait_2: "If we have at least §G2§! Stability, we will gain §G-4.00§! Corruption instead."
+ 
+ ME_Muslim_Events.2.t: "An Interest in Other Maddhabs"
+ ME_Muslim_Events.2.d: "Thanks to our relatively peaceful relations with other Schools of Thought, an increasing amount of foreign scholars have begun to preach in our country, acquiring followers for their view of Islam. Perhaps we could take an advantage of this development, or simply ignore it, letting them do as they please."
+ ME_Muslim_Events.2.aa: "There is only one right Maddhab, and it's ours!"
+ ME_Muslim_Events.2.a: "From Egypt, we shall explore the §YShafii§! Fiqh."
+ ME_Muslim_Events.2.b: "Let's read what the conservative §YHanbali§! think."
+ ME_Muslim_Events.2.c: "From the Maghreb, the §YMaliki§! surely have much to say."
+ ME_Muslim_Events.2.e: "The teachings of §YHanafi§! interest us."
+ ME_Muslim_Events.2.f: "The idea of Twelver Imams of §YJafari§! do sound interesting."
+ ME_Muslim_Events.2.g: "Only the §YZaidi§! recognize the correct line."
+ ME_Muslim_Events.2.h: "Let us adhere to the §YIsmaili§! beliefs."
+ 
+ ME_every_muslim_neighbor_country: "Every §YMuslim§! Neighbor Country:"
+ ME_every_muslim_country: "Every §YMuslim§! Country:"
+ ME_every_province_not_muslim: "Every owned province that is not §YMuslim§! Religious Group:"
+ 
+ ME_celestial_globe: "Celestial Globe"
+ ME_province_madrassa: "Provincial Madrassas"
+ ME_muslim_madrassa: "Madrassa"
+ 
+ ME_muslim_dlc.26.a: "Ignore him."
+ 
+ ME_toggle_full_coring: "§YToggle Full Coring§!\n\nWith this toggle, you may choose to only core uncored provinces. When toggled, coring States will be excluded."
+ ME_making_state_cores_is_toggled_off: "§YState Coring§! provinces is currently toggled §Roff§!. Toggle it on the §YStability Actions§! menu."
+ 
+ ME_golden_age_renewal_tt: "If we are in a §YGolden Age§!, extend it by §G50§! Years. If we have had §YGolden Age§! already, then §Yrestore§! it."
+ 
+ estate_privileges_and_agendas_events.3.vv: "The Proposal of the Turkic Tribes"
+ estate_privileges_and_agendas_events.3.berbers: "The Proposal of the Berber Tribes"
+ estate_privileges_and_agendas_events.3.clans: "The Proposal of the [This.GetClannsName]"
+ estate_privileges_and_agendas_events.3.industrial: "The Proposal of the [This.GetIndustrialistsName]"
+ estate_privileges_and_agendas_events.3.french: "The Proposal of the [This.GetFrancienName]"
+ 
+ ME_exploration_events.3.c: "Observe their Rituals."
+ ME_promising_land: "Promising Land"
+ ME_exploration_events.5.b: "Let us learn something from their hospitality!"
+ ME_lost_cause_colony: "Lost Cause"
+ ME_exploration_events.8.ab: "Hire some as translators!"
+ ME_natives_placated_event: "Placated Natives"
+ ME_explorer_is_dead: "The §YExplorer§! has perished."
+ ME_exploration_events.12.b: "Next time we will send someone proper."
+ ME_explorer_will_not_get_drunk: "This §YEvent§! won't fire for the next 25 years."
+ ME_permanent_circumnavigation: "First to Circumnavigate"
+ ME_colonial.16.c: "Their settlement is now our foremost priority."
+ 
+ ME_colonial_governor: "Colony Manager"

@@ -1,0 +1,550 @@
+namespace = Ages_Splendor_Expanded_Events
+
+#Age Retainers - Discovery
+country_event = {
+	id = Ages_Splendor_Expanded_Events.11
+	title = Ages_Splendor_Expanded_Events.11.T
+	desc = Ages_Splendor_Expanded_Events.11.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT1
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT2
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_reformation }
+		}
+		ai_chance = {
+			factor = 13
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_reformation
+		add_country_modifier = {
+			name = ase_justified_wars
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT3
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_reformation }
+		}
+		ai_chance = {
+			factor = 13
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_reformation
+		add_country_modifier = {
+			name = ase_improved_wartaxes
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT4
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_reformation }
+		}
+		ai_chance = {
+			factor = 13
+			modifier = {
+				factor = 8
+				cavalry_fraction = 0.33
+			}
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_reformation
+		add_country_modifier = {
+			name = ase_cavalry_armies
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT5
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_reformation }
+		}
+		ai_chance = {
+			factor = 13
+			modifier = {
+				factor = 8
+				OR = {
+					num_of_colonists = 1
+					num_of_colonies = 3
+					exploration_ideas = 1
+					expansion_ideas = 2
+				}
+			}
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_reformation
+		add_country_modifier = {
+			name = ase_boost_colony
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT6
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_reformation }
+		}
+		ai_chance = {
+			factor = 13
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_reformation
+		add_country_modifier = {
+			name = ase_glorious_renaissance_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT7
+		trigger = {
+			government = republic
+			NOT = { has_country_flag = ase_chosen_age_of_reformation }
+		}
+		ai_chance = {
+			factor = 13
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_reformation
+		add_country_modifier = {
+			name = ase_ruling_dynasty_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT8
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_reformation }
+		}
+		ai_chance = {
+			factor = 13
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_reformation
+		add_country_modifier = {
+			name = ase_adaptative_combat_terrain
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.11.OPT9
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_reformation }
+		}
+		ai_chance = {
+			factor = 13
+			modifier = {
+				factor = 9
+				OR = {
+					has_idea_group = exploration_ideas
+					has_idea_group = expansion_ideas
+				}
+			}
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_reformation
+		add_country_modifier = {
+			name = ase_exploration_corp_modifier
+			duration = -1
+		}
+	}
+
+	after = {
+		clr_country_flag = ase_retaining_age_ability
+	}
+}
+
+#Age Retainers - Reformation
+country_event = {
+	id = Ages_Splendor_Expanded_Events.12
+	title = Ages_Splendor_Expanded_Events.12.T
+	desc = Ages_Splendor_Expanded_Events.12.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT1
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT2
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		add_country_modifier = {
+			name = ase_floating_batteries
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT3
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		add_country_modifier = {
+			name = ase_religious_wars
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT4
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		add_country_modifier = {
+			name = ase_mercenary_discipline
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT5
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		add_country_modifier = {
+			name = ase_powerful_tradeships
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT6
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		add_country_modifier = {
+			name = ase_institutional_spread
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT7
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		add_country_modifier = {
+			name = ase_prestigious_conversion
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT8
+		trigger = {
+			religion_group = muslim
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		custom_tooltip = muslim_jihad_tt
+		set_country_flag = muslim_jihad_flag_infinite
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT9
+		trigger = {
+			religion_group = christian
+			NOT = { religion = orthodox }
+			NOT = { religion = coptic }
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		add_country_modifier = {
+			name = ase_confessionalism_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.12.OPT10
+		trigger = {
+			religion_group = dharmic
+			NOT = { has_country_flag = ase_chosen_age_of_absolutism }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_absolutism
+		add_country_modifier = {
+			name = ase_dharmic_syncretism_modifier
+			duration = -1
+		}
+	}
+
+	after = {
+		clr_country_flag = ase_retaining_age_ability
+	}
+}
+
+#Age Retainers - Absolutism
+country_event = {
+	id = Ages_Splendor_Expanded_Events.13
+	title = Ages_Splendor_Expanded_Events.13.T
+	desc = Ages_Splendor_Expanded_Events.13.D
+	picture = GOOD_WITH_MONARCH_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT1
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT2
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_flexible_rivalries
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT3
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_protecting_forts
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT4
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_efficient_autonomy
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT5
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_harsher_treatment
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT6
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_administrative_efficiency
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT7
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				is_emperor_of_china = yes
+			}
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_absolute_government
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT8
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_strategic_warfare_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT9
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_cultural_relativism_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT10
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		add_country_modifier = {
+			name = ase_imperial_control_modifier
+			duration = -1
+		}
+	}
+
+	option = {
+		name = Ages_Splendor_Expanded_Events.13.OPT11
+		trigger = {
+			NOT = { has_country_flag = ase_chosen_age_of_revolutions }
+		}
+		ai_chance = {
+			factor = 10
+		}
+
+		add_splendor = -1600
+		set_country_flag = ase_chosen_age_of_revolutions
+		custom_tooltip = ase_centralised_state_retained_tt
+		custom_tooltip = ase_centralised_state_tt
+		set_country_flag = centralised_state_flag_retained
+	}
+
+	after = {
+		clr_country_flag = ase_retaining_age_ability
+	}
+}

@@ -1,0 +1,16 @@
+merc_hree_imperial_mercenaries = {
+	regiments_per_development = 0.035
+    cavalry_weight = 0.1
+    artillery_weight = 0.1
+    cavalry_cap = 2
+    cost_modifier = 0.5
+    trigger = {
+		is_part_of_hre = yes
+		has_country_modifier = erzmarschall
+		is_allowed_to_recruit_mercenaries = yes
+    }
+	modifier = {
+		movement_speed = 0.25
+		reinforce_speed = 0.1
+	}
+}

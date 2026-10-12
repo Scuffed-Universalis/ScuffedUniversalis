@@ -1,0 +1,23 @@
+ME_stannary = {
+	rank = {
+		1 = STANNARY
+		2 = TINMINERS_LEAGUE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = SHERIFF
+		2 = HIGH_SHERIFF
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = SHERIFF
+		2 = HIGH_SHERIFF
+		3 = EMPRESS
+	}
+
+	trigger = {
+		has_reform = convocation_of_the_tinners_reform
+	}
+}

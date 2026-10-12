@@ -1,0 +1,156 @@
+#Castilian Civil War
+#A mix of the civil wars with outside intervention and noble families siding against the crown between 1419 and 1479.
+
+castilian_civil_war = {
+	potential = {
+		tag = CAS
+		NOT = { has_country_flag = had_cas_civil_war }
+		is_free_or_tributary_trigger = yes
+		OR = {
+			AND = {
+				exists = ARA
+				ARA = {
+					is_free_or_tributary_trigger = yes
+					government = monarchy
+				}
+			}
+			has_country_flag = EE_castile_alligned_portugal
+		}
+		OR = {
+			AND = {
+				POR = {
+					is_free_or_tributary_trigger = yes
+					government = monarchy
+				}
+				exists = POR
+			}
+			has_country_flag = EE_castile_alligned_aragon
+		}
+		government = monarchy
+		normal_or_historical_nations = yes
+		uses_doom = no
+	}
+
+
+	can_start = {
+		custom_trigger_tooltip = {
+			tooltip = EE_JUAN_DEAD
+			NOT = { has_ruler_flag = EE_juan_is_ruler } 
+		}
+	}
+	
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			is_lesser_in_union = yes
+			NOT = { government = monarchy }
+		}
+	}
+	
+	
+	
+	
+	progress = {
+		modifier = {
+			factor = 1
+			estate_influence = {
+				estate = estate_nobles
+				influence = 80
+			}
+		}
+		modifier = {
+			factor = 1
+			NOT = {
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 30
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { legitimacy = 90 }
+		}
+		modifier = {
+			factor = -1
+			stability = 3
+		}
+		modifier = {
+			factor = -0.5
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 75
+			}
+		}		
+		modifier = {
+			factor = 1.5
+			NOT = { DIP = 3 }
+		}		
+		modifier = {
+			factor = 1.5
+			NOT = { MIL = 3 }
+		}	
+		modifier = {
+			factor = 1.5
+			NOT = { ADM = 3 }
+		}	
+		modifier = {
+			factor = 2
+			has_regency = yes
+		}
+
+		modifier = {
+			factor = 3
+			has_estate_privilege = EE_estate_nobles_powerful_cortes
+		}
+	}
+
+
+
+
+	
+	can_end = {
+		if = {
+			limit = {
+				is_subject = no
+			}
+			custom_trigger_tooltip = {
+				tooltip = EE_SPA_CRUSHED_PRETENDERS
+				has_country_flag = ee_spa_civil_war_over
+			}
+			NOT = { war_with = ARA }
+			NOT = { war_with = POR }
+		}
+		else = {
+			is_subject = yes
+		}
+		hidden_trigger = {
+			NOT = { has_country_flag = EE_spa_wait_for_choice }
+		}
+	}
+	
+
+
+
+	modifier = {
+		global_unrest = 5
+		global_autonomy = 0.05
+		stability_cost_modifier = 0.25
+	}	
+	
+	
+	on_start = castilian_civil_war.1
+	on_end = castilian_civil_war.99 #delay 100
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			120 = 0
+			1 = castilian_civil_war.2 #Civil War Spreads to Province
+			#Events 3 - 8 related to foreign intervention
+		}
+	}
+}
+

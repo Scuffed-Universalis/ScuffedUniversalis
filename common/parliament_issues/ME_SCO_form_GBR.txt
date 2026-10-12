@@ -1,0 +1,70 @@
+EE_english_scottish_act_of_union = {
+	category = 1
+	allow = {
+		has_country_flag = EE_SCO_easier_GBR_form
+		has_parliament = yes
+		has_not_enacted_parliament_action = { parliament_action = EE_english_scottish_act_of_union }
+		is_free_or_tributary_trigger = yes
+		is_nomad = no
+		is_at_war = no
+	}
+	effect = {
+		set_parliament_action_flag = { parliament_action = EE_english_scottish_act_of_union }
+		if = {
+			limit = {
+				ENG = {
+					exists = yes
+					ai = yes
+					is_subject_of = ROOT
+					NOT = { num_of_cities = 41 }
+				}
+			}
+			tooltip = { inherit = ENG }
+			custom_tooltip = EE_english_scottish_act_of_union_bt
+			hidden_effect = {
+				ENG = {
+					every_subject_country = {
+						limit = {
+							capital_scope = { region = british_isles_region }
+							NOT = { num_of_cities = 5 }
+						}
+						ENG = { inherit = PREV }
+					}
+				}
+				inherit = ENG
+			}
+		}
+		#custom_tooltip = english_scottish_act_of_union_at
+		change_tag = GBR
+		hidden_effect = {
+			on_change_tag_effect = yes
+			restore_country_name = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			if = {
+				limit = { 
+					has_custom_ideas = no
+					NOT = { has_idea_group = GBR_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		add_prestige = 25
+	}
+	modifier = {
+		global_autonomy = -0.05
+		prestige_decay = -0.01
+	}
+	backing_percentage = 0
+	chance = {
+		factor = 0	#Will be forced through a decision
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+}

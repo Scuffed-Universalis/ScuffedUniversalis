@@ -1,0 +1,34 @@
+EE_FRA_ancien_regime = {
+	icon = "absolutist_france_reform"
+	allow_normal_conversion = no
+	potential = { has_reform = EE_FRA_ancien_regime }
+	trigger = { has_reform = EE_FRA_ancien_regime }
+	valid_for_nation_designer = no
+	modifiers = {
+		yearly_corruption = -0.1
+		governing_capacity = 150
+		global_autonomy = -0.025
+	}
+	government_abilities = { EE_FRA_model_state }
+}
+
+EE_FRA_gendarmes_reform = {
+	icon = "gendarmes_reform"
+	allow_normal_conversion = no
+	potential = {
+		has_dlc = "Domination" 
+		culture_group = french
+		has_country_flag = EE_FRA_empower_gendarmes
+	}
+	trigger = { }
+	modifiers = {
+		cav_to_inf_ratio = 0.2
+		cavalry_cost = -0.2
+		cavalry_power = 0.15
+		nobles_loyalty_modifier = 0.05
+		morale_damage = 0.05
+	}
+	ai = {
+		factor = 1
+	}
+}

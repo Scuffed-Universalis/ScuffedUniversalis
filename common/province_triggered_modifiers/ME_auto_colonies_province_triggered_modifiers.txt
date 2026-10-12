@@ -1,0 +1,215 @@
+#colonial_delay_timer = {
+#	potential = {
+#		is_city = no
+#	}
+#
+#	trigger = {
+#		if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 200
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 600
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 1833
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 550
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 1666
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 500
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 1500
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 450
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 1333
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 400
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 1166
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 350
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 1000
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 300
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 833
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 250
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 666
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 200
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 500
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 150
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 333
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 100
+#			}
+#		}
+#		else_if = {
+#			limit = {
+#				previous_owner = {
+#					capital_scope = {
+#						province_distance = {
+#							who = ROOT
+#							distance = 166
+#						}
+#					}
+#				}
+#			}
+#			had_province_flag = {
+#				flag = colonial_delay_timer_flag
+#				days = 50
+#			}
+#		}
+#	}
+#	
+#	#Province scope
+#	on_activation = {
+#		previous_owner = {
+#			create_colony = 10
+#		}
+#		clr_province_flag = colonial_delay_timer_flag
+#		remove_province_triggered_modifier = colonial_delay_timer
+#		#add_province_triggered_modifier = colonial_delay_timer
+#	}
+#	
+#	on_deactivation = {
+#	
+#	}
+#	
+#}

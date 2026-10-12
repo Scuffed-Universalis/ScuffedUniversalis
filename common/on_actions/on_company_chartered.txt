@@ -1,0 +1,60 @@
+# FROM = Previous Country, ROOT = Province
+on_company_chartered = {
+	if = {
+		limit = {
+			OR = {
+				region = bengal_region
+				region = hindusthan_region
+				region = west_india_region
+				region = deccan_region
+				region = coromandel_region
+			}
+		}
+		ROOT = {
+			owner = {
+				set_country_flag = the_coin_is_stronger_than_the_sword
+			}
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				mission_completed = ENG_british_malaya
+			}
+		}
+		create_or_add_center_of_trade_level = { level = 1 }
+	}
+	NVC = { overlord = { save_global_event_target_as = nvc_overlord } }
+	NWC = { overlord = { save_global_event_target_as = nwc_overlord } }
+	EIC = { overlord = { save_global_event_target_as = eic_overlord } }
+	if = {
+		limit = {
+			event_target:nwc_overlord = { is_core = PREV }
+			NWC = { is_subject_of = event_target:nwc_overlord }
+			NED_is_WIC_territory = yes
+		}
+		cede_province = event_target:nwc_overlord
+		cede_province = NWC
+	}
+	if = {
+		limit = {
+			event_target:nvc_overlord = { is_core = PREV }
+			NVC = { is_subject_of = event_target:nvc_overlord }
+			NED_is_VOC_territory = yes
+		}
+		cede_province = event_target:nvc_overlord
+		cede_province = NVC
+	}
+	if = {
+		limit = {
+			event_target:eic_overlord = { is_core = PREV }
+			EIC = { is_subject_of = event_target:eic_overlord }
+			ENG_is_EIC_territory = yes
+		}
+		cede_province = event_target:eic_overlord
+		cede_province = EIC
+	}
+	clear_global_event_target = nvc_overlord
+	clear_global_event_target = nwc_overlord
+	clear_global_event_target = eic_overlord
+}

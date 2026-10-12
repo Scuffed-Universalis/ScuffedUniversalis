@@ -1,0 +1,116 @@
+promote_vassal_to_pronoyalet = {
+	category = influence
+
+	alert_index = 17 #doesn't matter. it is forced onto the subject
+	alert_tooltip = sell_indulgence_alert_tooltip #doesn't matter. it is forced onto the subject
+
+	is_visible = {
+		has_government_attribute = enables_pronoyalets
+		FROM = {
+			is_subject_of = ROOT
+			NOT = { is_subject_of_type = pronoyalet }
+			is_subject_other_than_tributary_trigger = yes
+		}
+	}
+	is_allowed = {
+		if = {
+			limit = { BYZ_reached_pronia_slot_limit = yes }
+			custom_trigger_tooltip = {
+				tooltip = BYZ_not_enough_free_pronoyalet_slots
+				BYZ_enough_pronoia_slots = yes
+			}
+		}
+		if = {
+			limit = { from = { liberty_desire = 15 } }
+			custom_trigger_tooltip = {
+				tooltip = BYZ_too_much_liberty_desire
+				from = { not = { liberty_desire = 15 } }
+			}
+		}
+		if = {
+			limit = { from = { total_development = 100 } }
+			custom_trigger_tooltip = {
+				tooltip = FROM_HAS_NOT_100_TOTAL_DEV
+				from = { not = { total_development = 100 } }
+			}
+		}
+		if = {
+			limit = {
+				from = {
+					not = { is_subject_of_type = vassal }
+					not = { is_subject_of_type = client_vassal }
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = FROM_IS_NOT_VASSAL_OF_ROOT
+				FROM = {
+					OR = {
+						is_subject_of_type = vassal
+						is_subject_of_type = client_vassal
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		hidden_effect = {
+			# country_event = { id = MEE_Byzantine_Events.56 }
+			FROM = {
+				set_saved_name = {
+					key = byzantine_general
+					type = advisor
+					scope = ROOT
+				}
+				define_ruler = {
+					name = byzantine_general
+					change_mil = 4
+					change_adm = 1
+					change_dip = 0
+					min_age = 30
+					male = yes
+					religion = ROOT
+					culture = ROOT
+				}
+				if = {
+					limit = {
+						has_heir = yes
+					}
+					kill_heir = { allow_new_heir = no }
+				}
+			}
+		}
+		create_subject = {
+			subject_type = pronoyalet
+			subject = FROM
+			keep_liberty_desire = yes
+		}
+		FROM = {
+			set_country_flag = has_eyalet_color
+			set_country_flag = has_overriden_color_flag
+			change_country_color = { country = ROOT }
+		}
+	}
+
+	ai_will_do = {
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						mission_completed = BYZ_decentralized_pronoia
+						mission_completed = BYZ_centralized_pronoia
+					}
+				}
+			}
+			always = yes
+		}
+		else_if = {
+			limit = {
+				is_subject_of_type = march
+			}
+			always = yes
+		}
+		else = {
+			always = no
+		}
+	}
+}

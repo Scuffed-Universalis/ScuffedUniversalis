@@ -1,0 +1,119 @@
+# Merge with other file later!
+
+ME_aula_magna = {
+	start = 92
+	date = 1444.01.01
+	time = { months = 60 }
+	build_cost = 100
+	can_be_moved = no
+	starting_tier = 0 #Not yet constructed
+	type = monument
+	build_trigger = { 
+	}
+	on_built = { }
+	on_destroyed = { }
+	can_use_modifiers_trigger = {
+		owner = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = wallonian
+				primary_culture = frisian
+				tag = BUR
+				tag = LOT
+				tag = NED
+				# mission_completed = fra_commercial_coast
+			}
+		}
+	}
+	can_upgrade_trigger = {
+		owner = {
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = wallonian
+				primary_culture = frisian
+				tag = BUR
+				tag = LOT
+				tag = NED
+				# mission_completed = fra_commercial_coast
+			}
+		}
+	}
+	keep_trigger = { 
+	}
+	tier_0 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 100 }
+	}
+	tier_1 = {
+		upgrade_time = { months = 60 }
+		cost_to_upgrade = { factor = 100 }
+		
+		area_modifier = { 
+			local_development_cost = -0.1
+		}
+		country_modifiers = {
+			global_autonomy = -0.025
+		}
+		
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					mission_completed = BRB_great_hall
+				}
+			}
+			modifier = {
+				same_culture_advisor_cost = -0.05
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = { months = 240 }
+		cost_to_upgrade = { factor = 400 }
+		
+		area_modifier = { 
+			local_development_cost = -0.25
+		}
+		country_modifiers = {
+			global_autonomy = -0.05
+			advisor_pool = 1
+		}
+		
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					mission_completed = BRB_great_hall
+				}
+			}
+			modifier = {
+				same_culture_advisor_cost = -0.1
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = { months = 480 }
+		cost_to_upgrade = { factor = 2500 }
+		
+		area_modifier = { 
+			local_development_cost = -0.25
+		}
+		country_modifiers = {
+			global_autonomy = -0.05
+			advisor_pool = 1
+			free_dip_policy = 1
+			national_focus_years = -5
+		}
+		
+		conditional_modifier = {
+			trigger = {
+				owner = {
+					mission_completed = BRB_great_hall
+				}
+			}
+			modifier = {
+				same_culture_advisor_cost = -0.15
+			}
+		}
+	}
+}

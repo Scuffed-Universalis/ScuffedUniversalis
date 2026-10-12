@@ -1,0 +1,209 @@
+on_startup = {
+	country_event = { id = holy_roman_empire_expanded_events.1 } # set global flag
+	if = {
+		limit = {
+			is_emperor = yes
+			OR = {
+				hree_has_any_imperial_archoffice = yes
+				any_country = {
+					hree_has_any_imperial_archoffice = yes
+				}
+			}
+		}
+		hree_update_imperial_archoffices = yes
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		besseres_hrr_events.7 # can get electorship from subject
+		besseres_hrr_events.13 # update imperial arch-offices
+		besseres_hrr_events.31 # make country Kingdom rank again, if it was allowed to and lost it
+		besseres_hrr_events.32 # add/remove LD modifier for HRE Duchies
+		besseres_hrr_events.33 # lift Imperial Ban if needed
+		besseres_hrr_imperial_agenda_events.6 # apply right IA modifier from elector votes
+		besseres_hrr_imperial_diet_events.4 # add/remove anti heresy act modifier if necessary
+		besseres_hrr_imperial_diet_events.5 # add/remove imperial humanist act modifier if necessary
+	}
+}
+
+on_lock_hre_religion = {
+	country_event = { id = besseres_hrr_events.20 } # emperor gives back electorship after the league war
+}
+
+on_change_hre_religion = {
+	country_event = { id = besseres_hrr_events.20 } # emperor gives back electorship after the league war
+}
+
+on_hre_religion_white_peace = {
+	country_event = { id = besseres_hrr_events.20 } # emperor gives back electorship after the league war
+}
+
+on_government_change = {
+	if = {
+		limit = {
+			hree_has_any_imperial_archoffice = yes
+		}
+		hree_update_imperial_archoffices = yes # remove imperial archoffice if no longer ecclesiastical/secular depending on office
+	}
+}
+
+# Called whenever a new emperor is elected
+# FROM = Previous Emperor
+# ROOT = New Emperor
+on_emperor_elected = {
+	country_event = { id = besseres_hrr_events.21 } # save election year
+
+	# Imperial Agenda:
+	FROM = {
+		country_event = { id = besseres_hrr_imperial_agenda_events.2 }
+	}
+	country_event = { id = besseres_hrr_imperial_agenda_events.2 }
+	if = {
+		limit = {
+			NOT = { has_country_flag = enacted_imperial_agenda_decision }
+		}
+		country_event = { id = besseres_hrr_imperial_agenda_events.8 }
+	}
+	else = {
+		country_event = { id = besseres_hrr_imperial_agenda_events.8 days = 20 }
+	}
+
+	# Imperial Privileges:
+	country_event = { id = besseres_hrr_imperial_privileges_events.1 }
+
+	# Imperial Ban:
+	if = {
+		limit = {
+			NOT = { has_ruler_flag = ruler_of_hre }
+			NOT = { has_heir_flag = ruler_of_hre }
+		}
+		every_country = {
+			limit = {
+				has_country_flag = hree_imperial_ban_country_flag
+			}
+			hree_lift_imperial_ban_from_this = yes
+		}
+	}
+
+	# Imperial Incidents:
+	set_ruler_flag = ruler_of_hre
+	if = {
+		limit = {
+			has_regency = yes
+		}
+		set_heir_flag = ruler_of_hre
+	}
+
+	# Imperial Archoffices:
+	hree_clear_imperial_archoffices = yes
+}
+
+on_hre_dismantled = {
+	hidden_effect = {
+		clear_up_imperial_diet_effect = yes
+		every_country = {
+			limit = {
+				has_active_imperial_agenda = yes
+			}
+			finish_imperial_agenda = yes
+		}
+		clear_possible_imperial_agendas = yes
+		every_country = {
+			limit = {
+				has_country_flag = hree_imperial_ban_country_flag
+			}
+			hree_lift_imperial_ban_from_this = yes
+		}
+		every_country = {
+			clear_possible_imperial_privileges_electors = yes
+			clear_possible_imperial_privileges_princes = yes
+			clear_imperial_privilege_modifiers = yes
+		}
+		hree_clear_imperial_archoffices = yes
+	}
+}
+
+on_annexed = {
+	FROM = {
+		if = {
+			limit = {
+				hree_has_any_imperial_archoffice = yes
+			}
+			hree_update_imperial_archoffices = yes
+		}
+	}
+}
+
+on_new_age = {
+	if = {
+		limit = {
+			current_age = age_of_absolutism
+			is_emperor = yes
+			NOT = { has_global_flag = hre_golden_bull_enacted }
+			NOT = { has_global_flag = hre_golden_bull_removed }
+			NOT = { has_global_flag = hre_golden_bull_rejected }
+		}
+		set_global_flag = hre_golden_bull_rejected
+	}
+}
+
+# Root = Emperor, From = attacked HRE member
+on_hre_defense = {
+	if = {
+		limit = {
+			has_saved_global_event_target = hre_erzmarschall
+			event_target:hre_erzmarschall = {
+				NOT = { war_with = ROOT }
+				NOT = { war_with = FROM }
+			}
+			any_country = {
+				is_in_war = {
+					attacker_leader = THIS
+					defenders = FROM
+				}
+				NOT = {
+					is_in_war = {
+						attacker_leader = THIS
+						defenders = FROM
+						duration = 62
+					}
+				}
+				NOT = {
+					is_in_war = {
+						participants = THIS
+						participants = event_target:hre_erzmarschall
+					}
+				}
+			}
+		}
+		FROM = {
+			save_event_target_as = defended_hre_member
+		}
+		random_country = {
+			limit = {
+				is_in_war = {
+					attacker_leader = THIS
+					defenders = FROM
+				}
+				NOT = {
+					is_in_war = {
+						attacker_leader = THIS
+						defenders = FROM
+						duration = 62
+					}
+				}
+				NOT = {
+					is_in_war = {
+						participants = THIS
+						participants = event_target:hre_erzmarschall
+					}
+				}
+			}
+			save_event_target_as = hre_attacker
+		}
+		event_target:hre_erzmarschall = {
+			country_event = { id = besseres_hrr_events.40 }
+		}
+	}
+}

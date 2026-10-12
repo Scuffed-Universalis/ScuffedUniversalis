@@ -1,0 +1,18 @@
+EE_grant_achievement = {
+	if = {
+		limit = {
+			ironman = yes
+			NOT = { has_country_flag = $achievement$_achieved }
+		}
+		hidden_effect = {
+			set_country_flag = achievement_get_activate
+			set_country_flag = $achievement$_achieved
+			set_country_flag = $achievement$_achieved_shown
+			play_sound = achievement_sound
+			country_event = { 
+				id = ee_achievement_system.1
+				days = 60
+			}
+		}
+	}
+}

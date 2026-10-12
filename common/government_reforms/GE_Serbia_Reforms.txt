@@ -1,0 +1,195 @@
+serbian_empire_reform = {
+	icon = serbian_empire
+	allow_normal_conversion = yes
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			primary_culture = serbian
+			has_reform = serbian_empire_reform
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = serbian_empire_reform
+		}
+	}
+	modifiers = {
+		max_absolutism = 5
+		unjustified_demands = -0.25
+		monarch_military_power = 1
+	}
+	effect = {
+		hidden_effect = {
+			every_owned_province = {
+				ge_royal_mining_monopoly_province_update = yes
+			}
+		}
+	}
+	removed_effect = {
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = GE_Mining_Monopoly
+			}
+		}
+	}
+	custom_attributes = {
+		enables_royal_mining_monopoly = yes #0.5 Goods produced and -0.05 Autonomy in all Stated Mining Provinces.
+		#enables_grand_leader = yes #+5% landforcelimit per ruler mil stat
+	}
+	ai = {
+		factor = 101
+	}
+}
+
+vlast_voivodes_reform = {
+	icon = march
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				ge_military_governors_province_update = yes
+			}
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = GE_military_governors
+			}
+		}
+	}
+	potential = {
+		OR = {
+			has_reform = vlast_voivodes_reform
+			primary_culture = serbian
+			accepted_culture = serbian
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = vlast_voivodes_reform
+			primary_culture = serbian
+			accepted_culture = serbian
+		}
+	}
+	modifiers = {
+		global_tax_modifier = 0.10
+	}
+	custom_attributes = {
+		enables_military_governors = yes #500 base manpower and -10% development cost in provinces with forts
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+grand_logothete_reform = {
+	icon = serbian_logothete
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+		hidden_effect = {
+			country_event = { 
+				id = reform_me_events.193
+				days = 1
+			}
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+		hidden_effect = {
+			remove_country_modifier = GE_church_policy_tolerance
+			remove_country_modifier = GE_church_policy_missionary
+		}
+	}
+	potential = {
+		OR = {
+			has_reform = grand_logothete_reform
+			primary_culture = serbian
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = grand_logothete_reform
+			primary_culture = serbian
+		}
+	}
+	modifiers = {
+		advisor_cost = -0.05
+	}
+	custom_attributes = {
+		enables_church_policy = yes #pick a church policy for this administration.
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+
+form_the_vojstatic_reform = {
+	icon = szlachta_noble_1
+	allow_normal_conversion = yes
+	effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = 1
+		}
+		hidden_effect = {
+			country_event = { 
+				id = reform_me_events.216
+				days = 1
+			}
+		}
+	}
+	removed_effect = {
+		change_variable = {
+			which = Noble_Influence
+			value = -1
+		}
+		hidden_effect = {
+			remove_country_modifier = GE_Grand_Leader_0
+			remove_country_modifier = GE_Grand_Leader_1
+			remove_country_modifier = GE_Grand_Leader_2
+			remove_country_modifier = GE_Grand_Leader_3
+			remove_country_modifier = GE_Grand_Leader_4
+			remove_country_modifier = GE_Grand_Leader_5
+			remove_country_modifier = GE_Grand_Leader_6
+		}
+	}
+	potential = {
+		OR = {
+			has_reform = form_the_vojstatic_reform
+			primary_culture = serbian
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = form_the_vojstatic_reform
+			primary_culture = serbian
+		}
+	}
+	modifiers = {
+		fire_damage = 0.05
+		mercenary_cost = -0.10
+	}
+	custom_attributes = {
+		enables_grand_leader = yes #+5% landforcelimit per ruler mil stat
+	}
+	ai = {
+		factor = 100
+	}
+}

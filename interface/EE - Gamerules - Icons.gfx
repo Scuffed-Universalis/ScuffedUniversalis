@@ -1,0 +1,38 @@
+spriteTypes = {
+    spriteType = {
+    	name = "GFX_gamerules_bg"
+		texturefile = "gfx/interface/gamerules/gamerules_bg.dds"
+		transparencecheck = yes
+		loadType = "INGAME"
+    }
+    spriteType = {
+    	name = "GFX_gamerules_entry_bg"
+		texturefile = "gfx/interface/gamerules/gamerules_entry_bg.dds"
+		transparencecheck = yes
+		loadType = "INGAME"
+    }
+    spriteType = {
+    	name = "GFX_gamerules_select_bg"
+		texturefile = "gfx/interface/gamerules/gamerules_select_bg.dds"
+		transparencecheck = yes
+		loadType = "INGAME"
+    }
+    spriteType = {
+    	name = "GFX_gamerules_arrow_r"
+		texturefile = "gfx/interface/gamerules/gamerules_arrow_r.dds"
+		transparencecheck = yes
+		loadType = "INGAME"
+    }
+    spriteType = {
+    	name = "GFX_gamerules_arrow_l"
+		texturefile = "gfx/interface/gamerules/gamerules_arrow_l.dds"
+		transparencecheck = yes
+		loadType = "INGAME"
+    }
+    spriteType = {
+    	name = "GFX_gamerules_open"
+		texturefile = "gfx/interface/gamerules/gamerules_open.dds"
+		transparencecheck = yes
+		loadType = "INGAME" #30 211
+    }
+}

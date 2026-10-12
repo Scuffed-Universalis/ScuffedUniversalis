@@ -1,0 +1,202 @@
+custom_button = {
+		name = estate_brahmins_make_generous_donation_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = MAKE_GENEROUS_DONATION_BRAHMINS
+			}
+			has_estate = estate_brahmins
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = MAKE_GENEROUS_DONATION_BRAHMINS
+				days = 3650
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = MAKE_GENEROUS_DONATION_BRAHMINS
+			}
+			estate_action = {
+				estate_action = MAKE_GENEROUS_DONATION_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_brahmins_make_support_of_brahmins_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = SEEK_SUPPORT_OF_BRAHMINS
+			}
+			has_estate = estate_brahmins
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = SEEK_SUPPORT_OF_BRAHMINS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = SEEK_SUPPORT_OF_BRAHMINS
+			}
+			estate_action = {
+				estate_action = SEEK_SUPPORT_OF_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_brahmins_recruit_minister_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_MINISTER_BRAHMINS
+			}
+			has_estate = estate_brahmins
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_shared_cooldown = {
+				estate_action = RECRUIT_ADVISOR_BRAHMINS
+				days = 10950
+			}
+			estate_influence = {
+				estate = estate_brahmins
+				influence = 40
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_ADVISOR_BRAHMINS
+			}
+			estate_action = {
+				estate_action = RECRUIT_MINISTER_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+
+custom_button = {
+		name = estate_brahmins_recruit_inquisitor_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = RECRUIT_INQUISITOR_BRAHMINS
+			}
+			has_estate = estate_brahmins
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_action_off_cooldown = {
+				estate_action = RECRUIT_ADVISOR_BRAHMINS
+				days = 10950
+			}
+			estate_influence = {
+				estate = estate_brahmins
+				influence = 40
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = RECRUIT_ADVISOR_BRAHMINS
+			}
+			estate_action = {
+				estate_action = RECRUIT_INQUISITOR_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_brahmins_demand_support_brahmin_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = DEMAND_SUPPORT_BRAHMINS
+			}
+			has_estate = estate_brahmins
+			NOT = { has_estate = estate_church }
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_loyalty = {
+				estate = estate_brahmins
+				loyalty = 30
+			}	
+			estate_influence = {
+				estate = estate_brahmins
+				influence = 25
+			}
+			estate_action_off_cooldown = {
+				estate_action = DEMAND_SUPPORT_BRAHMINS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = DEMAND_SUPPORT_BRAHMINS
+			}
+			estate_action = {
+				estate_action = DEMAND_SUPPORT_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}
+custom_button = {
+		name = estate_brahmins_seek_brahmin_legitimacy_button
+		potential = {
+			ai = no #make sure the AI gets an event or something similar where they can choose their branch the moment these buttons get unlocked for the player
+			has_enabled_estate_action = {
+				estate_action = SEEK_BRAHMIN_LEGITIMACY_BRAHMINS
+			}
+			has_estate = estate_brahmins
+		}
+		trigger = { 
+			has_not_any_estate_disaster_active = yes
+			estate_influence = {
+				estate = estate_brahmins
+				influence = 20
+			}
+			estate_loyalty = {
+				estate = estate_brahmins
+				loyalty = 40
+			}
+			estate_action_off_cooldown = {
+				estate_action = SEEK_BRAHMIN_LEGITIMACY_BRAHMINS
+				days = 7300
+			}
+		}
+		effect = { 
+			set_estate_action_cooldown = {
+				estate_action = SEEK_BRAHMIN_LEGITIMACY_BRAHMINS
+			}
+			estate_action = {
+				estate_action = SEEK_BRAHMIN_LEGITIMACY_BRAHMINS
+			}
+			increase_estate_action_counter = {
+				estate = estate_brahmins
+			}
+		}
+		tooltip = ESTATE_ACTION_DESCRIPTION
+}

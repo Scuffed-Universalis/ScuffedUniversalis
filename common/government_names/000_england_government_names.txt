@@ -1,0 +1,95 @@
+irish_confederacy_name = {
+	rank = {
+		1 = IRISH_CATHOLIC_CONFEDERACY
+		2 = IRISH_CATHOLIC_CONFEDERACY
+		3 = IRISH_CATHOLIC_CONFEDERACY
+	}
+
+	ruler_male = {
+		1 = IRISH_REBEL_LEADER
+		2 = IRISH_REBEL_LEADER
+		3 = IRISH_REBEL_LEADER
+	}
+
+	ruler_female = {
+		1 = IRISH_REBEL_LEADER
+		2 = IRISH_REBEL_LEADER	
+		3 = IRISH_REBEL_LEADER
+	}
+	
+	consort_male  = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	
+	trigger = {
+		has_country_flag = IRE_confederate_ireland_flag
+	}
+}
+
+scottish_covenant_name = {
+	rank = {
+		1 = SOLEMN_LEAGUE_AND_COVENANT
+		2 = SOLEMN_LEAGUE_AND_COVENANT
+		3 = SOLEMN_LEAGUE_AND_COVENANT
+	}
+
+	ruler_male = {
+		1 = IRISH_REBEL_LEADER
+		2 = IRISH_REBEL_LEADER
+		3 = IRISH_REBEL_LEADER
+	}
+
+	ruler_female = {
+		1 = IRISH_REBEL_LEADER
+		2 = IRISH_REBEL_LEADER	
+		3 = IRISH_REBEL_LEADER
+	}
+	
+	consort_male  = {
+		1 = PRINCE_CONSORT
+		2 = PRINCE_CONSORT
+		3 = PRINCE_CONSORT
+	}
+
+	consort_female = {
+		1 = CONSORT
+		2 = QUEEN_CONSORT
+		3 = EMPRESS_CONSORT
+	}
+
+	heir_male = {
+		1 = HEIR
+		2 = HEIR
+		3 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIR_fem
+		2 = HEIR_fem
+		3 = HEIR_fem
+	}
+	
+	trigger = {
+		has_country_flag = IRE_convenanter_scotland_flag
+	}
+}

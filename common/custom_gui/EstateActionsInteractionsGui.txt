@@ -1,0 +1,1312 @@
+custom_button = {
+		name = estate_action_button_one
+		potential = { ai = no }
+		trigger = { OR = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_one_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_one_trigger = yes
+			}
+
+		} }
+		effect = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_one_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_one_effect = yes
+			}
+
+		}
+		tooltip = ESTATE_ACTION_BUTTON_ONE_TOOLTIP
+}
+
+custom_button = {
+		name = estate_action_button_two
+		potential = { ai = no }
+		trigger = { OR = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_two_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_two_trigger = yes
+			}
+
+		} }
+		effect = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_two_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_two_effect = yes
+			}
+
+		}
+		tooltip = ESTATE_ACTION_BUTTON_TWO_TOOLTIP
+}
+
+custom_button = {
+		name = estate_action_button_three
+		potential = { ai = no }
+		trigger = { OR = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_three_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_three_trigger = yes
+			}
+
+		} }
+		effect = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_three_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_three_effect = yes
+			}
+
+		}
+		tooltip = ESTATE_ACTION_BUTTON_THREE_TOOLTIP
+}
+
+custom_button = {
+		name = estate_action_button_four
+		potential = { ai = no }
+		trigger = { OR = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_four_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_four_trigger = yes
+			}
+
+		} }
+		effect = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_four_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_four_effect = yes
+			}
+
+		}
+		tooltip = ESTATE_ACTION_BUTTON_FOUR_TOOLTIP
+}
+
+custom_button = {
+		name = estate_action_button_five
+		potential = { ai = no }
+		trigger = { OR = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_five_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_five_trigger = yes
+			}
+
+		} }
+		effect = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_five_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_five_effect = yes
+			}
+
+		}
+		tooltip = ESTATE_ACTION_BUTTON_FIVE_TOOLTIP
+}
+
+custom_button = {
+		name = estate_action_button_six
+		potential = { ai = no }
+		trigger = { OR = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_six_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_six_trigger = yes
+			}
+
+		} }
+		effect = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_six_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_six_effect = yes
+			}
+
+		}
+		tooltip = ESTATE_ACTION_BUTTON_SIX_TOOLTIP
+}
+
+custom_button = {
+		name = estate_action_button_seven
+		potential = { ai = no }
+		trigger = { OR = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_seven_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_seven_trigger = yes
+			}
+
+		} }
+		effect = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_seven_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_seven_effect = yes
+			}
+
+		}
+		tooltip = ESTATE_ACTION_BUTTON_SEVEN_TOOLTIP
+}
+
+custom_button = {
+		name = estate_action_button_eight
+		potential = { ai = no }
+		trigger = { OR = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_eight_trigger = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_eight_trigger = yes
+			}
+
+		} }
+		effect = {
+			if = {
+				limit = { hidden_trigger = { show_brahmins_interactions = yes } }
+				brahmins_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_church_interactions = yes } }
+				church_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_maratha_interactions = yes } }
+				maratha_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nobles_interactions = yes } }
+				nobles_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_vaisyas_interactions = yes } }
+				vaisyas_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_burghers_interactions = yes } }
+				burghers_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cossacks_interactions = yes } }
+				cossacks_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_nomadic_tribes_interactions = yes } }
+				nomadic_tribes_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_dhimmi_interactions = yes } }
+				dhimmi_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_jains_interactions = yes } }
+				jains_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_janissaries_interactions = yes } }
+				janissaries_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_eunuchs_interactions = yes } }
+				eunuchs_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_qizilbash_interactions = yes } }
+				qizilbash_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_ghulams_interactions = yes } }
+				ghulams_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_rajput_interactions = yes } }
+				rajput_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_berbers_interactions = yes } }
+				berbers_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_cultural_minorities_interactions = yes } }
+				cultural_minorities_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_industrial_interactions = yes } }
+				industrial_interaction_eight_effect = yes
+			}
+			else_if = {
+				limit = { hidden_trigger = { show_turkic_tribes_interactions = yes } }
+				turkic_tribes_interaction_eight_effect = yes
+			}
+
+		}
+		tooltip = ESTATE_ACTION_BUTTON_EIGHT_TOOLTIP
+}
+

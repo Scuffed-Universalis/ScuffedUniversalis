@@ -1,0 +1,353 @@
+ase_retain_age_ability_entry_1_effect = {
+	add_splendor = -1600
+	if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		set_country_flag = ase_chosen_age_of_reformation
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_justified_wars
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_glorious_renaissance_modifier
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		set_country_flag = ase_chosen_age_of_absolutism
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_floating_batteries
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_institutional_spread
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+			}
+			add_country_modifier = {
+				name = ase_dharmic_syncretism_modifier
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_revolutions
+		}
+		set_country_flag = ase_chosen_age_of_revolutions
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_flexible_rivalries
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_administrative_efficiency
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+			}
+			add_country_modifier = {
+				name = ase_imperial_control_modifier
+				duration = -1
+			}
+		}
+	}
+	hidden_effect = {
+		clr_country_flag = ase_retain_age_ability_opened
+		set_variable = { which = ase_retain_age_ability_page value = 0 }
+	}
+}
+
+ase_retain_age_ability_entry_2_effect = {
+	add_splendor = -1600
+	if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		set_country_flag = ase_chosen_age_of_reformation
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_improved_wartaxes
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_ruling_dynasty_modifier
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		set_country_flag = ase_chosen_age_of_absolutism
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_religious_wars
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_prestigious_conversion
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_revolutions
+		}
+		set_country_flag = ase_chosen_age_of_revolutions
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_protecting_forts
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_absolute_government
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 3 }
+			}
+			custom_tooltip = ase_centralised_state_tt
+			set_country_flag = centralised_state_flag_retained
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_owner_culture_or_accepted = yes
+					}
+					add_province_modifier = {
+						name = ase_centralised_state_modifier
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	hidden_effect = {
+		clr_country_flag = ase_retain_age_ability_opened
+		set_variable = { which = ase_retain_age_ability_page value = 0 }
+	}
+}
+
+ase_retain_age_ability_entry_3_effect = {
+	add_splendor = -1600
+	if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		set_country_flag = ase_chosen_age_of_reformation
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_cavalry_armies
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_adaptative_combat_terrain
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		set_country_flag = ase_chosen_age_of_absolutism
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_mercenary_discipline
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			custom_tooltip = muslim_jihad_tt
+			set_country_flag = muslim_jihad_flag_infinite
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_revolutions
+		}
+		set_country_flag = ase_chosen_age_of_revolutions
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_efficient_autonomy
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_strategic_warfare_modifier
+				duration = -1
+			}
+		}
+	}
+	hidden_effect = {
+		clr_country_flag = ase_retain_age_ability_opened
+		set_variable = { which = ase_retain_age_ability_page value = 0 }
+	}
+}
+
+ase_retain_age_ability_entry_4_effect = {
+	add_splendor = -1600
+	if = {
+		limit = {
+			current_age = age_of_reformation
+		}
+		set_country_flag = ase_chosen_age_of_reformation
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_boost_colony
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_exploration_corp_modifier
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_absolutism
+		}
+		set_country_flag = ase_chosen_age_of_absolutism
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_powerful_tradeships
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_confessionalism_modifier
+				duration = -1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			current_age = age_of_revolutions
+		}
+		set_country_flag = ase_chosen_age_of_revolutions
+		if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 1 }
+			}
+			add_country_modifier = {
+				name = ase_harsher_treatment
+				duration = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_variable_equal = { which = ase_retain_age_ability_page value = 2 }
+			}
+			add_country_modifier = {
+				name = ase_cultural_relativism_modifier
+				duration = -1
+			}
+		}
+	}
+	hidden_effect = {
+		clr_country_flag = ase_retain_age_ability_opened
+		set_variable = { which = ase_retain_age_ability_page value = 0 }
+	}
+}

@@ -1,0 +1,506 @@
+EE_FRA_model_state = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 4
+	available = { always = yes }
+	powers = {
+		EE_FRA_consolidation_power = {
+			gui = french_model_state
+			show_before_interactions = yes
+			max = 100
+			reset_on_new_ruler = no
+			is_good = yes
+			base_monthly_growth = 0.5
+			scaled_modifier = {
+				start_value = 0
+				modifier = { 
+					all_estate_loyalty_equilibrium = -0.1
+					loyalty_change_on_revoked = 0.05
+				}
+			}
+		}
+
+		EE_FRA_consolidation_power_progress_ui = {
+			gui = french_model_state_progress
+			max = 6
+			reset_on_new_ruler = no
+			is_good = yes
+			base_monthly_growth = 0
+			scaled_modifier = {
+				start_value = 0
+				modifier = { 
+					all_estate_loyalty_equilibrium = -0.1
+					all_estate_influence_modifier = -0.2
+				}
+			}
+		}
+	}
+	interactions = {
+		EE_FRA_enact_regime_law = {
+			gui = french_model_state_interaction
+			icon = GFX_french_model_state_pass_law
+			cost_type = EE_FRA_consolidation_power
+			center = no
+			cost = 0
+			trigger = {
+				custom_trigger_tooltip = {
+					tooltip = FRA_HAS_AT_LEAST_ONE_LEVEL_OF_REGIME_STRENGTH
+					has_government_power = {
+						mechanic_type = EE_FRA_model_state
+						power_type = EE_FRA_consolidation_power_progress_ui
+						value = 1
+					}
+				}
+			}
+			effect = {
+
+				custom_tooltip = SEPERATOR_TOOLTIP
+
+				if = {
+					limit = {
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 1
+							}
+						}
+					}
+					custom_tooltip = FRA_NO_REWARDS_NO_STRENGTH
+				}
+				else = {
+					custom_tooltip = FRA_RESET_ANCIEN_REGIME
+
+					custom_tooltip = SEPERATOR_TOOLTIP
+				}
+
+				if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 1
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 2
+							}
+						}
+					}
+					add_estate_loyalty = {
+						estate = all
+						loyalty = 15
+					}
+				}
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 2
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 3
+							}
+						}
+					}
+					change_government_reform_progress = 50
+				}
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 3
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 4
+							}
+						}
+					}
+					add_estate_influence_modifier = {
+						estate = all
+						desc = EST_VAL_STRENGTHEN_ANCIEN_REGIME_LAW
+						influence = -15
+						duration = 1825
+					}
+				}
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 4
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 5
+							}
+						}
+					}
+					take_estate_land_share_massive = {
+						estate = all
+					}
+				}
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 5
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 6
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								current_age = age_of_absolutism
+								current_age = age_of_revolutions
+							}
+						}
+						custom_tooltip = FRA_REDUCE_AUTONOMY_EVERYWHERE
+						hidden_effect = {
+							every_owned_province = {
+								add_local_autonomy = -5
+							}
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = fra_absolutism_ministry
+							duration = 1825
+						}
+						add_absolutism = 5
+					}
+				}
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 6
+						}
+					}
+					add_country_modifier = {
+						name = fra_curtailed_estate_influence
+						duration = 1825
+					}
+				}
+				
+				set_government_power = {
+					mechanic_type = EE_FRA_model_state
+					power_type = EE_FRA_consolidation_power_progress_ui
+					value = 0
+				}
+			}
+			ai_chance = { }
+		}
+		EE_FRA_strengthen_regime = {
+			gui = french_model_state_interaction2
+			icon = GFX_french_model_state_strengthen_regime
+			cost_type = EE_FRA_consolidation_power
+			center = no
+			cost = 100
+			trigger = {
+				if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 6
+						}
+					}
+					custom_trigger_tooltip = {
+						tooltip = FRA_MAX_LEVEL
+						always = no
+					}
+				}
+			}
+			effect = { 
+				custom_tooltip = FRA_STRENGTHEN_REGIME_BY_1
+
+				custom_tooltip = SEPERATOR_TOOLTIP
+				
+				if = {
+					limit = {
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 6
+							}
+						}
+					}
+					custom_tooltip = FRA_REWARDS_FOR_LEVEL_1
+
+					custom_tooltip = SEPERATOR_TOOLTIP
+					
+					add_government_power = {
+						mechanic_type = EE_FRA_model_state
+						power_type = EE_FRA_consolidation_power_progress_ui
+						value = 1
+					}
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 1
+							}
+						}
+					}
+
+					tooltip = {
+						add_estate_loyalty = {
+							estate = all
+							loyalty = 15
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 1
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 2
+							}
+						}
+					}
+					change_government_reform_progress = 50
+				}
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 2
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 3
+							}
+						}
+					}
+					add_estate_influence_modifier = {
+						estate = all
+						desc = EST_VAL_STRENGTHEN_ANCIEN_REGIME_LAW
+						influence = -15
+						duration = 1825
+					}
+				}
+
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 3
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 4
+							}
+						}
+					}
+					take_estate_land_share_massive = {
+						estate = all
+					}
+				}
+
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 4
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 5
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								current_age = age_of_absolutism
+								current_age = age_of_revolutions
+							}
+						}
+						custom_tooltip = FRA_REDUCE_AUTONOMY_EVERYWHERE
+						hidden_effect = {
+							every_owned_province = {
+								add_local_autonomy = -5
+							}
+						}
+					}
+					else = {
+						add_country_modifier = {
+							name = fra_absolutism_ministry
+							duration = 1825
+						}
+						add_absolutism = 5
+					}
+				}
+
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 5
+						}
+						NOT = {
+							has_government_power = {
+								mechanic_type = EE_FRA_model_state
+								power_type = EE_FRA_consolidation_power_progress_ui
+								value = 6
+							}
+						}
+					}
+					add_country_modifier = {
+						name = fra_curtailed_estate_influence
+						duration = 1825
+					}
+				}
+
+				else_if = {
+					limit = {
+						has_government_power = {
+							mechanic_type = EE_FRA_model_state
+							power_type = EE_FRA_consolidation_power_progress_ui
+							value = 6
+						}
+					}
+					custom_tooltip = FRA_MAX_LEVEL
+				}
+			}
+			ai_chance = { }
+		}
+		# EE_FRA_eliminate_feudalism = {
+		# 	icon = GFX_RHN_create_investment_fund_button
+		# 	cost_type = EE_FRA_consolidation_power
+		# 	cost = 50
+		# 	effect = {
+		# 		add_country_modifier = {
+		# 			name = EE_FRA_eliminating_feudalism
+		# 			duration = 30
+		# 		}
+		# 		if = {
+		# 			limit = {
+		# 				any_subject_country = {	culture_group = iberian }
+		# 			}
+		# 			random_subject_country = {
+		# 				limit = { culture_group = iberian }
+		# 				add_liberty_desire = -10
+		# 			}
+		# 		}
+		# 	}
+		# 	ai_chance = { }
+		# }
+		# EE_FRA_consul_haut = {
+		# 	icon = GFX_RHN_involve_officials_button
+		# 	cost_type = EE_FRA_consolidation_power
+		# 	cost = 50
+		# 	trigger = {
+		# 		custom_trigger_tooltip = {
+		# 			tooltip = ME_FRA_completed_monopoly_force
+		# 			has_country_flag = EE_FRA_french_absolute_monarchy_flag
+		# 		}
+		# 	}
+		# 	effect = {
+		# 		custom_tooltip = EE_FRA_lose_autonomy_tt
+		# 		hidden_effect = {
+		# 			every_owned_province = { add_local_autonomy = -10 }
+		# 			change_estate_land_share = {
+		# 				estate = all
+		# 				share = -2.5
+		# 			}
+		# 		}
+		# 		if = {
+		# 			limit = { has_country_flag = EE_FRA_buff_haut }
+		# 			add_country_modifier = {
+		# 				name = EE_FRA_consul_haut_modifier
+		# 				duration = 1825
+		# 			}
+		# 		}
+		# 	}
+		# 	ai_chance = { }
+		# }
+		# EE_FRA_consul_finances = {
+		# 	icon = GFX_RHN_procure_a_loan_button
+		# 	cost_type = EE_FRA_consolidation_power
+		# 	cost = 50
+		# 	trigger = {
+		# 		custom_trigger_tooltip = {
+		# 			tooltip = ME_FRA_completed_monopoly_force
+		# 			has_country_flag = EE_FRA_french_absolute_monarchy_flag
+		# 		}
+		# 	}
+		# 	effect = { 
+		# 		if = {
+		# 			limit = { has_country_flag = EE_FRA_buff_finances }
+		# 			add_years_of_income = 1
+		# 		}
+		# 		add_inflation = -2
+		# 		add_country_modifier = {
+		# 			name = EE_FRA_consul_finances_modifier
+		# 			duration = 1825
+		# 		} 
+		# 	}
+		# 	ai_chance = { }
+		# }
+		# EE_FRA_consul_prive = {
+		# 	icon = GFX_RHN_create_investment_fund_button
+		# 	cost_type = EE_FRA_consolidation_power
+		# 	cost = 50
+		# 	trigger = {
+		# 		custom_trigger_tooltip = {
+		# 			tooltip = ME_FRA_completed_monopoly_force
+		# 			has_country_flag = EE_FRA_french_absolute_monarchy_flag
+		# 		}
+		# 	}
+		# 	effect = {
+		# 		if = {
+		# 			limit = { has_country_flag = EE_FRA_buff_prive }
+		# 			add_stability_or_adm_power = yes
+		# 		}
+		# 		add_country_modifier = {
+		# 			name = EE_FRA_consul_prive_modifier
+		# 			duration = 3650
+		# 		}
+		# 	}
+		# 	ai_chance = { }
+		# }
+	}
+}

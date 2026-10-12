@@ -1,0 +1,6 @@
+government = monarchy
+add_government_reform = POR_portuguese_monarchy
+primary_culture = portugese
+religion = catholic
+technology_group = western
+capital = 232 #Braganca

@@ -1,0 +1,130 @@
+KOI_welsh_brotherhood_act = {
+	category = 4
+
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = KOI_welsh_brotherhood_act
+		}
+		has_issue_unlocked = {
+			issue = KOI_welsh_brotherhood_act
+		}
+		any_owned_province = {
+			culture = welsh
+		}
+	}
+	
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = KOI_welsh_brotherhood_act
+		}
+		custom_tooltip = ENG_unlock_the_welsh_longbowmen
+		set_country_flag = ENG_welsh_longbowmen
+		
+		custom_tooltip = " "
+		
+		custom_tooltip = KOI_culture_welsh
+		hidden_effect = {
+			add_country_modifier = {
+				name = KOI_free_welsh_culture_slot
+				duration = -1
+			}
+			add_accepted_culture = welsh
+		}
+	}
+	
+	modifier = {
+		advisor_cost = -0.1
+	}
+	backing_percentage = 25
+	
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1000
+	}
+}
+
+KOI_act_of_settlement = {
+	category = 4
+
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = KOI_act_of_settlement
+		}
+		has_issue_unlocked = {
+			issue = KOI_act_of_settlement
+		}
+		4365 = { owned_by = ROOT }
+	}
+	
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = KOI_act_of_settlement
+		}
+		add_country_modifier = {
+			name = KOI_act_of_settlement_modifier
+			duration = -1
+		}
+	}
+	
+	modifier = {
+		monthly_reform_progress = 1
+	}
+	backing_percentage = 10
+	
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1000
+	}
+}
+
+
+KOI_act_of_revestment = {
+	category = 4
+
+	allow = {
+		has_not_enacted_parliament_action = {
+			parliament_action = KOI_act_of_revestment
+		}
+		has_issue_unlocked = {
+			issue = KOI_act_of_revestment
+		}
+		4365 = { owned_by = ROOT }
+	}
+	
+	effect = {
+		set_parliament_action_flag = {
+			parliament_action = KOI_act_of_revestment
+		}
+		4365 = {
+			add_base_tax = 3
+			add_base_production = 3
+			add_base_manpower = 3
+		}
+		custom_tooltip = gain_10_crownland_tt
+		hidden_effect = {
+			change_estate_land_share = {
+				estate = all 
+				share = -10 
+			}
+		}
+	}
+	
+	modifier = {
+		country_military_power = 1
+	}
+	backing_percentage = 10
+	
+	chance = {
+		factor = 1
+	}
+
+	ai_will_do = {
+		factor = 1000
+	}
+}

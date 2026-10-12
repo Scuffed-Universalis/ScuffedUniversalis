@@ -1,0 +1,9 @@
+﻿l_spanish:
+ #buttons
+ #faction_window_text_mechanic_override: "Custom Mechanic"
+ faction_window_text_mechanic_override_default: "Custom Mechanic"
+ faction_window_text_mechanic_override_venice: "Venice Mechanic"
+ faction_window_text_mechanic_override: "[Root.GetCustomMechanicName]"
+ pap_eog_holy_kaiser_tt: "The successor of the Holy Father will now be chosen upon the ascension of a new Pope.\nThis model of governance will make us §Yeligible§! to become the §YHoly Roman Emperor§!\n\nDue to this limiting exposure to foreign influences, §Ywe will retain permanent control over the curia.§!\n\n§YEvery HRE Nation§! that does not have at least §G+100§! relations with us will gain §R15.00§! aggressive expansion against §Y[Root.GetName]§!."
+ pap_eog_lose_ae_tt: "§YEvery HRE Nation§! will lose §G15.00§! aggressive expansion against §Y[Root.GetName]§!."
+ pap_eog_vote_modifier: "The Holy Father's Imperial Bid"

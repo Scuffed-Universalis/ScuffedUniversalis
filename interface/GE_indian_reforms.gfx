@@ -1,0 +1,94 @@
+spriteTypes = {
+# Bengal
+	# Tier 1
+		spriteType = {
+			name = "government_reform_tai_and_ahom"
+			texturefile = "gfx//interface//government_reform_icons//tai_and_ahom.dds"
+		}
+	# Tier 4
+		spriteType = {
+			name = "government_reform_sanskritization"
+			texturefile = "gfx//interface//government_reform_icons//sanskritization.dds"
+		}
+		spriteType = {
+			name = "government_reform_shakti_the_supreme_deity"
+			texturefile = "gfx//interface//government_reform_icons//shakti_the_supreme_deity.dds"
+		}
+# Coromandel
+	# Tier 8
+		spriteType = {
+			name = "government_reform_tamil_trade_guilds_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//tamil_trade_guilds_reform_icon.dds"
+		}
+# Deccan
+	# Tier 1
+		spriteType = {
+			name = "government_reform_karnataka_samrajya_reform_icon"
+				texturefile = "gfx//interface//government_reform_icons//karnataka_samrajya_reform_icon.dds"
+		}
+		spriteType = {
+			name = "government_reform_coral_kingdom_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//coral_kingdom_reform_icon.dds"
+		}
+	# Tier 2
+		spriteType = {
+			name = "government_reform_patronage_jain_temples_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//patronage_jain_temples_reform_icon.dds"
+		}
+	# Tier 3
+		spriteType = {
+			name = "government_reform_krsi_trivate_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//krsi_trivate_reform_icon.dds"
+		}
+
+	# Tier 8
+		spriteType = {
+			name = "government_reform_lyand_rutargalalli_vyapara_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//lyand_rutargalalli_vyapara_reform_icon.dds"
+		}
+		spriteType = {
+			name = "government_reform_sagarottara_vyapara_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//sagarottara_vyapara_reform_icon.dds"
+		}
+# Hindustan
+	# Tier 1
+		spriteType = {
+			name = "government_reform_empire_in_the_sky_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//empire_in_the_sky_reform_icon.dds"
+		}
+	# Tier 2
+		spriteType = {
+			name = "government_reform_indo_tibetan_union_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//indo_tibetan_union_reform_icon.dds"
+		}
+	# Tier 3
+		spriteType = {
+			name = "government_reform_ain_i_akbari_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//ain_i_akbari_reform_icon.dds"
+		}
+# Western India
+	# Tier 1
+		spriteType = {
+			name = "government_reform_guhilawat_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//guhilawat_reform_icon.dds"
+		}
+		spriteType = {
+			name = "government_reform_pratihara_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//pratihara_reform_icon.dds"
+		}
+	# Tier 2
+		spriteType = {
+			name = "government_reform_divine_rajputana_splendor_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//divine_rajputana_splendor_reform_icon.dds"
+		}
+	# Tier 5
+		spriteType = {
+			name = "government_reform_frontier_guards_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//frontier_guards_reform_icon.dds"
+		}
+	# Tier 8
+		spriteType = {
+			name = "government_reform_desert_construction_reform_icon"
+			texturefile = "gfx//interface//government_reform_icons//desert_construction_reform_icon.dds"
+		}
+}

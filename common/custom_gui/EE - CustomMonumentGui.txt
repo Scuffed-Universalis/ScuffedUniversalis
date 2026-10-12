@@ -1,0 +1,375 @@
+custom_window = {
+	name = custom_monument_gui_window
+	potential = {
+		OR = {
+			#has_custom_gui_monument = yes
+			AND = {
+				province_id = 235
+				has_global_flag = channel_tunnel_enabled
+			}
+			AND = {
+				province_id = 87
+				has_global_flag = channel_tunnel_enabled
+			}
+		}
+	}
+}
+
+custom_window = {
+	name = custom_ee_destroy_monument_popup_confirm
+	potential = {
+		has_country_flag = monument_destruction_awaiting_confirm
+	}
+}
+
+custom_text_box = {
+    name = custom_ee_destroy_monument_popup_title
+    potential = {
+	}
+}
+
+custom_text_box = {
+    name = custom_ee_destroy_monument_popup_description
+    potential = {
+	}
+}
+
+custom_button = {
+	name = custom_ee_destroy_monument_popup_deny_option
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = monument_destruction_target_channel_tunnel
+				has_country_flag = monument_action_demolish
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = monument_destruction_target_channel_tunnel
+				has_country_flag = monument_action_cancel
+			}
+		}
+		clr_country_flag = monument_destruction_awaiting_confirm
+		clr_country_flag = monument_destruction_target_channel_tunnel
+		clr_country_flag = monument_action_demolish
+		clr_country_flag = monument_action_cancel
+	}
+}
+
+custom_button = {
+	name = custom_ee_destroy_monument_popup_approve_option
+	potential = {
+	}
+	trigger = {
+	}
+	effect = {
+		if = {
+			limit = {
+				has_country_flag = monument_destruction_target_channel_tunnel
+				has_country_flag = monument_action_demolish
+			}
+			hidden_effect = {
+				235 = {
+					add_province_triggered_modifier = deactivate_channel_tunnel_modifier
+					set_variable = {
+						which = destruction_progress
+						value = 0
+					}
+					set_variable = {
+						which = destruction_progress_days
+						value = 60
+					}
+					set_province_flag = monument_being_destroyed
+				}
+				save_global_event_target_as = country_vs_channel_canal
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = monument_destruction_target_channel_tunnel
+				has_country_flag = monument_action_cancel
+			}
+			hidden_effect = {
+				235 = {
+					remove_province_triggered_modifier = deactivate_channel_tunnel_modifier
+					set_variable = {
+						which = destruction_progress
+						value = 0
+					}
+					set_variable = {
+						which = destruction_progress_days
+						value = 60
+					}
+					clr_province_flag = monument_being_destroyed
+				}
+				clear_global_event_target = country_vs_channel_canal
+			}
+		}
+		clr_country_flag = monument_destruction_awaiting_confirm
+		clr_country_flag = monument_destruction_target_channel_tunnel
+		clr_country_flag = monument_action_demolish
+		clr_country_flag = monument_action_cancel
+	}
+}
+
+custom_icon = {
+	name = custom_monument_gui_channel_tunnel_cover
+	potential = {
+		AND = {
+			province_id = 235
+			has_global_flag = channel_tunnel_enabled
+		}
+	}
+}
+
+custom_icon = {
+	name = custom_monument_gui_channel_cover_counter
+	tooltip = channel_tunnel_counterpart_info_tt
+	potential = {
+		AND = {
+			province_id = 87
+			has_global_flag = channel_tunnel_enabled
+		}
+	}
+}
+
+custom_icon = {
+	name = custom_monument_gui_destroy_progress
+	potential = {
+		AND = {
+			province_id = 235
+			has_great_project = {
+				type = english_french_ferry_main
+				tier = 3
+			}
+			has_province_flag = monument_being_destroyed
+		}
+	}
+	frame_variable = "destruction_progress"
+	tooltip = monument_destruction_progress_tt
+}
+
+custom_icon = {
+	name = custom_monument_gui_destroy_progress_frame
+	potential = {
+		AND = {
+			province_id = 235
+			has_great_project = {
+				type = english_french_ferry_main
+				tier = 3
+			}
+			has_province_flag = monument_being_destroyed
+		}
+	}
+	tooltip = monument_destruction_progress_tt
+}
+
+custom_button = {
+	name = custom_monument_gui_destroy_channel_tunnel_cancel
+	tooltip = cancel_destruction
+	potential = {
+		AND = {
+			province_id = 235
+			has_global_flag = channel_tunnel_enabled
+		}
+		has_province_flag = monument_being_destroyed
+	}
+	trigger = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = { owns = 235 controls = 235 }
+				}
+			}
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = { owns = 235 controls = 235 }
+				}
+			}
+			custom_tooltip = not_owner_and_controller_tt
+		}
+		hidden_effect = {
+			FROM = { set_country_flag = monument_destruction_target_channel_tunnel }
+			FROM = { set_country_flag = monument_destruction_awaiting_confirm }
+			FROM = { set_country_flag = monument_action_cancel }
+		}
+	}
+}
+
+custom_button = {
+	name = custom_monument_gui_destroy_channel_tunnel
+	tooltip = custom_monument_gui_destroy_channel_tunnel_tt
+	potential = {
+		AND = {
+			province_id = 235
+			has_global_flag = channel_tunnel_enabled
+		}
+	}
+	trigger = {
+		if = {
+			limit = {
+				has_province_flag = monument_being_destroyed
+			}
+			custom_trigger_tooltip = {
+				tooltip = destruction_underway_tt
+				always = no
+			}
+		}
+		if = {
+			limit = {
+				province_id = 235
+				NOT = {
+					has_great_project = {
+						type = english_french_ferry_main
+						tier = 3
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = channel_tunnel_needs_to_exist
+				AND = {
+					province_id = 235
+					has_great_project = {
+						type = english_french_ferry_main
+						tier = 3
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						custom_trigger_tooltip = {
+							tooltip = "Owns and Controls [235.GetName]"
+							FROM = {
+								owns = 235
+								controls = 235
+							}
+						}
+						custom_trigger_tooltip = {
+							tooltip = "Owns and Controls [87.GetName]"
+							FROM = {
+								owns = 87
+								controls = 87
+							}
+						}
+					}
+				}
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = "Owns and Controls [235.GetName]"
+					FROM = {
+						owns = 235
+						controls = 235
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Owns and Controls [87.GetName]"
+					FROM = {
+						owns = 87
+						controls = 87
+					}
+				}
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = { owns = 235 controls = 235 }
+				}
+			}
+			custom_tooltip = not_owner_and_controller_tt
+		}
+		tooltip ={
+			deactivate_artificial_strait = {
+				main_name = english_french_ferry_main
+				ambient_object_disabled = english_french_ferry_disabled_strait
+				ambient_object_enabled = english_french_ferry_strait
+				strait_crossing = 1271
+				canal_name = english_french_ferry
+				counterpart_province = 87
+				counterpart_name = english_french_ferry_counterpart
+				strait_flag = channel_tunnel_open
+			}
+		}
+		hidden_effect = {
+			FROM = { set_country_flag = monument_destruction_target_channel_tunnel }
+			FROM = { set_country_flag = monument_destruction_awaiting_confirm }
+			FROM = { set_country_flag = monument_action_demolish }
+		}
+	}
+	#frame = {
+    #    number = 1
+    #    trigger = { 
+	#	}
+    #}
+}
+
+##############################  Supported files with scopes ##############################
+#   The Gui objects must be directly inside the specified window Gui element!
+#   FROM is always the country that clicks
+#   provinceview.gui:
+#       province_window         (ROOT: Clicked province)
+#       buildings_window        (ROOT: Clicked province)
+#       state_window            (ROOT: Clicked province)
+#   countrycourtview.gui:
+#       countrycourtview        (ROOT = FROM)
+#   countrygovernmentview.gui:
+#       countrygovernmentview   (ROOT = FROM)
+#   countrydiplomacyview.gui:
+#       countrydiplimacyview    (ROOT: Selected country)
+#   countryeconomyview.gui:
+#       countryeconomyview      (ROOT = FROM)
+#   countrytradeview.gui:
+#       countrytradeview        (ROOT = FROM)
+#   countrytechnologyview.gui:
+#       countrytechnologyview   (ROOT = FROM)
+#   countryideasview.gui:
+#       countryideasview        (ROOT = FROM)
+#   countrymissionsview.gui:
+#       countrymissionsview     (ROOT: Selected country)
+#   countrydecisionview.gui:
+#       countrydecisionsview    (ROOT = FROM)
+#   countrystabilityview.gui:
+#       countrystabilityview    (ROOT = FROM)
+#   countryreligionview.gui:
+#       countryreligionview     (ROOT = FROM)
+#   countrymilitaryview.gui:
+#       countrymilitaryview     (ROOT = FROM)
+#   countrysubjectsview.gui:
+#       countrysubjectview      (ROOT = FROM)
+#   countryestatesview.gui:
+#       countryestatesview      (ROOT = FROM)
+#   ages_view.gui:
+#       ages_view               (ROOT = FROM)
+#   tradeinterface.gui:
+#       TradeNodeInterface      (ROOT: Trade capital of a trade node)
+#   hre.gui:
+#       hre_window              (ROOT = FROM)
+#   papacy.gui:
+#       papacy_window           (ROOT = FROM)
+#   faction.gui:
+#       All faction windows     (ROOT = FROM)
+#   celestialempireview.gui:
+#       celestial_window        (ROOT = FROM)
+#   countrynativesview.gui:
+#       natives_window          (ROOT = FROM)
+#   religiousreforms.gui:
+#       reforms_window          (ROOT = FROM)
+#   parliament.gui:
+#       parliament_window       (ROOT = FROM)

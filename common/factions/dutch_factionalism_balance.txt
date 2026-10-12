@@ -1,0 +1,35 @@
+# dutch_factionalism_balance = { #positive = more to hooks
+	# allow = {
+		# always = yes
+	# }
+	
+	# monarch_power = ADM
+	# always = yes
+
+	# modifier = {	
+	# }
+# }
+
+# dutch_cod_support = {
+	# allow = {
+		# always = yes
+	# }
+	
+	# monarch_power = ADM
+	# always = yes
+
+	# modifier = {	
+	# }
+# }
+
+# dutch_hook_support = {
+	# allow = {
+		# always = yes
+	# }
+	
+	# monarch_power = ADM
+	# always = yes
+
+	# modifier = {	
+	# }
+# }

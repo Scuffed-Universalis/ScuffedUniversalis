@@ -1,0 +1,76 @@
+on_five_year_pulse_4 = {
+	random_events = {
+		300 = 0
+		100 = ME_Golden_Age_Events.1
+		100 = ME_Golden_Age_Events.2
+		100 = ME_Golden_Age_Events.3
+		100 = ME_Golden_Age_Events.4
+		100 = ME_Golden_Age_Events.5
+		100 = ME_Golden_Age_Events.6
+		100 = ME_Golden_Age_Events.7
+		100 = ME_Golden_Age_Events.8
+		100 = ME_Golden_Age_Events.9
+		100 = ME_Golden_Age_Events.10
+		100 = ME_Golden_Age_Events.11
+		100 = ME_Golden_Age_Events.12
+		100 = ME_Golden_Age_Events.13
+		100 = ME_Golden_Age_Events.14
+		100 = ME_Golden_Age_Events.15
+		100 = ME_Golden_Age_Events.16
+		100 = ME_Golden_Age_Events.17
+		150 = kalmar_union_events.7
+		150 = kalmar_union_events.8
+		150 = kalmar_union_events.9
+	}
+	events = {
+		ME_Golden_Age_Events.100
+		ME_Golden_Age_Events.101
+	}
+	
+	if = { #fail-safe for flavor_pap.7, making religious leagues happen at some point if there is no PAP
+		limit = {
+			is_year = 1610
+			NOT = { exists = PAP }
+			NOT = { has_global_flag = counter_reformation }
+		}
+		set_global_flag = counter_reformation
+	}
+	#fail-safe if for whatever reason these flags stay after being used in events
+	if = {
+		limit = {
+			had_country_flag = {
+				flag = advisor_events_adm
+				days = 720
+			}
+		}
+		clr_country_flag = advisor_events_adm
+	}
+	if = {
+		limit = {
+			had_country_flag = {
+				flag = advisor_events_dip
+				days = 720
+			}
+		}
+		clr_country_flag = advisor_events_dip
+	}
+	if = {
+		limit = {
+			had_country_flag = {
+				flag = advisor_events_mil
+				days = 720
+			}
+		}
+		clr_country_flag = advisor_events_mil
+	}
+	#Clearing of Jewish events flags
+	if = {
+		limit = {
+			had_country_flag = {
+				flag = shalosh_regalim
+				days = 365
+			}
+		}
+		clr_country_flag = shalosh_regalim
+	}
+}

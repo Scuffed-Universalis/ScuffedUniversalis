@@ -1,0 +1,74 @@
+EE_FRA_take_italian_capital = {
+	type = take_capital
+	attacker = {
+		badboy_factor = 0.5
+		prestige_factor = 1.0
+		peace_cost_factor = 0.5
+		peace_options = {
+			po_demand_provinces
+		}
+		allowed_provinces = { region = italy_region }
+	}
+	defender = {
+		badboy_factor = 1.0
+		prestige_factor = 1.0
+		peace_cost_factor = 1.0
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	war_name = ITALIAN_CONQUEST_WAR_NAME
+}
+
+
+EE_FRA_take_capital_disloyal = {
+	type = superiority
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 2
+		peace_cost_factor = 1	
+		peace_options = {
+			po_demand_provinces
+			EE_FRA_po_rein_appanage
+		}
+	}
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	war_name = ME_FRA_war_weal
+}
+
+ME_FRA_take_capital_conquest = {
+	type = take_capital
+	
+	attacker = {
+		badboy_factor = 0.75
+		prestige_factor = 1
+		peace_cost_factor = 0.75
+		
+		allowed_provinces = {
+			is_claim = ROOT
+		}
+
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+
+	war_name = PRIMITIVE_WAR_NAME
+}

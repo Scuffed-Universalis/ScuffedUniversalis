@@ -1,0 +1,58 @@
+
+cb_coast = {
+	valid_for_subject = no
+
+	prerequisites = {
+		#full_idea_group = maritime_ideas
+		OR = {
+			has_idea = flottenbasis1 #3rd Idea in the group
+			has_idea = norse3
+		}
+		is_revolution_target = no
+		primitives = no
+
+		FROM = {
+			any_owned_province = {
+				has_port = yes
+				range = ROOT
+			}
+		}
+
+
+	}
+
+	war_goal = coast_invasion
+}
+
+# Vassal Dominance
+dst_cb_minorpower = {
+
+	valid_for_subject = no
+
+	prerequisites = {
+		has_idea = konigreich7
+		is_revolution_target = no
+		FROM = {
+			is_neighbor_of = ROOT
+			NOT = { total_development = 101 }
+		}
+	}
+
+	war_goal = take_capital_vassalize
+}
+
+dst_cb_greatpower = {
+
+	valid_for_subject = no
+
+	prerequisites = {
+		has_idea = imperialismus7
+		is_revolution_target = no
+		FROM = {
+			is_neighbor_of = ROOT
+			NOT = { total_development = 251 }
+		}
+	}
+
+	war_goal = take_capital_vassalize
+}

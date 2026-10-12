@@ -1,0 +1,72 @@
+EE_FRA_guerre_cents_ans = {
+	ended_by_country_breaking_to_rebels = no
+	potential = { 
+		tag = FRA
+		NOT = { has_country_flag = EE_FRA_finished_HYW_disaster }
+	}
+	can_start = {
+		NOT = { is_year = 1500 }
+	}
+	can_stop = { has_any_disaster = yes }
+	progress = {
+		modifier = {
+			factor = 5
+			ENG = {
+				any_owned_province = { region = france_region }
+			}
+		}
+		modifier = {
+			factor = 100
+			war_with = ENG
+		}
+		modifier = {
+			factor = 10
+			177 = { country_or_non_sovereign_subject_holds = ENG }
+		}
+		modifier = {
+			factor = 1
+			army_strength = {
+				who = ENG
+				value = 1.1
+			}
+		}
+		modifier = {
+			factor = -1
+			NOT = {
+				army_strength = {
+					who = ENG
+					value = 1
+				}
+			}
+		}
+	}
+	can_end = {
+		OR = {
+			mission_completed = fra_end_treaty_wars
+			is_subject_of = ENG
+			france_region = {
+				type = all
+				OR = {
+					NOT = { country_or_non_sovereign_subject_holds = ENG }
+					province_id = 87
+				}
+			}
+		}
+	}
+	modifier = {
+		stability_cost_modifier = 0.15
+		global_unrest = 5
+	}
+	on_monthly = {
+        random_events = { 
+            1000 = 0
+            10 = ME_France_Events.11
+            10 = ME_France_Events.12
+			10 = ME_France_Events.13
+			10 = ME_France_Events.14
+			10 = ME_France_Events.15
+        }
+	}
+	on_start = ME_France_Events.10
+	on_end = ME_France_Events.16
+}

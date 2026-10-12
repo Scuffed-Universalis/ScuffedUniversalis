@@ -1,0 +1,238 @@
+ME_calculate_advisor_costs_effect = {
+	hidden_effect = {
+		set_variable = {
+			which = advisor_cost_modifier
+			value = 1
+		}
+		set_variable = {
+			which = $type$_advisor_cost_modifier
+			value = 0
+		}
+		set_variable = {
+			which = same_culture_advisor_cost_modifier
+			value = 0
+		}
+		set_variable = {
+			which = same_religion_advisor_cost_modifier
+			value = 0
+		}
+		
+		export_to_variable = {
+			which = advisor_cost_modifier
+			value = modifier:advisor_cost
+		}
+		export_to_variable = {
+			which = $type$_advisor_cost_modifier
+			value = modifier:$type$_advisor_cost
+		}
+		export_to_variable = {
+			which = same_culture_advisor_cost_modifier
+			value = modifier:same_culture_advisor_cost 
+		}
+		export_to_variable = {
+			which = same_religion_advisor_cost_modifier
+			value = modifier:same_religion_advisor_cost  
+		}
+		change_variable = {
+			which = advisor_cost_modifier
+			which = $type$_advisor_cost_modifier
+		}
+		change_variable = {
+			which = advisor_cost_modifier
+			which = same_culture_advisor_cost_modifier
+		}
+		change_variable = {
+			which = advisor_cost_modifier
+			which = same_religion_advisor_cost_modifier
+		}
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						which = advisor_cost_modifier
+						value = -0.9
+					}
+				}
+			}
+			set_variable = {            
+				which = advisor_cost_modifier
+				value = -0.9
+			}
+		}
+		change_variable = {
+			which = advisor_cost_modifier
+			value = 1
+		}
+		set_variable = {            
+			which = desired_advisor_level
+			value = $skill_level$
+		}
+		if = {
+			limit = {
+				check_variable = {
+					which = desired_advisor_level
+					value = 1
+				}
+				NOT = {
+					check_variable = {
+						which = desired_advisor_level
+						value = 2
+					}
+				}
+			}
+			set_variable = {            
+				which = advisor_base_cost
+				value = 1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = desired_advisor_level
+					value = 2
+				}
+				NOT = {
+					check_variable = {
+						which = desired_advisor_level
+						value = 3
+					}
+				}
+			}
+			set_variable = {            
+				which = advisor_base_cost
+				value = 4
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = desired_advisor_level
+					value = 3
+				}
+				NOT = {
+					check_variable = {
+						which = desired_advisor_level
+						value = 4
+					}
+				}
+			}
+			set_variable = {            
+				which = advisor_base_cost
+				value = 9
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = desired_advisor_level
+					value = 4
+				}
+				NOT = {
+					check_variable = {
+						which = desired_advisor_level
+						value = 5
+					}
+				}
+			}
+			set_variable = {            
+				which = advisor_base_cost
+				value = 16
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					which = desired_advisor_level
+					value = 5
+				}
+			}
+			set_variable = {            
+				which = advisor_base_cost
+				value = 25
+			}
+		}
+		set_variable = {            
+			which = current_year
+			value = 1635
+		}
+		random_country = {
+			limit = { has_consort = no }
+			PREV = {
+				export_to_variable = {
+					which = current_year
+					value = consort_age
+					who = PREV
+				}
+				change_variable = {
+					which = current_year
+					value = 1
+				}
+			}
+		}
+		set_variable = {            
+			which = years_passed
+			which = current_year
+		}
+		subtract_variable = {            
+			which = years_passed
+			value = 1444
+		}
+		multiply_variable = {            
+			which = years_passed
+			value = 0.005
+		}
+		change_variable = {
+			which = years_passed
+			value = 1
+		}
+		multiply_variable = {            
+			which = advisor_base_cost
+			which = years_passed
+		}
+		multiply_variable = {            
+			which = advisor_base_cost
+			which = advisor_cost_modifier
+		}
+		set_variable = {            
+			which = advisor_base_hiring_cost
+			value = 16
+		}
+		multiply_variable = {            
+			which = advisor_base_hiring_cost
+			which = advisor_base_cost
+		}
+		if = {
+			limit = { NOT = { has_country_flag = no_choice_advisor_penalty } }
+			multiply_variable = {            
+				which = advisor_base_hiring_cost
+				value = 2
+			}
+		}
+		
+		set_variable = {            
+			which = advisor_base_hiring_cost_subtract
+			which = advisor_base_hiring_cost
+		}
+		
+		multiply_variable = {            
+			which = advisor_base_hiring_cost_subtract
+			value = -1
+		}
+		
+		if = {
+			limit = { has_country_flag = currently_buying_advisor }
+			clr_global_flag = refreshable_$type$_advisor_hired@ROOT
+			set_global_flag = refreshable_$type$_advisor_hired@ROOT
+		}
+		
+		if = {
+			limit = { has_country_flag = currently_buying_advisor }
+			variable_use_in_effect_effect = { effect = add_treasury variable = advisor_base_hiring_cost_subtract }
+			clr_country_flag = currently_buying_advisor
+			clr_country_flag = showing_advisor_choice
+			clr_country_flag = showing_advisor_choice_adm 
+			clr_country_flag = showing_advisor_choice_dip 
+			clr_country_flag = showing_advisor_choice_mil
+		}
+	}
+}

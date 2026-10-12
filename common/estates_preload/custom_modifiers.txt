@@ -1,0 +1,218 @@
+estate_special = {
+	modifier_definition = {
+		key = army_morale_FKN
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = army_professionalism_per_admiral
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = imperial_authority_per_development_click
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = imperial_authority_per_battle_won
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = imperial_authority_per_province_converted
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = timurid_legitimacy_per_battle
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = mughals_army_professionalism_per_war_won
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = mughals_chance_of_master_mint_or_treasurer
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = mughals_absolutism_per_land_seize
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = naval_supplies_goods_produced
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = development_cost_modifier_in_primary_culture
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = iqta_abilities_effectiveness
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		type = privileges
+		key = absolutism_per_conversion
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		type = privileges
+		key = dutch_factionalism_balance
+		trigger = {
+			always = no
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		type = privileges
+		key = dutch_cod_support
+		trigger = {
+			always = no
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		type = privileges
+		key = dutch_hook_support
+		trigger = {
+			always = no
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = art_selling_efficiency
+		trigger = {
+			OR = {
+				has_mission = NED_flowering
+				mission_completed = NED_flowering
+				mission_completed = ME_bur_burgundian_fashion
+			}
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = land_forcelimit_in_dutch_subject
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = regiment_cost_in_dutch_subjects
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = naval_forcelimit_in_dutch_subjects
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_special = {
+	modifier_definition = {
+		key = global_trade_power_modifier_in_dutch_subjects
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+estate_burghers = {
+	modifier_definition = {
+		type = loyalty
+		key = ENG_legitimacy_burghers_loyalty_modifier
+		trigger = {
+			has_estate = estate_burghers
+			mission_completed = ENG_right_of_conquest
+		}
+	}
+}
+
+estate_church = {
+	modifier_definition = {
+		type = loyalty
+		key = ENG_legitimacy_church_loyalty_modifier
+		trigger = {
+			has_estate = estate_church
+			mission_completed = ENG_right_of_conquest
+		}
+	}
+}

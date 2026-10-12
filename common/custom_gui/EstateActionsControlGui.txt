@@ -1,0 +1,1238 @@
+# The custom guiButtonType/instantTextBoxType/iconType must have a 'scripted = yes' line to work
+#custom_button = {
+#    name = custom_button_testing #Must match a scripted guiButtonType in a .gui file
+#    potential = { } #Determines when the button is visible
+#    trigger = { } #Determines when the button is clickable
+#    effect = { } #Effect
+#    tooltip = localisation_key #Can use customizable localisation
+#}
+
+custom_button = {
+    name = estate_decisions_left #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		
+	}
+    trigger = { 
+		hidden_trigger = {
+			OR = {
+				AND = {
+					has_estate = estate_brahmins
+					has_estate = estate_church
+					has_country_flag = estate_interaction_target_church
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+					}
+					has_estate = estate_maratha
+					has_country_flag = estate_interaction_target_maratha
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+					}
+					has_estate = estate_nobles
+					has_country_flag = estate_interaction_target_nobles
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+					}
+					has_estate = estate_vaisyas
+					has_country_flag = estate_interaction_target_vaisyas
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+					}
+					has_estate = estate_burghers
+					has_country_flag = estate_interaction_target_burghers
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+					}
+					has_estate = estate_cossacks
+					has_country_flag = estate_interaction_target_cossacks
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+					}
+					has_estate = estate_nomadic_tribes
+					has_country_flag = estate_interaction_target_nomadic_tribes
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+					}
+					has_estate = estate_dhimmi
+					has_country_flag = estate_interaction_target_dhimmi
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+					}
+					has_estate = estate_jains
+					has_country_flag = estate_interaction_target_jains
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+					}
+					has_estate = estate_janissaries
+					has_country_flag = estate_interaction_target_janissaries
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+					}
+					has_estate = estate_eunuchs
+					has_country_flag = estate_interaction_target_eunuchs
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+					}
+					has_estate = estate_qizilbash
+					has_country_flag = estate_interaction_target_qizilbash
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+					}
+					has_estate = estate_ghulams
+					has_country_flag = estate_interaction_target_ghulams
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+					}
+					has_estate = estate_rajput
+					has_country_flag = estate_interaction_target_rajput
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+					}
+					has_estate = estate_berbers
+					has_country_flag = estate_interaction_target_berbers
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+					}
+					has_estate = estate_cultural_minorities
+					has_country_flag = estate_interaction_target_cultural_minorities
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+					}
+					has_estate = estate_industrial
+					has_country_flag = estate_interaction_target_industrial
+				}
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_brahmins
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+					}
+					has_estate = estate_turkic_tribes
+					has_country_flag = estate_interaction_target_turkic_tribes
+				}
+			}
+		}
+	}
+    effect = {
+		estate_interaction_jump_left = yes
+	}
+    tooltip = EstateDecisionLeft #Can use customizable localisation
+}
+
+custom_button = {
+    name = estate_decisions_right #Must match a scripted guiButtonType in a .gui file
+    potential = {
+		
+	}
+    trigger = { 
+		hidden_trigger = {
+			OR = {
+				AND = {
+					OR = {
+						has_estate = estate_church
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_brahmins
+					OR = {
+						has_country_flag = estate_interaction_target_brahmins
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_maratha
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_church
+					OR = {
+						has_country_flag = estate_interaction_target_church
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_nobles
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_maratha
+					OR = {
+						has_country_flag = estate_interaction_target_maratha
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_nobles
+					OR = {
+						has_country_flag = estate_interaction_target_nobles
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_burghers
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_vaisyas
+					OR = {
+						has_country_flag = estate_interaction_target_vaisyas
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_cossacks
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_burghers
+					OR = {
+						has_country_flag = estate_interaction_target_burghers
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_nomadic_tribes
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_cossacks
+					OR = {
+						has_country_flag = estate_interaction_target_cossacks
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_dhimmi
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_nomadic_tribes
+					OR = {
+						has_country_flag = estate_interaction_target_nomadic_tribes
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_jains
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_dhimmi
+					OR = {
+						has_country_flag = estate_interaction_target_dhimmi
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_janissaries
+						has_estate = estate_eunuchs
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_jains
+					OR = {
+						has_country_flag = estate_interaction_target_jains
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_eunuchs
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_janissaries
+					OR = {
+						has_country_flag = estate_interaction_target_janissaries
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_qizilbash
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_eunuchs
+					OR = {
+						has_country_flag = estate_interaction_target_eunuchs
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_ghulams
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_qizilbash
+					OR = {
+						has_country_flag = estate_interaction_target_qizilbash
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_rajput
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_ghulams
+					OR = {
+						has_country_flag = estate_interaction_target_ghulams
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_berbers
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_rajput
+					OR = {
+						has_country_flag = estate_interaction_target_rajput
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_cultural_minorities
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_berbers
+					OR = {
+						has_country_flag = estate_interaction_target_berbers
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_industrial
+						has_estate = estate_turkic_tribes
+					}
+					has_country_flag = estate_interaction_target_cultural_minorities
+					OR = {
+						has_country_flag = estate_interaction_target_cultural_minorities
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_industrial
+					OR = {
+						has_country_flag = estate_interaction_target_industrial
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_estate = estate_turkic_tribes
+					}
+					has_estate = estate_maya
+					OR = {
+						has_country_flag = estate_interaction_target_maya
+						NOT = {
+							OR = {
+								has_country_flag = estate_interaction_target_brahmins
+								has_country_flag = estate_interaction_target_church
+								has_country_flag = estate_interaction_target_maratha
+								has_country_flag = estate_interaction_target_nobles
+								has_country_flag = estate_interaction_target_vaisyas
+								has_country_flag = estate_interaction_target_burghers
+								has_country_flag = estate_interaction_target_cossacks
+								has_country_flag = estate_interaction_target_nomadic_tribes
+								has_country_flag = estate_interaction_target_dhimmi
+								has_country_flag = estate_interaction_target_jains
+								has_country_flag = estate_interaction_target_janissaries
+								has_country_flag = estate_interaction_target_eunuchs
+								has_country_flag = estate_interaction_target_qizilbash
+								has_country_flag = estate_interaction_target_ghulams
+								has_country_flag = estate_interaction_target_rajput
+								has_country_flag = estate_interaction_target_berbers
+								has_country_flag = estate_interaction_target_cultural_minorities
+								has_country_flag = estate_interaction_target_industrial
+								has_country_flag = estate_interaction_target_turkic_tribes
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+    effect = {
+		estate_interaction_jump_right = yes
+	}
+    tooltip = EstateDecisionRight #Can use customizable localisation
+}
+
+custom_text_box = {
+    name = EstateDecisionButtonText #Must match a scripted instantTextBoxType in a .gui file
+    potential = { } #Determines when the text is visible
+    tooltip = ESTATE_ACTION_DESCRIPTION #Can use customizable localisation
+    #To localize it, use the name of the button as a key, can also use customizable localisation
+}
+
+custom_icon = {
+    name = EstateDecisionButtonIcon #Must match a scripted iconType in a .gui file
+    potential = { } #Determines when the icon is visible
+    tooltip = EstateDecisionButtonIconName #Can use customizable localisation
+    frame = {  #Can define multiple frame clauses
+        number = 1 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { has_country_flag = estate_interaction_target_church } #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 2 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+		trigger = { 
+			OR = {
+				has_country_flag = estate_interaction_target_nobles
+			}
+		} #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 3 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+		trigger = { 
+			OR = {
+				has_country_flag = estate_interaction_target_burghers
+				has_country_flag = estate_interaction_target_cultural_minorities
+				has_country_flag = estate_interaction_target_industrial
+			}
+		} #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 4 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { has_country_flag = estate_interaction_target_cossacks } #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 5 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { 
+			OR = {
+				has_country_flag = estate_interaction_target_nomadic_tribes
+				has_country_flag = estate_interaction_target_berbers
+				has_country_flag = estate_interaction_target_turkic_tribes
+			}
+		} #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 6 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { has_country_flag = estate_interaction_target_dhimmi } #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 7 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { has_country_flag = estate_interaction_target_maratha } #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 8 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { has_country_flag = estate_interaction_target_brahmins } #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 9 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { has_country_flag = estate_interaction_target_vaisyas } #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 10 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+		trigger = { 
+			OR = {
+				has_country_flag = estate_interaction_target_rajput
+			}
+		} #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 11 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+		trigger = { 
+			OR = {
+				has_country_flag = estate_interaction_target_jains
+			}
+		} #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 12 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { has_country_flag = estate_interaction_target_janissaries } #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 13 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+        trigger = { has_country_flag = estate_interaction_target_eunuchs } #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 14 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+		trigger = { 
+			OR = {
+				has_country_flag = estate_interaction_target_qizilbash
+			}
+		} #First matched frame clause will be used.
+    }
+	frame = {  #Can define multiple frame clauses
+        number = 15 #Which frame to use. Check dds files with multiple icons like icon_religion.dds
+		trigger = { 
+			OR = {
+				has_country_flag = estate_interaction_target_ghulams
+			}
+		} #First matched frame clause will be used.
+    }
+}
+
+
+##############################  Supported files with scopes ##############################
+#   The Gui objects must be directly inside the specified window Gui element!
+#   FROM is always the country that clicks
+#   provinceview.gui:
+#       province_window         (ROOT: Clicked province)
+#       buildings_window        (ROOT: Clicked province)
+#       state_window            (ROOT: Clicked province)
+#   countrycourtview.gui:
+#       countrycourtview        (ROOT = FROM)
+#   countrygovernmentview.gui:
+#       countrygovernmentview   (ROOT = FROM)
+#   countrydiplomacyview.gui:
+#       countrydiplimacyview    (ROOT: Selected country)
+#   countryeconomyview.gui:
+#       countryeconomyview      (ROOT = FROM)
+#   countrytradeview.gui:
+#       countrytradeview        (ROOT = FROM)
+#   countrytechnologyview.gui:
+#       countrytechnologyview   (ROOT = FROM)
+#   countryideasview.gui:
+#       countryideasview        (ROOT = FROM)
+#   countrymissionsview.gui:
+#       countrymissionsview     (ROOT: Selected country)
+#   countrydecisionview.gui:
+#       countrydecisionsview    (ROOT = FROM)
+#   countrystabilityview.gui:
+#       countrystabilityview    (ROOT = FROM)
+#   countryreligionview.gui:
+#       countryreligionview     (ROOT = FROM)
+#   countrymilitaryview.gui:
+#       countrymilitaryview     (ROOT = FROM)
+#   countrysubjectsview.gui:
+#       countrysubjectview      (ROOT = FROM)
+#   countryestatesview.gui:
+#       countryestatesview      (ROOT = FROM)
+#   ages_view.gui:
+#       ages_view               (ROOT = FROM)
+#   tradeinterface.gui:
+#       TradeNodeInterface      (ROOT: Trade capital of a trade node)
+#   hre.gui:
+#       hre_window              (ROOT = FROM)
+#   papacy.gui:
+#       papacy_window           (ROOT = FROM)
+#   faction.gui:
+#       All faction windows     (ROOT = FROM)
+#   celestialempireview.gui:
+#       celestial_window        (ROOT = FROM)
+#   countrynativesview.gui:
+#       natives_window          (ROOT = FROM)
+#   religiousreforms.gui:
+#       reforms_window          (ROOT = FROM)
+#   parliament.gui:
+#       parliament_window       (ROOT = FROM)

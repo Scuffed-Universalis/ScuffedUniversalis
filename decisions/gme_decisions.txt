@@ -1,0 +1,53 @@
+country_decisions = {
+	gme_show_provinces_with_monument_construction_decision = {
+		color = { 100 210 250 }
+		potential = {
+			ai = no
+		}
+		provinces_to_highlight = {
+			country_or_subject_holds = ROOT
+			has_construction = great_project
+		}
+		allow = {
+			always = no
+		}
+		effect = {
+			if = {
+				limit = {
+					any_owned_province = {
+						has_construction = great_project
+					}
+				}
+				custom_tooltip = gme_show_provinces_with_monument_construction_decision_own_tt
+				every_owned_province = {
+					limit = {
+						has_construction = great_project
+					}
+					custom_tooltip = gme_show_provinces_with_monument_construction_decision_province_tt
+				}
+			}
+			else = {
+				custom_tooltip = gme_show_provinces_with_monument_construction_decision_own_tt_none
+			}
+			if = {
+				limit = {
+					num_of_subjects = 1
+					any_subject_country = {
+						any_owned_province = {
+							has_construction = great_project
+						}
+					}
+				}
+				custom_tooltip = " "
+				custom_tooltip = gme_show_provinces_with_monument_construction_decision_subject_tt
+				every_province = {
+					limit = {
+						owner = { is_subject_of = ROOT }
+						has_construction = great_project
+					}
+					custom_tooltip = gme_show_provinces_with_monument_construction_decision_subject_province_tt
+				}
+			}
+		}
+	}
+}

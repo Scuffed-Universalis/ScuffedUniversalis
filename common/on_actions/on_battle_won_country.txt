@@ -1,0 +1,15 @@
+on_battle_won_country = {
+	if = {
+		limit = {
+			is_in_war = {
+				attacker_leader = ROOT
+				defender_leader = FROM
+				casus_belli = EE_CLT_celtic_fury
+			}
+		}
+		change_variable = {
+			which = EE_CLT_battle_won
+			value = 1
+		}
+	}
+}

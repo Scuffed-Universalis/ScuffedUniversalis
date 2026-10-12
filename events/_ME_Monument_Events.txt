@@ -1,0 +1,65 @@
+namespace = ME_Monument_Events
+
+country_event = {
+	id = ME_Monument_Events.1
+	title = ME_Monument_Events.1.t
+	desc = ME_Monument_Events.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		event_target:country_vs_channel_canal = {
+			country_event = { 
+				id = ME_Monument_Events.2
+			}
+		}
+	}
+	
+	option = {
+		name = ME_Monument_Events.1.a
+		
+		ai_chance = { factor = 50 }
+	}
+}
+
+country_event = {
+	id = ME_Monument_Events.2
+	title = ME_Monument_Events.1.t
+	desc = ME_Monument_Events.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		REB = {
+			235 = {
+				clr_province_flag = destruction_tick
+				add_great_project_tier = {
+					type = english_french_ferry_main
+					tier = -3
+				}
+			}
+			87 = {
+				add_great_project_tier = {
+					type = english_french_ferry_counterpart
+					tier = -3
+				}
+			}
+			1271 = {
+				remove_canal = english_french_ferry
+				clr_global_flag = channel_tunnel_open
+			}
+		}
+		show_ambient_object = english_french_ferry_disabled_strait
+		hide_ambient_object = english_french_ferry_strait
+	}
+	
+	option = {
+		name = ME_Monument_Events.1.a
+		
+		ai_chance = { factor = 50 }
+	}
+}

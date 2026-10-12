@@ -1,0 +1,253 @@
+grant_electorate = {
+	# For HREE:
+	condition = {
+		tooltip = GOLDEN_BULL_TO_MANY_ECCLESIASTICAL_ELECTORS_8_ELECTORS
+		potential = {
+			has_global_flag = hre_golden_bull_enacted
+			NOT = { has_global_flag = hre_golden_bull_removed }
+			num_of_max_electors = { value = 8 }
+			FROM = {
+				is_an_ecclesiastical_country = yes
+			}
+		}
+		allow = {
+			NOT = {
+				calc_true_if = {
+					all_elector = {
+						is_an_ecclesiastical_country = yes
+					}
+					amount = 4
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = GOLDEN_BULL_TO_MANY_ECCLESIASTICAL_ELECTORS
+		potential = {
+			has_global_flag = hre_golden_bull_enacted
+			NOT = { has_global_flag = hre_golden_bull_removed }
+			NOT = { num_of_max_electors = { value = 8 } }
+			FROM = {
+				is_an_ecclesiastical_country = yes
+			}
+		}
+		allow = {
+			NOT = {
+				calc_true_if = {
+					all_elector = {
+						is_an_ecclesiastical_country = yes
+					}
+					amount = 3
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = GOLDEN_BULL_TO_MANY_SECULAR_ELECTORS
+		potential = {
+			has_global_flag = hre_golden_bull_enacted
+			NOT = { has_global_flag = hre_golden_bull_removed }
+			FROM = {
+				is_a_secular_country = yes
+			}
+		}
+		allow = {
+			NOT = {
+				calc_true_if = {
+					all_elector = {
+						is_a_secular_country = yes
+					}
+					amount = 4
+				}
+			}
+		}
+	}
+}
+
+requestpeace = {
+	# For HREE:
+	condition = {
+		tooltip = CANNOT_SIGN_SEPERATE_PEACE_IN_HRE_ITALIAN_WAR
+		potential = {
+			is_in_war = {
+				participants = ROOT
+				participants = FROM
+				casus_belli = cb_hre_italian_war
+			}
+			NOT = {
+				is_in_war = {
+					attacker_leader = ROOT
+					defender_leader = FROM
+					casus_belli = cb_hre_italian_war
+				}
+			}
+			NOT = {
+				is_in_war = {
+					defender_leader = ROOT
+					attacker_leader = FROM
+					casus_belli = cb_hre_italian_war
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+
+	# Compatibility with SE:
+	condition = {
+		tooltip = CANNOT_SEPARATE_PEACE_OVERLORD_OF_WAR_LEADER
+		potential = {
+			is_expanded_mod_active = { mod = subjects }
+			OR = {
+				AND = {
+					is_in_war = {
+						attacker_leader = ROOT
+						defenders = FROM
+					}
+					FROM = {
+						any_subject_country = {
+							NOT = {
+								OR = {
+									is_subject_of_type = vassal
+									is_subject_of_type = march
+									is_subject_of_type = daimyo_vassal
+									is_subject_of_type = personal_union
+									is_subject_of_type = client_vassal
+									is_subject_of_type = client_march
+									is_subject_of_type = tributary_state
+									is_subject_of_type = colony
+									is_subject_of_type = crown_colony
+									is_subject_of_type = private_enterprise
+									is_subject_of_type = self_governing_colony
+								}
+							}
+							is_in_war = {
+								attacker_leader = ROOT
+								defenders = FROM
+								defender_leader = THIS
+							}
+						}
+					}
+				}
+				AND = {
+					is_in_war = {
+						defender_leader = ROOT
+						attackers = FROM
+					}
+					FROM = {
+						any_subject_country = {
+							NOT = {
+								OR = {
+									is_subject_of_type = vassal
+									is_subject_of_type = march
+									is_subject_of_type = daimyo_vassal
+									is_subject_of_type = personal_union
+									is_subject_of_type = client_vassal
+									is_subject_of_type = client_march
+									is_subject_of_type = tributary_state
+									is_subject_of_type = colony
+									is_subject_of_type = crown_colony
+									is_subject_of_type = private_enterprise
+									is_subject_of_type = self_governing_colony
+								}
+							}
+							is_in_war = {
+								defender_leader = ROOT
+								attackers = FROM
+								attacker_leader = THIS
+							}
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+demand_unlawful_territory_action = {
+	# For HREE:
+	condition = {
+		tooltip = CANNOT_DEMAND_UNLAWFUL_TERRITORY_ON_TARGET_OF_CALLED_REICHSTAG
+		potential = {
+			always = yes
+		}
+		allow = {
+			FROM = {
+				OR = {
+					NOT = { has_country_flag = was_target_of_called_reichstag }
+					had_country_flag = { flag = was_target_of_called_reichstag days = 365 }
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_DEMAND_UNLAWFUL_TERRITORY_ON_GERMAN_ARCH_CHANCELLOR
+		potential = {
+			FROM = {
+				has_country_modifier = german_erzkanzler
+				is_elector = yes
+				preferred_emperor = ROOT
+			}
+		}
+		allow = {
+			FROM = {
+				any_owned_province = {
+					is_part_of_hre = yes
+					NOT = { is_core = PREV }
+					NOT = { region = north_german_region }
+					NOT = { region = south_german_region }
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_DEMAND_UNLAWFUL_TERRITORY_ON_ITALIAN_ARCH_CHANCELLOR
+		potential = {
+			FROM = {
+				has_country_modifier = italian_erzkanzler
+				is_elector = yes
+				preferred_emperor = ROOT
+			}
+		}
+		allow = {
+			FROM = {
+				any_owned_province = {
+					is_part_of_hre = yes
+					NOT = { is_core = PREV }
+					NOT = { region = italy_region }
+					NOT = { region = balkan_region }
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = CANNOT_DEMAND_UNLAWFUL_TERRITORY_ON_BURGUNDIAN_ARCH_CHANCELLOR
+		potential = {
+			FROM = {
+				has_country_modifier = burgundian_erzkanzler
+				is_elector = yes
+				preferred_emperor = ROOT
+			}
+		}
+		allow = {
+			FROM = {
+				any_owned_province = {
+					is_part_of_hre = yes
+					NOT = { is_core = PREV }
+					NOT = { region = france_region }
+					NOT = { region = low_countries_region }
+				}
+			}
+		}
+	}
+	effect = {
+		FROM = {
+			clr_country_flag = was_target_of_demand_unlawful_territory_action
+			set_country_flag = was_target_of_demand_unlawful_territory_action
+		}
+	}
+}

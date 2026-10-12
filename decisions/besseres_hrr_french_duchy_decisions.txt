@@ -1,0 +1,542 @@
+country_decisions = {
+	hre_french_duchy_decision_normandy = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_french_duchy_decision_normandy }
+			NOT = { tag = NRM }
+			OR = {
+				brittany_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NRM }
+				}
+				normandy_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NRM }
+				}
+				picardy_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = NRM }
+				}
+				4388 = {
+					hre_can_cede_province_to_hre_duchy = { tag = NRM }
+				}
+				182 = {
+					hre_can_cede_province_to_hre_duchy = { tag = NRM }
+				}
+				177 = {
+					hre_can_cede_province_to_hre_duchy = { tag = NRM }
+				}
+				183 = {
+					hre_can_cede_province_to_hre_duchy = { tag = NRM }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = brittany_area
+				area = normandy_area
+				area = picardy_area
+				province_id = 4388
+				province_id = 182
+				province_id = 177
+				province_id = 183
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = NRM }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = NRM }
+				NRM = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_french_duchy_decision_normandy
+			add_imperial_influence = -10
+			custom_tooltip = hre_french_duchy_decision_normandy_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = brittany_area
+					tag = NRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = normandy_area
+					tag = NRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = picardy_area
+					tag = NRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4388
+					tag = NRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 182
+					tag = NRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 177
+					tag = NRM
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 183
+					tag = NRM
+				}
+				NRM = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = normand
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_french_duchy_decision_auvergne = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_french_duchy_decision_auvergne }
+			NOT = { tag = AUV }
+			OR = {
+				poitou_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = AUV }
+				}
+				massif_central_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = AUV }
+				}
+				orleans_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = AUV }
+				}
+				4389 = {
+					hre_can_cede_province_to_hre_duchy = { tag = AUV }
+				}
+				178 = {
+					hre_can_cede_province_to_hre_duchy = { tag = AUV }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = poitou_area
+				area = massif_central_area
+				area = orleans_area
+				province_id = 4389
+				province_id = 178
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = AUV }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = AUV }
+				AUV = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_french_duchy_decision_auvergne
+			add_imperial_influence = -10
+			custom_tooltip = hre_french_duchy_decision_auvergne_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = poitou_area
+					tag = AUV
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = massif_central_area
+					tag = AUV
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = orleans_area
+					tag = AUV
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4389
+					tag = AUV
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 178
+					tag = AUV
+				}
+				AUV = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = cosmopolitan_french
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_french_duchy_decision_burgundy = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_french_duchy_decision_burgundy }
+			NOT = { tag = BUR }
+			OR = {
+				bourgogne_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUR }
+				}
+				west_burgundy_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUR }
+				}
+				4390 = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUR }
+				}
+				186 = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUR }
+				}
+				185 = {
+					hre_can_cede_province_to_hre_duchy = { tag = BUR }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = bourgogne_area
+				area = west_burgundy_area
+				province_id = 4390
+				province_id = 186
+				province_id = 185
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = BUR }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = BUR }
+				BUR = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_french_duchy_decision_burgundy
+			add_imperial_influence = -10
+			custom_tooltip = hre_french_duchy_decision_burgundy_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = bourgogne_area
+					tag = BUR
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = west_burgundy_area
+					tag = BUR
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 4390
+					tag = BUR
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 186
+					tag = BUR
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 185
+					tag = BUR
+				}
+				BUR = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = burgundian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_french_duchy_decision_lorraine = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_french_duchy_decision_lorraine }
+			NOT = { tag = LOR }
+			OR = {
+				lorraine_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = LOR }
+				}
+				181 = {
+					hre_can_cede_province_to_hre_duchy = { tag = LOR }
+				}
+				94 = {
+					hre_can_cede_province_to_hre_duchy = { tag = LOR }
+				}
+				93 = {
+					hre_can_cede_province_to_hre_duchy = { tag = LOR }
+				}
+				1866 = {
+					hre_can_cede_province_to_hre_duchy = { tag = LOR }
+				}
+				AND = {
+					has_global_flag = extended_timeline_mod
+					3004 = {
+						hre_can_cede_province_to_hre_duchy = { tag = LOR }
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lorraine_area
+				province_id = 181
+				province_id = 94
+				province_id = 93
+				province_id = 1866
+				AND = {
+					has_global_flag = extended_timeline_mod
+					province_id = 3004
+				}
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = LOR }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = LOR }
+				LOR = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_french_duchy_decision_lorraine
+			add_imperial_influence = -10
+			custom_tooltip = hre_french_duchy_decision_lorraine_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = lorraine_area
+					tag = LOR
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 181
+					tag = LOR
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 94
+					tag = LOR
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 93
+					tag = LOR
+				}
+				hre_cede_area_to_hre_duchy = {
+					province = 1866
+					tag = LOR
+				}
+				if = {
+					limit = {
+						has_global_flag = extended_timeline_mod
+					}
+					hre_cede_area_to_hre_duchy = {
+						province = 3004
+						tag = LOR
+					}
+				}
+				LOR = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = burgundian
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_french_duchy_decision_gascony = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_french_duchy_decision_gascony }
+			NOT = { tag = GUY }
+			OR = {
+				pyrenees_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GUY }
+				}
+				guyenne_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GUY }
+				}
+				languedoc_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = GUY }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = pyrenees_area
+				area = guyenne_area
+				area = languedoc_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = GUY }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = GUY }
+				GUY = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_french_duchy_decision_gascony
+			add_imperial_influence = -10
+			custom_tooltip = hre_french_duchy_decision_gascony_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = pyrenees_area
+					tag = GUY
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = guyenne_area
+					tag = GUY
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = languedoc_area
+					tag = GUY
+				}
+				GUY = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = gascon
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+
+	hre_french_duchy_decision_provence = {
+		color = { 220 200 140 }
+		potential = {
+			hre_duchy_is_decision_valid = yes
+			NOT = { has_global_flag = hre_french_duchy_decision_provence }
+			NOT = { tag = PRO }
+			OR = {
+				provence_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = PRO }
+				}
+				savoy_dauphine_area = {
+					hre_can_cede_province_to_hre_duchy = { tag = PRO }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = provence_area
+				area = savoy_dauphine_area
+			}
+			hre_can_cede_province_to_hre_duchy = { tag = PRO }
+		}
+		allow = {
+			imperial_influence = 10
+			is_at_war = no
+			OR = {
+				NOT = { exists = PRO }
+				PRO = {
+					is_part_of_hre = yes
+					is_subject_of = ROOT
+					OR = {
+						is_march = yes
+						is_vassal = yes
+					}
+				}
+			}
+		}
+		effect = {
+			set_global_flag = hre_french_duchy_decision_provence
+			add_imperial_influence = -10
+			custom_tooltip = hre_french_duchy_decision_provence_tt
+			hidden_effect = {
+				hre_cede_area_to_hre_duchy = {
+					area = provence_area
+					tag = PRO
+				}
+				hre_cede_area_to_hre_duchy = {
+					area = savoy_dauphine_area
+					tag = PRO
+				}
+				PRO = {
+					hre_set_up_hre_duchy = {
+						government = monarchy
+						culture = occitain
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_year = 1700
+			}
+		}
+	}
+}

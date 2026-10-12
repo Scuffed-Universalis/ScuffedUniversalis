@@ -1,0 +1,55 @@
+﻿l_german:
+ ME_estate_burghers_arid_development: "Adaptation to Arid Climate"
+ ME_estate_burghers_arid_development_desc: ""
+ ME_estate_burghers_desert_development: "Adaptation to Sahra"
+ ME_estate_burghers_desert_development_desc: ""
+ ME_estate_church_tariqa: "Support the Turuq"
+ ME_estate_church_tariqa_desc: ""
+ ME_estate_dhimmi_janissary_recruitment: "Expand the Devshirme System"
+ ME_estate_dhimmi_janissary_recruitment_desc: ""
+ 
+ estate_burghers_arid_development_gt: "Every owned province with §YArid§! climate gains:\nLocal Development Cost: §G-5%§!\nLocal Settler Increase: §G+5§!"
+ estate_burghers_arid_development_rt: "Every owned province with §YArid§! climate loses:\nLocal Development Cost: §G-5%§!\nLocal Settler Increase: §G+5§!"
+ estate_burghers_desert_development_gt: "Every owned province with §YDesert§! or §YCoastal Desert§! terrain gains:\nLocal Development Cost: §G-10.0%§!"
+ estate_burghers_desert_development_rt: "Every owned province with §YDesert§! or §YCoastal Desert§! terrain loses:\nLocal Development Cost: §G-10.0%§!"
+ estate_burghers_desert_development_gt_upgrade: "Every owned province with §YDesert§! or §YCoastal Desert§! terrain gains:\nLocal Development Cost: §G-30.0%§!"
+ estate_burghers_desert_development_rt_upgrade: "Every owned province with §YDesert§! or §YCoastal Desert§! terrain loses:\nLocal Development Cost: §G-30.0%§!"
+ 
+ estate_burghers_arid_climate_development: "Adapted to Arid Climate"
+ estate_burghers_desert: "Desert Adaptation"
+ estate_burghers_desert_upgraded: "Desert Adaptation"
+ estate_dhimmi_modifier_janissary: "Oppresive Devshirme"
+ 
+ ME_estate_burghers_arid_development_flag_tt: "Unlocked §YPrivilege§! via a Mission"
+ ME_enable_estate_burghers_arid_development_tt: "Unlocks the '§YAdaptation to Arid Climate§!' privilege, making it available regardless of our §YCapital§! Location."
+ ME_estate_church_tariqa_tt: "Getting at least §Y50 Piety§! towards §YMysticism§! will also give us:\n    Morale Damage: §G+10.0%§!"
+ 
+ ME_manage_disaster_progress_title: "£disaster_text_icon£ Manage Estate Powers"
+ ME_manage_disaster_progress_desc: "The Estates are getting too powerful. We must do what is in our powers to prevent them from getting ever stronger! Let us take preventative action."
+ ME_is_countering_estate_power_modifier: "Curbing the Estates"
+ ME_the_estate_disasters_will_tick_down: "For the duration of the '§YCurbing the Estates§!' Modifier, all §YEstate Disasters§!' Progress will tick down by §G-0.80§! monthly."
+ ME_every_estate_gets_minus_ten_influnece: "Every §YEstate§! gains §Y-5.0%§! Influence for §G20§! Years."
+ ME_if_we_have_at_least_2_stability: "[Root.MEEstateHasTwoStability] If we have at least §G2§! Stability:"
+ EST_ME_interaction: "Curbing Estate Power: §Y-5.0%§!"
+ 
+ manage_estates: "Manage Estate Powers"
+ 
+ ME_this_is_available_because_we_have_less_than_40_crownland: "This is §Yavailable§! because we have less than §Y40.0%§! Crown Land Share."
+ 
+ ME_is_countering_the_estate_power: "Is limiting Estate Powers using the '§YManage Estate Powers§!' decision."
+ 
+ ME_Estate_Events.1.t: "Managing the Estates"
+ ME_Estate_Events.1.d: "Due to our mismanagement, an increasing amount of wealthy lords and representatives have been gaining reign over politics in our country. As it stands, our realm is being torn apart by at least one estate, whose control over the government is worrying at best. This is why we must convene and decide what must be done about this."
+ ME_Estate_Events.1.a: "Establish a council to deal with this."
+ ME_Estate_Events.1.b: "We need to reverse this."
+ ME_Estate_Events.1.c: "Seize their estates at once!"
+ ME_Estate_Events.1.e: "Do nothing for now."
+ 
+ ME_less_than_50_provinces_occupied: "Less than §Y50§! of our Provinces are §YOccupied§!."
+ ME_less_than_10_provinces_occupied_req_tt: "Less than §Y10.0%§! of our provinces are §YOccupied§!."
+ 
+ ME_show_mercantile_bonuses: "This §YPrivilege§! will give bonuses based on our £mercantilism_text_icon£ §YMercantilism§!:\n\nAt least §M20.0%§! Mercantilism:\n[Root.GetMercantilismPrivilegeBonus]\n\nAt least §M40.0%§! Mercantilism:\nDevelopment Cost: §G-5.0%§!\n\nAt least §M60.0%§! Mercantilism:\nColonists: §G+1§!\n\nAt least §M80.0%§! Mercantilism:\nGoods Produced Modifier: §G+10.0%§!"
+ ME_estate_burghers_promote_mercantilism: "Promote the Mercantile Faction"
+ ME_estate_burghers_promote_mercantilism_desc: "Mercantilism as an idea is growing in our country. We may choose to favor the faction backing this ideal and we will be able to reap the true benefits of Mercantilism for ourselves."
+ ME_burghers_cot_cost: "Center of Trade Upgrade Cost: §G-10.0%§!"
+ ME_burghers_prod_eff_bonus: "Production Efficiency: §G+10.0%§!"

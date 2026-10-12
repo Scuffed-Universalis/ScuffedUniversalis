@@ -1,0 +1,212 @@
+ME_on_development = {
+	if = {
+		limit = {
+			trade_goods = wool
+			owner = {
+				has_country_flag = QIR_developing_wool_provinces_flag
+			}
+		}
+		owner = {
+			add_government_power = {
+				mechanic_type = tribal_federation_mechanic
+				power_type = tribal_allegiance
+				value = 1
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			owner = {
+				tag = FRA 
+				is_subject_of = ENG
+			}
+		}
+		ENG = {
+			change_variable = {
+				which = ave_num_of_times_developed_french
+				value = 1
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = AYY_peace_flag
+			}
+		}
+		add_prosperity = 0.05
+	}
+	
+	if = {
+		limit = {
+			culture = owner
+			owner = {
+				OR = {
+					tag = QAR
+					tag = TRK
+					tag = AKK
+				}
+			}
+		}
+		owner = {
+			change_variable = {
+				which = Qir_num_of_times_developed_primary_culture
+				value = 1
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			culture = persian
+			owner = {
+				OR = {
+					tag = QAR
+					tag = TRK
+					tag = AKK
+				}
+			}
+		}
+		owner = {
+			change_variable = {
+				which = Qir_num_of_times_developed_persian
+				value = 1
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			owner = {
+				has_reform = west_slavic_monarchy
+			}
+		}
+		if = {
+			limit = {
+				culture = slovak
+			}
+			owner = {
+				change_variable = { ME_slovak_loyalty = 0.5 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = polish
+			}
+			owner = {
+				change_variable = { ME_polish_loyalty = 0.5 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = czech
+			}
+			owner = {
+				change_variable = { ME_czech_loyalty = 0.5 }
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			owner = {
+				has_country_flag = me_hab_increase_minority_loyalty_through_development
+			}
+			OR = {
+				area = moravia_area
+				area = bohemia_area
+				area = erzgebirge_area
+				area = transdanubia_area
+				area = alfold_area
+				area = slovakia_area
+			}
+		}
+		owner = {
+			add_estate_loyalty = {
+				estate = me_estate_cultural_minorities
+				loyalty = 1
+			}
+		}
+	}
+	
+	# owner = {
+		# change_variable = {
+			# which = num_of_times_developed
+			# value = 1
+		# }
+	# }
+	
+	if = {
+		limit = {
+			OR = {
+				has_province_modifier = POR_feitoria_1
+				has_province_modifier = POR_feitoria_2
+				has_province_modifier = POR_feitoria_3
+			}
+		}
+		change_variable = {
+			which = por_feitoria_maintenance
+			value = 25
+		}
+		POR_update_feitoria = yes
+	}
+	
+	
+	if = {
+		limit = {
+			owner = {
+				check_variable = {
+					which = estate_settlers_provinces_to_develop
+					value = 1
+				}
+			}
+		}
+		owner = {
+			subtract_variable = {
+				which = estate_settlers_provinces_to_develop
+				value = 1
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			owner = {
+				is_colonial_nation = yes 
+				overlord = {
+					check_variable = {
+						which = estate_settlers_provinces_to_develop
+						value = 1
+					}
+				}
+			}
+		}
+		owner = {
+			overlord = {
+				subtract_variable = {
+					which = estate_settlers_provinces_to_develop
+					value = 1
+				}
+			}
+		}
+	}
+	else = { }
+	
+	##EE France Effect##
+	if = {
+		limit = {
+			owner = { has_country_flag = EE_FRA_agrarian_rewards_flag }
+			NOT = { has_province_modifier = EE_FRA_food_surplus }
+		}
+		random_list = { 
+			10 = { 
+				add_province_modifier = {
+					name = EE_FRA_food_surplus
+					duration = 3650
+				}
+			} 
+			90 = { } 
+		}
+	}
+}

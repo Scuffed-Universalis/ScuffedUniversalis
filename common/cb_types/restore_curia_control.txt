@@ -1,0 +1,18 @@
+cb_restore_curia_control = {
+	valid_for_subject = no
+
+	is_triggered_only = no
+	months = 120
+
+	prerequisites_self = {
+		mission_completed = ME_pap_kog
+	}
+	
+	prerequisites = {
+		FROM = {
+			is_papal_controller = yes
+		}
+	}
+
+	war_goal = take_capital_curia
+}

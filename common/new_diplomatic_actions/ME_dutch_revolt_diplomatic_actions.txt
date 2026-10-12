@@ -1,0 +1,272 @@
+dutch_revolt_arm_militia = {
+	category = is_enemy
+
+	require_acceptance = no
+
+	is_visible = {
+		has_global_flag = ME_dutch_revolt_flag
+		if = {
+			limit = {
+				has_saved_global_event_target = ME_dutch_revolt_target
+			}
+			tag = event_target:ME_dutch_revolt_target
+		}
+		else = { always = no }
+		FROM = {
+			is_dutch_subject_trigger = yes
+		}
+	}
+	
+	is_allowed = {
+		hidden_trigger = {
+			has_global_flag = ME_dutch_revolt_flag
+			if = {
+				limit = {
+					has_saved_global_event_target = ME_dutch_revolt_target
+				}
+				tag = event_target:ME_dutch_revolt_target
+			}
+			else = { always = no }
+			FROM = {
+				is_dutch_subject_trigger = yes
+			}
+		}
+		FROM = {
+			NOT = { has_country_modifier = NED_agitatation_arms }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_france_funded_agitation_mil }
+			}
+			years_of_income = 0.5
+			mil_power_cost = 100
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_france_funded_agitation
+				has_country_flag = EE_FRA_france_funded_agitation_mil
+			}
+		}
+	}
+	
+	on_accept = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_france_funded_agitation_mil }
+			}
+			add_years_of_income = -0.5
+			mil_power_cost = 100
+		}
+		else = { clr_country_flag = EE_FRA_france_funded_agitation_mil }
+		FROM = {
+			country_event = { id = ME_Dutch_Revolt_Events.7 }
+		}
+	}
+	
+	ai_will_do = {
+		always = yes
+	}
+}
+
+dutch_revolt_subdue_cities = {
+	category = is_enemy
+
+	require_acceptance = no
+
+	is_visible = {
+		has_global_flag = ME_dutch_revolt_flag
+		if = {
+			limit = {
+				has_saved_global_event_target = ME_dutch_revolt_target
+			}
+			tag = event_target:ME_dutch_revolt_target
+		}
+		else = { always = no }
+		FROM = {
+			is_dutch_subject_trigger = yes
+		}
+	}
+	
+	is_allowed = {
+		hidden_trigger = {
+			has_global_flag = ME_dutch_revolt_flag
+			if = {
+				limit = {
+					has_saved_global_event_target = ME_dutch_revolt_target
+				}
+				tag = event_target:ME_dutch_revolt_target
+			}
+			else = { always = no }
+			FROM = {
+				is_dutch_subject_trigger = yes
+			}
+		}
+		FROM = {
+			NOT = { has_country_modifier = NED_subdued_cities }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_france_funded_agitation_adm }
+			}
+			adm_power_cost = 100
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_france_funded_agitation
+				has_country_flag = EE_FRA_france_funded_agitation_adm
+			}
+		}
+	}
+	
+	on_accept = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_france_funded_agitation_adm }
+			}
+			adm_power_cost = 100
+		}
+		else = { clr_country_flag = EE_FRA_france_funded_agitation_adm }
+		FROM = {
+			country_event = { id = ME_Dutch_Revolt_Events.8 }
+		}
+	}
+	
+	ai_will_do = {
+		always = yes
+	}
+}
+
+dutch_revolt_agitate_for_liberty = {
+	category = is_enemy
+
+	require_acceptance = no
+
+	is_visible = {
+		has_global_flag = ME_dutch_revolt_flag
+		if = {
+			limit = {
+				has_saved_global_event_target = ME_dutch_revolt_target
+			}
+			tag = event_target:ME_dutch_revolt_target
+		}
+		else = { always = no }
+		FROM = {
+			is_dutch_subject_trigger = yes
+		}
+	}
+	
+	is_allowed = {
+		hidden_trigger = {
+			has_global_flag = ME_dutch_revolt_flag
+			if = {
+				limit = {
+					has_saved_global_event_target = ME_dutch_revolt_target
+				}
+				tag = event_target:ME_dutch_revolt_target
+			}
+			else = { always = no }
+			FROM = {
+				is_dutch_subject_trigger = yes
+			}
+		}
+		FROM = {
+			NOT = { has_country_modifier = NED_outraged_cities }
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_france_funded_agitation_dip }
+			}
+			dip_power_cost = 100
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_france_funded_agitation
+				has_country_flag = EE_FRA_france_funded_agitation_dip
+			}
+		}
+	}
+	
+	on_accept = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_france_funded_agitation_adm }
+			}
+			dip_power_cost = 100
+		}
+		else = { clr_country_flag = EE_FRA_france_funded_agitation_adm }
+		FROM = {
+			country_event = { id = ME_Dutch_Revolt_Events.9 }
+		}
+	}
+	
+	ai_will_do = {
+		always = yes
+	}
+}
+
+dutch_revolt_provide_funds = {
+	category = is_enemy
+
+	require_acceptance = no
+
+	is_visible = {
+		has_global_flag = ME_dutch_revolt_flag
+		if = {
+			limit = {
+				has_saved_global_event_target = ME_dutch_revolt_target
+			}
+			tag = event_target:ME_dutch_revolt_target
+		}
+		else = { always = no }
+		FROM = {
+			is_dutch_subject_trigger = yes
+		}
+	}
+	
+	is_allowed = {
+		hidden_trigger = {
+			has_global_flag = ME_dutch_revolt_flag
+			if = {
+				limit = {
+					has_saved_global_event_target = ME_dutch_revolt_target
+				}
+				tag = event_target:ME_dutch_revolt_target
+			}
+			else = { always = no }
+			FROM = {
+				is_dutch_subject_trigger = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_france_funded_agitation_funds }
+			}
+			years_of_income = 0.5
+			manpower = 5
+		}
+		else = {
+			custom_trigger_tooltip = {
+				tooltip = EE_FRA_france_funded_agitation
+				has_country_flag = EE_FRA_france_funded_agitation_funds
+			}
+		}
+	}
+	
+	on_accept = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = EE_FRA_france_funded_agitation_funds }
+			}
+			add_years_of_income = -0.5
+			add_manpower = -5
+		}
+		else = { clr_country_flag = EE_FRA_france_funded_agitation_funds }
+		FROM = {
+			country_event = { id = ME_Dutch_Revolt_Events.10 }
+		}
+	}
+	
+	ai_will_do = {
+		always = yes
+	}
+}

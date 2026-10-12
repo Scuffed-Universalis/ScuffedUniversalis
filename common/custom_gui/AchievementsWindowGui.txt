@@ -1,0 +1,1050 @@
+custom_window = {
+	name = ee_achievement_popups_custom_window
+	potential = {
+		has_country_flag = achievement_get_activate
+	}
+}
+custom_icon = {
+	name = absolutely_berberic_popup
+    potential = {
+		has_country_flag = absolutely_berberic_achieved_shown
+	}
+}
+custom_icon = {
+	name = jenne_d_arc_popup
+    potential = {
+		has_country_flag = jenne_d_arc_achieved_shown
+	}
+}
+custom_icon = {
+	name = habsburg_qin_popup
+    potential = {
+		has_country_flag = habsburg_qin_achieved_shown
+	}
+}
+custom_icon = {
+	name = sus_innit_popup
+    potential = {
+		has_country_flag = sus_innit_achieved_shown
+	}
+}
+custom_icon = {
+	name = no_heir_of_timur_popup
+    potential = {
+		has_country_flag = no_heir_of_timur_achieved_shown
+	}
+}
+custom_icon = {
+	name = im_batu_khan_popup
+    potential = {
+		has_country_flag = im_batu_khan_achieved_shown
+	}
+}
+custom_icon = {
+	name = hegemonic_republic_of_europe_popup
+    potential = {
+		has_country_flag = hegemonic_republic_of_europe_achieved_shown
+	}
+}
+custom_icon = {
+	name = nah_id_win_popup
+    potential = {
+		has_country_flag = nah_id_win_achieved_shown
+	}
+}
+
+# custom_button = {
+	# name = triggered_modifiers_frontend_open_button
+	# potential = {
+	# }
+	# effect = {
+		# if = {
+			# limit = {
+				# has_country_flag = ee_achievements_window_shown
+			# }
+			# clr_country_flag = ee_achievements_window_shown
+		# }
+		# else = {
+			# set_country_flag = ee_achievements_window_shown
+			# clr_country_flag = shogunate_window_shown
+			# clr_country_flag = caliphate_window_shown
+		# }
+		# hidden_effect = {
+			# set_variable = {
+				# which = trigmod_1_var
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_2_var
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_3_var
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_4_var
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_5_var
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_6_var
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_1_var_num
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_2_var_num
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_3_var_num
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_4_var_num
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_5_var_num
+				# value = 0
+			# }
+			# set_variable = {
+				# which = trigmod_6_var_num
+				# value = 0
+			# }
+			# EE_evaluate_custodian_of_the_two_holy_mosques = yes
+			# EE_evaluate_papal_subjugation = yes
+			# EE_evaluate_crusader = yes
+			# EE_evaluate_excommunication = yes
+			# EE_evaluate_pentarchy = yes
+			# EE_evaluate_peasant_war = yes
+		# }
+	# }
+	# tooltip = "Triggered Modifiers"
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_custom_window
+	# potential = {
+		# has_country_flag = ee_achievements_window_shown
+	# }
+# }
+
+# custom_button = {
+	# name = triggered_modifiers_next_page
+	# potential = {
+		# hidden_trigger = {
+			# NOT = {
+				# is_variable_equal = {
+					# which = custom_achievements_page
+					# value = 1
+				# }
+			# }
+		# }
+	# }
+	# effect = {
+		# hidden_effect = {
+			# change_variable = {
+				# which = custom_achievements_page
+				# value = 1
+			# }
+		# }
+	# }
+# }
+
+# custom_button = {
+	# name = triggered_modifiers_last_page
+	# potential = {
+		# hidden_trigger = {
+			# check_variable = {
+				# which = custom_achievements_page
+				# value = 1
+			# }
+		# }
+	# }
+	# effect = {
+		# hidden_effect = {
+			# change_variable = {
+				# which = custom_achievements_page
+				# value = -1
+			# }
+		# }
+	# }
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_page_1
+	# potential = {
+		# NOT = {
+			# check_variable = {
+				# which = custom_achievements_page
+				# value = 1
+			# }
+		# }
+	# }
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_page_2
+	# potential = {
+		# is_variable_equal = {
+			# which = custom_achievements_page
+			# value = 1
+		# }
+	# }
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_1
+	# potential = {}
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_2
+	# potential = {}
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_3
+	# potential = {}
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_4
+	# potential = {}
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_5
+	# potential = {}
+# }
+
+# custom_window = {
+	# name = ee_triggered_modifiers_6
+	# potential = {}
+# }
+##############
+# custom_button = {
+	# name = EE_1_triggered_modifiers_bg
+    # potential = {
+	# }
+	# trigger = {
+		# is_free_or_tributary_trigger = yes
+		# religion_group = muslim
+		# owns_or_vassal_of = 385
+		# owns_or_vassal_of = 384
+	# }
+	# effect = {
+		# tooltip = {
+			# add_country_modifier = {
+				# name = custodian_of_the_two_holy_mosques
+				# duration -1
+			# }
+		# }
+	# }
+# }
+# custom_icon = {
+	# name = EE_1_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_1_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_1_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_1_triggered_modifiers_progress
+    # potential = {
+	# }
+	# frame_variable = "trigmod_1_var"
+# }
+# custom_icon = {
+	# name = EE_1_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_1_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_1_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = EE_1_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+		# is_free_or_tributary_trigger = yes
+		# religion_group = muslim
+		# owns_or_vassal_of = 385
+		# owns_or_vassal_of = 384
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_button = {
+	# name = EE_2_triggered_modifiers_bg
+    # potential = {
+	# }
+	# trigger = {
+		# religion = catholic
+		# overlord_of = PAP
+		# NOT = { tag = ITA }
+		# NOT = { tag = HLR }
+		# NOT = { mission_completed = AAC_protectors_of_rome }
+		# if = {
+			# limit = {
+				# is_emperor = yes
+				# has_dlc = "Emperor"
+			# }
+			# OR = {
+				# PAP = {
+					# NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
+				# }
+				# NOT = { hre_reform_passed = emperor_privilegia_de_non_appelando }
+			# }
+		# }
+		# else_if = {
+			# limit = {
+				# is_emperor = yes
+				# NOT = { has_dlc = "Emperor" }
+			# }
+			# OR = {
+				# PAP = {
+					# NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
+				# }
+				# NOT = { hre_reform_passed = privilegia_de_non_appelando }
+			# }
+		# }
+		# custom_trigger_tooltip = {
+			# tooltip = no_dip_malus_reward_tt
+			# NOT = {
+				# OR = {
+					# has_country_flag = general_flag_for_FU_Rome_flag
+					# has_country_flag = EE_free_PAP_vassal
+				# }
+			# }			
+		# }
+	# }
+	# effect = {
+		# tooltip = {
+			# add_country_modifier = {
+				# name = papal_subjugation
+				# duration -1
+			# }
+		# }
+	# }
+# }
+# custom_icon = {
+	# name = EE_2_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_2_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_2_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_2_triggered_modifiers_progress
+    # potential = {
+	# }
+	# frame_variable = "trigmod_2_var"
+# }
+# custom_icon = {
+	# name = EE_2_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_2_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_2_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = EE_2_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+		# religion = catholic
+		# overlord_of = PAP
+		# NOT = { tag = ITA }
+		# NOT = { tag = HLR }
+		# NOT = { mission_completed = AAC_protectors_of_rome }
+		# if = {
+			# limit = {
+				# is_emperor = yes
+				# has_dlc = "Emperor"
+			# }
+			# OR = {
+				# PAP = {
+					# NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
+				# }
+				# NOT = { hre_reform_passed = emperor_privilegia_de_non_appelando }
+			# }
+		# }
+		# else_if = {
+			# limit = {
+				# is_emperor = yes
+				# NOT = { has_dlc = "Emperor" }
+			# }
+			# OR = {
+				# PAP = {
+					# NOT = { is_part_of_hre = yes }	#Needs to be written like that for localization purpose
+				# }
+				# NOT = { hre_reform_passed = privilegia_de_non_appelando }
+			# }
+		# }
+		# custom_trigger_tooltip = {
+			# tooltip = no_dip_malus_reward_tt
+			# NOT = {
+				# OR = {
+					# has_country_flag = general_flag_for_FU_Rome_flag
+					# has_country_flag = EE_free_PAP_vassal
+				# }
+			# }			
+		# }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_button = {
+	# name = EE_3_triggered_modifiers_bg
+	# trigger = { 
+		# religion = catholic
+		# if = { 
+			# limit = {
+				# crusade_target = {
+					# exists = yes
+				# }
+			# }
+			# crusade_target = {
+				# war_with = ROOT
+				# any_province = {
+					# controlled_by = root
+				# }
+			# }  
+			# land_maintenance = 1.0
+		# }
+		# else = {
+			# custom_trigger_tooltip = {
+				# tooltip = "Is at war with a crusade target"
+				# always = no
+			# }
+		# }
+	# }
+    # potential = {
+	# }
+	# effect = {
+		# custom_tooltip = EE_3_triggered_modifiers_name
+		# tooltip = {
+			# add_country_modifier = {
+				# name = crusader
+				# duration -1
+			# }
+		# }
+	# }
+# }
+# custom_icon = {
+	# name = EE_3_triggered_modifiers_icon
+	# tooltip = EE_3_triggered_modifiers_desc_tt
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_3_triggered_modifiers_name
+	# tooltip = EE_3_triggered_modifiers_desc_tt
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_3_triggered_modifiers_desc
+	# tooltip = EE_3_triggered_modifiers_desc_tt
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_3_triggered_modifiers_progress
+    # potential = {
+	# }
+	# frame_variable = "trigmod_3_var"
+# }
+# custom_icon = {
+	# name = EE_3_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_3_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_3_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = EE_3_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+		# religion = catholic
+		# if = { 
+			# limit = {
+				# crusade_target = {
+					# exists = yes
+				# }
+			# }
+			# crusade_target = {
+				# war_with = ROOT
+				# any_province = {
+					# controlled_by = root
+				# }
+			# }  
+			# land_maintenance = 1.0
+		# }
+		# else = {
+			# custom_trigger_tooltip = {
+				# tooltip = "Is at war with a crusade target"
+				# always = no
+			# }
+		# }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_button = {
+	# name = EE_4_triggered_modifiers_bg
+    # potential = {
+	# }
+	# trigger = { hidden_trigger = { always = no } }
+	# effect = {
+		# custom_tooltip = "escape_sequence"
+		# tooltip = {
+			# add_country_modifier = {
+				# name = excommunication
+				# duration -1
+			# }
+		# }
+	# }
+# }
+# custom_icon = {
+	# name = EE_4_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_4_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_4_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_4_triggered_modifiers_progress
+    # potential = {
+	# }
+	# frame_variable = "trigmod_4_var"
+# }
+# custom_icon = {
+	# name = EE_4_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_4_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_4_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = EE_4_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_button = {
+	# name = EE_5_triggered_modifiers_bg
+    # potential = {
+	# }
+	# trigger = { hidden_trigger = { always = no } }
+	# effect = {
+		# custom_tooltip = escape_sequence
+		# tooltip = {
+			# add_country_modifier = {
+				# name = pentarchy_mod
+				# duration -1
+			# }
+		# }
+	# }
+# }
+# custom_icon = {
+	# name = EE_5_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_5_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_5_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_5_triggered_modifiers_progress
+    # potential = {
+	# }
+	# frame_variable = "trigmod_5_var"
+# }
+# custom_icon = {
+	# name = EE_5_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_5_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_5_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = EE_5_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_button = {
+	# name = EE_6_triggered_modifiers_bg
+    # potential = {
+	# }
+	# trigger = { hidden_trigger = { always = no } }
+	# effect = {
+		# tooltip = {
+			# add_country_modifier = {
+				# name = great_peasants_war_triggered_modifier
+				# duration -1
+			# }
+		# }
+	# }
+# }
+# custom_icon = {
+	# name = EE_6_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_6_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_6_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_6_triggered_modifiers_progress
+    # potential = {
+	# }
+	# frame_variable = "trigmod_6_var"
+# }
+# custom_icon = {
+	# name = EE_6_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = EE_6_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = EE_6_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = EE_6_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_icon = {
+	# name = P2_EE_1_triggered_modifiers_bg
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_1_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_1_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_1_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_1_triggered_modifiers_progress
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_1_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_1_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_1_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = P2_EE_1_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_icon = {
+	# name = P2_EE_2_triggered_modifiers_bg
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_2_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_2_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_2_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_2_triggered_modifiers_progress
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_2_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_2_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_2_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = P2_EE_2_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_icon = {
+	# name = P2_EE_3_triggered_modifiers_bg
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_3_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_3_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_3_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_3_triggered_modifiers_progress
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_3_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_3_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_3_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = P2_EE_3_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_icon = {
+	# name = P2_EE_4_triggered_modifiers_bg
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_4_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_4_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_4_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_4_triggered_modifiers_progress
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_4_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_4_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_4_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = P2_EE_4_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_icon = {
+	# name = P2_EE_5_triggered_modifiers_bg
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_5_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_5_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_5_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_5_triggered_modifiers_progress
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_5_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_5_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_5_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = P2_EE_5_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }
+##############
+# custom_icon = {
+	# name = P2_EE_6_triggered_modifiers_bg
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_6_triggered_modifiers_icon
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_6_triggered_modifiers_name
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_6_triggered_modifiers_desc
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_6_triggered_modifiers_progress
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_6_triggered_modifiers_progress_overlay
+    # potential = {
+	# }
+# }
+# custom_icon = {
+	# name = P2_EE_6_triggered_modifiers_progress_text_bg
+    # potential = {
+	# }
+# }
+# custom_text_box = {
+    # name = P2_EE_6_triggered_modifiers_progress_text
+    # potential = {
+	# }
+# }
+
+# custom_button = {
+	# name = P2_EE_6_triggered_modifiers_requirements_overlay
+	# potential = {
+	# }
+	# trigger = {
+		# hidden_trigger = { always = no }
+	# }
+	# effect = {
+	# }
+# }

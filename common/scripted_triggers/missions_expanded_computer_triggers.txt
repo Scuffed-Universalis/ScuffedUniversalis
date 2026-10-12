@@ -1,0 +1,403 @@
+ME_less_than_10_provinces_occupied_req_script = {
+	if = {
+		limit = {
+			num_of_cities = 260 
+		}
+		if = {
+			limit = {
+				num_of_cities = 390 
+			}
+			if = {
+				limit = {
+					num_of_cities = 450 
+				}
+				if = {
+					limit = {
+						num_of_cities = 480 
+					}
+					if = {
+						limit = {
+							num_of_cities = 500 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 51 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 490 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 50 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 49 } }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							num_of_cities = 470 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 48 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 460 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 47 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 46 } }
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						num_of_cities = 420 
+					}
+					if = {
+						limit = {
+							num_of_cities = 440 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 45 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 430 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 44 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 43 } }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							num_of_cities = 410 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 42 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 400 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 41 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 40 } }
+						}
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					num_of_cities = 330 
+				}
+				if = {
+					limit = {
+						num_of_cities = 360 
+					}
+					if = {
+						limit = {
+							num_of_cities = 380 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 39 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 370 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 38 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 37 } }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							num_of_cities = 350 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 36 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 340 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 35 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 34 } }
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						num_of_cities = 300 
+					}
+					if = {
+						limit = {
+							num_of_cities = 320 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 33 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 310 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 32 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 31 } }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							num_of_cities = 280 
+						}
+						if = {
+							limit = {
+								num_of_cities = 290 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 30 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 29 } }
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 270 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 28 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 27 } }
+						}
+					}
+				}
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				num_of_cities = 130 
+			}
+			if = {
+				limit = {
+					num_of_cities = 200 
+				}
+				if = {
+					limit = {
+						num_of_cities = 230 
+					}
+					if = {
+						limit = {
+							num_of_cities = 250 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 26 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 240 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 25 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 24 } }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							num_of_cities = 220 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 23 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 210 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 22 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 21 } }
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						num_of_cities = 170 
+					}
+					if = {
+						limit = {
+							num_of_cities = 190 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 20 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 180 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 19 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 18 } }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							num_of_cities = 150 
+						}
+						if = {
+							limit = {
+								num_of_cities = 160 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 17 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 16 } }
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 140 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 15 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 14 } }
+						}
+					}
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = {
+					num_of_cities = 70 
+				}
+				if = {
+					limit = {
+						num_of_cities = 100 
+					}
+					if = {
+						limit = {
+							num_of_cities = 120 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 13 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 110 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 12 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 11 } }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							num_of_cities = 90 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 10 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 80 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 9 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 8 } }
+						}
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						num_of_cities = 40 
+					}
+					if = {
+						limit = {
+							num_of_cities = 60 
+						}
+						NOT = { ME_num_of_occupied_provinces_estate = { value = 7 } }
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 50 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 6 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 5 } }
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							num_of_cities = 20 
+						}
+						if = {
+							limit = {
+								num_of_cities = 30 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 4 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 3 } }
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								num_of_cities = 10 
+							}
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 2 } }
+						}
+						else = {
+							NOT = { ME_num_of_occupied_provinces_estate = { value = 1 } }
+						}
+					}
+				}
+			}
+		}
+	}
+}

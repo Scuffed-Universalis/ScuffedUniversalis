@@ -1,0 +1,309 @@
+namespace = besseres_hrr_incident_one_empire_one_faith_events
+
+country_event = {
+	id = besseres_hrr_incident_one_empire_one_faith_events.1
+	title = besseres_hrr_incident_one_empire_one_faith_events.EVTNAME1
+	desc = besseres_hrr_incident_one_empire_one_faith_events.EVTDESC1
+	picture = HRE_eventPicture
+
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_dlc = "Art of War"
+		is_emperor = yes
+		hre_religion_treaty = yes
+		OR = {
+			religion = reformed
+			religion = hussite
+			religion = coptic
+			religion = orthodox
+			religion = anglican
+			AND = {
+				has_global_flag = extended_timeline_mod
+				OR = {
+					religion = cathar
+					religion = bogomilism
+					religion = waldensian
+					religion = lollard
+					religion = nestorian
+					religion = arianism
+				}
+			}
+			AND = {
+				is_expanded_mod_active = { mod = religions_and_cultures }
+				OR = {
+					religion = nestorian
+					religion = bogomilist
+				}
+			}
+		}
+		OR = {
+			AND = {
+				NOT = { has_dlc = "Emperor" }
+				hre_reform_passed = erbkaisertum
+			}
+			AND = {
+				has_dlc = "Emperor"
+				hre_reform_passed = emperor_erbkaisertum
+			}
+		}
+		OR = {
+			NOT = { has_dlc = "Emperor" }
+			NOT = { active_imperial_incident = any }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_dlc = "Emperor"
+				}
+				set_global_flag = hre_one_empire_one_faith_incident_active
+				set_imperial_incident = besseres_hrr_incident_one_empire_one_faith
+			}
+			else = {
+				country_event = { id = besseres_hrr_incident_one_empire_one_faith_events.2 }
+			}
+		}
+	}
+
+	option = {
+		name = besseres_hrr_incident_one_empire_one_faith_events1.EVTOPT1
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = besseres_hrr_incident_one_empire_one_faith_events.2
+	title = besseres_hrr_incident_one_empire_one_faith_events.EVTNAME2
+	desc = besseres_hrr_incident_one_empire_one_faith_events.EVTDESC2
+	picture = HRE_eventPicture
+
+	major = yes
+	major_trigger = {
+		NOT = { has_dlc = "Emperor" }
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = besseres_hrr_incident_one_empire_one_faith_events2.EVTOPT1
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				calc_true_if = {
+					all_country = {
+						is_part_of_hre = yes
+						NOT = { religion = ROOT }
+					}
+					amount = 10
+				}
+			}
+		}
+
+		custom_tooltip = BESSERES_HRR_INCIDENT_ONE_EMPIRE_ONE_FAITH_OFFICIAL_FAITH_TT
+		hidden_effect = {
+			set_variable = { which = hree_num_of_catholic_hre_members value = 0 }
+			set_variable = { which = hree_num_of_protestant_hre_members value = 0 }
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+				}
+				if = {
+					limit = {
+						religion = catholic
+					}
+					ROOT = {
+						change_variable = { which = hree_num_of_catholic_hre_members value = 1 }
+					}
+				}
+				else_if = {
+					limit = {
+						religion = protestant
+					}
+					ROOT = {
+						change_variable = { which = hree_num_of_protestant_hre_members value = 1 }
+					}
+				}
+			}
+			every_elector = {
+				set_country_flag = hree_currently_elector
+			}
+			set_hre_religion_treaty = yes
+			set_hre_religion_locked = no
+			if = {
+				limit = {
+					religion = reformed
+				}
+				set_hre_religion = reformed
+			}
+			else_if = {
+				limit = {
+					religion = hussite
+				}
+				set_hre_religion = hussite
+			}
+			else_if = {
+				limit = {
+					religion = coptic
+				}
+				set_hre_religion = coptic
+			}
+			else_if = {
+				limit = {
+					religion = orthodox
+				}
+				set_hre_religion = orthodox
+			}
+			else_if = {
+				limit = {
+					religion = anglican
+				}
+				set_hre_religion = anglican
+			}
+			else_if = {
+				limit = {
+					has_global_flag = extended_timeline_mod
+				}
+				if = {
+					limit = {
+						religion = cathar
+					}
+					set_hre_religion = cathar
+				}
+				else_if = {
+					limit = {
+						religion = bogomilism
+					}
+					set_hre_religion = bogomilism
+				}
+				else_if = {
+					limit = {
+						religion = waldensian
+					}
+					set_hre_religion = waldensian
+				}
+				else_if = {
+					limit = {
+						religion = lollard
+					}
+					set_hre_religion = lollard
+				}
+				else_if = {
+					limit = {
+						religion = nestorian
+					}
+					set_hre_religion = nestorian
+				}
+				else_if = {
+					limit = {
+						religion = arianism
+					}
+					set_hre_religion = arianism
+				}
+			}
+			else_if = {
+				limit = {
+					is_expanded_mod_active = { mod = religions_and_cultures }
+				}
+				if = {
+					limit = {
+						religion = nestorian
+					}
+					set_hre_religion = nestorian
+				}
+				else_if = {
+					limit = {
+						religion = bogomilist
+					}
+					set_hre_religion = bogomilist
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { which = hree_num_of_protestant_hre_members which = hree_num_of_catholic_hre_members }
+				}
+				set_hre_heretic_religion = protestant
+			}
+			else = {
+				set_hre_heretic_religion = catholic
+			}
+			set_hre_religion_treaty = no
+			set_hre_religion_locked = yes
+			every_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					has_country_flag = hree_currently_elector
+				}
+				clr_country_flag = hree_currently_elector
+				if = {
+					limit = {
+						is_elector = no
+					}
+					elector = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = hree_currently_elector }
+					is_elector = yes
+				}
+				elector = no
+			}
+			else = {
+				clr_country_flag = hree_currently_elector
+				if = {
+					limit = {
+						is_elector = no
+					}
+					elector = yes
+				}
+			}
+			set_variable = { which = hree_num_of_catholic_hre_members value = 0 }
+			set_variable = { which = hree_num_of_protestant_hre_members value = 0 }
+		}
+	}
+
+	option = {
+		name = besseres_hrr_incident_one_empire_one_faith_events2.EVTOPT2
+
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				NOT = {
+					calc_true_if = {
+						all_country = {
+							is_part_of_hre = yes
+							NOT = { religion = ROOT }
+						}
+						amount = 10
+					}
+				}
+			}
+		}
+
+		add_prestige = 5
+		custom_tooltip = BESSERES_HRR_INCIDENT_ONE_EMPIRE_ONE_FAITH_OPINION_TT
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					NOT = { religion = ROOT }
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = besseres_hrr_incident_one_empire_one_faith_opinion
+				}
+			}
+		}
+	}
+}

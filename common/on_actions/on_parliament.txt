@@ -1,0 +1,18 @@
+# country
+on_parliament_debate_succeeded = {
+	ME_on_parliament_debate_succeeded_effect = yes
+}
+
+#province
+on_parliament_seat_given = {
+	ME_on_parliament_seat_given_effect = yes
+}
+
+#province
+on_parliament_seat_lost = {
+	ME_on_parliament_seat_lost_effect = yes
+}
+
+on_parliament_debate_failed = {
+	ME_on_parliament_debate_failed_effect = yes
+}

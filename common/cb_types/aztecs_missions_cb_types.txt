@@ -1,0 +1,18 @@
+#If you are reading this, the end begins
+
+cb_sunset_invasion = {
+	valid_for_subject = no
+	
+	prerequisites_self = {
+		tag = AZT
+		has_global_flag = sunset_invasion
+	}
+	
+	prerequisites = {
+		FROM = {
+			capital_scope = { continent = europe }
+		}
+	}
+	
+	war_goal = sunset_invasion_on_europe
+}
