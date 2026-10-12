@@ -460,3 +460,22 @@ navy_tradition = {
 	allowed_galleass_fraction = 0.5
 	monthly_naval_professionalism_power = 0.2
 }
+
+karma_just_right = {
+	discipline = 0.05
+	manpower_recovery_speed = 0.05
+	build_cost = -0.05
+	advisor_cost = -0.1
+	development_cost = -0.1
+}
+
+karma_too_high = {
+	build_cost = -0.1
+	advisor_cost = -0.2
+	development_cost = -0.2
+}
+
+karma_too_low = {
+	manpower_recovery_speed = 0.1
+	discipline = 0.1
+}

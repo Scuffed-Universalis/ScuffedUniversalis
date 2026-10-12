@@ -984,16 +984,19 @@ christian = {
 
 		allowed_center_conversion = {
 			catholic
+			protestant
+			reformed
 		}
 		country = {
-			shock_damage_received = -0.05
-			global_heretic_missionary_strength = 0.02
+			shock_damage_received = -0.1
+			tolerance_of_heretics_capacity = 2
 		}
-		
+
 		country_as_secondary = {
-			shock_damage_received = -0.025
+			shock_damage_received = -0.1
+			tolerance_of_heretics_capacity = 2
 		}
-		
+
 		uses_hussite_power = yes				# Uses church power/aspect mechanics
 		
 		aspects = {
@@ -1011,7 +1014,7 @@ christian = {
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
-		heretic = { TABORITE UTRAQUIST ORPHAN }
+		heretic = { anglican protestant reformed orthodox coptic catholic }
 	}
 	
 	protestant = {
