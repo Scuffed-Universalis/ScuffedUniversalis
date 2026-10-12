@@ -732,7 +732,7 @@ RUS_ideas = {
 SPA_ideas = {
 	start = {
 		land_morale = 0.15
-		army_tradition_decay = -0.01
+		artillery_fire = 1
 	}
 	
 	bonus = {
@@ -779,7 +779,7 @@ SPA_ideas = {
 SPA_ideas_golden = {
 	start = {
 		land_morale = 0.15
-		army_tradition_decay = -0.01
+		artillery_fire = 1
 	}
 	
 	bonus = {
@@ -1642,13 +1642,13 @@ POR_ideas = {
 	
 	legacy_of_the_navigator = {
 		naval_morale = 0.1
+		range = 0.20
 	}
 	afonsine_ordinances = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	case_de_india = {
 		global_trade_power = 0.1
-		range = 0.20
 	}
 	land_before_faith = {
 		global_colonial_growth = 15
@@ -1662,7 +1662,7 @@ POR_ideas = {
 	}
 	por_royal_military_academy = {
 		defensiveness = 0.1
-		siege_ability = 0.1
+		artillery_fire = 1
 	}
 }
 

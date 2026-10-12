@@ -3,17 +3,18 @@ estate_burghers_disaster = {
 		has_estate = estate_burghers
 		estate_influence = {
 			estate = estate_burghers
-			influence = 60
+			influence = 80
 		}
 		NOT = { has_disaster = tur_disaster_ottoman_power_struggle }
 	}
 
 
 	can_start = {
-		has_any_disaster = no
+		has_any_disaster = no
+		is_at_war = no
 		estate_influence = {
 			estate = estate_burghers
-			influence = 80
+			influence = 100
 		}
 	}
 	
@@ -23,7 +24,7 @@ estate_burghers_disaster = {
 			NOT = {
 				estate_influence = {
 					estate = estate_burghers
-					influence = 60
+					influence = 100
 				}		
 			}
 		}
@@ -34,7 +35,8 @@ estate_burghers_disaster = {
 	}
 	
 	progress = {
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.4
 			
 			estate_influence = {
@@ -43,7 +45,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.4
 			
 			estate_influence = {
@@ -52,7 +55,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.8
 			
 			estate_influence = {
@@ -61,7 +65,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.8
 			
 			estate_influence = {
@@ -70,7 +75,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 1.2
 			
 			estate_influence = {
@@ -79,7 +85,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 1.2
 			
 			estate_influence = {
@@ -88,7 +95,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.4
 			
 			NOT = { manpower_percentage = 0.2 }
@@ -98,7 +106,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			estate_loyalty = {
@@ -107,7 +116,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			estate_loyalty = {
@@ -116,7 +126,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			estate_loyalty = {
@@ -125,7 +136,8 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.8
 			
 			estate_loyalty = {
@@ -134,61 +146,71 @@ estate_burghers_disaster = {
 			}
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			stability = 2
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			stability = 3
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			advisor = spymaster
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			manpower_percentage = 0.9
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			NOT = { average_autonomy = 10 }
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			NOT = { average_autonomy = 25 }
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			land_maintenance = 0.9
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			power_projection = 40
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			
 			power_projection = 80
 		}
 		
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.8
 			
 			custom_trigger_tooltip = {

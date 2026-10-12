@@ -163,7 +163,7 @@ TIM_improved_ideas = {
 SPA_improved_ideas = {
 	start = {
 		land_morale = 0.15
-		army_tradition_decay = -0.01
+		artillery_fire = 1
 	}
 	
 	bonus = {

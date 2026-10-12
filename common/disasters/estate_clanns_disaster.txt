@@ -4,14 +4,15 @@ estate_clanns_disaster = {
 		has_estate = estate_clans
 		estate_influence = {
 			estate = estate_clans
-			influence = 60
+			influence = 80
 		}
 	}
 	can_start = {
-		has_any_disaster = no
+		has_any_disaster = no
+		is_at_war = no
 		estate_influence = {
 			estate = estate_clans
-			influence = 80
+			influence = 100
 		}
 	}
 	can_stop = {
@@ -20,7 +21,7 @@ estate_clanns_disaster = {
 			NOT = {
 				estate_influence = {
 					estate = estate_clans
-					influence = 60
+					influence = 100
 				}		
 			}
 		}
@@ -30,42 +31,48 @@ estate_clanns_disaster = {
 	}
 	
 	progress = {
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.4
 			estate_influence = {
 				estate = estate_clans
 				influence = 80
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.4
 			estate_influence = {
 				estate = estate_clans
 				influence = 85
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.8
 			estate_influence = {
 				estate = estate_clans
 				influence = 90
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.8
 			estate_influence = {
 				estate = estate_clans
 				influence = 95
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 1.2
 			estate_influence = {
 				estate = estate_clans
 				influence = 100
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = 0.4
 			NOT = { manpower_percentage = 0.2 }
 			estate_influence = {
@@ -73,67 +80,80 @@ estate_clanns_disaster = {
 				influence = 75
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			estate_loyalty = {
 				estate = estate_clans
 				loyalty = 70
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			estate_loyalty = {
 				estate = estate_clans
 				loyalty = 80
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			estate_loyalty = {
 				estate = estate_clans
 				loyalty = 90
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.8
 			estate_loyalty = {
 				estate = estate_clans
 				loyalty = 100
 			}
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			stability = 2
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			stability = 3
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			advisor = spymaster
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			manpower_percentage = 0.9
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			NOT = { average_autonomy = 10 }
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			NOT = { average_autonomy = 25 }
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			land_maintenance = 0.9
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			power_projection = 40
 		}
-		modifier = {
+		modifier = {
+			is_at_war = no
 			factor = -0.4
 			power_projection = 80
 		}
