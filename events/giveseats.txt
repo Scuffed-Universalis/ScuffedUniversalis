@@ -1,0 +1,18 @@
+namespace = give_seats
+
+country_event = {
+	id = give_seats.1
+	title = give_seats
+	desc = give_seats
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+
+	option = {
+		name = give_seats
+		custom_tooltip = give_seats
+		every_owned_province = {
+			set_seat_in_parliament = yes
+		}
+	}
+}
