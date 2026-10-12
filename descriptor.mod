@@ -4,6 +4,6 @@ tags={
 	"Historical"
 	"Expansion"
 }
-name="JG Expanded"
+name="Scuffed Universalis"
 picture="thumbnail.png"
 supported_version="v1.37.*"
