@@ -387,6 +387,7 @@ canton = {
 	modifier_subject = clear 
 	modifier_subject = {
 		modifier = vassal_nation
+		trigger = { ai = yes } # player subjects are exempt
 	}
 	
 	modifier_overlord = clear
@@ -822,6 +823,7 @@ ME_Timurid_Governor = {
 	
 	modifier_subject = {
 		modifier = vassal_nation
+		trigger = { ai = yes } # player subjects are exempt
 	}
 	modifier_overlord = {
 		modifier = vassal_subject

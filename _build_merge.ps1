@@ -261,6 +261,24 @@ $re = [regex]'(?s)(\ballow\s*=\s*\{.*?)\r?\n[ \t]*is_free_or_tributary_trigger =
 if (-not $re.IsMatch($text)) { throw "vanilla NepalNation.txt layout changed - check the subject patch" }
 Write-1252 $out $re.Replace($text, '$1', 1)
 
+# 3f. Player subjects don't pay the vassal development cost penalty ('Vassal Nation', +50% dev cost); AI subjects
+#     still do (it stops players developing a subject's land and then inheriting/annexing it cheaply).
+#     The penalty is attached per subject type via modifier_subject, so give each attachment trigger = { ai = yes }.
+#     Vanilla's 00_subject_types.txt loads first, so every type that copy_from's vassal inherits the trigger.
+$vassalNationRe = [regex]'(modifier_subject\s*=\s*\{\s*modifier\s*=\s*vassal_nation)(\s*\})'
+$vassalNationTrigger = "`$1`r`n`t`ttrigger = { ai = yes } # player subjects are exempt`$2"
+$out = Join-Path $dst "common\subject_types\00_subject_types.txt"
+if (Test-Path $out) { throw "00_subject_types.txt is now shipped by a source mod - patch that copy instead" }
+$text = Read-1252 "$game\common\subject_types\00_subject_types.txt"
+if ($vassalNationRe.Matches($text).Count -ne 1) { throw "vanilla 00_subject_types.txt layout changed - check the vassal_nation patch" }
+Write-1252 $out $vassalNationRe.Replace($text, $vassalNationTrigger)
+$path = Join-Path $dst "common\subject_types\ME_subject_types.txt"
+$text = Read-1252 $path
+if ($vassalNationRe.Matches($text).Count -ne 2) { throw "ME_subject_types.txt layout changed - check the vassal_nation patch" }
+Write-1252 $path $vassalNationRe.Replace($text, $vassalNationTrigger)
+$left = Get-ChildItem (Join-Path $dst "common\subject_types") -Filter *.txt | Select-String -Pattern 'modifier\s*=\s*vassal_nation' -Context 0,1 | Where-Object { $_.Context.PostContext[0] -notmatch 'trigger = \{ ai = yes \}' }
+if ($left) { throw "untriggered vassal_nation left in: $(($left | ForEach-Object { $_.Filename }) -join ', ')" }
+
 # 4. Hand-maintained content (ports from mods too broken to patch, e.g. Merina's "Malagasy Glory" missions).
 #    Lives in _custom\ with the normal mod folder layout and is copied over the build output last.
 foreach ($dir in Get-ChildItem (Join-Path $dst '_custom') -Directory) {
