@@ -1,0 +1,1362 @@
+# Nepal content ported from "Beyond the Sunset" (workshop 3735234315). Tibet/Malaya content not ported.
+
+bts_nepalese_missions_religion = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_religious_direction = {
+        icon = mission_hands_praying
+        required_missions = { }
+        position = 1
+
+        provinces_to_highlight = {
+            province_id = 557
+            NOT = { owned_by = ROOT }
+        }
+
+        trigger = {
+            557 = {
+                owned_by = ROOT
+                has_tax_building_trigger = yes
+            }
+            if = {
+                limit = {
+                    has_estate = estate_brahmins
+                }
+                estate_loyalty = {
+                    estate = estate_brahmins
+                    loyalty = 60
+                }
+            }
+            if = {
+                limit = {
+                    has_estate = estate_church
+                }
+                estate_loyalty = {
+                    estate = estate_church
+                    loyalty = 60
+                }
+            }
+            stability = 1
+            OR = {
+                religious_unity = 0.9
+                theologian = 1
+            }
+        }
+
+        effect = {
+            country_event_with_effect_insight = {
+                id = bts_flavor_npl.1
+                effect = "custom_tooltip = bts_npl_religious_direction_reward_tt"
+            }
+        }
+    }
+}
+
+bts_nepalese_missions_religion_preview = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        NOT = { has_country_flag = bts_npl_unlock_hindu_missions }
+        NOT = { has_country_flag = bts_npl_unlock_buddhist_missions }
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_branching_mission = {
+        icon = mission_unknown_mission
+        position = 3
+        required_missions = { bts_npl_religious_direction }
+        provinces_to_highlight = { }
+        trigger = {
+            custom_trigger_tooltip = {
+                tooltip = selectable_mission_trigger_tt
+                always = no
+            }
+            OR = {
+                # Hindu path
+                AND = {
+                    custom_trigger_tooltip = {
+                        tooltip = bts_npl_branching_mission_hindu_triggers_tt
+                        always = no
+                    }
+                    religion = hinduism
+                    development_in_provinces = {
+                        value = 500
+                        superregion = india_superregion
+                        religion = ROOT
+                    }
+                    religious_unity = 0.95
+                }
+                # Buddhist path
+                AND = {
+                    custom_trigger_tooltip = {
+                        tooltip = bts_npl_branching_mission_buddhist_triggers_tt
+                        always = no
+                    }
+                    bts_is_buddhist = yes
+                    development_in_provinces = {
+                        value = 400
+                        superregion = india_superregion
+                        religion = ROOT
+                    }
+                    religious_unity = 0.9
+                    # Ensure karma is between -40 and 40
+                    AND = {
+                        karma = -40
+                        NOT = { karma = 41 }
+                    }
+                }
+            }
+        }
+        effect = {
+            # Condensed distillation of the Hindu path
+            custom_tooltip = bts_npl_branching_mission_hindu_effects_tt
+            custom_tooltip = bts_newline
+            add_country_modifier = {
+                duration = -1
+                name = bts_npl_asal_hindustan
+            }
+            custom_tooltip = bts_npl_asal_hindustan_reward_tt
+
+            # Buddhist path
+            custom_tooltip = bts_npl_branching_mission_buddhist_effects_tt
+            custom_tooltip = bts_newline
+            add_country_modifier = {
+                duration = -1
+                name = bts_npl_custodian_of_dharma
+            }
+        }
+    }
+}
+
+bts_nepalese_missions_hinduism = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        has_country_flag = bts_npl_unlock_hindu_missions
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_asal_hindustan = {
+        icon = mission_dharma_mission_religious_harmony
+        required_missions = {
+            bts_npl_religious_direction
+        }
+        position = 3
+
+        provinces_to_highlight = {
+            superregion = india_superregion
+            OR = {
+                NOT = { owned_by = ROOT }
+                NOT = { religion = hinduism }
+            }
+        }
+
+        trigger = {
+            religion = hinduism
+            development_in_provinces = {
+                value = 500
+                superregion = india_superregion
+                religion = ROOT
+            }
+            religious_unity = 0.95
+        }
+
+        effect = {
+            add_country_modifier = {
+                duration = -1
+                name = bts_npl_asal_hindustan
+            }
+
+            custom_tooltip = bts_npl_asal_hindustan_reward_tt
+            every_neighbor_country = {
+                limit = {
+                    NOT = { is_subject_of = ROOT }
+                    NOT = { total_development = ROOT }
+                    capital_scope = {
+                        superregion = india_superregion
+                    }
+                    religion = hinduism
+                }
+                reverse_add_casus_belli = {
+                    type = cb_vassalize_mission
+                    months = 300 # 25 years
+                    target = ROOT
+                }
+            }
+        }
+    }
+}
+
+bts_nepalese_missions_buddhism = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        has_country_flag = bts_npl_unlock_buddhist_missions
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_buddhas_homeland = {
+        icon = mission_buddhist_monk_praying
+        required_missions = {
+            bts_npl_religious_direction
+        }
+        position = 3
+
+        provinces_to_highlight = {
+            superregion = india_superregion
+            OR = {
+                NOT = { owned_by = ROOT }
+                NOT = { religion = ROOT }
+            }
+        }
+
+        trigger = {
+            bts_is_buddhist = yes
+            development_in_provinces = {
+                value = 400
+                superregion = india_superregion
+                religion = ROOT
+            }
+            # Ensure karma is between -40 and 40
+            AND = {
+                karma = -40
+                NOT = { karma = 41 }
+            }
+            religious_unity = 0.9
+        }
+
+        effect = {
+            add_country_modifier = {
+                duration = -1
+                name = bts_npl_custodian_of_dharma
+            }
+        }
+    }
+}
+
+bts_nepalese_missions_military = {
+    slot = 1
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_sons_of_the_hills = {
+        icon = mission_persian_soldiers
+        required_missions = { }
+        position = 4
+
+        trigger = {
+            army_professionalism = 0.25
+            OR = {
+                mil = 5
+                AND = {
+                    army_tradition = 60
+                    has_mil_advisor = yes
+                    mil_power = 10
+                }
+            }
+        }
+
+        effect = {
+            # Unlock conditional modifier "Hill Warriors"
+            set_country_flag = bts_can_have_hill_warriors
+            custom_tooltip = bts_npl_sons_of_the_hills_reward_tt
+        }
+    }
+}
+
+bts_nepalese_missions_2 = {
+    slot = 2
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_yam_between_boulders = {
+        icon = mission_reliable_allies
+        required_missions = { }
+        position = 2
+
+        provinces_to_highlight = {
+            is_neighbor_of = ROOT
+            owner = {
+                NOT = { tag = ROOT }
+                total_development = ROOT
+            }
+        }
+
+        trigger = {
+            num_of_allies = 2
+            OR = {
+                # No neighbor is bigger than us
+                custom_trigger_tooltip = {
+                    tooltip = bts_npl_yam_between_boulders_trigger_tt
+                    NOT = {
+                        any_neighbor_country = {
+                            total_development = ROOT
+                        }
+                    }
+                }
+
+                # Or we have prepared against bigger neighbors
+                calc_true_if = {
+                    amount = 2
+
+                    all_neighbor_country = {
+                        total_development = ROOT
+                        OR = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 50
+                            }
+                            has_spy_network_from = {
+                                who = ROOT
+                                value = 25
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            tibet_region = {
+                limit = {
+                    NOT = { is_permanent_claim = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+
+            custom_tooltip = bts_npl_yam_between_boulders_reward_tt
+            set_country_flag = bts_npl_can_be_yam_between_boulders
+        }
+    }
+
+    bts_npl_into_the_plateau = {
+        icon = mission_assemble_an_army
+        required_missions = {
+            bts_npl_yam_between_boulders
+            bts_npl_unify_nepal
+        }
+        position = 3
+
+        provinces_to_highlight = {
+            region = tibet_region
+            NOT = { owned_by = ROOT }
+        }
+
+        trigger = {
+            num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                value = 10
+                region = tibet_region
+            }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = bts_npl_frontier_expansion
+                duration = -1
+            }
+        }
+    }
+
+    btn_npl_reclaim_hindustan = {
+        icon = mission_assert_control_over_delhi
+        required_missions = {
+            bts_npl_looking_beyond
+        }
+        position = 4
+
+        provinces_to_highlight = {
+            NOT = { bts_npl_held_by_root_or_overlord = yes }
+            region = hindusthan_region
+        }
+
+        # Provinces held by our overlord count too (Nepal is often an Indian player's march)
+        trigger = {
+            custom_trigger_tooltip = {
+                tooltip = bts_npl_reclaim_hindustan_count_tt
+                calc_true_if = {
+                    amount = 40
+                    all_province = {
+                        region = hindusthan_region
+                        bts_npl_held_by_root_or_overlord = yes
+                    }
+                }
+            }
+            507 = {
+                bts_npl_held_by_root_or_overlord = yes
+            }
+            508 = {
+                bts_npl_held_by_root_or_overlord = yes
+            }
+            522 = {
+                bts_npl_held_by_root_or_overlord = yes
+            }
+            524 = {
+                bts_npl_held_by_root_or_overlord = yes
+            }
+            555 = {
+                bts_npl_held_by_root_or_overlord = yes
+            }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = bts_npl_reclaimed_hindustan
+                duration = 7300 # 20 years
+            }
+
+            # Our overlord shares in the reclamation (conditional effects are hidden in tooltips
+            # unless currently true, so describe it with a fixed tooltip and apply it hidden)
+            custom_tooltip = bts_npl_reclaim_hindustan_overlord_tt
+            hidden_effect = {
+                if = {
+                    limit = { is_subject = yes }
+                    overlord = {
+                        add_country_modifier = {
+                            name = bts_npl_reclaimed_hindustan
+                            duration = 7300 # 20 years
+                        }
+                    }
+                }
+            }
+
+            # Claims go to our overlord instead if we are a subject
+            # (the tooltip shows whichever branch applies now; the fixed line below explains the other)
+            if = {
+                limit = { is_subject = no }
+                west_india_region = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+            }
+            else = {
+                overlord = {
+                    west_india_region = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                }
+            }
+            custom_tooltip = bts_npl_reclaim_hindustan_subject_claims_tt
+        }
+    }
+}
+
+bts_nepalese_missions_3 = {
+    slot = 3
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_prepare_for_war = {
+        icon = mission_integrate_the_purbias
+        required_missions = { }
+        position = 1
+
+        trigger = {
+            army_size_percentage = 1.0
+            num_of_generals = 1
+            monthly_mil = 6
+        }
+
+        effect = {
+            # Minor military buffs
+            add_country_modifier = {
+                name = bts_mobilized_army
+                duration = -1
+            }
+
+            # All your Nepal are belong to us
+            nepal_area = {
+                limit = {
+                    NOT = { is_permanent_claim = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            baisi_rajya_area = {
+                limit = {
+                    NOT = { is_permanent_claim = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+            himalayan_hills_area = {
+                limit = {
+                    NOT = { is_permanent_claim = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+        }
+    }
+
+    bts_npl_unify_nepal = {
+        icon = mission_defeat_mewar
+        required_missions = {
+            bts_npl_prepare_for_war
+        }
+        position = 2
+
+        provinces_to_highlight = {
+            OR = {
+                area = nepal_area
+                area = baisi_rajya_area
+                area = himalayan_hills_area
+            }
+            NOT = { country_or_non_sovereign_subject_holds = ROOT }
+        }
+
+        trigger = {
+            OR = {
+                AND = {
+                    nepal_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds = ROOT
+                    }
+                    baisi_rajya_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds = ROOT
+                    }
+                    himalayan_hills_area = {
+                        type = all
+                        country_or_non_sovereign_subject_holds = ROOT
+                    }
+                }
+                AND = {
+                    num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+                        value = 10
+                        OR = {
+                            area = nepal_area
+                            area = baisi_rajya_area
+                            area = himalayan_hills_area
+                        }
+                    }
+                    custom_trigger_tooltip = {
+                        tooltip = bts_npl_unify_nepal_no_other_nepali_tt
+                        NOT = {
+                            any_country = {
+                                NOT = { tag = ROOT }
+                                NOT = { is_subject_of = ROOT }
+                                OR = {
+                                    primary_culture = nepali
+                                    primary_culture = pahari
+                                }
+                            }
+                        }
+                    }
+                    557 = {
+                        owned_by = ROOT
+                    }
+                }
+            }
+        }
+
+        effect = {
+            change_mil = 1
+
+            if = {
+                limit = {
+                    has_dlc = "Rights of Man"
+                    NOT = { num_of_ruler_traits = { amount = 3 } }
+                }
+                add_ruler_personality = conqueror_personality
+            } else = {
+                add_adm_power = 10
+                add_dip_power = 10
+                add_mil_power = 10
+            }
+
+            custom_tooltip = bts_newline
+            add_country_modifier = {
+                name = bts_npl_unified_nepal
+                duration = -1
+            }
+        }
+    }
+
+    bts_npl_looking_beyond = {
+        icon = mission_order_in_the_domain
+        required_missions = {
+            bts_npl_unify_nepal
+        }
+        position = 3
+
+        trigger = {
+            manpower_percentage = 0.85
+            has_mil_advisor = yes
+            OR = {
+                any_neighbor_country = {
+                    has_spy_network_from = {
+                        value = 25
+                        who = ROOT
+                    }
+                    OR = {
+                        ROOT = {
+                            is_rival = PREV
+                        }
+                        has_opinion_modifier = {
+                            who = ROOT
+                            modifier = insulted
+                        }
+                        has_opinion_modifier = {
+                            who = ROOT
+                            modifier = scornfully_insulted
+                        }
+                    }
+                }
+                # Or we look beyond together with an Indian overlord
+                custom_trigger_tooltip = {
+                    tooltip = bts_npl_looking_beyond_indian_overlord_tt
+                    is_subject = yes
+                    overlord = {
+                        capital_scope = { superregion = india_superregion }
+                    }
+                }
+            }
+        }
+
+        effect = {
+            # Give bordering permanent claims - to our overlord instead if we are a subject
+            # (the tooltip shows whichever branch applies now; the fixed line below explains the other)
+            if = {
+                limit = { is_subject = no }
+                kashmir_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                lahore_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                sirhind_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                upper_doab_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                katehar_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                oudh_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                purvanchal_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                mithila_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                north_bengal_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                gaur_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+                bhutan_area = {
+                    limit = {
+                        NOT = { is_permanent_claim = ROOT }
+                        NOT = { is_core = ROOT }
+                    }
+                    add_permanent_claim = ROOT
+                }
+            }
+            else = {
+                add_adm_power = 50
+                add_dip_power = 50
+                add_mil_power = 50
+                custom_tooltip = bts_newline
+                overlord = {
+                    kashmir_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    lahore_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    sirhind_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    upper_doab_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    katehar_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    oudh_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    purvanchal_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    mithila_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    north_bengal_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    gaur_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                    bhutan_area = {
+                        limit = {
+                            NOT = { is_permanent_claim = PREV }
+                            NOT = { is_core = PREV }
+                        }
+                        add_permanent_claim = PREV
+                    }
+                }
+            }
+            custom_tooltip = bts_npl_looking_beyond_subject_reward_tt
+        }
+    }
+
+    bts_npl_establish_bengal_foothold = {
+        icon = mission_conquer_bengal_dlh
+        required_missions = {
+            bts_npl_looking_beyond
+        }
+        position = 4
+
+        provinces_to_highlight = {
+            NOT = { bts_npl_held_by_root_or_overlord = yes }
+            OR = {
+                area = north_bengal_area
+                area = gaur_area
+            }
+        }
+
+        # Provinces held by our overlord count too (Nepal is often an Indian player's march)
+        trigger = {
+            north_bengal_area = {
+                type = all
+                bts_npl_held_by_root_or_overlord = yes
+            }
+            gaur_area = {
+                type = all
+                bts_npl_held_by_root_or_overlord = yes
+            }
+        }
+
+        effect = {
+            north_bengal_area = {
+                add_province_modifier = {
+                    name = bts_npl_fertile_lowlands
+                    duration = 7300 # 20 years
+                }
+            }
+            gaur_area = {
+                add_province_modifier = {
+                    name = bts_npl_fertile_lowlands
+                    duration = 7300 # 20 years
+                }
+            }
+
+            bengal_region = {
+                limit = {
+                    NOT = { is_permanent_claim = ROOT }
+                    NOT = { is_core = ROOT }
+                }
+                add_permanent_claim = ROOT
+            }
+
+            # Only when our overlord is the Indian nation holding the foothold provinces
+            custom_tooltip = bts_npl_bengal_partnership_reward_tt
+            hidden_effect = {
+                if = {
+                    limit = {
+                        is_subject = yes
+                        overlord = {
+                            capital_scope = { superregion = india_superregion }
+                        }
+                        north_bengal_area = {
+                            type = all
+                            owner = { ROOT = { is_subject_of = PREV } }
+                        }
+                        gaur_area = {
+                            type = all
+                            owner = { ROOT = { is_subject_of = PREV } }
+                        }
+                    }
+                    add_country_modifier = {
+                        name = bts_npl_bengal_partnership
+                        duration = -1
+                    }
+                    overlord = {
+                        add_country_modifier = {
+                            name = bts_npl_bengal_partnership
+                            duration = -1
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    bts_npl_sword_of_dharma = {
+        icon = mission_the_ganges_campaign
+        required_missions = {
+            btn_npl_reclaim_hindustan
+            bts_npl_establish_bengal_foothold
+        }
+        position = 5
+
+        provinces_to_highlight = {
+            superregion = india_superregion
+            NOT = { bts_npl_held_by_root_or_overlord = yes }
+        }
+
+        # Provinces held by our overlord count too, and our overlord is not a rival for supremacy
+        trigger = {
+            OR = {
+                religion = hinduism
+                bts_is_buddhist = yes
+            }
+
+            custom_trigger_tooltip = {
+                tooltip = bts_npl_sword_of_dharma_count_tt
+                calc_true_if = {
+                    amount = 100
+                    all_province = {
+                        superregion = india_superregion
+                        bts_npl_held_by_root_or_overlord = yes
+                    }
+                }
+            }
+
+            custom_trigger_tooltip = {
+                tooltip = bts_npl_sword_of_dharma_trigger_tt
+                NOT = {
+                    any_country = {
+                        NOT = { tag = ROOT }
+                        NOT = {
+                            ROOT = {
+                                is_subject_of = PREV
+                                NOT = { is_subject_of_type = tributary_state }
+                            }
+                        }
+                        capital_scope = {
+                            superregion = india_superregion
+                        }
+                        total_development = ROOT
+                    }
+                }
+            }
+
+            bts_has_best_technology = yes
+        }
+
+        effect = {
+            # A subject hands the glory to its overlord instead (the tooltip shows whichever branch applies now)
+            if = {
+                limit = {
+                    is_subject = no
+                }
+                add_adm_power = 100
+                add_dip_power = 100
+                add_mil_power = 100
+
+                custom_tooltip = bts_newline
+                add_prestige_or_monarch_power = {
+                    amount = 50
+                }
+
+                custom_tooltip = bts_newline
+                bts_add_25_permanent_power_projection = yes
+            }
+            else = {
+                overlord = {
+                    add_adm_power = 100
+                    add_dip_power = 100
+                    add_mil_power = 100
+
+                    custom_tooltip = bts_newline
+                    add_prestige_or_monarch_power = {
+                        amount = 50
+                    }
+
+                    custom_tooltip = bts_newline
+                    bts_add_25_permanent_power_projection = yes
+                }
+            }
+
+            custom_tooltip = bts_npl_sword_of_dharma_subject_reward_tt
+
+            # Marches become the blade of their overlord
+            custom_tooltip = bts_npl_sword_of_dharma_march_reward_tt
+            hidden_effect = {
+                if = {
+                    limit = { is_subject_of_type = march }
+                    add_country_modifier = {
+                        name = bts_npl_sword_of_dharma
+                        duration = -1
+                    }
+                }
+            }
+        }
+    }
+}
+
+bts_nepalese_missions_4 = {
+    slot = 4
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_settle_the_valleys = {
+        icon = mission_colonial
+        required_missions = { }
+        position = 2
+
+        provinces_to_highlight = {
+            OR = {
+                area = nepal_area
+                area = baisi_rajya_area
+                area = himalayan_hills_area
+            }
+            OR = {
+                NOT = { owned_by = ROOT }
+                NOT = { grown_by_development = 1 }
+            }
+        }
+
+        trigger = {
+            num_of_owned_provinces_with = {
+                value = 5
+                grown_by_development = 1
+                OR = {
+                    area = nepal_area
+                    area = baisi_rajya_area
+                    area = himalayan_hills_area
+                }
+            }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = bts_npl_settled_valleys
+                duration = 7300 # 20 years
+            }
+        }
+    }
+
+    bts_npl_develop_kathmandu = {
+        icon = mission_fortify_mandu
+        required_missions = {
+            bts_npl_settle_the_valleys
+            bts_npl_unify_nepal
+        }
+        position = 3
+
+        provinces_to_highlight = {
+            province_id = 557
+            OR = {
+                owned_by = ROOT
+                NOT = { development = 15 }
+                NOT = { has_fort_building_trigger = yes }
+                NOT = { has_tax_building_trigger = yes }
+                NOT = { has_trade_building_trigger = yes }
+            }
+        }
+
+        trigger = {
+            557 = {
+                owned_by = ROOT
+                development = 15
+                has_fort_building_trigger = yes
+                has_tax_building_trigger = yes
+                has_trade_building_trigger = yes
+            }
+        }
+
+        effect = {
+            nepal_area = {
+                add_base_tax = 1
+            }
+            custom_tooltip = bts_newline
+
+            557 = {
+                add_permanent_province_modifier = {
+                    name = bts_fortified_stronghold
+                    duration = -1
+                }
+                add_province_modifier = {
+                    name = bts_provincial_economic_foundations
+                    duration = 7300 # 20 years
+                }
+            }
+
+            557 = {
+                add_center_of_trade_level = 1
+            }
+
+            custom_tooltip = bts_npl_develop_kathmandu_reward_tt
+            set_country_flag = bts_npl_can_move_to_kathmandu
+        }
+    }
+
+    bts_npl_vertical_kingdom = {
+        icon = mission_prosperity_in_bengal
+        required_missions = {
+            bts_npl_looking_beyond
+            bts_npl_develop_kathmandu
+        }
+        position = 4
+
+        trigger = {
+            num_of_owned_provinces_with = {
+                value = 10
+                has_production_building_trigger = yes
+                OR = {
+                    base_production = 6
+                    has_manufactory_trigger = yes
+                }
+            }
+        }
+
+        effect = {
+            add_country_modifier = {
+                name = bts_economic_boom
+                duration = 7300 # 20 years
+            }
+
+            add_years_of_income = 0.5
+        }
+    }
+}
+
+bts_nepalese_missions_5 = {
+    slot = 5
+    generic = no
+    ai = yes
+    potential = {
+        OR = {
+            tag = NPL
+            tag = GRK
+            tag = KTU
+            tag = LWA
+            tag = JML
+            tag = DTI
+            tag = KMN
+            tag = GHR
+            tag = SRM
+            tag = KGR
+            tag = DNG
+        }
+        NOT = { map_setup = map_setup_random }
+    }
+    has_country_shield = yes
+
+    bts_npl_establish_bharadar_council = {
+        icon = mission_indian_stateman
+        required_missions = { }
+        position = 1
+
+        trigger = {
+            has_adm_advisor = yes
+            has_dip_advisor = yes
+            has_mil_advisor = yes
+            is_in_deficit = no
+        }
+
+        effect = {
+            change_government_reform_progress = 50
+
+            custom_tooltip = bts_newline
+            add_country_modifier = {
+                name = bts_npl_bharadar_council_t1
+                duration = -1
+            }
+        }
+    }
+
+    bts_npl_law_of_the_land = {
+        icon = mission_deccanis
+        required_missions = {
+            bts_npl_establish_bharadar_council
+        }
+        position = 3
+
+        trigger = {
+            tag = NPL
+            stability = 2
+            crown_land_share = 40
+            OR = {
+                NOT = { average_autonomy = 10 }
+                NOT = {
+                    estate_influence = {
+                        estate = all
+                        influence = 60
+                    }
+                }
+            }
+            OR = {
+                statesman = 3
+                adm = 5
+            }
+        }
+
+        effect = {
+            change_government_reform_progress = 50
+
+            custom_tooltip = bts_newline
+            custom_tooltip = bts_npl_bharadar_council_upgrade_t2
+            hidden_effect = {
+                remove_country_modifier = bts_npl_bharadar_council_t1
+                add_country_modifier = {
+                    name = bts_npl_bharadar_council_t2
+                    duration = -1
+                }
+            }
+        }
+    }
+
+    bts_npl_reform_the_bureaucracy = {
+        icon = mission_asian_trader
+        required_missions = {
+            bts_npl_develop_kathmandu
+            bts_npl_law_of_the_land
+        }
+        position = 4
+
+        trigger = {
+            crown_land_share = 75
+            num_of_owned_provinces_with = {
+                value = 10
+                has_courthouse_building_trigger = yes
+            }
+            NOT = { corruption = 1 }
+            OR = {
+                monthly_adm = 12
+                adm = 6
+            }
+        }
+
+        effect = {
+            change_government_reform_progress = 50
+
+            custom_tooltip = bts_newline
+            custom_tooltip = bts_npl_bharadar_council_upgrade_t3
+            hidden_effect = {
+                remove_country_modifier = bts_npl_bharadar_council_t2
+                add_country_modifier = {
+                    name = bts_npl_bharadar_council_t3
+                    duration = -1
+                }
+            }
+        }
+    }
+}

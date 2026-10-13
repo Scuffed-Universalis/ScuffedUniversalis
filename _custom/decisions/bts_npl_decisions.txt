@@ -1,0 +1,34 @@
+# Nepal content ported from "Beyond the Sunset" (workshop 3735234315). Tibet/Malaya content not ported.
+
+country_decisions = {
+    bts_npl_move_capital = {
+        major = yes
+        potential = {
+            primary_culture = nepali
+            has_country_flag = bts_npl_can_move_to_kathmandu
+            NOT = {
+                capital_scope = {
+                    province_id = 557
+                }
+            }
+        }
+        provinces_to_highlight = {
+            province_id = 557
+        }
+        allow = {
+            is_at_war = no
+            557 = {
+                owned_by = ROOT
+            }
+        }
+        effect = {
+            557 = {
+                add_base_tax = 1
+                move_capital_effect = yes
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}

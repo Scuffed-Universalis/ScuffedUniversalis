@@ -1,0 +1,9 @@
+# Nepal content ported from "Beyond the Sunset" (workshop 3735234315). Tibet/Malaya content not ported.
+
+bts_add_25_permanent_power_projection = {
+    add_power_projection = {
+        type = 25_permanent_power_projection
+        amount = 25
+    }
+    custom_tooltip = bts_power_projection_is_permanent
+}

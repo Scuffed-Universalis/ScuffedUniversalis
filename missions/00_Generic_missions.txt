@@ -7,7 +7,8 @@ military_missions = { #Series name is displayed over the slot?
 	generic = yes #if a mission without generic = yes wants this slot then it overrides this.
 	ai = no #Can exist under the series itself or within individual missions.
 	potential = {
-		NOT = { tag = MIR }
+		NOT = { tag = MIR tag = NPL tag = GRK tag = KTU tag = LWA tag = JML tag = DTI tag = KMN tag = GHR tag = SRM tag = KGR tag = DNG }
+		always = yes
 	} #These are triggers for the entire series
 	
 	#missions
@@ -196,7 +197,8 @@ diplomatic_missions = {
 	generic = yes
 	
 	potential = {
-		NOT = { tag = MIR }
+		NOT = { tag = MIR tag = NPL tag = GRK tag = KTU tag = LWA tag = JML tag = DTI tag = KMN tag = GHR tag = SRM tag = KGR tag = DNG }
+	   always = yes
 	}
 	
 	building_alliances = {
@@ -433,7 +435,8 @@ administrative_missions = {
 	generic = yes
 	
 	potential = {
-		NOT = { tag = MIR }
+		NOT = { tag = MIR tag = NPL tag = GRK tag = KTU tag = LWA tag = JML tag = DTI tag = KMN tag = GHR tag = SRM tag = KGR tag = DNG }
+	   always = yes
 	}
 	high_income_mission = {
 		icon = mission_high_income

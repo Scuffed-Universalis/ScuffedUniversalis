@@ -237,12 +237,29 @@ $text = Read-1252 "$game\missions\African_Missions.txt"
 $re = [regex]'(?s)^african_missions\s*=\s*\{(.*?)potential\s*=\s*\{.*?\r?\n\t\}'
 if (-not $re.IsMatch($text)) { throw "vanilla African_Missions.txt layout changed - check the MIR patch" }
 Write-1252 (Join-Path $dst "missions\mir_african_missions.txt") $re.Replace($text, "mir_african_missions = {`$1potential = {`r`n`t`ttag = MIR`r`n`t}", 1)
-#     Vanilla's always-on generic trees (slots 2-4) otherwise stack onto MIR's columns where its own missions
-#     start lower down, so take a copy of the installed vanilla file that excludes MIR.
-$text = Read-1252 "$game\missions\00_Generic_missions.txt"
-$re = [regex]'potential\s*=\s*\{\s*always\s*=\s*yes\s*\}'
-if ($re.Matches($text).Count -ne 3) { throw "vanilla 00_Generic_missions.txt layout changed - check the MIR patch" }
-Write-1252 (Join-Path $dst "missions\00_Generic_missions.txt") $re.Replace($text, "potential = {`r`n`t`tNOT = { tag = MIR }`r`n`t}")
+#     Vanilla generic trees otherwise stack onto columns where a ported tree's missions start lower down, so
+#     write copies of those vanilla files that exclude the nations with ported trees (MIR; the Nepal tags,
+#     whose tree is _custom\missions\bts_Nepalese_Missions.txt).
+$nplTags = 'NPL','GRK','KTU','LWA','JML','DTI','KMN','GHR','SRM','KGR','DNG'
+function Write-VanillaMissionsExcluding($file, $tags, $expectedSeries) {
+  $out = Join-Path $dst "missions\$file"
+  if (Test-Path $out) { throw "$file is now shipped by a source mod - patch that copy instead" }
+  $text = Read-1252 "$game\missions\$file"
+  $re = [regex]'\bpotential\s*=\s*\{'
+  if ($re.Matches($text).Count -ne $expectedSeries) { throw "vanilla $file layout changed - check the exclusion patch" }
+  $not = "potential = {`r`n`t`tNOT = { " + (($tags | ForEach-Object { "tag = $_" }) -join ' ') + " }"
+  Write-1252 $out $re.Replace($text, $not)
+}
+Write-VanillaMissionsExcluding '00_Generic_missions.txt' (@('MIR') + $nplTags) 3
+Write-VanillaMissionsExcluding 'Indian_Missions.txt' $nplTags 8
+#     Forming Nepal: allow it while a subject (Nepal is usually an Indian player's march). The potential already
+#     shows the decision to player subjects; only the allow block's independence check is removed.
+$out = Join-Path $dst "decisions\NepalNation.txt"
+if (Test-Path $out) { throw "NepalNation.txt is now shipped by a source mod - patch that copy instead" }
+$text = Read-1252 "$game\decisions\NepalNation.txt"
+$re = [regex]'(?s)(\ballow\s*=\s*\{.*?)\r?\n[ \t]*is_free_or_tributary_trigger = yes'
+if (-not $re.IsMatch($text)) { throw "vanilla NepalNation.txt layout changed - check the subject patch" }
+Write-1252 $out $re.Replace($text, '$1', 1)
 
 # 4. Hand-maintained content (ports from mods too broken to patch, e.g. Merina's "Malagasy Glory" missions).
 #    Lives in _custom\ with the normal mod folder layout and is copied over the build output last.

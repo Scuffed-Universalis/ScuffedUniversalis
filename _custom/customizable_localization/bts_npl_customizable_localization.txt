@@ -1,0 +1,29 @@
+# Nepal (ported "Beyond the Sunset" content): the legitimacy-type line of 'Reclaimed Hindustan' for our overlord,
+# matching how the game itself only lists the line that applies to a country's government.
+# Same order as vanilla's GetLegitimacyOrSimilarCurrency; legitimacy is the default (also when not a subject).
+defined_text = {
+	name = GetNplOverlordReclaimedHindustanLine
+
+	text = {
+		localisation_key = bts_npl_overlord_line_republican_tradition
+		trigger = {
+			overlord = { government = republic }
+		}
+	}
+	text = {
+		localisation_key = bts_npl_overlord_line_devotion
+		trigger = {
+			overlord = { uses_devotion = yes }
+		}
+	}
+	text = {
+		localisation_key = bts_npl_overlord_line_horde_unity
+		trigger = {
+			overlord = { uses_horde_unity = yes }
+		}
+	}
+	text = {
+		localisation_key = bts_npl_overlord_line_legitimacy
+		#default
+	}
+}

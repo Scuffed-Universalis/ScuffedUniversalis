@@ -1,0 +1,36 @@
+# Nepal content ported from "Beyond the Sunset" (workshop 3735234315). Tibet/Malaya content not ported.
+
+bts_has_best_technology = {
+    custom_trigger_tooltip = {
+        tooltip = bts_has_best_technology_tt
+        NOT = {
+            any_country = {
+                tech_difference = 1
+                NOT = { tag = ROOT }
+            }
+        }
+    }
+}
+
+bts_is_buddhist = {
+    custom_trigger_tooltip = {
+        tooltip = bts_is_buddhist_tt
+        uses_karma = yes
+    }
+}
+
+# Province scope: held by ROOT or its non-tributary subjects, or owned by ROOT's (non-tributary) overlord.
+bts_npl_held_by_root_or_overlord = {
+    custom_trigger_tooltip = {
+        tooltip = bts_npl_held_by_root_or_overlord_tt
+        OR = {
+            country_or_non_sovereign_subject_holds = ROOT
+            owner = {
+                ROOT = {
+                    is_subject_of = PREV
+                    NOT = { is_subject_of_type = tributary_state }
+                }
+            }
+        }
+    }
+}

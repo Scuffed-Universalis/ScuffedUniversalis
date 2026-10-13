@@ -1,0 +1,46 @@
+# Nepal content ported from "Beyond the Sunset" (workshop 3735234315). Tibet/Malaya content not ported.
+
+bts_npl_hill_warriors = {
+    potential = {
+        has_country_flag = bts_can_have_hill_warriors
+    }
+
+    trigger = {
+        primary_culture = nepali
+        557 = {
+            is_capital = yes
+        }
+    }
+
+    attack_bonus_in_capital_terrain = 1
+    drill_gain_modifier = 0.25
+}
+
+bts_npl_yam_between_boulders = {
+    potential = {
+        has_country_flag = bts_npl_can_be_yam_between_boulders
+    }
+
+    trigger = {
+        calc_true_if = {
+            amount = 2
+            all_neighbor_country = {
+                total_development = ROOT
+                OR = {
+                    is_rival = ROOT
+                    ai_attitude = {
+                        who = ROOT
+                        attitude = attitude_hostile
+                    }
+                    ai_attitude = {
+                        who = ROOT
+                        attitude = attitude_outraged
+                    }
+                }
+            }
+        }
+    }
+
+    army_tradition = 1.0
+    improve_relation_modifier = 0.25
+}
