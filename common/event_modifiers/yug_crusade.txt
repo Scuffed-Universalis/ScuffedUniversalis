@@ -1,0 +1,17 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+yug_crusade_against_ottomans= {
+    land_morale =0.2
+    land_forcelimit_modifier =0.25
+    global_manpower_modifier =0.30
+    land_maintenance_modifier =-0.30
+    war_exhaustion = -0.05
+}
+
+yug_defends_against_ottomans = {
+	defensiveness = 0.15
+	global_manpower_modifier = 0.05
+	manpower_recovery_speed = 0.05
+}

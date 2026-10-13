@@ -1,0 +1,7 @@
+spriteTypes = {
+	# Mod Icon:
+	spriteType = {
+		name = "GFX_mod_icon_kcc_yug"
+		textureFile = "gfx/interface/kingdom_collection_core/yug_icon_active.dds"
+	}
+}

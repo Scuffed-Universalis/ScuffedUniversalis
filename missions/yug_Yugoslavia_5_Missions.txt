@@ -1,0 +1,241 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+yug_main_mission_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = YUG
+		NOT = { map_setup = map_setup_random }
+	}
+	yug_christian_bastion = {
+		icon = mission_european_church
+		required_missions = {
+		}
+		trigger = {
+			OR = {
+				religious_unity = 0.75
+				defensive_war_with = TUR
+			}			
+		}
+		effect= {
+			IF= {
+				limit= {
+					religion =orthodox
+				}
+				reverse_add_opinion = {
+					who = MOS
+					modifier = opinion_supported_war
+				}
+				reverse_add_opinion = {
+					who = RUS
+					modifier = opinion_supported_war
+				}
+				reverse_add_opinion = {
+					who = WAL
+					modifier = opinion_supported_war
+				}	
+				reverse_add_opinion = {
+					who = MOL
+					modifier = opinion_supported_war
+				}
+				reverse_add_opinion = {
+					who = BYZ
+					modifier = opinion_supported_war
+				}
+				reverse_add_opinion = {
+					who = LIT
+					modifier = opinion_supported_war
+				}
+			}
+			IF= {
+				limit= {
+					religion =catholic
+				}
+				reverse_add_opinion = {
+					who = HUN
+					modifier = opinion_supported_war
+				}
+				reverse_add_opinion = {
+					who = PAP
+					modifier = opinion_supported_war
+				}
+				reverse_add_opinion = {
+					who = HAB
+					modifier = opinion_supported_war
+				}
+			}
+			add_country_modifier = {
+				name = "influential_diplomacy"
+				duration = -1
+			}
+		}
+	}
+	yug_request_help_against_ottomans= {
+		icon = mission_alliances
+		required_missions= {
+			yug_christian_bastion
+		}
+		
+		trigger = {
+			OR = {
+				army_size_percentage =1.0
+				defensive_war_with = TUR
+			}
+		}
+		effect = {
+			IF= {
+				limit= {
+					NOT= { defensive_war_with = TUR }
+				}
+				add_prestige = -10
+			}
+			IF= {
+				limit= {
+					defensive_war_with = TUR
+				}
+				add_country_modifier = {
+					name = yug_defends_against_ottomans
+					duration =-1 
+				}
+			}
+			bulgaria_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_permanent_claim = YUG
+			}
+		}
+	}
+	yug_war_against_ottomans = {
+		icon = mission_crusade_for_varna
+		required_missions = {
+			yug_request_help_against_ottomans
+		}
+		trigger = {
+			NOT = {
+				truce_with = TUR
+			}
+			NOT = {
+				alliance_with = TUR
+			}
+			OR = {
+				is_at_war = no
+				defensive_war_with = TUR
+				NOT = { exists = TUR }
+			}
+			151 = {
+				owner = {
+					NOT = { religion_group = christian } 
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = yug_war_against_ottomans_ttp
+			country_event = {
+				id = yug_crusade.1
+			}
+			
+			IF = {
+				limit = { exists = TUR }
+				add_country_modifier = {
+					name = yug_crusade_against_ottomans
+					duration = 9125
+					desc = "yug_till_end_of_crusade"
+				}
+				declare_war_with_cb = {
+					who = TUR
+					casus_belli = cb_crusade
+					war_goal_province = 151
+				}
+			}
+			ELSE = {
+				add_papal_influence = 10
+				add_patriarch_authority = 0.05
+				add_estate_church_loyalty_effect = yes
+			}	
+			IF= {
+				limit= {
+					defensive_war_with = TUR
+					NOT = { has_country_modifier = yug_defends_against_ottomans }
+				}
+				add_country_modifier = {
+					name = yug_defends_against_ottomans
+					duration = -1 
+				}
+			}
+		}
+	}
+
+	yug_beat_ottomans= {
+		position = 5
+		icon = mission_cannons_firing
+		required_missions = {
+			yug_war_against_ottomans
+		}
+		trigger = {
+			TUR = {
+				capital_scope = {
+					NOT = { region = balkan_region }
+				}
+			}
+		}
+		effect = {
+			add_prestige =10
+			
+			balkan_region = {
+				limit = {
+					AND = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			add_country_modifier = {
+				name = "expansionist_country"
+				duration = -1
+			}
+			
+		}
+	}
+
+	yug_reclaim_constantinople = {
+		position = 6
+		icon = mission_central_asian_city
+		required_missions = {
+			yug_beat_ottomans
+		}
+		trigger = {
+			#owns_core_province = 151 #constantinople
+			151 = {
+				religion_group = christian
+				owner = {
+					religion_group = christian
+				}
+			}
+			
+		}
+		effect = {
+			add_prestige = 10
+			IF = {
+				limit= {
+					religion = orthodox
+				}
+				add_patriarch_authority = 0.1
+			}
+			IF = {
+				limit= {
+					religion = catholic
+				}
+				add_papal_influence = 30
+			}
+			
+		}
+	}
+}

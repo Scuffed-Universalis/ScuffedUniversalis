@@ -1,0 +1,75 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+
+yug_main_mission_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = YUG
+		NOT = { map_setup = map_setup_random }
+	}
+	yug_alliances = {
+		position = 2
+		icon = mission_alliances
+		required_missions = {
+		}
+		trigger = {
+			num_of_allies = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = improved_dip_reputation
+				duration = -1
+			}
+		}
+	}
+	yug_ports = {
+		icon = mission_galleys_in_port
+		required_missions = {
+			yug_alliances
+		}
+		trigger = {
+			num_of_ports = 4
+			
+		}
+		effect = {
+			add_navy_tradition = 5
+		}
+	}
+	yug_fleet = {
+		position = 4
+		icon = mission_establish_high_seas_navy
+		required_missions = {
+			yug_ports
+			yug_conquer_cro
+		}
+		trigger = {
+			naval_forcelimit = 20
+			num_of_galley = 20
+		}
+		effect = {
+			112 = {
+				add_permanent_claim = ROOT
+			} 
+			
+		}
+	}
+	yug_venetian_trade = {
+		icon = mission_dominate_home_trade_node
+		required_missions = {
+			yug_fleet
+		}
+		trigger = {
+			1308 = {
+				is_strongest_trade_power = ROOT
+			}			
+		}
+		effect = {
+			add_mercantilism = 5
+		}
+	}
+}

@@ -1,0 +1,194 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+namespace = yug_crusade
+
+country_event = {
+	id = yug_crusade.1
+	
+	title = "yug_crusade_begins_title"
+	desc = "yug_crusade_begins_desc"
+	picture = RELIGIOUS_WARS_eventPicture
+	is_triggered_only= yes
+	#War with Ottomans
+	option = {
+		ai_chance = { factor = 1 }
+		name = "yug_crusade_begins_1"
+	}
+}
+
+country_event = {
+	id = yug_crusade.2
+	title = "yug_crusade_help_title"
+	desc = "yug_crusade_help_desc"
+	picture = "LAND_MILITARY_eventPicture"
+	trigger = {		
+		has_country_modifier = yug_crusade_against_ottomans
+	}
+	mean_time_to_happen = {
+		months = 12
+		modifier = {
+			factor = 2
+			NOT = {
+				OR = {
+					any_owned_province = {
+						controlled_by = TUR
+					}
+					TUR = {
+						any_owned_province = {
+							controlled_by = ROOT
+						}
+					}
+				}
+			}			
+		}
+		modifier = {
+			factor = 4
+			war_score_against = {
+			who = TUR
+			value = 50
+			}
+		}
+		modifier = {
+			factor =2
+			war_score_against = {
+			who = TUR
+			value = 25
+			}
+		}
+		modifier = {
+			factor =0.75
+			NOT = {
+				war_score_against = {
+				who = TUR
+				value = 0
+				}
+			}
+		}
+		modifier = {
+			factor =0.75
+			NOT = {
+				war_score_against = {
+				who = TUR
+				value = -25
+				}
+			}
+		}
+		modifier = {
+			factor =0.75
+			NOT = {
+				war_score_against = {
+				who = TUR
+				value = -50
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			has_country_modifier = yug_defends_against_ottomans
+		}
+		modifier = {
+			factor = 2
+			TUR = {
+				ai = yes
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { manpower_percentage = 1 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				NOT = { manpower_percentage = 0.2 }
+			}
+		}
+		name = "yug_crusade_man"
+		add_yearly_manpower = 2
+	}
+	option = {
+		trigger = {
+			NOT = { treasury = 1000 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				num_of_loans = 1
+			}
+		}
+		name = "yug_crusade_cash"
+		add_years_of_income = 1
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = "yug_crusade_mil"
+		
+		IF = {
+			limit = {
+				NOT = { army_tradition = 75 }
+			}
+			add_army_tradition = 5
+		}
+		IF = {
+			limit = {
+				NOT = { mil = 5 }
+			}
+			random_list = {
+				90 = { add_mil_power = 33 }
+				10 = { change_mil = 1 }
+			}
+		}
+		ELSE = {
+			add_adm_power = 11
+			add_dip_power = 11
+			add_mil_power = 33 
+		}
+	}
+	option = {
+		trigger = {
+			NOT = { num_of_generals = 4 }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				NOT = { num_of_generals = 1 }
+			}
+		}
+		name = "yug_crusade_officer"
+		create_general = {
+			tradition = 75
+		}
+	}
+	
+}
+
+country_event = {
+	id = yug_crusade.3
+	
+	title = "yug_crusade_over_title"
+	desc = "yug_crusade_over_desc"
+	picture = MILITARY_CAMP_eventPicture
+	fire_only_once = yes
+	#War with Ottomans
+	trigger = {
+		has_country_modifier = yug_crusade_against_ottomans
+		NOT = {
+			war_with = TUR			
+		}
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = "yug_crusade_over_1"
+		remove_country_modifier = yug_crusade_against_ottomans
+		add_years_of_income = -3
+		add_yearly_manpower = -3
+		kill_leader = {
+			type = general
+		}
+	}
+}

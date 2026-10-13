@@ -1,0 +1,308 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+namespace = yug_flavor
+
+
+country_event = {
+	id = yug_flavor.1
+	
+	title = "yug_begin_culture_conflict"
+	desc = "yug_begin_culture_conflict_desc"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only= yes
+	#refuse to join
+	option = {
+		name = "yug_begin_culture_conflict_1"
+		add_country_modifier = {
+			name = yug_culture_conflict
+			duration = -1
+		}
+	}
+
+}
+
+country_event = {
+	id = yug_flavor.2
+	
+	title = "yug_flavor_croats_rise_up_title"
+	desc = "yug_flavor_rise_up_desc"
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		tag = YUG
+		NOT = { has_country_modifier = yug_resolved_culture_conflict }
+		NOT = { dominant_culture =croatian }
+	}
+	mean_time_to_happen = {
+		years = 3
+		modifier = {
+			factor = 2
+			stability = 2
+		}
+		modifier = {
+			factor = 5
+			has_country_modifier = yug_culture_conflict
+		}
+		modifier = {
+			factor = 5
+			has_country_modifier = yug_resolving_culture_conflict
+		}
+	}
+	#autonomy for croatia
+	option = {
+		ai_chance = { factor = 1 }
+		name = "yug_flavor_give_autonomy"
+		croatia_area = {
+			add_local_autonomy = 25
+		}
+	}
+
+	#croatian rebels
+	option = {
+		ai_chance = { factor =0 }
+		name = "yug_flavor_rebels_rise_up"
+		random_owned_province = {
+			limit = {
+				culture = croatian
+			}
+			spawn_rebels = {
+				size = 1
+				type = nationalist_rebels
+			}
+		}
+	}
+
+	#apeace croatians
+	option = {
+		ai_chance = { factor =2 }
+		name = "yug_flavor_apeace"
+		add_dip_power = -33
+	}
+}
+
+
+country_event = {
+	id = yug_flavor.3
+	
+	title = "yug_flavor_bosnians_rise_up_title"
+	desc = "yug_flavor_rise_up_desc"
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		tag = YUG
+		NOT = { has_country_modifier = yug_resolved_culture_conflict }
+		NOT = { has_country_modifier = yug_bosnian_dominance }
+	}
+	mean_time_to_happen = {
+		years = 3
+		modifier = {
+			factor = 2
+			stability = 2
+		}
+		modifier = {
+			factor = 2
+			has_country_modifier = yug_resolving_culture_conflict
+		}
+		modifier = {
+			factor = 4
+			has_country_modifier = yug_croats_culture_conflict
+		}
+	}
+	#bosnian autonomy
+	option = {
+		ai_chance = { factor = 1 }
+		name = "yug_flavor_give_autonomy"
+		bosnia_area = {
+			add_local_autonomy = 25
+		}
+	}
+
+	#bosnian rebels
+	option = {
+		ai_chance = { factor =0 }
+		name = "yug_flavor_rebels_rise_up"
+		random_owned_province = {
+			limit = {
+				area = bosnia_area
+			}
+			spawn_rebels = {
+				size = 1
+				type = nationalist_rebels
+			}
+		}
+	}
+
+	#apeace bosnians
+	option = {
+		ai_chance = { factor =2 }
+		name = "yug_flavor_apeace"
+		add_dip_power = -33
+	}
+}
+
+country_event = {
+	id = yug_flavor.4
+	
+	title = "yug_flavor_serbs_rise_up_title"
+	desc = "yug_flavor_rise_up_desc"
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		tag = YUG
+		NOT = { has_country_modifier = yug_resolved_culture_conflict }
+		NOT = { has_country_modifier = yug_serbian_dominance }
+	}
+	mean_time_to_happen = {
+		years = 3
+		modifier = {
+			factor = 2
+			stability = 2
+		}
+		modifier = {
+			factor = 2
+			has_country_modifier = yug_resolving_culture_conflict
+		}
+		modifier = {
+			factor = 4
+			has_country_modifier = yug_croats_culture_conflict
+		}
+	}
+	#bosnian autonomy
+	option = {
+		ai_chance = { factor = 1 }
+		name = "yug_flavor_give_autonomy"
+		serbia_area = {
+			add_local_autonomy = 25
+		}
+		rascia_area = {
+			add_local_autonomy = 25
+		}
+	}
+
+	#bosnian rebels
+	option = {
+		ai_chance = { factor = 0 }
+		name = "yug_flavor_rebels_rise_up"
+		random_owned_province = {
+			limit = {
+				OR = {
+					area = serbia_area
+					area = rascia_area
+				}	
+			}
+			spawn_rebels = {
+				size = 1
+				type = nationalist_rebels
+			}
+		}
+	}
+
+	#apeace bosnians
+	option = {
+		ai_chance = { factor = 2 }
+		name = "yug_flavor_apeace"
+		add_dip_power = -33
+	}
+}
+
+
+country_event = {
+	id = yug_flavor.7
+	
+	title = "yug_flavor_festival_title"
+	desc = "yug_flavor_festival_desc"
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		tag = YUG
+		stability = 0
+	}
+	mean_time_to_happen = {
+		years = 25
+		modifier = {
+			factor = 0.75
+			stability = 1
+		}
+		modifier = {
+			factor = 0.75
+			stability = 2
+		}
+		modifier = {
+			factor = 0.75
+			stability = 3
+		}
+	}
+
+	#apeace bosnians
+	option = {
+		ai_chance = { factor = 1 }
+		name = "yug_flavor_festival_1"
+		add_dip_power = 33
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_country_modifier = yug_resolved_culture_conflict
+		}
+		highlight = yes
+		name = "yug_flavor_festival_2"
+		add_adm_power = 20
+		add_dip_power = 20
+		add_mil_power = 20
+	}
+}
+
+country_event = {
+	id = yug_flavor.5
+	title = "yug_flavor_new_dynasty_title"
+	desc = "yug_flavor_new_dynasty_desc"
+	picture = NEW_HEIR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_heir = no
+		ruler_age = 30
+	}
+	mean_time_to_happen = {
+		years = 1
+	}
+	option = {
+		name = yug_yes
+		define_heir = {
+			name = "Otit"
+			adm = 5
+			dip = 4
+			mil = 4
+			dynasty = "Karadordevic"
+		}
+	}
+	option = {
+		name = yug_no
+		add_legitimacy = -10
+	}
+}
+
+country_event = {
+	id = yug_flavor.6
+	title = "yug_flavor_peasants_republic_title"
+	desc = "yug_flavor_peasants_republic_desc"
+	picture = REVOLT_HUNGARIAN_eventPicture
+	fire_only_once = yes
+	trigger = {
+		current_age = age_of_revolutions
+		NOT = { stability = 3 }
+	}
+	mean_time_to_happen = {
+		years = 20
+	}
+	option = {
+		ai_chance = { factor = 1 }
+		name = yug_no
+		add_prestige = 25
+		add_stability = -1
+	}
+	option = {
+		ai_chance = { factor = 0 }
+		name = yug_yes
+		change_government = republic
+		add_government_reform = peasants_republic
+		add_stability = -2
+	}
+}

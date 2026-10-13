@@ -1,0 +1,200 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+yug_main_mission_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+
+	potential = {
+		tag = YUG
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	yug_start_resolving_culture_conflict = {
+		required_missions = {
+		}
+		icon = mission_assemble_an_army
+		trigger = {
+			accepted_culture = serbian
+			accepted_culture = croatian
+			has_country_modifier = yug_culture_conflict
+		}
+		effect = {
+			add_dip_power = 100
+			remove_country_modifier = yug_culture_conflict
+			add_country_modifier = {
+				name = yug_resolving_culture_conflict
+				duration = -1
+			}
+			add_country_modifier = {
+				name = yug_recent_culture_progress
+				duration = 1825
+			}
+		}
+	}
+
+	yug_unite_bos_ser = {
+		required_missions = {
+			yug_start_resolving_culture_conflict
+		}
+		provinces_to_highlight = {
+			owner = {
+				OR = {
+					tag = BOS
+					tag = SER
+					tag = HRZ
+				}
+			}
+		}
+		icon = mission_cannons_firing
+		trigger = {
+			NOT = { exists = BOS }
+			NOT = { exists = SER }
+			NOT = { exists = HRZ }
+			NOT = { has_country_modifier = yug_recent_culture_progress }
+		}
+		effect = {
+			add_prestige =20
+			add_country_modifier = {
+				name = yug_army_enthusiasm
+				duration = -1
+			}
+			add_country_modifier = {
+				name = yug_recent_culture_progress
+				duration = 1825
+			}
+		}
+	}
+
+	yug_conquer_cro = {
+		required_missions = {
+			yug_unite_bos_ser
+		}
+		icon = mission_cannons_firing
+		provinces_to_highlight = {
+			OR = {
+				area = croatia_area
+				area = slavonia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {		
+			croatia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slavonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = { has_country_modifier = yug_recent_culture_progress }
+		}
+		effect = {
+			add_mil_power =50
+			remove_country_modifier = yug_resolving_culture_conflict
+			add_country_modifier = {
+				name = yug_croats_culture_conflict
+				duration = -1
+			}
+			add_country_modifier = {
+				name = yug_recent_culture_progress
+				duration = 1825
+			}
+			add_permanent_claim = 130
+			add_permanent_claim = 3001
+		}
+	}
+	yug_unite_cro = {
+		icon = mission_cannons_firing
+		required_missions = {
+			yug_conquer_cro
+		}
+		provinces_to_highlight = {
+			area = east_adriatic_coast_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			NOT = { has_country_modifier = yug_recent_culture_progress }
+			east_adriatic_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			remove_country_modifier = yug_croats_culture_conflict
+			remove_country_modifier = yug_serbian_dominance
+			remove_country_modifier = yug_bosnian_dominance
+			add_country_modifier = {
+				name = yug_resolved_culture_conflict
+				duration = -1
+			}
+			carinthia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	yug_slovenia = {
+		icon = mission_cannons_firing
+		required_missions = {
+			yug_unite_cro
+		}
+		provinces_to_highlight = {
+			area = carinthia_area
+			AND = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				culture = slovene
+			}
+		}
+		trigger = {
+			carinthia_area = {
+				type = ALL
+				OR = {
+					AND = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					NOT = { culture = slovene }
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 100
+		}
+	}
+	
+	yug_unite_balkan = {
+		position = 6
+		icon = mission_empire
+		required_missions = {
+			yug_slovenia
+			yug_beat_ottomans
+		}
+		provinces_to_highlight = {
+			region = balkan_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			balkan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			set_government_rank = 3
+			add_country_modifier = {
+				name = "hegemonic_ambition"
+				duration = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+YUG_ideas = {
+    start = {
+		defensiveness = 0.2
+		global_heretic_missionary_strength = 0.02
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	trigger = {
+		tag = YUG
+	}
+	free = yes
+	yug_bastion_of_orthodoxy = {
+		tolerance_own = 1
+		global_heathen_missionary_strength = 0.02
+	}
+	yug_country_of_slaves = {
+		land_forcelimit_modifier = 0.2
+		land_maintenance_modifier = -0.1
+	}
+	yug_balkan_hajduks = {
+		land_morale = 0.10
+		hostile_attrition = 1
+	}
+	yug_administrate_gold_mines = {
+		inflation_reduction = 0.05
+	}
+	yug_flexible_diplomacy = {
+		diplomats = 1
+	}
+	yug_pan_slavic = {
+		culture_conversion_cost = -0.2
+		advisor_cost = -0.1
+	}
+	yug_orthodox_orders = {
+		manpower_recovery_speed = 0.1
+	}
+}

@@ -1,0 +1,36 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+yug_culture_conflict = {
+    global_unrest = 3
+    tolerance_heretic = -2
+}
+
+yug_resolving_culture_conflict = {
+    global_unrest = 3
+    tolerance_heretic = -1
+}
+
+yug_croats_culture_conflict = {
+	global_unrest = 2
+}
+
+yug_recent_culture_progress = {
+    improve_relation_modifier = 0.1
+    global_unrest = -1
+}
+
+yug_resolved_culture_conflict = {
+    global_unrest = -1
+}
+
+yug_serbian_dominance = {
+    tolerance_heretic = -1
+    global_missionary_strength = 0.01
+}
+
+yug_bosnian_dominance = {
+    tolerance_heretic = -1
+    tolerance_heathen = 2
+}

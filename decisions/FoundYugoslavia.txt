@@ -1,0 +1,193 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+country_decisions = {
+
+	form_yugoslavia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { 
+				OR = {
+					has_country_flag = formed_yugoslavia
+					}
+				}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = YUG }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			culture_group = south_slavic
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 4239 #  Belgrad
+						province_id = 3002	# Visoki
+						province_id = 4176 # Branicevo		
+					}
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 131 #  Belgrad
+						province_id = 136	# Visoki
+						province_id = 4754 # Branicevo		
+					}
+					NOT = {
+						OR = {
+							131 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+							136 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+							4754 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			adm_tech = 5
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			is_emperor = no
+			owns_core_province = 4239 #  Belgrad
+			owns_core_province = 3002	# Visoki
+			owns_core_province = 4176 # Branicevo
+			OR = {
+				owns_core_province = 131 # Zagreb
+				owns_core_province = 136 # Splato
+				owns_core_province = 4754 # Cattaro
+			}
+		}
+		effect = {
+			4239 = { #Belgrad
+				move_capital_effect = yes
+			}
+			change_tag = YUG
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			croatia_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_permanent_claim = YUG
+			}	
+			east_adriatic_coast_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_permanent_claim = YUG
+			}	
+			bosnia_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_permanent_claim = YUG
+			}	
+			serbia_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_permanent_claim = YUG
+			}	
+			rascia_area= {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			slavonia_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			IF = {
+				limit= {
+					OR = {
+						tag = SER
+						was_tag = SER
+					}
+				}
+				add_country_modifier = {
+					name = "yug_serbian_dominance"
+					duration = -1
+				}
+			}
+			IF = {
+				limit= {
+					OR = {
+						was_tag = CRO
+						tag = CRO
+					}					
+				}
+				add_country_modifier = {
+					name = "yug_bosnian_dominance"
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			country_event = {
+				id = yug_flavor.1
+				days = 7
+			}
+			add_prestige = 25
+			set_country_flag = formed_yugoslavia
+			swap_non_generic_missions = yes
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+	}
+
+
+}

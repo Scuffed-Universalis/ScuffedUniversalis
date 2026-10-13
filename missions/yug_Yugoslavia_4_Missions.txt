@@ -1,0 +1,125 @@
+#A Kingdom Collection mod
+#The Kingdom Collection Core library is source-available at https://github.com/Kingdom-Collection-Mods.
+#Contact: Best over Discord reloader or on the server.
+#Copyright Reloader - All Rights Reserved
+
+yug_main_mission_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = YUG
+		NOT = { map_setup = map_setup_random }
+	}
+	yug_conquer_bulgaria = {
+		position = 3
+		icon = mission_conquer_5_states
+		required_missions = {
+			yug_request_help_against_ottomans
+		}
+		trigger = {
+			bulgaria_area = {
+				type = ALL
+				owned_by = ROOT
+				religion_group = christian
+			}
+		}
+		effect = {
+			add_prestige = 10
+			wallachia_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			moldavia_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	yug_conquer_wal_mol = {
+		icon = mission_conquer_5_states
+		required_missions = {
+			yug_conquer_bulgaria
+		}
+		trigger = {
+			wallachia_area = {
+				type = ALL
+				owned_by = ROOT
+				religion_group = christian
+			}
+			moldavia_area = {
+				type = ALL
+				owned_by = ROOT
+				religion_group = christian
+			}
+		}
+		effect = {
+			add_prestige = 10
+			podolia_volhynia_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_dniepr_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_dniepr_area = {
+				limit = {
+					AND = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	yug_east_slavia = {
+		icon = mission_alliances
+		required_missions = {
+			yug_conquer_wal_mol
+		}
+		trigger = {
+			LIT = {
+				is_subject = no
+			}
+			podolia_volhynia_area = {
+				type = ALL
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_dniepr_area = {
+				type = ALL
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_dniepr_area = {
+				type = ALL
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_accepted_culture = ruthenian
+		}
+	}
+}

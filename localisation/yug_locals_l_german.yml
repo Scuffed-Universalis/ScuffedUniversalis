@@ -1,0 +1,159 @@
+﻿l_german:
+ #Jugoslawien
+ YUG: "Jugoslawien"
+ YUG_ADJ: "Jugoslawisch"
+ YUG_ADJ2: "Jugoslawisch"
+ YUG_ideas: "Jugoslawische Ideen"
+ YUG_ideas_start: "Jugoslawische Traditionen"
+ YUG_ideas_bonus: "Jugoslawische Idee"
+ 
+ #YUG National Ideas
+ yug_bastion_of_orthodoxy: "Christliche Bastion"
+ yug_bastion_of_orthodoxy_desc: "Vereint Katholen und Orthodoxe gegen den muslimischen Feind im Osten."
+ yug_country_of_slaves: "Land der Slaven"
+ yug_country_of_slaves_desc: "Die slavische Bevölkerung aus den Nachbarländern zieht zu euch. Die slavischen Männer sind kampfesfreudig und schließen sich bereitwillig eurer Armee an."
+ yug_balkan_hajduks: "Balkan Heiducken"
+ yug_balkan_hajduks_desc: "Hajduks in Serbia and neighboring Balkan lands have earned a more infamous reputation. These men lived the hard life of brigands, always in danger, always on the move: preying on poorly defended roads, ambushing Turkish tax collectors and merchants."
+ yug_administrate_gold_mines: "Verwaltete Goldminen"
+ yug_administrate_gold_mines_desc: "Invite the second wave of Saxon miners all the way from the Holy Roman Empire to settle in Serbia. We can re-open the ancient gold mines that had once made the small Serbian Despotate the richest country in Europe."
+ yug_flexible_diplomacy: "Flexible Diplomatie"
+ yug_flexible_diplomacy_desc: "Due to its position between a hammer and an anvil, the West and the East, the cities of Rome and Constantinople, Yugoslavia has to adapt in order to thrive. While to some maintaining good relations with lands far away is a matter of luxury and prestige, to Yugoslavia it's a matter of survival."
+ yug_pan_slavic: "Pan Slavismus"
+ yug_pan_slavic_desc: "Vereint die Slaven und macht sie zu einem starken Volk."
+ yug_orthodox_orders: "Ritterorden"
+ yug_orthodox_orders_desc: "Ritterorden organisieren sich, um mit euch gegen die Muslime im Osten zu kämpfen."
+ 
+ #Form Yug
+ form_yugoslavia_title: "Gründe das Königreich Jugoslawien"
+ form_yugoslavia_desc: "Das Königreich Jugoslawien, auch als erstes Jugoslawien bezeichnet, war von seiner Gründung 1918 bis zur Besetzung durch die Achsenmächte im Zweiten Weltkrieg 1941 eine Monarchie."
+ 
+ #YUG Dominance modifier
+ yug_serbian_dominance: "Serbische Dominanz"
+ desc_yug_serbian_dominance: "Serben sind nicht Teil des Kulturkonfliktes."
+ yug_bosnian_dominance: "Bosnische Dominanz"
+ desc_yug_bosnian_dominance: "Bosnier sind nicht Teil des Kulturkonfliktes."
+ 
+ #YUG Culture Conflict modifier
+ yug_culture_conflict: "Kulturkonflikte"
+ desc_yug_culture_conflict: "Der Konflikt zwischen Serben, Bosniern und Kroaten tobt. Serben und Bosnier haben eine hohe Wahrscheinlichkeit zu rebellieren."
+ 
+ yug_resolving_culture_conflict: "Kulturkonflikte lösen"
+ desc_yug_resolving_culture_conflict: "Der Konflikt zwischen Serben, Bosniern und Kroaten wird probiert zulösen. Serben und Bosnier haben eine geringere Wahrscheinlichkeit zu rebellieren."
+ 
+ yug_croats_culture_conflict: "Kulturkonflikte mit Kroaten"
+ desc_yug_croats_culture_conflict: "Der Kulturkonflikt beschränkt sich nun nur noch auf die Kroaten."
+ 
+ yug_resolved_culture_conflict: "Kulturkonflikte gelöst"
+ desc_yug_resolved_culture_conflict: "Der Kulturkonflikt, der unserer Land ins Chaos stürtzte, ist gelöst wurden. Die Slaven stehen jetzt vereint gegen die Welt."
+ 
+ #YUG Flavor events
+ yug_flavor_festival_title: "Ein Fest!"
+ yug_flavor_festival_desc: "Das slavische Volk freut sich über die verhältnismäßige Stabilität im Land. In den Städt und Dörfen feiert man ein Volksfest."
+ yug_flavor_festival_1: "Feiert schön"
+ yug_flavor_festival_2: "Feiert die Kultureinheit"
+ 
+ #YUG Culuture Conflict event
+ yug_begin_culture_conflict: "Kulturkonflikte"
+ yug_begin_culture_conflict_desc: "Der Konflikt zwischen Serben, Bosniern und Kroaten tobt. Serben und Bosnier haben eine hohe Wahrscheinlichkeit zu rebellieren."
+ yug_begin_culture_conflict_1: "Wir müssen die Kulturkonflikte lösen"
+ 
+ yug_flavor_croats_rise_up_title: "Kroaten erheben sich!"
+ yug_flavor_serbs_rise_up_title: "Serben erheben sich!"
+ yug_flavor_bosnians_rise_up_title: "Bosnier erheben sich!"
+ yug_flavor_rise_up_desc: "Der Kulturkonflikt wütet und die Bauern fordern mehr Rechte!"
+ yug_flavor_rebels_rise_up: "Nicht auf Forderungen eingehen"
+ yug_flavor_give_autonomy: "Autonomie erhöhen"
+ yug_flavor_apeace: "Befrieden"
+ 
+ #YUG Crusade
+ yug_defends_against_ottomans: "Verteidigung gegen die Osmanen"
+ desc_yug_defends_against_ottomans: "Wir verteidigen uns gegen die Osmanen."
+ yug_crusade_against_ottomans: "Kreuzzug gegen die Osmanen"
+ desc_yug_crusade_against_ottomans: "Wir sind in einem Kreuzzug gegen die Osmanen."
+ yug_till_end_of_crusade:0 "end of Crusade"
+ yug_crusade_begins_title: "Kreuzzug gegen die Osmanen"
+ yug_crusade_begins_desc: "Es ist Zeit für einen Kreuzzug! Ihr werden den Osmanen angreifen um Konstantinopel zurück zu erobern. Solang ihr mit den Osmanen im Krieg seid, werdet ihr regelmäßig Hilfe von euren christlichen Brüdern erhalten."
+ yug_crusade_begins_1: "Deus lo Vult!"
+ yug_crusade_begins_2: "Blast den Kreuzzug ab"
+ 
+ yug_crusade_help_title: "Eure christlichen Brüder schicken Hilfe!"
+ yug_crusade_help_desc: "Verstärkung aus der christlichen Welt trifft ein. Wo zu möchtet ihr sie einsetzen?"
+ yug_crusade_man: "Wir brauchen mehr Soldaten!"
+ yug_crusade_cash: "Geld für den Kreuzzug!"
+ yug_crusade_mil: "Taktische Unterstützung!"
+ yug_crusade_officer: "Unsere Generäle sind unfähig, tauscht einen aus!"
+ 
+ yug_crusade_over_title: "Der Kreuzzug gegen die Osmanen ist zu Ende"
+ yug_crusade_over_desc: "Egal ob erfolgreich oder nicht, die Kreuzfahrer kehren wieder Heim."
+ yug_crusade_over_1: "Danke für die Hilfe!"
+ 
+ 
+ ##YUG Missions
+ #Slot 1
+ yug_start_resolving_culture_conflict_title: "Konflikte lösen"
+ yug_start_resolving_culture_conflict_desc: ""
+ yug_unite_bos_ser_title: "Bosnien und Serbien"
+ yug_unite_bos_ser_desc: ""
+ yug_conquer_cro_title: "Erobert Kroatien"
+ yug_conquer_cro_desc: ""
+ yug_unite_cro_title: "Vereint Serben und Kroaten"
+ yug_unite_cro_desc: ""
+ yug_conquer_bulgaria_title: "Erobert Bulgarien"
+ yug_conquer_bulgaria_desc: ""
+ 
+ yug_unite_balkan_title: "Vereinter Balkan"
+ yug_unite_balkan_desc: ""
+ 
+ #Slot5
+ yug_christian_bastion_title: "Christiliche Bastion"
+ yug_christian_bastion_desc: ""
+ yug_request_help_against_ottomans_title: "Bitte um Hilfe für Kreuzzug"
+ yug_request_help_against_ottomans_desc: ""
+ yug_war_against_ottomans_title: "Kreuzzug gegen den Osmanen"
+ yug_war_against_ottomans_desc: "§R[Root.GetName] erklärt Krieg gegen [TUR.GetName].§!\n§YVerbündete können dann dazu gerufen werden.§!\nEs ist Zeit für einen Kreuzzug! Ihr werden den Osmanen angreifen um Konstantinopel zurück zu erobern. Solang ihr mit den Osmanen im Krieg seid, werdet ihr regelmäßig Hilfe von euren christlichen Brüdern erhalten."
+ yug_war_against_ottomans_ttp: "§R[Root.GetName] erklärt Krieg gegen [TUR.GetName].§!\n§YVerbündete können dann dazu gerufen werden.§!\nGiving the following effect for the war:"
+ yug_beat_ottomans_title:0 "Dispel Ottomans"
+ yug_beat_ottomans_desc:0 "We need to push the Muslims out of europa."
+ 
+ yug_reclaim_constantinople_title: "Christliches Konstantinopel"
+ yug_reclaim_constantinople_desc: "Konstantinopel gehört wieder zur christlichen Welt."
+ 
+ #new missions Slot 2-4
+ yug_alliances_title:0 "Forme Allianzen"
+ yug_alliances_desc:0 "Verbündete werden uns helfen gegen den Osmanen zu bestehen."
+ yug_ports_title:0 "Mittelmeerhäfen"
+ yug_ports_desc:0 "We first need ports to build up a fleet."
+ yug_fleet_title:0 "Slawische Flotte"
+ yug_fleet_desc:0 "With a fleet we can challenge our neighbors."
+ yug_venetian_trade_title:0 "Dominiere den venezianischen Handel"
+ yug_venetian_trade_desc:0 "It is our money now!"
+ yug_gold_rush_title:0 "Goldrausch"
+ yug_gold_rush_desc:0 "The gold province in Kosova has brought us prosperity."
+ yug_furnace_title:0 "Kohle abbauen"
+ yug_furnace_desc:0 "We have found coal in Hum to exploit."
+ yug_conquer_wal_mol_title:0 "Walachei und Moldavien"
+ yug_conquer_wal_mol_desc:0 "Conquer Wallachia and Moldavia and integrate them into Yugoslavia."
+ yug_east_slavia_title:0 "Ostslawen wieder integrieren"
+ yug_east_slavia_desc:0 "Integrate the Ruthanians Slavs into Greater Yugoslavia."
+
+ #Generics
+ yug_yes: "Ja"
+ yug_no: "Nein"
+ yug_recent_culture_progress: "Recent Culture Progress"
+ desc_yug_recent_culture_progress: "Recent made progress in solving the culture conflicts."
+ yug_flavor_new_dynasty_title:0 "A new Heir"
+ yug_flavor_new_dynasty_desc:0 "A country without a secured succession is a country in peril. Not daring to wait for a royal heir of [Root.Monarch.GetHerHis] own making, [Root.Monarch.GetName] has appointed a relative from [From.GetName] as the designated heir."
+ yug_flavor_peasants_republic_title:0 "Peasant Revolt"
+ yug_flavor_peasants_republic_desc:0 "The peasantry has for some time demanded economic, religious and political amendments. Their dissatisfaction has grown to such an extent that violent revolts are becoming a common day practice. Even though there is no central leadership and they lack proper armament, the peasants have still managed to pose a challenge to the authority. Several important buildings, both religious and other, have been burnt and plundered as a protest."
+ yug_slovenia_title:0 "Conquer Slovenia"
+ yug_slovenia_desc:0 ""
+ yug_westernize_title:0 "Westernize"
+ yug_westernize_desc:0 ""
+ yug_build_treasury_title:0 "Füllt die Schatzkammern"
+ yug_build_treasury_desc:0 "Eine volle Schatzkammer ist ein notwendiger Puffer für alles, was uns passieren könnte. Wenn dies als geizig angesehen wird, dann nur deshalb, weil einige nicht das Laster eines Herrschers erkennen."
+ yug_build_manufactories_title:0 "Baut Manufakturen"
+ yug_build_manufactories_desc:0 "Im Bereich der Produktion, sowohl technologisch als auch organisatorisch, sind große Fortschritte zu machen. Lasst uns in viele neue Manufakturen investieren und eine große industrielle Revolution könnte schon bald kommen."
+ yug_army_enthusiasm:0 "Armee-Enthusiasmus"
+ desc_yug_army_enthusiasm:1 "Unsere Bereitschaft, in eine stehende Armee zu investieren, hat zu neuen Enthusiasmus innerhalb der Armee geführt. Viele sind auf eine Militärkarriere aus, sowohl einfache Bürger als auch höher gestellte, und unsere Anwerber, die in der Vergangenheit jeden akzeptieren mussten, der an einer solchen Karriere interessiert ist, haben nun den Luxus der Wahl."
+ yug_coal_mining:0 "Kohlebergbau"
+ desc_yug_coal_mining:0 "Die Kohlegruben von Hum befeuern unsere Hochöfen und Werkstätten."

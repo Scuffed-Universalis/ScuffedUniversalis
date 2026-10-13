@@ -16,6 +16,7 @@ $mods = [ordered]@{
   'Advisor Types Expanded'        = '2737385499'
   'Doge Ideas Fixed'              = '3799936009'
   'No MP Slowdown'                = '2551069952'
+  'Kingdom of Yugoslavia'         = '2014721248'
 }
 
 # 1. Clear previous build output (keeps this script, descriptor and thumbnail)
@@ -112,5 +113,104 @@ if ($text -notmatch 'fra_double_the_women_flag') {
   $text = $re.Replace($text, "`$1`r`n`t`tmodifier = {`r`n`t`t`tfactor = 2`r`n`t`t`thas_country_flag = fra_double_the_women_flag`r`n`t`t}", 1)
   Write-1252 $path $text
 }
+
+# 3d. Kingdom of Yugoslavia: its build_treasury/build_manufactories missions share names with vanilla generic
+#     missions (completion is tracked by name), so rename them; fix its loc gaps; add the missing country history.
+#     Mission reward modifiers last until the end of the game, except the ones listed in $keepTimed
+#     (yug_recent_culture_progress is the cooldown that gates the slot 1 missions, so it must expire).
+$keepTimed = 'yug_crusade_against_ottomans','growing_economy','national_bank_inflation','yug_recent_culture_progress'
+foreach ($file in Get-ChildItem (Join-Path $dst "missions") -Filter "yug_Yugoslavia_*_Missions.txt") {
+  $text = Read-1252 $file.FullName
+  $text = [regex]::Replace($text, '\b(build_treasury|build_manufactories)\b', 'yug_$1')
+  $text = [regex]::Replace($text, 'name\s*=\s*"?army_enthusiasm"?', 'name = yug_army_enthusiasm')
+  $text = [regex]::Replace($text, '(add_country_modifier\s*=\s*\{\s*name\s*=\s*"?(\w+)"?\s*duration\s*=\s*)\d+', {
+    param($m)
+    if ($keepTimed -contains $m.Groups[2].Value) { $m.Value } else { $m.Groups[1].Value + '-1' }
+  })
+  $text = [regex]::Replace($text, '(duration\s*=\s*-1)[ \t]*#[^\r\n]*', '$1')
+  Write-1252 $file.FullName $text
+}
+
+# Westernize: require 50 prestige instead of ducats/military power/splendor, and don't take them away.
+$path = Join-Path $dst "missions\yug_Yugoslavia_3_Missions.txt"
+$text = Read-1252 $path
+$re = [regex]'(\s*)treasury\s*=\s*2000\s*mil_power\s*=\s*400\s*if\s*=\s*\{\s*limit\s*=\s*\{\s*has_dlc\s*=\s*"Mandate of Heaven"\s*\}\s*splendor\s*=\s*600\s*\}'
+if (-not $re.IsMatch($text)) { throw "yug_westernize trigger patch target not found" }
+$text = $re.Replace($text, '$1prestige = 50', 1)
+$re = [regex]'\s*add_splendor\s*=\s*-600\s*add_treasury\s*=\s*-2000\s*add_mil_power\s*=\s*-400'
+if (-not $re.IsMatch($text)) { throw "yug_westernize effect patch target not found" }
+$text = $re.Replace($text, '', 1)
+# Coal Mining repeated Build Manufactories' proto_industrialization; give it its own modifier.
+$re = [regex]'(?s)(yug_furnace\s*=\s*\{.*?name\s*=\s*)"?proto_industrialization"?'
+if (-not $re.IsMatch($text)) { throw "yug_furnace modifier patch target not found" }
+$text = $re.Replace($text, '$1yug_coal_mining', 1)
+Write-1252 $path $text
+
+# Defense against the Ottomans is permanent now, so tone it down.
+$path = Join-Path $dst "common\event_modifiers\yug_crusade.txt"
+$text = Read-1252 $path
+$re = [regex]'yug_defends_against_ottomans\s*=\s*\{[^}]*\}'
+if (-not $re.IsMatch($text)) { throw "yug_defends_against_ottomans patch target not found" }
+$text = $re.Replace($text, "yug_defends_against_ottomans = {`r`n`tdefensiveness = 0.15`r`n`tglobal_manpower_modifier = 0.05`r`n`tmanpower_recovery_speed = 0.05`r`n}", 1)
+Write-1252 $path $text
+
+# Yugoslavia's own copy of vanilla army_enthusiasm with extra morale (vanilla's is shared by other nations' missions).
+Write-1252 (Join-Path $dst "common\event_modifiers\yug_mission_modifiers.txt") @'
+yug_army_enthusiasm = {
+	yearly_army_professionalism = 0.001
+	army_tradition = 0.5
+	land_morale = 0.05
+}
+
+yug_coal_mining = {
+	trade_goods_size_modifier = 0.05
+}
+'@
+# (accented letters as [char] codes: Windows PowerShell reads this BOM-less script as ANSI)
+$e_ = [char]0xE8; $o_ = [char]0xF6; $a_ = [char]0xE4; $oa = [char]0xF3
+$extraLoc = @{
+  english = ' yug_coal_mining:0 "Coal Mining Industry"', ' desc_yug_coal_mining:0 "The coal pits of Hum fuel our furnaces and workshops."'
+  french  = " yug_coal_mining:0 `"Industrie houill${e_}re`"",  ' desc_yug_coal_mining:0 "Les mines de charbon de Hum alimentent nos fourneaux et nos ateliers."'
+  german  = ' yug_coal_mining:0 "Kohlebergbau"',              " desc_yug_coal_mining:0 `"Die Kohlegruben von Hum befeuern unsere Hoch${o_}fen und Werkst${a_}tten.`""
+  spanish = " yug_coal_mining:0 `"Industria del carb${oa}n`"", " desc_yug_coal_mining:0 `"Las minas de carb${oa}n de Hum alimentan nuestros hornos y talleres.`""
+}
+
+$game  ="C:\Program Files (x86)\Steam\steamapps\common\Europa Universalis IV"
+$utf8  = New-Object System.Text.UTF8Encoding $true
+$keyRe = '^\s*([\w\.]+):'
+$en = [System.IO.File]::ReadAllLines((Join-Path $dst "localisation\yug_locals_l_english.yml"), $utf8) | Select-Object -Skip 1
+foreach ($lang in 'english','french','german','spanish') {
+  $path  = Join-Path $dst "localisation\yug_locals_l_$lang.yml"
+  $lines = [System.Collections.Generic.List[string]][System.IO.File]::ReadAllLines($path, $utf8)
+  # a few keys sit at column 0, which the loc parser can drop
+  for ($i = 1; $i -lt $lines.Count; $i++) { if ($lines[$i] -match '^\w') { $lines[$i] = ' ' + $lines[$i] } }
+  $have = @{}
+  foreach ($l in $lines) { if ($l -match $keyRe) { $have[$matches[1]] = $true } }
+  # keys missing from the translations fall back to English
+  foreach ($l in $en) { if ($l -match $keyRe -and -not $have[$matches[1]]) { $lines.Add(' ' + $l.TrimStart()); $have[$matches[1]] = $true } }
+  # renamed missions reuse the vanilla generic mission text
+  foreach ($l in [System.IO.File]::ReadAllLines("$game\localisation\new_missions_l_$lang.yml", $utf8)) {
+    if ($l -match '^\s*(build_treasury|build_manufactories)_(title|desc):' -and -not $have["yug_$($matches[1])_$($matches[2])"]) {
+      $lines.Add(' yug_' + $l.TrimStart())
+    }
+  }
+  foreach ($l in [System.IO.File]::ReadAllLines("$game\localisation\modifers_l_$lang.yml", $utf8)) {
+    if ($l -match '^\s*(desc_)?army_enthusiasm(:.*)$' -and -not $have["$($matches[1])yug_army_enthusiasm"]) {
+      $lines.Add(" $($matches[1])yug_army_enthusiasm$($matches[2])")
+    }
+  }
+  foreach ($l in $extraLoc[$lang]) { if ($l -match $keyRe -and -not $have[$matches[1]]) { $lines.Add($l) } }
+  [System.IO.File]::WriteAllLines($path, $lines, $utf8)
+}
+
+Write-1252 (Join-Path $dst "history\countries\YUG - Yugoslavia.txt") @'
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 2
+primary_culture = serbian
+religion = orthodox
+technology_group = eastern
+capital = 4239	# Belgrade
+'@
 
 Write-Host "Done."
