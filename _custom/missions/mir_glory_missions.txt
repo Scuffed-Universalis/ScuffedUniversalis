@@ -1,0 +1,546 @@
+# Merina mission tree, ported from "Malagasy Glory" (workshop 2934391741).
+# Replaces the generic Madagascar missions for MIR only.
+
+mir_glory_missions_1 = {
+	slot = 1
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = MIR
+		NOT = { map_setup = map_setup_random }
+	}
+
+	mir_pay = {
+		position = 1
+		icon = deal_with_the_illuminati
+		required_missions = { }
+		trigger = { }
+		effect = {
+			add_treasury = -50
+			add_country_modifier = {
+				name = "mor_conquest_of_kanem"
+				duration = 7300
+			}
+		}
+	}
+
+	mir_raise_the_banner = {
+		position = 2
+		icon = mission_restore_trade_superiority
+		required_missions = { }
+		trigger = {
+			army_size_percentage = 1
+		}
+		effect = {
+			country_event = { id = mir_glory.1 }
+			add_country_modifier = {
+				name = thriving_arms_industry
+				duration = 9125
+			}
+			4027 = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 3
+			}
+			4030 = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 3
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 4023
+						province_id = 4021
+						province_id = 4024
+						province_id = 4025
+						area = southern_madagascar
+						province_id = 4032
+						province_id = 1193
+						province_id = 4031
+						province_id = 1194
+						province_id = 4022
+						province_id = 4028
+					}
+				}
+				add_core = ROOT
+			}
+		}
+	}
+
+	mir_malagasy_glory = {
+		position = 3
+		icon = mission_mnd_maj_candi_shrines
+		required_missions = { mir_raise_the_banner }
+		provinces_to_highlight = {
+			OR = {
+				area = madagascar_highlands_area
+				area = betsimasaraka_area
+				area = sakalava_area
+				area = southern_madagascar
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			army_size_percentage = 0.7
+			madagascar_highlands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			betsimasaraka_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sakalava_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_madagascar = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = { id = mir_glory.2 }
+			add_treasury = 200
+			add_dip_power = 100
+			set_government_rank = 2
+			override_country_name = countryname_Madagascar
+			1792 = {
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 4
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 1192
+						province_id = 1196
+						province_id = 1188
+						province_id = 1185
+						province_id = 1184
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			4020 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+			1183 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+		}
+	}
+
+	mir_gold = {
+		position = 4
+		icon = mission_african_gold
+		required_missions = { mir_malagasy_glory }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1196
+				province_id = 1184
+				province_id = 1185
+				province_id = 1188
+				province_id = 1192
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			owns = 1192
+			owns = 1188
+			owns = 1185
+			owns = 1184
+			owns = 1196
+		}
+		effect = {
+			unlock_estate_privilege = {
+				estate_privilege = estate_burghers_control_over_the_mint
+			}
+			capital_scope = {
+				add_institution_embracement = {
+					which = renaissance
+					value = 100
+				}
+			}
+			country_event = { id = mir_glory.3 }
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 2778
+						province_id = 1205
+						province_id = 1212
+						province_id = 1211
+						province_id = 2799
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	mir_moving = {
+		position = 5
+		icon = mission_dominate_genoa
+		required_missions = { mir_gold }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2778
+				province_id = 1205
+				province_id = 1212
+				province_id = 1211
+				province_id = 2788
+				province_id = 2783
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			1205 = { development = 20 }
+			owns = 2778
+			owns = 1205
+			owns = 1212
+			owns = 1211
+			owns = 2788
+			owns = 2783
+		}
+		effect = {
+			country_event = { id = mir_glory.4 }
+			every_country = {
+				limit = {
+					is_free_or_tributary_trigger = yes
+					primary_culture = amhara
+				}
+				reverse_add_casus_belli = {
+					target = ROOT
+					type = cb_vassalize_mission
+					months = 120
+				}
+			}
+		}
+	}
+
+	mir_decision = {
+		position = 6
+		icon = mission_brazilian_bandeirantes
+		required_missions = { mir_moving }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1227
+				province_id = 2778
+				province_id = 2759
+				province_id = 2757
+				province_id = 2758
+				province_id = 2788
+				province_id = 4158
+				province_id = 1222
+				province_id = 2798
+				province_id = 1225
+				province_id = 2797
+				province_id = 1226
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			1227 = { country_or_non_sovereign_subject_holds = ROOT }
+			upper_nubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_ethiopia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = { id = mir_glory.5 }
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 1234
+						province_id = 358
+						province_id = 2313
+						province_id = 419
+						province_id = 1227
+					}
+				}
+				add_core = ROOT
+			}
+		}
+	}
+}
+
+mir_glory_missions_2 = {
+	slot = 2
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = MIR
+		NOT = { map_setup = map_setup_random }
+	}
+
+	mir_west = {
+		position = 6
+		icon = mission_lusitanian_empire
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 227
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			owns = 227
+		}
+		effect = {
+			add_adm_power = 200
+			add_prestige = 20
+		}
+	}
+}
+
+mir_glory_missions_3 = {
+	slot = 3
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = MIR
+		NOT = { map_setup = map_setup_random }
+	}
+
+	mir_north = {
+		position = 6
+		icon = establish_client_states
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 118
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			owns = 118
+		}
+		effect = {
+			add_dip_power = 200
+			add_prestige = 20
+		}
+	}
+
+	mir_cope = {
+		position = 7
+		icon = mission_raid_christian_trade
+		required_missions = { mir_north mir_west mir_east }
+		trigger = { }
+		effect = {
+			add_country_modifier = {
+				name = hun_supreme_black_army
+				duration = 7300
+			}
+			country_event = { id = flavor_eth.48 }
+		}
+	}
+}
+
+mir_glory_missions_4 = {
+	slot = 4
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = MIR
+		NOT = { map_setup = map_setup_random }
+	}
+
+	mir_aust = {
+		position = 5
+		icon = mission_sw_torquoise_mining
+		required_missions = { }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2726
+				province_id = 2729
+				province_id = 1094
+				province_id = 1087
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			2726 = { country_or_non_sovereign_subject_holds = ROOT }
+			2729 = { country_or_non_sovereign_subject_holds = ROOT }
+			1094 = { country_or_non_sovereign_subject_holds = ROOT }
+			1087 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "eng_australian_colony"
+				duration = 5475
+			}
+			every_province = {
+				limit = {
+					OR = {
+						area = makassar_area
+						area = brunei_area
+						area = surabaya_area
+						area = jambi_area
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+
+	mir_east = {
+		position = 6
+		icon = glory_to_von_habsburg
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 134
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			owns = 134
+		}
+		effect = {
+			add_mil_power = 200
+			add_prestige = 20
+		}
+	}
+}
+
+mir_glory_missions_5 = {
+	slot = 5
+	generic = no
+	ai = no
+	has_country_shield = yes
+	potential = {
+		tag = MIR
+		NOT = { map_setup = map_setup_random }
+	}
+
+	mir_cape = {
+		position = 4
+		icon = mission_kon_greatest_power_kongo
+		required_missions = { }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1179
+				province_id = 1177
+				province_id = 833
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			owns = 1179
+			owns = 833
+			owns = 1177
+		}
+		effect = {
+			add_country_modifier = {
+				name = "spa_plus_ultra"
+				duration = 7300
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 1095
+						province_id = 2025
+						province_id = 1098
+					}
+					OR = {
+						is_empty = yes
+						AND = {
+							owned_by = ROOT
+							is_colony = yes
+						}
+					}
+				}
+				add_permanent_province_modifier = {
+					name = maj_colony_modifier
+					duration = -1
+				}
+			}
+			1175 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+			1176 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+			1178 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+			1180 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+		}
+	}
+
+	mir_argent = {
+		position = 5
+		icon = mission_caribbean_cn
+		required_missions = { mir_cape }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 778
+				province_id = 1095
+				province_id = 780
+				province_id = 786
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			778 = { country_or_non_sovereign_subject_holds = ROOT }
+			1095 = { country_or_non_sovereign_subject_holds = ROOT }
+			780 = { country_or_non_sovereign_subject_holds = ROOT }
+			786 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			country_event = { id = mir_glory.6 }
+			add_country_modifier = {
+				name = "the_unknown_frontier"
+				duration = 5475
+			}
+		}
+	}
+
+	mir_lima = {
+		position = 6
+		icon = mission_colonize_the_west
+		required_missions = { mir_argent }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 809
+				province_id = 2825
+				province_id = 808
+				province_id = 797
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			809 = { country_or_non_sovereign_subject_holds = ROOT }
+			2825 = { country_or_non_sovereign_subject_holds = ROOT }
+			808 = { country_or_non_sovereign_subject_holds = ROOT }
+			797 = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			mexico_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mexico_region = { discover_country = ROOT }
+			806 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+			2828 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+			805 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+			796 = {
+				create_colony_mission_reward_province = { country = ROOT }
+			}
+		}
+	}
+}

@@ -88,7 +88,6 @@ country_has_both_paradox_and_me_missions_old = {
 				tag = KON
 				# Madagascar Generics
 				tag = SKA
-				tag = MIR
 				tag = BTS
 				tag = ANT
 				tag = MFY
@@ -1395,7 +1394,6 @@ country_has_me_missions = { #the following was mostly generated. It can and will
 		tag = MGD
 		tag = MGR
 		tag = MHX
-		tag = MIR
 		tag = MJZ
 		tag = MKS
 		tag = MLC

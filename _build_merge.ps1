@@ -19,8 +19,8 @@ $mods = [ordered]@{
   'Kingdom of Yugoslavia'         = '2014721248'
 }
 
-# 1. Clear previous build output (keeps this script, descriptor and thumbnail)
-Get-ChildItem $dst -Directory | Remove-Item -Recurse -Force
+# 1. Clear previous build output (keeps this script, descriptor, thumbnail and _custom)
+Get-ChildItem $dst -Directory | Where-Object { $_.Name -ne '_custom' } | Remove-Item -Recurse -Force
 
 # 2. Copy each mod's content folders in load order
 foreach ($name in $mods.Keys) {
@@ -212,5 +212,42 @@ religion = orthodox
 technology_group = eastern
 capital = 4239	# Belgrade
 '@
+
+# 3e. Merina (MIR) gets the ported Malagasy Glory tree (_custom\missions\mir_glory_missions.txt) laid out around
+#     vanilla's East Africa and African trees, as in the original mod: no Paradox/Expanded mission choice and
+#     no EE generic Madagascar tree.
+foreach ($rel in 'common\scripted_triggers\missions_expanded_scripted_triggers.txt','missions\ME_Generic_Madagascar_Missions.txt') {
+  $path = Join-Path $dst $rel
+  $text = Read-1252 $path
+  $re = [regex]'(?m)^[ \t]*tag = MIR[ \t]*\r?\n'
+  if (-not $re.IsMatch($text)) { throw "MIR patch target not found in $rel" }
+  Write-1252 $path $re.Replace($text, '')
+}
+#     East Africa: MIR always qualifies, whether or not it has the use_paradox_missions flag.
+$path = Join-Path $dst "missions\AFR_East_Africa_Missions.txt"
+$text = Read-1252 $path
+$re = [regex]'(?m)^[ \t]*NOT = \{ tag = MIR \}[ \t]*\r?\n'
+if (-not $re.IsMatch($text)) { throw "East Africa MIR patch target not found" }
+Write-1252 $path $re.Replace($text, '')
+#     African (slot 5): EE comments out vanilla's tree for everyone; bring it back for MIR only.
+if (@((Read-1252 (Join-Path $dst "missions\African_Missions.txt")) -split "`n" | Where-Object { $_.Trim() -and $_.Trim() -notmatch '^#' }).Count) {
+  throw "African_Missions.txt is no longer fully commented out - mir_african_missions.txt would duplicate its missions"
+}
+$text = Read-1252 "$game\missions\African_Missions.txt"
+$re = [regex]'(?s)^african_missions\s*=\s*\{(.*?)potential\s*=\s*\{.*?\r?\n\t\}'
+if (-not $re.IsMatch($text)) { throw "vanilla African_Missions.txt layout changed - check the MIR patch" }
+Write-1252 (Join-Path $dst "missions\mir_african_missions.txt") $re.Replace($text, "mir_african_missions = {`$1potential = {`r`n`t`ttag = MIR`r`n`t}", 1)
+#     Vanilla's always-on generic trees (slots 2-4) otherwise stack onto MIR's columns where its own missions
+#     start lower down, so take a copy of the installed vanilla file that excludes MIR.
+$text = Read-1252 "$game\missions\00_Generic_missions.txt"
+$re = [regex]'potential\s*=\s*\{\s*always\s*=\s*yes\s*\}'
+if ($re.Matches($text).Count -ne 3) { throw "vanilla 00_Generic_missions.txt layout changed - check the MIR patch" }
+Write-1252 (Join-Path $dst "missions\00_Generic_missions.txt") $re.Replace($text, "potential = {`r`n`t`tNOT = { tag = MIR }`r`n`t}")
+
+# 4. Hand-maintained content (ports from mods too broken to patch, e.g. Merina's "Malagasy Glory" missions).
+#    Lives in _custom\ with the normal mod folder layout and is copied over the build output last.
+foreach ($dir in Get-ChildItem (Join-Path $dst '_custom') -Directory) {
+  Copy-Item $dir.FullName -Destination $dst -Recurse -Force
+}
 
 Write-Host "Done."

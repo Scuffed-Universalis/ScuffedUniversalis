@@ -24,7 +24,6 @@ east_african_trade_slot1 = {
 			has_country_flag = use_paradox_missions
 			AND = {
 				NOT = { tag = SKA }
-				NOT = { tag = MIR }
 				NOT = { tag = BTS }
 				NOT = { tag = ANT }
 				NOT = { tag = MFY }
@@ -75,7 +74,6 @@ east_african_trade_slot2 = {
 			has_country_flag = use_paradox_missions
 			AND = {
 				NOT = { tag = SKA }
-				NOT = { tag = MIR }
 				NOT = { tag = BTS }
 				NOT = { tag = ANT }
 				NOT = { tag = MFY }
@@ -463,7 +461,6 @@ east_african_diplomatic_slot = {
 			has_country_flag = use_paradox_missions
 			AND = {
 				NOT = { tag = SKA }
-				NOT = { tag = MIR }
 				NOT = { tag = BTS }
 				NOT = { tag = ANT }
 				NOT = { tag = MFY }
@@ -697,7 +694,6 @@ east_african_militar_slot = {
 			has_country_flag = use_paradox_missions
 			AND = {
 				NOT = { tag = SKA }
-				NOT = { tag = MIR }
 				NOT = { tag = BTS }
 				NOT = { tag = ANT }
 				NOT = { tag = MFY }

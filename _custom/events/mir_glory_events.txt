@@ -1,0 +1,279 @@
+# Merina mission events, ported from "Malagasy Glory" (workshop 2934391741).
+namespace = mir_glory
+
+# Unite the Isle
+country_event = {
+	id = mir_glory.1
+	title = mir_glory.1.t
+	desc = mir_glory.1.d
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = mir_glory.1.a
+		add_prestige = 10
+	}
+}
+
+# Faith in the Madagascan state
+country_event = {
+	id = mir_glory.2
+	title = mir_glory.2.t
+	desc = mir_glory.2.d
+	picture = REFORM_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = mir_glory.2.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { religion = shamanism }
+			}
+		}
+		if = {
+			limit = { religion = shamanism }
+			add_prestige = 10
+			add_stability = 1
+		}
+		else = {
+			change_religion = shamanism
+		}
+	}
+
+	option = {
+		name = mir_glory.2.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { religion = coptic }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = coptic }
+			}
+			change_religion = coptic
+		}
+		else = {
+			add_prestige = 10
+		}
+		capital_scope = {
+			if = {
+				limit = {
+					NOT = { religion = coptic }
+				}
+				change_religion = coptic
+			}
+		}
+	}
+
+	option = {
+		name = mir_glory.2.c
+		ai_chance = { factor = 0 }
+		if = {
+			limit = {
+				NOT = { religion = sunni }
+			}
+			change_religion = sunni
+		}
+		else = {
+			add_prestige = 10
+		}
+		capital_scope = {
+			if = {
+				limit = {
+					NOT = { religion = sunni }
+				}
+				change_religion = sunni
+			}
+		}
+	}
+}
+
+# Pushing Madagascar Forward
+country_event = {
+	id = mir_glory.3
+	title = mir_glory.3.t
+	desc = mir_glory.3.d
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = mir_glory.3.a
+		ai_chance = { factor = 1 }
+		add_prestige = 10
+		zambia_area = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		mascarenes_area = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		4096 = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		create_colony_mission_reward = { province = 4046 }
+		hidden_effect = {
+			discover_province = 4108
+			discover_province = 4106
+			discover_province = 4046
+			discover_province = 4104
+			discover_province = 4102
+			discover_province = 4050
+			katanga_area = { discover_country = ROOT }
+			chokwe_area = { discover_country = ROOT }
+			luba_area = { discover_country = ROOT }
+			kasai_area = { discover_country = ROOT }
+			sankuru_area = { discover_country = ROOT }
+			lower_kasai = { discover_country = ROOT }
+		}
+	}
+}
+
+# Envoys From Another Continent
+country_event = {
+	id = mir_glory.4
+	title = mir_glory.4.t
+	desc = mir_glory.4.d
+	picture = ARTWORK_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = mir_glory.4.a
+		ai_chance = { factor = 1 }
+		add_prestige = 15
+		add_army_professionalism = 0.1
+		add_mil_power = 100
+		add_country_modifier = {
+			name = "boh_fortification_effort"
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = mir_glory.4.b
+		ai_chance = { factor = 1 }
+		add_treasury = 200
+		change_government_reform_progress = 50
+		add_adm_power = 100
+		add_country_modifier = {
+			name = "boh_premysl_mod"
+			duration = 7300
+		}
+	}
+
+	option = {
+		name = mir_glory.4.c
+		ai_chance = { factor = 1 }
+		add_prestige = 25
+		add_stability = 2
+	}
+}
+
+# A Crucial Decision
+country_event = {
+	id = mir_glory.5
+	title = mir_glory.5.t
+	desc = mir_glory.5.d
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = mir_glory.5.a
+		ai_chance = { factor = 1 }
+		add_country_modifier = {
+			name = "oma_buildforces_mod"
+			duration = 5475
+		}
+		add_country_modifier = {
+			name = dai_discipline_permanent
+			duration = -1
+		}
+		361 = { add_permanent_claim = ROOT }
+	}
+
+	option = {
+		name = mir_glory.5.b
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			kanem_area = { discover_country = ROOT }
+			darfur_central_sahara_area = { discover_country = ROOT }
+			sennar_area = { discover_country = ROOT }
+			kurdufan_area = { discover_country = ROOT }
+			sahel_region = { discover_country = ROOT }
+		}
+		add_country_modifier = {
+			name = mal_colonial_enthusiasm
+			duration = -1
+		}
+		sennar_area = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		kurdufan_area = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		kenya_area = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		4052 = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		1219 = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		2801 = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		2802 = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+		4051 = {
+			create_colony_mission_reward_province = { country = ROOT }
+		}
+	}
+
+	option = {
+		name = mir_glory.5.c
+		ai_chance = { factor = 1 }
+		add_country_modifier = {
+			name = "ger_reactionary_zeal"
+			duration = -1
+		}
+		every_province = {
+			limit = {
+				OR = {
+					province_id = 434
+					province_id = 575
+					province_id = 2231
+					province_id = 2232
+					province_id = 2233
+				}
+			}
+			add_core = ROOT
+		}
+	}
+}
+
+# Rhyme of King Julian
+country_event = {
+	id = mir_glory.6
+	title = mir_glory.6.t
+	desc = mir_glory.6.d
+	picture = LAND_MILITARY_eventPicture
+	is_triggered_only = yes
+
+	option = {
+		name = mir_glory.6.a
+		ai_chance = { factor = 1 }
+		809 = { add_core = ROOT }
+		define_conquistador = {
+			name = "Mort"
+			fire = 3
+			shock = 3
+			manuever = 4
+			siege = 6
+		}
+	}
+}
