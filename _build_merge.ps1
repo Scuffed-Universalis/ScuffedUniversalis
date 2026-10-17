@@ -279,6 +279,21 @@ Write-1252 $path $vassalNationRe.Replace($text, $vassalNationTrigger)
 $left = Get-ChildItem (Join-Path $dst "common\subject_types") -Filter *.txt | Select-String -Pattern 'modifier\s*=\s*vassal_nation' -Context 0,1 | Where-Object { $_.Context.PostContext[0] -notmatch 'trigger = \{ ai = yes \}' }
 if ($left) { throw "untriggered vassal_nation left in: $(($left | ForEach-Object { $_.Filename }) -join ', ')" }
 
+# 3g. EE's nobility/burghers/clergy disasters progress from high influence even when the estate is fully loyal
+#     (100 loyalty + 100 influence still nets +1.6/month). Keep EE's system, but only let them build up while
+#     the estate is disloyal (below 60 loyalty, vanilla's threshold); at 60+ they drain via down_progress.
+foreach ($pair in @(@('estate_nobility_disaster.txt','estate_nobles'), @('estate_burghers_disaster.txt','estate_burghers'), @('estate_church_disaster.txt','estate_church'))) {
+  $path = Join-Path $dst "common\disasters\$($pair[0])"; $estate = $pair[1]
+  $text = Read-1252 $path
+  $loyal = "estate_loyalty = { estate = $estate loyalty = 60 }"
+  $reStart = [regex]'(can_start\s*=\s*\{)'
+  $reStop  = [regex]'(can_stop\s*=\s*\{\s*OR\s*=\s*\{)'
+  if ($reStart.Matches($text).Count -ne 1 -or $reStop.Matches($text).Count -ne 1) { throw "$($pair[0]) layout changed - check the loyalty patch" }
+  $text = $reStart.Replace($text, "`$1`r`n`t`tNOT = { $loyal } # loyal estates can't build up the disaster", 1)
+  $text = $reStop.Replace($text, "`$1`r`n`t`t`t$loyal", 1)
+  Write-1252 $path $text
+}
+
 # 4. Hand-maintained content (ports from mods too broken to patch, e.g. Merina's "Malagasy Glory" missions).
 #    Lives in _custom\ with the normal mod folder layout and is copied over the build output last.
 foreach ($dir in Get-ChildItem (Join-Path $dst '_custom') -Directory) {

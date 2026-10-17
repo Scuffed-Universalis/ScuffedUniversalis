@@ -10,6 +10,7 @@ estate_burghers_disaster = {
 
 
 	can_start = {
+		NOT = { estate_loyalty = { estate = estate_burghers loyalty = 60 } } # loyal estates can't build up the disaster
 		has_any_disaster = no
 		is_at_war = no
 		estate_influence = {
@@ -20,6 +21,7 @@ estate_burghers_disaster = {
 	
 	can_stop = {
 		OR = {
+			estate_loyalty = { estate = estate_burghers loyalty = 60 }
 			has_any_disaster = yes
 			NOT = {
 				estate_influence = {
