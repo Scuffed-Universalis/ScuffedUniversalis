@@ -294,6 +294,14 @@ foreach ($pair in @(@('estate_nobility_disaster.txt','estate_nobles'), @('estate
   Write-1252 $path $text
 }
 
+# 3h. Morocco starts with no nobility privileges selected. EE's history pre-selects Better Integration (+15% subject
+#     liberty desire) on top of vanilla's Strong Duchies (1420-1465); drop both, and the 1465 removal.
+$path = Join-Path $dst "history\countries\MOR - Morocco.txt"
+$text = Read-1252 $path
+$re = [regex]'(?m)^[ \t]*(set|remove)_estate_privilege\s*=\s*estate_nobles_(better_integration|strong_duchies)[ \t]*\r?\n'
+if ($re.Matches($text).Count -ne 3) { throw "MOR - Morocco.txt privilege layout changed - check the Morocco patch" }
+Write-1252 $path $re.Replace($text, '')
+
 # 4. Hand-maintained content (ports from mods too broken to patch, e.g. Merina's "Malagasy Glory" missions).
 #    Lives in _custom\ with the normal mod folder layout and is copied over the build output last.
 foreach ($dir in Get-ChildItem (Join-Path $dst '_custom') -Directory) {

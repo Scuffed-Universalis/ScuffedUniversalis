@@ -20,7 +20,6 @@ change_estate_land_share = {
 	share = -10
 }
 
-set_estate_privilege = estate_nobles_better_integration
 
 1399.1.1 = {
 	monarch = {
@@ -57,7 +56,6 @@ set_estate_privilege = estate_nobles_better_integration
 		mil = 1
 	}
 	capital = 343 # Fez
-	set_estate_privilege = estate_nobles_strong_duchies
 }
 
 1465.1.1 = {
@@ -68,7 +66,6 @@ set_estate_privilege = estate_nobles_better_integration
 		dip = 1
 		mil = 0
 	}
-	remove_estate_privilege = estate_nobles_strong_duchies
 }
 
 #1472 - Country is split into various factions, reunited again in 1549
