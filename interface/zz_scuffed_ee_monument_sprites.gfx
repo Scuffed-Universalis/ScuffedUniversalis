@@ -1,0 +1,13 @@
+# Europa Expanded's Spanish monuments ship without pictures, which makes the province view log
+# "Great project view missing terrain type gfx" every time Gibraltar/Seville is drawn.
+# Reuse Great Monuments Expanded's pictures of the same places.
+spriteTypes = {
+	spriteType = {
+		name = "GFX_great_project_EE_spa_rock"
+		texturefile = "gfx//interface//great_projects//GME//great_project_gme_rock_gibraltar.dds"
+	}
+	spriteType = {
+		name = "GFX_great_project_EE_spa_casa_de_contractation"
+		texturefile = "gfx//interface//great_projects//GME//great_project_gme_casa_de_contratacion.dds"
+	}
+}
