@@ -1245,7 +1245,7 @@
  mechanic_enables_kreditwerk_appointment_deals_yes: "Kreditwerk Appointments: Unlocks the 'Kreditwerk Appointments' Privilege for the Nobility, which allows us to increase tax efficiency."
 
  #GE 1.15
- mechanic_enables_burgher_autonomy_yes: "Burgher Autonomy: Unlocks the §YBurgher Autonomy§! Privilege, granting §G+1§! base production and §R+25%§! Minimum Autonomy for §Y25 years§! in each province with an urban trade good. \nThis privilege can be reused every §Y25 years§!."
+ mechanic_enables_burgher_autonomy_yes: "Burgher Autonomy: Unlocks the §YBurgher Autonomy§! Privilege, granting §G+1§! base production and §R+25%§! Minimum Autonomy for §Y10 years§! in each province with an urban trade good. \nThis privilege can be reused every §Y10 years§!."
  mechanic_enables_serfdom_yes: "Serfdom: Unlocks the §YSerfdom§! Privilege, Which decreases Rural Goods Produced by §R10%§! and increases governmental capacity by §G+15%§!."
  mechanic_enables_colonial_plantations_yes: "Colonial Plantations: §G+15%§! Plantation Goods Produced in your colonial subjects."
  mechanic_enables_landsknecht_sergeants_yes: "Landsknecht Sergeants: §G+10%§! Infantry Combat Ability while you employ mercenaries."

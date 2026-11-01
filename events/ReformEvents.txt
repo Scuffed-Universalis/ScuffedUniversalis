@@ -7506,7 +7506,7 @@ country_event = {
 					add_base_production = 1
 					add_province_modifier = {
 						name = GE_Burgher_Autonomy
-						duration = 9125
+						duration = 3650
 					}
 				}
 			hidden_effect = {
@@ -7536,7 +7536,7 @@ country_event = {
 						add_base_production = 1
 						add_province_modifier = {
 							name = GE_Burgher_Autonomy
-							duration = 9125
+							duration = 3650
 						}
 					}
 				}
@@ -7551,7 +7551,7 @@ country_event = {
 				add_base_production = 1
 				add_province_modifier = {
 					name = GE_Burgher_Autonomy
-					duration = 9125
+					duration = 3650
 				}
 			}
 		}

@@ -1158,7 +1158,7 @@ estate_burghers_burgher_autonomy = {
 	}
 	benefits = {
 	}
-	cooldown_years = 25
+	cooldown_years = 10
 	on_cooldown_expires = {
 		reapply_estate_privilege = { privilege = estate_burghers_burgher_autonomy }
 	}
