@@ -32,7 +32,10 @@ country_decisions = {
 					ai = no
 				}
 			}
-			has_mission = LIE_belgicus
+			OR = {
+				has_mission = LIE_belgicus
+				tag = FLA
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
