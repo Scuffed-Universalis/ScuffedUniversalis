@@ -164,7 +164,9 @@ country_decisions = {
 				}
 				liberty_desire = 90
 			}
-			liberty_desire = 75
+			else = {
+				liberty_desire = 75
+			}
 			overlord = {
 				NOT = { was_player = yes }
 			}

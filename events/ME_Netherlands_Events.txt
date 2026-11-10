@@ -730,8 +730,7 @@ country_event = {
 			every_subject_country = {
 				limit = {
 					is_dutch_subject_trigger = yes
-					liberty_desire = 50
-					NOT = { has_country_flag = me_bur_reigned_in }
+					NOT = { tag = ROOT }
 				}
 				ROOT = { inherit = PREV }
 			}

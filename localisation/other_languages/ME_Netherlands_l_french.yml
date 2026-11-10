@@ -90,11 +90,11 @@
 
  NED_popular_support: "National Rejuvenation"
 
- NED_what_is_dutch_revolt: "We will do everything in our best to rebel against §Y[Root.Overlord.GetName]§! with other States. Over the next 5 years, use §YAgitation Actions§! to increase §YLiberty Desire§! of other §YStates§! to at least §Y50.0%§! Liberty Desire. At the end of 5 years, all of those nations will join us in the revolt against §Y[Root.Overlord.GetName]§!.\n\nIf our Liberty Desire drops under §Y40.0%§!, the Revolt may End."
- NED_use_dutch_revolt_actions: "Over the next 5 years, use §YAgitation Actions§! to increase §YLiberty Desire§! of other §YStates§! to at least §Y50.0%§! Liberty Desire. At the end of 5 years, all of those nations will join us in the revolt against [Root.Overlord.GetName].\n\nIf our Liberty Desire drops under §Y40.0%§!, the Revolt may End."
+ NED_what_is_dutch_revolt: "We will do everything in our best to rebel against §Y[Root.Overlord.GetName]§! with the other States. At the end of 5 years, every other §YState§! of §Y[Root.Overlord.GetName]§! will unite with us into one nation, and we will declare an §YIndependence War§! against §Y[Root.Overlord.GetName]§!.\n\nIf our Liberty Desire drops under §Y40.0%§!, the Revolt may End."
+ NED_use_dutch_revolt_actions: "At the end of 5 years, every other §YState§! of [Root.Overlord.GetName] will unite with us into one nation, and we will declare an §YIndependence War§! against [Root.Overlord.GetName].\n\nIf our Liberty Desire drops under §Y40.0%§!, the Revolt may End."
  NED_revolt_will_end: "The §Y[ME_dutch_revolt_target.GetAdjective]§! revolt will immediately end, but might happen again in the future."
 
- NED_we_need_to_stop_them: "§Y[From.GetName]§! will attempt everything at their disposal to turn §YStates§! against us. In 5 Years, all §YStates§! with above §R50.0%§! Liberty Desire will unite in an §YIndependence War§! against us."
+ NED_we_need_to_stop_them: "§Y[From.GetName]§! is rallying the other §YStates§! against us. In 5 Years, all of our §YStates§! will unite with them in an §YIndependence War§! against us."
 
  NED_dutch_revolt_title: "@NED The Great Revolt"
  NED_dutch_revolt_desc: "The wealthy cities of the Lowlands have been under foreign yoke for too long. We must unite and throw them off once and for all!"
