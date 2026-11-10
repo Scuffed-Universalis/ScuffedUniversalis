@@ -35,6 +35,10 @@ country_decisions = {
 			OR = {
 				has_mission = LIE_belgicus
 				tag = FLA
+				AND = {
+					tag = NED
+					was_tag = FLA
+				}
 			}
 		}
 		provinces_to_highlight = {
