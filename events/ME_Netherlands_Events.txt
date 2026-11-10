@@ -741,6 +741,11 @@ country_event = {
 		hidden_effect = {
 			NED_form_netherlands_effect = yes
 		}
+		overlord = {
+			every_ally = {
+				break_alliance = PREV
+			}
+		}
 		declare_war_with_cb = {
 			who = overlord
 			casus_belli = cb_dutch_revolt_independence_war
