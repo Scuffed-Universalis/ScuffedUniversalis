@@ -1,6 +1,17 @@
 ﻿l_english:
 
- #Missions 
+ #Missions
+ byz_player_boost_title: "Player Byzantium Boost"
+ byz_player_boost_desc: "A helping hand for a player-controlled Byzantium in its darkest hour. Can only be completed by a player before 1450."
+ byz_player_boost_modifier: "Byzantine Boost"
+ desc_byz_player_boost_modifier: ""
+ BYZ_player_boost_kok_title: "Player Byzantium Boost"
+ BYZ_player_boost_kok_desc: "A helping hand for a player-controlled Byzantium in its darkest hour. Can only be completed by a player before 1450."
+ cb_byz_reclaim_roman_lands: "Reclaim Roman Lands"
+ cb_byz_reclaim_roman_lands_desc: "The Turks sit upon lands that were Roman long before they arrived. We will take them back."
+ take_province_byz_reclaim_roman_lands: "Reclaim Roman Lands"
+ take_province_byz_reclaim_roman_lands_desc: "War goal is to take the capital of the Ottomans and reclaim former Roman lands."
+ BYZ_RECLAIM_ROMAN_LANDS_WAR_NAME: "$ORDER$Roman Reclamation of $SECOND$"
  byz_raise_fleet_tax_title: "Raise the Fleet Tax"
  byz_raise_fleet_tax_desc: "Our once glorious navy, that controlled the Mediterranean, that defended us from the great Arab fleet, that was the dread of anyone on our sights, has fallen into disrepair, it is not even a shadow of its former self, it is humiliating that we have fallen this low. We must raise a fleet, with haste at that if we wish to beat back the Ottoman heathens and be one step closer to reclaiming our rightful Mediterranean hegemony! "
  byz_ducatus_neapolitanus_title: "Ducatus Neapolitanus"

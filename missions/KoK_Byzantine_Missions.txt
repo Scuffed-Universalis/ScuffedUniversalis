@@ -545,6 +545,33 @@ MEE_BYZ_conquest_3 = {
 	}
 	has_country_shield = yes
 
+	BYZ_player_boost_kok = {
+		icon = mission_pf_soldier
+		required_missions = { }
+		position = 1
+		trigger = {
+			ai = no
+			NOT = { is_year = 1450 }
+		}
+		effect = {
+			add_manpower = 5
+			add_sailors = 5000
+			add_treasury = 50
+			if = {
+				limit = { exists = TUR }
+				add_casus_belli = {
+					target = TUR
+					type = cb_byz_reclaim_roman_lands
+					months = 120
+				}
+			}
+			add_country_modifier = {
+				name = byz_player_boost_modifier
+				duration = 10950
+			}
+		}
+	}
+
 	BYZ_greece = {
 		icon = cross_the_pindus
 		required_missions = { BYZ_impending_doom }

@@ -1345,6 +1345,9 @@ EE_FRA_if_through_conquest: "If the Mission was completed through §MConquest§!
  EE_FRA_loyalist_victory: "Loyalist Victory"
  desc_EE_FRA_loyalist_victory: ""
 
+ EE_FRA_louis_disinherited: "Louis Disinherited"
+ desc_EE_FRA_louis_disinherited: ""
+
  EE_FRA_will_god: "The Will of God"
  desc_EE_FRA_will_god: ""
  
@@ -1547,6 +1550,9 @@ EE_FRA_if_through_conquest: "If the Mission was completed through §MConquest§!
 
  EE_FRA_reconcile_louis_title: "Reconcile with [Root.Heir.GetName]"
  EE_FRA_reconcile_louis_desc: ""
+ EE_FRA_disinherit_louis_title: "Disinherit Louis"
+ EE_FRA_disinherit_louis_desc: "Rather than let Louis tear the court apart, we will strip him of his inheritance before the crisis can begin.\n\n§YRecommended:§! Disinheriting Louis is advised to avoid the §YMad Wars§!."
+ EE_FRA_disinherit_louis_tt: "§YLouis§! is removed as heir without the usual cost of disinheriting. The §Yde Valois Crisis§! will not happen.\n"
 
  ME_FRA_capetial_house_anjou_title: "The Capetian House of Anjou"
  ME_FRA_capetial_house_anjou_desc: ""

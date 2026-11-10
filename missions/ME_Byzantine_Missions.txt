@@ -1788,8 +1788,35 @@ noppbyzantine_missions_3 = {
 	}
 	has_country_shield = yes
 	
+	byz_player_boost = {
+		icon = mission_pf_soldier
+		required_missions = { }
+		position = 1
+		trigger = {
+			ai = no
+			NOT = { is_year = 1450 }
+		}
+		effect = {
+			add_manpower = 5
+			add_sailors = 5000
+			add_treasury = 50
+			if = {
+				limit = { exists = TUR }
+				add_casus_belli = {
+					target = TUR
+					type = cb_byz_reclaim_roman_lands
+					months = 120
+				}
+			}
+			add_country_modifier = {
+				name = byz_player_boost_modifier
+				duration = 10950
+			}
+		}
+	}
+
 	byz_zupac_rascia = {
-		icon = despot_stefans_legacy 
+		icon = despot_stefans_legacy
 		required_missions = { } 
 		position = 2 
 		provinces_to_highlight = {

@@ -97,6 +97,7 @@ country_event = {
 					tag = ZAN #kilwa 
 					tag = LIV #livonian order
 					tag = RIG #riga
+					tag = HAB #austria
 					#tag = POL #poland
 				}
 			}
@@ -188,6 +189,7 @@ country_event = {
 						tag = ZAN #kilwa 
 						tag = LIV #livonian order
 						tag = RIG #riga
+						tag = HAB #austria
 						#tag = POL #poland
 					}
 				}

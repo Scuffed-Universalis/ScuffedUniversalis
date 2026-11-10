@@ -22,6 +22,29 @@ country_decisions = {
 			country_event = { id = ME_France_Events.5 }
 		}
 	}
+	EE_FRA_disinherit_louis = {
+		potential = {
+			tag = FRA
+			has_heir_flag = EE_FRA_louis_heir_flag
+			NOT = { has_country_flag = EE_FRA_court_scandal_finalized }
+		}
+		allow = {
+			has_heir_flag = EE_FRA_louis_heir_flag
+		}
+		effect = {
+			custom_tooltip = EE_FRA_disinherit_louis_tt
+			kill_heir = { allow_new_heir = no }
+			set_country_flag = EE_FRA_court_scandal_finalized
+			clr_country_flag = EE_FRA_start_louis_events
+			add_country_modifier = {
+				name = EE_FRA_louis_disinherited
+				duration = 7300
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	EE_FRA_commandeer_ships = {
 		potential = {
 			tag = FRA

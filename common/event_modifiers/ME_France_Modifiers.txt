@@ -351,6 +351,9 @@ EE_FRA_loyalist_victory = {
 	church_loyalty_modifier = 0.05
 	burghers_loyalty_modifier = 0.05
 }
+EE_FRA_louis_disinherited = {
+	heir_chance = 0.5
+}
 EE_FRA_will_god = {
 	EE_FRA_consolidation_power_gain_modifier = 0.25
 	max_absolutism = 10
