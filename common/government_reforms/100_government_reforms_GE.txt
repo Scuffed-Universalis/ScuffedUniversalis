@@ -4165,10 +4165,6 @@ empowered_clergy_in_administration_reform = {
 		}
 	}
 	potential = {
-		check_variable = {
-			which = Clergy_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -4735,10 +4731,6 @@ empowered_of_noble_bearing_reform = {
 		}
 	}
 	potential = {
-		check_variable = {
-			which = Noble_Influence
-			value = 2
-		}
 		NOT = { technology_group = eastern }
 		NOT = {
 			has_estate = estate_maratha
@@ -5354,10 +5346,6 @@ empowered_royal_decree_reform = {
 	icon = "austrian_empire"
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Royal_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -5402,14 +5390,6 @@ empowered_divine_blood_reform = {
 		add_devotion = 50
 	}
 	potential = {
-		check_variable = {
-			which = Royal_Influence
-			value = 2
-		}
-		check_variable = {
-			which = Clergy_Influence
-			value = 2
-		}
 		NOT = { has_reform = celestial_empire }
 	}
 	trigger = {
@@ -5442,14 +5422,6 @@ empowered_monastic_militarism_reform = {
 	icon = "brothers_in_arms"
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Noble_Influence
-			value = 2
-		}
-		check_variable = {
-			which = Clergy_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -5488,10 +5460,6 @@ empowered_german_aristocratic_court_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		culture_group = germanic
-		check_variable = {
-			which = Noble_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		culture_group = germanic
@@ -5516,10 +5484,6 @@ empowered_aristocratic_court_reform = {
 	icon = "szlachta_noble_2"
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Noble_Influence
-			value = 3
-		}
 		NOT = { culture_group = germanic }
 	}
 	trigger = {
@@ -5544,10 +5508,6 @@ empowered_general_estates_reform = {
 	icon = "poland_sejm"
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Burgher_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -5588,10 +5548,6 @@ empowered_church_councils_reform = {
 	icon = "bishop"
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Clergy_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -6420,10 +6376,6 @@ empowered_heavy_knights_reform = {
 		}
 	}
 	potential = {
-		check_variable = {
-			which = Noble_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -6607,10 +6559,6 @@ empowered_mercenary_corps_reform = {
 		}
 	}
 	potential = {
-		check_variable = {
-			which = Clergy_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -6718,10 +6666,6 @@ empowered_royal_guard_reform = {
 		}
 	}
 	potential = {
-		check_variable = {
-			which = Royal_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -7745,10 +7689,6 @@ empowered_free_trade_reform = {
 		add_mercantilism = -10
 	}
 	potential = {
-		check_variable = {
-			which = Burgher_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -7787,14 +7727,6 @@ empowered_aristocratic_estates_reform = {
 	icon = empowered_aristocrat_estate
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Burgher_Influence
-			value = 1
-		}
-		check_variable = {
-			which = Noble_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -7822,14 +7754,6 @@ empowered_monastic_centres_reform = {
 	icon = empowered_monastery
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Burgher_Influence
-			value = 1
-		}
-		check_variable = {
-			which = Clergy_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -7858,14 +7782,6 @@ empowered_expand_corvee_reform = {
 	icon = empowered_corvee
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Noble_Influence
-			value = 2
-		}
-		check_variable = {
-			which = Clergy_Influence
-			value = 1
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -7895,10 +7811,6 @@ empowered_enlarge_royal_estate_reform = {
 	icon = empowered_royal_estate
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Royal_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -7923,14 +7835,6 @@ empowered_royal_trading_company_reform = {
 	icon = "GE_trader"
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Royal_Influence
-			value = 2
-		}
-		check_variable = {
-			which = Burgher_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable = {

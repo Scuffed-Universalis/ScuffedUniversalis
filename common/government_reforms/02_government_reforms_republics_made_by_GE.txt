@@ -710,10 +710,6 @@ republican_guard_reform_republic = {
 		}
 	}
 	potential = {
-		check_variable ={
-			which = Populist_Influence
-			value = 2
-		}
 	}
 	trigger = {
 		check_variable ={
@@ -1198,10 +1194,6 @@ empowered_aristocratic_courts_reform = {
 	icon = judge
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Oliarch_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -1227,10 +1219,6 @@ empowered_sovereign_trade_companies_reform = {
 	icon = colonial_rule
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Plutocrat_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -1269,10 +1257,6 @@ empowered_consolidation_of_power_reform = {
 	icon = imperial_inquisition
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Populist_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -1298,10 +1282,6 @@ empowered_senate_reform = {
 	icon = judge
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Populist_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -1404,10 +1384,6 @@ empowered_principle_of_heritage_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_estate = estate_nobles
-		check_variable = {
-			which = Oliarch_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -1430,10 +1406,6 @@ empowered_principle_of_profit_reform = {
 	icon = economy_trade
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Plutocrat_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
@@ -1479,10 +1451,6 @@ empowered_principle_of_power_reform = {
 	icon = french_louis
 	allow_normal_conversion = yes
 	potential = {
-		check_variable = {
-			which = Populist_Influence
-			value = 3
-		}
 	}
 	trigger = {
 		check_variable = {
