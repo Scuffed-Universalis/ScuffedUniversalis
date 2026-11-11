@@ -1,6 +1,7 @@
 EE_FRA_mad_wars = {
 	ended_by_country_breaking_to_rebels = no
-	potential = { 
+	potential = {
+		ai = no #AI France never gets the Mad Wars
 		has_country_flag = EE_FRA_unlock_public_weal_disaster
 		NOT = { has_country_flag = EE_FRA_finished_public_weal_disaster }
 		has_subject_of_type = appanage

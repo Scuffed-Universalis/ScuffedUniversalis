@@ -1,0 +1,55 @@
+namespace = bur_fra_early_rivalry
+
+# Early-game rivalry block: for the first 5 years of the game, AI Burgundy is stopped from rivaling a PLAYER France,
+# so the French player has time to improve relations and ally Burgundy.
+# Fired once for Burgundy from on_startup, then re-fires itself every 30 days until the 5 years are up, then stops for good.
+country_event = {
+	id = bur_fra_early_rivalry.1
+	title = bur_fra_early_rivalry.1.t
+	desc = bur_fra_early_rivalry.1.d
+	picture = DIPLOMACY_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = BUR
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_country_flag = bur_fra_early_rivalry_window }
+			}
+			set_country_flag = bur_fra_early_rivalry_window
+		}
+	}
+
+	option = {
+		name = bur_fra_early_rivalry.1.a
+		if = {
+			limit = {
+				had_country_flag = {
+					flag = bur_fra_early_rivalry_window
+					days = 1825
+				}
+			}
+			# 5 years are up: stop checking for the rest of the game
+			set_country_flag = bur_fra_early_rivalry_window_over
+		}
+		else = {
+			if = {
+				limit = {
+					ai = yes
+					exists = FRA
+					FRA = { ai = no }
+					is_rival = FRA
+				}
+				remove_rival = FRA
+			}
+			country_event = {
+				id = bur_fra_early_rivalry.1
+				days = 30
+			}
+		}
+	}
+}

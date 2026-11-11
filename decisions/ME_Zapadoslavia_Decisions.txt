@@ -4,6 +4,11 @@ country_decisions = {
 		potential = {
 			NOT = { exists = ZCV }
 			NOT = { has_country_flag = zapadoslavia_formed_flag }
+			#Mutually exclusive with Great Moravia and Czechoslovakia
+			NOT = { has_country_flag = formed_great_moravia_flag }
+			NOT = { has_country_flag = czechoslovakia_formed_flag }
+			NOT = { tag = GMA }
+			NOT = { tag = CZS }
 			was_never_end_game_tag_trigger = yes
 			normal_or_historical_nations = yes
 			OR = {

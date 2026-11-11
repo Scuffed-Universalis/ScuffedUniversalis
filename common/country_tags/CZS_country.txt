@@ -1,0 +1,2 @@
+#Czechoslovakia, ported from Doge Shattered Europa
+CZS = countries/Czechoslovakia.txt

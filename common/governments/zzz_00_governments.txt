@@ -1118,6 +1118,8 @@ republic = {
 				italian_republic_reform
 				republic_of_saint_blaise
 				signoria_baglioni_reform
+				#Czechoslovakia
+				czechoslovak_republic_reform
 			}
 		}
 		republican_virtues = {
@@ -1402,6 +1404,8 @@ republic = {
 				council_of_lords_reform
 				primacy_legislature_reform
 				judicial_review_reform
+				#Czech (also in monarchy tier 6)
+				restored_land_establishment_reform
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {
@@ -1459,6 +1463,8 @@ republic = {
 				## GE
 				maritime_republic_reform
 				banco_dei_medici_reform
+				#Bohemia (also in monarchy tier 8)
+				bergordnung_reforms_reform
 			}
 		}
 		consolidation_of_power_category = {

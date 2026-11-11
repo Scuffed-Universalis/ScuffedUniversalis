@@ -739,7 +739,9 @@ country_event = {
 			change_tag = NED
 		}
 		hidden_effect = {
+			set_country_flag = NED_dutch_revolt_keep_hre_flag
 			NED_form_netherlands_effect = yes
+			clr_country_flag = NED_dutch_revolt_keep_hre_flag
 		}
 		overlord = {
 			every_ally = {

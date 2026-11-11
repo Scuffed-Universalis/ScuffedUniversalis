@@ -263,6 +263,7 @@ NED_reduce_autonomy_and_separism = {
 NED_form_netherlands_effect = { #from decision
 	if = {
 		limit = {
+			NOT = { has_country_flag = NED_dutch_revolt_keep_hre_flag } #Great Revolt keeps HRE membership
 			is_elector = no
 			is_emperor = no
 			OR = {

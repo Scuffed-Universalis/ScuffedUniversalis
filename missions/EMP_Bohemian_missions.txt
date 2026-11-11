@@ -9,7 +9,7 @@ emp_bohemia_1 = {
 		}
 	}
 	potential = {
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions
@@ -341,7 +341,7 @@ emp_bohemia_2 = {
 		}
 	}
 	potential = {
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions
@@ -605,7 +605,7 @@ emp_bohemia_3 = {
 		}
 	}
 	potential = {
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions
@@ -860,7 +860,7 @@ emp_bohemia_4 = {
 		}
 	}
 	potential = {
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		NOT = { map_setup = map_setup_random }
 		has_dlc = "Emperor"
 		has_country_flag = use_paradox_missions

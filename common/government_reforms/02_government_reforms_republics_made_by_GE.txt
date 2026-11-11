@@ -725,7 +725,7 @@ republican_guard_reform_republic = {
 		drill_gain_modifier = 0.25
 	}
 	custom_attributes = {
-		enables_republican_guard = yes #+3% ICA and 4% Manpower Recovery for each 10 RT over 50
+		enables_republican_guard = yes #+1.5% ICA and 4% Manpower Recovery for each 10 RT over 50
 	}
 	ai = {
 		factor = 1

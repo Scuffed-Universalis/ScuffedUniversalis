@@ -3,7 +3,7 @@ boh_hussite_group = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Emperor" }
 		has_country_flag = use_paradox_missions
@@ -180,7 +180,7 @@ boh_development_group = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Emperor" }
 		has_country_flag = use_paradox_missions

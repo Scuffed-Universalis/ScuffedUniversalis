@@ -18,7 +18,7 @@ country_has_both_paradox_and_me_missions_old = {
 				tag = TIM
 				tag = MUG
 				tag = HUN
-				tag = BOH
+				is_bohemia_or_czechoslovakia_trigger = yes
 				tag = HAB
 			}
 		}
@@ -98,7 +98,7 @@ country_has_both_paradox_and_me_missions_old = {
 			has_dlc = "Emperor"
 			OR = {
 				#Italy
-				tag = BOH
+				is_bohemia_or_czechoslovakia_trigger = yes
 				tag = ITA
 				tag = MLO
 				tag = NAP
@@ -451,7 +451,7 @@ country_has_paradox_missions = {
 				tag = TIM
 				tag = MUG
 				tag = HUN
-				tag = BOH
+				is_bohemia_or_czechoslovakia_trigger = yes
 				tag = HAB
 			}
 		}
@@ -577,7 +577,7 @@ country_has_paradox_missions = {
 				tag = SPI
 				tag = PAP
 				tag = SWI
-				tag = BOH
+				is_bohemia_or_czechoslovakia_trigger = yes
 				tag = GEN
 				tag = TUS
 				tag = LAN
@@ -989,7 +989,7 @@ country_has_paradox_missions = {
 		tag = TOU
 		tag = DAU
 		tag = PIC
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		AND = {
 			NOT = { primary_culture = manchu_new }
 			NOT = { primary_culture = tibetan_new }
@@ -1102,7 +1102,7 @@ country_has_good_paradox_missions = {
 				tag = TIM
 				tag = MUG
 				tag = HUN
-				tag = BOH
+				is_bohemia_or_czechoslovakia_trigger = yes
 				tag = HAB
 			}
 		}
@@ -1239,7 +1239,7 @@ country_has_me_missions = { #the following was mostly generated. It can and will
 		tag = BLM
 		tag = BNE
 		tag = BNJ
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		tag = BPI
 		tag = BRA
 		tag = BRB
@@ -1569,7 +1569,7 @@ country_has_me_missions = { #the following was mostly generated. It can and will
 country_has_good_me_missions = {
 	OR = {
 		#FU
-		tag = BOH
+		is_bohemia_or_czechoslovakia_trigger = yes
 		tag = BYZ 
 		tag = SWI
 		#older

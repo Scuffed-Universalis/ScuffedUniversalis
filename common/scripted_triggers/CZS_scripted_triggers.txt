@@ -1,0 +1,10 @@
+#Bohemia, or a Czechoslovakia that used to be Bohemia. Used for mission trees so a former Bohemia keeps its trees (and the expanded/vanilla choice) after forming Czechoslovakia.
+is_bohemia_or_czechoslovakia_trigger = {
+	OR = {
+		tag = BOH
+		AND = {
+			tag = CZS
+			was_tag = BOH
+		}
+	}
+}
