@@ -104,7 +104,7 @@
  boh_bosphorus_toll_tt: "Modify '§YBosphorus Sound Toll§!' by:\n Local Trade Power: §G+10.00§!\n Burghers Loyalty Equilibrium: §G+5.0%§!"
  boh_every_level_grants_manpower_tt: "\nEvery level of the §YAristocrat§! Advisor will also grant \nthe following bonus: §G+5%§! National Manpower Modifier"
  boh_has_had_hussite_wars_event_tt: "Has had the Hussite Wars event" 
- boh_if_tge_active_silver_tt: "If §MTrade Goods Expanded§! is active, and §YBudejovice§! is owned by us and has §Y8 Production Development§!, \n§YSilver§! will be produced and will gain a similar modifier" 
+ boh_if_tge_active_silver_tt: "If §YBudejovice§! is owned by us and has §Y8 Production Development§!, \n§YCoal§! will be produced there and it will gain a similar modifier"
  boh_coal_metal_mining_regulations_tt: "Every province that produces §MMetals§! or §MCoal§! with a §YManufactory§! will gain:"
  boh_every_20_dev_province_railway_tt: "\nif we complete the mission after embracing §YIndustrialization§! the first steps of installing a \n§YNational Railway System§! will commence, accelerating travel on provinces that have at least §G25 Development§!:"
  boh_poland_plc_friendship_tt: "If we complete the mission with @POL Poland or @PLC The Commonwealth being our §Gsubject§! having at least §G150§! opinion of us, we will become §YHistorical Friends§! and receive reduced liberty desire"

@@ -1667,13 +1667,9 @@ bohemian_missions_4 = {
 			}
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = boh_has_had_hussite_wars_event_tt 
-				has_country_flag = boh_hussite_wars_flag
-			}
 			OR = {
-				stability = 1 
-				crown_land_share = 40 
+				stability = 1
+				crown_land_share = 40
 			}
 			bohemia_area = { 
 				type = all
@@ -1728,17 +1724,17 @@ bohemian_missions_4 = {
 					duration = 7300 
 				}
 			}
-			custom_tooltip = boh_if_tge_active_silver_tt 
+			custom_tooltip = boh_if_tge_active_silver_tt
 			hidden_effect = {
 				if = {
 					limit = {
-						2968 = { 
-							base_production = 8 
-							owned_by = ROOT 
+						2968 = {
+							base_production = 8
+							owned_by = ROOT
 						}
-						has_global_flag = trade_goods_expanded_mod_active
 					}
-					2968 = { 
+					2968 = {
+						change_trade_goods = coal
 						add_province_modifier = {
 							name = boh_smelting_facility_modifier 
 							duration = 7300 
