@@ -13,7 +13,6 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				ai = no
 			}
-			NOT = { exists = GBR }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { exists = BEL }

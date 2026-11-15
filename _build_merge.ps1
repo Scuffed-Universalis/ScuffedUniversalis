@@ -302,6 +302,13 @@ $re = [regex]'(?m)^[ \t]*(set|remove)_estate_privilege\s*=\s*estate_nobles_(bett
 if ($re.Matches($text).Count -ne 3) { throw "MOR - Morocco.txt privilege layout changed - check the Morocco patch" }
 Write-1252 $path $re.Replace($text, '')
 
+# 3i. Belgium can still be formed after Great Britain exists (EE hides the decision once GBR is formed).
+$path = Join-Path $dst "decisions\BelgianNation.txt"
+$text = Read-1252 $path
+$re = [regex]'(?m)^[ \t]*NOT\s*=\s*\{\s*exists\s*=\s*GBR\s*\}[ \t]*\r?\n'
+if ($re.Matches($text).Count -ne 1) { throw "BelgianNation.txt GBR condition not found - check the Belgium patch" }
+Write-1252 $path $re.Replace($text, '')
+
 # 4. Hand-maintained content (ports from mods too broken to patch, e.g. Merina's "Malagasy Glory" missions).
 #    Lives in _custom\ with the normal mod folder layout and is copied over the build output last.
 foreach ($dir in Get-ChildItem (Join-Path $dst '_custom') -Directory) {
