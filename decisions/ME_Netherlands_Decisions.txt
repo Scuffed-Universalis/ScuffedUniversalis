@@ -148,6 +148,7 @@ country_decisions = {
 	NED_dutch_revolt = {
 		major = yes
 		potential = {
+			ai = no #Players only
 			is_dutch_subject_trigger = yes
 			NOT = { has_global_flag = ME_dutch_revolt_flag }
 		}

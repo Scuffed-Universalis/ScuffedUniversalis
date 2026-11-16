@@ -726,15 +726,22 @@ country_event = {
 		
 		ai_chance = { factor = 100 }
 		
+		#The other Dutch states break free too and stay their own countries (no merging into one nation)
 		overlord = {
 			every_subject_country = {
 				limit = {
 					is_dutch_subject_trigger = yes
 					NOT = { tag = ROOT }
 				}
-				ROOT = { inherit = PREV }
+				set_country_flag = NED_dutch_revolt_member_flag
 			}
 		}
+		every_country = {
+			limit = { has_country_flag = NED_dutch_revolt_member_flag }
+			grant_independence = yes
+			create_alliance = ROOT
+		}
+		#The state that started the revolt becomes the Netherlands (keeps its HRE membership)
 		tooltip = {
 			change_tag = NED
 		}
@@ -751,6 +758,11 @@ country_event = {
 		declare_war_with_cb = {
 			who = overlord
 			casus_belli = cb_dutch_revolt_independence_war
+		}
+		every_country = {
+			limit = { has_country_flag = NED_dutch_revolt_member_flag }
+			join_all_offensive_wars_of = ROOT
+			clr_country_flag = NED_dutch_revolt_member_flag
 		}
 	}
 }
